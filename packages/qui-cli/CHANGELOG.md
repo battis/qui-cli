@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.9.2](https://github.com/battis/qui-cli/compare/qui-cli/0.9.1...qui-cli/0.9.2) (2025-02-08)
+
+
+### Features
+
+* **qui-cli:** register() plugins ([9cb496f](https://github.com/battis/qui-cli/commit/9cb496f0522012262a22f6c81495f7d43561b32a))
+
 ## [0.9.1](https://github.com/battis/qui-cli/compare/qui-cli/0.9.0...qui-cli/0.9.1) (2025-01-15)
 
 ## [0.9.0](https://github.com/battis/qui-cli/compare/qui-cli/0.8.5...qui-cli/0.9.0) (2025-01-15)
