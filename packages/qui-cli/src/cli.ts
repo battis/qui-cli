@@ -3,6 +3,7 @@ import { Core, Options as CoreOptions } from '@battis/qui-cli.core';
 import { Env, Options as EnvOptions } from '@battis/qui-cli.env';
 import { Log, Options as LogOptions } from '@battis/qui-cli.log';
 import * as plugin from '@battis/qui-cli.plugin';
+import * as Plugin from '@battis/qui-cli.plugin';
 import progress from '@battis/qui-cli.progress';
 import { Root } from '@battis/qui-cli.root';
 import { Shell, Options as ShellOptions } from '@battis/qui-cli.shell';
@@ -22,8 +23,9 @@ export type Arguments<O extends plugin.Options = plugin.Options> =
     plugin.Arguments<ReturnType<Shell['options']>> &
     plugin.Arguments<O>;
 
+const core = new Core();
+
 function init({ env, args, log, shell }: Options = {}) {
-  const core = new Core();
   core.register(Root.getInstance({ root: env?.root }));
   core.register(Colors.getInstance());
   core.register(Env.getInstance({ root: Root.getInstance().path(), ...env }));
@@ -41,6 +43,8 @@ function init({ env, args, log, shell }: Options = {}) {
   } = args || {};
   return core.init(args) as Arguments<typeof options>;
 }
+
+export const register = core.register;
 
 const defaults = {
   env: Env.defaults,
