@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.9.3](https://github.com/battis/qui-cli/compare/qui-cli/0.9.2...qui-cli/0.9.3) (2025-02-08)
+
+
+### Bug Fixes
+
+* **qui-cli:** actually export register0 ([c6fed7e](https://github.com/battis/qui-cli/commit/c6fed7e38068c47edf4bb623b14cff027abaa186))
+
 ## [0.9.2](https://github.com/battis/qui-cli/compare/qui-cli/0.9.1...qui-cli/0.9.2) (2025-02-08)
 
 
