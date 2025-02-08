@@ -3,7 +3,6 @@ import { Core, Options as CoreOptions } from '@battis/qui-cli.core';
 import { Env, Options as EnvOptions } from '@battis/qui-cli.env';
 import { Log, Options as LogOptions } from '@battis/qui-cli.log';
 import * as plugin from '@battis/qui-cli.plugin';
-import * as Plugin from '@battis/qui-cli.plugin';
 import progress from '@battis/qui-cli.progress';
 import { Root } from '@battis/qui-cli.root';
 import { Shell, Options as ShellOptions } from '@battis/qui-cli.shell';
@@ -44,8 +43,6 @@ function init({ env, args, log, shell }: Options = {}) {
   return core.init(args) as Arguments<typeof options>;
 }
 
-export const register = core.register;
-
 const defaults = {
   env: Env.defaults,
   args: Core.defaults,
@@ -80,6 +77,8 @@ export const cli = {
       };
     }
   },
+
+  register: core.register.bind(core),
 
   progress,
 
