@@ -9,6 +9,14 @@ import { Shell, Options as ShellOptions } from '@battis/qui-cli.shell';
 import { Validators } from '@battis/qui-cli.validators';
 import * as prompts from '@inquirer/prompts';
 
+export type Configuration = {
+  colors?: boolean;
+  env?: boolean;
+  log?: boolean;
+  shell?: boolean;
+  validators?: boolean;
+};
+
 export type Options = {
   env?: EnvOptions;
   args?: CoreOptions;
@@ -22,45 +30,24 @@ export type Arguments<O extends plugin.Options = plugin.Options> =
     plugin.Arguments<ReturnType<Shell['options']>> &
     plugin.Arguments<O>;
 
-const core = new Core();
+export class CLI {
+  private static defaults = {
+    env: Env.defaults,
+    args: Core.defaults,
+    log: Log.defaults,
+    shell: Shell.defaults
+  };
 
-function init({ env, args, log, shell }: Options = {}) {
-  core.register(Root.getInstance({ root: env?.root }));
-  core.register(Colors.getInstance());
-  core.register(Env.getInstance({ root: Root.getInstance().path(), ...env }));
-  core.register(Log.getInstance(log));
-  core.register(Shell.getInstance(shell));
-  core.register(Validators.getInstance());
-  const {
-    requirePositionals,
-    allowPositionals,
-    envPrefix,
-    env: _env,
-    usage,
-    stopAtPositional,
-    ...options
-  } = args || {};
-  return core.init(args) as Arguments<typeof options>;
-}
+  private static pluginMap: { [key in keyof Configuration]: any } = {
+    env: Env,
+    log: Log,
+    shell: Shell,
+    validators: Validators,
+    colors: Colors
+  };
 
-const defaults = {
-  env: Env.defaults,
-  args: Core.defaults,
-  log: Log.defaults,
-  shell: Shell.defaults
-};
-
-export const cli = {
-  init,
-  appRoot: () => Root.getInstance().path(),
-  colors: Colors.getInstance(),
-  env: Env.getInstance(),
-  log: Log.getInstance(),
-  shell: Shell.getInstance(),
-  validators: Validators.getInstance(),
-
-  options: {
-    defaults,
+  public options = {
+    defaults: CLI.defaults,
     hydrate: (
       options: Partial<{
         env: Partial<EnvOptions>;
@@ -68,22 +55,91 @@ export const cli = {
         log: Partial<LogOptions>;
         shell: Partial<ShellOptions>;
       }>
-    ): Parameters<typeof init>[0] => {
+    ): Options => {
       return {
-        env: { ...defaults.env, ...options?.env },
-        args: { ...defaults.args, ...options?.args },
-        log: { ...defaults.log, ...options?.log },
-        shell: { ...defaults.shell, ...options?.shell }
+        env: { ...CLI.defaults.env, ...options?.env },
+        args: { ...CLI.defaults.args, ...options?.args },
+        log: { ...CLI.defaults.log, ...options?.log },
+        shell: { ...CLI.defaults.shell, ...options?.shell }
       };
     }
-  },
+  };
 
-  register: core.register.bind(core),
+  private static singleton: CLI;
 
-  progress,
+  public static getInstance(config: Configuration = {}) {
+    if (!this.singleton) {
+      this.singleton = new CLI(config);
+    } else {
+      this.singleton.reset(config);
+    }
+    return this.singleton;
+  }
+
+  private config: Configuration = {};
+  private core: Core;
+
+  public readonly root = Root.getInstance();
+  public env: Env = undefined as any;
+  public log: Log = undefined as any;
+  public shell: Shell = undefined as any;
+  public validators: Validators = undefined as any;
+  public colors: Colors = undefined as any;
+
+  public readonly progress = progress;
 
   /** @deprecated use @inquirer/prompts directly */
-  prompts
-};
+  public readonly prompts = prompts;
 
-export default cli;
+  public constructor(config: Configuration = {}) {
+    this.core = new Core();
+    this.reset(config);
+  }
+
+  private reset(config: Configuration = {}) {
+    this.config = config;
+    for (const plugin in Object.keys(CLI.pluginMap)) {
+      if (config[plugin as keyof Configuration]) {
+        this[plugin as keyof this] =
+          CLI.pluginMap[plugin as keyof Configuration].getInstance();
+      } else {
+        this[plugin as keyof this] = undefined as any;
+      }
+    }
+  }
+
+  public init({ env, args, log, shell }: Options = {}) {
+    const {
+      requirePositionals,
+      allowPositionals,
+      envPrefix,
+      env: _env,
+      usage,
+      stopAtPositional,
+      ...options
+    } = args || {};
+    Root.getInstance({ root: env?.root });
+    if (this.config.env) {
+      Env.getInstance(env);
+    }
+    if (this.config.log) {
+      Log.getInstance(log);
+    }
+    if (this.config.shell) {
+      Shell.getInstance(shell);
+    }
+    return this.core.init(args) as Arguments<typeof options>;
+  }
+
+  /** @deprecated use cli.root.path() */
+  public appRoot() {
+    return this.root.path();
+  }
+
+  public register(plugin: plugin.Base) {
+    this.core?.register(plugin);
+  }
+}
+
+const cli = CLI.getInstance();
+export { cli as default };
