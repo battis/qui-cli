@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.8.5](https://github.com/battis/qui-cli/compare/env/0.8.4...env/0.8.5) (2025-02-09)
+
+
+### Features
+
+* **qui-cli.env:** allow appRoot() override, but fall back to appRoot() ([b6bdb15](https://github.com/battis/qui-cli/commit/b6bdb158d44cdd81beee441bf78b95602966e1d0))
+
+
+### Bug Fixes
+
+* **qui-cli.env:** parse .env during init ([2de3167](https://github.com/battis/qui-cli/commit/2de3167be47c51f9dd44aaa126a4c375631b1852))
+
 ## [0.8.4](https://github.com/battis/qui-cli/compare/env/0.8.3...env/0.8.4) (2025-02-09)
 
 
