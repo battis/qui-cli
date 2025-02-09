@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.9.5](https://github.com/battis/qui-cli/compare/qui-cli/0.9.4...qui-cli/0.9.5) (2025-02-09)
+
+
+### Bug Fixes
+
+* load _current_ appRoot() ([e9eda62](https://github.com/battis/qui-cli/commit/e9eda6267532ff998ee9c59ec3fb07ed713b7dd9))
+
 ## [0.9.4](https://github.com/battis/qui-cli/compare/qui-cli/0.9.3...qui-cli/0.9.4) (2025-02-09)
 
 ## [0.9.3](https://github.com/battis/qui-cli/compare/qui-cli/0.9.2...qui-cli/0.9.3) (2025-02-08)
