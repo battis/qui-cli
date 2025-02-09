@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.8.4](https://github.com/battis/qui-cli/compare/env/0.8.3...env/0.8.4) (2025-02-09)
+
+
+### Bug Fixes
+
+* **env:** do not mistakenly cache old appRoot ([ecbad81](https://github.com/battis/qui-cli/commit/ecbad812d30b571d5b8291317bd075ba8d565416))
+
 ## [0.8.3](https://github.com/battis/qui-cli/compare/env/0.8.2...env/0.8.3) (2025-02-09)
 
 ## 0.8.2
