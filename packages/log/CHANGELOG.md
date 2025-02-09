@@ -1,4 +1,13 @@
-# @battis/qui-cli.log
+# Changelog
+
+All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
+
+## [0.8.3](https://github.com/battis/qui-cli/compare/log/0.8.2...log/0.8.3) (2025-02-09)
+
+
+### Features
+
+* **qui-cli.log:** allow appRoot() override, but fall back to appRoot() ([63af9bb](https://github.com/battis/qui-cli/commit/63af9bb89cda56a089e8ef75a6cf3a97ce382428))
 
 ## 0.8.2
 
