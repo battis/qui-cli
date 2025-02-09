@@ -28,12 +28,6 @@ export class Core {
 
   private requirePositionals: boolean | number | undefined = undefined;
 
-  /*
-   * TODO Plugin redesign
-   *   It would be an improvement if a registered plugin showed as a property
-   *   of cli, but was undefined if not attached -- without requiring a lot of
-   *   property interpolations.
-   */
   public register(plugin: plugin.Base) {
     if (!this.plugins.includes(plugin)) {
       this.plugins.push(plugin);
