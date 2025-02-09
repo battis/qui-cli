@@ -10,9 +10,12 @@ export class Root extends plugin.Base {
 
   private static singleton?: Root;
 
-  public static getInstance(options?: Options) {
+  public static getInstance({ root }: Options = {}) {
     if (!this.singleton) {
-      this.singleton = new Root(options);
+      this.singleton = new Root({ root });
+    }
+    if (root) {
+      this.singleton.root = root;
     }
     return this.singleton;
   }
