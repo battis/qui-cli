@@ -1,4 +1,13 @@
-# @battis/qui-cli.root
+# Changelog
+
+All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
+
+## [0.8.3](https://github.com/battis/qui-cli/compare/root/0.8.2...root/0.8.3) (2025-02-09)
+
+
+### Bug Fixes
+
+* **root:** env.root is meant to set a an explicit root ([5d6839f](https://github.com/battis/qui-cli/commit/5d6839f223363c5252e2b41663d0f2260dee71eb))
 
 ## 0.8.2
 
