@@ -35,8 +35,6 @@ export class Env extends plugin.Base {
     setRootAsCurrentWorkingDirectory: true
   };
 
-  private root: string;
-
   private static singleton?: Env;
 
   public static getInstance(options?: Options) {
@@ -58,20 +56,19 @@ export class Env extends plugin.Base {
     } else {
       Env.singleton = this;
     }
-    this.root = root;
     if (setRootAsCurrentWorkingDirectory) {
-      process.chdir(this.root);
+      process.chdir(root);
     }
     if (loadDotEnv === true) {
-      dotenv.config({ path: path.resolve(this.root, '.env') });
+      dotenv.config({ path: path.resolve(root, '.env') });
     } else if (typeof loadDotEnv === 'string') {
-      dotenv.config({ path: path.resolve(this.root, loadDotEnv) });
+      dotenv.config({ path: path.resolve(root, loadDotEnv) });
     }
   }
 
   public parse(file = '.env') {
     const env = dotenv.config({
-      path: path.resolve(this.root, file)
+      path: path.resolve(appRoot(), file)
     });
     if (env.error) {
       throw env.error;
@@ -80,14 +77,14 @@ export class Env extends plugin.Base {
   }
 
   public get({ key, file = '.env' }: GetOptions) {
-    if (fs.existsSync(path.resolve(this.root, file))) {
+    if (fs.existsSync(path.resolve(appRoot(), file))) {
       return this.parse(file)[key];
     }
     return undefined;
   }
 
   public exists({ key, file = '.env' }: GetOptions) {
-    if (fs.existsSync(path.resolve(this.root, file))) {
+    if (fs.existsSync(path.resolve(appRoot(), file))) {
       return !!this.parse(file)[key];
     }
     return false;
@@ -100,7 +97,7 @@ export class Env extends plugin.Base {
     comment,
     ifNotExists = false
   }: SetOptions) {
-    const filePath = path.resolve(this.root, file);
+    const filePath = path.resolve(appRoot(), file);
     if (ifNotExists === false || false === this.exists({ key, file })) {
       let env = fs.readFileSync(filePath).toString();
       const pattern = new RegExp(`^${key}=.*$`, 'm');
@@ -119,7 +116,7 @@ export class Env extends plugin.Base {
   }
 
   public remove({ key, file = '.env', comment }: RemoveOptions) {
-    const filePath = path.resolve(this.root, file);
+    const filePath = path.resolve(appRoot(), file);
     if (fs.existsSync(filePath)) {
       const env = fs.readFileSync(filePath).toString();
       const pattern = new RegExp(`${key}=.*\\n`);
