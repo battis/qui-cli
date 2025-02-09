@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.8.6](https://github.com/battis/qui-cli/compare/env/0.8.5...env/0.8.6) (2025-02-09)
+
+
+### Bug Fixes
+
+* **qui-cli.env:** parse explicitly if loadDotEnv is truthy ([0719408](https://github.com/battis/qui-cli/commit/0719408551f55133b04c55d287998d126e8f07c7))
+
 ## [0.8.5](https://github.com/battis/qui-cli/compare/env/0.8.4...env/0.8.5) (2025-02-09)
 
 
