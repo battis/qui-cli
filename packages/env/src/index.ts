@@ -30,7 +30,7 @@ type RemoveOptions = {
 
 export class Env extends plugin.Base {
   public static readonly defaults = {
-    root: appRoot(),
+    root: undefined,
     loadDotEnv: true,
     setRootAsCurrentWorkingDirectory: true
   };
@@ -45,6 +45,7 @@ export class Env extends plugin.Base {
     return this.singleton;
   }
 
+  private root: string | undefined = Env.defaults.root;
   private loadDotEnv: boolean | string = Env.defaults.loadDotEnv;
 
   public constructor(options: Options = {}) {
@@ -63,23 +64,26 @@ export class Env extends plugin.Base {
     setRootAsCurrentWorkingDirectory = Env.defaults
       .setRootAsCurrentWorkingDirectory
   }: Options = {}) {
+    this.root = root;
     if (setRootAsCurrentWorkingDirectory) {
-      process.chdir(root);
+      process.chdir(this.root || appRoot());
     }
     this.loadDotEnv = !!loadDotEnv;
   }
 
   public init(): void {
     if (this.loadDotEnv === true) {
-      dotenv.config({ path: path.resolve(appRoot(), '.env') });
+      dotenv.config({ path: path.resolve(this.root || appRoot(), '.env') });
     } else if (typeof this.loadDotEnv === 'string') {
-      dotenv.config({ path: path.resolve(appRoot(), this.loadDotEnv) });
+      dotenv.config({
+        path: path.resolve(this.root || appRoot(), this.loadDotEnv)
+      });
     }
   }
 
   public parse(file = '.env') {
     const env = dotenv.config({
-      path: path.resolve(appRoot(), file)
+      path: path.resolve(this.root || appRoot(), file)
     });
     if (env.error) {
       throw env.error;
@@ -88,14 +92,14 @@ export class Env extends plugin.Base {
   }
 
   public get({ key, file = '.env' }: GetOptions) {
-    if (fs.existsSync(path.resolve(appRoot(), file))) {
+    if (fs.existsSync(path.resolve(this.root || appRoot(), file))) {
       return this.parse(file)[key];
     }
     return undefined;
   }
 
   public exists({ key, file = '.env' }: GetOptions) {
-    if (fs.existsSync(path.resolve(appRoot(), file))) {
+    if (fs.existsSync(path.resolve(this.root || appRoot(), file))) {
       return !!this.parse(file)[key];
     }
     return false;
@@ -108,7 +112,7 @@ export class Env extends plugin.Base {
     comment,
     ifNotExists = false
   }: SetOptions) {
-    const filePath = path.resolve(appRoot(), file);
+    const filePath = path.resolve(this.root || appRoot(), file);
     if (ifNotExists === false || false === this.exists({ key, file })) {
       let env = fs.readFileSync(filePath).toString();
       const pattern = new RegExp(`^${key}=.*$`, 'm');
@@ -127,7 +131,7 @@ export class Env extends plugin.Base {
   }
 
   public remove({ key, file = '.env', comment }: RemoveOptions) {
-    const filePath = path.resolve(appRoot(), file);
+    const filePath = path.resolve(this.root || appRoot(), file);
     if (fs.existsSync(filePath)) {
       const env = fs.readFileSync(filePath).toString();
       const pattern = new RegExp(`${key}=.*\\n`);
