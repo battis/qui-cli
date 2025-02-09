@@ -52,7 +52,7 @@ const defaults = {
 
 export const cli = {
   init,
-  appRoot: Root.getInstance().path(),
+  appRoot: () => Root.getInstance().path(),
   colors: Colors.getInstance(),
   env: Env.getInstance(),
   log: Log.getInstance(),
