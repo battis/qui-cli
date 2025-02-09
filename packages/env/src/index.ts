@@ -72,18 +72,17 @@ export class Env extends plugin.Base {
   }
 
   public init(): void {
-    if (this.loadDotEnv === true) {
-      dotenv.config({ path: path.resolve(this.root || appRoot(), '.env') });
-    } else if (typeof this.loadDotEnv === 'string') {
-      dotenv.config({
-        path: path.resolve(this.root || appRoot(), this.loadDotEnv)
-      });
+    if (this.loadDotEnv) {
+      this.parse(this.loadDotEnv);
     }
   }
 
-  public parse(file = '.env') {
+  public parse(file = this.loadDotEnv) {
     const env = dotenv.config({
-      path: path.resolve(this.root || appRoot(), file)
+      path: path.resolve(
+        this.root || appRoot(),
+        typeof file === 'string' ? file : '.env'
+      )
     });
     if (env.error) {
       throw env.error;
