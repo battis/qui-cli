@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.8.4](https://github.com/battis/qui-cli/compare/log/0.8.3...log/0.8.4) (2025-02-09)
+
+
+### Bug Fixes
+
+* **qui-cli.log:** reset options when getting instance with options ([ac73793](https://github.com/battis/qui-cli/commit/ac737933ce2551f8167c2d3fbf2a76c7d7a8fb90))
+
 ## [0.8.3](https://github.com/battis/qui-cli/compare/log/0.8.2...log/0.8.3) (2025-02-09)
 
 
