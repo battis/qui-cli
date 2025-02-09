@@ -41,28 +41,39 @@ export class Env extends plugin.Base {
     if (!this.singleton) {
       this.singleton = new Env(options);
     }
+    this.singleton.reset(options);
     return this.singleton;
   }
 
-  public constructor({
-    root = Env.defaults.root,
-    loadDotEnv = Env.defaults.loadDotEnv,
-    setRootAsCurrentWorkingDirectory = Env.defaults
-      .setRootAsCurrentWorkingDirectory
-  }: Options = {}) {
+  private loadDotEnv: boolean | string = Env.defaults.loadDotEnv;
+
+  public constructor(options: Options = {}) {
     super('env');
     if (Env.singleton) {
       throw new Error('Env is a singleton');
     } else {
       Env.singleton = this;
     }
+    this.reset(options);
+  }
+
+  private reset({
+    root = Env.defaults.root,
+    loadDotEnv = Env.defaults.loadDotEnv,
+    setRootAsCurrentWorkingDirectory = Env.defaults
+      .setRootAsCurrentWorkingDirectory
+  }: Options = {}) {
     if (setRootAsCurrentWorkingDirectory) {
       process.chdir(root);
     }
-    if (loadDotEnv === true) {
-      dotenv.config({ path: path.resolve(root, '.env') });
-    } else if (typeof loadDotEnv === 'string') {
-      dotenv.config({ path: path.resolve(root, loadDotEnv) });
+    this.loadDotEnv = !!loadDotEnv;
+  }
+
+  public init(): void {
+    if (this.loadDotEnv === true) {
+      dotenv.config({ path: path.resolve(appRoot(), '.env') });
+    } else if (typeof this.loadDotEnv === 'string') {
+      dotenv.config({ path: path.resolve(appRoot(), this.loadDotEnv) });
     }
   }
 
