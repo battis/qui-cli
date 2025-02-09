@@ -56,10 +56,11 @@ export class Log extends plugin.Base {
 
   private static singleton: Log | undefined = undefined;
 
-  public static getInstance(options?: Options) {
+  public static getInstance(options: Options = {}) {
     if (!this.singleton) {
       this.singleton = new Log(options);
     }
+    this.singleton.reset(options);
     return this.singleton;
   }
 
