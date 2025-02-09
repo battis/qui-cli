@@ -2,8 +2,6 @@ import colors from '@battis/qui-cli.colors';
 import chalk from 'chalk';
 import cliProgress from 'cli-progress';
 
-// TODO convert progress to a full-fledged plugin
-
 type Options = {
   value?: number;
   max: number;
