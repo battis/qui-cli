@@ -1,4 +1,8 @@
-# @battis/qui-cli.validators
+# Changelog
+
+All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
+
+## [0.8.3](https://github.com/battis/qui-cli/compare/validators/0.8.2...validators/0.8.3) (2025-02-09)
 
 ## 0.8.2
 
