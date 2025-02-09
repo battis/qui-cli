@@ -1,5 +1,6 @@
 import colors from '@battis/qui-cli.colors';
 import * as plugin from '@battis/qui-cli.plugin';
+import appRoot from '@battis/qui-cli.root';
 import ora from 'ora';
 import path from 'path';
 import stripAnsi from 'strip-ansi';
@@ -21,7 +22,8 @@ export class Log extends plugin.Base {
     logFilePath: undefined,
     stdoutLevel: 'info',
     fileLevel: 'all',
-    levels: DefaultLevels
+    levels: DefaultLevels,
+    root: undefined
   };
 
   private logger = winston.createLogger({
@@ -39,15 +41,18 @@ export class Log extends plugin.Base {
     stripColors: winston.format((info) => {
       for (const prop in info) {
         if (typeof info[prop] === 'string') {
-          info[prop] = stripAnsi(info[prop]);
+          info[prop] = stripAnsi(info![prop]);
         }
       }
       return info;
     })
   };
 
-  private root: string;
-  private levels: CustomLevels;
+  private levels: CustomLevels = Log.defaults.levels;
+  private logFilePath: string | undefined = Log.defaults.logFilePath;
+  private stdoutLevel: string = Log.defaults.stdoutLevel;
+  private fileLevel: string = Log.defaults.fileLevel;
+  private root: string | undefined = Log.defaults.root;
 
   private static singleton: Log | undefined = undefined;
 
@@ -58,25 +63,28 @@ export class Log extends plugin.Base {
     return this.singleton;
   }
 
-  public constructor({
-    logFilePath = Log.defaults.logFilePath,
-    stdoutLevel = Log.defaults.stdoutLevel,
-    fileLevel = Log.defaults.fileLevel,
-    levels = Log.defaults.levels,
-    root = process.cwd()
-  }: Options = {}) {
+  public constructor(options: Options = {}) {
     super('log');
     if (Log.singleton) {
       throw new Error('Log is a singleton');
     } else {
       Log.singleton = this;
     }
-    (this.root = root), (this.levels = levels);
-    this.init({
-      positionals: [], // FIXME janky literal
-      values: { logFilePath, stdoutLevel, fileLevel }
-    });
-    winston.addColors(levels.colors);
+    this.reset(options);
+  }
+
+  private reset({
+    logFilePath = Log.defaults.logFilePath,
+    stdoutLevel = Log.defaults.stdoutLevel,
+    fileLevel = Log.defaults.fileLevel,
+    levels = Log.defaults.levels,
+    root = Log.defaults.root
+  }: Options) {
+    this.logFilePath = logFilePath;
+    this.stdoutLevel = stdoutLevel;
+    this.fileLevel = fileLevel;
+    this.levels = levels;
+    this.root = root;
   }
 
   public options() {
@@ -98,7 +106,11 @@ export class Log extends plugin.Base {
   }
 
   public init({
-    values: { logFilePath, stdoutLevel, fileLevel } = {}
+    values: {
+      logFilePath = this.logFilePath,
+      stdoutLevel = this.stdoutLevel,
+      fileLevel = this.fileLevel
+    } = {}
   }: plugin.Arguments<ReturnType<Log['options']>>) {
     this.transports.console.level = stdoutLevel;
     this.logger.configure({
@@ -106,7 +118,7 @@ export class Log extends plugin.Base {
       transports: [this.transports.console]
     });
     if (logFilePath) {
-      const filename = path.resolve(this.root, logFilePath);
+      const filename = path.resolve(this.root || appRoot(), logFilePath);
       const spinner = ora(`Connecting to ${colors.url(filename)}`).start();
       this.transports.file = new winston.transports.File({
         filename,
@@ -118,6 +130,7 @@ export class Log extends plugin.Base {
         )
       });
       this.logger.add(this.transports.file);
+      winston.addColors(this.levels.colors);
       spinner.succeed(
         `Logging level ${colors.value(fileLevel)} to ${colors.url(filename)}`
       );

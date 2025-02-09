@@ -26,6 +26,7 @@
   "dependencies": {
     "@battis/qui-cli.colors": "workspace:*",
     "@battis/qui-cli.plugin": "workspace:*",
+    "@battis/qui-cli.root": "workspace:*",
     "ora": "^6.3.1",
     "strip-ansi": "^7.1.0",
     "winston": "^3.17.0"
