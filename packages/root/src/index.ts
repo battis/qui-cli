@@ -27,12 +27,16 @@ function path() {
 }
 
 export const Root: Container = {
-  name,
-  dependencies,
+  _meta: {
+    name,
+    dependencies
+  },
 
-  configure,
-  options: Plugin.Base.options,
-  init: Plugin.Base.init,
+  _hooks: {
+    configure,
+    options: Plugin.Base.options,
+    init: Plugin.Base.init
+  },
 
   path
 };
