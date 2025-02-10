@@ -37,16 +37,16 @@ export class Core implements Plugin.Registrar {
    */
   public async register(plugin: Plugin.Container) {
     if (!this.plugins.includes(plugin)) {
-      for (const dependency of plugin.dependencies) {
+      for (const dependency of plugin._meta.dependencies) {
         let found = false;
         for (const installed of this.plugins) {
-          if (installed.name === dependency) {
+          if (installed._meta.name === dependency) {
             found = true;
           }
         }
         if (!found) {
           throw new Error(
-            `Dependency ${dependency} must be installed before ${plugin.name}`
+            `Dependency ${dependency} must be installed before ${plugin._meta.name}`
           );
         }
       }
@@ -147,7 +147,7 @@ export class Core implements Plugin.Registrar {
     let opt: Plugin.Options = options;
 
     for (const plugin of this.plugins) {
-      opt = this.merge(opt, plugin.options());
+      opt = this.merge(opt, plugin._hooks.options());
     }
     this.apply(opt);
 
@@ -183,7 +183,7 @@ export class Core implements Plugin.Registrar {
           }
         }
         if (ready) {
-          plugin.init({ positionals, values });
+          plugin._hooks.init({ positionals, values });
         }
       }
     }
