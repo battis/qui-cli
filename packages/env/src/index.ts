@@ -1,10 +1,10 @@
-import * as plugin from '@battis/qui-cli.plugin';
-import appRoot from '@battis/qui-cli.root';
+import Plugin from '@battis/qui-cli.plugin';
+import { Root } from '@battis/qui-cli.root';
 import dotenv from 'dotenv';
 import fs from 'node:fs';
 import path from 'node:path';
 
-export type Options = {
+export type Configuration = Plugin.Configuration & {
   root?: string;
   loadDotEnv?: boolean | string;
   setRootAsCurrentWorkingDirectory?: boolean;
@@ -28,118 +28,105 @@ type RemoveOptions = {
   comment?: string;
 };
 
-export class Env extends plugin.Base {
-  public static readonly defaults = {
-    root: undefined,
-    loadDotEnv: true,
-    setRootAsCurrentWorkingDirectory: true
-  };
+const { name, dependencies } = await Plugin.define({
+  pathToPluginSourceDirectory: import.meta.dirname
+});
 
-  private static singleton?: Env;
+let root: string | undefined = undefined;
+let loadDotEnv: string | boolean = true;
+let setRootAsCurrentWorkingDirectory = true;
 
-  public static getInstance(options?: Options) {
-    if (!this.singleton) {
-      this.singleton = new Env(options);
-    }
-    this.singleton.reset(options);
-    return this.singleton;
-  }
-
-  private root: string | undefined = Env.defaults.root;
-  private loadDotEnv: boolean | string = Env.defaults.loadDotEnv;
-
-  public constructor(options: Options = {}) {
-    super('env');
-    if (Env.singleton) {
-      throw new Error('Env is a singleton');
-    } else {
-      Env.singleton = this;
-    }
-    this.reset(options);
-  }
-
-  private reset({
-    root = Env.defaults.root,
-    loadDotEnv = Env.defaults.loadDotEnv,
-    setRootAsCurrentWorkingDirectory = Env.defaults
-      .setRootAsCurrentWorkingDirectory
-  }: Options = {}) {
-    this.root = root;
-    if (setRootAsCurrentWorkingDirectory) {
-      process.chdir(this.root || appRoot());
-    }
-    this.loadDotEnv = !!loadDotEnv;
-  }
-
-  public init(): void {
-    if (this.loadDotEnv) {
-      this.parse(this.loadDotEnv);
-    }
-  }
-
-  public parse(file = this.loadDotEnv) {
-    const env = dotenv.config({
-      path: path.resolve(
-        this.root || appRoot(),
-        typeof file === 'string' ? file : '.env'
-      )
-    });
+function parse(file = loadDotEnv) {
+  const filePath = path.resolve(
+    root || Root.path(),
+    typeof file === 'string' ? file : '.env'
+  );
+  if (fs.existsSync(filePath)) {
+    const env = dotenv.config({ path: filePath });
     if (env.error) {
       throw env.error;
     }
     return env.parsed || {};
   }
+  return {};
+}
 
-  public get({ key, file = '.env' }: GetOptions) {
-    if (fs.existsSync(path.resolve(this.root || appRoot(), file))) {
-      return this.parse(file)[key];
-    }
-    return undefined;
+function exists({ key, file = '.env' }: GetOptions) {
+  if (fs.existsSync(path.resolve(root || Root.path(), file))) {
+    return !!parse(file)[key];
   }
+  return false;
+}
 
-  public exists({ key, file = '.env' }: GetOptions) {
-    if (fs.existsSync(path.resolve(this.root || appRoot(), file))) {
-      return !!this.parse(file)[key];
-    }
-    return false;
+function get({ key, file = '.env' }: GetOptions) {
+  if (fs.existsSync(path.resolve(root || Root.path(), file))) {
+    return parse(file)[key];
   }
+  return undefined;
+}
 
-  public set({
-    key,
-    value,
-    file = '.env',
-    comment,
-    ifNotExists = false
-  }: SetOptions) {
-    const filePath = path.resolve(this.root || appRoot(), file);
-    if (ifNotExists === false || false === this.exists({ key, file })) {
-      let env = fs.readFileSync(filePath).toString();
-      const pattern = new RegExp(`^${key}=.*$`, 'm');
-      if (/[\s=]/.test(value)) {
-        value = `"${value}"`;
-      }
-      if (pattern.test(env)) {
-        env = env.replace(pattern, `${key}=${value}`);
-      } else {
-        env = `${env.trim()}\n${
-          comment ? `\n# ${comment}\n` : ''
-        }${key}=${value}\n`;
-      }
-      fs.writeFileSync(filePath, env);
+function set({
+  key,
+  value,
+  file = '.env',
+  comment,
+  ifNotExists = false
+}: SetOptions) {
+  const filePath = path.resolve(root || Root.path(), file);
+  if (ifNotExists === false || false === exists({ key, file })) {
+    let env = fs.readFileSync(filePath).toString();
+    const pattern = new RegExp(`^${key}=.*$`, 'm');
+    if (/[\s=]/.test(value)) {
+      value = `"${value}"`;
     }
+    if (pattern.test(env)) {
+      env = env.replace(pattern, `${key}=${value}`);
+    } else {
+      env = `${env.trim()}\n${
+        comment ? `\n# ${comment}\n` : ''
+      }${key}=${value}\n`;
+    }
+    fs.writeFileSync(filePath, env);
   }
+}
 
-  public remove({ key, file = '.env', comment }: RemoveOptions) {
-    const filePath = path.resolve(this.root || appRoot(), file);
-    if (fs.existsSync(filePath)) {
-      const env = fs.readFileSync(filePath).toString();
-      const pattern = new RegExp(`${key}=.*\\n`);
-      if (pattern.test(env)) {
-        fs.writeFileSync(
-          filePath,
-          env.replace(pattern, comment ? `# ${comment}\n` : '')
-        );
-      }
+function remove({ key, file = '.env', comment }: RemoveOptions) {
+  const filePath = path.resolve(root || Root.path(), file);
+  if (fs.existsSync(filePath)) {
+    const env = fs.readFileSync(filePath).toString();
+    const pattern = new RegExp(`${key}=.*\\n`);
+    if (pattern.test(env)) {
+      fs.writeFileSync(
+        filePath,
+        env.replace(pattern, comment ? `# ${comment}\n` : '')
+      );
     }
   }
 }
+
+export const Env: Plugin.Container = {
+  name,
+  dependencies,
+  configure: async (config?: Configuration) => {
+    root = config?.root;
+    loadDotEnv =
+      config?.loadDotEnv !== undefined ? config.loadDotEnv : loadDotEnv;
+    setRootAsCurrentWorkingDirectory =
+      config?.setRootAsCurrentWorkingDirectory !== undefined
+        ? config.setRootAsCurrentWorkingDirectory
+        : setRootAsCurrentWorkingDirectory;
+    if (setRootAsCurrentWorkingDirectory) {
+      process.chdir(root || Root.path());
+    }
+  },
+  options: () => ({}),
+  init: () => {},
+
+  parse,
+  exists,
+  get,
+  set,
+  remove
+};
+
+export { Env as default };
