@@ -1,12 +1,13 @@
-import * as plugin from '@battis/qui-cli.plugin';
+import Plugin from '@battis/qui-cli.plugin';
 import { ArrayElement } from '@battis/typescript-tricks';
 import { Jack, JackOptions } from 'jackspeak';
+import shelljs from 'shelljs';
 
 export type Options = JackOptions & {
   requirePositionals?: boolean | number;
-} & plugin.Options;
+} & Plugin.Options;
 
-export class Core {
+export class Core implements Plugin.Registrar {
   public static readonly defaults = {
     requirePositionals: undefined,
     allowPositionals: true,
@@ -16,7 +17,7 @@ export class Core {
     stopAtPositional: false
   };
 
-  public plugins: plugin.Base[] = [];
+  public plugins: Plugin.Container[] = [];
 
   private _jack: Jack | undefined = undefined;
   private get jack() {
@@ -34,8 +35,21 @@ export class Core {
    *   of cli, but was undefined if not attached -- without requiring a lot of
    *   property interpolations.
    */
-  public register(plugin: plugin.Base) {
+  public async register(plugin: Plugin.Container) {
     if (!this.plugins.includes(plugin)) {
+      for (const dependency of plugin.dependencies) {
+        let found = false;
+        for (const installed of this.plugins) {
+          if (installed.name === dependency) {
+            found = true;
+          }
+        }
+        if (!found) {
+          throw new Error(
+            `Dependency ${dependency} must be installed before ${plugin.name}`
+          );
+        }
+      }
       this.plugins.push(plugin);
     }
   }
@@ -52,7 +66,7 @@ export class Core {
     flagList,
     fields,
     man = []
-  }: plugin.Options) {
+  }: Plugin.Options) {
     this.jack
       .num({ ...num })
       .numList({ ...numList })
@@ -72,7 +86,7 @@ export class Core {
     }
   }
 
-  private merge(opt: plugin.Options, pluginOptions: plugin.Options) {
+  private merge(opt: Plugin.Options, pluginOptions: Plugin.Options) {
     return {
       num: { ...opt.num, ...pluginOptions.num },
       numList: { ...opt.numList, ...pluginOptions.numList },
@@ -102,7 +116,7 @@ export class Core {
 
   public init(
     options: Options = {}
-  ): plugin.Arguments<
+  ): Plugin.Arguments<
     typeof options &
       ReturnType<ArrayElement<(typeof this)['plugins']>['options']>
   > {
@@ -130,7 +144,7 @@ export class Core {
         description: 'Get usage information'
       }
     });
-    let opt: plugin.Options = options;
+    let opt: Plugin.Options = options;
 
     for (const plugin of this.plugins) {
       opt = this.merge(opt, plugin.options());
@@ -140,7 +154,7 @@ export class Core {
     const { positionals = [], values = {} } = this.jack.parse();
 
     if ('help' in values && values.help) {
-      console.log(this.usage());
+      shelljs.echo(this.usage());
       process.exit(0);
     }
 
@@ -155,9 +169,25 @@ export class Core {
       );
     }
 
-    for (const plugin of this.plugins) {
-      plugin.init({ positionals, values });
+    const uninitialized = [...this.plugins];
+    while (uninitialized.length) {
+      const plugin = uninitialized.pop();
+      if (plugin) {
+        let ready = true;
+        for (const dependency of plugin?.dependencies || []) {
+          for (const waiting of uninitialized) {
+            if (ready && dependency === waiting.name) {
+              uninitialized.unshift(plugin);
+              ready = false;
+            }
+          }
+        }
+        if (ready) {
+          plugin.init({ positionals, values });
+        }
+      }
     }
+
     return { positionals, values };
   }
 
