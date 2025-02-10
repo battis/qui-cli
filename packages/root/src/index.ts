@@ -1,47 +1,25 @@
-import * as plugin from '@battis/qui-cli.plugin';
+import Plugin from '@battis/qui-cli.plugin';
 import appRoot from 'app-root-path';
 
-export type Options = {
+export type Configuration = Plugin.Configuration & {
   root?: string;
 };
 
-export class Root extends plugin.Base {
-  private root: string;
+const { name, dependencies } = await Plugin.define({
+  pathToPluginSourceDirectory: import.meta.dirname
+});
 
-  private static singleton?: Root;
+let root = appRoot.toString();
 
-  public static getInstance({ root }: Options = {}) {
-    if (!this.singleton) {
-      this.singleton = new Root({ root });
-    }
-    if (root) {
-      this.singleton.root = root;
-    }
-    return this.singleton;
-  }
+export const Root: Plugin.Container = {
+  name,
+  dependencies,
+  configure: async (config?: Configuration) => {
+    root = config?.root || root;
+  },
+  options: () => ({}),
+  init: () => {},
+  path: () => root
+};
 
-  public constructor({ root }: Options = {}) {
-    super('root');
-    if (Root.singleton) {
-      throw new Error('AppRoot is a singleton class');
-    } else {
-      Root.singleton = this;
-    }
-    if (root) {
-      this.root = root;
-    } else {
-      this.root = appRoot.toString();
-    }
-  }
-
-  /** @deprecated use Root.path() */
-  public appRoot() {
-    return this.root;
-  }
-
-  public path() {
-    return this.root;
-  }
-}
-
-export default () => Root.getInstance().path();
+export { Root as default };
