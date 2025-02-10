@@ -34,7 +34,7 @@ importers:
         version: 8.1.9(encoding@0.1.13)
       monorepo-package-paths:
         specifier: ^0.3.8
-        version: 0.3.8(prettier@3.4.2)
+        version: 0.3.8(prettier@3.5.0)
       npm-run-all:
         specifier: ^4.1.5
         version: 4.1.5
@@ -91,6 +91,9 @@ importers:
       jackspeak:
         specifier: ^2.3.6
         version: 2.3.6
+      shelljs:
+        specifier: ^0.8.5
+        version: 0.8.5
     devDependencies:
       '@battis/typescript-tricks':
         specifier: ^0.7.4
@@ -101,6 +104,9 @@ importers:
       '@types/node':
         specifier: ^22.13.1
         version: 22.13.1
+      '@types/shelljs':
+        specifier: ^0.8.15
+        version: 0.8.15
       commit-and-tag-version:
         specifier: ^12.5.0
         version: 12.5.0
@@ -190,6 +196,9 @@ importers:
 
   packages/plugin:
     dependencies:
+      '@battis/import-package-json':
+        specifier: ^0.1.7
+        version: 0.1.7
       jackspeak:
         specifier: ^2.3.6
         version: 2.3.6
@@ -273,9 +282,6 @@ importers:
       '@battis/qui-cli.validators':
         specifier: workspace:*
         version: link:../validators
-      '@inquirer/prompts':
-        specifier: ^2.3.1
-        version: 2.3.1
     devDependencies:
       '@battis/eslint-config':
         specifier: latest
@@ -3772,8 +3778,8 @@ packages:
     engines: {node: '>=10.13.0'}
     hasBin: true
 
-  prettier@3.4.2:
-    resolution: {integrity: sha512-e9MewbtFo+Fevyuxn/4rrcDAaq0IYxPGLvObpQjiZBMAzB9IGmzlnG9RZy3FFas+eBMu2vA0CszMeduow5dIuQ==}
+  prettier@3.5.0:
+    resolution: {integrity: sha512-quyMrVt6svPS7CjQ9gKb3GLEX/rl3BCL2oa/QkNcXv4YNVBC9olt3s+H7ukto06q7B1Qz46PbrKLO34PR6vXcA==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -4806,12 +4812,12 @@ snapshots:
   '@battis/prettier-config@1.5.6(typescript@5.7.3)':
     dependencies:
       '@prettier/plugin-xml': 2.2.0
-      '@trivago/prettier-plugin-sort-imports': 4.3.0(prettier@3.4.2)
-      prettier: 3.4.2
-      prettier-plugin-ejs: 1.0.3(prettier@3.4.2)
-      prettier-plugin-organize-imports: 4.1.0(prettier@3.4.2)(typescript@5.7.3)
-      prettier-plugin-packagejson: 2.5.8(prettier@3.4.2)
-      prettier-plugin-sql: 0.18.1(prettier@3.4.2)
+      '@trivago/prettier-plugin-sort-imports': 4.3.0(prettier@3.5.0)
+      prettier: 3.5.0
+      prettier-plugin-ejs: 1.0.3(prettier@3.5.0)
+      prettier-plugin-organize-imports: 4.1.0(prettier@3.5.0)(typescript@5.7.3)
+      prettier-plugin-packagejson: 2.5.8(prettier@3.5.0)
+      prettier-plugin-sql: 0.18.1(prettier@3.5.0)
     transitivePeerDependencies:
       - '@vue/compiler-sfc'
       - supports-color
@@ -5851,7 +5857,7 @@ snapshots:
   '@prettier/plugin-xml@2.2.0':
     dependencies:
       '@xml-tools/parser': 1.0.11
-      prettier: 3.4.2
+      prettier: 3.5.0
 
   '@sigstore/bundle@2.3.2':
     dependencies:
@@ -5895,7 +5901,7 @@ snapshots:
 
   '@tahul/punycode@2.3.4': {}
 
-  '@trivago/prettier-plugin-sort-imports@4.3.0(prettier@3.4.2)':
+  '@trivago/prettier-plugin-sort-imports@4.3.0(prettier@3.5.0)':
     dependencies:
       '@babel/generator': 7.17.7
       '@babel/parser': 7.26.8
@@ -5903,7 +5909,7 @@ snapshots:
       '@babel/types': 7.17.0
       javascript-natural-sort: 0.7.1
       lodash: 4.17.21
-      prettier: 3.4.2
+      prettier: 3.5.0
     transitivePeerDependencies:
       - supports-color
 
@@ -8218,7 +8224,7 @@ snapshots:
 
   modify-values@1.0.1: {}
 
-  monorepo-package-paths@0.3.8(prettier@3.4.2):
+  monorepo-package-paths@0.3.8(prettier@3.5.0):
     dependencies:
       '@battis/import-package-json': 0.1.7
       '@battis/qui-cli': 0.8.5
@@ -8226,7 +8232,7 @@ snapshots:
       package-json-type: 1.0.3
       yaml: 2.7.0
     optionalDependencies:
-      prettier: 3.4.2
+      prettier: 3.5.0
 
   moo@0.5.2: {}
 
@@ -8722,33 +8728,33 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier-plugin-ejs@1.0.3(prettier@3.4.2):
+  prettier-plugin-ejs@1.0.3(prettier@3.5.0):
     dependencies:
-      prettier: 3.4.2
+      prettier: 3.5.0
 
-  prettier-plugin-organize-imports@4.1.0(prettier@3.4.2)(typescript@5.7.3):
+  prettier-plugin-organize-imports@4.1.0(prettier@3.5.0)(typescript@5.7.3):
     dependencies:
-      prettier: 3.4.2
+      prettier: 3.5.0
       typescript: 5.7.3
 
-  prettier-plugin-packagejson@2.5.8(prettier@3.4.2):
+  prettier-plugin-packagejson@2.5.8(prettier@3.5.0):
     dependencies:
       sort-package-json: 2.14.0
       synckit: 0.9.2
     optionalDependencies:
-      prettier: 3.4.2
+      prettier: 3.5.0
 
-  prettier-plugin-sql@0.18.1(prettier@3.4.2):
+  prettier-plugin-sql@0.18.1(prettier@3.5.0):
     dependencies:
       jsox: 1.2.121
       node-sql-parser: 4.18.0
-      prettier: 3.4.2
+      prettier: 3.5.0
       sql-formatter: 15.4.10
       tslib: 2.8.1
 
   prettier@2.8.8: {}
 
-  prettier@3.4.2: {}
+  prettier@3.5.0: {}
 
   pretty-format@29.7.0:
     dependencies:
