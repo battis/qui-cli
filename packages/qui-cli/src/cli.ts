@@ -49,10 +49,10 @@ export async function init({ env, args, log, shell }: Options = {}) {
     ...options
   } = args || {};
 
-  await Root.configure({ root: env?.root });
-  await Env.configure(env);
-  await Log.configure(log);
-  await Shell.configure(shell);
+  await Root._hooks.configure({ root: env?.root });
+  await Env._hooks.configure(env);
+  await Log._hooks.configure(log);
+  await Shell._hooks.configure(shell);
 
   return core.init(args) as Arguments<typeof options>;
 }
