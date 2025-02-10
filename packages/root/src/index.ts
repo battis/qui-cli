@@ -1,6 +1,10 @@
 import Plugin from '@battis/qui-cli.plugin';
 import appRoot from 'app-root-path';
 
+export type Container = Plugin.Container & {
+  path: typeof path;
+};
+
 export type Configuration = Plugin.Configuration & {
   root?: string;
 };
@@ -11,15 +15,23 @@ const { name, dependencies } = await Plugin.define({
 
 let root = appRoot.toString();
 
-export const Root: Plugin.Container = {
+async function configure(config?: Configuration) {
+  root = config?.root || root;
+}
+
+function path() {
+  return root;
+}
+
+export const Root: Container = {
   name,
   dependencies,
-  configure: async (config?: Configuration) => {
-    root = config?.root || root;
-  },
+
+  configure,
   options: () => ({}),
   init: () => {},
-  path: () => root
+
+  path
 };
 
 export { Root as default };
