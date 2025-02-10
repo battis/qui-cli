@@ -19,6 +19,9 @@ async function configure(config?: Configuration) {
   root = config?.root || root;
 }
 
+/**
+ * Configured working directory for the app (defaults to the root of the current project)
+ */
 function path() {
   return root;
 }
