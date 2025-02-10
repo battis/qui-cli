@@ -31,8 +31,8 @@ export const Root: Container = {
   dependencies,
 
   configure,
-  options: () => ({}),
-  init: () => {},
+  options: Plugin.Base.options,
+  init: Plugin.Base.init,
 
   path
 };
