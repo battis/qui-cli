@@ -9,11 +9,8 @@ type FlattenConfigMetaSets<O extends Options> = ConfigSetFromMetaSet<
   ConfigSetFromMetaSet<'number', true, Exclude<O['numList'], undefined>> &
   ConfigSetFromMetaSet<'string', false, Exclude<O['opt'], undefined>> &
   ConfigSetFromMetaSet<'string', false, Exclude<O['opt'], undefined>> &
-  ConfigSetFromMetaSet<'string', false, Exclude<O['options'], undefined>> &
   ConfigSetFromMetaSet<'string', true, Exclude<O['optList'], undefined>> &
-  ConfigSetFromMetaSet<'string', true, Exclude<O['optionLists'], undefined>> &
   ConfigSetFromMetaSet<'boolean', false, Exclude<O['flag'], undefined>> &
-  ConfigSetFromMetaSet<'boolean', false, Exclude<O['flags'], undefined>> &
   ConfigSetFromMetaSet<'boolean', true, Exclude<O['flagList'], undefined>> &
   Exclude<O['fields'], undefined>;
 

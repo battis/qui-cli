@@ -23,15 +23,21 @@ export type Options = {
   flag?: flag['value'];
   flagList?: flag['list'];
   fields?: ConfigSet;
-} & {
-  /** @deprecated use opt */
-  options?: opt['value'];
-
-  /** @deprecated use optList */
-  optionLists?: opt['list'];
-
-  /** @deprecated use flag */
-  flags?: flag['value'];
-} & {
   man?: Paragraph[];
 };
+
+export function merge<A extends Options = Options, B extends Options = Options>(
+  a: A,
+  b: B
+): A & B {
+  return {
+    num: { ...a.num, ...b.num },
+    numList: { ...a.numList, ...b.numList },
+    opt: { ...a.opt, ...b.opt },
+    optList: { ...a.optList, ...b.optList },
+    flag: { ...a.flag, ...b.flag },
+    flagList: { ...a.flagList, ...b.flagList },
+    fields: { ...a.fields, ...b.fields },
+    man: [...(a.man || []), ...(b.man || [])]
+  } as A & B;
+}
