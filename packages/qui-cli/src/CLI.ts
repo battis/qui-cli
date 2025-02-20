@@ -15,25 +15,16 @@ export const root = Root;
 export const shell = Shell;
 export const validators = Validators;
 
-let configured = false;
-
 export function configure(config: Parameters<typeof Core.configure>[0] = {}) {
-  configured = true;
   return Core.configure(config);
 }
 
 export function options(
   externalOptions: Parameters<typeof Core.options>[0] = {}
 ) {
-  if (!configured) {
-    configure();
-  }
   return Core.options(externalOptions);
 }
 
 export function init(externalOptions: Parameters<typeof Core.init>[0]) {
-  if (!configured) {
-    configure();
-  }
   return Core.init(externalOptions);
 }

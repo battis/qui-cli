@@ -16,9 +16,10 @@ export type Options = Plugin.Options & {
 let _jack: Jack | undefined = undefined;
 function jack() {
   if (!_jack) {
-    throw new Error(
-      `Jackspeak is not yet initialized (make sure that configure() is called first).`
-    );
+    configure();
+  }
+  if (!_jack) {
+    throw new Error('Bad things!');
   }
   return _jack;
 }
