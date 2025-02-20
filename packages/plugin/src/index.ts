@@ -1,22 +1,16 @@
-import { Arguments } from './Arguments.js';
-import { Options } from './Options.js';
+import { merge } from './Options.js';
+import { register } from './Registrar.js';
 
-export { Arguments, Options };
+export { Arguments } from './Arguments.js';
+export { Options } from './Options.js';
+export { Configuration } from './Plugin.js';
+export * as Registrar from './Registrar.js';
 
-export abstract class Base {
-  public constructor(public readonly name: string) {}
+export { merge as mergeOptions, register };
 
-  /**
-   * Override to include custom Jackspeak configuration.
-   *
-   * Will be called _before_ init() has been called.
-   */
-  public options(): Options {
-    return {};
+export function hydrate(proposed: any, fallback: any) {
+  if (proposed === undefined) {
+    return fallback;
   }
-
-  /**
-   * Override to process user-provided arguments parsed by Jackspeak
-   */
-  public init(args: Arguments<ReturnType<this['options']>>): void {}
+  return proposed;
 }
