@@ -6,7 +6,8 @@ import path from 'node:path';
 
 export type Configuration = Plugin.Configuration & {
   root?: string;
-  loadDotEnv?: boolean | string;
+  load?: boolean;
+  path?: string;
   setRootAsCurrentWorkingDirectory?: boolean;
 };
 
@@ -14,12 +15,14 @@ export const name = 'env';
 export const src = import.meta.dirname;
 
 let root: string | undefined = undefined;
-let loadDotEnv: string | boolean = true;
+let load: boolean = true;
+let pathToEnv = '.env';
 let setRootAsCurrentWorkingDirectory = true;
 
 export function configure(config: Configuration) {
   root = Plugin.hydrate(config.root, root);
-  loadDotEnv = Plugin.hydrate(config.loadDotEnv, loadDotEnv);
+  load = Plugin.hydrate(config.load, load);
+  pathToEnv = Plugin.hydrate(config.path, pathToEnv);
   setRootAsCurrentWorkingDirectory = Plugin.hydrate(
     config.setRootAsCurrentWorkingDirectory,
     setRootAsCurrentWorkingDirectory
@@ -29,12 +32,12 @@ export function configure(config: Configuration) {
     process.chdir(root || Root.path());
   }
 
-  if (loadDotEnv) {
+  if (load) {
     parse();
   }
 }
 
-export function parse(file = loadDotEnv) {
+export function parse(file = pathToEnv) {
   const env = dotenv.config({
     path: path.resolve(
       root || Root.path(),
@@ -52,14 +55,14 @@ type GetOptions = {
   file?: string;
 };
 
-export function get({ key, file = '.env' }: GetOptions) {
+export function get({ key, file = pathToEnv }: GetOptions) {
   if (fs.existsSync(path.resolve(root || Root.path(), file))) {
     return parse(file)[key];
   }
   return undefined;
 }
 
-export function exists({ key, file = '.env' }: GetOptions) {
+export function exists({ key, file = pathToEnv }: GetOptions) {
   if (fs.existsSync(path.resolve(root || Root.path(), file))) {
     return !!parse(file)[key];
   }
@@ -77,7 +80,7 @@ type SetOptions = {
 export function set({
   key,
   value,
-  file = '.env',
+  file = pathToEnv,
   comment,
   ifNotExists = false
 }: SetOptions) {
@@ -105,7 +108,7 @@ type RemoveOptions = {
   comment?: string;
 };
 
-export function remove({ key, file = '.env', comment }: RemoveOptions) {
+export function remove({ key, file = pathToEnv, comment }: RemoveOptions) {
   const filePath = path.resolve(root || Root.path(), file);
   if (fs.existsSync(filePath)) {
     const env = fs.readFileSync(filePath).toString();

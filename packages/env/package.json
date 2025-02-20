@@ -27,7 +27,7 @@
     "dotenv": "^16.4.7"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.28.0",
+    "@changesets/cli": "^2.28.1",
     "@tsconfig/node20": "^20.1.4",
     "@types/node": "^22.13.4",
     "commit-and-tag-version": "^12.5.0",
