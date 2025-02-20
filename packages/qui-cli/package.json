@@ -35,6 +35,7 @@
     "@battis/qui-cli.env": "workspace:*",
     "@battis/qui-cli.log": "workspace:*",
     "@battis/qui-cli.plugin": "workspace:*",
+    "@battis/qui-cli.progress": "workspace:*",
     "@battis/qui-cli.root": "workspace:*",
     "@battis/qui-cli.shell": "workspace:*",
     "@battis/qui-cli.validators": "workspace:*",
