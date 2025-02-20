@@ -1,12 +1,12 @@
 {
-  "name": "@example/pre-v0.8.x",
+  "name": "@example/cli",
   "version": "0.0.2",
   "private": true,
-  "homepage": "https://github.com/battis/qui-cli/tree/main/examples/pre-v0.8.x#readme",
+  "homepage": "https://github.com/battis/qui-cli/tree/main/examples/cli#readme",
   "repository": {
     "type": "git",
     "url": "https://github.com/battis/qui-cli.git",
-    "directory": "examples/pre-v0.8.x"
+    "directory": "examples/cli"
   },
   "author": {
     "name": "Seth Battis",
@@ -15,6 +15,7 @@
   "type": "module",
   "dependencies": {
     "@battis/qui-cli": "workspace:*",
+    "@inquirer/prompts": "^2.3.1",
     "jackspeak": "^2.3.6"
   },
   "devDependencies": {
