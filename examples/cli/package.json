@@ -1,6 +1,5 @@
 {
   "name": "@example/cli",
-  "version": "0.0.2",
   "private": true,
   "homepage": "https://github.com/battis/qui-cli/tree/main/examples/cli#readme",
   "repository": {
@@ -15,8 +14,7 @@
   "type": "module",
   "dependencies": {
     "@battis/qui-cli": "workspace:*",
-    "@inquirer/prompts": "^2.3.1",
-    "jackspeak": "^2.3.6"
+    "@inquirer/prompts": "^2.3.1"
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.4",
