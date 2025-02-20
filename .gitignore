@@ -1,4 +1,6 @@
 *.log
+**/.env
+**/.env.*
 **/dist/
 **/node_modules/
 /.nx/
