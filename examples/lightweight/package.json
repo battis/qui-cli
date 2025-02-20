@@ -1,0 +1,23 @@
+{
+  "name": "@example/lightweight",
+  "private": true,
+  "homepage": "https://github.com/battis/qui-cli/tree/main/examples/lightweight#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/battis/qui-cli.git",
+    "directory": "examples/lightweight"
+  },
+  "author": {
+    "name": "Seth Battis",
+    "url": "https://github.com/battis"
+  },
+  "type": "module",
+  "dependencies": {
+    "@battis/qui-cli.core": "workspace:*",
+    "@battis/qui-cli.log": "workspace:*"
+  },
+  "devDependencies": {
+    "@tsconfig/node20": "^20.1.4",
+    "tsx": "^4.19.3"
+  }
+}
