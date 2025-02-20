@@ -1,4 +1,4 @@
-import colors from '@battis/qui-cli.colors';
+import { Colors } from '@battis/qui-cli.colors';
 import chalk from 'chalk';
 import cliProgress from 'cli-progress';
 
@@ -19,7 +19,7 @@ export class ProgressBar {
 
   public constructor({ value = 0, max }: Options) {
     this.multibar = new cliProgress.MultiBar({
-      format: `{bar} {percentage}% {eta_formatted} ${colors.value('{caption}')}`,
+      format: `{bar} {percentage}% {eta_formatted} ${Colors.value('{caption}')}`,
       barCompleteChar: '█',
       barIncompleteChar: '█',
       autopadding: true,
