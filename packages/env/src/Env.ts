@@ -8,7 +8,6 @@ export type Configuration = Plugin.Configuration & {
   root?: string;
   load?: boolean;
   path?: string;
-  setRootAsCurrentWorkingDirectory?: boolean;
 };
 
 export const name = 'env';
@@ -17,20 +16,11 @@ export const src = import.meta.dirname;
 let root: string | undefined = undefined;
 let load: boolean = true;
 let pathToEnv = '.env';
-let setRootAsCurrentWorkingDirectory = true;
 
 export function configure(config: Configuration) {
   root = Plugin.hydrate(config.root, root);
   load = Plugin.hydrate(config.load, load);
   pathToEnv = Plugin.hydrate(config.path, pathToEnv);
-  setRootAsCurrentWorkingDirectory = Plugin.hydrate(
-    config.setRootAsCurrentWorkingDirectory,
-    setRootAsCurrentWorkingDirectory
-  );
-
-  if (setRootAsCurrentWorkingDirectory) {
-    process.chdir(root || Root.path());
-  }
 
   if (load) {
     parse();
