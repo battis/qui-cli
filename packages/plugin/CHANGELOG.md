@@ -1,4 +1,19 @@
-# @battis/qui-cli.plugin
+# Changelog
+
+All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
+
+## [1.0.0](https://github.com/battis/qui-cli/compare/plugin/0.1.2...plugin/1.0.0) (2025-02-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* **qui-cli.plugin:** plugin modules and Plugin.Registrar
+* **qui-cli.plugin:** merge() options
+
+### Features
+
+* **qui-cli.plugin:** merge() options ([a9b55c5](https://github.com/battis/qui-cli/commit/a9b55c53e7d41ffa13648765b8308046132e79d9))
+* **qui-cli.plugin:** plugin modules and Plugin.Registrar ([4f95013](https://github.com/battis/qui-cli/commit/4f95013c1d21e01545346f957b87ca2d551eec77)), closes [#15](https://github.com/battis/qui-cli/issues/15)
 
 ## 0.1.2
 
