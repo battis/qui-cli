@@ -37,17 +37,15 @@ let logger = winston.createLogger({
   transports: [transports.console] // TODO Is pre-loading console transport safe?
 });
 
-let format = {
-  stripColors: winston.format((info: winston.Logform.TransformableInfo) => {
-    for (const prop in info) {
-      const value = info[prop];
-      if (typeof value === 'string') {
-        info[prop] = stripAnsi(value);
-      }
+function stripColors(info: winston.Logform.TransformableInfo) {
+  for (const prop in info) {
+    const value = info[prop];
+    if (typeof value === 'string') {
+      info[prop] = stripAnsi(value);
     }
-    return info;
-  })
-};
+  }
+  return info;
+}
 
 export function configure(config: Configuration) {
   logFilePath = Plugin.hydrate(config.logFilePath, logFilePath);
@@ -88,7 +86,7 @@ export function init() {
       filename,
       level: fileLevel,
       format: winston.format.combine(
-        format.stripColors(),
+        winston.format(stripColors)(),
         winston.format.timestamp(),
         winston.format.json()
       )
