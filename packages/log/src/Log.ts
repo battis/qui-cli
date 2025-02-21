@@ -38,10 +38,11 @@ let logger = winston.createLogger({
 });
 
 let format = {
-  stripColors: winston.format((info) => {
+  stripColors: winston.format((info: winston.Logform.TransformableInfo) => {
     for (const prop in info) {
-      if (typeof info[prop] === 'string') {
-        info[prop] = stripAnsi(info![prop]);
+      const value = info[prop];
+      if (typeof value === 'string') {
+        info[prop] = stripAnsi(value);
       }
     }
     return info;
@@ -74,9 +75,7 @@ export function options() {
   };
 }
 
-export function init({
-  values = {}
-}: Plugin.Arguments<ReturnType<typeof options>>) {
+export function init() {
   transports.console.level = stdoutLevel;
   logger.configure({
     levels: levels.levels,
