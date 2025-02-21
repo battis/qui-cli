@@ -24,46 +24,38 @@ function jack() {
   return _jack;
 }
 
-let _options: Options | undefined = undefined;
-
 let requirePositionals: boolean | number | undefined = undefined;
-let allowPositionals = true;
-let envPrefix = 'ARG';
-let env = process.env;
-let _usage: string | undefined = undefined;
-let stopAtPositional = false;
 
 export function configure(config: Configuration = {}) {
   requirePositionals = Plugin.hydrate(
     config.requirePositionals,
     requirePositionals
   );
-  allowPositionals = Plugin.hydrate(config.allowPositionals, allowPositionals);
-  envPrefix = Plugin.hydrate(config.envPrefix, envPrefix);
-  env = Plugin.hydrate(config.env, env);
-  _usage = Plugin.hydrate(config.usage, _usage);
-  stopAtPositional = Plugin.hydrate(config.stopAtPositional, stopAtPositional);
 
   _jack = new Jack({
+    ...config,
     allowPositionals:
-      allowPositionals !== undefined ? allowPositionals : !!requirePositionals,
-    envPrefix,
-    usage: _usage,
-    env,
-    stopAtPositional
+      config.allowPositionals !== undefined
+        ? config.allowPositionals
+        : !!requirePositionals
   });
 }
 
 export function options(options: Plugin.Options = {}): Options {
-  _options = Plugin.mergeOptions(
+  return Plugin.mergeOptions(
     Plugin.mergeOptions(
-      { flag: { help: { short: 'h', description: 'Get usage information' } } },
+      {
+        flag: {
+          help: {
+            description: 'Get usage information',
+            short: 'h'
+          }
+        }
+      },
       Plugin.Registrar.options()
     ),
     options
   );
-
-  return _options;
 }
 
 function apply({
@@ -98,13 +90,7 @@ function apply({
 export function init(
   externalOptions?: Plugin.Options | Options
 ): Plugin.Arguments<Options> {
-  if (externalOptions || !_options) {
-    options(externalOptions);
-  }
-  if (!_options) {
-    throw new Error('Options have not been initialied. Call options() first.');
-  }
-  apply(_options);
+  apply(options(externalOptions));
 
   const args: Plugin.Arguments<Options> = jack().parse();
   const {
