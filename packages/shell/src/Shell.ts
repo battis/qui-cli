@@ -79,10 +79,12 @@ export function exec(command: string) {
   return result;
 }
 
+/** @deprecated use configure() */
 export function setShowCommands(commandsAreShownInConsole: boolean) {
   return (showCommands = commandsAreShownInConsole);
 }
 
+/** @deprecated use configure() */
 export function setSilent(commandsAreExecutedSilentlyInConsole: boolean) {
   return (silent = commandsAreExecutedSilentlyInConsole);
 }
