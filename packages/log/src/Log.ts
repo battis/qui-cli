@@ -17,6 +17,7 @@ export type Configuration = {
   root?: string;
 };
 
+const OFF = 'off';
 export const name = 'log';
 export const src = import.meta.dirname;
 
@@ -63,12 +64,12 @@ export function configure(config: Configuration) {
     winston.addColors(levels.colors);
   }
 
-  if (config.stdoutLevel && config.stdoutLevel !== stdoutLevel) {
-    stdoutLevel = Plugin.hydrate(config.stdoutLevel, stdoutLevel);
+  if (config.stdoutLevel) {
     if (transports.console) {
       logger().remove(transports.console);
     }
-    if (stdoutLevel !== 'off') {
+    stdoutLevel = Plugin.hydrate(config.stdoutLevel, stdoutLevel);
+    if (stdoutLevel !== OFF) {
       transports.console = new winston.transports.Console({
         format: winston.format.printf(({ message }) => message as string),
         level: stdoutLevel
@@ -77,31 +78,36 @@ export function configure(config: Configuration) {
     }
   }
 
-  if (config.logFilePath && !transports[config.logFilePath]) {
+  if (config.logFilePath) {
     logFilePath = Plugin.hydrate(config.logFilePath, logFilePath);
     if (logFilePath) {
+      if (transports[logFilePath]) {
+        logger().remove(transports[logFilePath]);
+      }
       fileLevel = Plugin.hydrate(config.fileLevel, fileLevel);
-      const filename = path.resolve(root || Root.path(), logFilePath);
-      const spinner = ora(`Connecting to ${Colors.url(filename)}`).start();
-      transports[logFilePath] = new winston.transports.File({
-        filename,
-        level: fileLevel,
-        format: winston.format.combine(
-          winston.format(stripColors)(),
-          winston.format.timestamp(),
-          winston.format.json()
-        )
-      });
-      logger().add(transports[logFilePath]);
-      spinner.succeed(
-        `Logging level ${Colors.value(fileLevel)} to ${Colors.url(filename)}`
-      );
+      if (fileLevel !== OFF) {
+        const filename = path.resolve(root || Root.path(), logFilePath);
+        const spinner = ora(`Connecting to ${Colors.url(filename)}`).start();
+        transports[logFilePath] = new winston.transports.File({
+          filename,
+          level: fileLevel,
+          format: winston.format.combine(
+            winston.format(stripColors)(),
+            winston.format.timestamp(),
+            winston.format.json()
+          )
+        });
+        logger().add(transports[logFilePath]);
+        spinner.succeed(
+          `Logging level ${Colors.value(fileLevel)} to ${Colors.url(filename)}`
+        );
+      }
     }
   }
 }
 
 export function options() {
-  const levelsList = [...Object.keys(levels.levels), 'off']
+  const levelsList = [...Object.keys(levels.levels), OFF]
     .map((level) => Colors.quotedValue(`"${level}"`))
     .join(', ')
     .replace(/, ([^,]+)$/, ', or $1');
