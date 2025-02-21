@@ -1,6 +1,6 @@
 # @battis/qui-cli.plugin
 
-@battis/qui-cli plugin structure and registar
+@battis/qui-cli plugin structure and registrar
 
 [![npm version](https://badge.fury.io/js/@battis%2Fqui-cli.plugin.svg)](https://badge.fury.io/js/@battis%2Fqui-cli.plugin)
 [![Module type: ESM](https://img.shields.io/badge/module%20type-esm-brightgreen)](https://nodejs.org/api/esm.html)
