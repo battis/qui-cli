@@ -1,6 +1,9 @@
 *.log
 **/.env
 **/.env.*
+!**/.env.example
 **/dist/
 **/node_modules/
+**/var/*
+!**/var/README.md
 /.nx/
