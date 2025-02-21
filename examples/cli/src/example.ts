@@ -49,6 +49,6 @@ for (let i = 0; i < text.length; i++) {
   setTimeout(() => {
     cli.progress.caption(text.substring(0, i + 1));
     cli.progress.increment();
-  }, Math.random() * 5000);
+  }, i * 100);
 }
 setTimeout(cli.progress.stop, 5000);
