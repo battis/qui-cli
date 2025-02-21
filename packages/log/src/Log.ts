@@ -29,13 +29,20 @@ let root: string | undefined = undefined;
 let transports: Record<string, winston.transport> = {
   console: new winston.transports.Console({
     format: winston.format.printf(({ message }) => message as string),
-    level: 'info'
+    level: stdoutLevel
   })
 };
 
-let logger = winston.createLogger({
-  transports: [transports.console] // TODO Is pre-loading console transport safe?
-});
+let _logger: winston.Logger | undefined = undefined;
+function logger() {
+  if (!_logger) {
+    _logger = winston.createLogger({
+      levels: levels.levels,
+      transports: Object.values(transports)
+    });
+  }
+  return _logger;
+}
 
 function stripColors(info: winston.Logform.TransformableInfo) {
   for (const prop in info) {
@@ -48,11 +55,49 @@ function stripColors(info: winston.Logform.TransformableInfo) {
 }
 
 export function configure(config: Configuration) {
-  logFilePath = Plugin.hydrate(config.logFilePath, logFilePath);
-  stdoutLevel = Plugin.hydrate(config.stdoutLevel, stdoutLevel);
-  fileLevel = Plugin.hydrate(config.fileLevel, fileLevel);
-  levels = Plugin.hydrate(config.levels, levels);
   root = Plugin.hydrate(config.root, root);
+
+  if (config.levels) {
+    levels = Plugin.hydrate(config.levels, levels);
+    logger().configure({ levels: levels.levels });
+    winston.addColors(levels.colors);
+  }
+
+  if (config.stdoutLevel && config.stdoutLevel !== stdoutLevel) {
+    stdoutLevel = Plugin.hydrate(config.stdoutLevel, stdoutLevel);
+    if (transports.console) {
+      logger().remove(transports.console);
+    }
+    if (stdoutLevel !== 'off') {
+      transports.console = new winston.transports.Console({
+        format: winston.format.printf(({ message }) => message as string),
+        level: stdoutLevel
+      });
+      logger().add(transports.console);
+    }
+  }
+
+  if (config.logFilePath && !transports[config.logFilePath]) {
+    logFilePath = Plugin.hydrate(config.logFilePath, logFilePath);
+    if (logFilePath) {
+      fileLevel = Plugin.hydrate(config.fileLevel, fileLevel);
+      const filename = path.resolve(root || Root.path(), logFilePath);
+      const spinner = ora(`Connecting to ${Colors.url(filename)}`).start();
+      transports[logFilePath] = new winston.transports.File({
+        filename,
+        level: fileLevel,
+        format: winston.format.combine(
+          winston.format(stripColors)(),
+          winston.format.timestamp(),
+          winston.format.json()
+        )
+      });
+      logger().add(transports[logFilePath]);
+      spinner.succeed(
+        `Logging level ${Colors.value(fileLevel)} to ${Colors.url(filename)}`
+      );
+    }
+  }
 }
 
 export function options() {
@@ -73,34 +118,12 @@ export function options() {
   };
 }
 
-export function init() {
-  transports.console.level = stdoutLevel;
-  logger.configure({
-    levels: levels.levels,
-    transports: [transports.console]
-  });
-  if (logFilePath) {
-    const filename = path.resolve(root || Root.path(), logFilePath);
-    const spinner = ora(`Connecting to ${Colors.url(filename)}`).start();
-    transports.file = new winston.transports.File({
-      filename,
-      level: fileLevel,
-      format: winston.format.combine(
-        winston.format(stripColors)(),
-        winston.format.timestamp(),
-        winston.format.json()
-      )
-    });
-    logger.add(transports.file);
-    winston.addColors(levels.colors);
-    spinner.succeed(
-      `Logging level ${Colors.value(fileLevel)} to ${Colors.url(filename)}`
-    );
-  }
+export function init({ values }: Plugin.Arguments<ReturnType<typeof options>>) {
+  configure(values);
 }
 
 export function get() {
-  return logger;
+  return logger();
 }
 
 function colorObject(obj: object) {
@@ -126,11 +149,11 @@ function namedLogMethod(level: string) {
         }
       }
     }
-    return logger.log(level, message, ...meta);
+    return logger().log(level, message, ...meta);
   };
 }
 
-export const log = logger.log.bind(logger);
+export const log = logger().log.bind(logger);
 export const trace = namedLogMethod('trace');
 export const debug = namedLogMethod('debug');
 export const info = namedLogMethod('info');
