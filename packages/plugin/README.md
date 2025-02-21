@@ -181,3 +181,59 @@ export function init({
 ```
 
 ## API
+
+```ts
+import * as Plugin from '@battis/qui-cli.pugin';
+```
+
+### `Plugin.register(plugin): void`
+
+Register a plugin for use.
+
+```ts
+import * as MyPlugin from './MyPlugin.js';
+
+Plugin.register(MyPlugin);
+```
+
+### `Plugin.Configuration`
+
+Typing for `configure()` hook. Intended to be extended to provide IntelliSense support, discussed in detail in [Configuration](#Configuration).
+
+```ts
+type Configuration = Plugin.Configuration & {
+  // ...
+};
+
+export function configure(config?: Configuration) {
+  // ...
+}
+```
+
+### `Plugin.Options`
+
+Typing for `options()` hook. Maps 1:1 to the [jackspeak options API](https://www.npmjs.com/package/jackspeak#user-content-option-definitions), discussed in detail in[Options](#Options).
+
+```ts
+export function options(): Plugin.Options {
+  // ...
+}
+```
+
+### `Plugin.Arguments`
+
+Typing for `init()` hook. Intended to provide IntelliSense support for parameters defined by `options()` hook.
+
+```ts
+export function init(args: Plugin.Arguments<ReturnType<typeof options>>) {
+  // ...
+}
+```
+
+### `Plugin.Registrar`
+
+The Plugin Registrar, responsible for tracking plugin registrations and triggering plugin hooks. Intended primarily for use by [@battis/qui-cli.core](https://www.npmjs.com/package/@battis/qui-cli.core)
+
+### `Plugin.mergeOptions(a, b): Plugin.Options`
+
+Merge two `Plugin.Options` objects. `b` overwrites `a` in the event of duplicate keys.
