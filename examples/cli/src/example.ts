@@ -51,4 +51,4 @@ for (let i = 0; i < text.length; i++) {
     cli.progress.increment();
   }, i * 100);
 }
-setTimeout(cli.progress.stop, 5000);
+setTimeout(cli.progress.stop, (text.length + 1) * 100);
