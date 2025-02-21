@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.0.0](https://github.com/battis/qui-cli/compare/qui-cli/0.9.9...qui-cli/1.0.0) (2025-02-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* **qui-cli:** reimplemented as ESM modules
+
+### Features
+
+* **qui-cli:** configurable plugins ([730d54e](https://github.com/battis/qui-cli/commit/730d54e1595ff63fecb41bcecc0df81d10119a88))
+* **qui-cli:** reimplemented as ESM modules ([d345333](https://github.com/battis/qui-cli/commit/d34533307b3ebd46dddc1d7d14824aba505be97c))
+
+
+### Bug Fixes
+
+* **qui-cli,qui-cli.core:** auto-configure on init ([37bb1c3](https://github.com/battis/qui-cli/commit/37bb1c3b49e6ee9e698d42f1e8d20da380f14636))
+* **qui-cli:** progress plugin restored ([a1cf91a](https://github.com/battis/qui-cli/commit/a1cf91a1e0ea0e2a5b367a256c2e5268da6ae722))
+
 ## [0.9.9](https://github.com/battis/qui-cli/compare/qui-cli/0.9.8...qui-cli/0.9.9) (2025-02-09)
 
 ## [0.9.8](https://github.com/battis/qui-cli/compare/qui-cli/0.9.7...qui-cli/0.9.8) (2025-02-09)
