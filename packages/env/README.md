@@ -8,32 +8,19 @@
 ## Install
 
 ```sh
-npm install @battis/qui-cli.env @battis/qui-cli.core
+npm install @battis/qui-cli.env
 ```
 
 ## Usage
 
 ```ts
 import { Env } from '@battis/qui-cli.env';
-import { Core } from '@battis/qui-cli.core';
 
 // configure desired environment path
 Env.configure({ path: '../../.env' });
 
-// process user-provided command-line arguments
-const {
-  values: { example }
-} = Core.init({
-  opt: {
-    example: {
-      description: 'A value',
-      default: process.env.EXAMPLE
-    }
-  }
-});
-
 // update .env
-Env.set({ key: 'EXAMPLE', value: example });
+Env.set({ key: 'EXAMPLE', value: parseInt(process.env.EXAMPLE || '0') + 1 });
 ```
 
 ## Configuration
