@@ -31,6 +31,8 @@ Programmatic configuration to set defaults before generating user-facing usage d
 
 Invoking `Core.configure()` triggers the `configure()` hook for all registered plugins.
 
+Refer to [@battis/qui-cli.plugin](https://github.com/battis/qui-cli/blob/main/packages/plugin/README.md#configuration) for further details on plugin configuration.
+
 In general, configuration options match those of [jackspeak](https://www.npmjs.com/package/jackspeak#user-content-jackoptions-jackoptions----jack):
 
 ```ts
@@ -55,6 +57,8 @@ Generate command-line options for jackspeak initialization and user-facing usage
 
 Invoking `Core.options()` merges the `options()` hooks of all registered plugins.
 
+Refer to [@battis/qui-cli.plugin](https://github.com/battis/qui-cli/blob/main/packages/plugin/README.md#options) for further details on plugin options.
+
 The `--help` (`-h`) flag is appended to output user-readable usage information to the command-line.
 
 ## Initialization: `init(options?: Options): Arguments`
@@ -63,81 +67,6 @@ Initialize the app with user-provided command-line arguments, processed based on
 
 Invoking `Core.init()` also initializes the `init()` hook for all registered plugins.
 
-Additional app-specific command-line options can be provided with an `Options` object:
+Refer to [@battis/qui-cli.plugin](https://github.com/battis/qui-cli/blob/main/packages/plugin/README.md#initialization) for further details on plugin initialization.
 
-```ts
-type ConfigSet<Value> = Record<
-  string,
-  {
-    description?: string; // user-readable usage information
-    short?: string; // single-character short-hand for this option
-    default?: Value;
-    hint?: string
-    validate?: (value: any) => v is Value | (v: any) => boolean;
-    type?: 'number' | 'string' | 'boolean';
-    multiple?: boolean;
-    delim?: string // default ' '
-  }
->;
-
-type Paragraph = {
-  text: string;
-  level?: 1 | 2 | 3 | 4 | 5 | 6;
-  pre?: boolean;
-};
-
-type Options = {
-  // an option that expects a single number
-  num?: ConfigSet<number>;
-
-  // an option that expects a `delim`-separated list of numbers
-  numList?: ConfigSet<number[]>;
-
-  // an option that expects a string value (optionally quoted)
-  opt?: ConfigSet<string>;
-
-  // an option that expects a `delim`-separated list of strings
-  optList?: ConfigSet<string[]>;
-
-  // a flag that is set (true) or unset (false), --example can be explicitly unset as --no-example
-  flag?: ConfigSet<boolean>;
-
-  // a flag that can be set multiple times (-d vs -ddd)
-  flagList?: ConfigSet<boolean[]>;
-
-  // must explicitly define type and multiple
-  fields?: ConfigSet<any>;
-
-  // additional user-readable usage information
-  man?: Paragraph[];
-};
-```
-
-### Example `init()` invocation
-
-```ts
-import { Core } from '@battis/qui-cli.core';
-
-const {
-  values: { foo, bar },
-  positionals: [arg0, arg1]
-} = Core.init({
-  flag: {
-    foo: {
-      description: 'Engage foo-ness',
-      short: 'f'
-    }
-  },
-  opt: {
-    bar: {
-      description: `Bar value (default: "argle-bargle")`,
-      short: 'b',
-      default: 'argle-bargle'
-    }
-  }
-});
-
-if (foo) {
-  console.log(`${arg0} to the ${bar} of ${arg1}`);
-}
-```
+Additional app-specific command-line options can be provided with an `Options` object as described in [@battis/qui-cli.plugin](https://github.com/battis/qui-cli/blob/main/packages/plugin/README.md#options).
