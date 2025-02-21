@@ -1,4 +1,22 @@
-# @battis/qui-cli.shell
+# Changelog
+
+All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
+
+## [1.0.0](https://github.com/battis/qui-cli/compare/shell/0.8.3...shell/1.0.0) (2025-02-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* **qui-cli.shell:** reimplement as ESM module
+
+### Features
+
+* **qui-cli.shell:** reimplement as ESM module ([953a7b8](https://github.com/battis/qui-cli/commit/953a7b820e19832639d07fd31553e546a9bdc0d6))
+
+
+### Bug Fixes
+
+* **qui-cli.shell:** configuration compliant with Plugin.Configuration ([968effb](https://github.com/battis/qui-cli/commit/968effbb4828d5f285995fbdf9c1e01f6a3ce874))
 
 ## 0.8.3
 
