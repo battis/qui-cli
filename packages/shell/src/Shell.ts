@@ -56,6 +56,7 @@ function keywords(command: string) {
     `$1${Colors.keyword('$3')}`
   );
 }
+
 export function get() {
   return shell;
 }
