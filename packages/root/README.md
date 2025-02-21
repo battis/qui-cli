@@ -8,14 +8,13 @@
 ## Install
 
 ```sh
-npm install @battis/qui-cli.root @battis/qui-cli.core
+npm install @battis/qui-cli.root
 ```
 
 ## Usage
 
 ```ts
-import { Root } from '@battis/qui-cli.env';
-import { Core } from '@battis/qui-cli.core';
+import { Root } from '@battis/qui-cli.root';
 import path from 'node:path';
 
 // configure Root
