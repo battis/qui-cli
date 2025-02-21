@@ -31,7 +31,7 @@ Programmatic configuration to set defaults before generating user-facing usage d
 
 Invoking `Core.configure()` triggers the `configure()` hook for all registered plugins.
 
-Refer to [@battis/qui-cli.plugin](https://github.com/battis/qui-cli/blob/main/packages/plugin/README.md#configuration) for further details on plugin configuration.
+Refer to [@battis/qui-cli.plugin](https://www.npmjs.com/package/@battis/qui-cli.plugin#user-content-configuration) for further details on plugin configuration.
 
 In general, configuration options match those of [jackspeak](https://www.npmjs.com/package/jackspeak#user-content-jackoptions-jackoptions----jack):
 
@@ -57,7 +57,7 @@ Generate command-line options for jackspeak initialization and user-facing usage
 
 Invoking `Core.options()` merges the `options()` hooks of all registered plugins.
 
-Refer to [@battis/qui-cli.plugin](https://github.com/battis/qui-cli/blob/main/packages/plugin/README.md#options) for further details on plugin options.
+Refer to [@battis/qui-cli.plugin](https://www.npmjs.com/package/@battis/qui-cli.plugin#user-content-options) for further details on plugin options.
 
 The `--help` (`-h`) flag is appended to output user-readable usage information to the command-line.
 
@@ -67,6 +67,6 @@ Initialize the app with user-provided command-line arguments, processed based on
 
 Invoking `Core.init()` also initializes the `init()` hook for all registered plugins.
 
-Refer to [@battis/qui-cli.plugin](https://github.com/battis/qui-cli/blob/main/packages/plugin/README.md#initialization) for further details on plugin initialization.
+Refer to [@battis/qui-cli.plugin](https://www.npmjs.com/package/@battis/qui-cli.plugin#user-content-initialization) for further details on plugin initialization.
 
-Additional app-specific command-line options can be provided with an `Options` object as described in [@battis/qui-cli.plugin](https://github.com/battis/qui-cli/blob/main/packages/plugin/README.md#options).
+Additional app-specific command-line options can be provided with an `Options` object as described in [@battis/qui-cli.plugin](https://www.npmjs.com/package/@battis/qui-cli.plugin#user-content-options).
