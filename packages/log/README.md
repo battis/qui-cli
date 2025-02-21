@@ -1,6 +1,6 @@
 # @battis/qui-cli.log
 
-@battis/qui-cli Plugin: Standardized Winston wrapper
+@battis/qui-cli Plugin: Standardized winston wrapper
 
 [![npm version](https://badge.fury.io/js/@battis%2Fqui-cli.log.svg)](https://badge.fury.io/js/@battis%2Fqui-cli.log)
 [![Module type: ESM](https://img.shields.io/badge/module%20type-esm-brightgreen)](https://nodejs.org/api/esm.html)
@@ -72,11 +72,11 @@ import { Log } from '@battis/qui-cli.log';
 
 ### `Log.get(): winston.Logger`
 
-Get the actual Winston logger object.
+Get the actual winston logger object.
 
 ### `Log.log()`
 
-Directly invoke the Winston [`log()` method](https://www.npmjs.com/package/winston#user-content-usage)
+Directly invoke the winston [`log()` method](https://www.npmjs.com/package/winston#user-content-usage)
 
 ### `Log.trace()`, `Log.debug()`, `Log.info()`, `Log.warning()`, `Log.error()`, `Log.fatal()`
 
