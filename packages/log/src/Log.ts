@@ -9,7 +9,7 @@ import { CustomLevels, DefaultLevels } from './Levels.js';
 
 export { CustomLevels, DefaultLevels };
 
-export type Configuration = {
+export type Configuration = Plugin.Configuration & {
   logFilePath?: string;
   stdoutLevel?: string;
   fileLevel?: string;
