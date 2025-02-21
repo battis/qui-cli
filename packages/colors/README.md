@@ -8,17 +8,13 @@
 ## Install
 
 ```sh
-npm install @battis/qui-cli.colors @battis/qui-cli.core
+npm install @battis/qui-cli.colors
 ```
 
 ## Usage
 
 ```ts
 import { Colors } from '@battis/qui-cli.colors';
-import { Core } from '@battis/qui-cli.core';
-
-// process user-provided command-line arguments
-const args = Core.init();
 
 // use Colors
 console.log(
