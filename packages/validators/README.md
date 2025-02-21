@@ -14,7 +14,7 @@ npm install @battis/qui-cli.validators @inquirer/prompts
 ## Usage
 
 ```ts
-import { Validators } fron '@battis/qui-cli.validators';
+import { Validators } from '@battis/qui-cli.validators';
 import { input } from '@inquirer/prompts'
 
 const word = await input({
