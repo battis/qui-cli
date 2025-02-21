@@ -11,7 +11,7 @@ type CommandLogEntry = {
   stderr?: string;
 };
 
-export type Configuration = {
+export type Configuration = Plugin.Configuration & {
   showCommands?: boolean;
   silent?: boolean;
 };
