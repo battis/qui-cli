@@ -125,6 +125,7 @@ export function usage() {
       if (requirePositionals > 1) {
         usage = usage.replace(
           /\n\n/m, // FIXME hilariously unreliable regex!
+                   // Issue URL: https://github.com/battis/qui-cli/issues/25
           ` arg0..arg${requirePositionals - 1}\n\n`
         );
       } else {
@@ -139,4 +140,5 @@ export function usage() {
 
 export function usageMarkdown() {
   return jack().usageMarkdown(); // FIXME format arguments
+                                 // Issue URL: https://github.com/battis/qui-cli/issues/24
 }

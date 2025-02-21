@@ -54,6 +54,7 @@ export function email(): Validator {
 export function cron(value?: string) {
   return (
     // FIXME cronValidator callable
+    // Issue URL: https://github.com/battis/qui-cli/issues/27
     // @ts-ignore
     (notEmpty(value) === true && cronValidator(value || '').isValid()) ||
     'Must be valid cron schedule'

@@ -3,6 +3,7 @@ import chalk from 'chalk';
 import cliProgress from 'cli-progress';
 
 // TODO convert progress to a full-fledged plugin
+// Issue URL: https://github.com/battis/qui-cli/issues/26
 
 type Options = {
   value?: number;
