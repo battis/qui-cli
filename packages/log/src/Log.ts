@@ -101,17 +101,21 @@ export function configure(config: Configuration) {
 }
 
 export function options() {
+  const levelsList = [...Object.keys(levels.levels), 'off']
+    .map((level) => Colors.quotedValue(`"${level}"`))
+    .join(', ')
+    .replace(/, ([^,]+)$/, ', or $1');
   return {
     opt: {
       logFilePath: {
         description: `Path to log file (optional)`
       },
       stdoutLevel: {
-        description: `Log level to console stdout: ${Colors.quotedValue('"off"')}, ${Colors.quotedValue('"fatal"')}, ${Colors.quotedValue('"error"')}, ${Colors.quotedValue('"warning"')}, ${Colors.quotedValue('"info"')}, ${Colors.quotedValue('"debug"')}, ${Colors.quotedValue('"trace"')}, or ${Colors.quotedValue('"all"')} (default: ${Colors.quotedValue(`"${stdoutLevel}"`)})`,
+        description: `Log level to console stdout: ${levelsList} (default: ${Colors.quotedValue(`"${stdoutLevel}"`)})`,
         default: stdoutLevel
       },
       fileLevel: {
-        description: `Log level to log file (if path proved): ${Colors.quotedValue('"off"')}, ${Colors.quotedValue('"fatal"')}, ${Colors.quotedValue('"error"')}, ${Colors.quotedValue('"warning"')}, ${Colors.quotedValue('"info"')}, ${Colors.quotedValue('"debug"')}, ${Colors.quotedValue('"trace"')}, or ${Colors.quotedValue('"all"')} (default: ${Colors.quotedValue(`"${fileLevel}"`)})`,
+        description: `Log level to log file (if ${Colors.value('--logFilePath')} provided): ${levelsList} (default: ${Colors.quotedValue(`"${fileLevel}"`)})`,
         default: fileLevel
       }
     }
