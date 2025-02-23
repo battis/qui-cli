@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.0.1](https://github.com/battis/qui-cli/compare/root/2.0.0...root/2.0.1) (2025-02-23)
+
+
+### Bug Fixes
+
+* **qui-cli.root:** more flexible peer dependency ([440507f](https://github.com/battis/qui-cli/commit/440507f1e3a155a7e7fb7203ae14f444b9725870))
+
 ## [2.0.0](https://github.com/battis/qui-cli/compare/root/1.0.0...root/2.0.0) (2025-02-23)
 
 ### ⚠ BREAKING CHANGES
