@@ -1,9 +1,11 @@
 import * as Plugin from '@battis/qui-cli.plugin';
 import { Jack, JackOptions } from 'jackspeak';
 
-export type Configuration = JackOptions & {
-  requirePositionals?: boolean | number;
-} & Record<string, Plugin.Configuration>;
+export type Configuration = Record<string, Plugin.Configuration> & {
+  core?: JackOptions & {
+    requirePositionals?: boolean | number;
+  };
+};
 
 export type Options = Plugin.Options & {
   flag: {
@@ -26,24 +28,23 @@ function jack() {
 
 let requirePositionals: boolean | number | undefined = undefined;
 
-export async function configure(config: Configuration = {}) {
+export async function configure({ core, ...pluginConfig }: Configuration = {}) {
   requirePositionals = Plugin.hydrate(
-    config.requirePositionals,
+    core?.requirePositionals,
     requirePositionals
   );
 
   _jack = new Jack({
-    ...config,
-    allowPositionals:
-      config.allowPositionals !== undefined
-        ? config.allowPositionals
-        : !!requirePositionals
+    ...core,
+    allowPositionals: !!requirePositionals
   });
 
-  await Plugin.Registrar.configure(config);
+  await Plugin.Registrar.configure(pluginConfig);
 }
 
-export async function options(options: Plugin.Options = {}): Promise<Options> {
+export async function options(
+  externalOptions: Plugin.Options = {}
+): Promise<Options> {
   return Plugin.mergeOptions(
     Plugin.mergeOptions(
       {
@@ -56,7 +57,7 @@ export async function options(options: Plugin.Options = {}): Promise<Options> {
       },
       await Plugin.Registrar.options()
     ),
-    options
+    externalOptions
   );
 }
 
