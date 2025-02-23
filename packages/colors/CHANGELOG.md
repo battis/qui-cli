@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.0.1](https://github.com/battis/qui-cli/compare/colors/2.0.0...colors/2.0.1) (2025-02-23)
+
+
+### Bug Fixes
+
+* **qui-cli.colors:** more flexible peer dependency ([3318ea2](https://github.com/battis/qui-cli/commit/3318ea28cd3f849e6b2e6ac47f65f3c1d228726e))
+
 ## [2.0.0](https://github.com/battis/qui-cli/compare/colors/1.0.0...colors/2.0.0) (2025-02-23)
 
 ### ⚠ BREAKING CHANGES
