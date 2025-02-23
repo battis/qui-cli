@@ -6,7 +6,7 @@ export type Configuration = Record<string, any>;
 export type Base<O extends Options = Options> = {
   name: string;
   src: string;
-  configure?: (config: Configuration) => void;
-  options?: () => Options;
-  init?: (args: Arguments<O>) => void;
+  configure?: (config: Configuration) => void | Promise<void>;
+  options?: () => Options | Promise<Options>;
+  init?: (args: Arguments<O>) => void | Promise<void>;
 } & Record<string, any>;

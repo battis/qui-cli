@@ -112,39 +112,41 @@ export type Configuration = {
   [key: keyof typeof plugins]: Plugin.Configuration;
 };
 
-export function configure(config: Configuration = {}) {
+export async function configure(config: Configuration = {}) {
   sort();
   if (sorted) {
     for (const name of sorted) {
       const plugin = plugins[name];
       if (plugin.configure) {
-        plugin.configure(config[name]);
+        await plugin.configure(config[name] || {});
       }
     }
   }
 }
 
-export function options(): Options {
+export async function options() {
   sort();
   let options: Options = {};
   if (sorted) {
     for (const name of sorted) {
       const plugin = plugins[name];
       if (plugin.options) {
-        options = merge(options, plugin.options());
+        options = merge(options, await plugin.options());
       }
     }
   }
   return options;
 }
 
-export function init(args: Arguments<ReturnType<typeof options>>) {
+export async function init(
+  args: Arguments<Awaited<ReturnType<typeof options>>>
+) {
   sort();
   if (sorted) {
     for (const name of sorted) {
       const plugin = plugins[name];
       if (plugin.init) {
-        plugin.init(args);
+        await plugin.init(args);
       }
     }
   }
