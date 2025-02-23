@@ -53,7 +53,7 @@ Register your plugin with the `Plugin.Registrar` and export the module for the c
 import { register } from '@battis/qui-cli.plugin';
 import * as Example from './Example.js';
 
-register(Example);
+await register(Example);
 export { Example };
 ```
 
