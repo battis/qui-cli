@@ -3,7 +3,7 @@ import { Jack, JackOptions } from 'jackspeak';
 
 export type Configuration = JackOptions & {
   requirePositionals?: boolean | number;
-};
+} & Record<string, Plugin.Configuration>;
 
 export type Options = Plugin.Options & {
   flag: {
@@ -26,7 +26,7 @@ function jack() {
 
 let requirePositionals: boolean | number | undefined = undefined;
 
-export function configure(config: Configuration = {}) {
+export async function configure(config: Configuration = {}) {
   requirePositionals = Plugin.hydrate(
     config.requirePositionals,
     requirePositionals
@@ -39,9 +39,11 @@ export function configure(config: Configuration = {}) {
         ? config.allowPositionals
         : !!requirePositionals
   });
+
+  await Plugin.Registrar.configure(config);
 }
 
-export function options(options: Plugin.Options = {}): Options {
+export async function options(options: Plugin.Options = {}): Promise<Options> {
   return Plugin.mergeOptions(
     Plugin.mergeOptions(
       {
@@ -52,7 +54,7 @@ export function options(options: Plugin.Options = {}): Options {
           }
         }
       },
-      Plugin.Registrar.options()
+      await Plugin.Registrar.options()
     ),
     options
   );
@@ -87,10 +89,10 @@ function apply({
   }
 }
 
-export function init(
+export async function init(
   externalOptions?: Plugin.Options | Options
-): Plugin.Arguments<Options> {
-  apply(options(externalOptions));
+): Promise<Plugin.Arguments<Options>> {
+  apply(await options(externalOptions));
 
   const args: Plugin.Arguments<Options> = jack().parse();
   const {
@@ -114,7 +116,7 @@ export function init(
     );
   }
 
-  Plugin.Registrar.init(args);
+  await Plugin.Registrar.init(args);
   return args;
 }
 
@@ -125,7 +127,7 @@ export function usage() {
       if (requirePositionals > 1) {
         usage = usage.replace(
           /\n\n/m, // FIXME hilariously unreliable regex!
-                   // Issue URL: https://github.com/battis/qui-cli/issues/25
+          // Issue URL: https://github.com/battis/qui-cli/issues/25
           ` arg0..arg${requirePositionals - 1}\n\n`
         );
       } else {
@@ -140,5 +142,5 @@ export function usage() {
 
 export function usageMarkdown() {
   return jack().usageMarkdown(); // FIXME format arguments
-                                 // Issue URL: https://github.com/battis/qui-cli/issues/24
+  // Issue URL: https://github.com/battis/qui-cli/issues/24
 }
