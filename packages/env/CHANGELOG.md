@@ -2,52 +2,51 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
-## [1.0.0](https://github.com/battis/qui-cli/compare/env/0.8.6...env/1.0.0) (2025-02-21)
-
+## [2.0.0](https://github.com/battis/qui-cli/compare/env/1.0.0...env/2.0.0) (2025-02-23)
 
 ### ⚠ BREAKING CHANGES
 
-* **qui-cli.env,qui-cli.root:** move cwd config to root
-* **qui-cli.env:** .env loading logic fixed
-* **qui-cli.env:** reimplement as ESM module
+- **qui-cli.plugin:** async hooks
 
-* **qui-cli.env,qui-cli.root:** move cwd config to root ([1b34863](https://github.com/battis/qui-cli/commit/1b3486338fb1c12576c136e2b4e8654f04bfcbeb))
+## [1.0.0](https://github.com/battis/qui-cli/compare/env/0.8.6...env/1.0.0) (2025-02-21)
 
+### ⚠ BREAKING CHANGES
+
+- **qui-cli.env,qui-cli.root:** move cwd config to root
+- **qui-cli.env:** .env loading logic fixed
+- **qui-cli.env:** reimplement as ESM module
+
+- **qui-cli.env,qui-cli.root:** move cwd config to root ([1b34863](https://github.com/battis/qui-cli/commit/1b3486338fb1c12576c136e2b4e8654f04bfcbeb))
 
 ### Features
 
-* **qui-cli.env:** reimplement as ESM module ([913b625](https://github.com/battis/qui-cli/commit/913b62515fd15fd460307e1df64128800d74d896))
-
+- **qui-cli.env:** reimplement as ESM module ([913b625](https://github.com/battis/qui-cli/commit/913b62515fd15fd460307e1df64128800d74d896))
 
 ### Bug Fixes
 
-* **qui-cli.env:** .env loading logic fixed ([82a80d3](https://github.com/battis/qui-cli/commit/82a80d39e94a7fab165a3d3c9492d4ecf77f1bdb))
+- **qui-cli.env:** .env loading logic fixed ([82a80d3](https://github.com/battis/qui-cli/commit/82a80d39e94a7fab165a3d3c9492d4ecf77f1bdb))
 
 ## [0.8.6](https://github.com/battis/qui-cli/compare/env/0.8.5...env/0.8.6) (2025-02-09)
 
-
 ### Bug Fixes
 
-* **qui-cli.env:** parse explicitly if loadDotEnv is truthy ([0719408](https://github.com/battis/qui-cli/commit/0719408551f55133b04c55d287998d126e8f07c7))
+- **qui-cli.env:** parse explicitly if loadDotEnv is truthy ([0719408](https://github.com/battis/qui-cli/commit/0719408551f55133b04c55d287998d126e8f07c7))
 
 ## [0.8.5](https://github.com/battis/qui-cli/compare/env/0.8.4...env/0.8.5) (2025-02-09)
 
-
 ### Features
 
-* **qui-cli.env:** allow appRoot() override, but fall back to appRoot() ([b6bdb15](https://github.com/battis/qui-cli/commit/b6bdb158d44cdd81beee441bf78b95602966e1d0))
-
+- **qui-cli.env:** allow appRoot() override, but fall back to appRoot() ([b6bdb15](https://github.com/battis/qui-cli/commit/b6bdb158d44cdd81beee441bf78b95602966e1d0))
 
 ### Bug Fixes
 
-* **qui-cli.env:** parse .env during init ([2de3167](https://github.com/battis/qui-cli/commit/2de3167be47c51f9dd44aaa126a4c375631b1852))
+- **qui-cli.env:** parse .env during init ([2de3167](https://github.com/battis/qui-cli/commit/2de3167be47c51f9dd44aaa126a4c375631b1852))
 
 ## [0.8.4](https://github.com/battis/qui-cli/compare/env/0.8.3...env/0.8.4) (2025-02-09)
 
-
 ### Bug Fixes
 
-* **env:** do not mistakenly cache old appRoot ([ecbad81](https://github.com/battis/qui-cli/commit/ecbad812d30b571d5b8291317bd075ba8d565416))
+- **env:** do not mistakenly cache old appRoot ([ecbad81](https://github.com/battis/qui-cli/commit/ecbad812d30b571d5b8291317bd075ba8d565416))
 
 ## [0.8.3](https://github.com/battis/qui-cli/compare/env/0.8.2...env/0.8.3) (2025-02-09)
 
