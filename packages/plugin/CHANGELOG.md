@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.1.0](https://github.com/battis/qui-cli/compare/plugin/2.0.0...plugin/2.1.0) (2025-02-23)
+
+
+### Features
+
+* **qui-cli.plugin:** list registered() plugins ([2aa8097](https://github.com/battis/qui-cli/commit/2aa8097c01a52971c21815424d9c2b8cae28b9c7))
+* **qui-cli.plugin:** return registered() plugins sorted in load order ([e057251](https://github.com/battis/qui-cli/commit/e05725100c9d66dbb409657f2e8fe5f828b069df))
+
 ## [2.0.0](https://github.com/battis/qui-cli/compare/plugin/1.0.0...plugin/2.0.0) (2025-02-23)
 
 
