@@ -2,23 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
-## [1.0.0](https://github.com/battis/qui-cli/compare/qui-cli/0.9.9...qui-cli/1.0.0) (2025-02-21)
-
+## [2.0.0](https://github.com/battis/qui-cli/compare/qui-cli/1.0.0...qui-cli/2.0.0) (2025-02-23)
 
 ### ⚠ BREAKING CHANGES
 
-* **qui-cli:** reimplemented as ESM modules
+- **qui-cli.core:** nest core config under core key
+- **qui-cli.core:** async hooks
+
+## [1.0.0](https://github.com/battis/qui-cli/compare/qui-cli/0.9.9...qui-cli/1.0.0) (2025-02-21)
+
+### ⚠ BREAKING CHANGES
+
+- **qui-cli:** reimplemented as ESM modules
 
 ### Features
 
-* **qui-cli:** configurable plugins ([730d54e](https://github.com/battis/qui-cli/commit/730d54e1595ff63fecb41bcecc0df81d10119a88))
-* **qui-cli:** reimplemented as ESM modules ([d345333](https://github.com/battis/qui-cli/commit/d34533307b3ebd46dddc1d7d14824aba505be97c))
-
+- **qui-cli:** configurable plugins ([730d54e](https://github.com/battis/qui-cli/commit/730d54e1595ff63fecb41bcecc0df81d10119a88))
+- **qui-cli:** reimplemented as ESM modules ([d345333](https://github.com/battis/qui-cli/commit/d34533307b3ebd46dddc1d7d14824aba505be97c))
 
 ### Bug Fixes
 
-* **qui-cli,qui-cli.core:** auto-configure on init ([37bb1c3](https://github.com/battis/qui-cli/commit/37bb1c3b49e6ee9e698d42f1e8d20da380f14636))
-* **qui-cli:** progress plugin restored ([a1cf91a](https://github.com/battis/qui-cli/commit/a1cf91a1e0ea0e2a5b367a256c2e5268da6ae722))
+- **qui-cli,qui-cli.core:** auto-configure on init ([37bb1c3](https://github.com/battis/qui-cli/commit/37bb1c3b49e6ee9e698d42f1e8d20da380f14636))
+- **qui-cli:** progress plugin restored ([a1cf91a](https://github.com/battis/qui-cli/commit/a1cf91a1e0ea0e2a5b367a256c2e5268da6ae722))
 
 ## [0.9.9](https://github.com/battis/qui-cli/compare/qui-cli/0.9.8...qui-cli/0.9.9) (2025-02-09)
 
@@ -30,40 +35,36 @@ All notable changes to this project will be documented in this file. See [commit
 
 ## [0.9.5](https://github.com/battis/qui-cli/compare/qui-cli/0.9.4...qui-cli/0.9.5) (2025-02-09)
 
-
 ### Bug Fixes
 
-* load _current_ appRoot() ([e9eda62](https://github.com/battis/qui-cli/commit/e9eda6267532ff998ee9c59ec3fb07ed713b7dd9))
+- load _current_ appRoot() ([e9eda62](https://github.com/battis/qui-cli/commit/e9eda6267532ff998ee9c59ec3fb07ed713b7dd9))
 
 ## [0.9.4](https://github.com/battis/qui-cli/compare/qui-cli/0.9.3...qui-cli/0.9.4) (2025-02-09)
 
 ## [0.9.3](https://github.com/battis/qui-cli/compare/qui-cli/0.9.2...qui-cli/0.9.3) (2025-02-08)
 
-
 ### Bug Fixes
 
-* **qui-cli:** actually export register0 ([c6fed7e](https://github.com/battis/qui-cli/commit/c6fed7e38068c47edf4bb623b14cff027abaa186))
+- **qui-cli:** actually export register0 ([c6fed7e](https://github.com/battis/qui-cli/commit/c6fed7e38068c47edf4bb623b14cff027abaa186))
 
 ## [0.9.2](https://github.com/battis/qui-cli/compare/qui-cli/0.9.1...qui-cli/0.9.2) (2025-02-08)
 
-
 ### Features
 
-* **qui-cli:** register() plugins ([9cb496f](https://github.com/battis/qui-cli/commit/9cb496f0522012262a22f6c81495f7d43561b32a))
+- **qui-cli:** register() plugins ([9cb496f](https://github.com/battis/qui-cli/commit/9cb496f0522012262a22f6c81495f7d43561b32a))
 
 ## [0.9.1](https://github.com/battis/qui-cli/compare/qui-cli/0.9.0...qui-cli/0.9.1) (2025-01-15)
 
 ## [0.9.0](https://github.com/battis/qui-cli/compare/qui-cli/0.8.5...qui-cli/0.9.0) (2025-01-15)
 
-
 ### ⚠ BREAKING CHANGES
 
-* **qui-cli:** remove spinner()
+- **qui-cli:** remove spinner()
 
 ### Features
 
-* **qui-cli:** add progress() ([a7bf810](https://github.com/battis/qui-cli/commit/a7bf8108e284a64df236940305426a6b14ae059b))
-* **qui-cli:** remove spinner() ([7905bad](https://github.com/battis/qui-cli/commit/7905bad6e79328772191b7182083b06f8ebea6cd))
+- **qui-cli:** add progress() ([a7bf810](https://github.com/battis/qui-cli/commit/a7bf8108e284a64df236940305426a6b14ae059b))
+- **qui-cli:** remove spinner() ([7905bad](https://github.com/battis/qui-cli/commit/7905bad6e79328772191b7182083b06f8ebea6cd))
 
 ## 0.8.5
 
