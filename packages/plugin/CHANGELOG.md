@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.0.0](https://github.com/battis/qui-cli/compare/plugin/1.0.0...plugin/2.0.0) (2025-02-23)
+
+
+### ⚠ BREAKING CHANGES
+
+* **qui-cli.plugin:** async hooks
+
+### Features
+
+* **qui-cli.plugin:** async hooks ([8b8a1e4](https://github.com/battis/qui-cli/commit/8b8a1e48938a9be19adc700571350d04b5fc49b9))
+
 ## [1.0.0](https://github.com/battis/qui-cli/compare/plugin/0.1.2...plugin/1.0.0) (2025-02-21)
 
 
