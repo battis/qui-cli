@@ -108,8 +108,19 @@ function sort() {
   }
 }
 
-export function registered() {
-  return Object.keys(plugins).map((name) => ({
+type RegisteredOptions = {
+  sorted?: boolean;
+};
+
+export function registered({
+  sorted: _sorted = false
+}: RegisteredOptions = {}) {
+  let keys: (keyof typeof plugins)[] = Object.keys(plugins);
+  if (_sorted) {
+    sort();
+    keys = sorted!;
+  }
+  return keys.map((name) => ({
     name,
     package: plugins[name].package
   }));
