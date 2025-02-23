@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.0.1](https://github.com/battis/qui-cli/compare/shell/2.0.0...shell/2.0.1) (2025-02-23)
+
+
+### Bug Fixes
+
+* **qui-cli.shell:** more flexible peer dependency ([7f47c91](https://github.com/battis/qui-cli/commit/7f47c91646413b3760d7bf32821f078cc33012e6))
+
 ## [2.0.0](https://github.com/battis/qui-cli/compare/shell/1.0.0...shell/2.0.0) (2025-02-23)
 
 ### ⚠ BREAKING CHANGES
