@@ -108,6 +108,13 @@ function sort() {
   }
 }
 
+export function registered() {
+  return Object.keys(plugins).map((name) => ({
+    name,
+    package: plugins[name].package
+  }));
+}
+
 export type Configuration = {
   [key: keyof typeof plugins]: Plugin.Configuration;
 };
