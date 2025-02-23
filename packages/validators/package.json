@@ -30,6 +30,8 @@
     "is-valid-path": "^0.1.1"
   },
   "devDependencies": {
+    "@battis/qui-cli.plugin": "workspace:*",
+    "@battis/qui-cli.root": "workspace:*",
     "@tsconfig/node20": "^20.1.4",
     "@types/is-valid-path": "^0.1.2",
     "@types/node": "^22.13.5",
@@ -39,8 +41,8 @@
     "typescript": "^5.7.3"
   },
   "peerDependencies": {
-    "@battis/qui-cli.plugin": "workspace:*",
-    "@battis/qui-cli.root": "workspace:*"
+    "@battis/qui-cli.plugin": "^2.0",
+    "@battis/qui-cli.root": "^2.0"
   },
   "packageManager": "pnpm@9.12.3+sha512.cce0f9de9c5a7c95bef944169cc5dfe8741abfb145078c0d508b868056848a87c81e626246cb60967cbd7fd29a6c062ef73ff840d96b3c86c40ac92cf4a813ee",
   "target": "node"
