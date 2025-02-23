@@ -15,16 +15,9 @@ export const root = Root;
 export const shell = Shell;
 export const validators = Validators;
 
-export function configure(config: Parameters<typeof Core.configure>[0] = {}) {
-  return Core.configure(config);
-}
+export type Configuration = Core.Configuration;
+export type Options = Core.Options;
 
-export function options(
-  externalOptions: Parameters<typeof Core.options>[0] = {}
-) {
-  return Core.options(externalOptions);
-}
-
-export function init(externalOptions: Parameters<typeof Core.init>[0]) {
-  return Core.init(externalOptions);
-}
+export const configure = Core.configure;
+export const options = Core.options;
+export const init = Core.init;
