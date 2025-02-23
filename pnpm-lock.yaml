@@ -73,13 +73,13 @@ importers:
 
   packages/colors:
     dependencies:
-      '@battis/qui-cli.plugin':
-        specifier: workspace:*
-        version: link:../plugin
       chalk:
         specifier: ^4.1.2
         version: 4.1.2
     devDependencies:
+      '@battis/qui-cli.plugin':
+        specifier: workspace:*
+        version: link:../plugin
       '@tsconfig/node20':
         specifier: ^20.1.4
         version: 20.1.4
@@ -101,13 +101,13 @@ importers:
 
   packages/core:
     dependencies:
-      '@battis/qui-cli.plugin':
-        specifier: workspace:*
-        version: link:../plugin
       jackspeak:
         specifier: ^2.3.6
         version: 2.3.6
     devDependencies:
+      '@battis/qui-cli.plugin':
+        specifier: workspace:*
+        version: link:../plugin
       '@tsconfig/node20':
         specifier: ^20.1.4
         version: 20.1.4
@@ -129,16 +129,16 @@ importers:
 
   packages/env:
     dependencies:
+      dotenv:
+        specifier: ^16.4.7
+        version: 16.4.7
+    devDependencies:
       '@battis/qui-cli.plugin':
         specifier: workspace:*
         version: link:../plugin
       '@battis/qui-cli.root':
         specifier: workspace:*
         version: link:../root
-      dotenv:
-        specifier: ^16.4.7
-        version: 16.4.7
-    devDependencies:
       '@changesets/cli':
         specifier: ^2.28.1
         version: 2.28.1
@@ -163,15 +163,6 @@ importers:
 
   packages/log:
     dependencies:
-      '@battis/qui-cli.colors':
-        specifier: workspace:*
-        version: link:../colors
-      '@battis/qui-cli.plugin':
-        specifier: workspace:*
-        version: link:../plugin
-      '@battis/qui-cli.root':
-        specifier: workspace:*
-        version: link:../root
       ora:
         specifier: ^6.3.1
         version: 6.3.1
@@ -182,6 +173,15 @@ importers:
         specifier: ^3.17.0
         version: 3.17.0
     devDependencies:
+      '@battis/qui-cli.colors':
+        specifier: workspace:*
+        version: link:../colors
+      '@battis/qui-cli.plugin':
+        specifier: workspace:*
+        version: link:../plugin
+      '@battis/qui-cli.root':
+        specifier: workspace:*
+        version: link:../root
       '@tsconfig/node20':
         specifier: ^20.1.4
         version: 20.1.4
@@ -231,12 +231,6 @@ importers:
 
   packages/progress:
     dependencies:
-      '@battis/qui-cli.colors':
-        specifier: workspace:*
-        version: link:../colors
-      '@battis/qui-cli.plugin':
-        specifier: workspace:*
-        version: link:../plugin
       chalk:
         specifier: ^4.1.2
         version: 4.1.2
@@ -244,6 +238,12 @@ importers:
         specifier: ^3.12.0
         version: 3.12.0
     devDependencies:
+      '@battis/qui-cli.colors':
+        specifier: workspace:*
+        version: link:../colors
+      '@battis/qui-cli.plugin':
+        specifier: workspace:*
+        version: link:../plugin
       '@tsconfig/node20':
         specifier: ^20.1.4
         version: 20.1.4
@@ -332,13 +332,13 @@ importers:
 
   packages/root:
     dependencies:
-      '@battis/qui-cli.plugin':
-        specifier: workspace:*
-        version: link:../plugin
       app-root-path:
         specifier: ^3.1.0
         version: 3.1.0
     devDependencies:
+      '@battis/qui-cli.plugin':
+        specifier: workspace:*
+        version: link:../plugin
       '@battis/typescript-tricks':
         specifier: ^0.7.4
         version: 0.7.4
@@ -363,6 +363,13 @@ importers:
 
   packages/shell:
     dependencies:
+      ora:
+        specifier: ^6.3.1
+        version: 6.3.1
+      shelljs:
+        specifier: ^0.8.5
+        version: 0.8.5
+    devDependencies:
       '@battis/qui-cli.colors':
         specifier: workspace:*
         version: link:../colors
@@ -372,13 +379,6 @@ importers:
       '@battis/qui-cli.plugin':
         specifier: workspace:*
         version: link:../plugin
-      ora:
-        specifier: ^6.3.1
-        version: 6.3.1
-      shelljs:
-        specifier: ^0.8.5
-        version: 0.8.5
-    devDependencies:
       '@tsconfig/node20':
         specifier: ^20.1.4
         version: 20.1.4
@@ -403,12 +403,6 @@ importers:
 
   packages/validators:
     dependencies:
-      '@battis/qui-cli.plugin':
-        specifier: workspace:*
-        version: link:../plugin
-      '@battis/qui-cli.root':
-        specifier: workspace:*
-        version: link:../root
       '@tahul/is-valid-domain':
         specifier: ^1.0.5
         version: 1.0.5
@@ -422,6 +416,12 @@ importers:
         specifier: ^0.1.1
         version: 0.1.1
     devDependencies:
+      '@battis/qui-cli.plugin':
+        specifier: workspace:*
+        version: link:../plugin
+      '@battis/qui-cli.root':
+        specifier: workspace:*
+        version: link:../root
       '@tsconfig/node20':
         specifier: ^20.1.4
         version: 20.1.4
@@ -692,19 +692,19 @@ packages:
     resolution: {integrity: sha512-DSHae2obMSMkAtTBSOulg5X7/z+rGLxcXQIkg3OmWvY6wifojge5uVMydfhUvs7yQj+V7jNmRZ2Xzl8GJyqRgg==}
     engines: {node: '>=v18'}
 
-  '@csstools/color-helpers@5.0.1':
-    resolution: {integrity: sha512-MKtmkA0BX87PKaO1NFRTFH+UnkgnmySQOvNxJubsadusqPEC2aJ9MOQiMceZJJ6oitUl/i0L6u0M1IrmAOmgBA==}
+  '@csstools/color-helpers@5.0.2':
+    resolution: {integrity: sha512-JqWH1vsgdGcw2RR6VliXXdA0/59LttzlU8UlRT/iUUsEeWfYq8I+K0yhihEUTTHLRm1EXvpsCx3083EU15ecsA==}
     engines: {node: '>=18'}
 
-  '@csstools/css-calc@2.1.1':
-    resolution: {integrity: sha512-rL7kaUnTkL9K+Cvo2pnCieqNpTKgQzy5f+N+5Iuko9HAoasP+xgprVh7KN/MaJVvVL1l0EzQq2MoqBHKSrDrag==}
+  '@csstools/css-calc@2.1.2':
+    resolution: {integrity: sha512-TklMyb3uBB28b5uQdxjReG4L80NxAqgrECqLZFQbyLekwwlcDDS8r3f07DKqeo8C4926Br0gf/ZDe17Zv4wIuw==}
     engines: {node: '>=18'}
     peerDependencies:
       '@csstools/css-parser-algorithms': ^3.0.4
       '@csstools/css-tokenizer': ^3.0.3
 
-  '@csstools/css-color-parser@3.0.7':
-    resolution: {integrity: sha512-nkMp2mTICw32uE5NN+EsJ4f5N+IGFeCFu4bGpiKgb2Pq/7J/MpyLBeQ5ry4KKtRFZaYs6sTmcMYrSRIyj5DFKA==}
+  '@csstools/css-color-parser@3.0.8':
+    resolution: {integrity: sha512-pdwotQjCCnRPuNi06jFuP68cykU1f3ZWExLe/8MQ1LOs8Xq+fTkYgd+2V8mWUWMrOn9iS2HftPVaMZDaXzGbhQ==}
     engines: {node: '>=18'}
     peerDependencies:
       '@csstools/css-parser-algorithms': ^3.0.4
@@ -4724,8 +4724,8 @@ snapshots:
 
   '@asamuzakjp/css-color@2.8.3':
     dependencies:
-      '@csstools/css-calc': 2.1.1(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.3))(@csstools/css-tokenizer@3.0.3)
-      '@csstools/css-color-parser': 3.0.7(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.3))(@csstools/css-tokenizer@3.0.3)
+      '@csstools/css-calc': 2.1.2(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.3))(@csstools/css-tokenizer@3.0.3)
+      '@csstools/css-color-parser': 3.0.8(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.3))(@csstools/css-tokenizer@3.0.3)
       '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.3)
       '@csstools/css-tokenizer': 3.0.3
       lru-cache: 10.4.3
@@ -5166,17 +5166,17 @@ snapshots:
       '@types/conventional-commits-parser': 5.0.1
       chalk: 5.4.1
 
-  '@csstools/color-helpers@5.0.1': {}
+  '@csstools/color-helpers@5.0.2': {}
 
-  '@csstools/css-calc@2.1.1(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.3))(@csstools/css-tokenizer@3.0.3)':
+  '@csstools/css-calc@2.1.2(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.3))(@csstools/css-tokenizer@3.0.3)':
     dependencies:
       '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.3)
       '@csstools/css-tokenizer': 3.0.3
 
-  '@csstools/css-color-parser@3.0.7(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.3))(@csstools/css-tokenizer@3.0.3)':
+  '@csstools/css-color-parser@3.0.8(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.3))(@csstools/css-tokenizer@3.0.3)':
     dependencies:
-      '@csstools/color-helpers': 5.0.1
-      '@csstools/css-calc': 2.1.1(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.3))(@csstools/css-tokenizer@3.0.3)
+      '@csstools/color-helpers': 5.0.2
+      '@csstools/css-calc': 2.1.2(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.3))(@csstools/css-tokenizer@3.0.3)
       '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.3)
       '@csstools/css-tokenizer': 3.0.3
 
