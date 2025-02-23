@@ -3,13 +3,17 @@ import { input } from '@inquirer/prompts';
 import path from 'node:path';
 
 // configuration before command-line user options are processed
-cli.env.configure({ path: path.resolve(import.meta.dirname, '../.env') });
-cli.configure({
-  allowPositionals: true
+await cli.configure({
+  core: {
+    allowPositionals: true
+  },
+  env: {
+    path: path.resolve(import.meta.dirname, '../.env')
+  }
 });
 
 // process command-line user options
-const args = cli.init({
+const args = await cli.init({
   opt: {
     opt0: {},
     opt1: {}
