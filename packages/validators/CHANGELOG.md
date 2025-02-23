@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.0.1](https://github.com/battis/qui-cli/compare/validators/2.0.0...validators/2.0.1) (2025-02-23)
+
+
+### Bug Fixes
+
+* **qui-cli.validators:** more flexible peer dependency ([ec061a9](https://github.com/battis/qui-cli/commit/ec061a9c6ff8835c74a6d79dd777fa9feb004713))
+
 ## [2.0.0](https://github.com/battis/qui-cli/compare/validators/1.0.0...validators/2.0.0) (2025-02-23)
 
 ### ⚠ BREAKING CHANGES
