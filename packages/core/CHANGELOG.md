@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.0.0](https://github.com/battis/qui-cli/compare/core/1.0.0...core/2.0.0) (2025-02-23)
+
+
+### ⚠ BREAKING CHANGES
+
+* **qui-cli.core:** nest core config under core key
+* **qui-cli.core:** async hooks
+
+### Features
+
+* **qui-cli.core:** async hooks ([75966de](https://github.com/battis/qui-cli/commit/75966de51050b7db91027d79072060607965139c))
+
+
+### Bug Fixes
+
+* **qui-cli.core:** nest core config under core key ([e4828f9](https://github.com/battis/qui-cli/commit/e4828f989cb5dfec45da2eafe62f57303803debe))
+
 ## [1.0.0](https://github.com/battis/qui-cli/compare/core/0.8.4...core/1.0.0) (2025-02-21)
 
 
