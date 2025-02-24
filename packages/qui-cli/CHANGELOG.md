@@ -2,7 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.0.2](https://github.com/battis/qui-cli/compare/qui-cli/2.0.1...qui-cli/2.0.2) (2025-02-24)
+
+- bump @battis/qui-cli.env to 2.0.2
+
 ## [2.0.1](https://github.com/battis/qui-cli/compare/qui-cli/2.0.0...qui-cli/2.0.1) (2025-02-23)
+
+- more flexible peer dependencies internally
 
 ## [2.0.0](https://github.com/battis/qui-cli/compare/qui-cli/1.0.0...qui-cli/2.0.0) (2025-02-23)
 
