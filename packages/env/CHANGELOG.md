@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.0.2](https://github.com/battis/qui-cli/compare/env/2.0.1...env/2.0.2) (2025-02-24)
+
+
+### Bug Fixes
+
+* **qui-cli.env:** ignore non-existent .env file ([7514598](https://github.com/battis/qui-cli/commit/75145984ee5cc5c081c33f9c6d44244cc2140681))
+
 ## [2.0.1](https://github.com/battis/qui-cli/compare/env/2.0.0...env/2.0.1) (2025-02-23)
 
 
