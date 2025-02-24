@@ -28,7 +28,7 @@
     "extends": "@battis/eslint-config"
   },
   "dependencies": {
-    "jackspeak": "^2.3.6"
+    "jackspeak": "^4.1.0"
   },
   "devDependencies": {
     "@battis/qui-cli.plugin": "workspace:*",

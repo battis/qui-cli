@@ -102,8 +102,8 @@ importers:
   packages/core:
     dependencies:
       jackspeak:
-        specifier: ^2.3.6
-        version: 2.3.6
+        specifier: ^4.1.0
+        version: 4.1.0
     devDependencies:
       '@battis/qui-cli.plugin':
         specifier: workspace:*
