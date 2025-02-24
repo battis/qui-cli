@@ -28,16 +28,18 @@ export function configure(config: Configuration) {
 }
 
 export function parse(file = pathToEnv) {
-  const env = dotenv.config({
-    path: path.resolve(
-      root || Root.path(),
-      typeof file === 'string' ? file : '.env'
-    )
-  });
-  if (env.error) {
-    throw env.error;
+  const filePath = path.resolve(
+    root || Root.path(),
+    typeof file === 'string' ? file : '.env'
+  );
+  if (fs.existsSync(filePath)) {
+    const env = dotenv.config({ path: filePath });
+    if (env.error) {
+      throw env.error;
+    }
+    return env.parsed || {};
   }
-  return env.parsed || {};
+  return {};
 }
 
 type GetOptions = {
