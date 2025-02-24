@@ -24,7 +24,7 @@
     "release": "commit-and-tag-version"
   },
   "dependencies": {
-    "chalk": "^4.1.2"
+    "chalk": "^5.4.1"
   },
   "devDependencies": {
     "@battis/qui-cli.plugin": "workspace:*",
