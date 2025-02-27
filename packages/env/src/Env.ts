@@ -78,7 +78,10 @@ export function set({
 }: SetOptions) {
   const filePath = path.resolve(root || Root.path(), file);
   if (ifNotExists === false || false === exists({ key, file })) {
-    let env = fs.readFileSync(filePath).toString();
+    let env = '';
+    if (fs.existsSync(filePath)) {
+      env = fs.readFileSync(filePath).toString();
+    }
     const pattern = new RegExp(`^${key}=.*$`, 'm');
     if (/[\s=]/.test(value)) {
       value = `"${value}"`;
