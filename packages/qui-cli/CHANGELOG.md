@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.0.4](https://github.com/battis/qui-cli/compare/qui-cli/2.0.3...qui-cli/2.0.4) (2025-02-27)
+
+### Bug Fixes
+
+- **qui-cli.root:** actually default cwd to true ([c774f6b](https://github.com/battis/qui-cli/commit/c774f6ba708ffc5a78f653df47de523834000d66))
+
 ## [2.0.3](https://github.com/battis/qui-cli/compare/qui-cli/2.0.2...qui-cli/2.0.3) (2025-02-27)
 
 ### Bug Fixes
