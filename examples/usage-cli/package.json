@@ -1,11 +1,11 @@
 {
-  "name": "@example/cli",
+  "name": "@example/usage-cli",
   "private": true,
-  "homepage": "https://github.com/battis/qui-cli/tree/main/examples/cli#readme",
+  "homepage": "https://github.com/battis/qui-cli/tree/main/examples/usage-cli#readme",
   "repository": {
     "type": "git",
     "url": "https://github.com/battis/qui-cli.git",
-    "directory": "examples/cli"
+    "directory": "examples/usage-cli"
   },
   "author": {
     "name": "Seth Battis",
