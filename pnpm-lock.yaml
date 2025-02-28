@@ -99,6 +99,9 @@ importers:
       '@examples/dev-sequenced-commands.module-c':
         specifier: workspace:*
         version: link:../module-c
+      '@examples/dev-sequenced-commands.modules-def':
+        specifier: workspace:*
+        version: link:../modules-def
     devDependencies:
       '@tsconfig/node20':
         specifier: ^20.1.4
@@ -190,6 +193,37 @@ importers:
       '@examples/dev-sequenced-commands.module-b':
         specifier: workspace:*
         version: link:../module-b
+      '@tsconfig/node20':
+        specifier: ^20.1.4
+        version: 20.1.4
+      del-cli:
+        specifier: ^6.0.0
+        version: 6.0.0
+      npm-run-all:
+        specifier: ^4.1.5
+        version: 4.1.5
+      typescript:
+        specifier: ^5.7.3
+        version: 5.7.3
+
+  examples/dev-sequenced-commands/modules-def:
+    dependencies:
+      '@battis/qui-cli.core':
+        specifier: workspace:*
+        version: link:../../../packages/core
+    devDependencies:
+      '@battis/qui-cli.colors':
+        specifier: workspace:*
+        version: link:../../../packages/colors
+      '@battis/qui-cli.log':
+        specifier: workspace:*
+        version: link:../../../packages/log
+      '@battis/qui-cli.plugin':
+        specifier: workspace:*
+        version: link:../../../packages/plugin
+      '@examples/dev-sequenced-commands.module-c':
+        specifier: workspace:*
+        version: link:../module-c
       '@tsconfig/node20':
         specifier: ^20.1.4
         version: 20.1.4

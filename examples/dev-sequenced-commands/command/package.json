@@ -15,7 +15,8 @@
     "@battis/qui-cli.core": "workspace:*",
     "@battis/qui-cli.plugin": "workspace:*",
     "@examples/dev-sequenced-commands.module-a": "workspace:*",
-    "@examples/dev-sequenced-commands.module-c": "workspace:*"
+    "@examples/dev-sequenced-commands.module-c": "workspace:*",
+    "@examples/dev-sequenced-commands.modules-def": "workspace:*"
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.4",
