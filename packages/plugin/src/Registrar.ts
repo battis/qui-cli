@@ -2,10 +2,11 @@ import Package from '@battis/import-package-json';
 import fs from 'node:fs';
 import path from 'node:path';
 import { Arguments } from './Arguments.js';
+import { Base as PluginConfiguration } from './Configuration.js';
 import { Options, merge } from './Options.js';
-import * as Plugin from './Plugin.js';
+import { Base as Plugin } from './Plugin.js';
 
-export type RegisteredPlugin = Plugin.Base & {
+export type RegisteredPlugin = Plugin & {
   package: {
     path: string;
     name: string;
@@ -22,7 +23,7 @@ export function builtinPlugins(name: string) {
 }
 
 export async function register(
-  plugin: Plugin.Base,
+  plugin: Plugin,
   matchPluginDependencies = builtinPlugins
 ) {
   const pkgPath = path.resolve(plugin.src, '../package.json');
@@ -175,7 +176,7 @@ export function registered({
 }
 
 export type Configuration = {
-  [key: keyof typeof plugins]: Plugin.Configuration;
+  [key: keyof typeof plugins]: PluginConfiguration;
 };
 
 export async function configure(config: Configuration = {}) {
