@@ -1,5 +1,5 @@
 import { register } from '@battis/qui-cli.plugin';
 import * as MyPlugin from './MyPlugin.js';
 
-register(MyPlugin);
+await register(MyPlugin);
 export { MyPlugin };
