@@ -1,11 +1,11 @@
 {
-  "name": "@example/lightweight",
+  "name": "@example/usage-modular",
   "private": true,
-  "homepage": "https://github.com/battis/qui-cli/tree/main/examples/lightweight#readme",
+  "homepage": "https://github.com/battis/qui-cli/tree/main/examples/usage-modular#readme",
   "repository": {
     "type": "git",
     "url": "https://github.com/battis/qui-cli.git",
-    "directory": "examples/lightweight"
+    "directory": "examples/usage-modular"
   },
   "author": {
     "name": "Seth Battis",
