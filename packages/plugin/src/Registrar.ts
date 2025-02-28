@@ -1,8 +1,8 @@
 import Package from '@battis/import-package-json';
 import fs from 'node:fs';
 import path from 'node:path';
-import { Arguments } from './Arguments.js';
 import { Base as PluginConfiguration } from './Configuration.js';
+import { Arguments } from './Initialization.js';
 import { Options, merge } from './Options.js';
 import { Base as Plugin } from './Plugin.js';
 

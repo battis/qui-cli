@@ -1,5 +1,5 @@
-import { Arguments } from './Arguments.js';
 import * as Configuration from './Configuration.js';
+import * as Initialization from './Initialization.js';
 import * as Options from './Options.js';
 
 export type Base<O extends Options.Options = Options.Options> = {
@@ -7,5 +7,5 @@ export type Base<O extends Options.Options = Options.Options> = {
   src: string;
   configure?: Configuration.Hook;
   options?: Options.Hook;
-  init?: (args: Arguments<O>) => void | Promise<void>;
+  init?: Initialization.Hook;
 } & Record<string, any>;

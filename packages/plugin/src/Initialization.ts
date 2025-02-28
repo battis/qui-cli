@@ -1,7 +1,7 @@
 import { ConfigSetFromMetaSet, OptionsResults } from 'jackspeak';
-import { Options } from './Options.js';
+import * as Options from './Options.js';
 
-type FlattenConfigMetaSets<O extends Options> = ConfigSetFromMetaSet<
+type FlattenConfigMetaSets<O extends Options.Options> = ConfigSetFromMetaSet<
   'number',
   false,
   Exclude<O['num'], undefined>
@@ -14,7 +14,11 @@ type FlattenConfigMetaSets<O extends Options> = ConfigSetFromMetaSet<
   ConfigSetFromMetaSet<'boolean', true, Exclude<O['flagList'], undefined>> &
   Exclude<O['fields'], undefined>;
 
-export type Arguments<O extends Options> = {
+export type Arguments<O extends Options.Options> = {
   positionals: (string | undefined)[];
   values: OptionsResults<FlattenConfigMetaSets<O>>;
 };
+
+export type Hook<O extends Options.Options = Options.Options> = (
+  args: Arguments<O>
+) => void | Promise<void>;
