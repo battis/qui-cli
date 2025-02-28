@@ -27,6 +27,7 @@ function jack() {
 }
 
 let requirePositionals: boolean | number | undefined = undefined;
+let initialized = false;
 
 export async function configure({ core, ...pluginConfig }: Configuration = {}) {
   requirePositionals = Plugin.hydrate(
@@ -93,6 +94,11 @@ function apply({
 export async function init(
   externalOptions?: Plugin.Options | Options
 ): Promise<Plugin.Arguments<Options>> {
+  if (initialized) {
+    throw new Error(
+      `Already initialized with user-provided command line arguments.`
+    );
+  }
   apply(await options(externalOptions));
 
   const args: Plugin.Arguments<Options> = jack().parse();
@@ -118,6 +124,7 @@ export async function init(
   }
 
   await Plugin.Registrar.init(args);
+  initialized = true;
   return args;
 }
 
