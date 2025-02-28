@@ -1,0 +1,26 @@
+{
+  "name": "@examples/dev-sequenced-commands",
+  "version": "0.0.0",
+  "type": "module",
+  "bin": {
+    "sequencedCommand": "./dist/index.js"
+  },
+  "scripts": {
+    "clean": "del ./dist",
+    "build": "run-s build:*",
+    "build:clean": "run-s clean",
+    "build:compile": "tsc"
+  },
+  "dependencies": {
+    "@battis/qui-cli.core": "workspace:*",
+    "@battis/qui-cli.plugin": "workspace:*",
+    "@examples/dev-sequenced-commands.module-a": "workspace:*",
+    "@examples/dev-sequenced-commands.module-c": "workspace:*"
+  },
+  "devDependencies": {
+    "@tsconfig/node20": "^20.1.4",
+    "del-cli": "^6.0.0",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.7.3"
+  }
+}
