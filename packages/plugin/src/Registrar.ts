@@ -5,6 +5,7 @@ import { Base as PluginConfiguration } from './Configuration.js';
 import { Arguments } from './Initialization.js';
 import { Options, merge } from './Options.js';
 import { Base as Plugin } from './Plugin.js';
+import { AccumulatedResults } from './Run.js';
 
 export type RegisteredPlugin = Plugin & {
   package: {
@@ -216,5 +217,19 @@ export async function init(
         await plugin.init(args);
       }
     }
+  }
+}
+
+export async function run() {
+  sort();
+  if (sorted) {
+    const results: AccumulatedResults = {};
+    for (const name of sorted) {
+      const plugin = plugins[name];
+      if (plugin.run) {
+        results[name] = await plugin.run(results);
+      }
+    }
+    return results;
   }
 }
