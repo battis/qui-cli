@@ -71,7 +71,15 @@ export async function register(
       `${registree.package.name}@${registree.package.version} attempted to register as "${registree.name}" (${registree.package.path}), but ${plugins[registree.name].package.name}@${plugins[registree.name].package.version} is already registered as "${registree.name}" (${plugins[registree.name].package.path}).`
     );
   }
+
   plugins[registree.name] = registree;
+
+  for (const name in plugins) {
+    const error = circularDependency(name);
+    if (error) {
+      throw new Error(`Circular dependency detected: ${error}`);
+    }
+  }
 }
 
 function nameFromPackageName(packageName: string) {
@@ -116,13 +124,6 @@ function circularDependency(
 
 function sort() {
   if (!sorted || sorted.length !== Object.keys(plugins).length) {
-    for (const name in plugins) {
-      const error = circularDependency(name);
-      if (error) {
-        throw new Error(`Circular dependency detected: ${error}`);
-      }
-    }
-
     sorted = [];
     const unsorted = Object.keys(plugins);
     while (unsorted.length) {
