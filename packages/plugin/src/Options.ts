@@ -41,3 +41,5 @@ export function merge<A extends Options = Options, B extends Options = Options>(
     man: [...(a.man || []), ...(b.man || [])]
   } as A & B;
 }
+
+export type Hook = () => Options | Promise<Options>;
