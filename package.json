@@ -15,7 +15,7 @@
     "release": "run-s release:*",
     "release:monorepo-package-paths": "npx monorepo-package-paths -w --author --homepage --repository",
     "release:build": "run-s build",
-    "release:publish": "pnpm publish -r  --access public --otp $(op item get npm --otp)"
+    "release:publish": "pnpm publish -r --access public --filter './packages/**' --otp $(op item get npm --otp)"
   },
   "prettier": "@battis/prettier-config",
   "eslintConfig": {
