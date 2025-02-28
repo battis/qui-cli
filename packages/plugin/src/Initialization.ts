@@ -19,6 +19,10 @@ export type Arguments<O extends Options.Options> = {
   values: OptionsResults<FlattenConfigMetaSets<O>>;
 };
 
+export type ExpectedArguments<H extends Options.Hook> = Arguments<
+  Awaited<ReturnType<H>>
+>;
+
 export type Hook<O extends Options.Options = Options.Options> = (
   args: Arguments<O>
 ) => void | Promise<void>;
