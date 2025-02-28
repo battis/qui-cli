@@ -128,6 +128,15 @@ export async function init(
   return args;
 }
 
+export async function run(
+  externalOptions?: Plugin.Options | Options
+): Promise<Plugin.AccumulatedResults | undefined> {
+  if (!initialized) {
+    await init(externalOptions);
+  }
+  return await Plugin.Registrar.run();
+}
+
 export function usage() {
   let usage = jack().usage();
   if (requirePositionals) {
