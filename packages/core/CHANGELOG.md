@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.1.0](https://github.com/battis/qui-cli/compare/core/2.0.1...core/2.1.0) (2025-02-28)
+
+
+### Features
+
+* **qui-cli.core:** run() ([a2c5ba2](https://github.com/battis/qui-cli/commit/a2c5ba2f8de6c52a88c1cf75ac37f93b51fb8211))
+
+
+### Bug Fixes
+
+* **qui-cli.core:** catch repeated initializations ([6caee60](https://github.com/battis/qui-cli/commit/6caee60234874eaaafc6e4046cfa699a709c9421))
+
 ## [2.0.1](https://github.com/battis/qui-cli/compare/core/2.0.0...core/2.0.1) (2025-02-23)
 
 
