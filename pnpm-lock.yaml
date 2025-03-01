@@ -405,8 +405,8 @@ importers:
         specifier: ^0.1.7
         version: 0.1.7
       jackspeak:
-        specifier: ^2.3.6
-        version: 2.3.6
+        specifier: ^4.1.0
+        version: 4.1.0
     devDependencies:
       '@tsconfig/node20':
         specifier: ^20.1.4
@@ -499,7 +499,7 @@ importers:
         version: 2.0.3(@eslint/js@8.57.0)(eslint-config-prettier@8.10.0(eslint@8.57.0))(eslint-plugin-html@7.1.0)(eslint-plugin-markdown@3.0.1(eslint@8.57.0))(eslint@8.57.0)(globals@13.24.0)(typescript-eslint@8.18.0(eslint@8.57.0)(typescript@5.7.3))(typescript@5.7.3)
       '@battis/prettier-config':
         specifier: latest
-        version: 1.5.6(typescript@5.7.3)
+        version: 1.5.7(typescript@5.7.3)
       '@battis/typescript-tricks':
         specifier: ^0.7.4
         version: 0.7.4
@@ -703,6 +703,10 @@ packages:
     resolution: {integrity: sha512-azpe59SQ48qG6nu2CzcMLbxUudtN+dOM9kDbUqGq3HXUJRlo7i8fvPoxQUzYgLZ4cMVmuZgm8vvBpNeRhd6XSw==}
     engines: {node: '>=6.9.0'}
 
+  '@babel/traverse@7.26.9':
+    resolution: {integrity: sha512-ZYW7L+pL8ahU5fXmNbPF+iZFHCv5scFak7MZ9bwaRPLUhHh7QQEMjZUg0HevihoqCM5iSYHN61EyCoZvqC+bxg==}
+    engines: {node: '>=6.9.0'}
+
   '@babel/types@7.17.0':
     resolution: {integrity: sha512-TmKSNO4D5rzhL5bjWFcVHHLETzfQ/AmbKpKPOSjlP0WoHZ6L911fgoOKY4Alp/emzG4cHJdyN49zpgkbXFEHHw==}
     engines: {node: '>=6.9.0'}
@@ -728,6 +732,10 @@ packages:
 
   '@battis/prettier-config@1.5.6':
     resolution: {integrity: sha512-YplRYmOlg49D50kCIO3AemjEmtLif1YZcM01TH0Skgp46IggDcUGZr4BkllUvMFRIlgVPOSPm3po/b/z3ohiuA==}
+    engines: {node: '>=12.17'}
+
+  '@battis/prettier-config@1.5.7':
+    resolution: {integrity: sha512-VzKc5x0OixwS3MKoEFZiKivP2sugsDi2ChTiXwVficAYgXnsLo7oP1N7Y/EH4U8eVEPTc3R3uAT8jrrx1i7HeA==}
     engines: {node: '>=12.17'}
 
   '@battis/qui-cli.colors@2.0.1':
@@ -1503,6 +1511,11 @@ packages:
   '@prettier/plugin-xml@2.2.0':
     resolution: {integrity: sha512-UWRmygBsyj4bVXvDiqSccwT1kmsorcwQwaIy30yVh8T+Gspx4OlC0shX1y+ZuwXZvgnafmpRYKks0bAu9urJew==}
 
+  '@prettier/plugin-xml@3.4.1':
+    resolution: {integrity: sha512-Uf/6/+9ez6z/IvZErgobZ2G9n1ybxF5BhCd7eMcKqfoWuOzzNUxBipNo3QAP8kRC1VD18TIo84no7LhqtyDcTg==}
+    peerDependencies:
+      prettier: ^3.0.0
+
   '@sigstore/bundle@2.3.2':
     resolution: {integrity: sha512-wueKWDk70QixNLB363yHc2D2ItTgYiMTdPwK8D9dKQMR3ZQ0c35IxP5xnwQ8cNLoCgCRcHf14kE+CLIvNX1zmA==}
     engines: {node: ^16.14.0 || >=18.0.0}
@@ -1548,6 +1561,22 @@ packages:
       prettier: 2.x - 3.x
     peerDependenciesMeta:
       '@vue/compiler-sfc':
+        optional: true
+
+  '@trivago/prettier-plugin-sort-imports@5.2.2':
+    resolution: {integrity: sha512-fYDQA9e6yTNmA13TLVSA+WMQRc5Bn/c0EUBditUHNfMMxN7M82c38b1kEggVE3pLpZ0FwkwJkUEKMiOi52JXFA==}
+    engines: {node: '>18.12'}
+    peerDependencies:
+      '@vue/compiler-sfc': 3.x
+      prettier: 2.x - 3.x
+      prettier-plugin-svelte: 3.x
+      svelte: 4.x || 5.x
+    peerDependenciesMeta:
+      '@vue/compiler-sfc':
+        optional: true
+      prettier-plugin-svelte:
+        optional: true
+      svelte:
         optional: true
 
   '@tsconfig/node20@20.1.4':
@@ -5112,6 +5141,18 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  '@babel/traverse@7.26.9':
+    dependencies:
+      '@babel/code-frame': 7.26.2
+      '@babel/generator': 7.26.9
+      '@babel/parser': 7.26.9
+      '@babel/template': 7.26.9
+      '@babel/types': 7.26.9
+      debug: 4.4.0
+      globals: 11.12.0
+    transitivePeerDependencies:
+      - supports-color
+
   '@babel/types@7.17.0':
     dependencies:
       '@babel/helper-validator-identifier': 7.25.9
@@ -5150,6 +5191,23 @@ snapshots:
     transitivePeerDependencies:
       - '@vue/compiler-sfc'
       - supports-color
+      - typescript
+      - vue-tsc
+
+  '@battis/prettier-config@1.5.7(typescript@5.7.3)':
+    dependencies:
+      '@prettier/plugin-xml': 3.4.1(prettier@3.5.2)
+      '@trivago/prettier-plugin-sort-imports': 5.2.2(prettier@3.5.2)
+      prettier: 3.5.2
+      prettier-plugin-ejs: 1.0.3(prettier@3.5.2)
+      prettier-plugin-organize-imports: 4.1.0(prettier@3.5.2)(typescript@5.7.3)
+      prettier-plugin-packagejson: 2.5.9(prettier@3.5.2)
+      prettier-plugin-sql: 0.18.1(prettier@3.5.2)
+    transitivePeerDependencies:
+      - '@vue/compiler-sfc'
+      - prettier-plugin-svelte
+      - supports-color
+      - svelte
       - typescript
       - vue-tsc
 
@@ -6225,6 +6283,11 @@ snapshots:
       '@xml-tools/parser': 1.0.11
       prettier: 3.5.2
 
+  '@prettier/plugin-xml@3.4.1(prettier@3.5.2)':
+    dependencies:
+      '@xml-tools/parser': 1.0.11
+      prettier: 3.5.2
+
   '@sigstore/bundle@2.3.2':
     dependencies:
       '@sigstore/protobuf-specs': 0.3.3
@@ -6273,6 +6336,18 @@ snapshots:
       '@babel/parser': 7.26.9
       '@babel/traverse': 7.23.2
       '@babel/types': 7.17.0
+      javascript-natural-sort: 0.7.1
+      lodash: 4.17.21
+      prettier: 3.5.2
+    transitivePeerDependencies:
+      - supports-color
+
+  '@trivago/prettier-plugin-sort-imports@5.2.2(prettier@3.5.2)':
+    dependencies:
+      '@babel/generator': 7.26.9
+      '@babel/parser': 7.26.9
+      '@babel/traverse': 7.26.9
+      '@babel/types': 7.26.9
       javascript-natural-sort: 0.7.1
       lodash: 4.17.21
       prettier: 3.5.2
