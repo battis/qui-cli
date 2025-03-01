@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.1.1](https://github.com/battis/qui-cli/compare/qui-cli/2.1.0...qui-cli/2.1.1) (2025-03-01)
+
+
+### Bug Fixes
+
+* **qui-cli:** missing plugin dependency ([17a1e2f](https://github.com/battis/qui-cli/commit/17a1e2f511d0c9e638a38db006ec29f66c62342a))
+
 ## [2.1.0](https://github.com/battis/qui-cli/compare/qui-cli/2.0.4...qui-cli/2.1.0) (2025-02-28)
 
 ### Features
