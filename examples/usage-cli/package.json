@@ -14,7 +14,7 @@
   "type": "module",
   "dependencies": {
     "@battis/qui-cli": "workspace:*",
-    "@inquirer/prompts": "^2.3.1"
+    "@inquirer/prompts": "^7.3.2"
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.4",
