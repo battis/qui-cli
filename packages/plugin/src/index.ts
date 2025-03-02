@@ -6,12 +6,6 @@ export { Arguments, ExpectedArguments } from './Initialization.js';
 export { Options } from './Options.js';
 export * as Registrar from './Registrar.js';
 export { AccumulatedResults } from './Run.js';
+export * from './Utilities.js';
 
 export { merge as mergeOptions, register };
-
-export function hydrate(proposed: any, fallback: any) {
-  if (proposed === undefined) {
-    return fallback;
-  }
-  return proposed;
-}
