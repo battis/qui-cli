@@ -1,5 +1,15 @@
 import { ConfigMetaSet, ConfigSet, ConfigType } from 'jackspeak';
 
+/*
+ * TODO `env` field for options and flags
+ *   Name the environment variable to use as default value on init, if available
+ */
+
+/*
+ * TODO `secret` (or similar) field for options and flags
+ *   Indicate that the actual default value should not be displayed in usage (e.g. for an `env` value)
+ */
+
 type MetaSet<T extends ConfigType> = {
   value: ConfigMetaSet<T, false>;
   list: ConfigMetaSet<T, true>;
