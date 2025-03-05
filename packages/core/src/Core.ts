@@ -46,6 +46,10 @@ export async function configure({ core, ...pluginConfig }: Configuration = {}) {
 export async function options(
   externalOptions: Plugin.Options = {}
 ): Promise<Options> {
+  /*
+   * TODO automate default value documentation
+   *  Including parsing `env` (#34) and `secret` (#33) fields
+   */
   return Plugin.mergeOptions(
     Plugin.mergeOptions(
       {
