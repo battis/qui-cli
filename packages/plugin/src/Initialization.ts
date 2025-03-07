@@ -3,6 +3,7 @@ import * as Options from './Options.js';
 
 type FlattenConfigMetaSets<O extends Options.Options> =
   // FIXME all options are getting typed `string | undefined`
+  // Issue URL: https://github.com/battis/qui-cli/issues/39
   ConfigSetFromMetaSet<'number', false, Exclude<O['num'], undefined>> &
     ConfigSetFromMetaSet<'number', true, Exclude<O['numList'], undefined>> &
     ConfigSetFromMetaSet<'string', false, Exclude<O['opt'], undefined>> &

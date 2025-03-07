@@ -2,11 +2,13 @@ import { ConfigMetaSet, ConfigSet, ConfigType } from 'jackspeak';
 
 /*
  * TODO `env` field for options and flags
+   Issue URL: https://github.com/battis/qui-cli/issues/41
  *   Name the environment variable to use as default value on init, if available
  */
 
 /*
  * TODO `secret` (or similar) field for options and flags
+   Issue URL: https://github.com/battis/qui-cli/issues/40
  *   Indicate that the actual default value should not be displayed in usage (e.g. for an `env` value)
  */
 

@@ -48,6 +48,7 @@ export async function options(
 ): Promise<Options> {
   /*
    * TODO automate default value documentation
+     Issue URL: https://github.com/battis/qui-cli/issues/38
    *  Including parsing `env` (#34) and `secret` (#33) fields
    */
   return Plugin.mergeOptions(
