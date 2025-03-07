@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.1.0](https://github.com/battis/qui-cli/compare/log/2.0.1...log/2.1.0) (2025-03-07)
+
+
+### Features
+
+* **log:** Log.syntaxColor() to ANSI color an object for output ([211f091](https://github.com/battis/qui-cli/commit/211f091c00c945a4d99cf5216b6c06bad978dc30))
+
 ## [2.0.1](https://github.com/battis/qui-cli/compare/log/2.0.0...log/2.0.1) (2025-02-23)
 
 
