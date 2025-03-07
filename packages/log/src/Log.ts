@@ -136,7 +136,7 @@ export function get() {
   return logger();
 }
 
-function colorObject(obj: object) {
+export function syntaxColor(obj: object) {
   return JSON.stringify(obj, null, 2)
     .replace(/: ([^"{[][^,\n]*)/g, `: ${Colors.value('$1')}`)
     .replace(/: ("([^"]|\\")*")/g, `: ${Colors.quotedValue('$1')}`);
@@ -155,7 +155,7 @@ function namedLogMethod(level: string) {
         if (message === undefined) {
           message = Colors.value('undefined');
         } else {
-          message = colorObject(message);
+          message = syntaxColor(message);
         }
       }
     }
