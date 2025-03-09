@@ -1,6 +1,6 @@
 {
   "name": "@battis/qui-cli.plugin",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "@battis/qui-cli plugin structure and registrar",
   "homepage": "https://github.com/battis/qui-cli/tree/main/packages/plugin#readme",
   "repository": {
