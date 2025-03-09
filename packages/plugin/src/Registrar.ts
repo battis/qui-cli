@@ -176,6 +176,12 @@ export function registered({
   }));
 }
 
+export function reset() {
+  for (const name in plugins) {
+    delete plugins[name];
+  }
+}
+
 export type Configuration = {
   [key: keyof typeof plugins]: PluginConfiguration;
 };
