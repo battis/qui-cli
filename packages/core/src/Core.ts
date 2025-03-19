@@ -26,6 +26,7 @@ function jack() {
   return _jack;
 }
 
+// TODO automate positionals documentation
 let requirePositionals: boolean | number | undefined = undefined;
 let initialized = false;
 
