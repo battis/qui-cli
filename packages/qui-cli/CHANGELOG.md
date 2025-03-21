@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.1.3](https://github.com/battis/qui-cli/compare/qui-cli/2.1.2...qui-cli/2.1.3) (2025-03-21)
+
+### Bug Fixes
+
+- **env:** add @battis/qui-cli.root to plugin chain ([23b0af8](https://github.com/battis/qui-cli/commit/23b0af8701317fe4b86cd49a0fe62258e51ffbe6))
+
 ## [2.1.2](https://github.com/battis/qui-cli/compare/qui-cli/2.1.1...qui-cli/2.1.2) (2025-03-07)
 
 ### Features
