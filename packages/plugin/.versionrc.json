@@ -1,5 +1,5 @@
 {
   "path": ".",
   "tag-prefix": "plugin/",
-  "releaseCommitMessageFormat": "release(qui-cli.plugin): @battis/qui-cli.plugin@{{currentTag}}"
+  "releaseCommitMessageFormat": "chore(qui-cli.plugin): @battis/qui-cli.plugin@{{currentTag}}"
 }
