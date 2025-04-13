@@ -1,0 +1,5 @@
+{
+  "path": ".",
+  "tag-prefix": "structured/",
+  "releaseCommitMessageFormat": "release(qui-cli.structured): @battis/qui-cli.structured@{{currentTag}}"
+}
