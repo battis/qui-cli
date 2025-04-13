@@ -13,7 +13,7 @@
   "scripts": {
     "build": "lerna run build",
     "release": "run-s release:*",
-    "release:monorepo-package-paths": "npx monorepo-package-paths -w --author --homepage --repository",
+    "release:paths": "npx monorepo-package-paths -w --author --homepage --repository",
     "release:build": "run-s build",
     "release:publish": "pnpm publish -r --access public --filter './packages/**' --otp $(op item get npm --otp)"
   },
