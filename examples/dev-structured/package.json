@@ -1,0 +1,37 @@
+{
+  "name": "@examples/dev-structured",
+  "version": "0.0.0",
+  "homepage": "https://github.com/battis/qui-cli/tree/main/examples/dev-structured#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/battis/qui-cli.git",
+    "directory": "examples/dev-structured"
+  },
+  "author": {
+    "name": "Seth Battis",
+    "url": "https://github.com/battis"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "clean": "del ./dist",
+    "build": "run-s build:*",
+    "build:clean": "run-s clean",
+    "build:compile": "tsc",
+    "build:man-files": "copy './src/**/.man.json' ./dist"
+  },
+  "devDependencies": {
+    "@battis/qui-cli.colors": "workspace:*",
+    "@battis/qui-cli.log": "workspace:*",
+    "@battis/qui-cli.structured": "workspace:*",
+    "@tsconfig/node20": "^20.1.5",
+    "copy": "^0.3.2",
+    "del-cli": "^6.0.0",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.8.3"
+  },
+  "peerDependencies": {
+    "@battis/qui-cli.plugin": "^2.0"
+  }
+}
