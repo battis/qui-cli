@@ -63,9 +63,9 @@ export async function register(
 
   if (registree.name in plugins) {
     if (
-      plugins[registree.name].package.name === registree.package.name &&
-      plugins[registree.name].package.version === registree.package.version &&
-      plugins[registree.name].package.path === registree.package.path
+      plugins[registree.name].package.name == registree.package.name &&
+      plugins[registree.name].package.version == registree.package.version &&
+      plugins[registree.name].package.path == registree.package.path
     ) {
       return;
     }
