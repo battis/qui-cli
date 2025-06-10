@@ -17,7 +17,7 @@
     "@battis/qui-cli.log": "workspace:*"
   },
   "devDependencies": {
-    "@tsconfig/node20": "^20.1.4",
-    "tsx": "^4.19.3"
+    "@tsconfig/node20": "^20.1.5",
+    "tsx": "^4.19.4"
   }
 }
