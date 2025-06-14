@@ -25,11 +25,11 @@
     "@battis/qui-cli.colors": "workspace:*",
     "@battis/qui-cli.log": "workspace:*",
     "@battis/qui-cli.structured": "workspace:*",
-    "@tsconfig/node20": "^20.1.5",
+    "@tsconfig/node20": "^20.1.6",
     "copy": "^0.3.2",
     "del-cli": "^6.0.0",
     "npm-run-all": "^4.1.5",
-    "typescript": "^5.7.3"
+    "typescript": "^5.8.3"
   },
   "peerDependencies": {
     "@battis/qui-cli.plugin": "^2.0"

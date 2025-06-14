@@ -10,13 +10,13 @@ importers:
     devDependencies:
       '@battis/eslint-config':
         specifier: ^2.0.3
-        version: 2.0.3(@eslint/js@9.28.0)(eslint-config-prettier@10.1.5(eslint@9.28.0(jiti@2.4.2)))(eslint-plugin-html@8.1.3)(eslint-plugin-markdown@5.1.0(eslint@9.28.0(jiti@2.4.2)))(eslint@9.28.0(jiti@2.4.2))(globals@11.12.0)(typescript-eslint@8.33.1(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3))(typescript@5.8.3)
+        version: 2.0.3(@eslint/js@9.28.0)(eslint-config-prettier@10.1.5(eslint@9.28.0(jiti@2.4.2)))(eslint-plugin-html@8.1.3)(eslint-plugin-markdown@5.1.0(eslint@9.28.0(jiti@2.4.2)))(eslint@9.28.0(jiti@2.4.2))(globals@14.0.0)(typescript-eslint@8.33.1(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3))(typescript@5.8.3)
       '@battis/prettier-config':
         specifier: ^1.6.0
         version: 1.6.0(typescript@5.8.3)
       '@commitlint/cli':
         specifier: ^19.8.1
-        version: 19.8.1(@types/node@22.15.30)(typescript@5.8.3)
+        version: 19.8.1(@types/node@22.15.31)(typescript@5.8.3)
       '@commitlint/config-conventional':
         specifier: ^19.8.1
         version: 19.8.1
@@ -24,17 +24,17 @@ importers:
         specifier: ^19.8.1
         version: 19.8.1
       '@tsconfig/node20':
-        specifier: ^20.1.5
-        version: 20.1.5
+        specifier: ^20.1.6
+        version: 20.1.6
       '@types/node':
-        specifier: ^22.15.30
-        version: 22.15.30
+        specifier: ^22.15.31
+        version: 22.15.31
       lerna:
         specifier: ^8.2.2
         version: 8.2.2(encoding@0.1.13)
       monorepo-package-paths:
         specifier: ^0.3.10
-        version: 0.3.10(@types/node@22.15.30)(prettier@3.5.3)
+        version: 0.3.10(@types/node@22.15.31)(prettier@3.5.3)
       npm-run-all:
         specifier: ^4.1.5
         version: 4.1.5
@@ -55,8 +55,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/plugin
       '@tsconfig/node20':
-        specifier: ^20.1.5
-        version: 20.1.5
+        specifier: ^20.1.6
+        version: 20.1.6
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -64,7 +64,7 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ^5.7.3
+        specifier: ^5.8.3
         version: 5.8.3
 
   examples/dev-plugin:
@@ -73,8 +73,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/plugin
       '@tsconfig/node20':
-        specifier: ^20.1.5
-        version: 20.1.5
+        specifier: ^20.1.6
+        version: 20.1.6
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -82,7 +82,7 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ^5.7.3
+        specifier: ^5.8.3
         version: 5.8.3
 
   examples/dev-sequenced-commands/command:
@@ -104,8 +104,8 @@ importers:
         version: link:../modules-def
     devDependencies:
       '@tsconfig/node20':
-        specifier: ^20.1.5
-        version: 20.1.5
+        specifier: ^20.1.6
+        version: 20.1.6
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -113,7 +113,7 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ^5.7.3
+        specifier: ^5.8.3
         version: 5.8.3
 
   examples/dev-sequenced-commands/module-a:
@@ -132,8 +132,8 @@ importers:
         specifier: workspace:*
         version: link:../../../packages/plugin
       '@tsconfig/node20':
-        specifier: ^20.1.5
-        version: 20.1.5
+        specifier: ^20.1.6
+        version: 20.1.6
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -141,7 +141,7 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ^5.7.3
+        specifier: ^5.8.3
         version: 5.8.3
 
   examples/dev-sequenced-commands/module-b:
@@ -163,8 +163,8 @@ importers:
         specifier: workspace:*
         version: link:../../../packages/plugin
       '@tsconfig/node20':
-        specifier: ^20.1.5
-        version: 20.1.5
+        specifier: ^20.1.6
+        version: 20.1.6
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -172,7 +172,7 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ^5.7.3
+        specifier: ^5.8.3
         version: 5.8.3
 
   examples/dev-sequenced-commands/module-c:
@@ -194,8 +194,8 @@ importers:
         specifier: workspace:*
         version: link:../module-b
       '@tsconfig/node20':
-        specifier: ^20.1.5
-        version: 20.1.5
+        specifier: ^20.1.6
+        version: 20.1.6
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -203,7 +203,7 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ^5.7.3
+        specifier: ^5.8.3
         version: 5.8.3
 
   examples/dev-sequenced-commands/modules-def:
@@ -225,8 +225,8 @@ importers:
         specifier: workspace:*
         version: link:../module-c
       '@tsconfig/node20':
-        specifier: ^20.1.5
-        version: 20.1.5
+        specifier: ^20.1.6
+        version: 20.1.6
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -234,7 +234,7 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ^5.7.3
+        specifier: ^5.8.3
         version: 5.8.3
 
   examples/dev-structured:
@@ -253,8 +253,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/structured
       '@tsconfig/node20':
-        specifier: ^20.1.5
-        version: 20.1.5
+        specifier: ^20.1.6
+        version: 20.1.6
       copy:
         specifier: ^0.3.2
         version: 0.3.2
@@ -265,7 +265,7 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ^5.7.3
+        specifier: ^5.8.3
         version: 5.8.3
 
   examples/usage-cli:
@@ -275,14 +275,14 @@ importers:
         version: link:../../packages/qui-cli
       '@inquirer/prompts':
         specifier: ^7.5.3
-        version: 7.5.3(@types/node@22.15.30)
+        version: 7.5.3(@types/node@24.0.1)
     devDependencies:
       '@tsconfig/node20':
-        specifier: ^20.1.5
-        version: 20.1.5
+        specifier: ^20.1.6
+        version: 20.1.6
       tsx:
-        specifier: ^4.19.4
-        version: 4.19.4
+        specifier: ^4.20.3
+        version: 4.20.3
 
   examples/usage-modular:
     dependencies:
@@ -294,11 +294,11 @@ importers:
         version: link:../../packages/log
     devDependencies:
       '@tsconfig/node20':
-        specifier: ^20.1.5
-        version: 20.1.5
+        specifier: ^20.1.6
+        version: 20.1.6
       tsx:
-        specifier: ^4.19.4
-        version: 4.19.4
+        specifier: ^4.20.3
+        version: 4.20.3
 
   packages/colors:
     dependencies:
@@ -310,11 +310,11 @@ importers:
         specifier: workspace:*
         version: link:../plugin
       '@tsconfig/node20':
-        specifier: ^20.1.5
-        version: 20.1.5
+        specifier: ^20.1.6
+        version: 20.1.6
       '@types/node':
-        specifier: ^22.15.30
-        version: 22.15.30
+        specifier: ^22.15.31
+        version: 22.15.31
       commit-and-tag-version:
         specifier: ^12.5.1
         version: 12.5.1
@@ -325,7 +325,7 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ^5.7.3
+        specifier: ^5.8.3
         version: 5.8.3
 
   packages/core:
@@ -338,11 +338,11 @@ importers:
         specifier: workspace:*
         version: link:../plugin
       '@tsconfig/node20':
-        specifier: ^20.1.5
-        version: 20.1.5
+        specifier: ^20.1.6
+        version: 20.1.6
       '@types/node':
-        specifier: ^22.15.30
-        version: 22.15.30
+        specifier: ^22.15.31
+        version: 22.15.31
       commit-and-tag-version:
         specifier: ^12.5.1
         version: 12.5.1
@@ -353,7 +353,7 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ^5.7.3
+        specifier: ^5.8.3
         version: 5.8.3
 
   packages/env:
@@ -372,11 +372,11 @@ importers:
         specifier: ^2.29.4
         version: 2.29.4
       '@tsconfig/node20':
-        specifier: ^20.1.5
-        version: 20.1.5
+        specifier: ^20.1.6
+        version: 20.1.6
       '@types/node':
-        specifier: ^22.15.30
-        version: 22.15.30
+        specifier: ^22.15.31
+        version: 22.15.31
       commit-and-tag-version:
         specifier: ^12.5.1
         version: 12.5.1
@@ -387,7 +387,7 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ^5.7.3
+        specifier: ^5.8.3
         version: 5.8.3
 
   packages/log:
@@ -412,11 +412,11 @@ importers:
         specifier: workspace:*
         version: link:../root
       '@tsconfig/node20':
-        specifier: ^20.1.5
-        version: 20.1.5
+        specifier: ^20.1.6
+        version: 20.1.6
       '@types/node':
-        specifier: ^22.15.30
-        version: 22.15.30
+        specifier: ^22.15.31
+        version: 22.15.31
       commit-and-tag-version:
         specifier: ^12.5.1
         version: 12.5.1
@@ -427,7 +427,7 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ^5.7.3
+        specifier: ^5.8.3
         version: 5.8.3
 
   packages/plugin:
@@ -440,11 +440,11 @@ importers:
         version: 4.1.1
     devDependencies:
       '@tsconfig/node20':
-        specifier: ^20.1.5
-        version: 20.1.5
+        specifier: ^20.1.6
+        version: 20.1.6
       '@types/node':
-        specifier: ^22.15.30
-        version: 22.15.30
+        specifier: ^22.15.31
+        version: 22.15.31
       commit-and-tag-version:
         specifier: ^12.5.1
         version: 12.5.1
@@ -455,7 +455,7 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ^5.7.3
+        specifier: ^5.8.3
         version: 5.8.3
 
   packages/progress:
@@ -474,8 +474,8 @@ importers:
         specifier: workspace:*
         version: link:../plugin
       '@tsconfig/node20':
-        specifier: ^20.1.5
-        version: 20.1.5
+        specifier: ^20.1.6
+        version: 20.1.6
       '@types/cli-progress':
         specifier: ^3.11.6
         version: 3.11.6
@@ -489,7 +489,7 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ^5.7.3
+        specifier: ^5.8.3
         version: 5.8.3
 
   packages/qui-cli:
@@ -523,11 +523,11 @@ importers:
         version: link:../validators
       '@inquirer/prompts':
         specifier: ^7.5.3
-        version: 7.5.3(@types/node@22.15.30)
+        version: 7.5.3(@types/node@22.15.31)
     devDependencies:
       '@battis/eslint-config':
         specifier: latest
-        version: 2.0.3(@eslint/js@9.28.0)(eslint-config-prettier@10.1.5(eslint@9.28.0(jiti@2.4.2)))(eslint-plugin-html@8.1.3)(eslint-plugin-markdown@5.1.0(eslint@9.28.0(jiti@2.4.2)))(eslint@9.28.0(jiti@2.4.2))(globals@11.12.0)(typescript-eslint@8.33.1(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3))(typescript@5.8.3)
+        version: 2.0.3(@eslint/js@9.28.0)(eslint-config-prettier@10.1.5(eslint@9.28.0(jiti@2.4.2)))(eslint-plugin-html@8.1.3)(eslint-plugin-markdown@5.1.0(eslint@9.28.0(jiti@2.4.2)))(eslint@9.28.0(jiti@2.4.2))(globals@14.0.0)(typescript-eslint@8.33.1(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3))(typescript@5.8.3)
       '@battis/prettier-config':
         specifier: latest
         version: 1.6.0(typescript@5.8.3)
@@ -535,14 +535,14 @@ importers:
         specifier: ^0.7.4
         version: 0.7.4
       '@tsconfig/node20':
-        specifier: ^20.1.5
-        version: 20.1.5
+        specifier: ^20.1.6
+        version: 20.1.6
       '@types/is-valid-path':
         specifier: ^0.1.2
         version: 0.1.2
       '@types/node':
-        specifier: ^22.15.30
-        version: 22.15.30
+        specifier: ^22.15.31
+        version: 22.15.31
       '@types/shelljs':
         specifier: ^0.8.16
         version: 0.8.16
@@ -556,10 +556,10 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       tsx:
-        specifier: ^4.19.4
-        version: 4.19.4
+        specifier: ^4.20.3
+        version: 4.20.3
       typescript:
-        specifier: ^5.7.3
+        specifier: ^5.8.3
         version: 5.8.3
 
   packages/root:
@@ -575,11 +575,11 @@ importers:
         specifier: ^0.7.4
         version: 0.7.4
       '@tsconfig/node20':
-        specifier: ^20.1.5
-        version: 20.1.5
+        specifier: ^20.1.6
+        version: 20.1.6
       '@types/node':
-        specifier: ^22.15.30
-        version: 22.15.30
+        specifier: ^22.15.31
+        version: 22.15.31
       commit-and-tag-version:
         specifier: ^12.5.1
         version: 12.5.1
@@ -590,7 +590,7 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ^5.7.3
+        specifier: ^5.8.3
         version: 5.8.3
 
   packages/shell:
@@ -612,11 +612,11 @@ importers:
         specifier: workspace:*
         version: link:../plugin
       '@tsconfig/node20':
-        specifier: ^20.1.5
-        version: 20.1.5
+        specifier: ^20.1.6
+        version: 20.1.6
       '@types/node':
-        specifier: ^22.15.30
-        version: 22.15.30
+        specifier: ^22.15.31
+        version: 22.15.31
       '@types/shelljs':
         specifier: ^0.8.16
         version: 0.8.16
@@ -630,7 +630,7 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ^5.7.3
+        specifier: ^5.8.3
         version: 5.8.3
 
   packages/structured:
@@ -649,11 +649,11 @@ importers:
         version: 4.1.1
     devDependencies:
       '@tsconfig/node20':
-        specifier: ^20.1.5
-        version: 20.1.5
+        specifier: ^20.1.6
+        version: 20.1.6
       '@types/node':
-        specifier: ^22.15.30
-        version: 22.15.30
+        specifier: ^22.15.31
+        version: 22.15.31
       commit-and-tag-version:
         specifier: ^12.5.1
         version: 12.5.1
@@ -664,7 +664,7 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ^5.7.3
+        specifier: ^5.8.3
         version: 5.8.3
 
   packages/validators:
@@ -689,14 +689,14 @@ importers:
         specifier: workspace:*
         version: link:../root
       '@tsconfig/node20':
-        specifier: ^20.1.5
-        version: 20.1.5
+        specifier: ^20.1.6
+        version: 20.1.6
       '@types/is-valid-path':
         specifier: ^0.1.2
         version: 0.1.2
       '@types/node':
-        specifier: ^22.15.30
-        version: 22.15.30
+        specifier: ^22.15.31
+        version: 22.15.31
       commit-and-tag-version:
         specifier: ^12.5.1
         version: 12.5.1
@@ -707,7 +707,7 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ^5.7.3
+        specifier: ^5.8.3
         version: 5.8.3
 
 packages:
@@ -1163,16 +1163,20 @@ packages:
     resolution: {integrity: sha512-CCZCDJuduB9OUkFkY2IgppNZMi2lBQgD2qzwXkEia16cge2pijY/aXi96CJMquDMn3nJdlPV1A5KrJEXwfLNzQ==}
     engines: {node: ^12.0.0 || ^14.0.0 || >=16.0.0}
 
-  '@eslint/config-array@0.20.0':
-    resolution: {integrity: sha512-fxlS1kkIjx8+vy2SjuCB94q3htSNrufYTXubwiBFeaQHbH6Ipi43gFJq2zCMt6PHhImH3Xmr0NksKDvchWlpQQ==}
+  '@eslint/config-array@0.20.1':
+    resolution: {integrity: sha512-OL0RJzC/CBzli0DrrR31qzj6d6i6Mm3HByuhflhl4LOBiWxN+3i6/t/ZQQNii4tjksXi8r2CRW1wMpWA2ULUEw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@eslint/config-helpers@0.2.2':
-    resolution: {integrity: sha512-+GPzk8PlG0sPpzdU5ZvIRMPidzAnZDl/s9L+y13iodqvb8leL53bTannOrQ/Im7UkpsmFU5Ily5U60LWixnmLg==}
+  '@eslint/config-helpers@0.2.3':
+    resolution: {integrity: sha512-u180qk2Um1le4yf0ruXH3PYFeEZeYC3p/4wCTKrr2U1CmGdzGi3KtY0nuPDH48UJxlKCC5RDzbcbh4X0XlqgHg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   '@eslint/core@0.14.0':
     resolution: {integrity: sha512-qIbV0/JZr7iSDjqAc60IqbLdsj9GDt16xQtWD+B78d/HAlvysGdZZ6rpJHGAc2T0FQx1X6thsSPdnoiGKdNtdg==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@eslint/core@0.15.0':
+    resolution: {integrity: sha512-b7ePw78tEWWkpgZCDYkbqDOP8dmM6qe+AOC6iuJqlq1R/0ahMAeH3qynpnqKFGkMltrp44ohV4ubGyvLX28tzw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   '@eslint/eslintrc@3.3.1':
@@ -1187,8 +1191,8 @@ packages:
     resolution: {integrity: sha512-RBMg5FRL0I0gs51M/guSAj5/e14VQ4tpZnQNWwuDT66P14I43ItmPfIZRhO9fUVIPOAQXU47atlywZ/czoqFPA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@eslint/plugin-kit@0.3.1':
-    resolution: {integrity: sha512-0J+zgWxHN+xXONWIyPWKFMgVuJoZuGiIFu8yxk7RJjxkzpGmyja5wRFqZIVtjDVOQpV+Rw0iOAjYPE2eQyjr0w==}
+  '@eslint/plugin-kit@0.3.2':
+    resolution: {integrity: sha512-4SaFZCNfJqvk/kenHpI8xvN42DMaoycy4PzKc5otHxRswww1kAt82OlBuwRVLofCACCTZEcla2Ydxv8scMXaTg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   '@gwhitney/detect-indent@7.0.1':
@@ -1387,6 +1391,14 @@ packages:
     peerDependenciesMeta:
       '@types/node':
         optional: true
+
+  '@isaacs/balanced-match@4.0.1':
+    resolution: {integrity: sha512-yzMTt9lEb8Gv7zRioUilSglI0c0smZ9k5D65677DLWLtWJaXIS3CqcGyUFByYKlnUj6TkjLVs54fBl6+TiGQDQ==}
+    engines: {node: 20 || >=22}
+
+  '@isaacs/brace-expansion@5.0.0':
+    resolution: {integrity: sha512-ZT55BDLV0yv0RBm2czMiZ+SqCGO7AvmOM3G/w2xhVPH+te0aKgFjmBvGlL1dH+ql2tgGO3MVrbb3jCKyvpgnxA==}
+    engines: {node: 20 || >=22}
 
   '@isaacs/cliui@8.0.2':
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
@@ -1715,8 +1727,8 @@ packages:
       svelte:
         optional: true
 
-  '@tsconfig/node20@20.1.5':
-    resolution: {integrity: sha512-Vm8e3WxDTqMGPU4GATF9keQAIy1Drd7bPwlgzKJnZtoOsTm1tduUTbDjg0W5qERvGuxPI2h9RbMufH0YdfBylA==}
+  '@tsconfig/node20@20.1.6':
+    resolution: {integrity: sha512-sz+Hqx9zwZDpZIV871WSbUzSqNIsXzghZydypnfgzPKLltVJfkINfUeTct31n/tTSa9ZE1ZOfKdRre1uHHquYQ==}
 
   '@tufjs/canonical-json@2.0.0':
     resolution: {integrity: sha512-yVtV8zsdo8qFHe+/3kw81dSLyF7D576A5cCFCi4X7B39tWT7SekaEFUnvnWJHz+9qO7qJTah1JbrDjWKqFtdWA==}
@@ -1780,8 +1792,11 @@ packages:
   '@types/node@20.19.0':
     resolution: {integrity: sha512-hfrc+1tud1xcdVTABC2JiomZJEklMcXYNTVtZLAeqTVWD+qL5jkHKT+1lOtqDdGxt+mB53DTtiz673vfjU8D1Q==}
 
-  '@types/node@22.15.30':
-    resolution: {integrity: sha512-6Q7lr06bEHdlfplU6YRbgG1SFBdlsfNC4/lX+SkhiTs0cpJkOElmWls8PxDFv4yY/xKb8Y6SO0OmSX4wgqTZbA==}
+  '@types/node@22.15.31':
+    resolution: {integrity: sha512-jnVe5ULKl6tijxUhvQeNbQG/84fHfg+yMak02cT8QVhBx/F05rAVxCGBYYTh2EKz22D6JF5ktXuNwdx7b9iEGw==}
+
+  '@types/node@24.0.1':
+    resolution: {integrity: sha512-MX4Zioh39chHlDJbKmEgydJDS3tspMP/lnQC67G3SWsTnb9NeYVWOjkxpOSy4oMfPs4StcWHwBrvUb4ybfnuaw==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -1887,8 +1902,8 @@ packages:
     peerDependencies:
       acorn: ^6.0.0 || ^7.0.0 || ^8.0.0
 
-  acorn@8.14.1:
-    resolution: {integrity: sha512-OvQ/2pUDKmgfCg++xsTX1wGxfTaszcHVcTctW4UJB4hibJx2HXxxO5UmVgyjMa+ZDsiaf5wWLXYpRWMmBI0QHg==}
+  acorn@8.15.0:
+    resolution: {integrity: sha512-NZyJarBfL7nWwIq+FDL6Zp/yHEhePMNnnJ0y3qfieCrmNvYct8uvtiV41UvlSe6apAfk0fY1FbWx+NwfmpvtTg==}
     engines: {node: '>=0.4.0'}
     hasBin: true
 
@@ -2014,8 +2029,8 @@ packages:
     resolution: {integrity: sha512-wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==}
     engines: {node: '>= 0.4'}
 
-  axios@1.9.0:
-    resolution: {integrity: sha512-re4CqKTJaURpzbLHtIi6XpDv20/CnpXOtjRY5/CU32L8gU8ek9UIivcfvSWvmKEngmVbrUtPpdDwWDWL7DNHvg==}
+  axios@1.10.0:
+    resolution: {integrity: sha512-/1xYAC4MP/HEG+3duIhFr4ZQXR4sQXOIe+o6sdqzeykGLx6Upp/1p8MHqhINOvGeP7xyNHe7tsiJByc4SSVUxw==}
 
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
@@ -2047,11 +2062,11 @@ packages:
   bluebird@3.7.2:
     resolution: {integrity: sha512-XpNj6GDQzdfW+r2Wnn7xiSAd7TM3jzkxGXBGTtWKuSXv1xUV+azxAm8jdWZN06QTQk+2N2XB9jRDkvbmQmcRtg==}
 
-  brace-expansion@1.1.11:
-    resolution: {integrity: sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==}
+  brace-expansion@1.1.12:
+    resolution: {integrity: sha512-9T9UjW3r0UW5c1Q7GTwllptXwhvYmEzFhzMfZ9H7FQWt+uZePjZPjBP/W1ZEyZ1twGWom5/56TF4lPcqjnDHcg==}
 
-  brace-expansion@2.0.1:
-    resolution: {integrity: sha512-XnAIvQ8eM+kC6aULx6wuQiwVsnzsi9d3WxzV3FpWTGA19F621kwdbsAcFKXgKUHZWsy+mY6iL1sHTxWEFCytDA==}
+  brace-expansion@2.0.2:
+    resolution: {integrity: sha512-Jt0vHyM+jmUBqojB7E1NIYadt0vI0Qxjxd2TErW94wDz+E2LAm5vKMXXwg6ZZBTHPuUlDgQHKXvjGBdfcF1ZDQ==}
 
   braces@3.0.3:
     resolution: {integrity: sha512-yQbXgO/OSZVD2IsiLlro+7Hf6Q18EJrKSEsdoMzKePKXct3gvD8oLcOQdIzGupr5Fj+EDe8gO/lxc1BzfMpxvA==}
@@ -2385,8 +2400,8 @@ packages:
     engines: {node: '>=4'}
     hasBin: true
 
-  cssstyle@4.3.1:
-    resolution: {integrity: sha512-ZgW+Jgdd7i52AaLYCriF8Mxqft0gD/R9i9wi6RWBhs1pqdPEzPjym7rvRKi397WmQFf3SlyUsszhw+VVCbx79Q==}
+  cssstyle@4.4.0:
+    resolution: {integrity: sha512-W0Y2HOXlPkb2yaKrCVRjinYKciu/qSLEmK0K9mcfDei3zwlnHFEHAs/Du3cIRwPqY+J4JsiBzUjoHyc8RsJ03A==}
     engines: {node: '>=18'}
 
   dargs@7.0.0:
@@ -2609,8 +2624,8 @@ packages:
     resolution: {integrity: sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==}
     engines: {node: '>=0.12'}
 
-  entities@6.0.0:
-    resolution: {integrity: sha512-aKstq2TDOndCn4diEyp9Uq/Flu2i1GlLkc6XIDQSDMuaFE3OPW5OphLCyQ5SpSJZTb4reN+kTcYru5yIfXoRPw==}
+  entities@6.0.1:
+    resolution: {integrity: sha512-aN97NXWF6AWBTahfVOIrB/NShkzi5H7F9r1s9mD3cDj4Ko5f2qhhVoYMibXF7GlLveb/D2ioWay8lxI97Ven3g==}
     engines: {node: '>=0.12'}
 
   env-paths@2.2.1:
@@ -2685,16 +2700,16 @@ packages:
     peerDependencies:
       eslint: '>=8'
 
-  eslint-scope@8.3.0:
-    resolution: {integrity: sha512-pUNxi75F8MJ/GdeKtVLSbYg4ZI34J6C0C7sbL4YOp2exGwen7ZsuBqKzUhXd0qMQ362yET3z+uPwKeg/0C2XCQ==}
+  eslint-scope@8.4.0:
+    resolution: {integrity: sha512-sNXOfKCn74rt8RICKMvJS7XKV/Xk9kA7DyJr8mJik3S7Cwgy3qlkkmyS2uQB3jiJg6VNdZd/pDBJu0nvG2NlTg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   eslint-visitor-keys@3.4.3:
     resolution: {integrity: sha512-wpc+LXeiyiisxPlEkUzU6svyS1frIO3Mgxj1fdy7Pm8Ygzguax2N3Fa/D/ag1WqbOprdI+uY6wMUl8/a2G+iag==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
 
-  eslint-visitor-keys@4.2.0:
-    resolution: {integrity: sha512-UyLnSehNt62FFhSwjZlHmeokpRK59rcz29j+F1/aDgbkbRTk7wIc9XzdoasMUbRNKDM0qQt/+BJ4BrpFeABemw==}
+  eslint-visitor-keys@4.2.1:
+    resolution: {integrity: sha512-Uhdk5sfqcee/9H/rCOJikYz67o0a2Tw2hGRPOG2Y1R2dg7brRe1uG0yaNQDHu+TO/uQPF/5eCapvYSmHUjt7JQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   eslint@9.28.0:
@@ -2707,8 +2722,8 @@ packages:
       jiti:
         optional: true
 
-  espree@10.3.0:
-    resolution: {integrity: sha512-0QYC8b24HWY8zjRnDTL6RiHfDbAWn63qb4LMj1Z4b076A4une81+z03Kg7l7mn/48PUTqoLptSXez8oknU8Clg==}
+  espree@10.4.0:
+    resolution: {integrity: sha512-j6PAQ2uUr79PZhBjP5C5fhl8e39FmRnOjsD5lGnWrFU8i2G776tBK7+nP8KuQUTTyAZUwfQqXAgrVH5MbH9CYQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   esprima@4.0.1:
@@ -2776,8 +2791,8 @@ packages:
   fastq@1.19.1:
     resolution: {integrity: sha512-GwLTyxkCXjXbxqIhTsMI2Nui8huMPtnxg7krajPJAjnEG/iiOS7i+zCtWGZR9G0NBKbXKh6X9m9UIsYX/N6vvQ==}
 
-  fdir@6.4.5:
-    resolution: {integrity: sha512-4BG7puHpVsIYxZUbiUE3RqGloLaSSwzYie5jvasC4LWuBWzZawynvYouhjbQKw2JuIGYdm0DzIxl8iVidKlUEw==}
+  fdir@6.4.6:
+    resolution: {integrity: sha512-hiFoqpyZcfNm1yc4u8oWCf9A2c4D3QjCrks3zmoVKVxpQRzmPNar1hUJcBG2RQHvEVGDN+Jm81ZheVLAQMK6+w==}
     peerDependencies:
       picomatch: ^3 || ^4
     peerDependenciesMeta:
@@ -3011,8 +3026,8 @@ packages:
     resolution: {integrity: sha512-7Bv8RF0k6xjo7d4A/PxYLbUCfb6c+Vpd2/mB2yRDlew7Jb5hEXiCD9ibfO7wpk8i4sevK6DFny9h7EYbM3/sHg==}
     hasBin: true
 
-  glob@11.0.2:
-    resolution: {integrity: sha512-YT7U7Vye+t5fZ/QMkBFrTJ7ZQxInIUjwyAjVj84CYXqgBdv30MFUPGnBR6sQaVq6Is15wYJUsnzTuWaGRBhBAQ==}
+  glob@11.0.3:
+    resolution: {integrity: sha512-2Nim7dha1KVkaiF4q6Dj+ngPPMdfvLJEOpZk/jKiUAkqKebpGAWQXAq9z1xu9HKu5lWfqw/FASuccEjyznjPaA==}
     engines: {node: 20 || >=22}
     hasBin: true
 
@@ -3935,8 +3950,8 @@ packages:
     resolution: {integrity: sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg==}
     engines: {node: '>=4'}
 
-  minimatch@10.0.1:
-    resolution: {integrity: sha512-ethXTt3SGGR+95gudmqJ1eNhRO7eGEGIgYA9vnPatK4/etz2MEVDno5GMCibdMTuBMyElzIlgxMna3K94XDIDQ==}
+  minimatch@10.0.3:
+    resolution: {integrity: sha512-IPZ167aShDZZUMdRk66cyQAW3qr0WzbHkPdMYa8bzZhlHhO3jALbKdxcaak7W9FfT2rZNpQuUu4Od7ILEpXSaw==}
     engines: {node: 20 || >=22}
 
   minimatch@3.0.5:
@@ -4849,8 +4864,8 @@ packages:
     resolution: {integrity: sha512-HehCEsotFqbPW9sJ8WVYB6UbmIMv7kUUORIF2Nncq4VQvBfNBLibW9YZR5dlYCSUhwcD628pRllm7n+E+YTzJw==}
     engines: {node: '>= 14'}
 
-  socks@2.8.4:
-    resolution: {integrity: sha512-D3YaD0aRxR3mEcqnidIs7ReYJFVzWdd6fXJYUM8ixcQcJRGTka/b3saV0KflYhyVJXKhb947GndU35SxYNResQ==}
+  socks@2.8.5:
+    resolution: {integrity: sha512-iF+tNDQla22geJdTyJB1wM/qrX9DMRwWrciEPwWLPRWAUEM8sQiyxgckLxWT1f7+9VabJS0jTGGr4QgBuvi6Ww==}
     engines: {node: '>= 10.0.0', npm: '>= 3.0.0'}
 
   sort-keys@2.0.0:
@@ -4903,8 +4918,8 @@ packages:
   sprintf-js@1.1.3:
     resolution: {integrity: sha512-Oo+0REFV59/rz3gfJNKQiBlwfHaSESl1pcGyABQsnnIfWOFt6JNj5gCog2U6MLZ//IGYD+nA8nI+mTShREReaA==}
 
-  sql-formatter@15.6.3:
-    resolution: {integrity: sha512-7PG5WixAxszzHddccVMg12Z0H6r3bwSmhyMFO0g+O1DvLBmsQK5c9mjoeydUBFv7UdGjgGa+embx6nSrEfqJFA==}
+  sql-formatter@15.6.4:
+    resolution: {integrity: sha512-osSvFAtUu/SqT4ywdPTraCHR/VzMjeG+cXFEGwJJtm2SoA/uewU6Sm2HYyqo6W7VTGSWUWx7WT8KkE3HJq51cA==}
     hasBin: true
 
   ssri@10.0.6:
@@ -5132,8 +5147,8 @@ packages:
   tslib@2.8.1:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
 
-  tsx@4.19.4:
-    resolution: {integrity: sha512-gK5GVzDkJK1SI1zwHf32Mqxf2tSJkNx+eYcNly5+nHvWqXUJYUkWBQtKauoESz3ymezAI++ZwT855x5p5eop+Q==}
+  tsx@4.20.3:
+    resolution: {integrity: sha512-qjbnuR9Tr+FJOMBqJCW5ehvIo/buZq7vH7qD7JziU98h6l3qGy0a/yPFjwO+y0/T7GFpNgNAvEcPPVfyT8rrPQ==}
     engines: {node: '>=18.0.0'}
     hasBin: true
 
@@ -5215,6 +5230,9 @@ packages:
 
   undici-types@6.21.0:
     resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
+
+  undici-types@7.8.0:
+    resolution: {integrity: sha512-9UJ2xGDvQ43tYyVMpuHlsgApydB8ZKfVYTsLDhXkFL/6gfkp+U8xTGdh8pMJv1SpZna0zxG1DwsKZsreLbXBxw==}
 
   unicorn-magic@0.1.0:
     resolution: {integrity: sha512-lRfVq8fE8gz6QMBuDM6a+LO3IAzTi05H6gCVaUpir2E1Rwpo4ZUog45KpNXKC/Mn3Yb9UDuHumeFTo9iV/D9FQ==}
@@ -5515,14 +5533,14 @@ snapshots:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.27.1
 
-  '@battis/eslint-config@2.0.3(@eslint/js@9.28.0)(eslint-config-prettier@10.1.5(eslint@9.28.0(jiti@2.4.2)))(eslint-plugin-html@8.1.3)(eslint-plugin-markdown@5.1.0(eslint@9.28.0(jiti@2.4.2)))(eslint@9.28.0(jiti@2.4.2))(globals@11.12.0)(typescript-eslint@8.33.1(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3))(typescript@5.8.3)':
+  '@battis/eslint-config@2.0.3(@eslint/js@9.28.0)(eslint-config-prettier@10.1.5(eslint@9.28.0(jiti@2.4.2)))(eslint-plugin-html@8.1.3)(eslint-plugin-markdown@5.1.0(eslint@9.28.0(jiti@2.4.2)))(eslint@9.28.0(jiti@2.4.2))(globals@14.0.0)(typescript-eslint@8.33.1(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3))(typescript@5.8.3)':
     dependencies:
       '@eslint/js': 9.28.0
       eslint: 9.28.0(jiti@2.4.2)
       eslint-config-prettier: 10.1.5(eslint@9.28.0(jiti@2.4.2))
       eslint-plugin-html: 8.1.3
       eslint-plugin-markdown: 5.1.0(eslint@9.28.0(jiti@2.4.2))
-      globals: 11.12.0
+      globals: 14.0.0
       typescript: 5.8.3
       typescript-eslint: 8.33.1(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3)
 
@@ -5771,11 +5789,11 @@ snapshots:
 
   '@colors/colors@1.6.0': {}
 
-  '@commitlint/cli@19.8.1(@types/node@22.15.30)(typescript@5.8.3)':
+  '@commitlint/cli@19.8.1(@types/node@22.15.31)(typescript@5.8.3)':
     dependencies:
       '@commitlint/format': 19.8.1
       '@commitlint/lint': 19.8.1
-      '@commitlint/load': 19.8.1(@types/node@22.15.30)(typescript@5.8.3)
+      '@commitlint/load': 19.8.1(@types/node@22.15.31)(typescript@5.8.3)
       '@commitlint/read': 19.8.1
       '@commitlint/types': 19.8.1
       tinyexec: 1.0.1
@@ -5828,7 +5846,7 @@ snapshots:
       '@commitlint/rules': 19.8.1
       '@commitlint/types': 19.8.1
 
-  '@commitlint/load@19.8.1(@types/node@22.15.30)(typescript@5.8.3)':
+  '@commitlint/load@19.8.1(@types/node@22.15.31)(typescript@5.8.3)':
     dependencies:
       '@commitlint/config-validator': 19.8.1
       '@commitlint/execute-rule': 19.8.1
@@ -5836,7 +5854,7 @@ snapshots:
       '@commitlint/types': 19.8.1
       chalk: 5.4.1
       cosmiconfig: 9.0.0(typescript@5.8.3)
-      cosmiconfig-typescript-loader: 6.1.0(@types/node@22.15.30)(cosmiconfig@9.0.0(typescript@5.8.3))(typescript@5.8.3)
+      cosmiconfig-typescript-loader: 6.1.0(@types/node@22.15.31)(cosmiconfig@9.0.0(typescript@5.8.3))(typescript@5.8.3)
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
@@ -6008,7 +6026,7 @@ snapshots:
 
   '@eslint-community/regexpp@4.12.1': {}
 
-  '@eslint/config-array@0.20.0':
+  '@eslint/config-array@0.20.1':
     dependencies:
       '@eslint/object-schema': 2.1.6
       debug: 4.4.1
@@ -6016,9 +6034,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@eslint/config-helpers@0.2.2': {}
+  '@eslint/config-helpers@0.2.3': {}
 
   '@eslint/core@0.14.0':
+    dependencies:
+      '@types/json-schema': 7.0.15
+
+  '@eslint/core@0.15.0':
     dependencies:
       '@types/json-schema': 7.0.15
 
@@ -6026,7 +6048,7 @@ snapshots:
     dependencies:
       ajv: 6.12.6
       debug: 4.4.1
-      espree: 10.3.0
+      espree: 10.4.0
       globals: 14.0.0
       ignore: 5.3.2
       import-fresh: 3.3.1
@@ -6040,9 +6062,9 @@ snapshots:
 
   '@eslint/object-schema@2.1.6': {}
 
-  '@eslint/plugin-kit@0.3.1':
+  '@eslint/plugin-kit@0.3.2':
     dependencies:
-      '@eslint/core': 0.14.0
+      '@eslint/core': 0.15.0
       levn: 0.4.1
 
   '@gwhitney/detect-indent@7.0.1': {}
@@ -6070,15 +6092,25 @@ snapshots:
       chalk: 4.1.2
       figures: 3.2.0
 
-  '@inquirer/checkbox@4.1.8(@types/node@22.15.30)':
+  '@inquirer/checkbox@4.1.8(@types/node@22.15.31)':
     dependencies:
-      '@inquirer/core': 10.1.13(@types/node@22.15.30)
+      '@inquirer/core': 10.1.13(@types/node@22.15.31)
       '@inquirer/figures': 1.0.12
-      '@inquirer/type': 3.0.7(@types/node@22.15.30)
+      '@inquirer/type': 3.0.7(@types/node@22.15.31)
       ansi-escapes: 4.3.2
       yoctocolors-cjs: 2.1.2
     optionalDependencies:
-      '@types/node': 22.15.30
+      '@types/node': 22.15.31
+
+  '@inquirer/checkbox@4.1.8(@types/node@24.0.1)':
+    dependencies:
+      '@inquirer/core': 10.1.13(@types/node@24.0.1)
+      '@inquirer/figures': 1.0.12
+      '@inquirer/type': 3.0.7(@types/node@24.0.1)
+      ansi-escapes: 4.3.2
+      yoctocolors-cjs: 2.1.2
+    optionalDependencies:
+      '@types/node': 24.0.1
 
   '@inquirer/confirm@2.0.17':
     dependencies:
@@ -6086,17 +6118,24 @@ snapshots:
       '@inquirer/type': 1.5.5
       chalk: 4.1.2
 
-  '@inquirer/confirm@5.1.12(@types/node@22.15.30)':
+  '@inquirer/confirm@5.1.12(@types/node@22.15.31)':
     dependencies:
-      '@inquirer/core': 10.1.13(@types/node@22.15.30)
-      '@inquirer/type': 3.0.7(@types/node@22.15.30)
+      '@inquirer/core': 10.1.13(@types/node@22.15.31)
+      '@inquirer/type': 3.0.7(@types/node@22.15.31)
     optionalDependencies:
-      '@types/node': 22.15.30
+      '@types/node': 22.15.31
 
-  '@inquirer/core@10.1.13(@types/node@22.15.30)':
+  '@inquirer/confirm@5.1.12(@types/node@24.0.1)':
+    dependencies:
+      '@inquirer/core': 10.1.13(@types/node@24.0.1)
+      '@inquirer/type': 3.0.7(@types/node@24.0.1)
+    optionalDependencies:
+      '@types/node': 24.0.1
+
+  '@inquirer/core@10.1.13(@types/node@22.15.31)':
     dependencies:
       '@inquirer/figures': 1.0.12
-      '@inquirer/type': 3.0.7(@types/node@22.15.30)
+      '@inquirer/type': 3.0.7(@types/node@22.15.31)
       ansi-escapes: 4.3.2
       cli-width: 4.1.0
       mute-stream: 2.0.0
@@ -6104,7 +6143,20 @@ snapshots:
       wrap-ansi: 6.2.0
       yoctocolors-cjs: 2.1.2
     optionalDependencies:
-      '@types/node': 22.15.30
+      '@types/node': 22.15.31
+
+  '@inquirer/core@10.1.13(@types/node@24.0.1)':
+    dependencies:
+      '@inquirer/figures': 1.0.12
+      '@inquirer/type': 3.0.7(@types/node@24.0.1)
+      ansi-escapes: 4.3.2
+      cli-width: 4.1.0
+      mute-stream: 2.0.0
+      signal-exit: 4.1.0
+      wrap-ansi: 6.2.0
+      yoctocolors-cjs: 2.1.2
+    optionalDependencies:
+      '@types/node': 24.0.1
 
   '@inquirer/core@2.3.1':
     dependencies:
@@ -6147,13 +6199,21 @@ snapshots:
       chalk: 4.1.2
       external-editor: 3.1.0
 
-  '@inquirer/editor@4.2.13(@types/node@22.15.30)':
+  '@inquirer/editor@4.2.13(@types/node@22.15.31)':
     dependencies:
-      '@inquirer/core': 10.1.13(@types/node@22.15.30)
-      '@inquirer/type': 3.0.7(@types/node@22.15.30)
+      '@inquirer/core': 10.1.13(@types/node@22.15.31)
+      '@inquirer/type': 3.0.7(@types/node@22.15.31)
       external-editor: 3.1.0
     optionalDependencies:
-      '@types/node': 22.15.30
+      '@types/node': 22.15.31
+
+  '@inquirer/editor@4.2.13(@types/node@24.0.1)':
+    dependencies:
+      '@inquirer/core': 10.1.13(@types/node@24.0.1)
+      '@inquirer/type': 3.0.7(@types/node@24.0.1)
+      external-editor: 3.1.0
+    optionalDependencies:
+      '@types/node': 24.0.1
 
   '@inquirer/expand@1.1.16':
     dependencies:
@@ -6162,13 +6222,21 @@ snapshots:
       chalk: 4.1.2
       figures: 3.2.0
 
-  '@inquirer/expand@4.0.15(@types/node@22.15.30)':
+  '@inquirer/expand@4.0.15(@types/node@22.15.31)':
     dependencies:
-      '@inquirer/core': 10.1.13(@types/node@22.15.30)
-      '@inquirer/type': 3.0.7(@types/node@22.15.30)
+      '@inquirer/core': 10.1.13(@types/node@22.15.31)
+      '@inquirer/type': 3.0.7(@types/node@22.15.31)
       yoctocolors-cjs: 2.1.2
     optionalDependencies:
-      '@types/node': 22.15.30
+      '@types/node': 22.15.31
+
+  '@inquirer/expand@4.0.15(@types/node@24.0.1)':
+    dependencies:
+      '@inquirer/core': 10.1.13(@types/node@24.0.1)
+      '@inquirer/type': 3.0.7(@types/node@24.0.1)
+      yoctocolors-cjs: 2.1.2
+    optionalDependencies:
+      '@types/node': 24.0.1
 
   '@inquirer/figures@1.0.12': {}
 
@@ -6178,19 +6246,33 @@ snapshots:
       '@inquirer/type': 1.5.5
       chalk: 4.1.2
 
-  '@inquirer/input@4.1.12(@types/node@22.15.30)':
+  '@inquirer/input@4.1.12(@types/node@22.15.31)':
     dependencies:
-      '@inquirer/core': 10.1.13(@types/node@22.15.30)
-      '@inquirer/type': 3.0.7(@types/node@22.15.30)
+      '@inquirer/core': 10.1.13(@types/node@22.15.31)
+      '@inquirer/type': 3.0.7(@types/node@22.15.31)
     optionalDependencies:
-      '@types/node': 22.15.30
+      '@types/node': 22.15.31
 
-  '@inquirer/number@3.0.15(@types/node@22.15.30)':
+  '@inquirer/input@4.1.12(@types/node@24.0.1)':
     dependencies:
-      '@inquirer/core': 10.1.13(@types/node@22.15.30)
-      '@inquirer/type': 3.0.7(@types/node@22.15.30)
+      '@inquirer/core': 10.1.13(@types/node@24.0.1)
+      '@inquirer/type': 3.0.7(@types/node@24.0.1)
     optionalDependencies:
-      '@types/node': 22.15.30
+      '@types/node': 24.0.1
+
+  '@inquirer/number@3.0.15(@types/node@22.15.31)':
+    dependencies:
+      '@inquirer/core': 10.1.13(@types/node@22.15.31)
+      '@inquirer/type': 3.0.7(@types/node@22.15.31)
+    optionalDependencies:
+      '@types/node': 22.15.31
+
+  '@inquirer/number@3.0.15(@types/node@24.0.1)':
+    dependencies:
+      '@inquirer/core': 10.1.13(@types/node@24.0.1)
+      '@inquirer/type': 3.0.7(@types/node@24.0.1)
+    optionalDependencies:
+      '@types/node': 24.0.1
 
   '@inquirer/password@1.1.16':
     dependencies:
@@ -6199,13 +6281,21 @@ snapshots:
       ansi-escapes: 4.3.2
       chalk: 4.1.2
 
-  '@inquirer/password@4.0.15(@types/node@22.15.30)':
+  '@inquirer/password@4.0.15(@types/node@22.15.31)':
     dependencies:
-      '@inquirer/core': 10.1.13(@types/node@22.15.30)
-      '@inquirer/type': 3.0.7(@types/node@22.15.30)
+      '@inquirer/core': 10.1.13(@types/node@22.15.31)
+      '@inquirer/type': 3.0.7(@types/node@22.15.31)
       ansi-escapes: 4.3.2
     optionalDependencies:
-      '@types/node': 22.15.30
+      '@types/node': 22.15.31
+
+  '@inquirer/password@4.0.15(@types/node@24.0.1)':
+    dependencies:
+      '@inquirer/core': 10.1.13(@types/node@24.0.1)
+      '@inquirer/type': 3.0.7(@types/node@24.0.1)
+      ansi-escapes: 4.3.2
+    optionalDependencies:
+      '@types/node': 24.0.1
 
   '@inquirer/prompts@2.3.1':
     dependencies:
@@ -6219,20 +6309,35 @@ snapshots:
       '@inquirer/rawlist': 1.2.16
       '@inquirer/select': 1.3.3
 
-  '@inquirer/prompts@7.5.3(@types/node@22.15.30)':
+  '@inquirer/prompts@7.5.3(@types/node@22.15.31)':
     dependencies:
-      '@inquirer/checkbox': 4.1.8(@types/node@22.15.30)
-      '@inquirer/confirm': 5.1.12(@types/node@22.15.30)
-      '@inquirer/editor': 4.2.13(@types/node@22.15.30)
-      '@inquirer/expand': 4.0.15(@types/node@22.15.30)
-      '@inquirer/input': 4.1.12(@types/node@22.15.30)
-      '@inquirer/number': 3.0.15(@types/node@22.15.30)
-      '@inquirer/password': 4.0.15(@types/node@22.15.30)
-      '@inquirer/rawlist': 4.1.3(@types/node@22.15.30)
-      '@inquirer/search': 3.0.15(@types/node@22.15.30)
-      '@inquirer/select': 4.2.3(@types/node@22.15.30)
+      '@inquirer/checkbox': 4.1.8(@types/node@22.15.31)
+      '@inquirer/confirm': 5.1.12(@types/node@22.15.31)
+      '@inquirer/editor': 4.2.13(@types/node@22.15.31)
+      '@inquirer/expand': 4.0.15(@types/node@22.15.31)
+      '@inquirer/input': 4.1.12(@types/node@22.15.31)
+      '@inquirer/number': 3.0.15(@types/node@22.15.31)
+      '@inquirer/password': 4.0.15(@types/node@22.15.31)
+      '@inquirer/rawlist': 4.1.3(@types/node@22.15.31)
+      '@inquirer/search': 3.0.15(@types/node@22.15.31)
+      '@inquirer/select': 4.2.3(@types/node@22.15.31)
     optionalDependencies:
-      '@types/node': 22.15.30
+      '@types/node': 22.15.31
+
+  '@inquirer/prompts@7.5.3(@types/node@24.0.1)':
+    dependencies:
+      '@inquirer/checkbox': 4.1.8(@types/node@24.0.1)
+      '@inquirer/confirm': 5.1.12(@types/node@24.0.1)
+      '@inquirer/editor': 4.2.13(@types/node@24.0.1)
+      '@inquirer/expand': 4.0.15(@types/node@24.0.1)
+      '@inquirer/input': 4.1.12(@types/node@24.0.1)
+      '@inquirer/number': 3.0.15(@types/node@24.0.1)
+      '@inquirer/password': 4.0.15(@types/node@24.0.1)
+      '@inquirer/rawlist': 4.1.3(@types/node@24.0.1)
+      '@inquirer/search': 3.0.15(@types/node@24.0.1)
+      '@inquirer/select': 4.2.3(@types/node@24.0.1)
+    optionalDependencies:
+      '@types/node': 24.0.1
 
   '@inquirer/rawlist@1.2.16':
     dependencies:
@@ -6240,22 +6345,39 @@ snapshots:
       '@inquirer/type': 1.5.5
       chalk: 4.1.2
 
-  '@inquirer/rawlist@4.1.3(@types/node@22.15.30)':
+  '@inquirer/rawlist@4.1.3(@types/node@22.15.31)':
     dependencies:
-      '@inquirer/core': 10.1.13(@types/node@22.15.30)
-      '@inquirer/type': 3.0.7(@types/node@22.15.30)
+      '@inquirer/core': 10.1.13(@types/node@22.15.31)
+      '@inquirer/type': 3.0.7(@types/node@22.15.31)
       yoctocolors-cjs: 2.1.2
     optionalDependencies:
-      '@types/node': 22.15.30
+      '@types/node': 22.15.31
 
-  '@inquirer/search@3.0.15(@types/node@22.15.30)':
+  '@inquirer/rawlist@4.1.3(@types/node@24.0.1)':
     dependencies:
-      '@inquirer/core': 10.1.13(@types/node@22.15.30)
-      '@inquirer/figures': 1.0.12
-      '@inquirer/type': 3.0.7(@types/node@22.15.30)
+      '@inquirer/core': 10.1.13(@types/node@24.0.1)
+      '@inquirer/type': 3.0.7(@types/node@24.0.1)
       yoctocolors-cjs: 2.1.2
     optionalDependencies:
-      '@types/node': 22.15.30
+      '@types/node': 24.0.1
+
+  '@inquirer/search@3.0.15(@types/node@22.15.31)':
+    dependencies:
+      '@inquirer/core': 10.1.13(@types/node@22.15.31)
+      '@inquirer/figures': 1.0.12
+      '@inquirer/type': 3.0.7(@types/node@22.15.31)
+      yoctocolors-cjs: 2.1.2
+    optionalDependencies:
+      '@types/node': 22.15.31
+
+  '@inquirer/search@3.0.15(@types/node@24.0.1)':
+    dependencies:
+      '@inquirer/core': 10.1.13(@types/node@24.0.1)
+      '@inquirer/figures': 1.0.12
+      '@inquirer/type': 3.0.7(@types/node@24.0.1)
+      yoctocolors-cjs: 2.1.2
+    optionalDependencies:
+      '@types/node': 24.0.1
 
   '@inquirer/select@1.3.3':
     dependencies:
@@ -6265,23 +6387,43 @@ snapshots:
       chalk: 4.1.2
       figures: 3.2.0
 
-  '@inquirer/select@4.2.3(@types/node@22.15.30)':
+  '@inquirer/select@4.2.3(@types/node@22.15.31)':
     dependencies:
-      '@inquirer/core': 10.1.13(@types/node@22.15.30)
+      '@inquirer/core': 10.1.13(@types/node@22.15.31)
       '@inquirer/figures': 1.0.12
-      '@inquirer/type': 3.0.7(@types/node@22.15.30)
+      '@inquirer/type': 3.0.7(@types/node@22.15.31)
       ansi-escapes: 4.3.2
       yoctocolors-cjs: 2.1.2
     optionalDependencies:
-      '@types/node': 22.15.30
+      '@types/node': 22.15.31
+
+  '@inquirer/select@4.2.3(@types/node@24.0.1)':
+    dependencies:
+      '@inquirer/core': 10.1.13(@types/node@24.0.1)
+      '@inquirer/figures': 1.0.12
+      '@inquirer/type': 3.0.7(@types/node@24.0.1)
+      ansi-escapes: 4.3.2
+      yoctocolors-cjs: 2.1.2
+    optionalDependencies:
+      '@types/node': 24.0.1
 
   '@inquirer/type@1.5.5':
     dependencies:
       mute-stream: 1.0.0
 
-  '@inquirer/type@3.0.7(@types/node@22.15.30)':
+  '@inquirer/type@3.0.7(@types/node@22.15.31)':
     optionalDependencies:
-      '@types/node': 22.15.30
+      '@types/node': 22.15.31
+
+  '@inquirer/type@3.0.7(@types/node@24.0.1)':
+    optionalDependencies:
+      '@types/node': 24.0.1
+
+  '@isaacs/balanced-match@4.0.1': {}
+
+  '@isaacs/brace-expansion@5.0.0':
+    dependencies:
+      '@isaacs/balanced-match': 4.0.1
 
   '@isaacs/cliui@8.0.2':
     dependencies:
@@ -6773,7 +6915,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@tsconfig/node20@20.1.5': {}
+  '@tsconfig/node20@20.1.6': {}
 
   '@tufjs/canonical-json@2.0.0': {}
 
@@ -6788,11 +6930,11 @@ snapshots:
 
   '@types/cli-progress@3.11.6':
     dependencies:
-      '@types/node': 22.15.30
+      '@types/node': 24.0.1
 
   '@types/conventional-commits-parser@5.0.1':
     dependencies:
-      '@types/node': 22.15.30
+      '@types/node': 22.15.31
 
   '@types/debug@4.1.12':
     dependencies:
@@ -6803,7 +6945,7 @@ snapshots:
   '@types/glob@7.2.0':
     dependencies:
       '@types/minimatch': 5.1.2
-      '@types/node': 22.15.30
+      '@types/node': 22.15.31
 
   '@types/is-valid-path@0.1.2': {}
 
@@ -6827,11 +6969,11 @@ snapshots:
 
   '@types/mute-stream@0.0.1':
     dependencies:
-      '@types/node': 22.15.30
+      '@types/node': 22.15.31
 
   '@types/mute-stream@0.0.4':
     dependencies:
-      '@types/node': 22.15.30
+      '@types/node': 22.15.31
 
   '@types/node@12.20.55': {}
 
@@ -6839,16 +6981,20 @@ snapshots:
     dependencies:
       undici-types: 6.21.0
 
-  '@types/node@22.15.30':
+  '@types/node@22.15.31':
     dependencies:
       undici-types: 6.21.0
+
+  '@types/node@24.0.1':
+    dependencies:
+      undici-types: 7.8.0
 
   '@types/normalize-package-data@2.4.4': {}
 
   '@types/shelljs@0.8.16':
     dependencies:
       '@types/glob': 7.2.0
-      '@types/node': 22.15.30
+      '@types/node': 22.15.31
 
   '@types/triple-beam@1.3.5': {}
 
@@ -6948,7 +7094,7 @@ snapshots:
   '@typescript-eslint/visitor-keys@8.33.1':
     dependencies:
       '@typescript-eslint/types': 8.33.1
-      eslint-visitor-keys: 4.2.0
+      eslint-visitor-keys: 4.2.1
 
   '@xml-tools/parser@1.0.11':
     dependencies:
@@ -6972,11 +7118,11 @@ snapshots:
 
   abbrev@2.0.0: {}
 
-  acorn-jsx@5.3.2(acorn@8.14.1):
+  acorn-jsx@5.3.2(acorn@8.15.0):
     dependencies:
-      acorn: 8.14.1
+      acorn: 8.15.0
 
-  acorn@8.14.1: {}
+  acorn@8.15.0: {}
 
   add-stream@1.0.0: {}
 
@@ -7080,7 +7226,7 @@ snapshots:
     dependencies:
       possible-typed-array-names: 1.1.0
 
-  axios@1.9.0:
+  axios@1.10.0:
     dependencies:
       follow-redirects: 1.15.9
       form-data: 4.0.3
@@ -7117,12 +7263,12 @@ snapshots:
 
   bluebird@3.7.2: {}
 
-  brace-expansion@1.1.11:
+  brace-expansion@1.1.12:
     dependencies:
       balanced-match: 1.0.2
       concat-map: 0.0.1
 
-  brace-expansion@2.0.1:
+  brace-expansion@2.0.2:
     dependencies:
       balanced-match: 1.0.2
 
@@ -7485,9 +7631,9 @@ snapshots:
 
   core-util-is@1.0.3: {}
 
-  cosmiconfig-typescript-loader@6.1.0(@types/node@22.15.30)(cosmiconfig@9.0.0(typescript@5.8.3))(typescript@5.8.3):
+  cosmiconfig-typescript-loader@6.1.0(@types/node@22.15.31)(cosmiconfig@9.0.0(typescript@5.8.3))(typescript@5.8.3):
     dependencies:
-      '@types/node': 22.15.30
+      '@types/node': 22.15.31
       cosmiconfig: 9.0.0(typescript@5.8.3)
       jiti: 2.4.2
       typescript: 5.8.3
@@ -7521,7 +7667,7 @@ snapshots:
 
   cssesc@3.0.0: {}
 
-  cssstyle@4.3.1:
+  cssstyle@4.4.0:
     dependencies:
       '@asamuzakjp/css-color': 3.2.0
       rrweb-cssom: 0.8.0
@@ -7666,7 +7812,7 @@ snapshots:
 
   dotenv-expand@11.0.7:
     dependencies:
-      dotenv: 16.5.0
+      dotenv: 16.4.7
 
   dotenv@16.4.7: {}
 
@@ -7721,7 +7867,7 @@ snapshots:
 
   entities@4.5.0: {}
 
-  entities@6.0.0: {}
+  entities@6.0.1: {}
 
   env-paths@2.2.1: {}
 
@@ -7860,25 +8006,25 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-scope@8.3.0:
+  eslint-scope@8.4.0:
     dependencies:
       esrecurse: 4.3.0
       estraverse: 5.3.0
 
   eslint-visitor-keys@3.4.3: {}
 
-  eslint-visitor-keys@4.2.0: {}
+  eslint-visitor-keys@4.2.1: {}
 
   eslint@9.28.0(jiti@2.4.2):
     dependencies:
       '@eslint-community/eslint-utils': 4.7.0(eslint@9.28.0(jiti@2.4.2))
       '@eslint-community/regexpp': 4.12.1
-      '@eslint/config-array': 0.20.0
-      '@eslint/config-helpers': 0.2.2
+      '@eslint/config-array': 0.20.1
+      '@eslint/config-helpers': 0.2.3
       '@eslint/core': 0.14.0
       '@eslint/eslintrc': 3.3.1
       '@eslint/js': 9.28.0
-      '@eslint/plugin-kit': 0.3.1
+      '@eslint/plugin-kit': 0.3.2
       '@humanfs/node': 0.16.6
       '@humanwhocodes/module-importer': 1.0.1
       '@humanwhocodes/retry': 0.4.3
@@ -7889,9 +8035,9 @@ snapshots:
       cross-spawn: 7.0.6
       debug: 4.4.1
       escape-string-regexp: 4.0.0
-      eslint-scope: 8.3.0
-      eslint-visitor-keys: 4.2.0
-      espree: 10.3.0
+      eslint-scope: 8.4.0
+      eslint-visitor-keys: 4.2.1
+      espree: 10.4.0
       esquery: 1.6.0
       esutils: 2.0.3
       fast-deep-equal: 3.1.3
@@ -7911,11 +8057,11 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  espree@10.3.0:
+  espree@10.4.0:
     dependencies:
-      acorn: 8.14.1
-      acorn-jsx: 5.3.2(acorn@8.14.1)
-      eslint-visitor-keys: 4.2.0
+      acorn: 8.15.0
+      acorn-jsx: 5.3.2(acorn@8.15.0)
+      eslint-visitor-keys: 4.2.1
 
   esprima@4.0.1: {}
 
@@ -7983,7 +8129,7 @@ snapshots:
     dependencies:
       reusify: 1.1.0
 
-  fdir@6.4.5(picomatch@4.0.2):
+  fdir@6.4.6(picomatch@4.0.2):
     optionalDependencies:
       picomatch: 4.0.2
 
@@ -8259,11 +8405,11 @@ snapshots:
       package-json-from-dist: 1.0.1
       path-scurry: 1.11.1
 
-  glob@11.0.2:
+  glob@11.0.3:
     dependencies:
       foreground-child: 3.3.1
       jackspeak: 4.1.1
-      minimatch: 10.0.1
+      minimatch: 10.0.3
       minipass: 7.1.2
       package-json-from-dist: 1.0.1
       path-scurry: 2.0.0
@@ -8397,7 +8543,7 @@ snapshots:
       domelementtype: 2.3.0
       domhandler: 5.0.3
       domutils: 3.2.2
-      entities: 6.0.0
+      entities: 6.0.1
 
   http-cache-semantics@4.2.0: {}
 
@@ -8810,7 +8956,7 @@ snapshots:
 
   jsdom@25.0.1:
     dependencies:
-      cssstyle: 4.3.1
+      cssstyle: 4.4.0
       data-urls: 5.0.0
       decimal.js: 10.5.0
       form-data: 4.0.3
@@ -9366,33 +9512,33 @@ snapshots:
 
   min-indent@1.0.1: {}
 
-  minimatch@10.0.1:
+  minimatch@10.0.3:
     dependencies:
-      brace-expansion: 2.0.1
+      '@isaacs/brace-expansion': 5.0.0
 
   minimatch@3.0.5:
     dependencies:
-      brace-expansion: 1.1.11
+      brace-expansion: 1.1.12
 
   minimatch@3.1.2:
     dependencies:
-      brace-expansion: 1.1.11
+      brace-expansion: 1.1.12
 
   minimatch@5.1.6:
     dependencies:
-      brace-expansion: 2.0.1
+      brace-expansion: 2.0.2
 
   minimatch@8.0.4:
     dependencies:
-      brace-expansion: 2.0.1
+      brace-expansion: 2.0.2
 
   minimatch@9.0.3:
     dependencies:
-      brace-expansion: 2.0.1
+      brace-expansion: 2.0.2
 
   minimatch@9.0.5:
     dependencies:
-      brace-expansion: 2.0.1
+      brace-expansion: 2.0.2
 
   minimist-options@4.1.0:
     dependencies:
@@ -9449,12 +9595,12 @@ snapshots:
 
   modify-values@1.0.1: {}
 
-  monorepo-package-paths@0.3.10(@types/node@22.15.30)(prettier@3.5.3):
+  monorepo-package-paths@0.3.10(@types/node@22.15.31)(prettier@3.5.3):
     dependencies:
       '@battis/import-package-json': 0.1.7
       '@battis/qui-cli': 2.1.3
-      '@inquirer/input': 4.1.12(@types/node@22.15.30)
-      glob: 11.0.2
+      '@inquirer/input': 4.1.12(@types/node@22.15.31)
+      glob: 11.0.3
       ora: 8.2.0
       package-json-type: 1.0.3
       yaml: 2.8.0
@@ -9622,7 +9768,7 @@ snapshots:
       '@yarnpkg/lockfile': 1.1.0
       '@yarnpkg/parsers': 3.0.2
       '@zkochan/js-yaml': 0.0.7
-      axios: 1.9.0
+      axios: 1.10.0
       chalk: 4.1.0
       cli-cursor: 3.1.0
       cli-spinners: 2.6.1
@@ -9904,7 +10050,7 @@ snapshots:
 
   parse5@7.3.0:
     dependencies:
-      entities: 6.0.0
+      entities: 6.0.1
 
   path-exists@3.0.0: {}
 
@@ -9993,7 +10139,7 @@ snapshots:
       jsox: 1.2.123
       node-sql-parser: 4.18.0
       prettier: 3.5.3
-      sql-formatter: 15.6.3
+      sql-formatter: 15.6.4
       tslib: 2.8.1
 
   prettier@2.8.8: {}
@@ -10353,11 +10499,11 @@ snapshots:
     dependencies:
       agent-base: 7.1.3
       debug: 4.4.1
-      socks: 2.8.4
+      socks: 2.8.5
     transitivePeerDependencies:
       - supports-color
 
-  socks@2.8.4:
+  socks@2.8.5:
     dependencies:
       ip-address: 9.0.5
       smart-buffer: 4.2.0
@@ -10417,7 +10563,7 @@ snapshots:
 
   sprintf-js@1.1.3: {}
 
-  sql-formatter@15.6.3:
+  sql-formatter@15.6.4:
     dependencies:
       argparse: 2.0.1
       nearley: 2.20.1
@@ -10584,7 +10730,7 @@ snapshots:
 
   tinyglobby@0.2.14:
     dependencies:
-      fdir: 6.4.5(picomatch@4.0.2)
+      fdir: 6.4.6(picomatch@4.0.2)
       picomatch: 4.0.2
 
   tldts-core@6.1.86: {}
@@ -10648,7 +10794,7 @@ snapshots:
 
   tslib@2.8.1: {}
 
-  tsx@4.19.4:
+  tsx@4.20.3:
     dependencies:
       esbuild: 0.25.5
       get-tsconfig: 4.10.1
@@ -10739,6 +10885,8 @@ snapshots:
   unc-path-regex@0.1.2: {}
 
   undici-types@6.21.0: {}
+
+  undici-types@7.8.0: {}
 
   unicorn-magic@0.1.0: {}
 
