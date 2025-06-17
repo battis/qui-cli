@@ -15,7 +15,7 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "bin": {
-    "myCommand": "./dist/bin/index.js"
+    "myCommand": "./dist/index.js"
   },
   "scripts": {
     "clean": "del ./dist",
@@ -24,20 +24,15 @@
     "build:compile": "tsc"
   },
   "dependencies": {
-    "@battis/qui-cli.core": "workspace:*"
+    "@battis/qui-cli.colors": "workspace:*",
+    "@battis/qui-cli.core": "workspace:*",
+    "@battis/qui-cli.log": "workspace:*",
+    "@battis/qui-cli.plugin": "workspace:*"
   },
   "devDependencies": {
-    "@battis/qui-cli.colors": "workspace:*",
-    "@battis/qui-cli.log": "workspace:*",
-    "@battis/qui-cli.plugin": "workspace:*",
     "@tsconfig/node20": "^20.1.6",
     "del-cli": "^6.0.0",
     "npm-run-all": "^4.1.5",
     "typescript": "^5.8.3"
-  },
-  "peerDependencies": {
-    "@battis/qui-cli.colors": "^2.0",
-    "@battis/qui-cli.log": "^2.1",
-    "@battis/qui-cli.plugin": "^2.0"
   }
 }

@@ -1,5 +1,6 @@
+import { Core } from '@battis/qui-cli.core';
 import { register } from '@battis/qui-cli.plugin';
-import * as CommandPlugin from './CommandPlugin.js';
+import * as Command from './Command.js';
 
-await register(CommandPlugin);
-export { CommandPlugin };
+await register(Command);
+await Core.run();

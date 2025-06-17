@@ -16,7 +16,7 @@ export function configure(config: Configuration = {}) {
   optionF = Plugin.hydrate(config['option-f'], optionF);
 }
 
-export function options() {
+export function options(): Plugin.Options {
   return {
     opt: {
       'option-f': {

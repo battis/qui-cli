@@ -29,7 +29,7 @@ export function init({ values }: Plugin.Arguments<ReturnType<typeof options>>) {
   foo = Plugin.hydrate(values.foo, foo);
 }
 
-export function myCommand() {
+export function run() {
   Log.info(
     `The value of ${Colors.value('foo')} is ${Colors.quotedValue(`"${foo}"`)}`
   );
