@@ -28,7 +28,7 @@ export function configure(config: Configuration) {
   silent = Plugin.hydrate(config.silent, silent);
 }
 
-export function options() {
+export function options(): Plugin.Options {
   return {
     flag: {
       commands: {

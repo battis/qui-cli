@@ -107,7 +107,7 @@ export async function init(
   }
   apply(await options(externalOptions));
 
-  const args: Plugin.Arguments<Options> = jack().parse();
+  const args = jack().parse() as Plugin.Arguments<Options>;
   const {
     positionals,
     values: { help }

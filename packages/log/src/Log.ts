@@ -106,7 +106,7 @@ export function configure(config: Configuration) {
   }
 }
 
-export function options() {
+export function options(): Plugin.Options {
   const levelsList = [...Object.keys(levels.levels), OFF]
     .map((level) => Colors.quotedValue(`"${level}"`))
     .join(', ')
