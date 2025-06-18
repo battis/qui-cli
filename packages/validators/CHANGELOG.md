@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.0.2](https://github.com/battis/qui-cli/compare/validators/2.0.1...validators/2.0.2) (2025-06-18)
+
 ## [2.0.1](https://github.com/battis/qui-cli/compare/validators/2.0.0...validators/2.0.1) (2025-02-23)
 
 
