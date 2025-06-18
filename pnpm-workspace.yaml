@@ -1,5 +1,7 @@
 packages:
   - 'packages/*'
   - 'examples/*'
+  - '!examples/dev-plugin'
+  - 'examples/dev-plugin/*'
   - '!examples/dev-sequenced-commands'
   - 'examples/dev-sequenced-commands/*'

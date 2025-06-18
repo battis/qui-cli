@@ -41,6 +41,14 @@ export function init({ values }: Plugin.Arguments<ReturnType<typeof options>>) {
   baz = Plugin.hydrate(values.baz, baz);
 }
 
-export function myAction() {
+export function run() {
   console.log(`${foo} ${bar} ${baz ? 'baz' : 'not-baz'}`);
+}
+
+export function getFoo() {
+  return foo;
+}
+
+export function isBaz() {
+  return baz;
 }

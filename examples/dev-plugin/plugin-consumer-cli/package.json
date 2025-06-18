@@ -1,5 +1,5 @@
 {
-  "name": "@examples/dev-plugin",
+  "name": "@examples/dev-plugin.consumer-cli",
   "version": "0.0.0",
   "homepage": "https://github.com/battis/qui-cli/tree/main/examples/dev-plugin#readme",
   "repository": {
@@ -20,14 +20,14 @@
     "build:clean": "run-s clean",
     "build:compile": "tsc"
   },
+  "dependencies": {
+    "@battis/qui-cli": "workspace:*",
+    "@examples/dev-plugin.provider": "workspace:*"
+  },
   "devDependencies": {
-    "@battis/qui-cli.plugin": "workspace:*",
     "@tsconfig/node20": "^20.1.6",
     "del-cli": "^6.0.0",
     "npm-run-all": "^4.1.5",
     "typescript": "^5.8.3"
-  },
-  "peerDependencies": {
-    "@battis/qui-cli.plugin": "2.x"
   }
 }
