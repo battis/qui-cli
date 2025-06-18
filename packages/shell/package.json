@@ -32,7 +32,7 @@
     "@battis/qui-cli.log": "workspace:*",
     "@battis/qui-cli.plugin": "workspace:*",
     "@tsconfig/node20": "^20.1.6",
-    "@types/node": "^22.15.31",
+    "@types/node": "^22.15.32",
     "@types/shelljs": "^0.8.16",
     "commit-and-tag-version": "^12.5.1",
     "del-cli": "^6.0.0",

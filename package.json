@@ -17,21 +17,18 @@
     "release:build": "run-s build",
     "release:publish": "pnpm publish -r --access public --filter './packages/**' --otp $(op item get npm --otp)"
   },
-  "prettier": "@battis/prettier-config",
-  "eslintConfig": {
-    "extends": "@battis/eslint-config"
-  },
   "devDependencies": {
-    "@battis/eslint-config": "^2.0.3",
-    "@battis/prettier-config": "^1.6.0",
+    "@battis/eslint-config": "^2.0.4",
+    "@battis/prettier-config": "^1.6.2",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "@commitlint/config-pnpm-scopes": "^19.8.1",
     "@tsconfig/node20": "^20.1.6",
-    "@types/node": "^22.15.31",
+    "@types/node": "^22.15.32",
     "lerna": "^8.2.2",
     "monorepo-package-paths": "^0.3.10",
-    "npm-run-all": "^4.1.5"
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.5.3"
   },
   "packageManager": "pnpm@9.12.3+sha512.cce0f9de9c5a7c95bef944169cc5dfe8741abfb145078c0d508b868056848a87c81e626246cb60967cbd7fd29a6c062ef73ff840d96b3c86c40ac92cf4a813ee",
   "target": "node"

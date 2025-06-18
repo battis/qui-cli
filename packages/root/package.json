@@ -23,10 +23,6 @@
     "build:compile": "tsc",
     "release": "commit-and-tag-version"
   },
-  "prettier": "@battis/prettier-config",
-  "eslintConfig": {
-    "extends": "@battis/eslint-config"
-  },
   "dependencies": {
     "app-root-path": "^3.1.0"
   },
@@ -34,7 +30,7 @@
     "@battis/qui-cli.plugin": "workspace:*",
     "@battis/typescript-tricks": "^0.7.4",
     "@tsconfig/node20": "^20.1.6",
-    "@types/node": "^22.15.31",
+    "@types/node": "^22.15.32",
     "commit-and-tag-version": "^12.5.1",
     "del-cli": "^6.0.0",
     "npm-run-all": "^4.1.5",

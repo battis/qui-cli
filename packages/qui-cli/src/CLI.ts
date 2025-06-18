@@ -21,3 +21,4 @@ export type Options = Core.Options;
 export const configure = Core.configure;
 export const options = Core.options;
 export const init = Core.init;
+export const run = Core.run
