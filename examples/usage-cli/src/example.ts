@@ -1,9 +1,9 @@
-import cli from '@battis/qui-cli';
+import CLI from '@battis/qui-cli';
 import { input } from '@inquirer/prompts';
 import path from 'node:path';
 
 // configuration before command-line user options are processed
-await cli.configure({
+await CLI.configure({
   core: {
     allowPositionals: true
   },
@@ -13,7 +13,7 @@ await cli.configure({
 });
 
 // process command-line user options
-const args = await cli.init({
+const args = await CLI.init({
   opt: {
     opt0: {},
     opt1: {}
@@ -23,44 +23,47 @@ const args = await cli.init({
     flag1: { default: false }
   }
 });
-cli.log.info({ args });
+CLI.log.info({ args });
+
+// optionally run all loaded plugins (may not all have runnable methods)
+await CLI.run()
 
 // @battis/qui-cli.env example
-cli.env.set({
+CLI.env.set({
   key: 'RUNS',
-  value: `${parseInt(cli.env.get({ key: 'RUNS' }) || '0') + 1}`
+  value: `${parseInt(CLI.env.get({ key: 'RUNS' }) || '0') + 1}`
 });
-cli.log.info(`${process.env.RUNS} runs (.env updated)`);
+CLI.log.info(`${process.env.RUNS} runs (.env updated)`);
 
 // @battis/qui-cli.log and @battis/qui-cli.colors examples
-cli.log.error(
-  cli.colors.error(
-    `A fake error with ${cli.colors.value('a value')} and a ${cli.colors.quotedValue(`"quoted value"`)}`
+CLI.log.error(
+  CLI.colors.error(
+    `A fake error with ${CLI.colors.value('a value')} and a ${CLI.colors.quotedValue(`"quoted value"`)}`
   )
 );
 
 // @battis/qui-cli.root example
-cli.log.info(cli.colors.url(cli.root.path()));
+CLI.log.info(CLI.colors.url(CLI.root.path()));
 
 // @battis/qui-cli.shell example
-cli.shell.exec('echo "hello world"');
+CLI.shell.exec('echo "hello world"');
 
 // @battis/qui-cli.validators example
 const text = await input({
   message: 'Enter a long-ish word',
   default: 'quetzlcoatl',
-  validate: cli.validators.combine(
-    cli.validators.minLength(10),
-    cli.validators.maxLength(100)
+  validate: CLI.validators.combine(
+    CLI.validators.minLength(10),
+    CLI.validators.maxLength(100)
   )
 });
 
 // @battis/qui-cli.progress example
-cli.progress.start({ value: 0, max: text.length });
+CLI.progress.start({ value: 0, max: text.length });
 for (let i = 0; i < text.length; i++) {
   setTimeout(() => {
-    cli.progress.caption(text.substring(0, i + 1));
-    cli.progress.increment();
+    CLI.progress.caption(text.substring(0, i + 1));
+    CLI.progress.increment();
   }, i * 100);
 }
-setTimeout(cli.progress.stop, (text.length + 1) * 100);
+setTimeout(CLI.progress.stop, (text.length + 1) * 100);
