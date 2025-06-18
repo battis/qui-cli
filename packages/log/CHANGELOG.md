@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.1.1](https://github.com/battis/qui-cli/compare/log/2.1.0...log/2.1.1) (2025-06-18)
+
+
+### Bug Fixes
+
+* clean up typing of arguments ([64d8807](https://github.com/battis/qui-cli/commit/64d88075bdd5653f8ab84ab4e3f2805ab62748a2))
+
 ## [2.1.0](https://github.com/battis/qui-cli/compare/log/2.0.1...log/2.1.0) (2025-03-07)
 
 
