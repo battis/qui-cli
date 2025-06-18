@@ -1,11 +1,11 @@
 {
   "name": "@examples/dev-plugin.provider",
   "version": "0.0.0",
-  "homepage": "https://github.com/battis/qui-cli/tree/main/examples/dev-plugin#readme",
+  "homepage": "https://github.com/battis/qui-cli/tree/main/examples/dev-plugin/plugin-provider#readme",
   "repository": {
     "type": "git",
     "url": "https://github.com/battis/qui-cli.git",
-    "directory": "examples/dev-plugin"
+    "directory": "examples/dev-plugin/plugin-provider"
   },
   "author": {
     "name": "Seth Battis",
