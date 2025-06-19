@@ -1,3 +1,4 @@
+import { Log } from '@battis/qui-cli.log';
 import * as Plugin from '@battis/qui-cli.plugin';
 
 export type Configuration = Plugin.Configuration & {
@@ -42,7 +43,7 @@ export function init({ values }: Plugin.Arguments<ReturnType<typeof options>>) {
 }
 
 export function run() {
-  console.log(`${foo} ${bar} ${baz ? 'baz' : 'not-baz'}`);
+  Log.info(`${foo} ${bar} ${baz ? 'baz' : 'not-baz'}`);
 }
 
 export function getFoo() {
