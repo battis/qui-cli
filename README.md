@@ -17,4 +17,4 @@ Alternatively, individual packages can be selected and used in a more parsimonio
 
 If using the modular approach, plugin definitions are managed by [@battis/qui-cli.plugin](./packages/plugin/) and core functionality resides in [@battis/qui-cli.core](./packages/core/)
 
-[Examples of usage and development approaches are available.](./examples/)
+[Examples of usage and development approaches are available.](./examples#readme)
