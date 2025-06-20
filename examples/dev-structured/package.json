@@ -14,6 +14,9 @@
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "bin": {
+    "example": "./dist/index.js"
+  },
   "scripts": {
     "clean": "del ./dist",
     "build": "run-s build:*",
