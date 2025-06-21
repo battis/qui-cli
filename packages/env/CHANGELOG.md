@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.0.6](https://github.com/battis/qui-cli/compare/env/2.0.5...env/2.0.6) (2025-06-21)
+
+
+### Bug Fixes
+
+* better document environment variable loading sequence ([64aa906](https://github.com/battis/qui-cli/commit/64aa906667bb43fd6c43e6c284bf306150fc8f7e)), closes [#55](https://github.com/battis/qui-cli/issues/55)
+
 ## [2.0.5](https://github.com/battis/qui-cli/compare/env/2.0.4...env/2.0.5) (2025-06-18)
 
 ## [2.0.4](https://github.com/battis/qui-cli/compare/env/2.0.3...env/2.0.4) (2025-03-21)
