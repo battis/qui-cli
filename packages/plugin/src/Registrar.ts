@@ -17,15 +17,19 @@ export type RegisteredPlugin = Plugin & {
 };
 
 const plugins: Record<string, RegisteredPlugin> = {};
-let sorted: (keyof typeof plugins)[] | undefined = undefined;
 
-export function builtinPlugins(name: string) {
-  return /^@battis\/qui-cli\.(?!.*(core|plugin)).*/.test(name);
+export function registeredPlugins(name: string) {
+  for (const plugin of Object.keys(plugins)) {
+    if (plugins[plugin].package.name === name) {
+      return true;
+    }
+  }
+  return false;
 }
 
 export async function register(
   plugin: Plugin,
-  matchPluginDependencies = builtinPlugins
+  matchPluginDependencies = registeredPlugins
 ) {
   const pkgPath = path.resolve(plugin.src, '../package.json');
   if (!fs.existsSync(pkgPath)) {
@@ -41,7 +45,7 @@ export async function register(
     );
   }
 
-  const peerDependencies = pkg.peerDependencies || {};
+  const availablePackages = { ...pkg.peerDependencies, ...pkg.dependencies };
 
   const registree: RegisteredPlugin = {
     ...plugin,
@@ -49,11 +53,11 @@ export async function register(
       path: pkgPath,
       name: pkg.name,
       version: pkg.version,
-      dependencies: Object.keys(peerDependencies)
+      dependencies: Object.keys(availablePackages)
         .filter(matchPluginDependencies)
         .reduce(
           (dependencies, name) => {
-            dependencies[name] = peerDependencies[name];
+            dependencies[name] = availablePackages[name];
             return dependencies;
           },
           {} as Record<string, string>
@@ -124,52 +128,8 @@ function circularDependency(
   }
 }
 
-function sort() {
-  if (!sorted || sorted.length !== Object.keys(plugins).length) {
-    sorted = [];
-    const unsorted = Object.keys(plugins);
-    while (unsorted.length) {
-      const name = unsorted.shift();
-      if (name) {
-        const plugin = plugins[name];
-        let satisfied = true;
-        for (const dependency in plugin.package.dependencies) {
-          if (!sorted.includes(dependency)) {
-            let dependencyName: string | undefined = undefined;
-            for (const key in plugins) {
-              if (plugins[key].package.name === dependency) {
-                dependencyName = key;
-              }
-            }
-            if (!dependencyName) {
-              throw new Error(
-                `Plugin "${name}" depends on ${dependency}@${plugin.package.dependencies[dependency]} which has not been registered.`
-              );
-            }
-          }
-        }
-        if (!satisfied) {
-          unsorted.push(name);
-        } else {
-          sorted.push(name);
-        }
-      }
-    }
-  }
-}
-
-type RegisteredOptions = {
-  sorted?: boolean;
-};
-
-export function registered({
-  sorted: _sorted = false
-}: RegisteredOptions = {}) {
-  let keys: (keyof typeof plugins)[] = Object.keys(plugins);
-  if (_sorted) {
-    sort();
-    keys = sorted!;
-  }
+export function registered() {
+  const keys: (keyof typeof plugins)[] = Object.keys(plugins);
   return keys.map((name) => ({
     name,
     package: plugins[name].package
@@ -187,55 +147,44 @@ export type Configuration = {
 };
 
 export async function configure(config: Configuration = {}) {
-  sort();
-  if (sorted) {
-    for (const name of sorted) {
-      const plugin = plugins[name];
-      if (plugin.configure) {
-        await plugin.configure(config[name] || {});
-      }
+  for (const name of Object.keys(plugins)) {
+    const plugin = plugins[name];
+    if (plugin.configure) {
+      await plugin.configure(config[name] || {});
     }
   }
 }
 
 export async function options() {
-  sort();
   let options: Options = {};
-  if (sorted) {
-    for (const name of sorted) {
-      const plugin = plugins[name];
-      if (plugin.options) {
-        options = merge(options, await plugin.options());
-      }
+  for (const name of Object.keys(plugins)) {
+    const plugin = plugins[name];
+    if (plugin.options) {
+      options = merge(options, await plugin.options());
     }
   }
+
   return options;
 }
 
 export async function init(
   args: Arguments<Awaited<ReturnType<typeof options>>>
 ) {
-  sort();
-  if (sorted) {
-    for (const name of sorted) {
-      const plugin = plugins[name];
-      if (plugin.init) {
-        await plugin.init(args);
-      }
+  for (const name of Object.keys(plugins)) {
+    const plugin = plugins[name];
+    if (plugin.init) {
+      await plugin.init(args);
     }
   }
 }
 
 export async function run() {
-  sort();
-  if (sorted) {
-    const results: AccumulatedResults = {};
-    for (const name of sorted) {
-      const plugin = plugins[name];
-      if (plugin.run) {
-        results[name] = await plugin.run(results);
-      }
+  const results: AccumulatedResults = {};
+  for (const name of Object.keys(plugins)) {
+    const plugin = plugins[name];
+    if (plugin.run) {
+      results[name] = await plugin.run(results);
     }
-    return results;
   }
+  return results;
 }
