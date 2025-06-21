@@ -10,4 +10,4 @@ export type Base = {
   options?: Options.Hook;
   init?: Initialization.Hook;
   run?: Run.Hook;
-} & Record<string, any>;
+} & Record<string, unknown>;
