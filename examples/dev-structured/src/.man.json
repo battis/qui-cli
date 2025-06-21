@@ -1,4 +1,9 @@
 {
   "alpha": [{ "text": "Alpha is a command that has its own subcommands" }],
-  "beta": [{ "text": "Beta is a command" }]
+  "beta": [{ "text": "Beta is a command" }],
+  "gamma": [
+    {
+      "text": "Gamma is a command that has subcommands that demonstrate commandCase"
+    }
+  ]
 }
