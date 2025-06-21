@@ -26,7 +26,7 @@ export function options(): Plugin.Options {
 }
 
 export function init({ values }: Plugin.Arguments<ReturnType<typeof options>>) {
-  foo = Plugin.hydrate(values.foo, foo);
+  configure(values);
 }
 
 export function run() {
