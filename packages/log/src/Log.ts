@@ -55,7 +55,7 @@ function stripColors(info: winston.Logform.TransformableInfo) {
   return info;
 }
 
-export function configure(config: Configuration) {
+export function configure(config: Configuration = {}) {
   root = Plugin.hydrate(config.root, root);
 
   if (config.levels) {

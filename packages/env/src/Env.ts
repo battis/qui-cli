@@ -18,7 +18,7 @@ let root: string | undefined = undefined;
 let load: boolean = true;
 let pathToEnv = '.env';
 
-export function configure(config: Configuration) {
+export function configure(config: Configuration = {}) {
   root = Plugin.hydrate(config.root, root);
   load = Plugin.hydrate(config.load, load);
   pathToEnv = Plugin.hydrate(config.path, pathToEnv);

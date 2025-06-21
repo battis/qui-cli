@@ -23,7 +23,7 @@ let showCommands = true;
 let silent = false;
 let result: shell.ShellString | undefined = undefined;
 
-export function configure(config: Configuration) {
+export function configure(config: Configuration = {}) {
   showCommands = Plugin.hydrate(config.showCommands, showCommands);
   silent = Plugin.hydrate(config.silent, silent);
 }
@@ -79,12 +79,12 @@ export function exec(command: string) {
   return result;
 }
 
-/** @deprecated use configure() */
+/** @deprecated Use configure() */
 export function setShowCommands(commandsAreShownInConsole: boolean) {
   return (showCommands = commandsAreShownInConsole);
 }
 
-/** @deprecated use configure() */
+/** @deprecated Use configure() */
 export function setSilent(commandsAreExecutedSilentlyInConsole: boolean) {
   return (silent = commandsAreExecutedSilentlyInConsole);
 }
@@ -101,74 +101,74 @@ export function getPreviousResult() {
   return result;
 }
 
-/** @deprecated use shelljs */
+/** @deprecated Use shelljs */
 export const cd = shell.cd;
 
-/** @deprecated use shelljs */
+/** @deprecated Use shelljs */
 export const pwd = shell.pwd;
 
-/** @deprecated use shelljs */
+/** @deprecated Use shelljs */
 export const ls = shell.ls;
 
-/** @deprecated use shelljs */
+/** @deprecated Use shelljs */
 export const find = shell.find;
 
-/** @deprecated use shelljs */
+/** @deprecated Use shelljs */
 export const cp = shell.cp;
 
-/** @deprecated use shelljs */
+/** @deprecated Use shelljs */
 export const rm = shell.rm;
 
-/** @deprecated use shelljs */
+/** @deprecated Use shelljs */
 export const mv = shell.mv;
 
-/** @deprecated use shelljs */
+/** @deprecated Use shelljs */
 export const mkdir = shell.mkdir;
 
-/** @deprecated use shelljs */
+/** @deprecated Use shelljs */
 export const test = shell.test;
 
-/** @deprecated use shelljs */
+/** @deprecated Use shelljs */
 export const cat = shell.cat;
 
-/** @deprecated use shelljs */
+/** @deprecated Use shelljs */
 export const sed = shell.sed;
 
-/** @deprecated use shelljs */
+/** @deprecated Use shelljs */
 export const grep = shell.grep;
 
-/** @deprecated use shelljs */
+/** @deprecated Use shelljs */
 export const which = shell.which;
 
-/** @deprecated use shelljs */
+/** @deprecated Use shelljs */
 export const echo = shell.echo;
 
-/** @deprecated use shelljs */
+/** @deprecated Use shelljs */
 export const pushd = shell.pushd;
 
-/** @deprecated use shelljs */
+/** @deprecated Use shelljs */
 export const popd = shell.popd;
 
-/** @deprecated use shelljs */
+/** @deprecated Use shelljs */
 export const dirs = shell.dirs;
 
-/** @deprecated use shelljs */
+/** @deprecated Use shelljs */
 export const ln = shell.ln;
 
-/** @deprecated use shelljs */
+/** @deprecated Use shelljs */
 export const exit = shell.exit;
 
-/** @deprecated use shelljs */
+/** @deprecated Use shelljs */
 export const env = shell.env;
 
-/** @deprecated use shelljs */
+/** @deprecated Use shelljs */
 export const sort = shell.sort;
 
-/** @deprecated use shelljs */
+/** @deprecated Use shelljs */
 export const tail = shell.tail;
 
-/** @deprecated use shelljs */
+/** @deprecated Use shelljs */
 export const uniq = shell.uniq;
 
-/** @deprecated use shelljs */
+/** @deprecated Use shelljs */
 export const set = shell.set;
