@@ -27,6 +27,7 @@
     "@battis/qui-cli.colors": "workspace:*",
     "@battis/qui-cli.core": "workspace:*",
     "@battis/qui-cli.plugin": "workspace:*",
+    "change-case": "^5.4.4",
     "jackspeak": "^4.1.1"
   },
   "devDependencies": {

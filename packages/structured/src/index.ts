@@ -1,6 +1,7 @@
 import { Colors } from '@battis/qui-cli.colors';
 import { Core } from '@battis/qui-cli.core';
 import * as Plugin from '@battis/qui-cli.plugin';
+import { camelCase } from 'change-case';
 import { Jack } from 'jackspeak';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -15,12 +16,14 @@ type Options = {
   fileName: string;
   commandName?: string;
   commandDirPath?: string;
+  commandCase?: (token: string) => string;
 };
 
 export async function build({
   fileName,
   commandName,
-  commandDirPath
+  commandDirPath,
+  commandCase = camelCase
 }: Options) {
   commandDirPath = commandDirPath || path.dirname(fileName);
   const [token] = process.argv.splice(2, 1);
@@ -35,20 +38,14 @@ export async function build({
     .filter((f) => f !== path.basename(fileName))
     // source maps are not commands
     .filter((f) => !/\.map$/.test(f))
-    // normalize to camelCase
+    // normalize to commandCase
     .map((fileName) => {
       const command = {
-        name: fileName
-          .replace(/\.[jt]s$/, '')
-          .replace(/[^a-z0-9]+/gi, '_')
-          .split('_')
-          .map((token) =>
-            token.length ? token[0].toUpperCase() + token.slice(1) : ''
-          )
-          .join(''),
+        name: commandCase(
+          fileName.replace(/\.[jt]s$/, '').replace(/[^a-z0-9]+/gi, '_')
+        ),
         fileName
       };
-      command.name = command.name[0].toLowerCase() + command.name.slice(1);
       return command;
     });
 
@@ -82,7 +79,7 @@ export async function build({
     } else {
       jack.description(
         `Commands may be: ${availableCommands
-          .map((command) => Colors.command (command.name))
+          .map((command) => Colors.command(command.name))
           .join(', ')}`
       );
     }
