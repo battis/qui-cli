@@ -23,6 +23,10 @@ Env.configure({ path: '../../.env' });
 Env.set({ key: 'EXAMPLE', value: parseInt(process.env.EXAMPLE || '0') + 1 });
 ```
 
+### When are environment variables ready to be read?
+
+Environment variables (from any `.env` file loaded by this plugin) are not available until after the `Env.configure()` has been called, which is not guaranteed to have occurred unless invoked directly by another plugin or _after_ the plugin has been initializied by `init()`. Any plugin that depends on this plugin can assume that the `.env` file environemnt variables are available in the dependent plugin's `init()` and `run()` methods, but will **not** be available in the dependent plugin's `options()` method and will only **sometimes** be available in the dependent plugin's `configure()` method.
+
 ## Configuration
 
 ```ts
