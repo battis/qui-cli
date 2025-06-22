@@ -79,53 +79,6 @@ export async function register(
   }
 
   plugins[registree.name] = registree;
-
-  for (const name in plugins) {
-    const error = circularDependency(name);
-    if (error) {
-      throw new Error(`Circular dependency detected: ${error}`);
-    }
-  }
-}
-
-function nameFromPackageName(packageName: string) {
-  for (const name in plugins) {
-    if (plugins[name].package.name === packageName) {
-      return name;
-    }
-  }
-  return undefined;
-}
-
-function extendDependencyChain(chain: string[] = [], name: string) {
-  return [
-    ...chain,
-    `${name} (${plugins[name].package.name}@${plugins[name].package.version})`
-  ];
-}
-
-function circularDependency(
-  name: string,
-  base?: string,
-  chain?: string[]
-): false | string {
-  base = base || name;
-  chain = extendDependencyChain(chain, name);
-  const basePackageName = plugins[base].package.name;
-  if (basePackageName in plugins[name].package.dependencies) {
-    return extendDependencyChain(chain, base).join(' → ');
-  } else {
-    for (const dependency in plugins[name].package.dependencies) {
-      const dependencyName = nameFromPackageName(dependency);
-      if (dependencyName) {
-        const circular = circularDependency(dependencyName, base, chain);
-        if (circular) {
-          return circular;
-        }
-      }
-    }
-    return false;
-  }
 }
 
 export function registered() {
