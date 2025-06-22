@@ -27,10 +27,7 @@ function previouslyRegisteredPlugins(name: string) {
   return false;
 }
 
-export async function register(
-  plugin: Plugin,
-  packageDependencyFilter = previouslyRegisteredPlugins
-) {
+export async function register(plugin: Plugin) {
   const pkgPath = path.resolve(plugin.src, '../package.json');
   if (!fs.existsSync(pkgPath)) {
     throw new Error(
@@ -54,7 +51,7 @@ export async function register(
       name: pkg.name,
       version: pkg.version,
       dependencies: Object.keys(availablePackages)
-        .filter(packageDependencyFilter)
+        .filter(previouslyRegisteredPlugins)
         .reduce(
           (dependencies, name) => {
             dependencies[name] = availablePackages[name];
