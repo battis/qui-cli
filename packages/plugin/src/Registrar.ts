@@ -18,7 +18,7 @@ export type RegisteredPlugin = Plugin & {
 
 const plugins: Record<string, RegisteredPlugin> = {};
 
-function alreadyRegistered(name: string) {
+function previouslyRegisteredPlugins(name: string) {
   for (const plugin of Object.keys(plugins)) {
     if (plugins[plugin].package.name === name) {
       return true;
@@ -29,7 +29,7 @@ function alreadyRegistered(name: string) {
 
 export async function register(
   plugin: Plugin,
-  matchPluginDependencies = alreadyRegistered
+  packageDependencyFilter = previouslyRegisteredPlugins
 ) {
   const pkgPath = path.resolve(plugin.src, '../package.json');
   if (!fs.existsSync(pkgPath)) {
@@ -54,7 +54,7 @@ export async function register(
       name: pkg.name,
       version: pkg.version,
       dependencies: Object.keys(availablePackages)
-        .filter(matchPluginDependencies)
+        .filter(packageDependencyFilter)
         .reduce(
           (dependencies, name) => {
             dependencies[name] = availablePackages[name];
