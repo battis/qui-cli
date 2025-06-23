@@ -33,17 +33,17 @@ Refer to [@battis/qui-cli.shell](https://github.com/battis/qui-cli/tree/main/pac
 
 #### `package.json`
 
-Define both a name and version. Include `@battis/qui-cli.plugin` and any other plugins that your Plugin depends on as peer dependencies:
+Define both a name and version. Include `@battis/qui-cli.plugin` and _any other plugins that your Plugin depends on_ as peer dependencies:
 
 ```json
 {
-  "name": "@example/plugin",
-  "version": "1.2.3",
   "peerDependencies": {
     "@battis/qui-cli.plugin": "^0.1"
   }
 }
 ```
+
+While `npm` will install all dependencies at the same level of the `./node_modules/` folder hierarchy, tools like `pnpm` will not install non-peer dependencies at the same level as the plugin. To ensure that the plugin's peers are both installed and shared properly with other plugins that rely on them, plugin dependencies _must_ be listed as `peerDependencies`.
 
 #### `src/index.ts`
 
