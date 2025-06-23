@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.4.0](https://github.com/battis/qui-cli/compare/plugin/2.3.3...plugin/2.4.0) (2025-06-23)
+
+
+### Features
+
+* alternate plugin formats ([8edd1df](https://github.com/battis/qui-cli/commit/8edd1df21f34e7fa1e4b8eaec319aa3a844d47cf))
+* no longer explicitly checking for circular dependencies ([06f427d](https://github.com/battis/qui-cli/commit/06f427d057b375bb3dc9420123e1f47dbbad2967))
+* no longer internally tracking dependencies ([fdf2b17](https://github.com/battis/qui-cli/commit/fdf2b1718c10f4901881d74c3ffa3978f3a78757))
+* src property no longer required for plugins ([5ccd2ab](https://github.com/battis/qui-cli/commit/5ccd2ab67b618ec7121dacacc9fbf059f163f3b8))
+
 ## [2.3.3](https://github.com/battis/qui-cli/compare/plugin/2.3.2...plugin/2.3.3) (2025-06-21)
 
 
