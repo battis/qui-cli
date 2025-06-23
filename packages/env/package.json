@@ -29,7 +29,6 @@
   "devDependencies": {
     "@battis/qui-cli.plugin": "workspace:*",
     "@battis/qui-cli.root": "workspace:*",
-    "@changesets/cli": "^2.29.4",
     "@tsconfig/node20": "^20.1.6",
     "@types/node": "^22.15.32",
     "commit-and-tag-version": "^12.5.1",
