@@ -37,7 +37,7 @@
     "typescript": "^5.8.3"
   },
   "peerDependencies": {
-    "@battis/qui-cli.colors": "^2.0",
-    "@battis/qui-cli.plugin": "^2.0"
+    "@battis/qui-cli.colors": "2.x",
+    "@battis/qui-cli.plugin": "^2.4"
   }
 }

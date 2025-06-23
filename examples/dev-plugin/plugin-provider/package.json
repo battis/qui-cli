@@ -30,6 +30,6 @@
   },
   "peerDependencies": {
     "@battis/qui-cli.log": "2.x",
-    "@battis/qui-cli.plugin": "2.x"
+    "@battis/qui-cli.plugin": "^2.4"
   }
 }

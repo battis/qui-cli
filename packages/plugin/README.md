@@ -38,7 +38,7 @@ Define both a name and version. Include `@battis/qui-cli.plugin` and _any other 
 ```json
 {
   "peerDependencies": {
-    "@battis/qui-cli.plugin": "2.x"
+    "@battis/qui-cli.plugin": "^2.4"
   }
 }
 ```

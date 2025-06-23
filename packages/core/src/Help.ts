@@ -5,7 +5,7 @@ export type Configuration = Plugin.Configuration & {
   help?: boolean;
 };
 
-export const name = import.meta.filename;
+export const name = 'core.help';
 
 let help = false;
 

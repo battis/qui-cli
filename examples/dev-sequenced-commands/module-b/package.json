@@ -35,7 +35,7 @@
   "peerDependencies": {
     "@battis/qui-cli.colors": "2.x",
     "@battis/qui-cli.log": "^2.1",
-    "@battis/qui-cli.plugin": "2.x",
+    "@battis/qui-cli.plugin": "^2.4",
     "@examples/dev-sequenced-commands.module-a": "workspace:*"
   }
 }
