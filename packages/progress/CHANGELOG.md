@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.0.3](https://github.com/battis/qui-cli/compare/progress/2.0.2...progress/2.0.3) (2025-06-23)
+
+
+### Bug Fixes
+
+* update peer dependency versions to minimum viable ([a776908](https://github.com/battis/qui-cli/commit/a7769085adef6da665da7a67cb143af1e0bba6be))
+
 ## [2.0.2](https://github.com/battis/qui-cli/compare/progress/2.0.1...progress/2.0.2) (2025-06-23)
 
 ## [2.0.1](https://github.com/battis/qui-cli/compare/progress/2.0.0...progress/2.0.1) (2025-02-23)
