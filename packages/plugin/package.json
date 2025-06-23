@@ -24,7 +24,6 @@
     "release": "commit-and-tag-version"
   },
   "dependencies": {
-    "@battis/import-package-json": "^0.1.7",
     "jackspeak": "^4.1.1"
   },
   "devDependencies": {

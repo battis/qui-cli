@@ -5,7 +5,6 @@ import * as Run from './Run.js';
 
 export type Base = {
   name: string;
-  src: string;
   configure?: Configuration.Hook;
   options?: Options.Hook;
   init?: Initialization.Hook;

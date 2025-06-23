@@ -1,77 +1,22 @@
-import Package from '@battis/import-package-json';
-import fs from 'node:fs';
-import path from 'node:path';
 import { Base as PluginConfiguration } from './Configuration.js';
 import { Arguments } from './Initialization.js';
 import { Options, merge } from './Options.js';
 import { Base as Plugin } from './Plugin.js';
 import { AccumulatedResults } from './Run.js';
 
-export type RegisteredPlugin = Plugin & {
-  package: {
-    path: string;
-    name: string;
-    version: string;
-  };
-};
+const plugins: Plugin[] = [];
 
-const plugins: Record<string, RegisteredPlugin> = {};
+export function registered() {
+  return plugins;
+}
 
 export async function register(plugin: Plugin) {
-  const pkgPath = path.resolve(plugin.src, '../package.json');
-  if (!fs.existsSync(pkgPath)) {
-    throw new Error(
-      `Could not find package.json for ${plugin.name} at ${pkgPath}.`
-    );
-  }
-
-  const pkg = await Package.importLocal(pkgPath);
-  if (!pkg.name || !pkg.version) {
-    throw new Error(
-      `package.json for ${plugin.name} must define name and version properties.`
-    );
-  }
-
-  const registree: RegisteredPlugin = {
-    ...plugin,
-    package: {
-      path: pkgPath,
-      name: pkg.name,
-      version: pkg.version
+  for (const p of plugins) {
+    if (p.name == plugin.name) {
+      throw new Error(`Plugin '${p.name}' has already been registered`);
     }
-  };
-
-  if (registree.name in plugins) {
-    if (
-      plugins[registree.name].package.name == registree.package.name &&
-      plugins[registree.name].package.version == registree.package.version &&
-      plugins[registree.name].package.path == registree.package.path
-    ) {
-      return;
-    }
-    throw new Error(
-      `${registree.package.name}@${registree.package.version} attempted to register as "${registree.name}" (${registree.package.path}), but ${plugins[registree.name].package.name}@${plugins[registree.name].package.version} is already registered as "${registree.name}" (${plugins[registree.name].package.path}).`
-    );
   }
-
-  plugins[registree.name] = registree;
-}
-
-export enum PluginFormat {
-  Metadata,
-  Module
-}
-
-export function registered(format = PluginFormat.Metadata) {
-  switch (format) {
-    case PluginFormat.Module:
-      return Object.values(plugins);
-    case PluginFormat.Metadata:
-      return Object.keys(plugins).map((name) => ({
-        name,
-        package: plugins[name].package
-      }));
-  }
+  plugins.push(plugin);
 }
 
 export function reset() {
@@ -81,35 +26,31 @@ export function reset() {
 }
 
 export type Configuration = {
-  [key: keyof typeof plugins]: PluginConfiguration;
+  [key: string]: PluginConfiguration;
 };
 
 export async function configure(config: Configuration = {}) {
-  for (const name of Object.keys(plugins)) {
-    const plugin = plugins[name];
+  for (const plugin of plugins) {
     if (plugin.configure) {
-      await plugin.configure(config[name] || {});
+      await plugin.configure(config[plugin.name] || {});
     }
   }
 }
 
 export async function options() {
   let options: Options = {};
-  for (const name of Object.keys(plugins)) {
-    const plugin = plugins[name];
+  for (const plugin of plugins) {
     if (plugin.options) {
       options = merge(options, await plugin.options());
     }
   }
-
   return options;
 }
 
 export async function init(
   args: Arguments<Awaited<ReturnType<typeof options>>>
 ) {
-  for (const name of Object.keys(plugins)) {
-    const plugin = plugins[name];
+  for (const plugin of plugins) {
     if (plugin.init) {
       await plugin.init(args);
     }
@@ -118,10 +59,9 @@ export async function init(
 
 export async function run() {
   const results: AccumulatedResults = {};
-  for (const name of Object.keys(plugins)) {
-    const plugin = plugins[name];
+  for (const plugin of plugins) {
     if (plugin.run) {
-      results[name] = await plugin.run(results);
+      results[plugin.name] = await plugin.run(results);
     }
   }
   return results;

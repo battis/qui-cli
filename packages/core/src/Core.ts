@@ -85,12 +85,11 @@ export async function init(
       `Already initialized with user-provided command line arguments.`
     );
   }
-  Plugin.Registrar.registered(Plugin.Registrar.PluginFormat.Module).map(
-    (plugin) =>
-      'options' in plugin &&
-      typeof plugin.options === 'function' &&
-      apply(plugin.options())
-  );
+  for (const plugin of Plugin.Registrar.registered()) {
+    if (plugin.options) {
+      apply(await plugin.options());
+    }
+  }
   if (externalOptions) {
     apply(externalOptions);
   }
