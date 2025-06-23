@@ -29,6 +29,7 @@ function jack() {
 // TODO automate positionals documentation
 let requirePositionals: boolean | number | undefined = undefined;
 let initialized = false;
+let positionals: (string | undefined)[] = [];
 
 export async function configure({ core, ...pluginConfig }: Configuration = {}) {
   requirePositionals = Plugin.hydrate(
@@ -108,14 +109,19 @@ export async function init(
   apply(await options(externalOptions));
 
   const args = jack().parse() as Plugin.Arguments<Options>;
-  const {
-    positionals,
-    values: { help }
-  } = args;
+  const { positionals: p } = args;
+  positionals = p;
 
-  if (help) {
-    console.log(usage());
-    process.exit(0);
+  await Plugin.Registrar.init(args);
+  initialized = true;
+  return args;
+}
+
+export async function run(
+  externalOptions?: Plugin.Options | Options
+): Promise<Plugin.AccumulatedResults | undefined> {
+  if (!initialized) {
+    await init(externalOptions);
   }
 
   if (
@@ -129,17 +135,6 @@ export async function init(
     );
   }
 
-  await Plugin.Registrar.init(args);
-  initialized = true;
-  return args;
-}
-
-export async function run(
-  externalOptions?: Plugin.Options | Options
-): Promise<Plugin.AccumulatedResults | undefined> {
-  if (!initialized) {
-    await init(externalOptions);
-  }
   return await Plugin.Registrar.run();
 }
 
