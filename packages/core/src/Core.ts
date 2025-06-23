@@ -1,17 +1,11 @@
 import * as Plugin from '@battis/qui-cli.plugin';
 import { Jack, JackOptions } from 'jackspeak';
 
+export { Options } from '@battis/qui-cli.plugin';
+
 export type Configuration = Record<string, Plugin.Configuration> & {
   core?: JackOptions & {
     requirePositionals?: boolean | number;
-  };
-};
-
-export type Options = Plugin.Options & {
-  flag: {
-    help: {
-      description?: string;
-    };
   };
 };
 
@@ -45,28 +39,13 @@ export async function configure({ core, ...pluginConfig }: Configuration = {}) {
   await Plugin.Registrar.configure(pluginConfig);
 }
 
-export async function options(
-  externalOptions: Plugin.Options = {}
-): Promise<Options> {
+export async function options(externalOptions: Plugin.Options = {}) {
   /*
    * TODO automate default value documentation
      Issue URL: https://github.com/battis/qui-cli/issues/38
    *  Including parsing `env` (#34) and `secret` (#33) fields
    */
-  return Plugin.mergeOptions(
-    Plugin.mergeOptions(
-      {
-        flag: {
-          help: {
-            description: 'Get usage information',
-            short: 'h'
-          }
-        }
-      },
-      await Plugin.Registrar.options()
-    ),
-    externalOptions
-  );
+  return Plugin.mergeOptions(await Plugin.Registrar.options(), externalOptions);
 }
 
 function apply({
@@ -99,8 +78,8 @@ function apply({
 }
 
 export async function init(
-  externalOptions?: Plugin.Options | Options
-): Promise<Plugin.Arguments<Options>> {
+  externalOptions?: Plugin.Options
+): Promise<Plugin.Arguments<Plugin.Options>> {
   if (initialized) {
     throw new Error(
       `Already initialized with user-provided command line arguments.`
@@ -108,7 +87,7 @@ export async function init(
   }
   apply(await options(externalOptions));
 
-  const args = jack().parse() as Plugin.Arguments<Options>;
+  const args = jack().parse() as Plugin.Arguments<Plugin.Options>;
   const { positionals: p } = args;
   positionals = p;
 
@@ -118,7 +97,7 @@ export async function init(
 }
 
 export async function run(
-  externalOptions?: Plugin.Options | Options
+  externalOptions?: Plugin.Options
 ): Promise<Plugin.AccumulatedResults | undefined> {
   if (!initialized) {
     await init(externalOptions);
