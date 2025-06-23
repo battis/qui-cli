@@ -1,7 +1,7 @@
 import { Colors } from '@battis/qui-cli.colors';
 import { Log } from '@battis/qui-cli.log';
 
-export const name = import.meta.filename;
+export const name = 'beta';
 
 export function run() {
   Log.info(`${Colors.command(name)} ran!`);
