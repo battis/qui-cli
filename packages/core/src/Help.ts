@@ -6,7 +6,6 @@ export type Configuration = Plugin.Configuration & {
 };
 
 export const name = import.meta.filename;
-export const src = import.meta.dirname;
 
 let help = false;
 

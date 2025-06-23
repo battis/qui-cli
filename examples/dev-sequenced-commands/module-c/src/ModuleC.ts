@@ -8,7 +8,6 @@ export type Configuration = Plugin.Configuration & {
 };
 
 export const name = 'module-c';
-export const src = import.meta.dirname;
 
 let optionC: string | undefined = 'c';
 

@@ -11,7 +11,6 @@ type Options = {
 };
 
 export const name = 'progress';
-export const src = import.meta.dirname;
 
 let _multibar: cliProgress.MultiBar | undefined = undefined;
 function multibar() {

@@ -9,7 +9,6 @@ import path from 'node:path';
 export type Validator = (value?: string) => boolean | string;
 
 export const name = 'validators';
-export const src = import.meta.dirname;
 
 export function notEmpty(value?: string) {
   return (!!value && value.length > 0) || 'May not be empty';

@@ -4,63 +4,55 @@ All notable changes to this project will be documented in this file. See [commit
 
 ## [2.1.1](https://github.com/battis/qui-cli/compare/core/2.1.0...core/2.1.1) (2025-06-18)
 
-
 ### Bug Fixes
 
-* clean up typing of arguments ([64d8807](https://github.com/battis/qui-cli/commit/64d88075bdd5653f8ab84ab4e3f2805ab62748a2))
+- clean up typing of arguments ([64d8807](https://github.com/battis/qui-cli/commit/64d88075bdd5653f8ab84ab4e3f2805ab62748a2))
 
 ## [2.1.0](https://github.com/battis/qui-cli/compare/core/2.0.1...core/2.1.0) (2025-02-28)
 
-
 ### Features
 
-* **qui-cli.core:** run() ([a2c5ba2](https://github.com/battis/qui-cli/commit/a2c5ba2f8de6c52a88c1cf75ac37f93b51fb8211))
-
+- **qui-cli.core:** run() ([a2c5ba2](https://github.com/battis/qui-cli/commit/a2c5ba2f8de6c52a88c1cf75ac37f93b51fb8211))
 
 ### Bug Fixes
 
-* **qui-cli.core:** catch repeated initializations ([6caee60](https://github.com/battis/qui-cli/commit/6caee60234874eaaafc6e4046cfa699a709c9421))
+- **qui-cli.core:** catch repeated initializations ([6caee60](https://github.com/battis/qui-cli/commit/6caee60234874eaaafc6e4046cfa699a709c9421))
 
 ## [2.0.1](https://github.com/battis/qui-cli/compare/core/2.0.0...core/2.0.1) (2025-02-23)
 
-
 ### Bug Fixes
 
-* **qui-cli.core:** more flexible peer dependency ([f03e1be](https://github.com/battis/qui-cli/commit/f03e1bef07af225fbebddc12b65d2a7bd3c81c0e))
+- **qui-cli.core:** more flexible peer dependency ([f03e1be](https://github.com/battis/qui-cli/commit/f03e1bef07af225fbebddc12b65d2a7bd3c81c0e))
 
 ## [2.0.0](https://github.com/battis/qui-cli/compare/core/1.0.0...core/2.0.0) (2025-02-23)
 
-
 ### ⚠ BREAKING CHANGES
 
-* **qui-cli.core:** nest core config under core key
-* **qui-cli.core:** async hooks
+- **qui-cli.core:** nest core config under core key
+- **qui-cli.core:** async hooks
 
 ### Features
 
-* **qui-cli.core:** async hooks ([75966de](https://github.com/battis/qui-cli/commit/75966de51050b7db91027d79072060607965139c))
-
+- **qui-cli.core:** async hooks ([75966de](https://github.com/battis/qui-cli/commit/75966de51050b7db91027d79072060607965139c))
 
 ### Bug Fixes
 
-* **qui-cli.core:** nest core config under core key ([e4828f9](https://github.com/battis/qui-cli/commit/e4828f989cb5dfec45da2eafe62f57303803debe))
+- **qui-cli.core:** nest core config under core key ([e4828f9](https://github.com/battis/qui-cli/commit/e4828f989cb5dfec45da2eafe62f57303803debe))
 
 ## [1.0.0](https://github.com/battis/qui-cli/compare/core/0.8.4...core/1.0.0) (2025-02-21)
 
-
 ### ⚠ BREAKING CHANGES
 
-* **qui-cli.core:** ESM module implementation
+- **qui-cli.core:** ESM module implementation
 
 ### Features
 
-* **qui-cli.core:** ESM module implementation ([7a14472](https://github.com/battis/qui-cli/commit/7a14472ec83aa6186beb4b7b8632cfd2df2c6d49))
-
+- **qui-cli.core:** ESM module implementation ([7a14472](https://github.com/battis/qui-cli/commit/7a14472ec83aa6186beb4b7b8632cfd2df2c6d49))
 
 ### Bug Fixes
 
-* **qui-cli,qui-cli.core:** auto-configure on init ([37bb1c3](https://github.com/battis/qui-cli/commit/37bb1c3b49e6ee9e698d42f1e8d20da380f14636))
-* **qui-cli.core:** simplify tortured Core.configure() logic ([c7f0335](https://github.com/battis/qui-cli/commit/c7f03359bb4d12858775baa91a5bc4189fe86736))
+- **qui-cli,qui-cli.core:** auto-configure on init ([37bb1c3](https://github.com/battis/qui-cli/commit/37bb1c3b49e6ee9e698d42f1e8d20da380f14636))
+- **qui-cli.core:** simplify tortured Core.configure() logic ([c7f0335](https://github.com/battis/qui-cli/commit/c7f03359bb4d12858775baa91a5bc4189fe86736))
 
 ## 0.8.4
 

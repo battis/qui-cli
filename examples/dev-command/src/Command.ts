@@ -7,7 +7,6 @@ export type Configuration = Plugin.Configuration & {
 };
 
 export const name = 'my-command';
-export const src = import.meta.dirname;
 
 let foo: string | undefined = undefined;
 

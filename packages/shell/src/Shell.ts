@@ -17,7 +17,6 @@ export type Configuration = Plugin.Configuration & {
 };
 
 export const name = 'shell';
-export const src = import.meta.dirname;
 
 let showCommands = true;
 let silent = false;

@@ -12,7 +12,6 @@ export type Configuration = Plugin.Configuration & {
 };
 
 export const name = 'env';
-export const src = import.meta.dirname;
 
 let root: string | undefined = undefined;
 let load: boolean = true;

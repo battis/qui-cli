@@ -1,7 +1,6 @@
 import chalk from 'chalk';
 
 export const name = 'colors';
-export const src = import.meta.dirname;
 
 export const value = chalk.yellow;
 export const quotedValue = chalk.green;

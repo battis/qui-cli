@@ -19,7 +19,6 @@ export type Configuration = Plugin.Configuration & {
 
 const OFF = 'off';
 export const name = 'log';
-export const src = import.meta.dirname;
 
 let logFilePath: string | undefined = undefined;
 let stdoutLevel = 'info';

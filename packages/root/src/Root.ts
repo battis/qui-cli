@@ -4,15 +4,13 @@ import nodePath from 'node:path';
 
 export const name = 'root';
 
-export const src = import.meta.dirname;
-
 export type Configuration = Plugin.Configuration & {
-  /** base for resolving any relative file paths */
+  /** Base for resolving any relative file paths */
   root?: string;
 
   /**
-   * use `root` as the current working directory (default `true`) or path to
-   * an alternate working directory (optionally relative to `root`)
+   * Use `root` as the current working directory (default `true`) or path to an
+   * alternate working directory (optionally relative to `root`)
    */
   cwd?: string | boolean;
 };

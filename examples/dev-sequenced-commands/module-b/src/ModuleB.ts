@@ -8,7 +8,6 @@ export type Configuration = Plugin.Configuration & {
 };
 
 export const name = 'module-b';
-export const src = import.meta.dirname;
 
 let optionB: string | undefined = 'b';
 
