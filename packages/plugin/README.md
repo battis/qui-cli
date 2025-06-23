@@ -59,11 +59,10 @@ export { Example };
 
 #### `src/Example.ts`
 
-Define your plugin module, including exported `name` and `src` values and any of the optional [Plugin Hooks](#Plugin-Hooks).
+Define your plugin module, including exported `name` and any of the optional [Plugin Hooks](#Plugin-Hooks).
 
 ```ts
 export const name = 'example';
-export const src = import.meta.dirname;
 
 export function configure(config?) {
   // ...
@@ -175,7 +174,7 @@ The arguments may be assumed to reflect that `Plugin.Options` object returned fr
 ```ts
 export function init({
   values: { foo, bar }
-}: Plugin.Arguments<ReturnType<typeof options>>) {
+}: Plugin.ExpectedArguments<typeof options>) {
   // ...
 }
 ```
@@ -220,12 +219,12 @@ export function options(): Plugin.Options {
 }
 ```
 
-### `Plugin.Arguments`
+### `Plugin.ExpectedArguments`
 
 Typing for `init()` hook. Intended to provide IntelliSense support for parameters defined by `options()` hook.
 
 ```ts
-export function init(args: Plugin.Arguments<ReturnType<typeof options>>) {
+export function init(args: Plugin.ExpectedArguments<typeof options>) {
   // ...
 }
 ```
