@@ -78,12 +78,21 @@ export async function register(plugin: Plugin) {
   plugins[registree.name] = registree;
 }
 
-export function registered() {
-  const keys: (keyof typeof plugins)[] = Object.keys(plugins);
-  return keys.map((name) => ({
-    name,
-    package: plugins[name].package
-  }));
+export enum PluginFormat {
+  Metadata,
+  Module
+}
+
+export function registered(format = PluginFormat.Metadata) {
+  switch (format) {
+    case PluginFormat.Module:
+      return Object.values(plugins);
+    case PluginFormat.Metadata:
+      return Object.keys(plugins).map((name) => ({
+        name,
+        package: plugins[name].package
+      }));
+  }
 }
 
 export function reset() {
