@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.2.0](https://github.com/battis/qui-cli/compare/core/2.1.1...core/2.2.0) (2025-06-23)
+
+
+### Features
+
+* options loaded by plugin import order ([778ee41](https://github.com/battis/qui-cli/commit/778ee41442e190d1d20fdc31217bba13e82ef6a3))
+* src property no longer required for plugins ([5ccd2ab](https://github.com/battis/qui-cli/commit/5ccd2ab67b618ec7121dacacc9fbf059f163f3b8))
+
 ## [2.1.1](https://github.com/battis/qui-cli/compare/core/2.1.0...core/2.1.1) (2025-06-18)
 
 ### Bug Fixes
