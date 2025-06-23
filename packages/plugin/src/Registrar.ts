@@ -12,20 +12,10 @@ export type RegisteredPlugin = Plugin & {
     path: string;
     name: string;
     version: string;
-    dependencies: Record<string, string>;
   };
 };
 
 const plugins: Record<string, RegisteredPlugin> = {};
-
-function previouslyRegisteredPlugins(name: string) {
-  for (const plugin of Object.keys(plugins)) {
-    if (plugins[plugin].package.name === name) {
-      return true;
-    }
-  }
-  return false;
-}
 
 export async function register(plugin: Plugin) {
   const pkgPath = path.resolve(plugin.src, '../package.json');
@@ -42,23 +32,12 @@ export async function register(plugin: Plugin) {
     );
   }
 
-  const availablePackages = { ...pkg.peerDependencies, ...pkg.dependencies };
-
   const registree: RegisteredPlugin = {
     ...plugin,
     package: {
       path: pkgPath,
       name: pkg.name,
-      version: pkg.version,
-      dependencies: Object.keys(availablePackages)
-        .filter(previouslyRegisteredPlugins)
-        .reduce(
-          (dependencies, name) => {
-            dependencies[name] = availablePackages[name];
-            return dependencies;
-          },
-          {} as Record<string, string>
-        )
+      version: pkg.version
     }
   };
 
