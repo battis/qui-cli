@@ -1,6 +1,6 @@
 {
   "name": "@battis/qui-cli.colors",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "@battis/qui-cli Plugin: Standardized Chalk colors for CLI output",
   "homepage": "https://github.com/battis/qui-cli/tree/main/packages/colors#readme",
   "repository": {
