@@ -15,12 +15,25 @@ npm install @battis/qui-cli.core
 
 ```ts
 import { Core } from '@battis/qui-cli.core';
+import { Colors } from '@battis/qui-cli.colors';
+import { Log } from '@battis/qui-cli.log';
+
+// register custom arguments
+await Core.init({
+  opt: {
+    foo: {
+      description: 'bar'
+    }
+  }
+});
 
 // process user-provided command-line arguments
-const args = Core.init();
+const { values, positionals } = await Core.run();
 
-// use Colors
-console.log(
+// use Log and Colors
+Log.debug(values.foo);
+Log.debug(positionals.length);
+Log.info(
   `This is a ${Colors.value('value')} and a ${Colors.quotedValue('"quoted value"')}.`
 );
 ```
