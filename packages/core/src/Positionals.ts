@@ -12,14 +12,13 @@ type PositionalConfigSet = Record<string, PositionalConfig>;
 export type Configuration = Plugin.Configuration & {
   min?: number;
   max?: number;
-  configSet?: PositionalConfigSet;
 };
 
 export const name = 'positionals';
 
 let min = 0;
 let max: number | undefined = undefined;
-let configSet: PositionalConfigSet = {};
+const configSet: PositionalConfigSet = {};
 
 let positionals: (string | undefined)[] = [];
 
@@ -49,7 +48,6 @@ export function configure(config: Configuration = {}) {
   if (m !== undefined) {
     setMaxArgs(m);
   }
-  configSet = Plugin.hydrate(config.configSet, configSet);
 }
 
 export function require(positionalConfigSet: PositionalConfigSet) {
