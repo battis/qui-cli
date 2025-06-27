@@ -25,6 +25,67 @@ console.log(
 );
 ```
 
+## Core Plugins
+
+Three core plugins are registered automatically to provide consistent functionality.
+
+### `jackspeak`
+
+Manages any custom [jackspeak](https://www.npmjs.com/package/jackspeak#user-content-jackoptions-jackoptions----jack) options. As with any other plugin, it can be configured via `Core.configure()`:
+
+```ts
+await Core.configure({
+  jackspeak: {
+    envPrefix: 'MY_APP'
+  }
+});
+```
+
+### `positionals`
+
+Provides per-plugin positonal argument management and documentation. Individual plugins can require named positional arguments, which are collected and documented by `usage()` and accessible throgh the `Positionals` plugin.
+
+```ts
+import { Core, Positionals } from '@battis/qui-cli.core';
+
+Positionals.require({
+  my_number: {
+    description: 'How far left to move',
+    validate: (v?: string) => !isNaN(v) || 'my_number must be a numeric value'
+  }
+});
+
+await Core.run();
+
+console.log(Positionals.get('my_number'));
+```
+
+Positional arguments are processed in the order in which plugins are registered. Thus, if plugin A requires positional arguments `a1` and `a2`, plugn B requires positional arguments `b1` and `b2` and depends on plugin C which requires positional argument `c1`, the resulting positional argument order would be: `a1 a2 c1 b1 b2`.
+
+Unnamed arguments can also be required, however this is a dicey proposition to implement within a plugin and is likely best reserved for independent apps that consume plugins, as the `min` and `max` number of positional arguments check against the currently registered list of required named positonal arguments for validity (as well as their own respective values). In general, configuring unnamed positional arguments is best done before any required named positional arguments are defined.
+
+```ts
+// require at least 2 and no more than 5 unnamed positionals:
+//   arg0 arg1 [arg2 arg3 arg4]
+Positionals.configure({ min: 2, max: 5 });
+
+//.  nemo arg0 arg1 [arg2 arg3 arg4]
+Positionals.require({ nemo: { description: 'I have a name!' } });
+
+// fails: nemo is required, must be at least 1
+Positionals.setMinArg(0);
+
+// succeeds
+Positionals.setMinArg(6);
+
+// fails: is less than current min
+Positionals.setMaxArg(4);
+```
+
+### `help`
+
+Provides consistent `--help` (`-h`) flag for all commands that displays usage. No confiuration.
+
 ## Configuration: `configure(config?: Configuration): void`
 
 Programmatic configuration to set defaults before generating user-facing usage documentation or processing user-provided command line arguments.
@@ -32,24 +93,6 @@ Programmatic configuration to set defaults before generating user-facing usage d
 Invoking `Core.configure()` triggers the `configure()` hook for all registered plugins.
 
 Refer to [@battis/qui-cli.plugin](https://www.npmjs.com/package/@battis/qui-cli.plugin#user-content-configuration) for further details on plugin configuration.
-
-In general, configuration options match those of [jackspeak](https://www.npmjs.com/package/jackspeak#user-content-jackoptions-jackoptions----jack):
-
-```ts
-import { JackOptions } from 'jackspeak';
-
-type Configuration = JackOptions & {
-  requirePositionals?: boolean | number;
-};
-
-function configure(config?: Configuration) {
-  // ...
-}
-```
-
-### `requirePositionals: boolean | number = false`
-
-The one additional option, which complements jackspeak's `allowPositionals` is `requirePositionals`. `requirePositionals` defaults to `false`. If set to `true`, command line arguments that do not include at least one positional will be rejected. If set to a number, exactly that number of command line arguments must be included. Setting `requirePositionals` to a non-`false` value implicitly sets `allowPositionals` to `true`.
 
 ## Options: `options(): Options`
 
