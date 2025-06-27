@@ -1,42 +1,37 @@
+import * as Colors from '@battis/qui-cli.colors/dist/Colors.js';
 import * as Plugin from '@battis/qui-cli.plugin';
-import { Jack, JackOptions } from 'jackspeak';
+import * as JackSpeak from './JackSpeak.js';
+import * as Positionals from './Positionals.js';
+import { usage } from './Usage.js';
 
 export { Options } from '@battis/qui-cli.plugin';
+export * from './Usage.js';
 
-export type Configuration = Record<string, Plugin.Configuration> & {
-  core?: JackOptions & {
+export type Configuration = Plugin.Registrar.Configuration & {
+  /** @deprecated Use `jackspeak` property */
+  core?: JackSpeak.Configuration & {
+    /** @deprecated Use `Positional` plugin */
     requirePositionals?: boolean | number;
   };
 };
 
-let _jack: Jack | undefined = undefined;
-function jack() {
-  if (!_jack) {
-    configure();
-  }
-  if (!_jack) {
-    throw new Error('Bad things!');
-  }
-  return _jack;
-}
-
-// TODO automate positionals documentation
-let requirePositionals: boolean | number | undefined = undefined;
 let initialized = false;
-let positionals: (string | undefined)[] = [];
 
-export async function configure({ core, ...pluginConfig }: Configuration = {}) {
-  requirePositionals = Plugin.hydrate(
-    core?.requirePositionals,
-    requirePositionals
-  );
-
-  _jack = new Jack({
-    ...core,
-    allowPositionals: !!requirePositionals
-  });
-
-  await Plugin.Registrar.configure(pluginConfig);
+export async function configure(config: Configuration = {}) {
+  const { core = {}, jackspeak: jackOptions, positionals = {} } = config;
+  const { requirePositionals, ...deprecated } = core;
+  const jackspeak = {
+    ...deprecated,
+    allowPositionals: !!Positionals.requirePositionals(
+      positionals,
+      requirePositionals
+    ),
+    ...jackOptions
+  };
+  if (jackspeak.allowPositionals === false) {
+    positionals.max = 0;
+  }
+  await Plugin.Registrar.configure({ positionals, jackspeak });
 }
 
 export async function options(externalOptions: Plugin.Options = {}) {
@@ -46,35 +41,6 @@ export async function options(externalOptions: Plugin.Options = {}) {
    *  Including parsing `env` (#34) and `secret` (#33) fields
    */
   return Plugin.mergeOptions(await Plugin.Registrar.options(), externalOptions);
-}
-
-function apply({
-  num,
-  numList,
-  opt,
-  optList,
-  flag,
-  flagList,
-  fields,
-  man = []
-}: Plugin.Options) {
-  jack()
-    .num({ ...num })
-    .numList({ ...numList })
-    .opt({ ...opt })
-    .optList({ ...optList })
-    .flag({ ...flag })
-    .flagList({ ...flagList })
-    .addFields({ ...fields });
-  for (const paragraph of man) {
-    if (paragraph.level) {
-      jack().heading(paragraph.text, paragraph.level, {
-        pre: paragraph.pre
-      });
-    } else {
-      jack().description(paragraph.text, { pre: paragraph.pre });
-    }
-  }
 }
 
 export async function init(
@@ -87,17 +53,13 @@ export async function init(
   }
   for (const plugin of Plugin.Registrar.registered()) {
     if (plugin.options) {
-      apply(await plugin.options());
+      JackSpeak.args(await plugin.options());
     }
   }
   if (externalOptions) {
-    apply(externalOptions);
+    JackSpeak.args(externalOptions);
   }
-
-  const args = jack().parse() as Plugin.Arguments<Plugin.Options>;
-  const { positionals: p } = args;
-  positionals = p;
-
+  const args = JackSpeak.parse();
   await Plugin.Registrar.init(args);
   initialized = true;
   return args;
@@ -106,45 +68,14 @@ export async function init(
 export async function run(
   externalOptions?: Plugin.Options
 ): Promise<Plugin.AccumulatedResults | undefined> {
-  if (!initialized) {
-    await init(externalOptions);
-  }
-
-  if (
-    requirePositionals &&
-    (!positionals.length ||
-      (typeof requirePositionals == 'number' &&
-        positionals.length < requirePositionals))
-  ) {
-    throw new Error(
-      `Incorrect positional arguments (${requirePositionals} expected, ${positionals.length} provided)`
-    );
-  }
-
-  return await Plugin.Registrar.run();
-}
-
-export function usage() {
-  let usage = jack().usage();
-  if (requirePositionals) {
-    if (typeof requirePositionals === 'number') {
-      if (requirePositionals > 1) {
-        usage = usage.replace(
-          /\n\n/m, // FIXME hilariously unreliable regex!
-          // Issue URL: https://github.com/battis/qui-cli/issues/25
-          ` arg0..arg${requirePositionals - 1}\n\n`
-        );
-      } else {
-        usage = usage.replace(/\n\n/m, ' argument\n\n');
-      }
-    } else {
-      usage = usage.replace(/\n\n/m, ' argument0...\n\n');
+  try {
+    if (!initialized) {
+      await init(externalOptions);
     }
+    return await Plugin.Registrar.run();
+  } catch (e) {
+    const error = e as Error;
+    console.log(`${Colors.error(error.message)}\n\n${usage()}`);
+    process.exit(1);
   }
-  return usage;
-}
-
-export function usageMarkdown() {
-  return jack().usageMarkdown(); // FIXME format arguments
-  // Issue URL: https://github.com/battis/qui-cli/issues/24
 }
