@@ -9,5 +9,6 @@
 
 - [dev-command](./dev-command/): A distributable command-line app
 - [dev-plugin](./dev-plugin/): Define (and use) a plugin package
+- [dev-positionals](./dev-positionals/): Require named or unnamed positional arguments
 - [dev-sequenced-commands](./dev-sequenced-commands/): A hierarchy of interdependent plugins
 - [dev-structured](./dev-structured/): A folder hierarchy of commands bundled into a single callable command

@@ -1,9 +1,7 @@
-# Example: Command
+# Example: Positionals
 
-A distributable command-line app
+Require named or unnamed positional arguments
 
 # Notes
 
-- [Command.ts](./src/Command.ts) is a plugin that defines the command. See [@battis/qui-cli.plugin](../../packages/plugin/README.md#usage) for plugin documentation.
-- [index.ts](./src/index.ts) registers the `Command` plugin and run the app.
-- [package.json](./package.json) `bin` points to compiled script
+- Call `Positionals.require()` _after_ any other configuration. If `require()` is invoked first, you have to do your own math about numbers of positional arguments, including those loaded by your dependencies.
