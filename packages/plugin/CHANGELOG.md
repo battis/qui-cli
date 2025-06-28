@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.4.2](https://github.com/battis/qui-cli/compare/plugin/2.4.1...plugin/2.4.2) (2025-06-28)
+
+
+### Bug Fixes
+
+* use a K.I.S.S. approach to determining package conflicts ([6d77af9](https://github.com/battis/qui-cli/commit/6d77af99b8764efe8c990f76796552dabe6f8b19))
+
 ## [2.4.1](https://github.com/battis/qui-cli/compare/plugin/2.4.0...plugin/2.4.1) (2025-06-23)
 
 
