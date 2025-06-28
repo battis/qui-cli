@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.0.0](https://github.com/battis/qui-cli/compare/core/2.2.1...core/3.0.0) (2025-06-28)
+
+
+### ⚠ BREAKING CHANGES
+
+* add positional documentation to -h usage documentation
+* color-code command terms in -h usage output
+* reorder Help before JackSpeak to ensure -h flag operability
+
+### Features
+
+* add positional documentation to -h usage documentation ([667986b](https://github.com/battis/qui-cli/commit/667986b7036cabc3f45341b9b61283d142a2cb0a))
+* color-code command terms in -h usage output ([01fd5a2](https://github.com/battis/qui-cli/commit/01fd5a2c6a08436a558f85343b7eec47556d1727))
+* core plugins Positionals and JackSpeak ([c358fc4](https://github.com/battis/qui-cli/commit/c358fc437c1021a15a09b6c0be2fa8dfb9c9308a))
+
+
+### Bug Fixes
+
+* reorder Help before JackSpeak to ensure -h flag operability ([594f7ac](https://github.com/battis/qui-cli/commit/594f7ac93513bb55d714149f261a6e76c397931e))
+
 ## [2.2.1](https://github.com/battis/qui-cli/compare/core/2.2.0...core/2.2.1) (2025-06-23)
 
 
