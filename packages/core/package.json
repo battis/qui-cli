@@ -24,7 +24,8 @@
     "release": "commit-and-tag-version"
   },
   "dependencies": {
-    "jackspeak": "^4.1.1"
+    "jackspeak": "^4.1.1",
+    "wrap-ansi": "^9.0.0"
   },
   "devDependencies": {
     "@battis/qui-cli.colors": "workspace:*",

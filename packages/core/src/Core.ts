@@ -22,10 +22,11 @@ export async function configure(config: Configuration = {}) {
   const { requirePositionals, ...deprecated } = core;
   const jackspeak = {
     ...deprecated,
-    allowPositionals: !!Positionals.requirePositionals(
-      positionals,
-      requirePositionals
-    ),
+    allowPositionals:
+      !!Positionals.requirePositionalsIsDeprecatedAndShouldNotBeUsed(
+        positionals,
+        requirePositionals
+      ),
     ...jackOptions
   };
   if (jackspeak.allowPositionals === false) {

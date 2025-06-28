@@ -1,5 +1,6 @@
-import { Colors } from '@battis/qui-cli.colors';
+import * as Colors from '@battis/qui-cli.colors/dist/Colors.js';
 import * as Plugin from '@battis/qui-cli.plugin';
+import wrapAnsi from 'wrap-ansi';
 
 type PositionalConfig = {
   description?: string;
@@ -22,8 +23,8 @@ const configSet: PositionalConfigSet = {};
 
 let positionals: (string | undefined)[] = [];
 
-/** @deprecated Do not use, included for reverse compatibility */
-export function requirePositionals(
+/** @deprecated Do not use, included for backwards compatibility */
+export function requirePositionalsIsDeprecatedAndShouldNotBeUsed(
   positionals: Configuration,
   arg?: boolean | number
 ) {
@@ -33,20 +34,20 @@ export function requirePositionals(
     positionals.max === undefined
   ) {
     if (typeof arg === 'number') {
-      setMinArgs(arg);
-      setMaxArgs(arg);
+      requireAtLeast(arg);
+      requireNoMoreThan(arg);
     } else if (arg) {
-      setMinArgs(1);
+      requireAtLeast(1);
     }
   }
   return min;
 }
 
 export function configure(config: Configuration = {}) {
-  setMinArgs(Plugin.hydrate(config.min, min));
+  requireAtLeast(Plugin.hydrate(config.min, min));
   const m = Plugin.hydrate(config.max, max);
   if (m !== undefined) {
-    setMaxArgs(m);
+    requireNoMoreThan(m);
   }
 }
 
@@ -66,82 +67,159 @@ export function require(positionalConfigSet: PositionalConfigSet) {
   }
 }
 
-export function setMinArgs(minimumArgs: number) {
+function names() {
+  return Object.keys(configSet);
+}
+
+function namedCount() {
+  return names().length;
+}
+
+export function minimumArgCount() {
+  return min;
+}
+
+export function requireAtLeast(minimumArgs: number) {
   if (minimumArgs < 0) {
     throw new Error(`Cannot require fewer than 0 positional args.`);
   }
   if (max !== undefined && minimumArgs > max) {
     throw new Error(
-      `Cannot require ${minimumArgs} positional args when the maximum nunber of positional args is ${max}.`
+      `Cannot require min ${minimumArgs} positional args, maximum ${max} required positional args are configured.`
     );
   }
   min = minimumArgs;
 }
 
-export function setMaxArgs(maximumArgs: number) {
-  if (maximumArgs >= min && maximumArgs >= Object.keys(configSet).length) {
+export function maximumArgCount() {
+  return max;
+}
+
+export function requireNoMoreThan(maximumArgs: number) {
+  if (maximumArgs >= min && maximumArgs >= namedCount()) {
     max = maximumArgs;
   } else {
     throw new Error(
-      `Cannot require max ${max} positional args, ${Object.keys(configSet).length} required positional args are configured.`
+      `Cannot require max ${max} positional args, minimum ${namedCount()} required positional args are configured.`
     );
   }
+}
+
+export function allowOptionalArgs() {
+  max = undefined;
+}
+
+export function allowOnlyNamedArgs() {
+  requireNoMoreThan(min);
+}
+
+export function minimumUnnamedArgCount() {
+  return Math.max(0, min - namedCount());
+}
+
+/**
+ * Caution: this should not be set within plugins due to potential confusion and
+ * overlap!
+ *
+ * @param minUnnamed Number of optional args to allow
+ */
+export function requireAtLeastUnnamedArgs(minUnnamed: number) {
+  if (max && min + minUnnamed > max) {
+    throw new Error(
+      `Cannot require min ${minUnnamed} unnamed positional args, maximum ${max - namedCount()} unnamed positioal args are configure.`
+    );
+  }
+  requireAtLeast(min + minUnnamed);
+}
+
+export function maximumUnnamedCount() {
+  return max ? max - namedCount() : undefined;
+}
+
+/**
+ * Caution: this should not be set within plugins due to potential confusion and
+ * overlap!
+ *
+ * @param maxUnnamed Number of optional args to allow
+ */
+export function requireNoMoreThanUnnamedArgs(maxUnnamed: number) {
+  if (maxUnnamed < 0) {
+    throw new Error(
+      `Cannot require a negative number of unnamed positional args.`
+    );
+  }
+  if (maxUnnamed < min - namedCount()) {
+    throw new Error(
+      `Cannot require max ${maxUnnamed} unnamed positional args, minimum ${min - namedCount()} unnamed positional args are configured.`
+    );
+  }
+  requireNoMoreThan(namedCount() + maxUnnamed);
 }
 
 export function init(args: Plugin.ExpectedArguments<() => Plugin.Options>) {
   positionals = [...args.positionals];
 }
 
-function usageArgs() {
-  const names = Object.keys(configSet);
-  const named = names.length;
-  if (max && max > named) {
-    const unnamed = max - named;
-    for (let i = 0; i < unnamed; i++) {
-      names.push(`arg${i}`);
-    }
-    names[min] = `[${names[min]}`;
-    names[names.length - 1] = `${names[names.length - 1]}]`;
-    return names;
-  } else {
-    names.push('[...]');
-    return names;
+function unnamed(args: string[], count: number) {
+  for (let i = 0; i < count; i++) {
+    args.push(`arg${i}`);
   }
+  return args;
+}
+
+function optional(args: string[], required: number) {
+  if (required < args.length) {
+    args[required] = `[${args[required]}`;
+    args[args.length - 1] = `${args[args.length - 1]}]`;
+  }
+  return args;
+}
+
+function ellipsis(args: string[], start: number, end: number) {
+  if (end - start > 3) {
+    args.splice(start + 1, end - start - 2, '...');
+  }
+  return args;
+}
+
+export function usageArgs() {
+  let args = names();
+  args = unnamed(args, (max || min) - namedCount());
+  if (!max) {
+    args.push('...');
+  }
+  args = optional(args, min);
+  if (max) {
+    args = ellipsis(args, min, args.length);
+  }
+  args = ellipsis(args, namedCount(), min);
+
+  return args.map((arg) => Colors.positionalArg(arg)).join(' ');
+}
+
+function wrap(text: string, indent: number) {
+  return wrapAnsi(text, process.stdout.columns - indent, { wordWrap: true })
+    .split('\n')
+    .map((line) => {
+      for (let i = 0; i < indent; i++) {
+        line = ' ' + line;
+      }
+      return line;
+    })
+    .join('\n');
 }
 
 export function usage(usage: string): string {
-  const lines = usage.split('\n');
-  let u = false;
-  let i = 0;
-  for (i = 0; i < lines.length; i++) {
-    if (lines[i] === 'Usage:') {
-      u = true;
-    }
-    if (u && lines[i] === '') {
-      break;
-    }
-  }
-  i--;
-  const args = usageArgs();
-  let cumulative = 0;
-  for (let a = 0; a < args.length; a++) {
-    if (
-      lines[i].length - 9 * cumulative + args[a].length + 1 <=
-      process.stdout.columns
-    ) {
-      lines[i] += ` ${Colors.positionalArg(args[a])}`;
-      cumulative++;
-    } else {
-      lines.splice(i + 1, 0, `  ${Colors.positionalArg(args[a])}`);
-      cumulative = 1;
-      i++;
-    }
-  }
-  return lines.join('\n');
-}
-
-export function usageMarkdown(usageMarkdown: string): string {
-  return usageMarkdown;
+  const pre = usage.slice(0, usage.indexOf('\n') + 1);
+  const cmd = usage.slice(pre.length, usage.indexOf('\n\n'));
+  const post = usage.slice(pre.length + cmd.length);
+  return `${pre}${wrap(
+    `${cmd
+      .split('\n')
+      .map((token) => token.trim())
+      .join(' ')} ${usageArgs()}`,
+    2
+  )}${post}`;
 }
 
 export function run() {
@@ -156,7 +234,7 @@ export function run() {
       `Expected no more than ${max} positional arguments, received ${positionals.length} positional argument${s}.`
     );
   }
-  Object.keys(configSet).forEach((name, i) => {
+  names().forEach((name, i) => {
     if (configSet[name].validate) {
       const message = configSet[name].validate(positionals[i]);
       if (!message || typeof message === 'string') {
@@ -169,11 +247,27 @@ export function run() {
 }
 
 export function get(positionalArgName: string) {
-  const i = Object.keys(configSet).indexOf(positionalArgName);
+  const i = names().indexOf(positionalArgName);
   if (i < 0) {
     throw new Error(
       `'${positionalArgName}' is not a defined positional argument.`
     );
   }
   return positionals[i];
+}
+
+export function namedArgs() {
+  const args: Record<string, string | undefined> = {};
+  for (let i = 0; i < namedCount(); i++) {
+    args[names()[i]] = positionals[i];
+  }
+  return args;
+}
+
+export function unnamedArgs() {
+  return positionals.slice(namedCount());
+}
+
+export function unnamedArg(i: number) {
+  return unnamedArgs()[i];
 }
