@@ -2,12 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
-## [2.1.6](https://github.com/battis/qui-cli/compare/qui-cli/2.1.5...qui-cli/2.1.6) (2025-06-23)
+## [3.0.0](https://github.com/battis/qui-cli/compare/qui-cli/2.1.6...qui-cli/3.0.0) (2025-06-28)
 
+Updating dependencies to @battis/qui-cli.core@3.x
+
+## [2.1.6](https://github.com/battis/qui-cli/compare/qui-cli/2.1.5...qui-cli/2.1.6) (2025-06-23)
 
 ### Bug Fixes
 
-* update peer dependency versions to minimum viable ([a776908](https://github.com/battis/qui-cli/commit/a7769085adef6da665da7a67cb143af1e0bba6be))
+- update peer dependency versions to minimum viable ([a776908](https://github.com/battis/qui-cli/commit/a7769085adef6da665da7a67cb143af1e0bba6be))
 
 ## [2.1.5](https://github.com/battis/qui-cli/compare/qui-cli/2.1.4...qui-cli/2.1.5) (2025-06-23)
 
