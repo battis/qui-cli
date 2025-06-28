@@ -1,20 +1,7 @@
-import { Core, Positionals } from '@battis/qui-cli.core';
+import { build } from '@battis/qui-cli.structured';
+import path from 'node:path';
 
-// require at least 2 and no more than 5 unnamed positional args (3 optional)
-Positionals.configure({ min: 2, max: 5 });
-
-// also require three named args
-Positionals.require({ alpha: {}, beta: {}, gamma: {} });
-
-// also require six more named args
-Positionals.require({
-  a: {},
-  b: {},
-  c: {},
-  d: {},
-  e: {},
-  f: {}
+await build({
+  fileName: import.meta.filename,
+  commandDirPath: path.join(import.meta.dirname, 'Commands')
 });
-
-await Core.run();
-console.log(Positionals.get('gamma'));

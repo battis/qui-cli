@@ -14,8 +14,8 @@
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "bin": {
-    "myCommand": "./dist/index.js"
+  "directories": {
+    "bin": "./bin"
   },
   "scripts": {
     "clean": "del ./dist",
@@ -26,8 +26,7 @@
   "dependencies": {
     "@battis/qui-cli.colors": "workspace:*",
     "@battis/qui-cli.core": "workspace:*",
-    "@battis/qui-cli.log": "workspace:*",
-    "@battis/qui-cli.plugin": "workspace:*"
+    "@battis/qui-cli.log": "workspace:*"
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.6",

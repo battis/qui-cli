@@ -12,8 +12,8 @@
     "url": "https://github.com/battis"
   },
   "type": "module",
-  "bin": {
-    "sequencedCommand": "./dist/index.js"
+  "directories": {
+    "bin": "./bin"
   },
   "scripts": {
     "clean": "del ./dist",

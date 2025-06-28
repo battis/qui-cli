@@ -23,6 +23,30 @@ importers:
       '@commitlint/config-pnpm-scopes':
         specifier: ^19.8.1
         version: 19.8.1
+      '@examples/dev-command':
+        specifier: workspace:*
+        version: link:examples/dev-command
+      '@examples/dev-plugin.consumer-cli':
+        specifier: workspace:*
+        version: link:examples/dev-plugin/plugin-consumer-cli
+      '@examples/dev-plugin.consumer-modular':
+        specifier: workspace:*
+        version: link:examples/dev-plugin/plugin-consumer-modular
+      '@examples/dev-positionals':
+        specifier: workspace:*
+        version: link:examples/dev-positionals
+      '@examples/dev-sequenced-commands':
+        specifier: workspace:*
+        version: link:examples/dev-sequenced-commands/command
+      '@examples/dev-structured':
+        specifier: workspace:*
+        version: link:examples/dev-structured
+      '@examples/usage-cli':
+        specifier: workspace:*
+        version: link:examples/usage-cli
+      '@examples/usage-modular':
+        specifier: workspace:*
+        version: link:examples/usage-modular
       '@tsconfig/node20':
         specifier: ^20.1.6
         version: 20.1.6
@@ -53,9 +77,34 @@ importers:
       '@battis/qui-cli.log':
         specifier: workspace:*
         version: link:../../packages/log
+    devDependencies:
+      '@tsconfig/node20':
+        specifier: ^20.1.6
+        version: 20.1.6
+      del-cli:
+        specifier: ^6.0.0
+        version: 6.0.0
+      npm-run-all:
+        specifier: ^4.1.5
+        version: 4.1.5
+      typescript:
+        specifier: ^5.8.3
+        version: 5.8.3
+
+  examples/dev-plugin/plugin-conflict:
+    dependencies:
+      '@battis/qui-cli.core':
+        specifier: workspace:*
+        version: link:../../../packages/core
+      '@battis/qui-cli.log':
+        specifier: workspace:*
+        version: link:../../../packages/log
       '@battis/qui-cli.plugin':
         specifier: workspace:*
-        version: link:../../packages/plugin
+        version: link:../../../packages/plugin
+      '@examples/dev-plugin.provider':
+        specifier: workspace:*
+        version: link:../plugin-provider
     devDependencies:
       '@tsconfig/node20':
         specifier: ^20.1.6
@@ -152,10 +201,16 @@ importers:
       '@battis/qui-cli.plugin':
         specifier: workspace:*
         version: link:../../packages/plugin
+      '@battis/qui-cli.structured':
+        specifier: workspace:*
+        version: link:../../packages/structured
     devDependencies:
       '@tsconfig/node20':
         specifier: ^20.1.6
         version: 20.1.6
+      copy:
+        specifier: ^0.3.2
+        version: 0.3.2
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -361,9 +416,18 @@ importers:
       '@tsconfig/node20':
         specifier: ^20.1.6
         version: 20.1.6
+      del-cli:
+        specifier: '*'
+        version: 6.0.0
+      npm-run-all:
+        specifier: '*'
+        version: 4.1.5
       tsx:
         specifier: ^4.20.3
         version: 4.20.3
+      typescript:
+        specifier: ^5.8.3
+        version: 5.8.3
 
   examples/usage-modular:
     dependencies:
@@ -377,9 +441,18 @@ importers:
       '@tsconfig/node20':
         specifier: ^20.1.6
         version: 20.1.6
+      del-cli:
+        specifier: '*'
+        version: 6.0.0
+      npm-run-all:
+        specifier: '*'
+        version: 4.1.5
       tsx:
         specifier: ^4.20.3
         version: 4.20.3
+      typescript:
+        specifier: ^5.8.3
+        version: 5.8.3
 
   packages/colors:
     dependencies:
@@ -414,6 +487,9 @@ importers:
       jackspeak:
         specifier: ^4.1.1
         version: 4.1.1
+      wrap-ansi:
+        specifier: ^9.0.0
+        version: 9.0.0
     devDependencies:
       '@battis/qui-cli.colors':
         specifier: workspace:*
@@ -718,9 +794,6 @@ importers:
       change-case:
         specifier: ^5.4.4
         version: 5.4.4
-      jackspeak:
-        specifier: ^4.1.1
-        version: 4.1.1
     devDependencies:
       '@tsconfig/node20':
         specifier: ^20.1.6
@@ -5280,6 +5353,10 @@ packages:
   wrap-ansi@8.1.0:
     resolution: {integrity: sha512-si7QWI6zUMq56bESFvagtmzMdGOtoxfR+Sez11Mobfc7tm+VkUckk9bW2UeffTGVUbOksxmSw0AA2gs8g71NCQ==}
     engines: {node: '>=12'}
+
+  wrap-ansi@9.0.0:
+    resolution: {integrity: sha512-G8ura3S+3Z2G+mkgNRq8dqaFZAuxfsxpBB8OCTGRTCtp+l/v9nbFNmCUP1BZMts3G1142MsZfn6eeUKrr4PD1Q==}
+    engines: {node: '>=18'}
 
   wrappy@1.0.2:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
@@ -10607,6 +10684,12 @@ snapshots:
     dependencies:
       ansi-styles: 6.2.1
       string-width: 5.1.2
+      strip-ansi: 7.1.0
+
+  wrap-ansi@9.0.0:
+    dependencies:
+      ansi-styles: 6.2.1
+      string-width: 7.2.0
       strip-ansi: 7.1.0
 
   wrappy@1.0.2: {}

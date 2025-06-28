@@ -26,7 +26,7 @@ const args = await CLI.init({
 CLI.log.info({ args });
 
 // optionally run all loaded plugins (may not all have runnable methods)
-await CLI.run()
+await CLI.run();
 
 // @battis/qui-cli.env example
 CLI.env.set({

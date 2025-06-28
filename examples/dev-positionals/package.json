@@ -1,11 +1,11 @@
 {
   "name": "@examples/dev-positionals",
   "version": "0.0.0",
-  "homepage": "https://github.com/battis/qui-cli/tree/main/examples/dev-command#readme",
+  "homepage": "https://github.com/battis/qui-cli/tree/main/examples/dev-positionals#readme",
   "repository": {
     "type": "git",
     "url": "https://github.com/battis/qui-cli.git",
-    "directory": "examples/dev-command"
+    "directory": "examples/dev-positionals"
   },
   "author": {
     "name": "Seth Battis",
@@ -14,23 +14,26 @@
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "bin": {
-    "myCommand": "./dist/index.js"
+  "directories": {
+    "bin": "./bin"
   },
   "scripts": {
     "clean": "del ./dist",
     "build": "run-s build:*",
     "build:clean": "run-s clean",
-    "build:compile": "tsc"
+    "build:compile": "tsc",
+    "build:man-files": "copy './src/**/.man.json' ./dist"
   },
   "dependencies": {
     "@battis/qui-cli.colors": "workspace:*",
     "@battis/qui-cli.core": "workspace:*",
     "@battis/qui-cli.log": "workspace:*",
-    "@battis/qui-cli.plugin": "workspace:*"
+    "@battis/qui-cli.plugin": "workspace:*",
+    "@battis/qui-cli.structured": "workspace:*"
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.6",
+    "copy": "^0.3.2",
     "del-cli": "^6.0.0",
     "npm-run-all": "^4.1.5",
     "typescript": "^5.8.3"
