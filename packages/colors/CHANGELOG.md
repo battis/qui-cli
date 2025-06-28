@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.1.0](https://github.com/battis/qui-cli/compare/colors/2.0.4...colors/2.1.0) (2025-06-28)
+
+
+### Features
+
+* add positionalArg() format ([cb0d342](https://github.com/battis/qui-cli/commit/cb0d342c7e2119b7131b147b0d9ea68ffae62749))
+* more man page colors ([aea3ec4](https://github.com/battis/qui-cli/commit/aea3ec45d27fcce20ea726e1a14477ff05c8005b))
+
 ## [2.0.4](https://github.com/battis/qui-cli/compare/colors/2.0.3...colors/2.0.4) (2025-06-23)
 
 
