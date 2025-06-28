@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.1.4](https://github.com/battis/qui-cli/compare/structured/0.1.3...structured/0.1.4) (2025-06-28)
+
+
+### Features
+
+* use Core.JackSpeak plugin ([de7912e](https://github.com/battis/qui-cli/commit/de7912e782eeb9ae944ea6a65216b987473a59e1))
+
 ## [0.1.3](https://github.com/battis/qui-cli/compare/structured/0.1.2...structured/0.1.3) (2025-06-23)
 
 
