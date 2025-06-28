@@ -27,8 +27,7 @@
     "@battis/qui-cli.colors": "workspace:*",
     "@battis/qui-cli.core": "workspace:*",
     "@battis/qui-cli.plugin": "workspace:*",
-    "change-case": "^5.4.4",
-    "jackspeak": "^4.1.1"
+    "change-case": "^5.4.4"
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.6",

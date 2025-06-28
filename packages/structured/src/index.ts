@@ -1,8 +1,7 @@
 import { Colors } from '@battis/qui-cli.colors';
-import { Core } from '@battis/qui-cli.core';
+import { Core, JackSpeak } from '@battis/qui-cli.core';
 import * as Plugin from '@battis/qui-cli.plugin';
 import { camelCase } from 'change-case';
-import { Jack } from 'jackspeak';
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -14,6 +13,11 @@ type Command = {
 
 type Options = {
   fileName: string;
+  /**
+   * @deprecated Structure bin directory for better compatibility
+   * @see https://github.com/battis/qui-cli/tree/main/examples/dev-structured/bin
+   * @see https://github.com/battis/qui-cli/blob/main/examples/dev-structured/package.json
+   */
   commandName?: string;
   commandDirPath?: string;
   commandCase?: (token: string) => string;
@@ -64,25 +68,24 @@ export async function build({
     }
   } else {
     process.argv[1] = `${process.argv[1]} <command>`;
-    const jack = new Jack();
     const manPath = path.join(commandDirPath, '.man.json');
     let man: Record<string, NonNullable<Plugin.Options['man']>> = {};
     if (fs.existsSync(manPath)) {
       man = JSON.parse(fs.readFileSync(manPath).toString());
-      jack.description('Commands may be:');
+      JackSpeak.jack().description('Commands may be:');
       for (const module in man) {
-        jack.heading(Colors.command(module), 2);
+        JackSpeak.jack().heading(Colors.command(module), 2);
         for (const paragraph of man[module]) {
-          jack.description(paragraph.text);
+          JackSpeak.jack().description(paragraph.text);
         }
       }
     } else {
-      jack.description(
+      JackSpeak.jack().description(
         `Commands may be: ${availableCommands
           .map((command) => Colors.command(command.name))
           .join(', ')}`
       );
     }
-    console.log(jack.usage());
+    console.log(JackSpeak.jack().usage());
   }
 }
