@@ -11,9 +11,14 @@ export function registered() {
 }
 
 export async function register(plugin: Plugin) {
-  for (const p of plugins) {
-    if (p.name == plugin.name) {
-      throw new Error(`Plugin '${p.name}' has already been registered`);
+  for (let i = 0; i < plugins.length; i++) {
+    if (plugins[i].name === plugin.name) {
+      if (plugins[i] !== plugin) {
+        throw new Error(
+          `A plugin named '${plugin.name}' has already been registered.`
+        );
+      }
+      return;
     }
   }
   plugins.push(plugin);
