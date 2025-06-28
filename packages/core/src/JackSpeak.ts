@@ -7,7 +7,7 @@ export const name = 'jackspeak';
 
 let instance: Jack | undefined = undefined;
 
-function jack() {
+export function jack() {
   if (!instance) {
     configure();
   }
@@ -56,8 +56,4 @@ export function parse() {
 
 export function usage() {
   return jack().usage();
-}
-
-export function usageMarkdown() {
-  return jack().usageMarkdown();
 }
