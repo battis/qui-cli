@@ -38,6 +38,8 @@ Log.info(
 );
 ```
 
+See [examples](https://github.com/battis/qui-cli/tree/main/examples#readme) for common use cases.
+
 ## Core Plugins
 
 Three core plugins are registered automatically to provide consistent functionality.

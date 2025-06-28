@@ -14,9 +14,9 @@ npm install @battis/qui-cli
 ## Usage
 
 ```ts
-import cli from '@battis/qui-cli';
+import CLI from '@battis/qui-cli';
 
-const args = cli.init({
+const args = CLI.init({
   opt: {
     example: {
       description: 'An example option'
@@ -24,10 +24,10 @@ const args = cli.init({
   }
 });
 
-cli.log.debug(args);
+CLI.log.debug(args);
 ```
 
-See [examples](https://github.com/battis/qui-cli/tree/main/examples) for more.
+See [examples](https://github.com/battis/qui-cli/tree/main/examples#readme) for common use cases.
 
 This package is a convenience wrapper for a number of individual, more-focused plugins that can operate individually or in concert to support developing CLI apps. This package combines…
 
