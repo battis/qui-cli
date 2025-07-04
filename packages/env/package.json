@@ -24,7 +24,7 @@
     "release": "commit-and-tag-version"
   },
   "dependencies": {
-    "dotenv": "^16.5.0"
+    "dotenv": "^17.0.1"
   },
   "devDependencies": {
     "@battis/qui-cli.plugin": "workspace:*",
