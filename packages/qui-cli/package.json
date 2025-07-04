@@ -37,7 +37,7 @@
     "@inquirer/prompts": "^7.5.3",
     "@tsconfig/node20": "^20.1.6",
     "@types/is-valid-path": "^0.1.2",
-    "@types/node": "^22.15.32",
+    "@types/node": "^24.0.10",
     "@types/shelljs": "^0.8.16",
     "commit-and-tag-version": "^12.5.1",
     "del-cli": "^6.0.0",
