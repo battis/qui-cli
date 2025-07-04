@@ -47,7 +47,7 @@
   },
   "peerDependencies": {
     "@battis/qui-cli.colors": "2.x",
-    "@battis/qui-cli.core": "2.x",
+    "@battis/qui-cli.core": "3.x",
     "@battis/qui-cli.env": "2.x",
     "@battis/qui-cli.log": "2.x",
     "@battis/qui-cli.plugin": "^2.4",
