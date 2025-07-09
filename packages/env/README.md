@@ -27,6 +27,29 @@ Env.set({ key: 'EXAMPLE', value: parseInt(process.env.EXAMPLE || '0') + 1 });
 
 Environment variables (from any `.env` file loaded by this plugin) are not available until after the `Env.configure()` has been called, which is not guaranteed to have occurred unless invoked directly by another plugin or _after_ the plugin has been initializied by `init()`. Any plugin that depends on this plugin can assume that the `.env` file environemnt variables are available in the dependent plugin's `init()` and `run()` methods, but will **not** be available in the dependent plugin's `options()` method and will only **sometimes** be available in the dependent plugin's `configure()` method.
 
+### 1Password integration
+
+If desired, this package will integrate with [@1password/sdk](https://www.npmjs.com/package/@1password/sdk) to inject values from 1Password vaults into the environment for use by the script.
+
+1. Follow [the 1Password CLI directions to create a service account](https://developer.1password.com/docs/service-accounts/get-started/).
+2. Install [@1password/sdk](https://www.npmjs.com/package/@1password/sdk) as a peer of `@battis/qui-cli.env`.
+3. Update environment variables to be [secret references](https://developer.1password.com/docs/cli/secret-references)
+4. Inject the Service Account Token into the environment with the name `OP_SERVICE_ACCOUNT_TOKEN`.
+5. Run!
+
+`.env`:
+
+```env
+FOO="op://dev/my-project/env/foo"
+BAR="op://dev/my-project/env/bar"
+```
+
+If the Service Account Token is stored in 1Password under the name `MY_SERVICE_ACCOUNT_TOKEN`, the script could be run:
+
+```sh
+OP_SERVICE_ACCOUNT_TOKEN="$(op item get MY_SERVICE_ACCOUNT_TOKEN --fields credential --reveal)" node path/to/script
+```
+
 ## Configuration
 
 ```ts

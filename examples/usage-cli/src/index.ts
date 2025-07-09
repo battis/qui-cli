@@ -31,7 +31,7 @@ await CLI.run();
 // @battis/qui-cli.env example
 CLI.env.set({
   key: 'RUNS',
-  value: `${parseInt(CLI.env.get({ key: 'RUNS' }) || '0') + 1}`
+  value: `${parseInt((await CLI.env.get({ key: 'RUNS' })) || '0') + 1}`
 });
 CLI.log.info(`${process.env.RUNS} runs (.env updated)`);
 

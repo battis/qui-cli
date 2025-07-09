@@ -66,6 +66,34 @@ importers:
         specifier: 3.5.3
         version: 3.5.3
 
+  examples/dev-1password-env:
+    dependencies:
+      '@battis/qui-cli.colors':
+        specifier: workspace:*
+        version: link:../../packages/colors
+      '@battis/qui-cli.core':
+        specifier: workspace:*
+        version: link:../../packages/core
+      '@battis/qui-cli.env':
+        specifier: workspace:*
+        version: link:../../packages/env
+      '@battis/qui-cli.log':
+        specifier: workspace:*
+        version: link:../../packages/log
+    devDependencies:
+      '@tsconfig/node20':
+        specifier: ^20.1.6
+        version: 20.1.6
+      del-cli:
+        specifier: ^6.0.0
+        version: 6.0.0
+      npm-run-all:
+        specifier: ^4.1.5
+        version: 4.1.5
+      typescript:
+        specifier: ^5.8.3
+        version: 5.8.3
+
   examples/dev-command:
     dependencies:
       '@battis/qui-cli.colors':
@@ -518,10 +546,16 @@ importers:
 
   packages/env:
     dependencies:
+      '@battis/import-package-json':
+        specifier: ^0.1.7
+        version: 0.1.7
       dotenv:
         specifier: ^16.6.1
         version: 16.6.1
     devDependencies:
+      '@1password/sdk':
+        specifier: ^0.3.1
+        version: 0.3.1
       '@battis/qui-cli.plugin':
         specifier: workspace:*
         version: link:../plugin
@@ -858,6 +892,12 @@ importers:
         version: 5.8.3
 
 packages:
+
+  '@1password/sdk-core@0.3.1':
+    resolution: {integrity: sha512-zFkbRznmE47kpke10OpO/9R0AF5csNWS+naFbadgXuFX1LlxY+2C28NSKbCXhLTqmcuWifBfPdZQ728GJ1i5xg==}
+
+  '@1password/sdk@0.3.1':
+    resolution: {integrity: sha512-20zbQfqsjcECT0gvnAw4zONJDt3XQgNH946pZR0NV1Qxukyaz/DKB0cBnBNCCEWZg93Bah8poaR6gJCyuNX14w==}
 
   '@asamuzakjp/css-color@3.2.0':
     resolution: {integrity: sha512-K1A6z8tS3XsmCMM86xoWdn7Fkdn9m6RSVtocUrJYIwZnFVkng/PvkEoWtOWmP+Scc6saYWHWZYbndEEXxl24jw==}
@@ -5394,6 +5434,12 @@ packages:
     resolution: {integrity: sha512-JED8pB50qbA4FOkDol0bYF/p60qSEDQqBD0/qeIrUCG1KbPBIQ776fCUNb9ldbPcSTxA69g/47XTo4TqWiuXOA==}
 
 snapshots:
+
+  '@1password/sdk-core@0.3.1': {}
+
+  '@1password/sdk@0.3.1':
+    dependencies:
+      '@1password/sdk-core': 0.3.1
 
   '@asamuzakjp/css-color@3.2.0':
     dependencies:

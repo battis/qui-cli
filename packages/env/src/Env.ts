@@ -1,3 +1,4 @@
+import { importLocal } from '@battis/import-package-json';
 import * as Plugin from '@battis/qui-cli.plugin';
 import '@battis/qui-cli.root';
 import { Root } from '@battis/qui-cli.root';
@@ -17,25 +18,47 @@ let root: string | undefined = undefined;
 let load: boolean = true;
 let pathToEnv = '.env';
 
-export function configure(config: Configuration = {}) {
+export async function configure(config: Configuration = {}) {
   root = Plugin.hydrate(config.root, root);
   load = Plugin.hydrate(config.load, load);
   pathToEnv = Plugin.hydrate(config.path, pathToEnv);
 
   if (load) {
-    parse();
+    await parse();
   }
 }
 
-export function parse(file = pathToEnv) {
+export async function parse(file = pathToEnv) {
   const filePath = path.resolve(
     root || Root.path(),
     typeof file === 'string' ? file : '.env'
   );
   if (fs.existsSync(filePath)) {
-    const env = dotenv.config({ path: filePath });
+    const env = dotenv.config({ path: filePath, processEnv: {} });
     if (env.error) {
       throw env.error;
+    }
+    const { createClient } = await import('@1password/sdk');
+    const auth =
+      env.parsed?.OP_SERVICE_ACCOUNT_TOKEN ||
+      process.env.OP_SERVICE_ACCOUNT_TOKEN;
+    if (createClient && auth) {
+      const pkg = await importLocal(
+        path.join(import.meta.dirname, '../package.json')
+      );
+      const client = await createClient({
+        auth,
+        integrationName: pkg.name!.replace(/[/@]+/g, '.'),
+        integrationVersion: pkg.version!
+      });
+      for (const key in env.parsed) {
+        if (/^op:\/\//.test(env.parsed[key])) {
+          env.parsed[key] = await client.secrets.resolve(env.parsed[key]);
+        }
+        process.env[key] = env.parsed[key];
+      }
+    } else {
+      process.env = { ...process.env, ...env.parsed };
     }
     return env.parsed || {};
   }
@@ -47,16 +70,16 @@ type GetOptions = {
   file?: string;
 };
 
-export function get({ key, file = pathToEnv }: GetOptions) {
+export async function get({ key, file = pathToEnv }: GetOptions) {
   if (fs.existsSync(path.resolve(root || Root.path(), file))) {
-    return parse(file)[key];
+    return (await parse(file))[key];
   }
   return undefined;
 }
 
-export function exists({ key, file = pathToEnv }: GetOptions) {
+export async function exists({ key, file = pathToEnv }: GetOptions) {
   if (fs.existsSync(path.resolve(root || Root.path(), file))) {
-    return !!parse(file)[key];
+    return !!(await parse(file))[key];
   }
   return false;
 }
@@ -69,7 +92,7 @@ type SetOptions = {
   ifNotExists?: boolean;
 };
 
-export function set({
+export async function set({
   key,
   value,
   file = pathToEnv,
@@ -77,7 +100,7 @@ export function set({
   ifNotExists = false
 }: SetOptions) {
   const filePath = path.resolve(root || Root.path(), file);
-  if (ifNotExists === false || false === exists({ key, file })) {
+  if (ifNotExists === false || false === (await exists({ key, file }))) {
     let env = '';
     if (fs.existsSync(filePath)) {
       env = fs.readFileSync(filePath).toString();
