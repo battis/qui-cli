@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.0.0](https://github.com/battis/qui-cli/compare/env/2.1.2...env/3.0.0) (2025-07-09)
+
+
+### ⚠ BREAKING CHANGES
+
+* optional support for 1Password secret references in .env
+
+### Features
+
+* optional support for 1Password secret references in .env ([169fa3a](https://github.com/battis/qui-cli/commit/169fa3adbdafd3180ea3a9894a3695e6b0c846e4)), closes [/github.com/battis/qui-cli/tree/main/packages/env#1](https://github.com/battis//github.com/battis/qui-cli/tree/main/packages/env/issues/1)
+
 ## [2.1.2](https://github.com/battis/qui-cli/compare/env/2.1.1...env/2.1.2) (2025-06-23)
 
 
