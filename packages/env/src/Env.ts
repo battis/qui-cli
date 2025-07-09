@@ -1,3 +1,4 @@
+import type { createClient } from '@1password/sdk';
 import { importLocal } from '@battis/import-package-json';
 import * as Plugin from '@battis/qui-cli.plugin';
 import '@battis/qui-cli.root';
@@ -38,15 +39,21 @@ export async function parse(file = pathToEnv) {
     if (env.error) {
       throw env.error;
     }
-    const { createClient } = await import('@1password/sdk');
+    let create1PasswordClient: typeof createClient | undefined = undefined;
+    try {
+      const sdk = await import('@1password/sdk');
+      create1PasswordClient = sdk.createClient;
+    } catch (_) {
+      // ignore error;
+    }
     const auth =
       env.parsed?.OP_SERVICE_ACCOUNT_TOKEN ||
       process.env.OP_SERVICE_ACCOUNT_TOKEN;
-    if (createClient && auth) {
+    if (create1PasswordClient && auth) {
       const pkg = await importLocal(
         path.join(import.meta.dirname, '../package.json')
       );
-      const client = await createClient({
+      const client = await create1PasswordClient({
         auth,
         integrationName: pkg.name!.replace(/[/@]+/g, '.'),
         integrationVersion: pkg.version!
