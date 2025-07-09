@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.0.1](https://github.com/battis/qui-cli/compare/env/3.0.0...env/3.0.1) (2025-07-09)
+
+
+### Bug Fixes
+
+* throw no errors if @1password/sdk is not present ([9176a45](https://github.com/battis/qui-cli/commit/9176a45e32b5ba225eef4d19a21bc5115ad7cadf))
+
 ## [3.0.0](https://github.com/battis/qui-cli/compare/env/2.1.2...env/3.0.0) (2025-07-09)
 
 
