@@ -1,5 +1,3 @@
-import type { createClient } from '@1password/sdk';
-import { importLocal } from '@battis/import-package-json';
 import * as Plugin from '@battis/qui-cli.plugin';
 import '@battis/qui-cli.root';
 import { Root } from '@battis/qui-cli.root';
@@ -35,37 +33,9 @@ export async function parse(file = pathToEnv) {
     typeof file === 'string' ? file : '.env'
   );
   if (fs.existsSync(filePath)) {
-    const env = dotenv.config({ path: filePath, processEnv: {} });
+    const env = dotenv.config({ path: filePath });
     if (env.error) {
       throw env.error;
-    }
-    let create1PasswordClient: typeof createClient | undefined = undefined;
-    try {
-      const sdk = await import('@1password/sdk');
-      create1PasswordClient = sdk.createClient;
-    } catch (_) {
-      // ignore error;
-    }
-    const auth =
-      env.parsed?.OP_SERVICE_ACCOUNT_TOKEN ||
-      process.env.OP_SERVICE_ACCOUNT_TOKEN;
-    if (create1PasswordClient && auth) {
-      const pkg = await importLocal(
-        path.join(import.meta.dirname, '../package.json')
-      );
-      const client = await create1PasswordClient({
-        auth,
-        integrationName: pkg.name!.replace(/[/@]+/g, '.'),
-        integrationVersion: pkg.version!
-      });
-      for (const key in env.parsed) {
-        if (/^op:\/\//.test(env.parsed[key])) {
-          env.parsed[key] = await client.secrets.resolve(env.parsed[key]);
-        }
-        process.env[key] = env.parsed[key];
-      }
-    } else {
-      process.env = { ...process.env, ...env.parsed };
     }
     return env.parsed || {};
   }
@@ -133,7 +103,11 @@ type RemoveOptions = {
   comment?: string;
 };
 
-export function remove({ key, file = pathToEnv, comment }: RemoveOptions) {
+export async function remove({
+  key,
+  file = pathToEnv,
+  comment
+}: RemoveOptions) {
   const filePath = path.resolve(root || Root.path(), file);
   if (fs.existsSync(filePath)) {
     const env = fs.readFileSync(filePath).toString();
