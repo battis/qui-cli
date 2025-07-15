@@ -33,7 +33,7 @@
     "@examples/usage-cli": "workspace:*",
     "@examples/usage-modular": "workspace:*",
     "@tsconfig/node20": "^20.1.6",
-    "@types/node": "^22.16.2",
+    "@types/node": "^24.0.13",
     "lerna": "^8.2.3",
     "monorepo-package-paths": "^0.4.0",
     "npm-run-all": "^4.1.5",
