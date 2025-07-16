@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.1.1](https://github.com/battis/qui-cli/compare/env/3.1.0...env/3.1.1) (2025-07-16)
+
+
+### Bug Fixes
+
+* 1Password is dependency, not peer ([26ef8a5](https://github.com/battis/qui-cli/commit/26ef8a589d87da4dfa90f74c898b09fb77b2e7ed))
+
 ## [3.1.0](https://github.com/battis/qui-cli/compare/env/3.0.1...env/3.1.0) (2025-07-15)
 
 
