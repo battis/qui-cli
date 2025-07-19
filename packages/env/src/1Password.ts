@@ -61,7 +61,7 @@ function isSecretReference(value: unknown) {
   );
 }
 
-function secretReferences(parsed: Awaited<ReturnType<(typeof Env)['parse']>>) {
+function secretReferences(parsed: Env.ParsedResult) {
   return Object.fromEntries(
     Object.entries(parsed).filter((entry) => isSecretReference(entry[1]))
   );
@@ -82,7 +82,7 @@ export async function parse(file?: string) {
   return parsed;
 }
 
-export async function get({ key, file }: Parameters<(typeof Env)['get']>[0]) {
+export async function get({ key, file }: Env.GetOptions) {
   return (await parse(file))[key];
 }
 
@@ -117,11 +117,8 @@ async function itemFrom(secret: ReturnType<typeof secretFrom>) {
   return undefined;
 }
 
-export async function set({
-  key,
-  value,
-  file
-}: Parameters<(typeof Env)['set']>[0]) {
+/** Requires a service account with write privileges */
+export async function set({ key, value, file, ...rest }: Env.SetOptions) {
   const prev = await Env.get({ key, file });
   if (prev && isSecretReference(prev)) {
     if (client) {
@@ -155,7 +152,8 @@ export async function set({
       );
     }
   } else {
-    return await Env.set({ key, value, file });
+    // FIXME handle creating a new secret reference
+    return await Env.set({ key, value, file, ...rest });
   }
 }
 

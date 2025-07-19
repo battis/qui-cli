@@ -27,7 +27,9 @@ export async function configure(config: Configuration = {}) {
   }
 }
 
-export async function parse(file = pathToEnv) {
+export type ParsedResult = dotenv.DotenvParseOutput;
+
+export async function parse(file = pathToEnv): Promise<ParsedResult> {
   const filePath = path.resolve(
     root || Root.path(),
     typeof file === 'string' ? file : '.env'
@@ -42,7 +44,7 @@ export async function parse(file = pathToEnv) {
   return {};
 }
 
-type GetOptions = {
+export type GetOptions = {
   key: string;
   file?: string;
 };
@@ -61,7 +63,7 @@ export async function exists({ key, file = pathToEnv }: GetOptions) {
   return false;
 }
 
-type SetOptions = {
+export type SetOptions = {
   key: string;
   value: string;
   file?: string;
@@ -97,7 +99,7 @@ export async function set({
   }
 }
 
-type RemoveOptions = {
+export type RemoveOptions = {
   key: string;
   file?: string;
   comment?: string;
