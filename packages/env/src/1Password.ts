@@ -153,6 +153,7 @@ export async function set({ key, value, file, ...rest }: Env.SetOptions) {
     }
   } else {
     // FIXME handle creating a new secret reference
+    // Issue URL: https://github.com/battis/qui-cli/issues/63
     return await Env.set({ key, value, file, ...rest });
   }
 }
