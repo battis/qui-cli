@@ -2,7 +2,7 @@ import { Client, createClient, Item } from '@1password/sdk';
 import { importLocal } from '@battis/import-package-json';
 import * as Plugin from '@battis/qui-cli.plugin';
 import path from 'node:path';
-import { Env } from './index.js';
+import * as Env from './Env.js';
 
 export type Configuration = Plugin.Configuration &
   Env.Configuration & {
@@ -11,7 +11,7 @@ export type Configuration = Plugin.Configuration &
 
 const OP_SERVICE_ACCOUNT_TOKEN = 'OP_SERVICE_ACCOUNT_TOKEN';
 
-export const name = 'env.OP';
+export const name = Env.name;
 
 let client: Client | undefined = undefined;
 
@@ -50,6 +50,7 @@ export async function init({
   values
 }: Plugin.ExpectedArguments<typeof options>) {
   await configure(values);
+  parse();
 }
 
 function isSecretReference(value: unknown) {
