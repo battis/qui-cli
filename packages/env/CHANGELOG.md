@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.1.2](https://github.com/battis/qui-cli/compare/env/3.1.1...env/3.1.2) (2025-07-31)
+
+
+### Bug Fixes
+
+* parse (and optionally load) .env file in init() lifecycle hook ([404a081](https://github.com/battis/qui-cli/commit/404a0817170f35d49e187013d237e93bdaa3f37b))
+* restructure OP to properly extend Env rather than depend on it ([3661843](https://github.com/battis/qui-cli/commit/36618439d541d31388ef70ee776647ad7562c0ef))
+
 ## [3.1.1](https://github.com/battis/qui-cli/compare/env/3.1.0...env/3.1.1) (2025-07-16)
 
 
