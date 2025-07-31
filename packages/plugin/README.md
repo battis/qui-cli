@@ -75,6 +75,8 @@ export function myMethod() {
 
 ## Plugin Hooks
 
+See [dev-plugin-lifecycle](https://github.com/battis/qui-cli/tree/main/examples/dev-plugin-lifecycle#readme) for an illustration of the order in which hooks are called.
+
 ### Configuration
 
 The `configure()` hook may prepare the plugin module for use.
