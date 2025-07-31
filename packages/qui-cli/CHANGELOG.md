@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.1.1](https://github.com/battis/qui-cli/compare/qui-cli/3.1.0...qui-cli/3.1.1) (2025-07-31)
+
+### Bug Fixes
+
+- **env@3.1.2** parse (and optionally load) .env file in init() lifecycle hook ([404a081](https://github.com/battis/qui-cli/commit/404a0817170f35d49e187013d237e93bdaa3f37b))
+- **env@3.1.2** restructure OP to properly extend Env rather than depend on it ([3661843](https://github.com/battis/qui-cli/commit/36618439d541d31388ef70ee776647ad7562c0ef))
+- **env@3.1.1** 1Password is dependency, not peer ([26ef8a5](https://github.com/battis/qui-cli/commit/26ef8a589d87da4dfa90f74c898b09fb77b2e7ed))
+
 ## [3.1.0](https://github.com/battis/qui-cli/compare/qui-cli/3.0.4...qui-cli/3.1.0) (2025-07-15)
 
 - **env@3.1.0** remove 1Password from Env, set up as separate plugin ([c2939d6](https://github.com/battis/qui-cli/commit/c2939d69badbd8aef2678c70997aee317fc365d9))
