@@ -1,5 +1,4 @@
 import * as Plugin from '@battis/qui-cli.plugin';
-import '@battis/qui-cli.root';
 import { Root } from '@battis/qui-cli.root';
 import dotenv from 'dotenv';
 import fs from 'node:fs';
@@ -27,6 +26,10 @@ export async function configure(config: Configuration = {}) {
   }
 }
 
+export function init() {
+  parse();
+}
+
 export type ParsedResult = dotenv.DotenvParseOutput;
 
 export async function parse(file = pathToEnv): Promise<ParsedResult> {
@@ -35,7 +38,7 @@ export async function parse(file = pathToEnv): Promise<ParsedResult> {
     typeof file === 'string' ? file : '.env'
   );
   if (fs.existsSync(filePath)) {
-    const env = dotenv.config({ path: filePath });
+    const env = dotenv.config({ path: filePath, quiet: true });
     if (env.error) {
       throw env.error;
     }
