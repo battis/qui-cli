@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@battis/qui-cli": "workspace:*",
-    "@inquirer/prompts": "^7.6.0"
+    "@inquirer/prompts": "^7.8.0"
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.6",
