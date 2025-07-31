@@ -2,7 +2,7 @@
 
 A distributable command-line app
 
-# Notes
+## Notes
 
 - [index.ts](./src/index.ts) implements the command.
 - [package.json](./package.json) `directories.bin` points to directory of registered scripts.
