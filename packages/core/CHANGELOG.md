@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.1.0](https://github.com/battis/qui-cli/compare/core/3.0.0...core/3.1.0) (2025-08-01)
+
+
+### Features
+
+* present usage information in order defined in options() hook ([f470d07](https://github.com/battis/qui-cli/commit/f470d07ed27a9c774d5622641a385e62e37bde80))
+
 ## [3.0.0](https://github.com/battis/qui-cli/compare/core/2.2.1...core/3.0.0) (2025-06-28)
 
 
