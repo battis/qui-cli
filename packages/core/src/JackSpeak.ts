@@ -21,31 +21,23 @@ export function configure(config: Configuration = {}) {
   instance = new Jack(config);
 }
 
-export function args({
-  num,
-  numList,
-  opt,
-  optList,
-  flag,
-  flagList,
-  fields,
-  man = []
-}: Plugin.Options) {
-  jack()
-    .num({ ...num })
-    .numList({ ...numList })
-    .opt({ ...opt })
-    .optList({ ...optList })
-    .flag({ ...flag })
-    .flagList({ ...flagList })
-    .addFields({ ...fields });
-  for (const paragraph of man) {
-    if (paragraph.level) {
-      jack().heading(paragraph.text, paragraph.level, {
-        pre: paragraph.pre
-      });
+export function args(options: Plugin.Options) {
+  for (const key in options) {
+    if (key === 'man') {
+      for (const paragraph of options[key]!) {
+        if (paragraph.level) {
+          jack().heading(paragraph.text, paragraph.level, {
+            pre: paragraph.pre
+          });
+        } else {
+          jack().description(paragraph.text, { pre: paragraph.pre });
+        }
+      }
+    } else if (key === 'fields') {
+      jack().addFields({ ...options[key] });
     } else {
-      jack().description(paragraph.text, { pre: paragraph.pre });
+      // @ts-expect-error 7053 typing is hard
+      jack()[key]({ ...options[key] });
     }
   }
 }
