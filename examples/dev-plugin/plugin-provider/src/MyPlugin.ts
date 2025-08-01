@@ -17,6 +17,13 @@ export function configure(config: Configuration = {}) {
 
 export function options(): Plugin.Options {
   return {
+    man: [
+      {
+        level: 1,
+        text: 'MyPlugin Options'
+      },
+      { text: 'Below are the options provided by MyPlugin.' }
+    ],
     opt: {
       foo: {
         description: `Type of foo-ness (default ${foo})`,
