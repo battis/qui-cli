@@ -1,6 +1,6 @@
 {
   "name": "@battis/qui-cli.structured",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Build a structured command from directory contents",
   "homepage": "https://github.com/battis/qui-cli/tree/main/packages/structured#readme",
   "repository": {
