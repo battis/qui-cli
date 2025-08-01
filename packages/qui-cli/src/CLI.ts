@@ -1,7 +1,4 @@
-import * as Help from '@battis/qui-cli.core/dist/Help.js';
-import { register } from '@battis/qui-cli.plugin';
-
-await register(Help);
+import '@battis/qui-cli.core';
 
 export { Colors as colors } from '@battis/qui-cli.colors';
 export * from '@battis/qui-cli.core/dist/Core.js';
