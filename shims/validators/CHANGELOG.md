@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.0.0](https://github.com/battis/qui-cli/compare/validators/3.0.0...validators/3.0.0) (2025-08-02)
+
+### ⚠ BREAKING CHANGES
+
+- rename @battis/qui-cli.validators --> @qui-cli/validators
+
+- rename @battis/qui-cli.validators --> @qui-cli/validators ([ad68e3e](https://github.com/battis/qui-cli/commit/ad68e3eb778a6a26aa40c8a80377a7203391eb84))
+
 ## [2.0.4](https://github.com/battis/qui-cli/compare/validators/2.0.3...validators/2.0.4) (2025-06-23)
 
 ### Bug Fixes
