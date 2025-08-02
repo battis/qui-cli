@@ -1,0 +1,35 @@
+{
+  "name": "@battis/qui-cli.core",
+  "version": "3.1.0",
+  "description": "Core features of @qui-cli/qui-cli",
+  "homepage": "https://github.com/battis/qui-cli/tree/main/shims/colors#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/battis/qui-cli.git",
+    "directory": "shims/colors"
+  },
+  "author": {
+    "name": "Seth Battis",
+    "url": "https://github.com/battis"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "clean": "del ./dist",
+    "build": "run-s build:*",
+    "build:clean": "run-s clean",
+    "build:compile": "tsc",
+    "release": "commit-and-tag-version"
+  },
+  "dependencies": {
+    "@qui-cli/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@tsconfig/node20": "^20.1.6",
+    "commit-and-tag-version": "^12.5.2",
+    "del-cli": "^6.0.0",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.9.2"
+  }
+}

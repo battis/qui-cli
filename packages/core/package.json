@@ -1,5 +1,5 @@
 {
-  "name": "@battis/qui-cli.core",
+  "name": "@qui-cli/core",
   "version": "3.1.0",
   "description": "Core features of @battis/qui-cli",
   "homepage": "https://github.com/battis/qui-cli/tree/main/packages/core#readme",

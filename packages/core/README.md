@@ -1,20 +1,20 @@
-# @battis/qui-cli.core
+# @qui-cli/core
 
-Core features of @battis/qui-cli
+Core features of @qui-cli/qui-cli
 
-[![npm version](https://badge.fury.io/js/@battis%2Fqui-cli.core.svg)](https://badge.fury.io/js/@battis%2Fqui-cli.core)
+[![npm version](https://badge.fury.io/js/@qui-cli%2Fcore.svg)](https://npmjs.com/package/@qui-cli/core)
 [![Module type: ESM](https://img.shields.io/badge/module%20type-esm-brightgreen)](https://nodejs.org/api/esm.html)
 
 ## Install
 
 ```sh
-npm install @battis/qui-cli.core
+npm install @qui-cli/core
 ```
 
 ## Usage
 
 ```ts
-import { Core } from '@battis/qui-cli.core';
+import { Core } from '@qui-cli/core';
 import { Colors } from '@qui-cli/colors';
 import { Log } from '@battis/qui-cli.log';
 
@@ -61,7 +61,7 @@ await Core.configure({
 Provides per-plugin positonal argument management and documentation. Individual plugins can require named positional arguments, which are collected and documented by `usage()` and accessible throgh the `Positionals` plugin.
 
 ```ts
-import { Core, Positionals } from '@battis/qui-cli.core';
+import { Core, Positionals } from '@qui-cli/core';
 
 Positionals.require({
   my_number: {

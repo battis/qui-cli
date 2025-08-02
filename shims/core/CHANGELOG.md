@@ -88,7 +88,7 @@ All notable changes to this project will be documented in this file. See [commit
 
 ### Bug Fixes
 
-- auto-configure on init ([37bb1c3](https://github.com/battis/qui-cli/commit/37bb1c3b49e6ee9e698d42f1e8d20da380f14636))
+- **core:** auto-configure on init ([37bb1c3](https://github.com/battis/qui-cli/commit/37bb1c3b49e6ee9e698d42f1e8d20da380f14636))
 - simplify tortured Core.configure() logic ([c7f0335](https://github.com/battis/qui-cli/commit/c7f03359bb4d12858775baa91a5bc4189fe86736))
 
 ## 0.8.4
