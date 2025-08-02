@@ -1,6 +1,6 @@
-import { Log } from '@battis/qui-cli.log';
 import { Colors } from '@qui-cli/colors';
 import { Core } from '@qui-cli/core';
+import { Log } from '@qui-cli/log';
 
 const {
   values: { foo }

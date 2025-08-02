@@ -1,6 +1,6 @@
-import { Log } from '@battis/qui-cli.log';
 import '@examples/dev-sequenced-commands.module-b';
 import { Colors } from '@qui-cli/colors';
+import { Log } from '@qui-cli/log';
 import * as Plugin from '@qui-cli/plugin';
 
 export type Configuration = Plugin.Configuration & {

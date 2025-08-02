@@ -16,7 +16,7 @@ npm install @qui-cli/core
 ```ts
 import { Core } from '@qui-cli/core';
 import { Colors } from '@qui-cli/colors';
-import { Log } from '@battis/qui-cli.log';
+import { Log } from '@qui-cli/log';
 
 // register custom arguments
 await Core.init({

@@ -1,5 +1,5 @@
-import { Log } from '@battis/qui-cli.log';
 import { Colors } from '@qui-cli/colors';
+import { Log } from '@qui-cli/log';
 import * as Plugin from '@qui-cli/plugin';
 import './d.js';
 

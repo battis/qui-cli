@@ -27,9 +27,9 @@
     "example:env": "dev-plugin-lifecycle --myOptParam \"value from command line\""
   },
   "dependencies": {
-    "@battis/qui-cli.log": "workspace:*",
     "@qui-cli/core": "workspace:*",
     "@qui-cli/env": "workspace:*",
+    "@qui-cli/log": "workspace:*",
     "@qui-cli/plugin": "workspace:*",
     "@qui-cli/root": "workspace:*"
   },

@@ -74,9 +74,6 @@ importers:
 
   examples/dev-1password-env:
     dependencies:
-      '@battis/qui-cli.log':
-        specifier: workspace:*
-        version: link:../../packages/log
       '@qui-cli/colors':
         specifier: workspace:*
         version: link:../../packages/colors
@@ -86,6 +83,9 @@ importers:
       '@qui-cli/env':
         specifier: workspace:*
         version: link:../../packages/env
+      '@qui-cli/log':
+        specifier: workspace:*
+        version: link:../../packages/log
     devDependencies:
       '@tsconfig/node20':
         specifier: ^20.1.6
@@ -102,15 +102,15 @@ importers:
 
   examples/dev-command:
     dependencies:
-      '@battis/qui-cli.log':
-        specifier: workspace:*
-        version: link:../../packages/log
       '@qui-cli/colors':
         specifier: workspace:*
         version: link:../../packages/colors
       '@qui-cli/core':
         specifier: workspace:*
         version: link:../../packages/core
+      '@qui-cli/log':
+        specifier: workspace:*
+        version: link:../../packages/log
     devDependencies:
       '@tsconfig/node20':
         specifier: ^20.1.6
@@ -127,15 +127,15 @@ importers:
 
   examples/dev-plugin-lifecycle:
     dependencies:
-      '@battis/qui-cli.log':
-        specifier: workspace:*
-        version: link:../../packages/log
       '@qui-cli/core':
         specifier: workspace:*
         version: link:../../packages/core
       '@qui-cli/env':
         specifier: workspace:*
         version: link:../../packages/env
+      '@qui-cli/log':
+        specifier: workspace:*
+        version: link:../../packages/log
       '@qui-cli/plugin':
         specifier: workspace:*
         version: link:../../packages/plugin
@@ -158,15 +158,15 @@ importers:
 
   examples/dev-plugin/plugin-conflict:
     dependencies:
-      '@battis/qui-cli.log':
-        specifier: workspace:*
-        version: link:../../../packages/log
       '@examples/dev-plugin.provider':
         specifier: workspace:*
         version: link:../plugin-provider
       '@qui-cli/core':
         specifier: workspace:*
         version: link:../../../packages/core
+      '@qui-cli/log':
+        specifier: workspace:*
+        version: link:../../../packages/log
       '@qui-cli/plugin':
         specifier: workspace:*
         version: link:../../../packages/plugin
@@ -208,15 +208,15 @@ importers:
 
   examples/dev-plugin/plugin-consumer-modular:
     dependencies:
-      '@battis/qui-cli.log':
-        specifier: workspace:*
-        version: link:../../../packages/log
       '@examples/dev-plugin.provider':
         specifier: workspace:*
         version: link:../plugin-provider
       '@qui-cli/core':
         specifier: workspace:*
         version: link:../../../packages/core
+      '@qui-cli/log':
+        specifier: workspace:*
+        version: link:../../../packages/log
     devDependencies:
       '@tsconfig/node20':
         specifier: ^20.1.6
@@ -233,7 +233,7 @@ importers:
 
   examples/dev-plugin/plugin-provider:
     devDependencies:
-      '@battis/qui-cli.log':
+      '@qui-cli/log':
         specifier: workspace:*
         version: link:../../../packages/log
       '@qui-cli/plugin':
@@ -254,9 +254,6 @@ importers:
 
   examples/dev-positionals:
     dependencies:
-      '@battis/qui-cli.log':
-        specifier: workspace:*
-        version: link:../../packages/log
       '@battis/qui-cli.structured':
         specifier: workspace:*
         version: link:../../packages/structured
@@ -266,6 +263,9 @@ importers:
       '@qui-cli/core':
         specifier: workspace:*
         version: link:../../packages/core
+      '@qui-cli/log':
+        specifier: workspace:*
+        version: link:../../packages/log
       '@qui-cli/plugin':
         specifier: workspace:*
         version: link:../../packages/plugin
@@ -323,12 +323,12 @@ importers:
         specifier: workspace:*
         version: link:../../../packages/core
     devDependencies:
-      '@battis/qui-cli.log':
-        specifier: workspace:*
-        version: link:../../../packages/log
       '@qui-cli/colors':
         specifier: workspace:*
         version: link:../../../packages/colors
+      '@qui-cli/log':
+        specifier: workspace:*
+        version: link:../../../packages/log
       '@qui-cli/plugin':
         specifier: workspace:*
         version: link:../../../packages/plugin
@@ -354,12 +354,12 @@ importers:
         specifier: workspace:*
         version: link:../../../packages/core
     devDependencies:
-      '@battis/qui-cli.log':
-        specifier: workspace:*
-        version: link:../../../packages/log
       '@qui-cli/colors':
         specifier: workspace:*
         version: link:../../../packages/colors
+      '@qui-cli/log':
+        specifier: workspace:*
+        version: link:../../../packages/log
       '@qui-cli/plugin':
         specifier: workspace:*
         version: link:../../../packages/plugin
@@ -382,15 +382,15 @@ importers:
         specifier: workspace:*
         version: link:../../../packages/core
     devDependencies:
-      '@battis/qui-cli.log':
-        specifier: workspace:*
-        version: link:../../../packages/log
       '@examples/dev-sequenced-commands.module-b':
         specifier: workspace:*
         version: link:../module-b
       '@qui-cli/colors':
         specifier: workspace:*
         version: link:../../../packages/colors
+      '@qui-cli/log':
+        specifier: workspace:*
+        version: link:../../../packages/log
       '@qui-cli/plugin':
         specifier: workspace:*
         version: link:../../../packages/plugin
@@ -413,15 +413,15 @@ importers:
         specifier: workspace:*
         version: link:../../../packages/core
     devDependencies:
-      '@battis/qui-cli.log':
-        specifier: workspace:*
-        version: link:../../../packages/log
       '@examples/dev-sequenced-commands.module-c':
         specifier: workspace:*
         version: link:../module-c
       '@qui-cli/colors':
         specifier: workspace:*
         version: link:../../../packages/colors
+      '@qui-cli/log':
+        specifier: workspace:*
+        version: link:../../../packages/log
       '@qui-cli/plugin':
         specifier: workspace:*
         version: link:../../../packages/plugin
@@ -440,15 +440,15 @@ importers:
 
   examples/dev-structured:
     dependencies:
-      '@battis/qui-cli.log':
-        specifier: workspace:*
-        version: link:../../packages/log
       '@battis/qui-cli.structured':
         specifier: workspace:*
         version: link:../../packages/structured
       '@qui-cli/colors':
         specifier: workspace:*
         version: link:../../packages/colors
+      '@qui-cli/log':
+        specifier: workspace:*
+        version: link:../../packages/log
       '@qui-cli/plugin':
         specifier: workspace:*
         version: link:../../packages/plugin
@@ -496,12 +496,12 @@ importers:
 
   examples/usage-modular:
     dependencies:
-      '@battis/qui-cli.log':
-        specifier: workspace:*
-        version: link:../../packages/log
       '@qui-cli/core':
         specifier: workspace:*
         version: link:../../packages/core
+      '@qui-cli/log':
+        specifier: workspace:*
+        version: link:../../packages/log
     devDependencies:
       '@tsconfig/node20':
         specifier: ^20.1.6
@@ -719,9 +719,6 @@ importers:
 
   packages/qui-cli:
     devDependencies:
-      '@battis/qui-cli.log':
-        specifier: workspace:*
-        version: link:../log
       '@battis/qui-cli.progress':
         specifier: workspace:*
         version: link:../progress
@@ -746,6 +743,9 @@ importers:
       '@qui-cli/env':
         specifier: workspace:*
         version: link:../env
+      '@qui-cli/log':
+        specifier: workspace:*
+        version: link:../log
       '@qui-cli/plugin':
         specifier: workspace:*
         version: link:../plugin
@@ -820,12 +820,12 @@ importers:
         specifier: ^0.10.0
         version: 0.10.0
     devDependencies:
-      '@battis/qui-cli.log':
-        specifier: workspace:*
-        version: link:../log
       '@qui-cli/colors':
         specifier: workspace:*
         version: link:../colors
+      '@qui-cli/log':
+        specifier: workspace:*
+        version: link:../log
       '@qui-cli/plugin':
         specifier: workspace:*
         version: link:../plugin
@@ -977,6 +977,28 @@ importers:
       '@qui-cli/env':
         specifier: workspace:*
         version: link:../../packages/env
+    devDependencies:
+      '@tsconfig/node20':
+        specifier: ^20.1.6
+        version: 20.1.6
+      commit-and-tag-version:
+        specifier: ^12.5.2
+        version: 12.5.2
+      del-cli:
+        specifier: ^6.0.0
+        version: 6.0.0
+      npm-run-all:
+        specifier: ^4.1.5
+        version: 4.1.5
+      typescript:
+        specifier: ^5.9.2
+        version: 5.9.2
+
+  shims/log:
+    dependencies:
+      '@qui-cli/log':
+        specifier: workspace:*
+        version: link:../../packages/log
     devDependencies:
       '@tsconfig/node20':
         specifier: ^20.1.6

@@ -22,8 +22,8 @@
     "build:compile": "tsc"
   },
   "dependencies": {
-    "@battis/qui-cli.log": "workspace:*",
-    "@qui-cli/core": "workspace:*"
+    "@qui-cli/core": "workspace:*",
+    "@qui-cli/log": "workspace:*"
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.6",

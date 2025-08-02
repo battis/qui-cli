@@ -21,7 +21,7 @@
     "build:compile": "tsc"
   },
   "devDependencies": {
-    "@battis/qui-cli.log": "workspace:*",
+    "@qui-cli/log": "workspace:*",
     "@qui-cli/plugin": "workspace:*",
     "@tsconfig/node20": "^20.1.6",
     "del-cli": "^6.0.0",
@@ -29,7 +29,7 @@
     "typescript": "^5.9.2"
   },
   "peerDependencies": {
-    "@battis/qui-cli.log": "2.x",
+    "@qui-cli/log": "2.x",
     "@qui-cli/plugin": "^2.4"
   }
 }

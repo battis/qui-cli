@@ -1,4 +1,4 @@
-import { Log } from '@battis/qui-cli.log';
+import { Log } from '@qui-cli/log';
 import * as Plugin from '@qui-cli/plugin';
 
 export type Configuration = Plugin.Configuration & {

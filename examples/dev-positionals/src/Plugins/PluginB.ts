@@ -1,6 +1,6 @@
-import { Log } from '@battis/qui-cli.log';
 import { Colors } from '@qui-cli/colors';
 import { Positionals } from '@qui-cli/core';
+import { Log } from '@qui-cli/log';
 import { register } from '@qui-cli/plugin';
 import * as PluginC from './PluginC.js';
 

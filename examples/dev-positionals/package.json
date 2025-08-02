@@ -25,10 +25,10 @@
     "build:man-files": "copy './src/**/.man.json' ./dist"
   },
   "dependencies": {
-    "@battis/qui-cli.log": "workspace:*",
     "@battis/qui-cli.structured": "workspace:*",
     "@qui-cli/colors": "workspace:*",
     "@qui-cli/core": "workspace:*",
+    "@qui-cli/log": "workspace:*",
     "@qui-cli/plugin": "workspace:*"
   },
   "devDependencies": {
