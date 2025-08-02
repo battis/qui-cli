@@ -1,14 +1,14 @@
-# @battis/qui-cli.plugin
+# @qui-cli/plugin
 
-@battis/qui-cli plugin structure and registrar
+@qui-cli plugin structure and registrar
 
-[![npm version](https://badge.fury.io/js/@battis%2Fqui-cli.plugin.svg)](https://badge.fury.io/js/@battis%2Fqui-cli.plugin)
+[![npm version](https://badge.fury.io/js/@qui-cli%2Fplugin.svg)](https://npmjs.com/package/@qui-cli/plugin)
 [![Module type: ESM](https://img.shields.io/badge/module%20type-esm-brightgreen)](https://nodejs.org/api/esm.html)
 
 ## Install
 
 ```sh
-npm install @battis/qui-cli.plugin
+npm install @qui-cli/plugin
 ```
 
 ## Usage
@@ -33,12 +33,12 @@ Refer to [@battis/qui-cli.shell](https://github.com/battis/qui-cli/tree/main/pac
 
 #### `package.json`
 
-Define both a name and version. Include `@battis/qui-cli.plugin` and _any other plugins that your Plugin depends on_ as peer dependencies:
+Define both a name and version. Include `@qui-cli/plugin` and _any other plugins that your Plugin depends on_ as peer dependencies:
 
 ```json
 {
   "peerDependencies": {
-    "@battis/qui-cli.plugin": "^2.4"
+    "@qui-cli/plugin": "^2.4"
   }
 }
 ```
@@ -50,7 +50,7 @@ While `npm` will install all dependencies at the same level of the `./node_modul
 Register your plugin with the `Plugin.Registrar` and export the module for the convenience of other plugins that may depend on it.
 
 ```ts
-import { register } from '@battis/qui-cli.plugin';
+import { register } from '@qui-cli/plugin';
 import * as Example from './Example.js';
 
 await register(Example);
