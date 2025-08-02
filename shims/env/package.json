@@ -1,14 +1,13 @@
 {
-  "name": "@qui-cli/env",
+  "name": "@battis/qui-cli.env",
   "version": "3.1.2",
   "description": "@qui-cli Plugin: Standardized environment configuration",
-  "homepage": "https://github.com/battis/qui-cli/tree/main/packages/env#readme",
+  "homepage": "https://github.com/battis/qui-cli/tree/main/shims/env#readme",
   "repository": {
     "type": "git",
     "url": "https://github.com/battis/qui-cli.git",
-    "directory": "packages/env"
+    "directory": "shims/env"
   },
-  "license": "GPL-3.0",
   "author": {
     "name": "Seth Battis",
     "url": "https://github.com/battis"
@@ -24,24 +23,13 @@
     "release": "commit-and-tag-version"
   },
   "dependencies": {
-    "@1password/sdk": "^0.3.1",
-    "@battis/import-package-json": "^0.1.7",
-    "dotenv": "^17.2.1"
+    "@qui-cli/env": "workspace:*"
   },
   "devDependencies": {
-    "@qui-cli/plugin": "workspace:*",
-    "@qui-cli/root": "workspace:*",
     "@tsconfig/node20": "^20.1.6",
-    "@types/node": "^24.1.0",
     "commit-and-tag-version": "^12.5.2",
     "del-cli": "^6.0.0",
     "npm-run-all": "^4.1.5",
     "typescript": "^5.9.2"
-  },
-  "peerDependencies": {
-    "@qui-cli/plugin": "^2.4",
-    "@qui-cli/root": "2.x"
-  },
-  "packageManager": "pnpm@9.12.3+sha512.cce0f9de9c5a7c95bef944169cc5dfe8741abfb145078c0d508b868056848a87c81e626246cb60967cbd7fd29a6c062ef73ff840d96b3c86c40ac92cf4a813ee",
-  "target": "node"
+  }
 }

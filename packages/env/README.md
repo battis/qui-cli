@@ -1,20 +1,20 @@
-# @battis/qui-cli.env
+# @qui-cli/env
 
-@battis/qui-cli Plugin: Standardized environment configuration
+@qui-cli Plugin: Standardized environment configuration
 
-[![npm version](https://badge.fury.io/js/@battis%2Fqui-cli.env.svg)](https://badge.fury.io/js/@battis%2Fqui-cli.env)
+[![npm version](https://badge.fury.io/js/@qui-cli%2Fenv.svg)](https://npmjs.com/package/@qui-cli/env)
 [![Module type: ESM](https://img.shields.io/badge/module%20type-esm-brightgreen)](https://nodejs.org/api/esm.html)
 
 ## Install
 
 ```sh
-npm install @battis/qui-cli.env
+npm install @qui-cli/env
 ```
 
 ## Usage
 
 ```ts
-import { Env } from '@battis/qui-cli.env';
+import { Env } from '@qui-cli/env';
 
 // configure desired environment path
 Env.configure({ path: '../../.env' });
@@ -34,7 +34,7 @@ Any plugin that depends on this plugin can assume that the `.env` file environem
 If desired, this package has an implementation that integrates with [@1password/sdk](https://www.npmjs.com/package/@1password/sdk) to inject values from 1Password vaults into the environment for use by the script.
 
 1. Follow [the 1Password CLI directions to create a service account](https://developer.1password.com/docs/service-accounts/get-started/).
-2. Install [@1password/sdk](https://www.npmjs.com/package/@1password/sdk) as a peer of `@battis/qui-cli.env`.
+2. Install [@1password/sdk](https://www.npmjs.com/package/@1password/sdk) as a peer of `@qui-cli/env`.
 3. Update environment variables to be [secret references](https://developer.1password.com/docs/cli/secret-references)
 4. Inject the Service Account Token into the environment with the name `OP_SERVICE_ACCOUNT_TOKEN`.
 5. Run!
@@ -74,7 +74,7 @@ Path to desired `.env` file relative to `root`. Defaults to `'.env'`;
 ## API
 
 ```ts
-import { Env } from '@battis/qui-cli.env';
+import { Env } from '@qui-cli/env';
 ```
 
 ### `Env.parse(file?)`
