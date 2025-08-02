@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.0.0](https://github.com/battis/qui-cli/compare/validators/2.0.4...validators/3.0.0) (2025-08-02)
+
+
+### ⚠ BREAKING CHANGES
+
+* rename @battis/qui-cli.validators --> @qui-cli/validators
+
+* rename @battis/qui-cli.validators --> @qui-cli/validators ([ad68e3e](https://github.com/battis/qui-cli/commit/ad68e3eb778a6a26aa40c8a80377a7203391eb84))
+
+
+### Bug Fixes
+
+* update dependencies to renamed @qui-cli/colors ([ff80e86](https://github.com/battis/qui-cli/commit/ff80e8625ef98834afdf04e57bfedb1906834e2b))
+* update dependencies to renamed @qui-cli/plugin ([117ea85](https://github.com/battis/qui-cli/commit/117ea85256ec69c807c5b56293546d9c350fd43f))
+* update dependencies to renamed @qui-cli/progress ([4b7e4e1](https://github.com/battis/qui-cli/commit/4b7e4e1010e3cabaa4e06d328b1402c3fcc19a7f))
+* update dependencies to renamed @qui-cli/root ([488daa7](https://github.com/battis/qui-cli/commit/488daa7a82730125481945b5eb8db960972ac225))
+
 ## [2.0.4](https://github.com/battis/qui-cli/compare/validators/2.0.3...validators/2.0.4) (2025-06-23)
 
 ### Bug Fixes
