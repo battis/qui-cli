@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [4.0.0](https://github.com/battis/qui-cli/compare/core/4.0.0...core/4.0.0) (2025-08-02)
+
+### ⚠ BREAKING CHANGES
+
+- rename @battis/qui-cli.core --> @qui-cli/core
+
+- rename @battis/qui-cli.core --> @qui-cli/core ([43367e9](https://github.com/battis/qui-cli/commit/43367e9d4316aa22fb28078e9436e6de35564f1f))
+
 ## [3.1.0](https://github.com/battis/qui-cli/compare/core/3.0.0...core/3.1.0) (2025-08-01)
 
 ### Features
