@@ -1,5 +1,5 @@
-import CLI from '@battis/qui-cli';
 import { input } from '@inquirer/prompts';
+import CLI from '@qui-cli/qui-cli';
 import path from 'node:path';
 
 // configuration before command-line user options are processed

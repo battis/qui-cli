@@ -1,5 +1,5 @@
-import CLI from '@battis/qui-cli';
 import { MyPlugin } from '@examples/dev-plugin.provider';
+import CLI from '@qui-cli/qui-cli';
 
 await CLI.run();
 

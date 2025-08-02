@@ -2,7 +2,7 @@
 
 ## Usage Examples
 
-- [usage-cli](./usage-cli/): Using the bundled [@battis/qui-cli](../packages/qui-cli/) package
+- [usage-cli](./usage-cli/): Using the bundled [@qui-cli/qui-cli](../packages/qui-cli/) package
 - [usage-modular](./usage-modular/): More parsimonious use of individual plugin modules independently
 
 ## Development Examples
