@@ -21,7 +21,7 @@ Refer to [@qui-cli/env](../env) for a complete example defining a plugin. The mo
 
 ### Recommended Plugin Structure
 
-Refer to [@battis/qui-cli.shell](https://github.com/battis/qui-cli/tree/main/packages/shell) for a relatively straight-forward example.
+Refer to [@qui-cli/shell](https://github.com/battis/qui-cli/tree/main/packages/shell) for a relatively straight-forward example.
 
 ```
 📁 @example/plugin

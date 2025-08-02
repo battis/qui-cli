@@ -719,9 +719,6 @@ importers:
 
   packages/qui-cli:
     devDependencies:
-      '@battis/qui-cli.shell':
-        specifier: workspace:*
-        version: link:../shell
       '@battis/qui-cli.validators':
         specifier: workspace:*
         version: link:../validators
@@ -752,6 +749,9 @@ importers:
       '@qui-cli/root':
         specifier: workspace:*
         version: link:../root
+      '@qui-cli/shell':
+        specifier: workspace:*
+        version: link:../shell
       '@tsconfig/node20':
         specifier: ^20.1.6
         version: 20.1.6
@@ -1065,6 +1065,28 @@ importers:
       '@qui-cli/root':
         specifier: workspace:*
         version: link:../../packages/root
+    devDependencies:
+      '@tsconfig/node20':
+        specifier: ^20.1.6
+        version: 20.1.6
+      commit-and-tag-version:
+        specifier: ^12.5.2
+        version: 12.5.2
+      del-cli:
+        specifier: ^6.0.0
+        version: 6.0.0
+      npm-run-all:
+        specifier: ^4.1.5
+        version: 4.1.5
+      typescript:
+        specifier: ^5.9.2
+        version: 5.9.2
+
+  shims/shell:
+    dependencies:
+      '@qui-cli/shell':
+        specifier: workspace:*
+        version: link:../../packages/shell
     devDependencies:
       '@tsconfig/node20':
         specifier: ^20.1.6

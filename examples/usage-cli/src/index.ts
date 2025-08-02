@@ -45,7 +45,7 @@ CLI.log.error(
 // @qui-cli/root example
 CLI.log.info(CLI.colors.url(CLI.root.path()));
 
-// @battis/qui-cli.shell example
+// @qui-cli/shell example
 CLI.shell.exec('echo "hello world"');
 
 // @battis/qui-cli.validators example
