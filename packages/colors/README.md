@@ -1,20 +1,20 @@
-# @battis/qui-cli.colors
+# @qui-cli/colors
 
-@battis/qui-cli Plugin: Standardized Chalk colors for CLI output
+@qui-cli Plugin: Standardized Chalk colors for CLI output
 
-[![npm version](https://badge.fury.io/js/@battis%2Fqui-cli.colors.svg)](https://badge.fury.io/js/@battis%2Fqui-cli.colors)
+[![npm version](https://badge.fury.io/js/@qui-cli%2Fcolors.svg)](https://npmjs.com/package/@qui-cli/colors)
 [![Module type: ESM](https://img.shields.io/badge/module%20type-esm-brightgreen)](https://nodejs.org/api/esm.html)
 
 ## Install
 
 ```sh
-npm install @battis/qui-cli.colors
+npm install @qui-cli/colors
 ```
 
 ## Usage
 
 ```ts
-import { Colors } from '@battis/qui-cli.colors';
+import { Colors } from '@qui-cli/colors';
 
 // use Colors
 console.log(

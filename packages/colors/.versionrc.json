@@ -1,5 +1,5 @@
 {
   "path": ".",
   "tag-prefix": "colors/",
-  "releaseCommitMessageFormat": "chore: release @battis/qui-cli.colors@{{currentTag}}"
+  "releaseCommitMessageFormat": "chore: release @qui-cli/colors@{{currentTag}}"
 }
