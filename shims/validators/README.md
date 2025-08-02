@@ -2,11 +2,11 @@
 
 @qui-cli Plugin: Input validators
 
-[![npm version](https://badge.fury.io/js/@battis%2Fqui-cli.validators.svg)](https://npmjs.com/packages/@battis/qui-cli.validators)
+[![npm version](https://badge.fury.io/js/@battis%2Fqui-cli.validators.svg)](https://npmjs.com/package/@battis/qui-cli.validators)
 [![Module type: ESM](https://img.shields.io/badge/module%20type-esm-brightgreen)](https://nodejs.org/api/esm.html)
 
 ## Deprecation
 
-In order to simplify further development and use, this package has been renamed [`@qui-cli/validators`](https://npmjs.com/packages/@qui-cli/validators).
+In order to simplify further development and use, this package has been renamed [`@qui-cli/validators`](https://npmjs.com/package/@qui-cli/validators).
 
 Version numbering is continuous between the two packages: `@battis/qui-cli.validators@3.0.0` marks the deprecation point for this package, and `@qui-cli/validators@3.0.0` marks the initial release of that package. This package is a shim for that transition point, and will not receive further updates.
