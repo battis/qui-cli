@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.0.0](https://github.com/battis/qui-cli/compare/log/3.0.0...log/3.0.0) (2025-08-02)
+
+### ⚠ BREAKING CHANGES
+
+- rename @battis/qui-cli.log --> @qui-cli/log
+
+- rename @battis/qui-cli.log --> @qui-cli/log ([ba2ef7b](https://github.com/battis/qui-cli/commit/ba2ef7b08e9289d326d18cd6a8a3be1f8f81b8ce))
+
 ## [2.2.2](https://github.com/battis/qui-cli/compare/log/2.2.1...log/2.2.2) (2025-06-23)
 
 ### Bug Fixes
