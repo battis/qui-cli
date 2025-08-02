@@ -27,15 +27,15 @@
     "example:env": "dev-1password-env --serviceAccountToken=\"$(op item get OP_SERVICE_ACCOUNT_TOKEN --field credential --reveal)\""
   },
   "dependencies": {
-    "@battis/qui-cli.colors": "workspace:*",
     "@battis/qui-cli.core": "workspace:*",
     "@battis/qui-cli.env": "workspace:*",
-    "@battis/qui-cli.log": "workspace:*"
+    "@battis/qui-cli.log": "workspace:*",
+    "@qui-cli/colors": "workspace:*"
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.6",
     "del-cli": "^6.0.0",
     "npm-run-all": "^4.1.5",
-    "typescript": "^5.8.3"
+    "typescript": "^5.9.2"
   }
 }

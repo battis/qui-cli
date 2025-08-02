@@ -35,7 +35,7 @@ CLI.env.set({
 });
 CLI.log.info(`${process.env.RUNS} runs (.env updated)`);
 
-// @battis/qui-cli.log and @battis/qui-cli.colors examples
+// @battis/qui-cli.log and @qui-cli/colors examples
 CLI.log.error(
   CLI.colors.error(
     `A fake error with ${CLI.colors.value('a value')} and a ${CLI.colors.quotedValue(`"quoted value"`)}`

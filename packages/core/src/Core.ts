@@ -1,5 +1,5 @@
-import * as Colors from '@battis/qui-cli.colors/dist/Colors.js';
 import * as Plugin from '@battis/qui-cli.plugin';
+import * as Colors from '@qui-cli/colors/dist/Colors.js';
 import * as JackSpeak from './JackSpeak.js';
 import * as Positionals from './Positionals.js';
 import { usage } from './Usage.js';

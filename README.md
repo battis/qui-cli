@@ -6,7 +6,7 @@ A collection of packages for rapidly developing command line applications
 
 Alternatively, individual packages can be selected and used in a more parsimonious, light-weight, modular manner:
 
-- [@battis/qui-cli.colors](./packages/colors/): ANSI colors with [Chalk](https://www.npmjs.com/package/chalk)
+- [@qui-cli/colors](./packages/colors/): ANSI colors with [Chalk](https://www.npmjs.com/package/chalk)
 - [@battis/qui-cli.env](./packages/env/): .env file management with [dotenv](https://www.npmjs.com/package/dotenv)
 - [@battis/qui-cli.log](./packages/log/): Logging with [winston](https://www.npmjs.com/package/winston)
 - [@battis/qui-cli.progress](./packages/progress/): Progress bars with [cli-progress](https://www.npmjs.com/package/cli-progress)

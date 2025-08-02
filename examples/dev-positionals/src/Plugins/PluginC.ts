@@ -1,6 +1,6 @@
-import { Colors } from '@battis/qui-cli.colors';
 import { Positionals } from '@battis/qui-cli.core';
 import { Log } from '@battis/qui-cli.log';
+import { Colors } from '@qui-cli/colors';
 
 export const name = 'PluginC';
 

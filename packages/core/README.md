@@ -15,7 +15,7 @@ npm install @battis/qui-cli.core
 
 ```ts
 import { Core } from '@battis/qui-cli.core';
-import { Colors } from '@battis/qui-cli.colors';
+import { Colors } from '@qui-cli/colors';
 import { Log } from '@battis/qui-cli.log';
 
 // register custom arguments

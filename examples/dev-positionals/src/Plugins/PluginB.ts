@@ -1,7 +1,7 @@
-import { Colors } from '@battis/qui-cli.colors';
 import { Positionals } from '@battis/qui-cli.core';
 import { Log } from '@battis/qui-cli.log';
 import { register } from '@battis/qui-cli.plugin';
+import { Colors } from '@qui-cli/colors';
 import * as PluginC from './PluginC.js';
 
 // PluginB depends on PluginC

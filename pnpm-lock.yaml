@@ -74,9 +74,6 @@ importers:
 
   examples/dev-1password-env:
     dependencies:
-      '@battis/qui-cli.colors':
-        specifier: workspace:*
-        version: link:../../packages/colors
       '@battis/qui-cli.core':
         specifier: workspace:*
         version: link:../../packages/core
@@ -86,6 +83,9 @@ importers:
       '@battis/qui-cli.log':
         specifier: workspace:*
         version: link:../../packages/log
+      '@qui-cli/colors':
+        specifier: workspace:*
+        version: link:../../packages/colors
     devDependencies:
       '@tsconfig/node20':
         specifier: ^20.1.6
@@ -97,20 +97,20 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ^5.8.3
+        specifier: ^5.9.2
         version: 5.9.2
 
   examples/dev-command:
     dependencies:
-      '@battis/qui-cli.colors':
-        specifier: workspace:*
-        version: link:../../packages/colors
       '@battis/qui-cli.core':
         specifier: workspace:*
         version: link:../../packages/core
       '@battis/qui-cli.log':
         specifier: workspace:*
         version: link:../../packages/log
+      '@qui-cli/colors':
+        specifier: workspace:*
+        version: link:../../packages/colors
     devDependencies:
       '@tsconfig/node20':
         specifier: ^20.1.6
@@ -122,7 +122,7 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ^5.8.3
+        specifier: ^5.9.2
         version: 5.9.2
 
   examples/dev-plugin-lifecycle:
@@ -153,7 +153,7 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ^5.8.3
+        specifier: ^5.9.2
         version: 5.9.2
 
   examples/dev-plugin/plugin-conflict:
@@ -181,7 +181,7 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ^5.8.3
+        specifier: ^5.9.2
         version: 5.9.2
 
   examples/dev-plugin/plugin-consumer-cli:
@@ -203,7 +203,7 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ^5.8.3
+        specifier: ^5.9.2
         version: 5.9.2
 
   examples/dev-plugin/plugin-consumer-modular:
@@ -228,7 +228,7 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ^5.8.3
+        specifier: ^5.9.2
         version: 5.9.2
 
   examples/dev-plugin/plugin-provider:
@@ -249,14 +249,11 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ^5.8.3
+        specifier: ^5.9.2
         version: 5.9.2
 
   examples/dev-positionals:
     dependencies:
-      '@battis/qui-cli.colors':
-        specifier: workspace:*
-        version: link:../../packages/colors
       '@battis/qui-cli.core':
         specifier: workspace:*
         version: link:../../packages/core
@@ -269,6 +266,9 @@ importers:
       '@battis/qui-cli.structured':
         specifier: workspace:*
         version: link:../../packages/structured
+      '@qui-cli/colors':
+        specifier: workspace:*
+        version: link:../../packages/colors
     devDependencies:
       '@tsconfig/node20':
         specifier: ^20.1.6
@@ -283,7 +283,7 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ^5.8.3
+        specifier: ^5.9.2
         version: 5.9.2
 
   examples/dev-sequenced-commands/command:
@@ -314,7 +314,7 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ^5.8.3
+        specifier: ^5.9.2
         version: 5.9.2
 
   examples/dev-sequenced-commands/module-a:
@@ -323,15 +323,15 @@ importers:
         specifier: workspace:*
         version: link:../../../packages/core
     devDependencies:
-      '@battis/qui-cli.colors':
-        specifier: workspace:*
-        version: link:../../../packages/colors
       '@battis/qui-cli.log':
         specifier: workspace:*
         version: link:../../../packages/log
       '@battis/qui-cli.plugin':
         specifier: workspace:*
         version: link:../../../packages/plugin
+      '@qui-cli/colors':
+        specifier: workspace:*
+        version: link:../../../packages/colors
       '@tsconfig/node20':
         specifier: ^20.1.6
         version: 20.1.6
@@ -342,7 +342,7 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ^5.8.3
+        specifier: ^5.9.2
         version: 5.9.2
 
   examples/dev-sequenced-commands/module-b:
@@ -354,15 +354,15 @@ importers:
         specifier: workspace:*
         version: link:../module-a
     devDependencies:
-      '@battis/qui-cli.colors':
-        specifier: workspace:*
-        version: link:../../../packages/colors
       '@battis/qui-cli.log':
         specifier: workspace:*
         version: link:../../../packages/log
       '@battis/qui-cli.plugin':
         specifier: workspace:*
         version: link:../../../packages/plugin
+      '@qui-cli/colors':
+        specifier: workspace:*
+        version: link:../../../packages/colors
       '@tsconfig/node20':
         specifier: ^20.1.6
         version: 20.1.6
@@ -373,7 +373,7 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ^5.8.3
+        specifier: ^5.9.2
         version: 5.9.2
 
   examples/dev-sequenced-commands/module-c:
@@ -382,9 +382,6 @@ importers:
         specifier: workspace:*
         version: link:../../../packages/core
     devDependencies:
-      '@battis/qui-cli.colors':
-        specifier: workspace:*
-        version: link:../../../packages/colors
       '@battis/qui-cli.log':
         specifier: workspace:*
         version: link:../../../packages/log
@@ -394,6 +391,9 @@ importers:
       '@examples/dev-sequenced-commands.module-b':
         specifier: workspace:*
         version: link:../module-b
+      '@qui-cli/colors':
+        specifier: workspace:*
+        version: link:../../../packages/colors
       '@tsconfig/node20':
         specifier: ^20.1.6
         version: 20.1.6
@@ -404,7 +404,7 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ^5.8.3
+        specifier: ^5.9.2
         version: 5.9.2
 
   examples/dev-sequenced-commands/modules-def:
@@ -413,9 +413,6 @@ importers:
         specifier: workspace:*
         version: link:../../../packages/core
     devDependencies:
-      '@battis/qui-cli.colors':
-        specifier: workspace:*
-        version: link:../../../packages/colors
       '@battis/qui-cli.log':
         specifier: workspace:*
         version: link:../../../packages/log
@@ -425,6 +422,9 @@ importers:
       '@examples/dev-sequenced-commands.module-c':
         specifier: workspace:*
         version: link:../module-c
+      '@qui-cli/colors':
+        specifier: workspace:*
+        version: link:../../../packages/colors
       '@tsconfig/node20':
         specifier: ^20.1.6
         version: 20.1.6
@@ -435,14 +435,11 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ^5.8.3
+        specifier: ^5.9.2
         version: 5.9.2
 
   examples/dev-structured:
     dependencies:
-      '@battis/qui-cli.colors':
-        specifier: workspace:*
-        version: link:../../packages/colors
       '@battis/qui-cli.log':
         specifier: workspace:*
         version: link:../../packages/log
@@ -452,6 +449,9 @@ importers:
       '@battis/qui-cli.structured':
         specifier: workspace:*
         version: link:../../packages/structured
+      '@qui-cli/colors':
+        specifier: workspace:*
+        version: link:../../packages/colors
     devDependencies:
       '@tsconfig/node20':
         specifier: ^20.1.6
@@ -466,7 +466,7 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ^5.8.3
+        specifier: ^5.9.2
         version: 5.9.2
 
   examples/usage-cli:
@@ -491,7 +491,7 @@ importers:
         specifier: ^4.20.3
         version: 4.20.3
       typescript:
-        specifier: ^5.8.3
+        specifier: ^5.9.2
         version: 5.9.2
 
   examples/usage-modular:
@@ -516,7 +516,7 @@ importers:
         specifier: ^4.20.3
         version: 4.20.3
       typescript:
-        specifier: ^5.8.3
+        specifier: ^5.9.2
         version: 5.9.2
 
   packages/colors:
@@ -544,7 +544,7 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ^5.8.3
+        specifier: ^5.9.2
         version: 5.9.2
 
   packages/core:
@@ -556,12 +556,12 @@ importers:
         specifier: ^9.0.0
         version: 9.0.0
     devDependencies:
-      '@battis/qui-cli.colors':
-        specifier: workspace:*
-        version: link:../colors
       '@battis/qui-cli.plugin':
         specifier: workspace:*
         version: link:../plugin
+      '@qui-cli/colors':
+        specifier: workspace:*
+        version: link:../colors
       '@tsconfig/node20':
         specifier: ^20.1.6
         version: 20.1.6
@@ -578,7 +578,7 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ^5.8.3
+        specifier: ^5.9.2
         version: 5.9.2
 
   packages/env:
@@ -615,7 +615,7 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ^5.8.3
+        specifier: ^5.9.2
         version: 5.9.2
 
   packages/log:
@@ -630,15 +630,15 @@ importers:
         specifier: ^3.17.0
         version: 3.17.0
     devDependencies:
-      '@battis/qui-cli.colors':
-        specifier: workspace:*
-        version: link:../colors
       '@battis/qui-cli.plugin':
         specifier: workspace:*
         version: link:../plugin
       '@battis/qui-cli.root':
         specifier: workspace:*
         version: link:../root
+      '@qui-cli/colors':
+        specifier: workspace:*
+        version: link:../colors
       '@tsconfig/node20':
         specifier: ^20.1.6
         version: 20.1.6
@@ -655,7 +655,7 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ^5.8.3
+        specifier: ^5.9.2
         version: 5.9.2
 
   packages/plugin:
@@ -680,7 +680,7 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ^5.8.3
+        specifier: ^5.9.2
         version: 5.9.2
 
   packages/progress:
@@ -692,12 +692,12 @@ importers:
         specifier: ^3.12.0
         version: 3.12.0
     devDependencies:
-      '@battis/qui-cli.colors':
-        specifier: workspace:*
-        version: link:../colors
       '@battis/qui-cli.plugin':
         specifier: workspace:*
         version: link:../plugin
+      '@qui-cli/colors':
+        specifier: workspace:*
+        version: link:../colors
       '@tsconfig/node20':
         specifier: ^20.1.6
         version: 20.1.6
@@ -714,14 +714,11 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ^5.8.3
+        specifier: ^5.9.2
         version: 5.9.2
 
   packages/qui-cli:
     devDependencies:
-      '@battis/qui-cli.colors':
-        specifier: workspace:*
-        version: link:../colors
       '@battis/qui-cli.core':
         specifier: workspace:*
         version: link:../core
@@ -752,6 +749,9 @@ importers:
       '@inquirer/prompts':
         specifier: ^7.8.0
         version: 7.8.0(@types/node@24.1.0)
+      '@qui-cli/colors':
+        specifier: workspace:*
+        version: link:../colors
       '@tsconfig/node20':
         specifier: ^20.1.6
         version: 20.1.6
@@ -777,7 +777,7 @@ importers:
         specifier: ^4.20.3
         version: 4.20.3
       typescript:
-        specifier: ^5.8.3
+        specifier: ^5.9.2
         version: 5.9.2
 
   packages/root:
@@ -808,7 +808,7 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ^5.8.3
+        specifier: ^5.9.2
         version: 5.9.2
 
   packages/shell:
@@ -820,15 +820,15 @@ importers:
         specifier: ^0.8.5
         version: 0.8.5
     devDependencies:
-      '@battis/qui-cli.colors':
-        specifier: workspace:*
-        version: link:../colors
       '@battis/qui-cli.log':
         specifier: workspace:*
         version: link:../log
       '@battis/qui-cli.plugin':
         specifier: workspace:*
         version: link:../plugin
+      '@qui-cli/colors':
+        specifier: workspace:*
+        version: link:../colors
       '@tsconfig/node20':
         specifier: ^20.1.6
         version: 20.1.6
@@ -848,7 +848,7 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ^5.8.3
+        specifier: ^5.9.2
         version: 5.9.2
 
   packages/structured:
@@ -857,15 +857,15 @@ importers:
         specifier: ^5.4.4
         version: 5.4.4
     devDependencies:
-      '@battis/qui-cli.colors':
-        specifier: workspace:*
-        version: link:../colors
       '@battis/qui-cli.core':
         specifier: workspace:*
         version: link:../core
       '@battis/qui-cli.plugin':
         specifier: workspace:*
         version: link:../plugin
+      '@qui-cli/colors':
+        specifier: workspace:*
+        version: link:../colors
       '@tsconfig/node20':
         specifier: ^20.1.6
         version: 20.1.6
@@ -925,7 +925,29 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ^5.8.3
+        specifier: ^5.9.2
+        version: 5.9.2
+
+  shims/colors:
+    dependencies:
+      '@qui-cli/colors':
+        specifier: workspace:*
+        version: link:../../packages/colors
+    devDependencies:
+      '@tsconfig/node20':
+        specifier: ^20.1.6
+        version: 20.1.6
+      commit-and-tag-version:
+        specifier: ^12.5.2
+        version: 12.5.2
+      del-cli:
+        specifier: ^6.0.0
+        version: 6.0.0
+      npm-run-all:
+        specifier: ^4.1.5
+        version: 4.1.5
+      typescript:
+        specifier: ^5.9.2
         version: 5.9.2
 
 packages:
@@ -1008,8 +1030,8 @@ packages:
     peerDependencies:
       '@battis/qui-cli.plugin': ^2.4
 
-  '@battis/qui-cli.core@3.0.0':
-    resolution: {integrity: sha512-UQ4OqL9Wpm3rlib7w7Y82ZQ6WdThgKWr8bPgq8e9EdXhPcO3P/aHjJCYHawK5SiIxJW009CNmJFF9QYU/0ZCmQ==}
+  '@battis/qui-cli.core@3.1.0':
+    resolution: {integrity: sha512-jJOWjmHJtfI0RdMZlE5osi0/S6/Z6U2tSMt/QEo4s+Zw04PHRaP2oGSKgnRearAIKH6KHOt6LOl0PQUUvlgqwQ==}
     peerDependencies:
       '@battis/qui-cli.colors': 2.x
       '@battis/qui-cli.plugin': ^2.4
@@ -5560,7 +5582,7 @@ snapshots:
       '@battis/qui-cli.plugin': 2.4.2
       chalk: 5.4.1
 
-  '@battis/qui-cli.core@3.0.0(@battis/qui-cli.colors@2.1.0(@battis/qui-cli.plugin@2.4.2))(@battis/qui-cli.plugin@2.4.2)':
+  '@battis/qui-cli.core@3.1.0(@battis/qui-cli.colors@2.1.0(@battis/qui-cli.plugin@2.4.2))(@battis/qui-cli.plugin@2.4.2)':
     dependencies:
       '@battis/qui-cli.colors': 2.1.0(@battis/qui-cli.plugin@2.4.2)
       '@battis/qui-cli.plugin': 2.4.2
@@ -8728,7 +8750,7 @@ snapshots:
 
   log-symbols@4.1.0:
     dependencies:
-      chalk: 4.1.2
+      chalk: 4.1.0
       is-unicode-supported: 0.1.0
 
   log-symbols@6.0.0:
@@ -9098,7 +9120,7 @@ snapshots:
     dependencies:
       '@battis/import-package-json': 0.1.7
       '@battis/qui-cli.colors': 2.1.0(@battis/qui-cli.plugin@2.4.2)
-      '@battis/qui-cli.core': 3.0.0(@battis/qui-cli.colors@2.1.0(@battis/qui-cli.plugin@2.4.2))(@battis/qui-cli.plugin@2.4.2)
+      '@battis/qui-cli.core': 3.1.0(@battis/qui-cli.colors@2.1.0(@battis/qui-cli.plugin@2.4.2))(@battis/qui-cli.plugin@2.4.2)
       '@battis/qui-cli.log': 2.2.2(@battis/qui-cli.colors@2.1.0(@battis/qui-cli.plugin@2.4.2))(@battis/qui-cli.plugin@2.4.2)(@battis/qui-cli.root@2.0.5(@battis/qui-cli.plugin@2.4.2))
       '@battis/qui-cli.plugin': 2.4.2
       '@battis/qui-cli.root': 2.0.5(@battis/qui-cli.plugin@2.4.2)

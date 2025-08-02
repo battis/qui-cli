@@ -4,26 +4,23 @@ All notable changes to this project will be documented in this file. See [commit
 
 ## [2.1.2](https://github.com/battis/qui-cli/compare/shell/2.1.1...shell/2.1.2) (2025-06-23)
 
-
 ### Bug Fixes
 
-* update peer dependency versions to minimum viable ([a776908](https://github.com/battis/qui-cli/commit/a7769085adef6da665da7a67cb143af1e0bba6be))
+- update peer dependency versions to minimum viable ([a776908](https://github.com/battis/qui-cli/commit/a7769085adef6da665da7a67cb143af1e0bba6be))
 
 ## [2.1.1](https://github.com/battis/qui-cli/compare/shell/2.1.0...shell/2.1.1) (2025-06-23)
 
 ## [2.1.0](https://github.com/battis/qui-cli/compare/shell/2.0.3...shell/2.1.0) (2025-06-21)
 
-
 ### Features
 
-* consistently allow no parameters to configure() ([bd4ba86](https://github.com/battis/qui-cli/commit/bd4ba8697691020b8368482f66f1124cd91926fd))
+- consistently allow no parameters to configure() ([bd4ba86](https://github.com/battis/qui-cli/commit/bd4ba8697691020b8368482f66f1124cd91926fd))
 
 ## [2.0.3](https://github.com/battis/qui-cli/compare/shell/2.0.2...shell/2.0.3) (2025-06-18)
 
-
 ### Bug Fixes
 
-* clean up typing of arguments ([64d8807](https://github.com/battis/qui-cli/commit/64d88075bdd5653f8ab84ab4e3f2805ab62748a2))
+- clean up typing of arguments ([64d8807](https://github.com/battis/qui-cli/commit/64d88075bdd5653f8ab84ab4e3f2805ab62748a2))
 
 ## [2.0.2](https://github.com/battis/qui-cli/compare/shell/2.0.1...shell/2.0.2) (2025-03-07)
 
@@ -71,7 +68,7 @@ All notable changes to this project will be documented in this file. See [commit
 - Updated dependencies [6badb2b]
   - @battis/qui-cli.log@0.8.2
   - @battis/qui-cli.plugin@0.1.2
-  - @battis/qui-cli.colors@0.8.2
+  - @qui-cli/colors@0.8.2
 
 ## 0.8.1
 
@@ -81,7 +78,7 @@ All notable changes to this project will be documented in this file. See [commit
 - Updated dependencies [a259210]
   - @battis/qui-cli.log@0.8.1
   - @battis/qui-cli.plugin@0.1.1
-  - @battis/qui-cli.colors@0.8.1
+  - @qui-cli/colors@0.8.1
 
 ## 0.8.0
 
@@ -92,6 +89,6 @@ All notable changes to this project will be documented in this file. See [commit
 ### Patch Changes
 
 - Updated dependencies [97d48ef]
-  - @battis/qui-cli.colors@0.8.0
+  - @qui-cli/colors@0.8.0
   - @battis/qui-cli.log@0.8.0
   - @battis/qui-cli.plugin@0.1.0

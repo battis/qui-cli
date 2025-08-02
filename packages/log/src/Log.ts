@@ -1,6 +1,6 @@
-import { Colors } from '@battis/qui-cli.Colors';
 import * as Plugin from '@battis/qui-cli.plugin';
 import { Root } from '@battis/qui-cli.root';
+import { Colors } from '@qui-cli/colors';
 import ora from 'ora';
 import path from 'path';
 import stripAnsi from 'strip-ansi';

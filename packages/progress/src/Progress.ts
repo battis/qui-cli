@@ -1,4 +1,4 @@
-import { Colors } from '@battis/qui-cli.colors';
+import { Colors } from '@qui-cli/colors';
 import chalk from 'chalk';
 import cliProgress from 'cli-progress';
 

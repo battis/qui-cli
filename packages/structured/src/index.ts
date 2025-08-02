@@ -1,6 +1,6 @@
-import { Colors } from '@battis/qui-cli.colors';
 import { Core, JackSpeak } from '@battis/qui-cli.core';
 import * as Plugin from '@battis/qui-cli.plugin';
+import { Colors } from '@qui-cli/colors';
 import { camelCase } from 'change-case';
 import fs from 'node:fs';
 import path from 'node:path';

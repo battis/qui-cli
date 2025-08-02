@@ -4,40 +4,35 @@ All notable changes to this project will be documented in this file. See [commit
 
 ## [2.2.2](https://github.com/battis/qui-cli/compare/log/2.2.1...log/2.2.2) (2025-06-23)
 
-
 ### Bug Fixes
 
-* update peer dependency versions to minimum viable ([a776908](https://github.com/battis/qui-cli/commit/a7769085adef6da665da7a67cb143af1e0bba6be))
+- update peer dependency versions to minimum viable ([a776908](https://github.com/battis/qui-cli/commit/a7769085adef6da665da7a67cb143af1e0bba6be))
 
 ## [2.2.1](https://github.com/battis/qui-cli/compare/log/2.2.0...log/2.2.1) (2025-06-23)
 
 ## [2.2.0](https://github.com/battis/qui-cli/compare/log/2.1.1...log/2.2.0) (2025-06-21)
 
-
 ### Features
 
-* consistently allow no parameters to configure() ([bd4ba86](https://github.com/battis/qui-cli/commit/bd4ba8697691020b8368482f66f1124cd91926fd))
+- consistently allow no parameters to configure() ([bd4ba86](https://github.com/battis/qui-cli/commit/bd4ba8697691020b8368482f66f1124cd91926fd))
 
 ## [2.1.1](https://github.com/battis/qui-cli/compare/log/2.1.0...log/2.1.1) (2025-06-18)
 
-
 ### Bug Fixes
 
-* clean up typing of arguments ([64d8807](https://github.com/battis/qui-cli/commit/64d88075bdd5653f8ab84ab4e3f2805ab62748a2))
+- clean up typing of arguments ([64d8807](https://github.com/battis/qui-cli/commit/64d88075bdd5653f8ab84ab4e3f2805ab62748a2))
 
 ## [2.1.0](https://github.com/battis/qui-cli/compare/log/2.0.1...log/2.1.0) (2025-03-07)
 
-
 ### Features
 
-* **log:** Log.syntaxColor() to ANSI color an object for output ([211f091](https://github.com/battis/qui-cli/commit/211f091c00c945a4d99cf5216b6c06bad978dc30))
+- **log:** Log.syntaxColor() to ANSI color an object for output ([211f091](https://github.com/battis/qui-cli/commit/211f091c00c945a4d99cf5216b6c06bad978dc30))
 
 ## [2.0.1](https://github.com/battis/qui-cli/compare/log/2.0.0...log/2.0.1) (2025-02-23)
 
-
 ### Bug Fixes
 
-* **qui-cli.log:** more flexible peer dependency ([718af89](https://github.com/battis/qui-cli/commit/718af8971cd33cbdc5f0935111eb53d63b894c63))
+- **qui-cli.log:** more flexible peer dependency ([718af89](https://github.com/battis/qui-cli/commit/718af8971cd33cbdc5f0935111eb53d63b894c63))
 
 ## [2.0.0](https://github.com/battis/qui-cli/compare/log/1.0.0...log/2.0.0) (2025-02-23)
 
@@ -83,7 +78,7 @@ All notable changes to this project will be documented in this file. See [commit
 - 6badb2b: fix(?) incompatibility with v0.7.x scripts
 - Updated dependencies [6badb2b]
   - @battis/qui-cli.plugin@0.1.2
-  - @battis/qui-cli.colors@0.8.2
+  - @qui-cli/colors@0.8.2
 
 ## 0.8.1
 
@@ -92,7 +87,7 @@ All notable changes to this project will be documented in this file. See [commit
 - a259210: fix init (with janky literals)
 - Updated dependencies [a259210]
   - @battis/qui-cli.plugin@0.1.1
-  - @battis/qui-cli.colors@0.8.1
+  - @qui-cli/colors@0.8.1
 
 ## 0.8.0
 
@@ -103,5 +98,5 @@ All notable changes to this project will be documented in this file. See [commit
 ### Patch Changes
 
 - Updated dependencies [97d48ef]
-  - @battis/qui-cli.colors@0.8.0
+  - @qui-cli/colors@0.8.0
   - @battis/qui-cli.plugin@0.1.0
