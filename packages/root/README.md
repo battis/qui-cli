@@ -1,20 +1,20 @@
-# @battis/qui-cli.root
+# @qui-cli/root
 
-@battis/qui-cli Plugin: Identify the root of the current application
+@qui-cli Plugin: Identify the root of the current application
 
-[![npm version](https://badge.fury.io/js/@battis%2Fqui-cli.root.svg)](https://badge.fury.io/js/@battis%2Fqui-cli.root)
+[![npm version](https://badge.fury.io/js/@qui-cli%2Froot.svg)](https://npmjs.com/package/@qui-cli/root)
 [![Module type: ESM](https://img.shields.io/badge/module%20type-esm-brightgreen)](https://nodejs.org/api/esm.html)
 
 ## Install
 
 ```sh
-npm install @battis/qui-cli.root
+npm install @qui-cli/root
 ```
 
 ## Usage
 
 ```ts
-import { Root } from '@battis/qui-cli.root';
+import { Root } from '@qui-cli/root';
 import path from 'node:path';
 
 // configure Root
@@ -54,7 +54,7 @@ Specify whether to also set `root` as the current working directory. If `true`, 
 ## API
 
 ```ts
-import { Root } from '@battis/qui-cli.root';
+import { Root } from '@qui-cli/root';
 ```
 
 ### `Root.path(): string`
