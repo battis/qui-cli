@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.0.0](https://github.com/battis/qui-cli/compare/shell/2.1.2...shell/3.0.0) (2025-08-02)
+
+
+### ⚠ BREAKING CHANGES
+
+* rename @battis/qui-cli.shell --> @qui-cli/shell
+
+* rename @battis/qui-cli.shell --> @qui-cli/shell ([d1c05ce](https://github.com/battis/qui-cli/commit/d1c05cedab55b7565ee08cf8b4d5823080b4a614))
+
+
+### Bug Fixes
+
+* @battis/qui-cli.core@3.x ([5a2fe14](https://github.com/battis/qui-cli/commit/5a2fe14570ee1763d30656f9a0d2cb433559b969))
+* update dependencies to renamed @qui-cli/colors ([ff80e86](https://github.com/battis/qui-cli/commit/ff80e8625ef98834afdf04e57bfedb1906834e2b))
+* update dependencies to renamed @qui-cli/core ([f834c5a](https://github.com/battis/qui-cli/commit/f834c5a475f908585f1e17865917a092516168a0))
+* update dependencies to renamed @qui-cli/log ([1c8f0fb](https://github.com/battis/qui-cli/commit/1c8f0fbd5561b4274032382c5d10d33912956e7f))
+* update dependencies to renamed @qui-cli/plugin ([117ea85](https://github.com/battis/qui-cli/commit/117ea85256ec69c807c5b56293546d9c350fd43f))
+
 ## [2.1.2](https://github.com/battis/qui-cli/compare/shell/2.1.1...shell/2.1.2) (2025-06-23)
 
 ### Bug Fixes
