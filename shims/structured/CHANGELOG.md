@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.0.0](https://github.com/battis/qui-cli/compare/structured/1.0.0...structured/1.0.0) (2025-08-02)
+
+### ⚠ BREAKING CHANGES
+
+- rename @battis/qui-cli.structured --> @qui-cli/structured
+
+- rename @battis/qui-cli.structured --> @qui-cli/structured ([a0f29ce](https://github.com/battis/qui-cli/commit/a0f29ce176b8fab590f474f7198e33e9fd997ce6))
+
 ## [0.1.5](https://github.com/battis/qui-cli/compare/structured/0.1.4...structured/0.1.5) (2025-08-01)
 
 ### Bug Fixes
