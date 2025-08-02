@@ -14,7 +14,7 @@ All notable changes to this project will be documented in this file. See [commit
 
 ### Bug Fixes
 
-- **qui-cli.progress:** more flexible peer dependency ([2e279a1](https://github.com/battis/qui-cli/commit/2e279a1305d4c508f66bd8376dd5b59efa2c3dbc))
+- more flexible peer dependency ([2e279a1](https://github.com/battis/qui-cli/commit/2e279a1305d4c508f66bd8376dd5b59efa2c3dbc))
 
 ## [2.0.0](https://github.com/battis/qui-cli/compare/progress/1.0.0...progress/2.0.0) (2025-02-23)
 
@@ -26,11 +26,11 @@ All notable changes to this project will be documented in this file. See [commit
 
 ### ⚠ BREAKING CHANGES
 
-- **qui-cli.progress:** reimplemented as ESM module plugin
+- reimplemented as ESM module plugin
 
 ### Features
 
-- **qui-cli.progress:** reimplemented as ESM module plugin ([a0736f2](https://github.com/battis/qui-cli/commit/a0736f25a6e91373962314be0855b5a81e14b93a))
+- reimplemented as ESM module plugin ([a0736f2](https://github.com/battis/qui-cli/commit/a0736f25a6e91373962314be0855b5a81e14b93a))
 
 ## [0.1.1](https://github.com/battis/qui-cli/compare/progress/0.1.0...progress/0.1.1) (2025-01-15)
 

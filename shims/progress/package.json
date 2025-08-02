@@ -1,12 +1,12 @@
 {
-  "name": "@qui-cli/progress",
+  "name": "@battis/qui-cli.progress",
   "version": "2.0.3",
   "description": "@qui-cli Plugin: Progress bar for CLI app",
-  "homepage": "https://github.com/battis/qui-cli/tree/main/packages/progress#readme",
+  "homepage": "https://github.com/battis/qui-cli/tree/main/shims/progress#readme",
   "repository": {
     "type": "git",
     "url": "https://github.com/battis/qui-cli.git",
-    "directory": "packages/progress"
+    "directory": "shims/progress"
   },
   "author": {
     "name": "Seth Battis",
@@ -23,21 +23,18 @@
     "release": "commit-and-tag-version"
   },
   "dependencies": {
-    "chalk": "^5.4.1",
-    "cli-progress": "^3.12.0"
+    "@qui-cli/progress": "workspace:*"
   },
   "devDependencies": {
-    "@qui-cli/colors": "workspace:*",
-    "@qui-cli/plugin": "workspace:*",
     "@tsconfig/node20": "^20.1.6",
-    "@types/cli-progress": "^3.11.6",
     "commit-and-tag-version": "^12.5.2",
     "del-cli": "^6.0.0",
     "npm-run-all": "^4.1.5",
     "typescript": "^5.9.2"
   },
-  "peerDependencies": {
-    "@qui-cli/colors": "2.x",
-    "@qui-cli/plugin": "^2.4"
+  "commit-and-tag-version": {
+    "skip": {
+      "tag": true
+    }
   }
 }
