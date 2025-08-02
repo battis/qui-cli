@@ -1,7 +1,7 @@
 {
-  "name": "@battis/qui-cli.validators",
+  "name": "@qui-cli/validators",
   "version": "2.0.4",
-  "description": "@battis/qui-cli Plugin: Input validators",
+  "description": "@qui-cli Plugin: Input validators",
   "homepage": "https://github.com/battis/qui-cli/tree/main/packages/validators#readme",
   "repository": {
     "type": "git",

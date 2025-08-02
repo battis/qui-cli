@@ -1,20 +1,20 @@
-# @qui-cli/progress
+# @qui-cli/validators
 
-@battis/qui-cli Plugin: Input validators
+@qui-cli Plugin: Input validators
 
-[![npm version](https://badge.fury.io/js/@battis%2Fqui-cli.validators.svg)](https://badge.fury.io/js/@battis%2Fqui-cli.validators)
+[![npm version](https://badge.fury.io/js/@qui-cli%2Fvalidators.svg)](https://npmjs.com/package/@qui-cli/validators)
 [![Module type: ESM](https://img.shields.io/badge/module%20type-esm-brightgreen)](https://nodejs.org/api/esm.html)
 
 ## Install
 
 ```sh
-npm install @battis/qui-cli.validators @inquirer/prompts
+npm install @qui-cli/validators @inquirer/prompts
 ```
 
 ## Usage
 
 ```ts
-import { Validators } from '@battis/qui-cli.validators';
+import { Validators } from '@qui-cli/validators';
 import { input } from '@inquirer/prompts'
 
 const word = await input({
@@ -39,7 +39,7 @@ const word = await input({
 ## API
 
 ```ts
-import { Validators } from '@battis/qui-cli.validators';
+import { Validators } from '@qui-cli/validators';
 ```
 
 ### `Validators.notEmpty(value?): boolean | string`
