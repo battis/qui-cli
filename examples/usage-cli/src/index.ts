@@ -58,7 +58,7 @@ const text = await input({
   )
 });
 
-// @battis/qui-cli.progress example
+// @qui-cli/progress example
 CLI.progress.start({ value: 0, max: text.length });
 for (let i = 0; i < text.length; i++) {
   setTimeout(() => {

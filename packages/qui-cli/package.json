@@ -24,7 +24,6 @@
     "release": "commit-and-tag-version"
   },
   "devDependencies": {
-    "@battis/qui-cli.progress": "workspace:*",
     "@battis/qui-cli.shell": "workspace:*",
     "@battis/qui-cli.validators": "workspace:*",
     "@battis/typescript-tricks": "^0.7.4",
@@ -34,6 +33,7 @@
     "@qui-cli/env": "workspace:*",
     "@qui-cli/log": "workspace:*",
     "@qui-cli/plugin": "workspace:*",
+    "@qui-cli/progress": "workspace:*",
     "@qui-cli/root": "workspace:*",
     "@tsconfig/node20": "^20.1.6",
     "@types/is-valid-path": "^0.1.2",
@@ -46,7 +46,6 @@
     "typescript": "^5.9.2"
   },
   "peerDependencies": {
-    "@battis/qui-cli.progress": "workspace:*",
     "@battis/qui-cli.shell": "workspace:*",
     "@battis/qui-cli.validators": "workspace:*",
     "@inquirer/prompts": "^7.x",
@@ -55,6 +54,7 @@
     "@qui-cli/env": "workspace:*",
     "@qui-cli/log": "workspace:*",
     "@qui-cli/plugin": "workspace:*",
+    "@qui-cli/progress": "workspace:*",
     "@qui-cli/root": "workspace:*"
   },
   "packageManager": "pnpm@9.12.3+sha512.cce0f9de9c5a7c95bef944169cc5dfe8741abfb145078c0d508b868056848a87c81e626246cb60967cbd7fd29a6c062ef73ff840d96b3c86c40ac92cf4a813ee",

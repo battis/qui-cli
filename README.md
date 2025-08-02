@@ -9,7 +9,7 @@ Alternatively, individual packages can be selected and used in a more parsimonio
 - [@qui-cli/colors](./packages/colors/): ANSI colors with [Chalk](https://www.npmjs.com/package/chalk)
 - [@qui-cli/env](./packages/env/): .env file management with [dotenv](https://www.npmjs.com/package/dotenv)
 - [@qui-cli/log](./packages/log/): Logging with [winston](https://www.npmjs.com/package/winston)
-- [@battis/qui-cli.progress](./packages/progress/): Progress bars with [cli-progress](https://www.npmjs.com/package/cli-progress)
+- [@qui-cli/progress](./packages/progress/): Progress bars with [cli-progress](https://www.npmjs.com/package/cli-progress)
 - [@qui-cli/root](./packages/root/): Package root detection with [app-root-path](https://www.npmjs.com/package/app-root-path)
 - [@battis/qui-cli.shell](./packages/shell/): Shell execution with [shelljs](https://www.npmjs.com/package/shelljs))
 - [@battis/qui-cli.structured](./packages/structured/): Build a structured command from directory contents

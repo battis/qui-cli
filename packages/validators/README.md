@@ -1,4 +1,4 @@
-# @battis/qui-cli.progress
+# @qui-cli/progress
 
 @battis/qui-cli Plugin: Input validators
 
