@@ -1,6 +1,6 @@
 # @qui-cli/progress
 
-@battis/qui-cli Plugin: Progress bar for CLI app
+@qui-cli Plugin: Progress bar for CLI app
 
 [![npm version](https://badge.fury.io/js/@qui-cli%2Fprogress.svg)](https://npmjs.com/package/@qui-cli/progress)
 [![Module type: ESM](https://img.shields.io/badge/module%20type-esm-brightgreen)](https://nodejs.org/api/esm.html)
