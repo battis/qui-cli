@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [4.0.0](https://github.com/battis/qui-cli/compare/env/4.0.0...env/4.0.0) (2025-08-02)
+
+### ⚠ BREAKING CHANGES
+
+- rename @battis/qui-cli.env --> @qui-cli/env
+
+- rename @battis/qui-cli.env --> @qui-cli/env ([0a90e32](https://github.com/battis/qui-cli/commit/0a90e32d401c46f7d26f7220ca3369a587d86ec6))
+
 ## [3.1.2](https://github.com/battis/qui-cli/compare/env/3.1.1...env/3.1.2) (2025-07-31)
 
 ### Bug Fixes
