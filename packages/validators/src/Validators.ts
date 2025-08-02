@@ -1,4 +1,4 @@
-import { Root } from '@battis/qui-cli.root';
+import { Root } from '@qui-cli/root';
 import domainValidator from '@tahul/is-valid-domain';
 import cronValidator from 'cron-validate';
 import emailValidator from 'email-validator';

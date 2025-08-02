@@ -54,7 +54,7 @@ Custom log levels to use, specified by `Log.CustomLevels`
 
 ### `root`
 
-Optional root to use as the base for relative `logFilePath`. If undefined, falls back to the path defined by [@battis/qui-cli.root](https://www.npmjs.com/package/@battis/qui-cli.root).
+Optional root to use as the base for relative `logFilePath`. If undefined, falls back to the path defined by [@qui-cli/root](https://www.npmjs.com/package/@qui-cli/root).
 
 ## Options
 

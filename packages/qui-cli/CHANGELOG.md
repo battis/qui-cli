@@ -62,7 +62,7 @@ Updating dependencies to @qui-cli/core@3.x
 
 ### Bug Fixes
 
-- **env:** add @battis/qui-cli.root to plugin chain ([23b0af8](https://github.com/battis/qui-cli/commit/23b0af8701317fe4b86cd49a0fe62258e51ffbe6))
+- **env:** add @qui-cli/root to plugin chain ([23b0af8](https://github.com/battis/qui-cli/commit/23b0af8701317fe4b86cd49a0fe62258e51ffbe6))
 
 ## [2.1.2](https://github.com/battis/qui-cli/compare/qui-cli/2.1.1...qui-cli/2.1.2) (2025-03-07)
 
@@ -90,7 +90,7 @@ Updating dependencies to @qui-cli/core@3.x
 
 ### Bug Fixes
 
-- **qui-cli.root:** actually default cwd to true ([c774f6b](https://github.com/battis/qui-cli/commit/c774f6ba708ffc5a78f653df47de523834000d66))
+- **root:** actually default cwd to true ([c774f6b](https://github.com/battis/qui-cli/commit/c774f6ba708ffc5a78f653df47de523834000d66))
 
 ## [2.0.3](https://github.com/battis/qui-cli/compare/qui-cli/2.0.2...qui-cli/2.0.3) (2025-02-27)
 
@@ -196,7 +196,7 @@ Updating dependencies to @qui-cli/core@3.x
   - @qui-cli/plugin@0.1.2
   - @battis/qui-cli.shell@0.8.2
   - @qui-cli/colors@0.8.2
-  - @battis/qui-cli.root@0.8.2
+  - @qui-cli/root@0.8.2
   - @battis/qui-cli.validators@0.8.2
 
 ## 0.8.2
@@ -211,7 +211,7 @@ Updating dependencies to @qui-cli/core@3.x
   - @qui-cli/colors@0.8.1
   - @qui-cli/core@0.8.2
   - @battis/qui-cli.env@0.8.1
-  - @battis/qui-cli.root@0.8.1
+  - @qui-cli/root@0.8.1
   - @battis/qui-cli.validators@0.8.1
 
 ## 0.8.1
@@ -236,7 +236,7 @@ Updating dependencies to @qui-cli/core@3.x
   - @battis/qui-cli.env@0.8.0
   - @battis/qui-cli.log@0.8.0
   - @qui-cli/plugin@0.1.0
-  - @battis/qui-cli.root@0.8.0
+  - @qui-cli/root@0.8.0
   - @battis/qui-cli.shell@0.8.0
   - @battis/qui-cli.validators@0.8.0
 

@@ -80,7 +80,7 @@ Require a file path string. Returns `true` if valid, an error message if invalid
 
 ### `Validators.pathExists(root?): Validator`
 
-Returns a validator that requires a file path string that exists (relative to `root`, if `root` is undefined, falls back to [Root.path()](https://www.npmjs.com/package/@battis/qui-cli.root)).
+Returns a validator that requires a file path string that exists (relative to `root`, if `root` is undefined, falls back to [Root.path()](https://www.npmjs.com/package/@qui-cli/root)).
 
 ### `Validators.combine(...validators: Validator[]): Validator`
 

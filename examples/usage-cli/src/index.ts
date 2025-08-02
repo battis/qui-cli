@@ -42,7 +42,7 @@ CLI.log.error(
   )
 );
 
-// @battis/qui-cli.root example
+// @qui-cli/root example
 CLI.log.info(CLI.colors.url(CLI.root.path()));
 
 // @battis/qui-cli.shell example

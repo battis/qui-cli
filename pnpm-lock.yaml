@@ -133,15 +133,15 @@ importers:
       '@battis/qui-cli.log':
         specifier: workspace:*
         version: link:../../packages/log
-      '@battis/qui-cli.root':
-        specifier: workspace:*
-        version: link:../../packages/root
       '@qui-cli/core':
         specifier: workspace:*
         version: link:../../packages/core
       '@qui-cli/plugin':
         specifier: workspace:*
         version: link:../../packages/plugin
+      '@qui-cli/root':
+        specifier: workspace:*
+        version: link:../../packages/root
     devDependencies:
       '@tsconfig/node20':
         specifier: ^20.1.6
@@ -593,12 +593,12 @@ importers:
         specifier: ^17.2.1
         version: 17.2.1
     devDependencies:
-      '@battis/qui-cli.root':
-        specifier: workspace:*
-        version: link:../root
       '@qui-cli/plugin':
         specifier: workspace:*
         version: link:../plugin
+      '@qui-cli/root':
+        specifier: workspace:*
+        version: link:../root
       '@tsconfig/node20':
         specifier: ^20.1.6
         version: 20.1.6
@@ -630,15 +630,15 @@ importers:
         specifier: ^3.17.0
         version: 3.17.0
     devDependencies:
-      '@battis/qui-cli.root':
-        specifier: workspace:*
-        version: link:../root
       '@qui-cli/colors':
         specifier: workspace:*
         version: link:../colors
       '@qui-cli/plugin':
         specifier: workspace:*
         version: link:../plugin
+      '@qui-cli/root':
+        specifier: workspace:*
+        version: link:../root
       '@tsconfig/node20':
         specifier: ^20.1.6
         version: 20.1.6
@@ -728,9 +728,6 @@ importers:
       '@battis/qui-cli.progress':
         specifier: workspace:*
         version: link:../progress
-      '@battis/qui-cli.root':
-        specifier: workspace:*
-        version: link:../root
       '@battis/qui-cli.shell':
         specifier: workspace:*
         version: link:../shell
@@ -752,6 +749,9 @@ importers:
       '@qui-cli/plugin':
         specifier: workspace:*
         version: link:../plugin
+      '@qui-cli/root':
+        specifier: workspace:*
+        version: link:../root
       '@tsconfig/node20':
         specifier: ^20.1.6
         version: 20.1.6
@@ -900,12 +900,12 @@ importers:
         specifier: ^0.1.1
         version: 0.1.1
     devDependencies:
-      '@battis/qui-cli.root':
-        specifier: workspace:*
-        version: link:../root
       '@qui-cli/plugin':
         specifier: workspace:*
         version: link:../plugin
+      '@qui-cli/root':
+        specifier: workspace:*
+        version: link:../root
       '@tsconfig/node20':
         specifier: ^20.1.6
         version: 20.1.6
@@ -977,6 +977,28 @@ importers:
       '@qui-cli/plugin':
         specifier: workspace:*
         version: link:../../packages/plugin
+    devDependencies:
+      '@tsconfig/node20':
+        specifier: ^20.1.6
+        version: 20.1.6
+      commit-and-tag-version:
+        specifier: ^12.5.2
+        version: 12.5.2
+      del-cli:
+        specifier: ^6.0.0
+        version: 6.0.0
+      npm-run-all:
+        specifier: ^4.1.5
+        version: 4.1.5
+      typescript:
+        specifier: ^5.9.2
+        version: 5.9.2
+
+  shims/root:
+    dependencies:
+      '@qui-cli/root':
+        specifier: workspace:*
+        version: link:../../packages/root
     devDependencies:
       '@tsconfig/node20':
         specifier: ^20.1.6

@@ -46,7 +46,7 @@ All notable changes to this project will be documented in this file. See [commit
 
 - Updated dependencies [6badb2b]
   - @qui-cli/plugin@0.1.2
-  - @battis/qui-cli.root@0.8.2
+  - @qui-cli/root@0.8.2
 
 ## 0.8.1
 
@@ -54,7 +54,7 @@ All notable changes to this project will be documented in this file. See [commit
 
 - Updated dependencies [a259210]
   - @qui-cli/plugin@0.1.1
-  - @battis/qui-cli.root@0.8.1
+  - @qui-cli/root@0.8.1
 
 ## 0.8.0
 
@@ -66,4 +66,4 @@ All notable changes to this project will be documented in this file. See [commit
 
 - Updated dependencies [97d48ef]
   - @qui-cli/plugin@0.1.0
-  - @battis/qui-cli.root@0.8.0
+  - @qui-cli/root@0.8.0

@@ -53,7 +53,7 @@ export type Configuration = Plugin.Configuration & {
 
 ### `root`
 
-Optional root for calculating relative paths to `.env` files. If undefined, falls back to the path defined by [@battis/qui-cli.root](https://www.npmjs.com/package/@battis/qui-cli.root).
+Optional root for calculating relative paths to `.env` files. If undefined, falls back to the path defined by [@qui-cli/root](https://www.npmjs.com/package/@qui-cli/root).
 
 ### `load`
 
