@@ -1,20 +1,20 @@
-# @battis/qui-cli.shell
+# @qui-cli/shell
 
-@battis/qui-cli Plugin: Standardized shelljs wrapper
+@qui-cli Plugin: Standardized shelljs wrapper
 
-[![npm version](https://badge.fury.io/js/@battis%2Fqui-cli.shell.svg)](https://badge.fury.io/js/@battis%2Fqui-cli.shell)
+[![npm version](https://badge.fury.io/js/@qui-cli%2Fshell.svg)](https://npmjs.com/package/@qui-cli/shell)
 [![Module type: ESM](https://img.shields.io/badge/module%20type-esm-brightgreen)](https://nodejs.org/api/esm.html)
 
 ## Install
 
 ```sh
-npm install @battis/qui-cli.shell @qui-cli/core
+npm install @qui-cli/shell @qui-cli/core
 ```
 
 ## Usage
 
 ```ts
-import { Shell } from '@battis/qui-cli.shell';
+import { Shell } from '@qui-cli/shell';
 import { Core } from '@qui-cli/core';
 
 // configure Shell
@@ -52,7 +52,7 @@ After user-provided command line arguments are parsed, `Shell` is updated to ref
 ## API
 
 ```ts
-import { Shell } from '@battis/qui-cli.shell';
+import { Shell } from '@qui-cli/shell';
 ```
 
 ### `Shell.get()`
