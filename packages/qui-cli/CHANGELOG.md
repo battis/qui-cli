@@ -96,11 +96,11 @@ Updating dependencies to @qui-cli/core@3.x
 
 ### Bug Fixes
 
-- **qui-cli.env:** allow creation of new .env file if not present ([c7fd3e3](https://github.com/battis/qui-cli/commit/c7fd3e35653efd1157c8ebc0e72da370561f0a92))
+- **env:** allow creation of new .env file if not present ([c7fd3e3](https://github.com/battis/qui-cli/commit/c7fd3e35653efd1157c8ebc0e72da370561f0a92))
 
 ## [2.0.2](https://github.com/battis/qui-cli/compare/qui-cli/2.0.1...qui-cli/2.0.2) (2025-02-24)
 
-- bump @battis/qui-cli.env to 2.0.2
+- bump @qui-cli/env to 2.0.2
 
 ## [2.0.1](https://github.com/battis/qui-cli/compare/qui-cli/2.0.0...qui-cli/2.0.1) (2025-02-23)
 
@@ -191,7 +191,7 @@ Updating dependencies to @qui-cli/core@3.x
 - 6badb2b: fix(?) incompatibility with v0.7.x scripts
 - Updated dependencies [6badb2b]
   - @qui-cli/core@0.8.3
-  - @battis/qui-cli.env@0.8.2
+  - @qui-cli/env@0.8.2
   - @battis/qui-cli.log@0.8.2
   - @qui-cli/plugin@0.1.2
   - @battis/qui-cli.shell@0.8.2
@@ -210,7 +210,7 @@ Updating dependencies to @qui-cli/core@3.x
   - @battis/qui-cli.shell@0.8.1
   - @qui-cli/colors@0.8.1
   - @qui-cli/core@0.8.2
-  - @battis/qui-cli.env@0.8.1
+  - @qui-cli/env@0.8.1
   - @qui-cli/root@0.8.1
   - @battis/qui-cli.validators@0.8.1
 
@@ -233,7 +233,7 @@ Updating dependencies to @qui-cli/core@3.x
 - Updated dependencies [97d48ef]
   - @qui-cli/colors@0.8.0
   - @qui-cli/core@0.8.0
-  - @battis/qui-cli.env@0.8.0
+  - @qui-cli/env@0.8.0
   - @battis/qui-cli.log@0.8.0
   - @qui-cli/plugin@0.1.0
   - @qui-cli/root@0.8.0

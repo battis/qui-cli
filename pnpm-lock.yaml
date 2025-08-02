@@ -74,9 +74,6 @@ importers:
 
   examples/dev-1password-env:
     dependencies:
-      '@battis/qui-cli.env':
-        specifier: workspace:*
-        version: link:../../packages/env
       '@battis/qui-cli.log':
         specifier: workspace:*
         version: link:../../packages/log
@@ -86,6 +83,9 @@ importers:
       '@qui-cli/core':
         specifier: workspace:*
         version: link:../../packages/core
+      '@qui-cli/env':
+        specifier: workspace:*
+        version: link:../../packages/env
     devDependencies:
       '@tsconfig/node20':
         specifier: ^20.1.6
@@ -127,15 +127,15 @@ importers:
 
   examples/dev-plugin-lifecycle:
     dependencies:
-      '@battis/qui-cli.env':
-        specifier: workspace:*
-        version: link:../../packages/env
       '@battis/qui-cli.log':
         specifier: workspace:*
         version: link:../../packages/log
       '@qui-cli/core':
         specifier: workspace:*
         version: link:../../packages/core
+      '@qui-cli/env':
+        specifier: workspace:*
+        version: link:../../packages/env
       '@qui-cli/plugin':
         specifier: workspace:*
         version: link:../../packages/plugin
@@ -719,9 +719,6 @@ importers:
 
   packages/qui-cli:
     devDependencies:
-      '@battis/qui-cli.env':
-        specifier: workspace:*
-        version: link:../env
       '@battis/qui-cli.log':
         specifier: workspace:*
         version: link:../log
@@ -746,6 +743,9 @@ importers:
       '@qui-cli/core':
         specifier: workspace:*
         version: link:../core
+      '@qui-cli/env':
+        specifier: workspace:*
+        version: link:../env
       '@qui-cli/plugin':
         specifier: workspace:*
         version: link:../plugin
@@ -955,6 +955,28 @@ importers:
       '@qui-cli/core':
         specifier: workspace:*
         version: link:../../packages/core
+    devDependencies:
+      '@tsconfig/node20':
+        specifier: ^20.1.6
+        version: 20.1.6
+      commit-and-tag-version:
+        specifier: ^12.5.2
+        version: 12.5.2
+      del-cli:
+        specifier: ^6.0.0
+        version: 6.0.0
+      npm-run-all:
+        specifier: ^4.1.5
+        version: 4.1.5
+      typescript:
+        specifier: ^5.9.2
+        version: 5.9.2
+
+  shims/env:
+    dependencies:
+      '@qui-cli/env':
+        specifier: workspace:*
+        version: link:../../packages/env
     devDependencies:
       '@tsconfig/node20':
         specifier: ^20.1.6
@@ -8817,7 +8839,7 @@ snapshots:
 
   log-symbols@4.1.0:
     dependencies:
-      chalk: 4.1.0
+      chalk: 4.1.2
       is-unicode-supported: 0.1.0
 
   log-symbols@6.0.0:

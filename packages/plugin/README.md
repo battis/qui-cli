@@ -13,7 +13,7 @@ npm install @qui-cli/plugin
 
 ## Usage
 
-Refer to [@battis/qui-cli.env](../env) for a complete example defining a plugin. The model is to define an ESM module and then to register that module with the `Plugin.Registrar`. The plugin module can optionally define the following hooks:
+Refer to [@qui-cli/env](../env) for a complete example defining a plugin. The model is to define an ESM module and then to register that module with the `Plugin.Registrar`. The plugin module can optionally define the following hooks:
 
 - `configure(config?: Plugin.Configuration) => void` may be invoked either manually before processing user-provided command line arguments (e.g. to update default values) and also (if defined) when `options()` is invoked. See [Configuration](#Configuration) below.
 - `options() => Plugin.Options` is invoked (if defined) when preparing to process user-provided command-line arguments and must return a `Plugin.Options` object describing any user-configurable command line arguments and other user-readable documentation. See [Options](#Options) below.

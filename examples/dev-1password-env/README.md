@@ -1,6 +1,6 @@
 # Example: Command
 
-1Password implementation of `@battis/qui-cli.env` use
+1Password implementation of `@qui-cli/env` use
 
 ## Notes
 

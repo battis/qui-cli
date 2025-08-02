@@ -14,7 +14,7 @@ npm install @battis/qui-cli.log @qui-cli/core
 ## Usage
 
 ```ts
-import { Log } from '@battis/qui-cli.env';
+import { Log } from '@qui-cli/env';
 import { Core } from '@qui-cli/core';
 
 // process user-provided command-line arguments

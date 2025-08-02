@@ -28,7 +28,7 @@ CLI.log.info({ args });
 // optionally run all loaded plugins (may not all have runnable methods)
 await CLI.run();
 
-// @battis/qui-cli.env example
+// @qui-cli/env example
 CLI.env.set({
   key: 'RUNS',
   value: `${parseInt((await CLI.env.get({ key: 'RUNS' })) || '0') + 1}`
