@@ -1,14 +1,13 @@
 {
-  "name": "@qui-cli/structured",
+  "name": "@battis/qui-cli.structured",
   "version": "0.1.5",
   "description": "Build a structured @qui-cli command from directory contents",
-  "homepage": "https://github.com/battis/qui-cli/tree/main/packages/structured#readme",
+  "homepage": "https://github.com/battis/qui-cli/tree/main/shims/structured#readme",
   "repository": {
     "type": "git",
     "url": "https://github.com/battis/qui-cli.git",
-    "directory": "packages/structured"
+    "directory": "shims/structured"
   },
-  "license": "GPL-3.0",
   "author": {
     "name": "Seth Battis",
     "url": "https://github.com/battis"
@@ -24,24 +23,18 @@
     "release": "commit-and-tag-version"
   },
   "dependencies": {
-    "change-case": "^5.4.4"
+    "@qui-cli/structured": "workspace:*"
   },
   "devDependencies": {
-    "@qui-cli/colors": "workspace:*",
-    "@qui-cli/core": "workspace:*",
-    "@qui-cli/plugin": "workspace:*",
     "@tsconfig/node20": "^20.1.6",
-    "@types/node": "^24.1.0",
     "commit-and-tag-version": "^12.5.2",
     "del-cli": "^6.0.0",
     "npm-run-all": "^4.1.5",
     "typescript": "^5.9.2"
   },
-  "peerDependencies": {
-    "@qui-cli/colors": "workspace:*",
-    "@qui-cli/core": "workspace:*",
-    "@qui-cli/plugin": "workspace:*"
-  },
-  "packageManager": "pnpm@9.12.3+sha512.cce0f9de9c5a7c95bef944169cc5dfe8741abfb145078c0d508b868056848a87c81e626246cb60967cbd7fd29a6c062ef73ff840d96b3c86c40ac92cf4a813ee",
-  "target": "node"
+  "commit-and-tag-version": {
+    "skip": {
+      "tag": true
+    }
+  }
 }

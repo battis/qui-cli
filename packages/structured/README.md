@@ -1,14 +1,14 @@
-# @battis/qui-cli.structured
+# @qui-cli/structured
 
-Build a structured command from directory contents
+Build a structured @qui-cli command from directory contents
 
-[![npm version](https://badge.fury.io/js/@battis%2Fqui-cli.structured.svg)](https://badge.fury.io/js/@battis%2Fqui-cli.structured)
+[![npm version](https://badge.fury.io/js/@qui-cli%2Fstructured.svg)](https://npmjs.com/package/@qui-cli/structured)
 [![Module type: ESM](https://img.shields.io/badge/module%20type-esm-brightgreen)](https://nodejs.org/api/esm.html)
 
 ## Install
 
 ```sh
-npm install @battis/qui-cli.structured
+npm install @qui-cli/structured
 ```
 
 ## Usage
