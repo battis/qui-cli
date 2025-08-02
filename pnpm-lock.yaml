@@ -254,9 +254,6 @@ importers:
 
   examples/dev-positionals:
     dependencies:
-      '@battis/qui-cli.structured':
-        specifier: workspace:*
-        version: link:../../packages/structured
       '@qui-cli/colors':
         specifier: workspace:*
         version: link:../../packages/colors
@@ -269,6 +266,9 @@ importers:
       '@qui-cli/plugin':
         specifier: workspace:*
         version: link:../../packages/plugin
+      '@qui-cli/structured':
+        specifier: workspace:*
+        version: link:../../packages/structured
     devDependencies:
       '@tsconfig/node20':
         specifier: ^20.1.6
@@ -440,9 +440,6 @@ importers:
 
   examples/dev-structured:
     dependencies:
-      '@battis/qui-cli.structured':
-        specifier: workspace:*
-        version: link:../../packages/structured
       '@qui-cli/colors':
         specifier: workspace:*
         version: link:../../packages/colors
@@ -452,6 +449,9 @@ importers:
       '@qui-cli/plugin':
         specifier: workspace:*
         version: link:../../packages/plugin
+      '@qui-cli/structured':
+        specifier: workspace:*
+        version: link:../../packages/structured
     devDependencies:
       '@tsconfig/node20':
         specifier: ^20.1.6
@@ -1087,6 +1087,28 @@ importers:
       '@qui-cli/shell':
         specifier: workspace:*
         version: link:../../packages/shell
+    devDependencies:
+      '@tsconfig/node20':
+        specifier: ^20.1.6
+        version: 20.1.6
+      commit-and-tag-version:
+        specifier: ^12.5.2
+        version: 12.5.2
+      del-cli:
+        specifier: ^6.0.0
+        version: 6.0.0
+      npm-run-all:
+        specifier: ^4.1.5
+        version: 4.1.5
+      typescript:
+        specifier: ^5.9.2
+        version: 5.9.2
+
+  shims/structured:
+    dependencies:
+      '@qui-cli/structured':
+        specifier: workspace:*
+        version: link:../../packages/structured
     devDependencies:
       '@tsconfig/node20':
         specifier: ^20.1.6

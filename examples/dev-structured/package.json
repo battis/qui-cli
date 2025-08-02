@@ -25,10 +25,10 @@
     "build:man-files": "copy './src/**/.man.json' ./dist"
   },
   "dependencies": {
-    "@battis/qui-cli.structured": "workspace:*",
     "@qui-cli/colors": "workspace:*",
     "@qui-cli/log": "workspace:*",
-    "@qui-cli/plugin": "workspace:*"
+    "@qui-cli/plugin": "workspace:*",
+    "@qui-cli/structured": "workspace:*"
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.6",
