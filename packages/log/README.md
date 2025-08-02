@@ -1,14 +1,14 @@
-# @battis/qui-cli.log
+# @qui-cli/log
 
 @battis/qui-cli Plugin: Standardized winston wrapper
 
-[![npm version](https://badge.fury.io/js/@battis%2Fqui-cli.log.svg)](https://badge.fury.io/js/@battis%2Fqui-cli.log)
+[![npm version](https://badge.fury.io/js/@qui-cli%2Flog.svg)](https://npmjs.com/package/@qui-cli/log)
 [![Module type: ESM](https://img.shields.io/badge/module%20type-esm-brightgreen)](https://nodejs.org/api/esm.html)
 
 ## Install
 
 ```sh
-npm install @battis/qui-cli.log @qui-cli/core
+npm install @qui-cli/log @qui-cli/core
 ```
 
 ## Usage
@@ -67,7 +67,7 @@ Exposes `logFilePath`, `stdoutLevel`, and `fileLevel` to user-provided command l
 ## API
 
 ```ts
-import { Log } from '@battis/qui-cli.log';
+import { Log } from '@qui-cli/log';
 ```
 
 ### `Log.get(): winston.Logger`
