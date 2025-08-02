@@ -22,11 +22,11 @@
     "build:compile": "tsc"
   },
   "dependencies": {
-    "@battis/qui-cli.plugin": "workspace:*",
     "@examples/dev-sequenced-commands.module-a": "workspace:*",
     "@examples/dev-sequenced-commands.module-c": "workspace:*",
     "@examples/dev-sequenced-commands.modules-def": "workspace:*",
-    "@qui-cli/core": "workspace:*"
+    "@qui-cli/core": "workspace:*",
+    "@qui-cli/plugin": "workspace:*"
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.6",

@@ -26,9 +26,9 @@
   },
   "dependencies": {
     "@battis/qui-cli.log": "workspace:*",
-    "@battis/qui-cli.plugin": "workspace:*",
     "@battis/qui-cli.structured": "workspace:*",
-    "@qui-cli/colors": "workspace:*"
+    "@qui-cli/colors": "workspace:*",
+    "@qui-cli/plugin": "workspace:*"
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.6",

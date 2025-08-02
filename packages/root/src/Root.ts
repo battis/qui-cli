@@ -1,4 +1,4 @@
-import * as Plugin from '@battis/qui-cli.plugin';
+import * as Plugin from '@qui-cli/plugin';
 import appRoot from 'app-root-path';
 import nodePath from 'node:path';
 

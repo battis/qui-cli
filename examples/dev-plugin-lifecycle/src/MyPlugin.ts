@@ -1,7 +1,7 @@
 import '@battis/qui-cli.env';
 import { Log } from '@battis/qui-cli.log';
-import * as Plugin from '@battis/qui-cli.plugin';
 import { Root } from '@battis/qui-cli.root';
+import * as Plugin from '@qui-cli/plugin';
 import path from 'node:path';
 
 Root.configure({ root: path.dirname(import.meta.dirname) });

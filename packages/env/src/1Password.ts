@@ -1,6 +1,6 @@
 import { Client, createClient, Item } from '@1password/sdk';
 import { importLocal } from '@battis/import-package-json';
-import * as Plugin from '@battis/qui-cli.plugin';
+import * as Plugin from '@qui-cli/plugin';
 import path from 'node:path';
 import * as Env from './Env.js';
 

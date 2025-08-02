@@ -103,14 +103,14 @@ All notable changes to this project will be documented in this file. See [commit
 
 - 6badb2b: fix(?) incompatibility with v0.7.x scripts
 - Updated dependencies [6badb2b]
-  - @battis/qui-cli.plugin@0.1.2
+  - @qui-cli/plugin@0.1.2
 
 ## 0.8.2
 
 ### Patch Changes
 
 - Updated dependencies [a259210]
-  - @battis/qui-cli.plugin@0.1.1
+  - @qui-cli/plugin@0.1.1
 
 ## 0.8.1
 
@@ -127,4 +127,4 @@ All notable changes to this project will be documented in this file. See [commit
 ### Patch Changes
 
 - Updated dependencies [97d48ef]
-  - @battis/qui-cli.plugin@0.1.0
+  - @qui-cli/plugin@0.1.0

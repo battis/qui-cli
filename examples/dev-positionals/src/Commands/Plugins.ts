@@ -1,6 +1,6 @@
 import { Log } from '@battis/qui-cli.log';
-import { register } from '@battis/qui-cli.plugin';
 import { Positionals } from '@qui-cli/core';
+import { register } from '@qui-cli/plugin';
 import * as Plugin from '../Plugins/index.js';
 
 await register(Plugin.A);

@@ -1,6 +1,6 @@
 import { Log } from '@battis/qui-cli.log';
-import * as Plugin from '@battis/qui-cli.plugin';
 import { Colors } from '@qui-cli/colors';
+import * as Plugin from '@qui-cli/plugin';
 import ora, { Ora } from 'ora';
 import shell from 'shelljs';
 

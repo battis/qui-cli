@@ -1,4 +1,4 @@
-import { register } from '@battis/qui-cli.plugin';
+import { register } from '@qui-cli/plugin';
 import * as Log from './Log.js';
 
 export * from './Levels.js';

@@ -80,10 +80,10 @@ Updating dependencies to @qui-cli/core@3.x
 
 ### Features
 
-- **qui-cli.plugin:** detect circular plugin dependencies ([3b6fd72](https://github.com/battis/qui-cli/commit/3b6fd7239b3e239324a317c4536bafbe0a49ccff))
-- **qui-cli.plugin:** ExpectedArguments ([057bc5c](https://github.com/battis/qui-cli/commit/057bc5c4f1b0b55d51a2fe3bb8e9cd14ea731b05))
-- **qui-cli.plugin:** expose Plugin.AccumulatedResults ([fb18e58](https://github.com/battis/qui-cli/commit/fb18e58adf3fa0439ebc46a2bb521ce625c00fd6))
-- **qui-cli.plugin:** run() hook ([ce67be9](https://github.com/battis/qui-cli/commit/ce67be9cddb1db23d351966f48f652d44f95894b))
+- **plugin:** detect circular plugin dependencies ([3b6fd72](https://github.com/battis/qui-cli/commit/3b6fd7239b3e239324a317c4536bafbe0a49ccff))
+- **plugin:** ExpectedArguments ([057bc5c](https://github.com/battis/qui-cli/commit/057bc5c4f1b0b55d51a2fe3bb8e9cd14ea731b05))
+- **plugin:** expose Plugin.AccumulatedResults ([fb18e58](https://github.com/battis/qui-cli/commit/fb18e58adf3fa0439ebc46a2bb521ce625c00fd6))
+- **plugin:** run() hook ([ce67be9](https://github.com/battis/qui-cli/commit/ce67be9cddb1db23d351966f48f652d44f95894b))
 - **core:** run() ([a2c5ba2](https://github.com/battis/qui-cli/commit/a2c5ba2f8de6c52a88c1cf75ac37f93b51fb8211))
 
 ## [2.0.4](https://github.com/battis/qui-cli/compare/qui-cli/2.0.3...qui-cli/2.0.4) (2025-02-27)
@@ -193,7 +193,7 @@ Updating dependencies to @qui-cli/core@3.x
   - @qui-cli/core@0.8.3
   - @battis/qui-cli.env@0.8.2
   - @battis/qui-cli.log@0.8.2
-  - @battis/qui-cli.plugin@0.1.2
+  - @qui-cli/plugin@0.1.2
   - @battis/qui-cli.shell@0.8.2
   - @qui-cli/colors@0.8.2
   - @battis/qui-cli.root@0.8.2
@@ -206,7 +206,7 @@ Updating dependencies to @qui-cli/core@3.x
 - a259210: fix init (with janky literals)
 - Updated dependencies [a259210]
   - @battis/qui-cli.log@0.8.1
-  - @battis/qui-cli.plugin@0.1.1
+  - @qui-cli/plugin@0.1.1
   - @battis/qui-cli.shell@0.8.1
   - @qui-cli/colors@0.8.1
   - @qui-cli/core@0.8.2
@@ -235,7 +235,7 @@ Updating dependencies to @qui-cli/core@3.x
   - @qui-cli/core@0.8.0
   - @battis/qui-cli.env@0.8.0
   - @battis/qui-cli.log@0.8.0
-  - @battis/qui-cli.plugin@0.1.0
+  - @qui-cli/plugin@0.1.0
   - @battis/qui-cli.root@0.8.0
   - @battis/qui-cli.shell@0.8.0
   - @battis/qui-cli.validators@0.8.0

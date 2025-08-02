@@ -38,7 +38,7 @@ All notable changes to this project will be documented in this file. See [commit
 
 ### ⚠ BREAKING CHANGES
 
-- **qui-cli.plugin:** async hooks
+- **plugin:** async hooks
 
 ## [1.0.0](https://github.com/battis/qui-cli/compare/log/0.8.4...log/1.0.0) (2025-02-21)
 
@@ -77,7 +77,7 @@ All notable changes to this project will be documented in this file. See [commit
 
 - 6badb2b: fix(?) incompatibility with v0.7.x scripts
 - Updated dependencies [6badb2b]
-  - @battis/qui-cli.plugin@0.1.2
+  - @qui-cli/plugin@0.1.2
   - @qui-cli/colors@0.8.2
 
 ## 0.8.1
@@ -86,7 +86,7 @@ All notable changes to this project will be documented in this file. See [commit
 
 - a259210: fix init (with janky literals)
 - Updated dependencies [a259210]
-  - @battis/qui-cli.plugin@0.1.1
+  - @qui-cli/plugin@0.1.1
   - @qui-cli/colors@0.8.1
 
 ## 0.8.0
@@ -99,4 +99,4 @@ All notable changes to this project will be documented in this file. See [commit
 
 - Updated dependencies [97d48ef]
   - @qui-cli/colors@0.8.0
-  - @battis/qui-cli.plugin@0.1.0
+  - @qui-cli/plugin@0.1.0

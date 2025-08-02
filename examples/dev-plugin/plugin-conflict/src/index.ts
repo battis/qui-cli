@@ -1,5 +1,5 @@
-import { register } from '@battis/qui-cli.plugin';
 import { MyPlugin } from '@examples/dev-plugin.provider';
+import { register } from '@qui-cli/plugin';
 import { Core } from '../../../../packages/core/dist/index.js';
 import * as ConflictingPlugin from './ConflictingPlugin.js';
 

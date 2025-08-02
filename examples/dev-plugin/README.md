@@ -8,7 +8,7 @@ Define (and use) a plugin package
 
 Defines a reusable plugin package
 
-- [src/MyPlugin.ts](./plugin-provider/src/MyPlugin.ts) defines a reusable plugin. See [@battis/qui-cli.plugin](../../packages/plugin/README.md#usage) for plugin documentation.
+- [src/MyPlugin.ts](./plugin-provider/src/MyPlugin.ts) defines a reusable plugin. See [@qui-cli/plugin](../../packages/plugin/README.md#usage) for plugin documentation.
 - [src/index.ts](./plugin-provider/src/index.ts) registers and exports the plugin for re-use.
 - [package.json](./plugin-provider/package.json) defines its dependency on another plugin ([@battis/qui-cli.log](../../packages/log/)) as a peer with a more lenient version descriptor than the dev dependency that is used for local development, trusting semantic versioning. Peering assures that this plugin and its dependencies will be hoisted to the same level when imported into other projects.
 

@@ -1,10 +1,10 @@
-import * as Plugin from '@battis/qui-cli.plugin';
 import * as Colors from '@qui-cli/colors/dist/Colors.js';
+import * as Plugin from '@qui-cli/plugin';
 import * as JackSpeak from './JackSpeak.js';
 import * as Positionals from './Positionals.js';
 import { usage } from './Usage.js';
 
-export { Options } from '@battis/qui-cli.plugin';
+export { Options } from '@qui-cli/plugin';
 export * from './Usage.js';
 
 export type Configuration = Plugin.Registrar.Configuration & {

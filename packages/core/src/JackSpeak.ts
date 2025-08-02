@@ -1,4 +1,4 @@
-import * as Plugin from '@battis/qui-cli.plugin';
+import * as Plugin from '@qui-cli/plugin';
 import { Jack, JackOptions } from 'jackspeak';
 
 export type Configuration = Plugin.Configuration & JackOptions;

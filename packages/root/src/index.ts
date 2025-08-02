@@ -1,4 +1,4 @@
-import { register } from '@battis/qui-cli.plugin';
+import { register } from '@qui-cli/plugin';
 import * as Root from './Root.js';
 
 await register(Root);

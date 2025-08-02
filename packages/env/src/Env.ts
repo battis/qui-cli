@@ -1,5 +1,5 @@
-import * as Plugin from '@battis/qui-cli.plugin';
 import { Root } from '@battis/qui-cli.root';
+import * as Plugin from '@qui-cli/plugin';
 import dotenv from 'dotenv';
 import fs from 'node:fs';
 import path from 'node:path';
