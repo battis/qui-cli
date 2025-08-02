@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "ora": "^8.2.0",
-    "shelljs": "^0.8.5"
+    "shelljs": "^0.10.0"
   },
   "devDependencies": {
     "@battis/qui-cli.log": "workspace:*",
