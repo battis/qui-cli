@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.0.0](https://github.com/battis/qui-cli/compare/shell/3.0.0...shell/3.0.0) (2025-08-02)
+
+### ⚠ BREAKING CHANGES
+
+- rename @battis/qui-cli.shell --> @qui-cli/shell
+
+- rename @battis/qui-cli.shell --> @qui-cli/shell ([d1c05ce](https://github.com/battis/qui-cli/commit/d1c05cedab55b7565ee08cf8b4d5823080b4a614))
+
 ## [2.1.2](https://github.com/battis/qui-cli/compare/shell/2.1.1...shell/2.1.2) (2025-06-23)
 
 ### Bug Fixes
