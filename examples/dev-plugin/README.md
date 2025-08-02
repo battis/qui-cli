@@ -26,4 +26,4 @@ Consumes a plugin package using the CLI package.
 
 Consume a plugin package using the modular model.
 
-- [src/index.ts](./plugin-consumer-modular/src/index.ts) behaves much the same as in the CLI approach, but note that instead [@battis/qui-cli.core](../../packages/core/) is initialized and run.
+- [src/index.ts](./plugin-consumer-modular/src/index.ts) behaves much the same as in the CLI approach, but note that instead [@qui-cli/core](../../packages/core/) is initialized and run.

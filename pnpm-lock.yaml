@@ -74,9 +74,6 @@ importers:
 
   examples/dev-1password-env:
     dependencies:
-      '@battis/qui-cli.core':
-        specifier: workspace:*
-        version: link:../../packages/core
       '@battis/qui-cli.env':
         specifier: workspace:*
         version: link:../../packages/env
@@ -86,6 +83,9 @@ importers:
       '@qui-cli/colors':
         specifier: workspace:*
         version: link:../../packages/colors
+      '@qui-cli/core':
+        specifier: workspace:*
+        version: link:../../packages/core
     devDependencies:
       '@tsconfig/node20':
         specifier: ^20.1.6
@@ -102,15 +102,15 @@ importers:
 
   examples/dev-command:
     dependencies:
-      '@battis/qui-cli.core':
-        specifier: workspace:*
-        version: link:../../packages/core
       '@battis/qui-cli.log':
         specifier: workspace:*
         version: link:../../packages/log
       '@qui-cli/colors':
         specifier: workspace:*
         version: link:../../packages/colors
+      '@qui-cli/core':
+        specifier: workspace:*
+        version: link:../../packages/core
     devDependencies:
       '@tsconfig/node20':
         specifier: ^20.1.6
@@ -127,9 +127,6 @@ importers:
 
   examples/dev-plugin-lifecycle:
     dependencies:
-      '@battis/qui-cli.core':
-        specifier: workspace:*
-        version: link:../../packages/core
       '@battis/qui-cli.env':
         specifier: workspace:*
         version: link:../../packages/env
@@ -142,6 +139,9 @@ importers:
       '@battis/qui-cli.root':
         specifier: workspace:*
         version: link:../../packages/root
+      '@qui-cli/core':
+        specifier: workspace:*
+        version: link:../../packages/core
     devDependencies:
       '@tsconfig/node20':
         specifier: ^20.1.6
@@ -158,9 +158,6 @@ importers:
 
   examples/dev-plugin/plugin-conflict:
     dependencies:
-      '@battis/qui-cli.core':
-        specifier: workspace:*
-        version: link:../../../packages/core
       '@battis/qui-cli.log':
         specifier: workspace:*
         version: link:../../../packages/log
@@ -170,6 +167,9 @@ importers:
       '@examples/dev-plugin.provider':
         specifier: workspace:*
         version: link:../plugin-provider
+      '@qui-cli/core':
+        specifier: workspace:*
+        version: link:../../../packages/core
     devDependencies:
       '@tsconfig/node20':
         specifier: ^20.1.6
@@ -208,15 +208,15 @@ importers:
 
   examples/dev-plugin/plugin-consumer-modular:
     dependencies:
-      '@battis/qui-cli.core':
-        specifier: workspace:*
-        version: link:../../../packages/core
       '@battis/qui-cli.log':
         specifier: workspace:*
         version: link:../../../packages/log
       '@examples/dev-plugin.provider':
         specifier: workspace:*
         version: link:../plugin-provider
+      '@qui-cli/core':
+        specifier: workspace:*
+        version: link:../../../packages/core
     devDependencies:
       '@tsconfig/node20':
         specifier: ^20.1.6
@@ -254,9 +254,6 @@ importers:
 
   examples/dev-positionals:
     dependencies:
-      '@battis/qui-cli.core':
-        specifier: workspace:*
-        version: link:../../packages/core
       '@battis/qui-cli.log':
         specifier: workspace:*
         version: link:../../packages/log
@@ -269,6 +266,9 @@ importers:
       '@qui-cli/colors':
         specifier: workspace:*
         version: link:../../packages/colors
+      '@qui-cli/core':
+        specifier: workspace:*
+        version: link:../../packages/core
     devDependencies:
       '@tsconfig/node20':
         specifier: ^20.1.6
@@ -288,9 +288,6 @@ importers:
 
   examples/dev-sequenced-commands/command:
     dependencies:
-      '@battis/qui-cli.core':
-        specifier: workspace:*
-        version: link:../../../packages/core
       '@battis/qui-cli.plugin':
         specifier: workspace:*
         version: link:../../../packages/plugin
@@ -303,6 +300,9 @@ importers:
       '@examples/dev-sequenced-commands.modules-def':
         specifier: workspace:*
         version: link:../modules-def
+      '@qui-cli/core':
+        specifier: workspace:*
+        version: link:../../../packages/core
     devDependencies:
       '@tsconfig/node20':
         specifier: ^20.1.6
@@ -319,7 +319,7 @@ importers:
 
   examples/dev-sequenced-commands/module-a:
     dependencies:
-      '@battis/qui-cli.core':
+      '@qui-cli/core':
         specifier: workspace:*
         version: link:../../../packages/core
     devDependencies:
@@ -347,12 +347,12 @@ importers:
 
   examples/dev-sequenced-commands/module-b:
     dependencies:
-      '@battis/qui-cli.core':
-        specifier: workspace:*
-        version: link:../../../packages/core
       '@examples/dev-sequenced-commands.module-a':
         specifier: workspace:*
         version: link:../module-a
+      '@qui-cli/core':
+        specifier: workspace:*
+        version: link:../../../packages/core
     devDependencies:
       '@battis/qui-cli.log':
         specifier: workspace:*
@@ -378,7 +378,7 @@ importers:
 
   examples/dev-sequenced-commands/module-c:
     dependencies:
-      '@battis/qui-cli.core':
+      '@qui-cli/core':
         specifier: workspace:*
         version: link:../../../packages/core
     devDependencies:
@@ -409,7 +409,7 @@ importers:
 
   examples/dev-sequenced-commands/modules-def:
     dependencies:
-      '@battis/qui-cli.core':
+      '@qui-cli/core':
         specifier: workspace:*
         version: link:../../../packages/core
     devDependencies:
@@ -496,12 +496,12 @@ importers:
 
   examples/usage-modular:
     dependencies:
-      '@battis/qui-cli.core':
-        specifier: workspace:*
-        version: link:../../packages/core
       '@battis/qui-cli.log':
         specifier: workspace:*
         version: link:../../packages/log
+      '@qui-cli/core':
+        specifier: workspace:*
+        version: link:../../packages/core
     devDependencies:
       '@tsconfig/node20':
         specifier: ^20.1.6
@@ -719,9 +719,6 @@ importers:
 
   packages/qui-cli:
     devDependencies:
-      '@battis/qui-cli.core':
-        specifier: workspace:*
-        version: link:../core
       '@battis/qui-cli.env':
         specifier: workspace:*
         version: link:../env
@@ -752,6 +749,9 @@ importers:
       '@qui-cli/colors':
         specifier: workspace:*
         version: link:../colors
+      '@qui-cli/core':
+        specifier: workspace:*
+        version: link:../core
       '@tsconfig/node20':
         specifier: ^20.1.6
         version: 20.1.6
@@ -857,15 +857,15 @@ importers:
         specifier: ^5.4.4
         version: 5.4.4
     devDependencies:
-      '@battis/qui-cli.core':
-        specifier: workspace:*
-        version: link:../core
       '@battis/qui-cli.plugin':
         specifier: workspace:*
         version: link:../plugin
       '@qui-cli/colors':
         specifier: workspace:*
         version: link:../colors
+      '@qui-cli/core':
+        specifier: workspace:*
+        version: link:../core
       '@tsconfig/node20':
         specifier: ^20.1.6
         version: 20.1.6
@@ -933,6 +933,28 @@ importers:
       '@qui-cli/colors':
         specifier: workspace:*
         version: link:../../packages/colors
+    devDependencies:
+      '@tsconfig/node20':
+        specifier: ^20.1.6
+        version: 20.1.6
+      commit-and-tag-version:
+        specifier: ^12.5.2
+        version: 12.5.2
+      del-cli:
+        specifier: ^6.0.0
+        version: 6.0.0
+      npm-run-all:
+        specifier: ^4.1.5
+        version: 4.1.5
+      typescript:
+        specifier: ^5.9.2
+        version: 5.9.2
+
+  shims/core:
+    dependencies:
+      '@qui-cli/core':
+        specifier: workspace:*
+        version: link:../../packages/core
     devDependencies:
       '@tsconfig/node20':
         specifier: ^20.1.6
@@ -8750,7 +8772,7 @@ snapshots:
 
   log-symbols@4.1.0:
     dependencies:
-      chalk: 4.1.0
+      chalk: 4.1.2
       is-unicode-supported: 0.1.0
 
   log-symbols@6.0.0:

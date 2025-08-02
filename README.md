@@ -15,6 +15,6 @@ Alternatively, individual packages can be selected and used in a more parsimonio
 - [@battis/qui-cli.structured](./packages/structured/): Build a structured command from directory contents
 - [@battis/qui-cli.validators](./packages/validators/): Validate input from [@inquirer/prompts](https://www.npmjs.com/package/@inquirer/prompts)
 
-If using the modular approach, plugin definitions are managed by [@battis/qui-cli.plugin](./packages/plugin/) and core functionality resides in [@battis/qui-cli.core](./packages/core/)
+If using the modular approach, plugin definitions are managed by [@battis/qui-cli.plugin](./packages/plugin/) and core functionality resides in [@qui-cli/core](./packages/core/)
 
 [Examples of usage and development approaches are available.](./examples#readme)

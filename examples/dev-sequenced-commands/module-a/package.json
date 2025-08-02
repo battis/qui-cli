@@ -21,7 +21,7 @@
     "build:compile": "tsc"
   },
   "dependencies": {
-    "@battis/qui-cli.core": "workspace:*"
+    "@qui-cli/core": "workspace:*"
   },
   "devDependencies": {
     "@battis/qui-cli.log": "workspace:*",

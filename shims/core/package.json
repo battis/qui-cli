@@ -2,11 +2,11 @@
   "name": "@battis/qui-cli.core",
   "version": "3.1.0",
   "description": "Core features of @qui-cli/qui-cli",
-  "homepage": "https://github.com/battis/qui-cli/tree/main/shims/colors#readme",
+  "homepage": "https://github.com/battis/qui-cli/tree/main/shims/core#readme",
   "repository": {
     "type": "git",
     "url": "https://github.com/battis/qui-cli.git",
-    "directory": "shims/colors"
+    "directory": "shims/core"
   },
   "author": {
     "name": "Seth Battis",

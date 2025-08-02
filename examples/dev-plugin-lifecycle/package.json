@@ -27,11 +27,11 @@
     "example:env": "dev-plugin-lifecycle --myOptParam \"value from command line\""
   },
   "dependencies": {
-    "@battis/qui-cli.core": "workspace:*",
     "@battis/qui-cli.env": "workspace:*",
     "@battis/qui-cli.log": "workspace:*",
     "@battis/qui-cli.plugin": "workspace:*",
-    "@battis/qui-cli.root": "workspace:*"
+    "@battis/qui-cli.root": "workspace:*",
+    "@qui-cli/core": "workspace:*"
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.6",

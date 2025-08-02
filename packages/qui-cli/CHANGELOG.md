@@ -42,11 +42,11 @@ All notable changes to this project will be documented in this file. See [commit
 
 ### Bug Fixes
 
-- @battis/qui-cli.core@3.x ([5a2fe14](https://github.com/battis/qui-cli/commit/5a2fe14570ee1763d30656f9a0d2cb433559b969))
+- @qui-cli/core@3.x ([5a2fe14](https://github.com/battis/qui-cli/commit/5a2fe14570ee1763d30656f9a0d2cb433559b969))
 
 ## [3.0.0](https://github.com/battis/qui-cli/compare/qui-cli/2.1.6...qui-cli/3.0.0) (2025-06-28)
 
-Updating dependencies to @battis/qui-cli.core@3.x
+Updating dependencies to @qui-cli/core@3.x
 
 ## [2.1.6](https://github.com/battis/qui-cli/compare/qui-cli/2.1.5...qui-cli/2.1.6) (2025-06-23)
 
@@ -84,7 +84,7 @@ Updating dependencies to @battis/qui-cli.core@3.x
 - **qui-cli.plugin:** ExpectedArguments ([057bc5c](https://github.com/battis/qui-cli/commit/057bc5c4f1b0b55d51a2fe3bb8e9cd14ea731b05))
 - **qui-cli.plugin:** expose Plugin.AccumulatedResults ([fb18e58](https://github.com/battis/qui-cli/commit/fb18e58adf3fa0439ebc46a2bb521ce625c00fd6))
 - **qui-cli.plugin:** run() hook ([ce67be9](https://github.com/battis/qui-cli/commit/ce67be9cddb1db23d351966f48f652d44f95894b))
-- **qui-cli.core:** run() ([a2c5ba2](https://github.com/battis/qui-cli/commit/a2c5ba2f8de6c52a88c1cf75ac37f93b51fb8211))
+- **core:** run() ([a2c5ba2](https://github.com/battis/qui-cli/commit/a2c5ba2f8de6c52a88c1cf75ac37f93b51fb8211))
 
 ## [2.0.4](https://github.com/battis/qui-cli/compare/qui-cli/2.0.3...qui-cli/2.0.4) (2025-02-27)
 
@@ -110,8 +110,8 @@ Updating dependencies to @battis/qui-cli.core@3.x
 
 ### ⚠ BREAKING CHANGES
 
-- **qui-cli.core:** nest core config under core key
-- **qui-cli.core:** async hooks
+- **core:** nest core config under core key
+- **core:** async hooks
 
 ## [1.0.0](https://github.com/battis/qui-cli/compare/qui-cli/0.9.9...qui-cli/1.0.0) (2025-02-21)
 
@@ -126,7 +126,7 @@ Updating dependencies to @battis/qui-cli.core@3.x
 
 ### Bug Fixes
 
-- **qui-cli,qui-cli.core:** auto-configure on init ([37bb1c3](https://github.com/battis/qui-cli/commit/37bb1c3b49e6ee9e698d42f1e8d20da380f14636))
+- **core:** auto-configure on init ([37bb1c3](https://github.com/battis/qui-cli/commit/37bb1c3b49e6ee9e698d42f1e8d20da380f14636))
 - **qui-cli:** progress plugin restored ([a1cf91a](https://github.com/battis/qui-cli/commit/a1cf91a1e0ea0e2a5b367a256c2e5268da6ae722))
 
 ## [0.9.9](https://github.com/battis/qui-cli/compare/qui-cli/0.9.8...qui-cli/0.9.9) (2025-02-09)
@@ -182,7 +182,7 @@ Updating dependencies to @battis/qui-cli.core@3.x
 ### Patch Changes
 
 - Updated dependencies [ad6edd4]
-  - @battis/qui-cli.core@0.8.4
+  - @qui-cli/core@0.8.4
 
 ## 0.8.3
 
@@ -190,7 +190,7 @@ Updating dependencies to @battis/qui-cli.core@3.x
 
 - 6badb2b: fix(?) incompatibility with v0.7.x scripts
 - Updated dependencies [6badb2b]
-  - @battis/qui-cli.core@0.8.3
+  - @qui-cli/core@0.8.3
   - @battis/qui-cli.env@0.8.2
   - @battis/qui-cli.log@0.8.2
   - @battis/qui-cli.plugin@0.1.2
@@ -209,7 +209,7 @@ Updating dependencies to @battis/qui-cli.core@3.x
   - @battis/qui-cli.plugin@0.1.1
   - @battis/qui-cli.shell@0.8.1
   - @qui-cli/colors@0.8.1
-  - @battis/qui-cli.core@0.8.2
+  - @qui-cli/core@0.8.2
   - @battis/qui-cli.env@0.8.1
   - @battis/qui-cli.root@0.8.1
   - @battis/qui-cli.validators@0.8.1
@@ -220,7 +220,7 @@ Updating dependencies to @battis/qui-cli.core@3.x
 
 - ab8ce9f: fix args
 - Updated dependencies [ab8ce9f]
-  - @battis/qui-cli.core@0.8.1
+  - @qui-cli/core@0.8.1
 
 ## 0.8.0
 
@@ -232,7 +232,7 @@ Updating dependencies to @battis/qui-cli.core@3.x
 
 - Updated dependencies [97d48ef]
   - @qui-cli/colors@0.8.0
-  - @battis/qui-cli.core@0.8.0
+  - @qui-cli/core@0.8.0
   - @battis/qui-cli.env@0.8.0
   - @battis/qui-cli.log@0.8.0
   - @battis/qui-cli.plugin@0.1.0

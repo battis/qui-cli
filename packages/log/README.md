@@ -8,14 +8,14 @@
 ## Install
 
 ```sh
-npm install @battis/qui-cli.log @battis/qui-cli.core
+npm install @battis/qui-cli.log @qui-cli/core
 ```
 
 ## Usage
 
 ```ts
 import { Log } from '@battis/qui-cli.env';
-import { Core } from '@battis/qui-cli.core';
+import { Core } from '@qui-cli/core';
 
 // process user-provided command-line arguments
 const args = Core.init();

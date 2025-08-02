@@ -8,14 +8,14 @@
 ## Install
 
 ```sh
-npm install @battis/qui-cli.shell @battis/qui-cli.core
+npm install @battis/qui-cli.shell @qui-cli/core
 ```
 
 ## Usage
 
 ```ts
 import { Shell } from '@battis/qui-cli.shell';
-import { Core } from '@battis/qui-cli.core';
+import { Core } from '@qui-cli/core';
 
 // configure Shell
 Root.configure({ showCommands: true });

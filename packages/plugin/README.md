@@ -233,7 +233,7 @@ export function init(args: Plugin.ExpectedArguments<typeof options>) {
 
 ### `Plugin.Registrar`
 
-The Plugin Registrar, responsible for tracking plugin registrations and triggering plugin hooks. Intended primarily for use by [@battis/qui-cli.core](https://www.npmjs.com/package/@battis/qui-cli.core)
+The Plugin Registrar, responsible for tracking plugin registrations and triggering plugin hooks. Intended primarily for use by [@qui-cli/core](https://www.npmjs.com/package/@qui-cli/core)
 
 ### `Plugin.mergeOptions(a, b): Plugin.Options`
 
