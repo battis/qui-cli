@@ -74,7 +74,7 @@ Updating dependencies to @qui-cli/core@3.x
 
 ### Bug Fixes
 
-- **qui-cli:** missing plugin dependency ([17a1e2f](https://github.com/battis/qui-cli/commit/17a1e2f511d0c9e638a38db006ec29f66c62342a))
+- missing plugin dependency ([17a1e2f](https://github.com/battis/qui-cli/commit/17a1e2f511d0c9e638a38db006ec29f66c62342a))
 
 ## [2.1.0](https://github.com/battis/qui-cli/compare/qui-cli/2.0.4...qui-cli/2.1.0) (2025-02-28)
 
@@ -117,17 +117,17 @@ Updating dependencies to @qui-cli/core@3.x
 
 ### ⚠ BREAKING CHANGES
 
-- **qui-cli:** reimplemented as ESM modules
+- reimplemented as ESM modules
 
 ### Features
 
-- **qui-cli:** configurable plugins ([730d54e](https://github.com/battis/qui-cli/commit/730d54e1595ff63fecb41bcecc0df81d10119a88))
-- **qui-cli:** reimplemented as ESM modules ([d345333](https://github.com/battis/qui-cli/commit/d34533307b3ebd46dddc1d7d14824aba505be97c))
+- configurable plugins ([730d54e](https://github.com/battis/qui-cli/commit/730d54e1595ff63fecb41bcecc0df81d10119a88))
+- reimplemented as ESM modules ([d345333](https://github.com/battis/qui-cli/commit/d34533307b3ebd46dddc1d7d14824aba505be97c))
 
 ### Bug Fixes
 
 - **core:** auto-configure on init ([37bb1c3](https://github.com/battis/qui-cli/commit/37bb1c3b49e6ee9e698d42f1e8d20da380f14636))
-- **qui-cli:** progress plugin restored ([a1cf91a](https://github.com/battis/qui-cli/commit/a1cf91a1e0ea0e2a5b367a256c2e5268da6ae722))
+- progress plugin restored ([a1cf91a](https://github.com/battis/qui-cli/commit/a1cf91a1e0ea0e2a5b367a256c2e5268da6ae722))
 
 ## [0.9.9](https://github.com/battis/qui-cli/compare/qui-cli/0.9.8...qui-cli/0.9.9) (2025-02-09)
 
@@ -149,13 +149,13 @@ Updating dependencies to @qui-cli/core@3.x
 
 ### Bug Fixes
 
-- **qui-cli:** actually export register0 ([c6fed7e](https://github.com/battis/qui-cli/commit/c6fed7e38068c47edf4bb623b14cff027abaa186))
+- actually export register0 ([c6fed7e](https://github.com/battis/qui-cli/commit/c6fed7e38068c47edf4bb623b14cff027abaa186))
 
 ## [0.9.2](https://github.com/battis/qui-cli/compare/qui-cli/0.9.1...qui-cli/0.9.2) (2025-02-08)
 
 ### Features
 
-- **qui-cli:** register() plugins ([9cb496f](https://github.com/battis/qui-cli/commit/9cb496f0522012262a22f6c81495f7d43561b32a))
+- register() plugins ([9cb496f](https://github.com/battis/qui-cli/commit/9cb496f0522012262a22f6c81495f7d43561b32a))
 
 ## [0.9.1](https://github.com/battis/qui-cli/compare/qui-cli/0.9.0...qui-cli/0.9.1) (2025-01-15)
 
@@ -163,12 +163,12 @@ Updating dependencies to @qui-cli/core@3.x
 
 ### ⚠ BREAKING CHANGES
 
-- **qui-cli:** remove spinner()
+- remove spinner()
 
 ### Features
 
-- **qui-cli:** add progress() ([a7bf810](https://github.com/battis/qui-cli/commit/a7bf8108e284a64df236940305426a6b14ae059b))
-- **qui-cli:** remove spinner() ([7905bad](https://github.com/battis/qui-cli/commit/7905bad6e79328772191b7182083b06f8ebea6cd))
+- add progress() ([a7bf810](https://github.com/battis/qui-cli/commit/a7bf8108e284a64df236940305426a6b14ae059b))
+- remove spinner() ([7905bad](https://github.com/battis/qui-cli/commit/7905bad6e79328772191b7182083b06f8ebea6cd))
 
 ## 0.8.5
 

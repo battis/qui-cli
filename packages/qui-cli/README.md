@@ -1,20 +1,20 @@
-# @battis/qui-cli
+# @qui-cli/qui-cli
 
 Quickly build a CLI app
 
-[![npm version](https://badge.fury.io/js/@battis%2Fqui-cli.svg)](https://badge.fury.io/js/@battis%2Fqui-cli)
+[![npm version](https://badge.fury.io/js/@qui-cli%2Fqui-cli.svg)](https://npmjs.com/package/@qui-cli/qui-cli)
 [![Module type: ESM](https://img.shields.io/badge/module%20type-esm-brightgreen)](https://nodejs.org/api/esm.html)
 
 ## Install
 
 ```sh
-npm install @battis/qui-cli
+npm install @qui-cli/qui-cli
 ```
 
 ## Usage
 
 ```ts
-import CLI from '@battis/qui-cli';
+import CLI from '@qui-cli/qui-cli';
 
 const args = CLI.init({
   opt: {
