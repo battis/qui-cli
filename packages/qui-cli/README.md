@@ -37,7 +37,7 @@ This package is a convenience wrapper for a number of individual, more-focused p
 - [@qui-cli/progress](https://www.npmjs.com/package/@qui-cli/progress) (progress bars with [cli-progress](https://www.npmjs.com/package/cli-progress)) at `cli.progress`
 - [@qui-cli/root](https://www.npmjs.com/package/@qui-cli/root) (package root detection with [app-root-path](https://www.npmjs.com/package/app-root-path)) at `cli.root`
 - [@qui-cli/shell](https://www.npmjs.com/package/@qui-cli/shell) (shell execution with [shelljs](https://www.npmjs.com/package/shelljs)) at `cli.shell`
-- [@battis/qui-cli.validators](https://www.npmjs.com/package/@battis/qui-cli.validators) (validate input from [@inquirer/prompts](https://www.npmjs.com/package/@inquirer/prompts)) at `cli.validators`
+- [@qui-cli/validators](https://www.npmjs.com/package/@qui-cli/validators) (validate input from [@inquirer/prompts](https://www.npmjs.com/package/@inquirer/prompts)) at `cli.validators`
 
 …and was written to work in concert with:
 

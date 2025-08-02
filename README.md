@@ -13,7 +13,7 @@ Alternatively, individual packages can be selected and used in a more parsimonio
 - [@qui-cli/root](./packages/root/): Package root detection with [app-root-path](https://www.npmjs.com/package/app-root-path)
 - [@qui-cli/shell](./packages/shell/): Shell execution with [shelljs](https://www.npmjs.com/package/shelljs))
 - [@qui-cli/structured](./packages/structured/): Build a structured command from directory contents
-- [@battis/qui-cli.validators](./packages/validators/): Validate input from [@inquirer/prompts](https://www.npmjs.com/package/@inquirer/prompts)
+- [@qui-cli/validators](./packages/validators/): Validate input from [@inquirer/prompts](https://www.npmjs.com/package/@inquirer/prompts)
 
 If using the modular approach, plugin definitions are managed by [@qui-cli/plugin](./packages/plugin/) and core functionality resides in [@qui-cli/core](./packages/core/)
 

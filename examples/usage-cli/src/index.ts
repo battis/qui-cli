@@ -48,7 +48,7 @@ CLI.log.info(CLI.colors.url(CLI.root.path()));
 // @qui-cli/shell example
 CLI.shell.exec('echo "hello world"');
 
-// @battis/qui-cli.validators example
+// @qui-cli/validators example
 const text = await input({
   message: 'Enter a long-ish word',
   default: 'quetzlcoatl',

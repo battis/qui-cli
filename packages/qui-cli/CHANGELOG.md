@@ -197,7 +197,7 @@ Updating dependencies to @qui-cli/core@3.x
   - @qui-cli/shell@0.8.2
   - @qui-cli/colors@0.8.2
   - @qui-cli/root@0.8.2
-  - @battis/qui-cli.validators@0.8.2
+  - @qui-cli/validators@0.8.2
 
 ## 0.8.2
 
@@ -212,7 +212,7 @@ Updating dependencies to @qui-cli/core@3.x
   - @qui-cli/core@0.8.2
   - @qui-cli/env@0.8.1
   - @qui-cli/root@0.8.1
-  - @battis/qui-cli.validators@0.8.1
+  - @qui-cli/validators@0.8.1
 
 ## 0.8.1
 
@@ -238,7 +238,7 @@ Updating dependencies to @qui-cli/core@3.x
   - @qui-cli/plugin@0.1.0
   - @qui-cli/root@0.8.0
   - @qui-cli/shell@0.8.0
-  - @battis/qui-cli.validators@0.8.0
+  - @qui-cli/validators@0.8.0
 
 ## 0.7.3
 
