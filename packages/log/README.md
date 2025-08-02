@@ -1,6 +1,6 @@
 # @qui-cli/log
 
-@battis/qui-cli Plugin: Standardized winston wrapper
+@qui-cli Plugin: Standardized winston wrapper
 
 [![npm version](https://badge.fury.io/js/@qui-cli%2Flog.svg)](https://npmjs.com/package/@qui-cli/log)
 [![Module type: ESM](https://img.shields.io/badge/module%20type-esm-brightgreen)](https://nodejs.org/api/esm.html)

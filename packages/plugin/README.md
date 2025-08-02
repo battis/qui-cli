@@ -184,7 +184,7 @@ export function init({
 ## API
 
 ```ts
-import * as Plugin from '@battis/qui-cli.pugin';
+import * as Plugin from '@qui-cli/plugin';
 ```
 
 ### `Plugin.register(plugin): void`
