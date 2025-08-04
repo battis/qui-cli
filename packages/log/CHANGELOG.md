@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.0.1](https://github.com/battis/qui-cli/compare/log/3.0.0...log/3.0.1) (2025-08-04)
+
+
+### Bug Fixes
+
+* update lagging peer dependency specs ([c6d2d4d](https://github.com/battis/qui-cli/commit/c6d2d4d141fc9a9389648d6cb2cab4bfc05f9e55))
+
 ## [3.0.0](https://github.com/battis/qui-cli/compare/log/2.2.2...log/3.0.0) (2025-08-02)
 
 
