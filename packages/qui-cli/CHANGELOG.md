@@ -2,27 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
-## [4.0.0](https://github.com/battis/qui-cli/compare/qui-cli/3.2.0...qui-cli/4.0.0) (2025-08-02)
-
-
-### ⚠ BREAKING CHANGES
-
-* rename @battis/qui-cli --> @qui-cli/qui-cli
-
-* rename @battis/qui-cli --> @qui-cli/qui-cli ([33ecee6](https://github.com/battis/qui-cli/commit/33ecee6f3e6d4f14460d715de5936cebda5b9d65))
-
+## [4.0.1](https://github.com/battis/qui-cli/compare/qui-cli/4.0.0...qui-cli/4.0.1) (2025-08-04)
 
 ### Bug Fixes
 
-* update dependencies to renamed @qui-cli/colors ([ff80e86](https://github.com/battis/qui-cli/commit/ff80e8625ef98834afdf04e57bfedb1906834e2b))
-* update dependencies to renamed @qui-cli/core ([f834c5a](https://github.com/battis/qui-cli/commit/f834c5a475f908585f1e17865917a092516168a0))
-* update dependencies to renamed @qui-cli/env ([5ff9ee8](https://github.com/battis/qui-cli/commit/5ff9ee844222dc4c73fd8cbdbfeaaa16541a158b))
-* update dependencies to renamed @qui-cli/log ([1c8f0fb](https://github.com/battis/qui-cli/commit/1c8f0fbd5561b4274032382c5d10d33912956e7f))
-* update dependencies to renamed @qui-cli/plugin ([117ea85](https://github.com/battis/qui-cli/commit/117ea85256ec69c807c5b56293546d9c350fd43f))
-* update dependencies to renamed @qui-cli/progress ([4b7e4e1](https://github.com/battis/qui-cli/commit/4b7e4e1010e3cabaa4e06d328b1402c3fcc19a7f))
-* update dependencies to renamed @qui-cli/root ([488daa7](https://github.com/battis/qui-cli/commit/488daa7a82730125481945b5eb8db960972ac225))
-* update dependencies to renamed @qui-cli/shell ([906bc22](https://github.com/battis/qui-cli/commit/906bc22776f1c96e4215d7aa509820f27a9de3ab))
-* update dependencies to renamed @qui-cli/validators ([93bf6d8](https://github.com/battis/qui-cli/commit/93bf6d8d371598df6b28974fbb45a00aa63b655d))
+- update lagging peer dependency specs ([30c0c27](https://github.com/battis/qui-cli/commit/30c0c279d4247a69a30efef8a7426442752cd9c0))
+
+## [4.0.0](https://github.com/battis/qui-cli/compare/qui-cli/3.2.0...qui-cli/4.0.0) (2025-08-02)
+
+### ⚠ BREAKING CHANGES
+
+- rename @battis/qui-cli --> @qui-cli/qui-cli
+
+- rename @battis/qui-cli --> @qui-cli/qui-cli ([33ecee6](https://github.com/battis/qui-cli/commit/33ecee6f3e6d4f14460d715de5936cebda5b9d65))
+
+### Bug Fixes
+
+- update dependencies to renamed @qui-cli/colors ([ff80e86](https://github.com/battis/qui-cli/commit/ff80e8625ef98834afdf04e57bfedb1906834e2b))
+- update dependencies to renamed @qui-cli/core ([f834c5a](https://github.com/battis/qui-cli/commit/f834c5a475f908585f1e17865917a092516168a0))
+- update dependencies to renamed @qui-cli/env ([5ff9ee8](https://github.com/battis/qui-cli/commit/5ff9ee844222dc4c73fd8cbdbfeaaa16541a158b))
+- update dependencies to renamed @qui-cli/log ([1c8f0fb](https://github.com/battis/qui-cli/commit/1c8f0fbd5561b4274032382c5d10d33912956e7f))
+- update dependencies to renamed @qui-cli/plugin ([117ea85](https://github.com/battis/qui-cli/commit/117ea85256ec69c807c5b56293546d9c350fd43f))
+- update dependencies to renamed @qui-cli/progress ([4b7e4e1](https://github.com/battis/qui-cli/commit/4b7e4e1010e3cabaa4e06d328b1402c3fcc19a7f))
+- update dependencies to renamed @qui-cli/root ([488daa7](https://github.com/battis/qui-cli/commit/488daa7a82730125481945b5eb8db960972ac225))
+- update dependencies to renamed @qui-cli/shell ([906bc22](https://github.com/battis/qui-cli/commit/906bc22776f1c96e4215d7aa509820f27a9de3ab))
+- update dependencies to renamed @qui-cli/validators ([93bf6d8](https://github.com/battis/qui-cli/commit/93bf6d8d371598df6b28974fbb45a00aa63b655d))
 
 ## [3.2.0](https://github.com/battis/qui-cli/compare/qui-cli/3.1.1...qui-cli/3.2.0) (2025-08-01)
 
