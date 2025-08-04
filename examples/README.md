@@ -14,3 +14,4 @@
 - [dev-sequenced-commands](./dev-sequenced-commands/): A hierarchy of interdependent plugins
 - [dev-structured](./dev-structured/): A folder hierarchy of commands bundled into a single callable command
 - [dev-1password-env](./dev-1password-env/): 1Password implementation of `@qui-cli/env` use
+- [dev-fallback-env](./dev-fallback-env/): Fallback to default Env implementation if OP is not imported

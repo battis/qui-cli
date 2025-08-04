@@ -127,9 +127,6 @@ importers:
 
   examples/dev-fallback-env:
     dependencies:
-      '@qui-cli/colors':
-        specifier: workspace:*
-        version: link:../../packages/colors
       '@qui-cli/core':
         specifier: workspace:*
         version: link:../../packages/core
@@ -142,6 +139,12 @@ importers:
       '@qui-cli/plugin':
         specifier: workspace:*
         version: link:../../packages/plugin
+      '@qui-cli/root':
+        specifier: workspace:*
+        version: link:../../packages/root
+      '@qui-cli/structured':
+        specifier: workspace:*
+        version: link:../../packages/structured
     devDependencies:
       '@tsconfig/node20':
         specifier: ^20.1.6
