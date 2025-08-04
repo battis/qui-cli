@@ -23,7 +23,7 @@
     "release": "commit-and-tag-version"
   },
   "dependencies": {
-    "chalk": "^5.4.1",
+    "chalk": "^5.5.0",
     "cli-progress": "^3.12.0"
   },
   "devDependencies": {
@@ -37,7 +37,7 @@
     "typescript": "^5.9.2"
   },
   "peerDependencies": {
-    "@qui-cli/colors": "2.x",
-    "@qui-cli/plugin": "^2.4"
+    "@qui-cli/colors": "3.x",
+    "@qui-cli/plugin": "3.x"
   }
 }
