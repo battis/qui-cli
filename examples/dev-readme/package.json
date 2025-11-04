@@ -22,9 +22,7 @@
     "build": "run-s build:*",
     "build:clean": "run-s clean",
     "build:compile": "tsc",
-    "example": "run-s example:*",
-    "example:build": "run-s build",
-    "example:env": "dev-1password-env --serviceAccountToken=\"$(op item get OP_SERVICE_ACCOUNT_TOKEN --field credential --reveal)\""
+    "build:readme": "./scripts/dev-readme"
   },
   "dependencies": {
     "@qui-cli/colors": "workspace:*",
