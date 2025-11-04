@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.1.0](https://github.com/battis/qui-cli/compare/log/3.0.1...log/3.1.0) (2025-11-04)
+
+
+### Features
+
+* standardize on modules labeling the options that they add to the usage man page ([eba86cd](https://github.com/battis/qui-cli/commit/eba86cd8a22a93aa6b6f19a3979272d87fe59274))
+
 ## [3.0.1](https://github.com/battis/qui-cli/compare/log/3.0.0...log/3.0.1) (2025-08-04)
 
 
