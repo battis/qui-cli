@@ -14,7 +14,7 @@ npm install @qui-cli/log @qui-cli/core
 ## Usage
 
 ```ts
-import { Log } from '@qui-cli/env';
+import { Log } from '@qui-cli/log';
 import { Core } from '@qui-cli/core';
 
 // process user-provided command-line arguments
