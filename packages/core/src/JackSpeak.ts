@@ -49,3 +49,7 @@ export function parse() {
 export function usage() {
   return jack().usage();
 }
+
+export function usageMarkdown() {
+  return jack().usageMarkdown();
+}

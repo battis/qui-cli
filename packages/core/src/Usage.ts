@@ -16,3 +16,7 @@ function commandColor(usage: string) {
 export function usage() {
   return Positionals.usage(commandColor(JackSpeak.usage()));
 }
+
+export function usageMarkdown() {
+  return Positionals.usage(JackSpeak.usageMarkdown(), true);
+}

@@ -31,6 +31,7 @@
     "@examples/dev-plugin.consumer-cli": "workspace:*",
     "@examples/dev-plugin.consumer-modular": "workspace:*",
     "@examples/dev-positionals": "workspace:*",
+    "@examples/dev-readme": "workspace:*",
     "@examples/dev-sequenced-commands": "workspace:*",
     "@examples/dev-structured": "workspace:*",
     "@examples/usage-cli": "workspace:*",

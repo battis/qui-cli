@@ -1,0 +1,49 @@
+{
+  "name": "@qui-cli/markdown",
+  "version": "0.0.0",
+  "description": "@qui-cli Plugin: Export usage as markdown",
+  "homepage": "https://github.com/battis/qui-cli/tree/main/packages/markdown#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/battis/qui-cli.git",
+    "directory": "packages/markdown"
+  },
+  "license": "GPL-3.0",
+  "author": {
+    "name": "Seth Battis",
+    "url": "https://github.com/battis"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "clean": "del ./dist",
+    "build": "run-s build:*",
+    "build:clean": "run-s clean",
+    "build:compile": "tsc",
+    "release": "commit-and-tag-version"
+  },
+  "dependencies": {
+    "strip-ansi": "^7.1.0"
+  },
+  "devDependencies": {
+    "@qui-cli/colors": "workspace:*",
+    "@qui-cli/core": "workspace:*",
+    "@qui-cli/plugin": "workspace:*",
+    "@qui-cli/root": "workspace:*",
+    "@tsconfig/node20": "^20.1.6",
+    "@types/node": "^24.10.0",
+    "commit-and-tag-version": "^12.6.0",
+    "del-cli": "^6.0.0",
+    "npm-run-all": "^4.1.5",
+    "typescript": "~5.8.3"
+  },
+  "peerDependencies": {
+    "@qui-cli/colors": "3.x",
+    "@qui-cli/core": "4.x",
+    "@qui-cli/plugin": "3.x",
+    "@qui-cli/root": "3.x"
+  },
+  "packageManager": "pnpm@9.12.3+sha512.cce0f9de9c5a7c95bef944169cc5dfe8741abfb145078c0d508b868056848a87c81e626246cb60967cbd7fd29a6c062ef73ff840d96b3c86c40ac92cf4a813ee",
+  "target": "node"
+}

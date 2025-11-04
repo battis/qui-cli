@@ -1,0 +1,5 @@
+{
+  "path": ".",
+  "tag-prefix": "markdown/",
+  "releaseCommitMessageFormat": "chore: release @qui-cli/markdown@{{currentTag}}"
+}

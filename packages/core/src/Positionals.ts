@@ -209,10 +209,15 @@ function wrap(text: string, indent: number) {
     .join('\n');
 }
 
-export function usage(usage: string): string {
-  const pre = usage.slice(0, usage.indexOf('\n') + 1);
-  const cmd = usage.slice(pre.length, usage.indexOf('\n\n'));
-  const post = usage.slice(pre.length + cmd.length);
+export function usage(usage: string, isMarkdown = false): string {
+  let pre = usage.slice(0, usage.indexOf('\n') + 1);
+  let cmd = usage.slice(pre.length, usage.indexOf('\n\n'));
+  let post = usage.slice(pre.length + cmd.length);
+  if (isMarkdown) {
+    pre = usage.slice(0, usage.indexOf('```\n') + 4);
+    cmd = usage.slice(pre.length, usage.indexOf('\n```', pre.length));
+    post = usage.slice(pre.length + cmd.length);
+  }
   return `${pre}${wrap(
     `${cmd
       .split('\n')
