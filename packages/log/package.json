@@ -25,16 +25,16 @@
   },
   "dependencies": {
     "ora": "^8.2.0",
-    "strip-ansi": "^7.1.0",
-    "winston": "^3.17.0"
+    "strip-ansi": "^7.1.2",
+    "winston": "^3.18.3"
   },
   "devDependencies": {
     "@qui-cli/colors": "workspace:*",
     "@qui-cli/plugin": "workspace:*",
     "@qui-cli/root": "workspace:*",
     "@tsconfig/node20": "^20.1.6",
-    "@types/node": "^24.2.0",
-    "commit-and-tag-version": "^12.5.2",
+    "@types/node": "^24.10.0",
+    "commit-and-tag-version": "^12.6.0",
     "del-cli": "^6.0.0",
     "npm-run-all": "^4.1.5",
     "typescript": "~5.8.3"
@@ -44,6 +44,5 @@
     "@qui-cli/plugin": "3.x",
     "@qui-cli/root": "3.x"
   },
-  "packageManager": "pnpm@9.12.3+sha512.cce0f9de9c5a7c95bef944169cc5dfe8741abfb145078c0d508b868056848a87c81e626246cb60967cbd7fd29a6c062ef73ff840d96b3c86c40ac92cf4a813ee",
   "target": "node"
 }
