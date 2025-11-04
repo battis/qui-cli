@@ -34,6 +34,12 @@ export function configure(config: Configuration = {}, calledBy = 'hook') {
 export function options(): Plugin.Options {
   logState('options() hook');
   return {
+    man: [
+      {
+        level: 3,
+        text: `${name} options`
+      }
+    ],
     opt: {
       myOptParam: {
         description: `My options parameter`

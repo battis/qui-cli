@@ -1,11 +1,11 @@
 {
   "name": "@examples/dev-fallback-env",
   "version": "0.0.0",
-  "homepage": "https://github.com/battis/qui-cli/tree/main/examples/dev-1password-env#readme",
+  "homepage": "https://github.com/battis/qui-cli/tree/main/examples/dev-fallback-env#readme",
   "repository": {
     "type": "git",
     "url": "https://github.com/battis/qui-cli.git",
-    "directory": "examples/dev-1password-env"
+    "directory": "examples/dev-fallback-env"
   },
   "author": {
     "name": "Seth Battis",

@@ -19,10 +19,9 @@ export function options(): Plugin.Options {
   return {
     man: [
       {
-        level: 1,
-        text: 'MyPlugin Options'
-      },
-      { text: 'Below are the options provided by MyPlugin.' }
+        level: 3,
+        text: `${name} options`
+      }
     ],
     opt: {
       foo: {

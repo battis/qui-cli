@@ -38,6 +38,12 @@ export async function configure(config: Configuration = {}) {
 
 export function options(): Plugin.Options {
   return {
+    man: [
+      {
+        level: 3,
+        text: '1Password integration'
+      }
+    ],
     opt: {
       serviceAccountToken: {
         description: `1Password service account token (defaults to ${OP_SERVICE_ACCOUNT_TOKEN}} environment variable, if present)`

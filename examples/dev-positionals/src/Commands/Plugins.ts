@@ -13,6 +13,10 @@ export function options() {
   return {
     man: [
       {
+        level: 3,
+        text: `${name} options`
+      },
+      {
         text: 'Note that, because plugin B depends on plugin C, plugin C loads its positionals before plugin B'
       }
     ]

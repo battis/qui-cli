@@ -17,6 +17,13 @@ export function configure(config: Configuration = {}) {
 
 export function options(): Plugin.Options {
   return {
+    man: [
+      {
+        level: 3,
+        text: `${name} options`
+      }
+    ],
+
     opt: {
       'option-b': {
         description: 'Option B'

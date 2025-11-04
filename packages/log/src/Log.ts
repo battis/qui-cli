@@ -26,7 +26,7 @@ let fileLevel = 'all';
 let levels: CustomLevels = DefaultLevels;
 let root: string | undefined = undefined;
 
-let transports: Record<string, winston.transport> = {
+const transports: Record<string, winston.transport> = {
   console: new winston.transports.Console({
     format: winston.format.printf(({ message }) => message as string),
     level: stdoutLevel
@@ -111,6 +111,12 @@ export function options(): Plugin.Options {
     .join(', ')
     .replace(/, ([^,]+)$/, ', or $1');
   return {
+    man: [
+      {
+        level: 3,
+        text: 'Logging options'
+      }
+    ],
     opt: {
       logFilePath: {
         description: `Path to log file (optional)`
@@ -142,8 +148,10 @@ export function syntaxColor(obj: object) {
 }
 
 function namedLogMethod(level: string) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   return (message: string | object, ...meta: any[]) => {
     if (typeof message != 'string') {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       if (meta.some((elt: any) => elt.color === false)) {
         if (message === undefined) {
           message = 'undefined';
