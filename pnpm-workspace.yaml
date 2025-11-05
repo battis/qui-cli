@@ -1,8 +1,12 @@
 packages:
-  - 'packages/*'
-  - 'examples/*'
+  - packages/*
+  - examples/*
   - '!examples/dev-plugin'
-  - 'examples/dev-plugin/*'
+  - examples/dev-plugin/*
   - '!examples/dev-sequenced-commands'
-  - 'examples/dev-sequenced-commands/*'
-  - 'shims/*'
+  - examples/dev-sequenced-commands/*
+  - shims/*
+
+onlyBuiltDependencies:
+  - esbuild
+  - nx
