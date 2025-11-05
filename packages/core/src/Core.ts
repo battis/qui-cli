@@ -52,11 +52,7 @@ export async function init(
       `Already initialized with user-provided command line arguments.`
     );
   }
-  for (const plugin of Plugin.Registrar.registered()) {
-    if (plugin.options) {
-      JackSpeak.args(await plugin.options());
-    }
-  }
+  JackSpeak.args(await Plugin.Registrar.options());
   if (externalOptions) {
     JackSpeak.args(externalOptions);
   }
