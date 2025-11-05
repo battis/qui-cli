@@ -25,7 +25,7 @@ export function options(): Plugin.Options {
     ],
     opt: {
       foo: {
-        description: `Type of foo-ness (default ${foo})`,
+        description: `Type of foo-ness`,
         default: foo
       },
       bar: {
@@ -34,7 +34,7 @@ export function options(): Plugin.Options {
     },
     flag: {
       baz: {
-        description: `Whether or not to baz (default ${baz})`,
+        description: `Whether or not to baz`,
         default: baz
       }
     }

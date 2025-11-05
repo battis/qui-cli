@@ -331,6 +331,9 @@ importers:
       '@qui-cli/core':
         specifier: workspace:*
         version: link:../../packages/core
+      '@qui-cli/env':
+        specifier: workspace:*
+        version: link:../../packages/env
       '@qui-cli/markdown':
         specifier: workspace:*
         version: link:../../packages/markdown
@@ -590,9 +593,6 @@ importers:
         specifier: ^5.6.2
         version: 5.6.2
     devDependencies:
-      '@qui-cli/plugin':
-        specifier: workspace:*
-        version: link:../plugin
       '@tsconfig/node20':
         specifier: ^20.1.6
         version: 20.1.6
@@ -762,6 +762,9 @@ importers:
 
   packages/plugin:
     dependencies:
+      '@qui-cli/colors':
+        specifier: workspace:*
+        version: link:../colors
       jackspeak:
         specifier: ^4.1.1
         version: 4.1.1

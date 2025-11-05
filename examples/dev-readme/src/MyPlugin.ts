@@ -1,5 +1,9 @@
 import { Positionals } from '@qui-cli/core';
+import { Env } from '@qui-cli/env';
 import * as Plugin from '@qui-cli/plugin';
+import path from 'node:path';
+
+Env.configure({ root: path.dirname(import.meta.dirname) });
 
 export const name = 'dev-readme';
 
@@ -25,17 +29,35 @@ export function options(): Plugin.Options {
         short: 'a'
       },
       bargle: {
-        description: 'Tempor minim anim exercitation aliquip.'
+        description: 'Tempor minim anim exercitation aliquip.',
+        default: true
       }
     },
     opt: {
       baz: {
-        description: 'Reprehenderit consequat, veniam velit.'
+        description: 'Reprehenderit consequat, veniam velit.',
+        env: 'BAZ'
       },
       buzz: {
         description: 'Aliquip sunt tempor nisi labore ad culpa.',
         short: 'z',
         default: 'Sit'
+      },
+      biz: {
+        env: 'BIZ',
+        secret: true
+      }
+    },
+    num: {
+      pi: {
+        description: 'Esse eiusmod exercitation nulla nostrud do velit id.',
+        env: 'PI',
+        default: 3.2
+      }
+    },
+    optList: {
+      a: {
+        default: ['foo', 'bar', 'baz']
       }
     }
   };

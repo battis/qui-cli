@@ -122,11 +122,11 @@ export function options(): Plugin.Options {
         description: `Path to log file (optional)`
       },
       stdoutLevel: {
-        description: `Log level to console stdout: ${levelsList} (default: ${Colors.quotedValue(`"${stdoutLevel}"`)})`,
+        description: `Log level to console stdout: ${levelsList}`,
         default: stdoutLevel
       },
       fileLevel: {
-        description: `Log level to log file (if ${Colors.value('--logFilePath')} provided): ${levelsList} (default: ${Colors.quotedValue(`"${fileLevel}"`)})`,
+        description: `Log level to log file (if ${Colors.optionArg('--logFilePath')} provided): ${levelsList}`,
         default: fileLevel
       }
     }

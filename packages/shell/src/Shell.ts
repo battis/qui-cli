@@ -31,11 +31,11 @@ export function options(): Plugin.Options {
   return {
     flag: {
       commands: {
-        description: `Include shell commands in log (default: ${Colors.value(showCommands)}, ${Colors.value('--no-commands')} to disable)`,
+        description: `Include shell commands in log`,
         default: showCommands
       },
       silent: {
-        description: `Hide command output (default: ${Colors.value(silent)})`,
+        description: `Hide command output`,
         default: silent
       }
     }

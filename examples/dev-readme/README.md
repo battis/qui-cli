@@ -11,8 +11,26 @@ Demonstrate using `@qui-cli/markdown` to generate a README
 ## Usage:
 
 ```bash
-  dev-readme -ha --z=<buzz> --bargle --baz=<baz> foo bar
+  dev-readme -ha --z=<buzz> --bargle --pi=<pi> --baz=<baz> --biz=<biz> --a=<a> foo bar
 ```
+
+## `--pi=<n>`
+
+Esse eiusmod exercitation nulla nostrud do velit id. (Default: 3.2)
+
+## `--baz=<baz>`
+
+Reprehenderit consequat, veniam velit.
+
+## `-z<buzz> --buzz=<buzz>`
+
+Aliquip sunt tempor nisi labore ad culpa. (Default: "Sit")
+
+## `--biz=<biz>`
+
+## `--a=<a>`
+
+Default: "foo","bar","baz" Can be set multiple times
 
 ## Arguments
 
@@ -20,20 +38,12 @@ Demonstrate using `@qui-cli/markdown` to generate a README
 
 Get usage information
 
-### dev-readme options
-
-#### `-a --argle`
+## `-a --argle`
 
 Sint ipsum aliquip veniam tempor occaecat.
 
-#### `--bargle`
+## `--bargle`
 
-Tempor minim anim exercitation aliquip.
+Tempor minim anim exercitation aliquip. (Default: true, use --no-bargle to disable)
 
-#### `--baz=<baz>`
-
-Reprehenderit consequat, veniam velit.
-
-#### `-z<buzz> --buzz=<buzz>`
-
-Aliquip sunt tempor nisi labore ad culpa.
+### dev-readme options

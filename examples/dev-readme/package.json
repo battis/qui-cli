@@ -27,6 +27,7 @@
   "dependencies": {
     "@qui-cli/colors": "workspace:*",
     "@qui-cli/core": "workspace:*",
+    "@qui-cli/env": "workspace:*",
     "@qui-cli/markdown": "workspace:*",
     "@qui-cli/plugin": "workspace:*"
   },
