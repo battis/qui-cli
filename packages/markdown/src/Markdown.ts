@@ -46,7 +46,7 @@ export async function run() {
     if (path.extname(outputPath) === '') {
       outputPath = path.join(outputPath, fileName);
     }
-    fs.mkdirSync(path.basename(outputPath), { recursive: true });
+    fs.mkdirSync(path.dirname(outputPath), { recursive: true });
   }
   fs.writeFileSync(
     outputPath,
