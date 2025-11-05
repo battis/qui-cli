@@ -1,7 +1,5 @@
 import chalk from 'chalk';
 
-export const name = 'colors';
-
 // console.log styles
 export const value = chalk.yellow;
 export const quotedValue = chalk.green;
