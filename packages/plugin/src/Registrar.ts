@@ -1,6 +1,6 @@
 import { Base as PluginConfiguration } from './Configuration.js';
 import { Arguments } from './Initialization.js';
-import { Options, merge } from './Options.js';
+import { Options, appendDefaultDocumentation, merge } from './Options.js';
 import { Base as Plugin } from './Plugin.js';
 import { AccumulatedResults } from './Run.js';
 
@@ -46,7 +46,10 @@ export async function options() {
   let options: Options = {};
   for (const plugin of plugins) {
     if (plugin.options) {
-      options = merge(options, await plugin.options());
+      options = merge(
+        options,
+        appendDefaultDocumentation(await plugin.options())
+      );
     }
   }
   return options;

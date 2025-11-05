@@ -24,6 +24,7 @@
     "release": "commit-and-tag-version"
   },
   "dependencies": {
+    "@qui-cli/colors": "workspace:*",
     "jackspeak": "^4.1.1"
   },
   "devDependencies": {

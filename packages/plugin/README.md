@@ -158,7 +158,7 @@ export function options() {
     },
     opt: {
       bar: {
-        description: `Bar value (default: "argle-bargle")`,
+        description: `Bar value`,
         short: 'b',
         default: 'argle-bargle'
       }
