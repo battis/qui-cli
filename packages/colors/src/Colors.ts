@@ -2,9 +2,11 @@ import chalk from 'chalk';
 
 // console.log styles
 export const value = chalk.yellow;
+export const varName = value;
 export const quotedValue = chalk.green;
 export const regexpValue = chalk.red;
 export const url = chalk.blue;
+export const path = url;
 export const error = chalk.red.bold;
 
 // node-stule
