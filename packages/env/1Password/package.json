@@ -1,0 +1,5 @@
+{
+  "type": "module",
+  "main": "../dist/1Password/index.js",
+  "types": "../dist/1Password/index.d.ts"
+}
