@@ -9,8 +9,6 @@ export type Configuration = Plugin.Configuration &
     serviceAccountToken?: string;
   };
 
-const OP_SERVICE_ACCOUNT_TOKEN = 'OP_SERVICE_ACCOUNT_TOKEN';
-
 export const name = Env.name;
 
 let client: Client | undefined = undefined;
@@ -18,7 +16,7 @@ let client: Client | undefined = undefined;
 export async function configure(config: Configuration = {}) {
   const { serviceAccountToken, load = true, ...rest } = config;
   await Env.configure({ ...rest, load: false });
-  const auth = serviceAccountToken || process.env[OP_SERVICE_ACCOUNT_TOKEN];
+  const auth = serviceAccountToken;
   if (auth) {
     const pkg = await importLocal(
       path.join(import.meta.dirname, '../package.json')
@@ -46,7 +44,8 @@ export function options(): Plugin.Options {
     ],
     opt: {
       serviceAccountToken: {
-        description: `1Password service account token (defaults to ${OP_SERVICE_ACCOUNT_TOKEN}} environment variable, if present)`
+        description: `1Password service account token (required if any secret references are present in the environment)`,
+        secret: true
       }
     }
   };
