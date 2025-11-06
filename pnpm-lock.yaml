@@ -100,8 +100,8 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ~5.8.3
-        version: 5.8.3
+        specifier: ^5.9.3
+        version: 5.9.3
 
   examples/dev-command:
     dependencies:
@@ -125,8 +125,8 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ~5.8.3
-        version: 5.8.3
+        specifier: ^5.9.3
+        version: 5.9.3
 
   examples/dev-fallback-env:
     dependencies:
@@ -159,8 +159,8 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ~5.8.3
-        version: 5.8.3
+        specifier: ^5.9.3
+        version: 5.9.3
 
   examples/dev-plugin-lifecycle:
     dependencies:
@@ -190,8 +190,8 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ~5.8.3
-        version: 5.8.3
+        specifier: ^5.9.3
+        version: 5.9.3
 
   examples/dev-plugin/plugin-conflict:
     dependencies:
@@ -218,8 +218,8 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ~5.8.3
-        version: 5.8.3
+        specifier: ^5.9.3
+        version: 5.9.3
 
   examples/dev-plugin/plugin-consumer-cli:
     dependencies:
@@ -240,8 +240,8 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ~5.8.3
-        version: 5.8.3
+        specifier: ^5.9.3
+        version: 5.9.3
 
   examples/dev-plugin/plugin-consumer-modular:
     dependencies:
@@ -265,8 +265,8 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ~5.8.3
-        version: 5.8.3
+        specifier: ^5.9.3
+        version: 5.9.3
 
   examples/dev-plugin/plugin-provider:
     devDependencies:
@@ -286,8 +286,8 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ~5.8.3
-        version: 5.8.3
+        specifier: ^5.9.3
+        version: 5.9.3
 
   examples/dev-positionals:
     dependencies:
@@ -320,8 +320,8 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ~5.8.3
-        version: 5.8.3
+        specifier: ^5.9.3
+        version: 5.9.3
 
   examples/dev-readme:
     dependencies:
@@ -351,8 +351,8 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ~5.8.3
-        version: 5.8.3
+        specifier: ^5.9.3
+        version: 5.9.3
 
   examples/dev-sequenced-commands/command:
     dependencies:
@@ -382,8 +382,8 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ~5.8.3
-        version: 5.8.3
+        specifier: ^5.9.3
+        version: 5.9.3
 
   examples/dev-sequenced-commands/module-a:
     dependencies:
@@ -410,8 +410,8 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ~5.8.3
-        version: 5.8.3
+        specifier: ^5.9.3
+        version: 5.9.3
 
   examples/dev-sequenced-commands/module-b:
     dependencies:
@@ -441,8 +441,8 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ~5.8.3
-        version: 5.8.3
+        specifier: ^5.9.3
+        version: 5.9.3
 
   examples/dev-sequenced-commands/module-c:
     dependencies:
@@ -472,8 +472,8 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ~5.8.3
-        version: 5.8.3
+        specifier: ^5.9.3
+        version: 5.9.3
 
   examples/dev-sequenced-commands/modules-def:
     dependencies:
@@ -503,8 +503,8 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ~5.8.3
-        version: 5.8.3
+        specifier: ^5.9.3
+        version: 5.9.3
 
   examples/dev-structured:
     dependencies:
@@ -534,8 +534,8 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ~5.8.3
-        version: 5.8.3
+        specifier: ^5.9.3
+        version: 5.9.3
 
   examples/usage-cli:
     dependencies:
@@ -559,8 +559,8 @@ importers:
         specifier: ^4.20.6
         version: 4.20.6
       typescript:
-        specifier: ~5.8.3
-        version: 5.8.3
+        specifier: ^5.9.3
+        version: 5.9.3
 
   examples/usage-modular:
     dependencies:
@@ -584,8 +584,8 @@ importers:
         specifier: ^4.20.6
         version: 4.20.6
       typescript:
-        specifier: ~5.8.3
-        version: 5.8.3
+        specifier: ^5.9.3
+        version: 5.9.3
 
   packages/colors:
     dependencies:
@@ -609,8 +609,8 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ~5.8.3
-        version: 5.8.3
+        specifier: ^5.9.3
+        version: 5.9.3
 
   packages/core:
     dependencies:
@@ -643,8 +643,8 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ~5.8.3
-        version: 5.8.3
+        specifier: ^5.9.3
+        version: 5.9.3
 
   packages/env:
     dependencies:
@@ -680,8 +680,8 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ~5.8.3
-        version: 5.8.3
+        specifier: ^5.9.3
+        version: 5.9.3
 
   packages/log:
     dependencies:
@@ -720,8 +720,8 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ~5.8.3
-        version: 5.8.3
+        specifier: ^5.9.3
+        version: 5.9.3
 
   packages/markdown:
     dependencies:
@@ -757,8 +757,8 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ~5.8.3
-        version: 5.8.3
+        specifier: ^5.9.3
+        version: 5.9.3
 
   packages/plugin:
     dependencies:
@@ -785,8 +785,8 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ~5.8.3
-        version: 5.8.3
+        specifier: ^5.9.3
+        version: 5.9.3
 
   packages/progress:
     dependencies:
@@ -819,8 +819,8 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ~5.8.3
-        version: 5.8.3
+        specifier: ^5.9.3
+        version: 5.9.3
 
   packages/qui-cli:
     devDependencies:
@@ -882,8 +882,8 @@ importers:
         specifier: ^4.20.6
         version: 4.20.6
       typescript:
-        specifier: ~5.8.3
-        version: 5.8.3
+        specifier: ^5.9.3
+        version: 5.9.3
 
   packages/root:
     dependencies:
@@ -913,8 +913,8 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ~5.8.3
-        version: 5.8.3
+        specifier: ^5.9.3
+        version: 5.9.3
 
   packages/shell:
     dependencies:
@@ -953,8 +953,8 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ~5.8.3
-        version: 5.8.3
+        specifier: ^5.9.3
+        version: 5.9.3
 
   packages/structured:
     dependencies:
@@ -987,8 +987,8 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ~5.8.3
-        version: 5.8.3
+        specifier: ^5.9.3
+        version: 5.9.3
 
   packages/validators:
     dependencies:
@@ -1030,250 +1030,8 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ~5.8.3
-        version: 5.8.3
-
-  shims/colors:
-    dependencies:
-      '@qui-cli/colors':
-        specifier: workspace:*
-        version: link:../../packages/colors
-    devDependencies:
-      '@tsconfig/node20':
-        specifier: ^20.1.6
-        version: 20.1.6
-      commit-and-tag-version:
-        specifier: ^12.6.0
-        version: 12.6.0
-      del-cli:
-        specifier: ^6.0.0
-        version: 6.0.0
-      npm-run-all:
-        specifier: ^4.1.5
-        version: 4.1.5
-      typescript:
-        specifier: ~5.8.3
-        version: 5.8.3
-
-  shims/core:
-    dependencies:
-      '@qui-cli/core':
-        specifier: workspace:*
-        version: link:../../packages/core
-    devDependencies:
-      '@tsconfig/node20':
-        specifier: ^20.1.6
-        version: 20.1.6
-      commit-and-tag-version:
-        specifier: ^12.6.0
-        version: 12.6.0
-      del-cli:
-        specifier: ^6.0.0
-        version: 6.0.0
-      npm-run-all:
-        specifier: ^4.1.5
-        version: 4.1.5
-      typescript:
-        specifier: ~5.8.3
-        version: 5.8.3
-
-  shims/env:
-    dependencies:
-      '@qui-cli/env':
-        specifier: workspace:*
-        version: link:../../packages/env
-    devDependencies:
-      '@tsconfig/node20':
-        specifier: ^20.1.6
-        version: 20.1.6
-      commit-and-tag-version:
-        specifier: ^12.6.0
-        version: 12.6.0
-      del-cli:
-        specifier: ^6.0.0
-        version: 6.0.0
-      npm-run-all:
-        specifier: ^4.1.5
-        version: 4.1.5
-      typescript:
-        specifier: ~5.8.3
-        version: 5.8.3
-
-  shims/log:
-    dependencies:
-      '@qui-cli/log':
-        specifier: workspace:*
-        version: link:../../packages/log
-    devDependencies:
-      '@tsconfig/node20':
-        specifier: ^20.1.6
-        version: 20.1.6
-      commit-and-tag-version:
-        specifier: ^12.6.0
-        version: 12.6.0
-      del-cli:
-        specifier: ^6.0.0
-        version: 6.0.0
-      npm-run-all:
-        specifier: ^4.1.5
-        version: 4.1.5
-      typescript:
-        specifier: ~5.8.3
-        version: 5.8.3
-
-  shims/plugin:
-    dependencies:
-      '@qui-cli/plugin':
-        specifier: workspace:*
-        version: link:../../packages/plugin
-    devDependencies:
-      '@tsconfig/node20':
-        specifier: ^20.1.6
-        version: 20.1.6
-      commit-and-tag-version:
-        specifier: ^12.6.0
-        version: 12.6.0
-      del-cli:
-        specifier: ^6.0.0
-        version: 6.0.0
-      npm-run-all:
-        specifier: ^4.1.5
-        version: 4.1.5
-      typescript:
-        specifier: ~5.8.3
-        version: 5.8.3
-
-  shims/progress:
-    dependencies:
-      '@qui-cli/progress':
-        specifier: workspace:*
-        version: link:../../packages/progress
-    devDependencies:
-      '@tsconfig/node20':
-        specifier: ^20.1.6
-        version: 20.1.6
-      commit-and-tag-version:
-        specifier: ^12.6.0
-        version: 12.6.0
-      del-cli:
-        specifier: ^6.0.0
-        version: 6.0.0
-      npm-run-all:
-        specifier: ^4.1.5
-        version: 4.1.5
-      typescript:
-        specifier: ~5.8.3
-        version: 5.8.3
-
-  shims/qui-cli:
-    dependencies:
-      '@qui-cli/qui-cli':
-        specifier: workspace:*
-        version: link:../../packages/qui-cli
-    devDependencies:
-      '@tsconfig/node20':
-        specifier: ^20.1.6
-        version: 20.1.6
-      commit-and-tag-version:
-        specifier: ^12.6.0
-        version: 12.6.0
-      del-cli:
-        specifier: ^6.0.0
-        version: 6.0.0
-      npm-run-all:
-        specifier: ^4.1.5
-        version: 4.1.5
-      typescript:
-        specifier: ~5.8.3
-        version: 5.8.3
-
-  shims/root:
-    dependencies:
-      '@qui-cli/root':
-        specifier: workspace:*
-        version: link:../../packages/root
-    devDependencies:
-      '@tsconfig/node20':
-        specifier: ^20.1.6
-        version: 20.1.6
-      commit-and-tag-version:
-        specifier: ^12.6.0
-        version: 12.6.0
-      del-cli:
-        specifier: ^6.0.0
-        version: 6.0.0
-      npm-run-all:
-        specifier: ^4.1.5
-        version: 4.1.5
-      typescript:
-        specifier: ~5.8.3
-        version: 5.8.3
-
-  shims/shell:
-    dependencies:
-      '@qui-cli/shell':
-        specifier: workspace:*
-        version: link:../../packages/shell
-    devDependencies:
-      '@tsconfig/node20':
-        specifier: ^20.1.6
-        version: 20.1.6
-      commit-and-tag-version:
-        specifier: ^12.6.0
-        version: 12.6.0
-      del-cli:
-        specifier: ^6.0.0
-        version: 6.0.0
-      npm-run-all:
-        specifier: ^4.1.5
-        version: 4.1.5
-      typescript:
-        specifier: ~5.8.3
-        version: 5.8.3
-
-  shims/structured:
-    dependencies:
-      '@qui-cli/structured':
-        specifier: workspace:*
-        version: link:../../packages/structured
-    devDependencies:
-      '@tsconfig/node20':
-        specifier: ^20.1.6
-        version: 20.1.6
-      commit-and-tag-version:
-        specifier: ^12.6.0
-        version: 12.6.0
-      del-cli:
-        specifier: ^6.0.0
-        version: 6.0.0
-      npm-run-all:
-        specifier: ^4.1.5
-        version: 4.1.5
-      typescript:
-        specifier: ~5.8.3
-        version: 5.8.3
-
-  shims/validators:
-    dependencies:
-      '@qui-cli/validators':
-        specifier: workspace:*
-        version: link:../../packages/validators
-    devDependencies:
-      '@tsconfig/node20':
-        specifier: ^20.1.6
-        version: 20.1.6
-      commit-and-tag-version:
-        specifier: ^12.6.0
-        version: 12.6.0
-      del-cli:
-        specifier: ^6.0.0
-        version: 6.0.0
-      npm-run-all:
-        specifier: ^4.1.5
-        version: 4.1.5
-      typescript:
-        specifier: ~5.8.3
-        version: 5.8.3
+        specifier: ^5.9.3
+        version: 5.9.3
 
 packages:
 
@@ -5596,11 +5354,6 @@ packages:
     peerDependencies:
       eslint: ^8.57.0 || ^9.0.0
       typescript: '>=4.8.4 <6.0.0'
-
-  typescript@5.8.3:
-    resolution: {integrity: sha512-p1diW6TqL9L07nNxvRMM7hMMw4c5XOo/1ibL4aAIGmSAt9slTE1Xgw5KWuof2uTOvCg9BY7ZRi+GaF+7sfgPeQ==}
-    engines: {node: '>=14.17'}
-    hasBin: true
 
   typescript@5.9.3:
     resolution: {integrity: sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==}
@@ -10885,8 +10638,6 @@ snapshots:
       typescript: 5.9.3
     transitivePeerDependencies:
       - supports-color
-
-  typescript@5.8.3: {}
 
   typescript@5.9.3: {}
 
