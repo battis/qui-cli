@@ -46,6 +46,10 @@ export function parse() {
   return jack().parse();
 }
 
+export function toJSON() {
+  return jack().toJSON();
+}
+
 export function usage() {
   return jack().usage();
 }

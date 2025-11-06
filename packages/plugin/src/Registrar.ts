@@ -1,6 +1,6 @@
 import { Base as PluginConfiguration } from './Configuration.js';
 import { Arguments } from './Initialization.js';
-import { Options, appendDefaultDocumentation, merge } from './Options.js';
+import { Options, documentDefaults } from './Options.js';
 import { Base as Plugin } from './Plugin.js';
 import { AccumulatedResults } from './Run.js';
 
@@ -21,7 +21,16 @@ export async function register(plugin: Plugin) {
       return;
     }
   }
-  plugins.push(plugin);
+  plugins.push({
+    ...plugin,
+    options: async () => {
+      if (plugin.options) {
+        return documentDefaults(await plugin.options());
+      } else {
+        return {};
+      }
+    }
+  });
 }
 
 export function reset() {
@@ -42,22 +51,7 @@ export async function configure(config: Configuration = {}) {
   }
 }
 
-export async function options() {
-  let options: Options = {};
-  for (const plugin of plugins) {
-    if (plugin.options) {
-      options = merge(
-        options,
-        appendDefaultDocumentation(await plugin.options())
-      );
-    }
-  }
-  return options;
-}
-
-export async function init(
-  args: Arguments<Awaited<ReturnType<typeof options>>>
-) {
+export async function init(args: Arguments<Options>) {
   for (const plugin of plugins) {
     if (plugin.init) {
       await plugin.init(args);

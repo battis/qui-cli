@@ -33,22 +33,6 @@ export type Options = {
   man?: Paragraph[];
 };
 
-export function merge<A extends Options = Options, B extends Options = Options>(
-  a: A,
-  b: B
-): A & B {
-  return {
-    num: { ...a.num, ...b.num },
-    numList: { ...a.numList, ...b.numList },
-    opt: { ...a.opt, ...b.opt },
-    optList: { ...a.optList, ...b.optList },
-    flag: { ...a.flag, ...b.flag },
-    flagList: { ...a.flagList, ...b.flagList },
-    fields: { ...a.fields, ...b.fields },
-    man: [...(a.man || []), ...(b.man || [])]
-  } as A & B;
-}
-
 function stringify(value: string | number | boolean | RegExp) {
   switch (typeof value) {
     case 'string':
@@ -60,7 +44,7 @@ function stringify(value: string | number | boolean | RegExp) {
   }
 }
 
-export function appendDefaultDocumentation(options: Options) {
+export function documentDefaults(options: Options) {
   let paramType: keyof Options;
   for (paramType in options) {
     if (paramType !== 'man' && paramType !== 'fields') {
@@ -74,10 +58,16 @@ export function appendDefaultDocumentation(options: Options) {
             if (!docs.length) {
               docs = 'Default';
             }
-            docs = `${docs}: ${Array.isArray(param.default) ? param.default.map((v) => stringify(v)) : stringify(param.default)}`;
+            docs = `${docs}: ${
+              Array.isArray(param.default)
+                ? param.default.map((v) => stringify(v)).join(', ')
+                : stringify(param.default)
+            }`;
           }
           if (paramType === 'flag' && param.default) {
-            docs = `${docs}${docs.length ? ', u' : 'U'}se ${Colors.flagArg(`--no-${paramName}`)} to disable`;
+            docs = `${docs}${
+              docs.length ? ', u' : 'U'
+            }se ${Colors.flagArg(`--no-${paramName}`)} to disable`;
           }
           if (docs.length) {
             if (param.description?.length) {

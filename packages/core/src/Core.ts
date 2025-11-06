@@ -35,15 +35,6 @@ export async function configure(config: Configuration = {}) {
   await Plugin.Registrar.configure({ positionals, jackspeak });
 }
 
-export async function options(externalOptions: Plugin.Options = {}) {
-  /*
-   * TODO automate default value documentation
-     Issue URL: https://github.com/battis/qui-cli/issues/38
-   *  Including parsing `env` (#34) and `secret` (#33) fields
-   */
-  return Plugin.mergeOptions(await Plugin.Registrar.options(), externalOptions);
-}
-
 export async function init(
   externalOptions?: Plugin.Options
 ): Promise<Plugin.Arguments<Plugin.Options>> {
@@ -52,9 +43,13 @@ export async function init(
       `Already initialized with user-provided command line arguments.`
     );
   }
-  JackSpeak.args(await Plugin.Registrar.options());
+  for (const plugin of Plugin.Registrar.registered()) {
+    if (plugin.options) {
+      JackSpeak.args(await plugin.options());
+    }
+  }
   if (externalOptions) {
-    JackSpeak.args(externalOptions);
+    JackSpeak.args(Plugin.documentDefaults(externalOptions));
   }
   const args = JackSpeak.parse();
   await Plugin.Registrar.init(args);
