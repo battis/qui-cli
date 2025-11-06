@@ -26,7 +26,7 @@ export function options(): Plugin.Options {
     flag: {
       argle: {
         description: 'Sint ipsum aliquip veniam tempor occaecat.',
-        short: 'a'
+        short: 'A'
       },
       bargle: {
         description: 'Tempor minim anim exercitation aliquip.',
