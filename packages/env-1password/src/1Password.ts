@@ -1,15 +1,15 @@
 import { Client, createClient, Item } from '@1password/sdk';
 import { importLocal } from '@battis/import-package-json';
+import { Env } from '@qui-cli/env';
 import * as Plugin from '@qui-cli/plugin';
 import path from 'node:path';
-import * as Env from '../Env.js';
 
 export type Configuration = Plugin.Configuration &
   Env.Configuration & {
     serviceAccountToken?: string;
   };
 
-export const name = Env.name;
+export const name = 'env-1password';
 
 let client: Client | undefined = undefined;
 

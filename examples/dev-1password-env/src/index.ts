@@ -1,5 +1,5 @@
 import { Core } from '@qui-cli/core';
-import { Env } from '@qui-cli/env/1Password';
+import { Env } from '@qui-cli/env-1password';
 import { Log } from '@qui-cli/log';
 import path from 'node:path';
 

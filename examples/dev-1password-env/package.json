@@ -29,7 +29,7 @@
   "dependencies": {
     "@qui-cli/colors": "workspace:*",
     "@qui-cli/core": "workspace:*",
-    "@qui-cli/env": "workspace:*",
+    "@qui-cli/env-1password": "workspace:*",
     "@qui-cli/log": "workspace:*"
   },
   "devDependencies": {

@@ -1,20 +1,20 @@
-# @qui-cli/env
+# @qui-cli/env-1password
 
 @qui-cli Plugin: Standardized environment configuration
 
-[![npm version](https://badge.fury.io/js/@qui-cli%2Fenv.svg)](https://npmjs.com/package/@qui-cli/env)
+[![npm version](https://badge.fury.io/js/@qui-cli%2Fenv-1password.svg)](https://npmjs.com/package/@qui-cli/env-1password)
 [![Module type: ESM](https://img.shields.io/badge/module%20type-esm-brightgreen)](https://nodejs.org/api/esm.html)
 
 ## Install
 
 ```sh
-npm install @qui-cli/env
+npm install @qui-cli/env-1password
 ```
 
 ## Usage
 
 ```ts
-import { Env } from '@qui-cli/env';
+import { Env } from '@qui-cli/env-1password';
 
 // configure desired environment path
 Env.configure({ path: '../../.env' });
@@ -31,7 +31,14 @@ Any plugin that depends on this plugin can assume that the `.env` file environem
 
 ### 1Password integration
 
-For 1Password integration supporting secret references in `.env`, use [@qui-cli/env-1password](https://npmjs.com/package/@qui-cli/env-1password) in place of this package.
+This package integrates with [@1password/sdk](https://www.npmjs.com/package/@1password/sdk) to inject values from 1Password vaults into the environment for use by the script.
+
+1. Follow [the 1Password CLI directions to create a service account](https://developer.1password.com/docs/service-accounts/get-started/).
+2. Install [@1password/sdk](https://www.npmjs.com/package/@1password/sdk) as a peer of `@qui-cli/env`.
+3. Update environment variables to be [secret references](https://developer.1password.com/docs/cli/secret-references)
+4. Run!
+
+See [dev-1password-env](https://github.com/battis/qui-cli/tree/main/examples/dev-1password-env#readme) for an example using the 1Password implementation of this package.
 
 ## Configuration
 
