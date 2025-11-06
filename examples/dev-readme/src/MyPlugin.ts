@@ -35,8 +35,7 @@ export function options(): Plugin.Options {
     },
     opt: {
       baz: {
-        description: 'Reprehenderit consequat, veniam velit.',
-        env: 'BAZ'
+        description: 'Reprehenderit consequat, veniam velit.'
       },
       buzz: {
         description: 'Aliquip sunt tempor nisi labore ad culpa.',
@@ -44,14 +43,12 @@ export function options(): Plugin.Options {
         default: 'Sit'
       },
       biz: {
-        env: 'BIZ',
         secret: true
       }
     },
     num: {
       pi: {
         description: 'Esse eiusmod exercitation nulla nostrud do velit id.',
-        env: 'PI',
         default: 3.2
       }
     },

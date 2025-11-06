@@ -3,7 +3,6 @@ import { ConfigMetaSet, ConfigSet, ConfigType } from 'jackspeak';
 
 type DocumentationOptions = {
   [longOption: string]: {
-    env?: string;
     secret?: boolean;
   };
 };
