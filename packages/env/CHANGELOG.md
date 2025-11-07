@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.0.0](https://github.com/battis/qui-cli/compare/env/4.1.0...env/5.0.0) (2025-11-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* expose env-1password as a separate plugin
+* separate 1Password without requiring knowledge of module structure
+* no longer accepting 1Password service account token as environment variable
+
+### Features
+
+* expose env-1password as a separate plugin ([90ecb79](https://github.com/battis/qui-cli/commit/90ecb7900b85ade45113fc5a5999f2a2ff87f580))
+
+
+### Bug Fixes
+
+* no longer accepting 1Password service account token as environment variable ([db7ae6a](https://github.com/battis/qui-cli/commit/db7ae6ac615c51a9966f201c85a8388bf4ebd76a))
+* separate 1Password without requiring knowledge of module structure ([c21fe44](https://github.com/battis/qui-cli/commit/c21fe44d7d72d5d6bc4d092cb869164117378ab2))
+
 ## [4.1.0](https://github.com/battis/qui-cli/compare/env/4.0.1...env/4.1.0) (2025-11-04)
 
 
