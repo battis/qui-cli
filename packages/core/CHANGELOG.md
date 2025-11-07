@@ -2,35 +2,47 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
-## [4.1.0](https://github.com/battis/qui-cli/compare/core/4.0.1...core/4.1.0) (2025-11-04)
-
-
-### Features
-
-* support scripting markdown documentation for commands ([03ee6d5](https://github.com/battis/qui-cli/commit/03ee6d55f86f6d7b45bd205896cb0fb6a21523b5))
-
-## [4.0.1](https://github.com/battis/qui-cli/compare/core/4.0.0...core/4.0.1) (2025-08-04)
-
-
-### Bug Fixes
-
-* update lagging peer dependency specs ([30c0c27](https://github.com/battis/qui-cli/commit/30c0c279d4247a69a30efef8a7426442752cd9c0))
-
-## [4.0.0](https://github.com/battis/qui-cli/compare/core/3.1.0...core/4.0.0) (2025-08-02)
-
+## [5.0.0](https://github.com/battis/qui-cli/compare/core/4.1.0...core/5.0.0) (2025-11-07)
 
 ### ⚠ BREAKING CHANGES
 
-* rename @battis/qui-cli.core --> @qui-cli/core
+- group arguments by plugin in usage
+- **plugin@4.0.0** auto-document default arg values
 
-* rename @battis/qui-cli.core --> @qui-cli/core ([43367e9](https://github.com/battis/qui-cli/commit/43367e9d4316aa22fb28078e9436e6de35564f1f))
+### revert
 
+- group arguments by plugin in usage ([ec3d4bf](https://github.com/battis/qui-cli/commit/ec3d4bf6ef9c59a6da3ede8603554d2dcd2581ad))
+- **plugin@4.0.0** auto-document default arg values ([e01e157](https://github.com/battis/qui-cli/commit/e01e157f06a3a801628ca79366e3f0060be2322e))
 
 ### Bug Fixes
 
-* update dependencies to renamed @qui-cli/colors ([ff80e86](https://github.com/battis/qui-cli/commit/ff80e8625ef98834afdf04e57bfedb1906834e2b))
-* update dependencies to renamed @qui-cli/log ([1c8f0fb](https://github.com/battis/qui-cli/commit/1c8f0fbd5561b4274032382c5d10d33912956e7f))
-* update dependencies to renamed @qui-cli/plugin ([117ea85](https://github.com/battis/qui-cli/commit/117ea85256ec69c807c5b56293546d9c350fd43f))
+- merge plugin option in Plugin.Registrar, not in Core ([9a7464f](https://github.com/battis/qui-cli/commit/9a7464fab863c7a9005ade54703726cc9679c8c4))
+
+## [4.1.0](https://github.com/battis/qui-cli/compare/core/4.0.1...core/4.1.0) (2025-11-04)
+
+### Features
+
+- support scripting markdown documentation for commands ([03ee6d5](https://github.com/battis/qui-cli/commit/03ee6d55f86f6d7b45bd205896cb0fb6a21523b5))
+
+## [4.0.1](https://github.com/battis/qui-cli/compare/core/4.0.0...core/4.0.1) (2025-08-04)
+
+### Bug Fixes
+
+- update lagging peer dependency specs ([30c0c27](https://github.com/battis/qui-cli/commit/30c0c279d4247a69a30efef8a7426442752cd9c0))
+
+## [4.0.0](https://github.com/battis/qui-cli/compare/core/3.1.0...core/4.0.0) (2025-08-02)
+
+### ⚠ BREAKING CHANGES
+
+- rename @battis/qui-cli.core --> @qui-cli/core
+
+- rename @battis/qui-cli.core --> @qui-cli/core ([43367e9](https://github.com/battis/qui-cli/commit/43367e9d4316aa22fb28078e9436e6de35564f1f))
+
+### Bug Fixes
+
+- update dependencies to renamed @qui-cli/colors ([ff80e86](https://github.com/battis/qui-cli/commit/ff80e8625ef98834afdf04e57bfedb1906834e2b))
+- update dependencies to renamed @qui-cli/log ([1c8f0fb](https://github.com/battis/qui-cli/commit/1c8f0fbd5561b4274032382c5d10d33912956e7f))
+- update dependencies to renamed @qui-cli/plugin ([117ea85](https://github.com/battis/qui-cli/commit/117ea85256ec69c807c5b56293546d9c350fd43f))
 
 ## [3.1.0](https://github.com/battis/qui-cli/compare/core/3.0.0...core/3.1.0) (2025-08-01)
 
