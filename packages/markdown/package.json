@@ -24,10 +24,10 @@
     "release": "commit-and-tag-version"
   },
   "dependencies": {
+    "@qui-cli/colors": "workspace:*",
     "strip-ansi": "^7.1.2"
   },
   "devDependencies": {
-    "@qui-cli/colors": "workspace:*",
     "@qui-cli/core": "workspace:*",
     "@qui-cli/plugin": "workspace:*",
     "@qui-cli/root": "workspace:*",
@@ -39,7 +39,6 @@
     "typescript": "^5.9.3"
   },
   "peerDependencies": {
-    "@qui-cli/colors": "3.x",
     "@qui-cli/core": "5.x",
     "@qui-cli/plugin": "4.x",
     "@qui-cli/root": "3.x"

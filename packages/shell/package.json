@@ -24,11 +24,11 @@
     "release": "commit-and-tag-version"
   },
   "dependencies": {
+    "@qui-cli/colors": "workspace:*",
     "ora": "^8.2.0",
     "shelljs": "^0.10.0"
   },
   "devDependencies": {
-    "@qui-cli/colors": "workspace:*",
     "@qui-cli/log": "workspace:*",
     "@qui-cli/plugin": "workspace:*",
     "@tsconfig/node20": "^20.1.6",
@@ -40,9 +40,8 @@
     "typescript": "^5.9.3"
   },
   "peerDependencies": {
-    "@qui-cli/colors": "3.x",
-    "@qui-cli/log": "3.x",
-    "@qui-cli/plugin": "3.x"
+    "@qui-cli/log": "3.x - 4.x",
+    "@qui-cli/plugin": "3.x - 4.x"
   },
   "target": "node"
 }
