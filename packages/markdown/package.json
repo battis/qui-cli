@@ -1,6 +1,6 @@
 {
   "name": "@qui-cli/markdown",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "@qui-cli Plugin: Export usage as markdown",
   "homepage": "https://github.com/battis/qui-cli/tree/main/packages/markdown#readme",
   "repository": {
