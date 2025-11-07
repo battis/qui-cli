@@ -2,28 +2,35 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
-## [1.0.1](https://github.com/battis/qui-cli/compare/structured/1.0.0...structured/1.0.1) (2025-08-04)
-
-
-### Bug Fixes
-
-* update lagging peer dependency specs ([30c0c27](https://github.com/battis/qui-cli/commit/30c0c279d4247a69a30efef8a7426442752cd9c0))
-
-## [1.0.0](https://github.com/battis/qui-cli/compare/structured/0.1.5...structured/1.0.0) (2025-08-02)
-
+## [2.0.0](https://github.com/battis/qui-cli/compare/structured/1.0.1...structured/2.0.0) (2025-11-07)
 
 ### ⚠ BREAKING CHANGES
 
-* rename @battis/qui-cli.structured --> @qui-cli/structured
+- **plugin@4.0.0** auto-document default arg values
 
-* rename @battis/qui-cli.structured --> @qui-cli/structured ([a0f29ce](https://github.com/battis/qui-cli/commit/a0f29ce176b8fab590f474f7198e33e9fd997ce6))
+### Features
 
+- **plugin@4.0.0** auto-document default arg values ([e01e157](https://github.com/battis/qui-cli/commit/e01e157f06a3a801628ca79366e3f0060be2322e))
+
+## [1.0.1](https://github.com/battis/qui-cli/compare/structured/1.0.0...structured/1.0.1) (2025-08-04)
 
 ### Bug Fixes
 
-* update dependencies to renamed @qui-cli/colors ([ff80e86](https://github.com/battis/qui-cli/commit/ff80e8625ef98834afdf04e57bfedb1906834e2b))
-* update dependencies to renamed @qui-cli/core ([f834c5a](https://github.com/battis/qui-cli/commit/f834c5a475f908585f1e17865917a092516168a0))
-* update dependencies to renamed @qui-cli/plugin ([117ea85](https://github.com/battis/qui-cli/commit/117ea85256ec69c807c5b56293546d9c350fd43f))
+- update lagging peer dependency specs ([30c0c27](https://github.com/battis/qui-cli/commit/30c0c279d4247a69a30efef8a7426442752cd9c0))
+
+## [1.0.0](https://github.com/battis/qui-cli/compare/structured/0.1.5...structured/1.0.0) (2025-08-02)
+
+### ⚠ BREAKING CHANGES
+
+- rename @battis/qui-cli.structured --> @qui-cli/structured
+
+- rename @battis/qui-cli.structured --> @qui-cli/structured ([a0f29ce](https://github.com/battis/qui-cli/commit/a0f29ce176b8fab590f474f7198e33e9fd997ce6))
+
+### Bug Fixes
+
+- update dependencies to renamed @qui-cli/colors ([ff80e86](https://github.com/battis/qui-cli/commit/ff80e8625ef98834afdf04e57bfedb1906834e2b))
+- update dependencies to renamed @qui-cli/core ([f834c5a](https://github.com/battis/qui-cli/commit/f834c5a475f908585f1e17865917a092516168a0))
+- update dependencies to renamed @qui-cli/plugin ([117ea85](https://github.com/battis/qui-cli/commit/117ea85256ec69c807c5b56293546d9c350fd43f))
 
 ## [0.1.5](https://github.com/battis/qui-cli/compare/structured/0.1.4...structured/0.1.5) (2025-08-01)
 
