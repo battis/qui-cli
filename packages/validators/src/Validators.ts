@@ -8,8 +8,6 @@ import path from 'node:path';
 
 export type Validator = (value?: string) => boolean | string;
 
-export const name = 'validators';
-
 export function notEmpty(value?: string) {
   return (!!value && value.length > 0) || 'May not be empty';
 }
@@ -54,7 +52,7 @@ export function cron(value?: string) {
   return (
     // FIXME cronValidator callable
     // Issue URL: https://github.com/battis/qui-cli/issues/27
-    // @ts-ignore
+    // @ts-expect-error 2349 cronValidator typing
     (notEmpty(value) === true && cronValidator(value || '').isValid()) ||
     'Must be valid cron schedule'
   );

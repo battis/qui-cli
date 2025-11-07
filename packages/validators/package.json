@@ -30,7 +30,6 @@
     "is-valid-path": "^0.1.1"
   },
   "devDependencies": {
-    "@qui-cli/plugin": "workspace:*",
     "@qui-cli/root": "workspace:*",
     "@tsconfig/node20": "^20.1.6",
     "@types/is-valid-path": "^0.1.2",
@@ -41,7 +40,6 @@
     "typescript": "^5.9.3"
   },
   "peerDependencies": {
-    "@qui-cli/plugin": "3.x",
     "@qui-cli/root": "3.x"
   },
   "target": "node"
