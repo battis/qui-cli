@@ -37,7 +37,7 @@
     "typescript": "^5.9.3"
   },
   "peerDependencies": {
-    "@qui-cli/plugin": "3.x - 4.x"
+    "@qui-cli/plugin": "3.x || 4.x"
   },
   "target": "node"
 }
