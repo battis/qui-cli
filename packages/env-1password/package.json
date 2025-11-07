@@ -40,7 +40,7 @@
     "typescript": "^5.9.3"
   },
   "peerDependencies": {
-    "@qui-cli/env": "4.x",
+    "@qui-cli/env": "5.x",
     "@qui-cli/plugin": "3.x - 4.x",
     "@qui-cli/root": "3.x"
   },
