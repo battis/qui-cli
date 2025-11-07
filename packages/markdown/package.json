@@ -40,8 +40,8 @@
   },
   "peerDependencies": {
     "@qui-cli/colors": "3.x",
-    "@qui-cli/core": "4.x",
-    "@qui-cli/plugin": "3.x",
+    "@qui-cli/core": "5.x",
+    "@qui-cli/plugin": "4.x",
     "@qui-cli/root": "3.x"
   },
   "target": "node"
