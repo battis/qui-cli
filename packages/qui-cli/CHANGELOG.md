@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file. See [commit
 
 ## [5.0.0](https://github.com/battis/qui-cli/compare/qui-cli/4.0.3...qui-cli/5.0.0) (2025-11-07)
 
+### ⚠ BREAKING CHANGES
+
+- group arguments by plugin in usage
+- **plugin@4.0.0** auto-document default arg values
+
+### revert
+
+- group arguments by plugin in usage ([ec3d4bf](https://github.com/battis/qui-cli/commit/ec3d4bf6ef9c59a6da3ede8603554d2dcd2581ad))
+- **plugin@4.0.0** auto-document default arg values ([e01e157](https://github.com/battis/qui-cli/commit/e01e157f06a3a801628ca79366e3f0060be2322e))
+
 ## [4.0.3](https://github.com/battis/qui-cli/compare/qui-cli/4.0.2...qui-cli/4.0.3) (2025-11-04)
 
 ### Features
