@@ -2,27 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
-## [3.0.1](https://github.com/battis/qui-cli/compare/root/3.0.0...root/3.0.1) (2025-08-04)
-
+## [3.0.2](https://github.com/battis/qui-cli/compare/root/3.0.1...root/3.0.2) (2025-11-07)
 
 ### Bug Fixes
 
-* update lagging peer dependency specs ([30c0c27](https://github.com/battis/qui-cli/commit/30c0c279d4247a69a30efef8a7426442752cd9c0))
+- adjust peer dependencies to current values ([966abc1](https://github.com/battis/qui-cli/commit/966abc192c68319d06b399ff3f0362032ab8d89a))
+
+## [3.0.1](https://github.com/battis/qui-cli/compare/root/3.0.0...root/3.0.1) (2025-08-04)
+
+### Bug Fixes
+
+- update lagging peer dependency specs ([30c0c27](https://github.com/battis/qui-cli/commit/30c0c279d4247a69a30efef8a7426442752cd9c0))
 
 ## [3.0.0](https://github.com/battis/qui-cli/compare/root/2.0.5...root/3.0.0) (2025-08-02)
 
-
 ### ⚠ BREAKING CHANGES
 
-* rename @battis/qui-cli.root --> @qui-cli/root
+- rename @battis/qui-cli.root --> @qui-cli/root
 
-* rename @battis/qui-cli.root --> @qui-cli/root ([29497b1](https://github.com/battis/qui-cli/commit/29497b1fd41e6c13b94442d5ceaf9b3826ecc69c))
-
+- rename @battis/qui-cli.root --> @qui-cli/root ([29497b1](https://github.com/battis/qui-cli/commit/29497b1fd41e6c13b94442d5ceaf9b3826ecc69c))
 
 ### Bug Fixes
 
-* update dependencies to renamed @qui-cli/colors ([ff80e86](https://github.com/battis/qui-cli/commit/ff80e8625ef98834afdf04e57bfedb1906834e2b))
-* update dependencies to renamed @qui-cli/plugin ([117ea85](https://github.com/battis/qui-cli/commit/117ea85256ec69c807c5b56293546d9c350fd43f))
+- update dependencies to renamed @qui-cli/colors ([ff80e86](https://github.com/battis/qui-cli/commit/ff80e8625ef98834afdf04e57bfedb1906834e2b))
+- update dependencies to renamed @qui-cli/plugin ([117ea85](https://github.com/battis/qui-cli/commit/117ea85256ec69c807c5b56293546d9c350fd43f))
 
 ## [2.0.5](https://github.com/battis/qui-cli/compare/root/2.0.4...root/2.0.5) (2025-06-23)
 
