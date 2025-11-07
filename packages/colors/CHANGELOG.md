@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.1.0](https://github.com/battis/qui-cli/compare/colors/3.0.1...colors/3.1.0) (2025-11-07)
+
+
+### Features
+
+* add standard varName and path color coding ([00d4a3f](https://github.com/battis/qui-cli/commit/00d4a3f5047b0c6738d2d6f486456657a06e0957))
+
+
+### Bug Fixes
+
+* remove unnecessary @qui-cli/plugin dependency ([95bab60](https://github.com/battis/qui-cli/commit/95bab6007c9bb6b69fc53a262db434baec9d98a0))
+
 ## [3.0.1](https://github.com/battis/qui-cli/compare/colors/3.0.0...colors/3.0.1) (2025-08-04)
 
 
