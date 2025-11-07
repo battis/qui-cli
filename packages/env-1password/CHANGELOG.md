@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.0.2](https://github.com/battis/qui-cli/compare/env-1password/1.0.1...env-1password/1.0.2) (2025-11-07)
+
+
+### Bug Fixes
+
+* env peer dependency ([e14f71c](https://github.com/battis/qui-cli/commit/e14f71c23f47289b8a567ad3c8d109c71c66f328))
+
 ## [1.0.1](https://github.com/battis/qui-cli/compare/env-1password/1.0.0...env-1password/1.0.1) (2025-11-07)
 
 ### Bug Fixes
