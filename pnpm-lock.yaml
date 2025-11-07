@@ -66,8 +66,8 @@ importers:
         specifier: ^8.2.4
         version: 8.2.4(@types/node@24.10.0)(encoding@0.1.13)
       monorepo-package-paths:
-        specifier: ^0.4.0
-        version: 0.4.0(@types/node@24.10.0)(prettier@3.5.3)
+        specifier: ^0.4.1
+        version: 0.4.1(@types/node@24.10.0)(prettier@3.5.3)
       npm-run-all:
         specifier: ^4.1.5
         version: 4.1.5
@@ -614,6 +614,9 @@ importers:
 
   packages/core:
     dependencies:
+      '@qui-cli/colors':
+        specifier: workspace:*
+        version: link:../colors
       jackspeak:
         specifier: ^4.1.1
         version: 4.1.1
@@ -621,9 +624,6 @@ importers:
         specifier: ^9.0.2
         version: 9.0.2
     devDependencies:
-      '@qui-cli/colors':
-        specifier: workspace:*
-        version: link:../colors
       '@qui-cli/plugin':
         specifier: workspace:*
         version: link:../plugin
@@ -725,6 +725,9 @@ importers:
 
   packages/log:
     dependencies:
+      '@qui-cli/colors':
+        specifier: workspace:*
+        version: link:../colors
       ora:
         specifier: ^8.2.0
         version: 8.2.0
@@ -735,9 +738,6 @@ importers:
         specifier: ^3.18.3
         version: 3.18.3
     devDependencies:
-      '@qui-cli/colors':
-        specifier: workspace:*
-        version: link:../colors
       '@qui-cli/plugin':
         specifier: workspace:*
         version: link:../plugin
@@ -765,13 +765,13 @@ importers:
 
   packages/markdown:
     dependencies:
+      '@qui-cli/colors':
+        specifier: workspace:*
+        version: link:../colors
       strip-ansi:
         specifier: ^7.1.2
         version: 7.1.2
     devDependencies:
-      '@qui-cli/colors':
-        specifier: workspace:*
-        version: link:../colors
       '@qui-cli/core':
         specifier: workspace:*
         version: link:../core
@@ -830,6 +830,9 @@ importers:
 
   packages/progress:
     dependencies:
+      '@qui-cli/colors':
+        specifier: workspace:*
+        version: link:../colors
       chalk:
         specifier: ^5.6.2
         version: 5.6.2
@@ -837,9 +840,6 @@ importers:
         specifier: ^3.12.0
         version: 3.12.0
     devDependencies:
-      '@qui-cli/colors':
-        specifier: workspace:*
-        version: link:../colors
       '@qui-cli/plugin':
         specifier: workspace:*
         version: link:../plugin
@@ -863,6 +863,10 @@ importers:
         version: 5.9.3
 
   packages/qui-cli:
+    dependencies:
+      '@qui-cli/colors':
+        specifier: workspace:*
+        version: link:../colors
     devDependencies:
       '@battis/typescript-tricks':
         specifier: ^0.7.4
@@ -870,9 +874,6 @@ importers:
       '@inquirer/prompts':
         specifier: ^7.9.0
         version: 7.9.0(@types/node@24.10.0)
-      '@qui-cli/colors':
-        specifier: workspace:*
-        version: link:../colors
       '@qui-cli/core':
         specifier: workspace:*
         version: link:../core
@@ -958,6 +959,9 @@ importers:
 
   packages/shell:
     dependencies:
+      '@qui-cli/colors':
+        specifier: workspace:*
+        version: link:../colors
       ora:
         specifier: ^8.2.0
         version: 8.2.0
@@ -965,9 +969,6 @@ importers:
         specifier: ^0.10.0
         version: 0.10.0
     devDependencies:
-      '@qui-cli/colors':
-        specifier: workspace:*
-        version: link:../colors
       '@qui-cli/log':
         specifier: workspace:*
         version: link:../log
@@ -998,13 +999,13 @@ importers:
 
   packages/structured:
     dependencies:
+      '@qui-cli/colors':
+        specifier: workspace:*
+        version: link:../colors
       change-case:
         specifier: ^5.4.4
         version: 5.4.4
     devDependencies:
-      '@qui-cli/colors':
-        specifier: workspace:*
-        version: link:../colors
       '@qui-cli/core':
         specifier: workspace:*
         version: link:../core
@@ -1045,9 +1046,6 @@ importers:
         specifier: ^0.1.1
         version: 0.1.1
     devDependencies:
-      '@qui-cli/plugin':
-        specifier: workspace:*
-        version: link:../plugin
       '@qui-cli/root':
         specifier: workspace:*
         version: link:../root
@@ -4278,8 +4276,8 @@ packages:
     resolution: {integrity: sha512-xV2bxeN6F7oYjZWTe/YPAy6MN2M+sL4u/Rlm2AHCIVGfo2p1yGmBHQ6vHehl4bRTZBdHu3TSkWdYgkwpYzAGSw==}
     engines: {node: '>=0.10.0'}
 
-  monorepo-package-paths@0.4.0:
-    resolution: {integrity: sha512-AHUCfJzdhOzfBWS927Z4i1VaUoU7GyWqQcEfjZV4uVoFWFa3SXTurBjDblw1QVrtPHvm/pRlZRhmu+UpfA087w==}
+  monorepo-package-paths@0.4.1:
+    resolution: {integrity: sha512-+vIp6QJcfDZJOEZ5/jhCk+kiSEB7mcVb595fhww0KirypfN3HsTJdpa4JEODv6IaPmsmN+zrGPseHw17WXh+9A==}
     hasBin: true
     peerDependencies:
       prettier: ^3.0
@@ -9454,7 +9452,7 @@ snapshots:
 
   modify-values@1.0.1: {}
 
-  monorepo-package-paths@0.4.0(@types/node@24.10.0)(prettier@3.5.3):
+  monorepo-package-paths@0.4.1(@types/node@24.10.0)(prettier@3.5.3):
     dependencies:
       '@battis/import-package-json': 0.1.7
       '@battis/qui-cli.colors': 2.1.0(@battis/qui-cli.plugin@2.4.2)
