@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file. See [commit
 
 ## [4.0.3](https://github.com/battis/qui-cli/compare/qui-cli/4.0.2...qui-cli/4.0.3) (2025-11-04)
 
+### Features
+
+- **core@4.1.0** support scripting markdown documentation for commands ([03ee6d5](https://github.com/battis/qui-cli/commit/03ee6d55f86f6d7b45bd205896cb0fb6a21523b5))
+- **env@4.1.0**, **log@3.1.0** standardize on modules labeling the options that they add to the usage man page ([eba86cd](https://github.com/battis/qui-cli/commit/eba86cd8a22a93aa6b6f19a3979272d87fe59274))
+
 ## [4.0.2](https://github.com/battis/qui-cli/compare/qui-cli/4.0.1...qui-cli/4.0.2) (2025-08-04)
 
 ### Bug Fixes
