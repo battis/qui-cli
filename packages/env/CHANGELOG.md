@@ -4,52 +4,48 @@ All notable changes to this project will be documented in this file. See [commit
 
 ## [5.0.0](https://github.com/battis/qui-cli/compare/env/4.1.0...env/5.0.0) (2025-11-07)
 
-
 ### ⚠ BREAKING CHANGES
 
-* expose env-1password as a separate plugin
-* separate 1Password without requiring knowledge of module structure
-* no longer accepting 1Password service account token as environment variable
+- expose env-1password as a separate plugin
+- separate 1Password without requiring knowledge of module structure
+- no longer accepting 1Password service account token as environment variable
+- **plugin@4.0.0** auto-document default arg values
 
 ### Features
 
-* expose env-1password as a separate plugin ([90ecb79](https://github.com/battis/qui-cli/commit/90ecb7900b85ade45113fc5a5999f2a2ff87f580))
-
+- expose env-1password as a separate plugin ([90ecb79](https://github.com/battis/qui-cli/commit/90ecb7900b85ade45113fc5a5999f2a2ff87f580))
+- **plugin@4.0.0** auto-document default arg values ([e01e157](https://github.com/battis/qui-cli/commit/e01e157f06a3a801628ca79366e3f0060be2322e))
 
 ### Bug Fixes
 
-* no longer accepting 1Password service account token as environment variable ([db7ae6a](https://github.com/battis/qui-cli/commit/db7ae6ac615c51a9966f201c85a8388bf4ebd76a))
-* separate 1Password without requiring knowledge of module structure ([c21fe44](https://github.com/battis/qui-cli/commit/c21fe44d7d72d5d6bc4d092cb869164117378ab2))
+- no longer accepting 1Password service account token as environment variable ([db7ae6a](https://github.com/battis/qui-cli/commit/db7ae6ac615c51a9966f201c85a8388bf4ebd76a))
+- separate 1Password without requiring knowledge of module structure ([c21fe44](https://github.com/battis/qui-cli/commit/c21fe44d7d72d5d6bc4d092cb869164117378ab2))
 
 ## [4.1.0](https://github.com/battis/qui-cli/compare/env/4.0.1...env/4.1.0) (2025-11-04)
 
-
 ### Features
 
-* standardize on modules labeling the options that they add to the usage man page ([eba86cd](https://github.com/battis/qui-cli/commit/eba86cd8a22a93aa6b6f19a3979272d87fe59274))
+- standardize on modules labeling the options that they add to the usage man page ([eba86cd](https://github.com/battis/qui-cli/commit/eba86cd8a22a93aa6b6f19a3979272d87fe59274))
 
 ## [4.0.1](https://github.com/battis/qui-cli/compare/env/4.0.0...env/4.0.1) (2025-08-04)
 
-
 ### Bug Fixes
 
-* update lagging peer dependency specs ([30c0c27](https://github.com/battis/qui-cli/commit/30c0c279d4247a69a30efef8a7426442752cd9c0))
+- update lagging peer dependency specs ([30c0c27](https://github.com/battis/qui-cli/commit/30c0c279d4247a69a30efef8a7426442752cd9c0))
 
 ## [4.0.0](https://github.com/battis/qui-cli/compare/env/3.1.2...env/4.0.0) (2025-08-02)
 
-
 ### ⚠ BREAKING CHANGES
 
-* rename @battis/qui-cli.env --> @qui-cli/env
+- rename @battis/qui-cli.env --> @qui-cli/env
 
-* rename @battis/qui-cli.env --> @qui-cli/env ([0a90e32](https://github.com/battis/qui-cli/commit/0a90e32d401c46f7d26f7220ca3369a587d86ec6))
-
+- rename @battis/qui-cli.env --> @qui-cli/env ([0a90e32](https://github.com/battis/qui-cli/commit/0a90e32d401c46f7d26f7220ca3369a587d86ec6))
 
 ### Bug Fixes
 
-* update dependencies to renamed @qui-cli/colors ([ff80e86](https://github.com/battis/qui-cli/commit/ff80e8625ef98834afdf04e57bfedb1906834e2b))
-* update dependencies to renamed @qui-cli/plugin ([117ea85](https://github.com/battis/qui-cli/commit/117ea85256ec69c807c5b56293546d9c350fd43f))
-* update dependencies to renamed @qui-cli/root ([488daa7](https://github.com/battis/qui-cli/commit/488daa7a82730125481945b5eb8db960972ac225))
+- update dependencies to renamed @qui-cli/colors ([ff80e86](https://github.com/battis/qui-cli/commit/ff80e8625ef98834afdf04e57bfedb1906834e2b))
+- update dependencies to renamed @qui-cli/plugin ([117ea85](https://github.com/battis/qui-cli/commit/117ea85256ec69c807c5b56293546d9c350fd43f))
+- update dependencies to renamed @qui-cli/root ([488daa7](https://github.com/battis/qui-cli/commit/488daa7a82730125481945b5eb8db960972ac225))
 
 ## [3.1.2](https://github.com/battis/qui-cli/compare/env/3.1.1...env/3.1.2) (2025-07-31)
 
