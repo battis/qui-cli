@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [4.0.0](https://github.com/battis/qui-cli/compare/plugin/3.0.0...plugin/4.0.0) (2025-11-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* group arguments by plugin in usage
+* auto-document default arg values
+
+### revert
+
+* group arguments by plugin in usage ([ec3d4bf](https://github.com/battis/qui-cli/commit/ec3d4bf6ef9c59a6da3ede8603554d2dcd2581ad))
+
+
+### Features
+
+* auto-document default arg values ([e01e157](https://github.com/battis/qui-cli/commit/e01e157f06a3a801628ca79366e3f0060be2322e))
+
 ## [3.0.0](https://github.com/battis/qui-cli/compare/plugin/2.4.2...plugin/3.0.0) (2025-08-02)
 
 
