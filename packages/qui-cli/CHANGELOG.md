@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.0.1](https://github.com/battis/qui-cli/compare/qui-cli/5.0.0...qui-cli/5.0.1) (2025-11-08)
+
+### Bug Fixes
+
+- remove all ambiguity from peer dependencies ([ced3fac](https://github.com/battis/qui-cli/commit/ced3faced1bc340457ca43e3be11afa3933b6d72))
+
 ## [5.0.0](https://github.com/battis/qui-cli/compare/qui-cli/4.0.3...qui-cli/5.0.0) (2025-11-07)
 
 ### ⚠ BREAKING CHANGES
