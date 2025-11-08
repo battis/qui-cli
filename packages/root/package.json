@@ -1,6 +1,6 @@
 {
   "name": "@qui-cli/root",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "description": "@qui-cli Plugin: Identify the root of the current application",
   "homepage": "https://github.com/battis/qui-cli/tree/main/packages/root#readme",
   "repository": {

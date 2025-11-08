@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.0.4](https://github.com/battis/qui-cli/compare/root/3.0.3...root/3.0.4) (2025-11-08)
+
+
+### Bug Fixes
+
+* remove all ambiguity from peer dependencies ([ced3fac](https://github.com/battis/qui-cli/commit/ced3faced1bc340457ca43e3be11afa3933b6d72))
+
 ## [3.0.3](https://github.com/battis/qui-cli/compare/root/3.0.2...root/3.0.3) (2025-11-08)
 
 
