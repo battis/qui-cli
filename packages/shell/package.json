@@ -1,6 +1,6 @@
 {
   "name": "@qui-cli/shell",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "@qui-cli Plugin: Standardized shelljs wrapper",
   "homepage": "https://github.com/battis/qui-cli/tree/main/packages/shell#readme",
   "repository": {
