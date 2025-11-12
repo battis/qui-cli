@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [4.0.1](https://github.com/battis/qui-cli/compare/log/4.0.0...log/4.0.1) (2025-11-12)
+
+
+### Bug Fixes
+
+* boost standard headig back to level 1 ([cfb3065](https://github.com/battis/qui-cli/commit/cfb30657a3d719df60663d0a8e6aa6cf240740e9))
+
 ## [4.0.0](https://github.com/battis/qui-cli/compare/log/3.1.0...log/4.0.0) (2025-11-07)
 
 ### ⚠ BREAKING CHANGES
