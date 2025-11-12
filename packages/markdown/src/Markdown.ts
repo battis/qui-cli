@@ -10,6 +10,7 @@ export type Configuration = Plugin.Configuration & {
   outputPath?: string;
   fileName?: string;
   pre?: string;
+  headingLevelAdjustment?: number;
   post?: string;
   overwrite?: boolean;
 };
@@ -19,6 +20,7 @@ export const name = 'markdown';
 let outputPath = '.';
 let fileName = 'usage.md';
 let pre = '';
+let headingLevelAdjustment = 0;
 let post = '';
 let overwrite = false;
 
@@ -26,6 +28,10 @@ export function configure(config: Configuration = {}) {
   outputPath = Plugin.hydrate(config.outputPath, outputPath);
   fileName = Plugin.hydrate(config.fileName, fileName);
   pre = Plugin.hydrate(config.pre, pre);
+  headingLevelAdjustment = Plugin.hydrate(
+    config.headingLevelAdjustment,
+    headingLevelAdjustment
+  );
   post = Plugin.hydrate(config.post, post);
   overwrite = Plugin.hydrate(config.overwrite, overwrite);
 }
@@ -50,11 +56,29 @@ export async function run() {
   }
   fs.writeFileSync(
     outputPath,
-    `${pre.length ? `${pre}\n` : ''}${stripAnsi(Core.usageMarkdown())
+    `${pre.length ? `${pre}\n` : ''}${adjustHeadingLevel(
+      stripAnsi(Core.usageMarkdown())
+    )
       .replace('Usage:\n\n```', '## Usage:\n\n```bash')
       .replace(
-        '## `-h --help',
+        '#### `-h --help',
         '## Arguments\n\n#### `-h --help'
       )}${post.length ? `\n${post}` : ''}`
   );
+}
+
+function adjustHeadingLevel(usage: string) {
+  return usage
+    .split('\n')
+    .map((line) => {
+      const [, heading] = line.match(/^(#+) /) || [];
+      if (heading) {
+        return line.replace(
+          /^(#+)/,
+          '#'.repeat(heading.length + headingLevelAdjustment)
+        );
+      }
+      return line;
+    })
+    .join('\n');
 }

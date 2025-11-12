@@ -20,30 +20,30 @@ Demonstrate using `@qui-cli/markdown` to generate a README
 
 Get usage information
 
-# dev-readme options
+### dev-readme options
 
-## `-A --argle`
+#### `-A --argle`
 
 Sint ipsum aliquip veniam tempor occaecat.
 
-## `--bargle`
+#### `--bargle`
 
 Tempor minim anim exercitation aliquip. (Default: true, use --no-bargle to disable)
 
-## `--baz=<baz>`
+#### `--baz=<baz>`
 
 Reprehenderit consequat, veniam velit.
 
-## `-z<buzz> --buzz=<buzz>`
+#### `-z<buzz> --buzz=<buzz>`
 
 Aliquip sunt tempor nisi labore ad culpa. (Default: "Sit")
 
-## `--biz=<biz>`
+#### `--biz=<biz>`
 
-## `--pi=<n>`
+#### `--pi=<n>`
 
 Esse eiusmod exercitation nulla nostrud do velit id. (Default: 3.2)
 
-## `--a=<a>`
+#### `--a=<a>`
 
 Default: "foo", "bar", "baz" Can be set multiple times
