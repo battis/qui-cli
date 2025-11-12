@@ -13,7 +13,7 @@ export function options() {
   return {
     man: [
       {
-        level: 3,
+        level: 1,
         text: `${name} options`
       },
       {

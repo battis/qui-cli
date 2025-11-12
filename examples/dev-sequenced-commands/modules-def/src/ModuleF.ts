@@ -19,7 +19,7 @@ export function options(): Plugin.Options {
   return {
     man: [
       {
-        level: 3,
+        level: 1,
         text: `${name} options`
       }
     ],
