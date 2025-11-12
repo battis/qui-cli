@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.1.0](https://github.com/battis/qui-cli/compare/markdown/1.0.1...markdown/1.1.0) (2025-11-12)
+
+
+### Features
+
+* adjust heading level for Markdown prettiness ([88a651e](https://github.com/battis/qui-cli/commit/88a651e91a47b1b1b4814676c436c4845910c21a))
+
 ## [1.0.1](https://github.com/battis/qui-cli/compare/markdown/1.0.0...markdown/1.0.1) (2025-11-07)
 
 ### Bug Fixes
