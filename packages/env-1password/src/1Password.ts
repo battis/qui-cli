@@ -11,13 +11,13 @@ export type Configuration = Plugin.Configuration &
   Env.Configuration & {
     /** 1Password service account token */
     opToken?: string;
-    /** 1Password account to use (if signed into multiple) */
-    opAccount?: string;
     /**
      * Name or ID of the 1Password API Credential item storing the 1Password
      * service account token
      */
     opItem?: string;
+    /** 1Password account to use (if signed into multiple) */
+    opAccount?: string;
     /** @deprecated Use {@link opToken} */
     serviceAccountToken?: string;
   };
