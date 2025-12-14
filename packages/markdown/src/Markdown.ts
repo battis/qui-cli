@@ -7,11 +7,25 @@ import path from 'node:path';
 import stripAnsi from 'strip-ansi';
 
 export type Configuration = Plugin.Configuration & {
+  /**
+   * Path to which to write Markdown output file. If the path does not exist, it
+   * will be created. If the path does not have a file extension, it will be
+   * assumed to be a directory path (unless it exists as a file), see
+   * [`fileName`](#fileName).
+   */
   outputPath?: string;
+  /**
+   * Filename to use for output if `outputPath` is a path to a directory.
+   * Default: `"usage.md"`.
+   */
   fileName?: string;
+  /** Any Markdown text to prepend to the output. */
   pre?: string;
+  /** Amount to increment (or decrement) heading levels in the Markdown output. */
   headingLevelAdjustment?: number;
+  /** Any Markdown text to append to the output. */
   post?: string;
+  /** Whether or not to overwrite an existing file with output. Default: `false` */
   overwrite?: boolean;
 };
 
