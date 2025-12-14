@@ -1,4 +1,4 @@
-export type Result = any;
+export type Result = unknown;
 
 export type AccumulatedResults = Record<string, Result>;
 

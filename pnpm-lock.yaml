@@ -29,6 +29,9 @@ importers:
       '@examples/dev-command':
         specifier: workspace:*
         version: link:examples/dev-command
+      '@examples/dev-default-hooks':
+        specifier: workspace:*
+        version: link:examples/dev-default-hooks
       '@examples/dev-plugin-lifecycle':
         specifier: workspace:*
         version: link:examples/dev-plugin-lifecycle
@@ -118,6 +121,31 @@ importers:
       '@tsconfig/node20':
         specifier: ^20.1.6
         version: 20.1.6
+      del-cli:
+        specifier: ^6.0.0
+        version: 6.0.0
+      npm-run-all:
+        specifier: ^4.1.5
+        version: 4.1.5
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
+
+  examples/dev-default-hooks:
+    dependencies:
+      '@qui-cli/core':
+        specifier: workspace:*
+        version: link:../../packages/core
+      '@qui-cli/log':
+        specifier: workspace:*
+        version: link:../../packages/log
+      '@qui-cli/plugin':
+        specifier: workspace:*
+        version: link:../../packages/plugin
+    devDependencies:
+      '@tsconfig/node20':
+        specifier: ^20.1.6
+        version: 20.1.8
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0

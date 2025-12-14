@@ -1,7 +1,7 @@
 import { ConfigSetFromMetaSet, OptionsResults } from 'jackspeak';
-import * as Options from './Options.js';
+import * as Opt from './Opt.js';
 
-type FlattenConfigMetaSets<O extends Options.Options> =
+type FlattenConfigMetaSets<O extends Opt.Options> =
   // FIXME all options are getting typed `string | undefined`
   // Issue URL: https://github.com/battis/qui-cli/issues/39
   ConfigSetFromMetaSet<'number', false, Exclude<O['num'], undefined>> &
@@ -13,15 +13,15 @@ type FlattenConfigMetaSets<O extends Options.Options> =
     ConfigSetFromMetaSet<'boolean', true, Exclude<O['flagList'], undefined>> &
     Exclude<O['fields'], undefined>;
 
-export type Arguments<O extends Options.Options> = {
+export type Arguments<O extends Opt.Options> = {
   positionals: (string | undefined)[];
   values: OptionsResults<FlattenConfigMetaSets<O>>;
 };
 
-export type ExpectedArguments<H extends Options.Hook> = Arguments<
+export type ExpectedArguments<H extends Opt.Hook> = Arguments<
   Awaited<ReturnType<H>>
 >;
 
-export type Hook<O extends Options.Options = Options.Options> = (
+export type Hook<O extends Opt.Options = Opt.Options> = (
   args: Arguments<O>
 ) => void | Promise<void>;

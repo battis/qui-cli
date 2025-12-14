@@ -7,7 +7,6 @@ export const name = 'root';
 export type Configuration = Plugin.Configuration & {
   /** Base for resolving any relative file paths */
   root?: string;
-
   /**
    * Use `root` as the current working directory (default `true`) or path to an
    * alternate working directory (optionally relative to `root`)
@@ -15,21 +14,25 @@ export type Configuration = Plugin.Configuration & {
   cwd?: string | boolean;
 };
 
-let root: string = appRoot.toString();
-let cwd: string | boolean = true;
+const config: Configuration = {
+  root: appRoot.toString(),
+  cwd: true
+};
 
-export function path() {
-  return root;
+export function path(): string {
+  if (!config.root) {
+    throw new Error('Root is not defined.');
+  }
+  return config.root;
 }
 
-export function configure(config: Configuration = {}) {
-  root = Plugin.hydrate(config.root, root);
-  cwd = Plugin.hydrate(config.cwd, cwd);
-  if (cwd) {
-    if (typeof cwd === 'boolean') {
-      process.chdir(root);
+export function configure(proposal: Configuration = {}) {
+  Plugin.Conf.propose(config, proposal);
+  if (config.cwd && config.root) {
+    if (typeof config.cwd === 'boolean') {
+      process.chdir(config.root);
     } else {
-      process.chdir(nodePath.resolve(root, cwd));
+      process.chdir(nodePath.resolve(config.root, config.cwd));
     }
   }
 }

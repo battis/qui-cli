@@ -1,16 +1,16 @@
-import { Base as PluginConfiguration } from './Configuration.js';
-import { Arguments } from './Initialization.js';
-import { Options, documentDefaults } from './Options.js';
-import { Base as Plugin } from './Plugin.js';
-import { AccumulatedResults } from './Run.js';
+import * as Conf from './Conf.js';
+import * as Init from './Init.js';
+import * as Opt from './Opt.js';
+import * as Plugin from './Plugin.js';
+import * as Run from './Run.js';
 
-const plugins: Plugin[] = [];
+const plugins: Plugin.Base[] = [];
 
 export function registered() {
   return plugins;
 }
 
-export async function register(plugin: Plugin) {
+export async function register(plugin: Plugin.Base) {
   for (let i = 0; i < plugins.length; i++) {
     if (plugins[i].name === plugin.name) {
       if (plugins[i] !== plugin) {
@@ -25,7 +25,7 @@ export async function register(plugin: Plugin) {
     ...plugin,
     options: async () => {
       if (plugin.options) {
-        return documentDefaults(await plugin.options());
+        return Opt.documentDefaults(await plugin.options());
       } else {
         return {};
       }
@@ -40,7 +40,7 @@ export function reset() {
 }
 
 export type Configuration = {
-  [key: string]: PluginConfiguration;
+  [key: string]: Conf.Base;
 };
 
 export async function configure(config: Configuration = {}) {
@@ -51,7 +51,7 @@ export async function configure(config: Configuration = {}) {
   }
 }
 
-export async function init(args: Arguments<Options>) {
+export async function init(args: Init.Arguments<Opt.Options>) {
   for (const plugin of plugins) {
     if (plugin.init) {
       await plugin.init(args);
@@ -60,7 +60,7 @@ export async function init(args: Arguments<Options>) {
 }
 
 export async function run() {
-  const results: AccumulatedResults = {};
+  const results: Run.AccumulatedResults = {};
   for (const plugin of plugins) {
     if (plugin.run) {
       results[plugin.name] = await plugin.run(results);
