@@ -12,23 +12,23 @@ export type Configuration = Plugin.Configuration & {
 
 export const name = 'dev-env';
 
-let myOptParam: string | undefined = undefined;
+const config: Configuration = {};
 
 function logState(step: string) {
   Log.info(
     Log.syntaxColor({
       [step]: {
         'process.env.MY_PARAM': process.env.MY_ENV_PARAM || 'undefined',
-        myOptParam: myOptParam || 'undefined'
+        myOptParam: config.myOptParam || 'undefined'
       }
     })
   );
 }
 logState('plugin imported');
 
-export function configure(config: Configuration = {}, calledBy = 'hook') {
+export function configure(proposal: Configuration = {}, calledBy = 'hook') {
   logState(`configure() ${calledBy}`);
-  myOptParam = Plugin.hydrate(config.myOptParam, myOptParam);
+  Plugin.Conf.propose(config, proposal);
 }
 
 export function options(): Plugin.Options {
