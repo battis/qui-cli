@@ -12,7 +12,15 @@ type CommandLogEntry = {
 };
 
 export type Configuration = Plugin.Configuration & {
+  /**
+   * Whether or not to display the commands (rather than just their output) in
+   * the console, defaults to `false`.
+   */
   showCommands?: boolean;
+  /**
+   * Whether or not to show command output (and, potentially, commands
+   * themselves) in the console, defaults to `true`.
+   */
   silent?: boolean;
 };
 
