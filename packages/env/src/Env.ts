@@ -5,8 +5,18 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 export type Configuration = Plugin.Configuration & {
+  /**
+   * Optional root for calculating relative paths to `.env` files. If undefined,
+   * falls back to the path defined by
+   * [@qui-cli/root](https://www.npmjs.com/package/@qui-cli/root).
+   */
   root?: string;
+  /**
+   * Whether or not to load the `.env` file into `process.env` immediately.
+   * Defaults to `true`.
+   */
   load?: boolean;
+  /** Path to desired `.env` file relative to `root`. Defaults to `'.env'`; */
   path?: string;
 };
 
