@@ -29,12 +29,15 @@
     "dotenv": "^17.2.3"
   },
   "devDependencies": {
+    "@qui-cli/colors": "workspace:*",
     "@qui-cli/env": "workspace:*",
+    "@qui-cli/log": "workspace:*",
     "@qui-cli/plugin": "workspace:*",
     "@qui-cli/root": "workspace:*",
-    "@tsconfig/node20": "^20.1.6",
-    "@types/node": "^24.10.0",
-    "commit-and-tag-version": "^12.6.0",
+    "@qui-cli/shell": "workspace:*",
+    "@tsconfig/node20": "^20.1.8",
+    "@types/node": "^24.10.3",
+    "commit-and-tag-version": "^12.6.1",
     "del-cli": "^6.0.0",
     "npm-run-all": "^4.1.5",
     "typescript": "^5.9.3"
