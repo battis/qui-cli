@@ -62,18 +62,40 @@ Whether or not to load the `.env` file into `process.env` immediately. Defaults 
 
 Path to desired `.env` file relative to `root`. Defaults to `'.env'`;
 
+### `opToken`
+
+1Password service account token
+
+### `opItem`
+
+Name or ID of the 1Password API Credential item storing the 1Password service account token
+
+### `opAccount`
+
+1Password account to use (if signed into multiple)
+
 ## Options
 
-`Env` adds no user-configurable command line options.
+The configuration options `opToken`, `opItem`, and `opAccount` may all be passed as command-line options. For example:
+
+```sh
+example --opToken "$(op item get ServiceAccountToken)"
+```
+
+If the [1Password CLI tool](https://developer.1password.com/docs/cli) is installed, then `opItem` and `opAccount` can be used:
+
+```sh
+example --opItem ServiceAccountToken
+```
 
 ## Initialization
 
-`Env` requires no initialization
+`Env` loads the specified `.env` file into `process.env`. If 1Password secret references are found in the environment, those references are loaded into the `process.env` from the 1Password vault (if a service account token is provided).
 
 ## API
 
 ```ts
-import { Env } from '@qui-cli/env';
+import { Env } from '@qui-cli/env-1password';
 ```
 
 ### `Env.parse(file?)`
