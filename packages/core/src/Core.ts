@@ -8,9 +8,9 @@ export { Options } from '@qui-cli/plugin';
 export * from './Usage.js';
 
 export type Configuration = Plugin.Registrar.Configuration & {
-  /** @deprecated Use `jackspeak` property */
+  /** @deprecated Use {@link JackSpeak} core plugin */
   core?: JackSpeak.Configuration & {
-    /** @deprecated Use `Positional` plugin */
+    /** @deprecated Use {@link Positionals} core plugin */
     requirePositionals?: boolean | number;
   };
 };
