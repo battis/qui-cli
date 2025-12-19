@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.0.2](https://github.com/battis/qui-cli/compare/env/5.0.1...env/5.0.2) (2025-12-19)
+
+
+### Bug Fixes
+
+* increase accuracy of README ([94e2c4c](https://github.com/battis/qui-cli/commit/94e2c4c2f8d146715d19c7f36b6f8f1d0d8980f8))
+
 ## [5.0.1](https://github.com/battis/qui-cli/compare/env/5.0.0...env/5.0.1) (2025-11-08)
 
 ## [5.0.0](https://github.com/battis/qui-cli/compare/env/4.1.0...env/5.0.0) (2025-11-07)
