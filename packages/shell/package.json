@@ -31,7 +31,7 @@
   "devDependencies": {
     "@qui-cli/log": "workspace:*",
     "@qui-cli/plugin": "workspace:*",
-    "@tsconfig/node20": "^20.1.6",
+    "@tsconfig/node20": "^20.1.8",
     "@types/node": "^24.10.0",
     "@types/shelljs": "^0.8.17",
     "commit-and-tag-version": "^12.6.0",
