@@ -27,7 +27,7 @@
     "@qui-cli/colors": "workspace:*",
     "ora": "^8.2.0",
     "strip-ansi": "^7.1.2",
-    "winston": "^3.18.3"
+    "winston": "^3.19.0"
   },
   "devDependencies": {
     "@qui-cli/plugin": "workspace:*",
