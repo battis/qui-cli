@@ -39,6 +39,10 @@ Filename to use for output if `outputPath` is a path to a directory. Default: `"
 
 Any Markdown text to prepend to the output.
 
+### `headingLevelAdjustment`
+
+Amount to increment (or decrement) heading levels in the Markdown output.
+
 ### `post`
 
 Any Markdown text to append to the output.

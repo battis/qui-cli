@@ -10,10 +10,22 @@ import { CustomLevels, DefaultLevels } from './Levels.js';
 export { CustomLevels, DefaultLevels };
 
 export type Configuration = Plugin.Configuration & {
+  /** Optional path to log file (relative to `root`). */
   logFilePath?: string;
+  /** Log level to display via stdout/console, defaults to `'info'`; */
   stdoutLevel?: string;
+  /**
+   * Log level to write to log file (if `logFilePath` defined), defaults to
+   * `'all'`;
+   */
   fileLevel?: string;
+  /** Custom log levels to use, specified by `Log.CustomLevels` */
   levels?: CustomLevels;
+  /**
+   * Optional root to use as the base for relative `logFilePath`. If undefined,
+   * falls back to the path defined by
+   * [@qui-cli/root](https://www.npmjs.com/package/@qui-cli/root).
+   */
   root?: string;
 };
 
