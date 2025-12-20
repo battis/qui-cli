@@ -878,8 +878,8 @@ importers:
         version: link:../colors
     devDependencies:
       '@battis/typescript-tricks':
-        specifier: ^0.7.4
-        version: 0.7.4
+        specifier: ^0.7.5
+        version: 0.7.5
       '@inquirer/prompts':
         specifier: ^7.9.0
         version: 7.9.0(@types/node@24.10.0)
@@ -942,8 +942,8 @@ importers:
         version: 3.1.0
     devDependencies:
       '@battis/typescript-tricks':
-        specifier: ^0.7.4
-        version: 0.7.4
+        specifier: ^0.7.5
+        version: 0.7.5
       '@qui-cli/plugin':
         specifier: workspace:*
         version: link:../plugin
@@ -1187,8 +1187,8 @@ packages:
       '@battis/qui-cli.plugin': ^2.4
       '@battis/qui-cli.root': 2.x
 
-  '@battis/typescript-tricks@0.7.4':
-    resolution: {integrity: sha512-WCe6ShJCn1/KoIqqeyfjeYesM/RR/7woWSnRGzYrjgcG3DcGDvGpZY0nk4196oSNy1mE+98v8U/IIZTqIehEyg==}
+  '@battis/typescript-tricks@0.7.5':
+    resolution: {integrity: sha512-gHfkmTLQFoWn5kSDW5J13om0lh/64g6NLCk2HmlbRJOzRx+U5ekPHSLi7sGHiKo0EQrPR5LMcEE2VM3vbYikOg==}
 
   '@colors/colors@1.6.0':
     resolution: {integrity: sha512-Ir+AOibqzrIsL6ajt3Rz3LskB7OiMVHqltZmspbW/TJuTVuyOMirVqAkjfY6JISiLHgyNqicAC8AyHHGzNd/dA==}
@@ -3870,8 +3870,8 @@ packages:
     resolution: {integrity: sha512-POQXvpdL69+CluYsillJ7SUhKvytYjW9vG/GKpnf+xP8UWgYEM/RaMzHHofbALDiKbbP1W8UEYmgGl39WkPZsg==}
     engines: {'0': node >= 0.2.0}
 
-  jsox@1.2.124:
-    resolution: {integrity: sha512-KwptI8xUfOt7qJ+P+2utrJIEHTgDjXpBsDhPSM4GDq++4by+LX9nUFee97QfRloGcMh5iA9Ha/4UCVZl7zWzuA==}
+  jsox@1.2.125:
+    resolution: {integrity: sha512-HIf1uwublnXZsy7p3yHTrhzMzrLO6xKnqXytT9pEil5QxaXi8eyer7Is4luF5hYSV4kD3v03Y32FWoAeVYTghQ==}
     hasBin: true
 
   just-diff-apply@5.5.0:
@@ -5140,8 +5140,8 @@ packages:
   sprintf-js@1.0.3:
     resolution: {integrity: sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==}
 
-  sql-formatter@15.6.11:
-    resolution: {integrity: sha512-T2aqOqwpGNqDvKNLJqsIVPhEgDCEp795GeXZg7AqbDTHmaEDBBAy/rwBd8lxnlYEjFm/DI+AsD7dnmJNhlUSWw==}
+  sql-formatter@15.6.12:
+    resolution: {integrity: sha512-mkpF+RG402P66VMsnQkWewTRzDBWfu9iLbOfxaW/nAKOS/2A9MheQmcU5cmX0D0At9azrorZwpvcBRNNBozACQ==}
     hasBin: true
 
   ssri@10.0.6:
@@ -5832,7 +5832,7 @@ snapshots:
       email-validator: 2.0.4
       is-valid-path: 0.1.1
 
-  '@battis/typescript-tricks@0.7.4': {}
+  '@battis/typescript-tricks@0.7.5': {}
 
   '@colors/colors@1.6.0': {}
 
@@ -8929,7 +8929,7 @@ snapshots:
 
   jsonparse@1.3.1: {}
 
-  jsox@1.2.124: {}
+  jsox@1.2.125: {}
 
   just-diff-apply@5.5.0: {}
 
@@ -10174,10 +10174,10 @@ snapshots:
 
   prettier-plugin-sql@0.19.2(prettier@3.5.3):
     dependencies:
-      jsox: 1.2.124
+      jsox: 1.2.125
       node-sql-parser: 5.3.13
       prettier: 3.5.3
-      sql-formatter: 15.6.11
+      sql-formatter: 15.6.12
       tslib: 2.8.1
 
   prettier@3.5.3: {}
@@ -10572,7 +10572,7 @@ snapshots:
 
   sprintf-js@1.0.3: {}
 
-  sql-formatter@15.6.11:
+  sql-formatter@15.6.12:
     dependencies:
       argparse: 2.0.1
       nearley: 2.20.1
