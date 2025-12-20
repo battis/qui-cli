@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.1.1](https://github.com/battis/qui-cli/compare/colors/3.1.0...colors/3.1.1) (2025-12-19)
+
+
+### Bug Fixes
+
+* update README to include recently-added methods ([6b512f8](https://github.com/battis/qui-cli/commit/6b512f80ede6134efbfd38b3328a769300cf8400))
+
 ## [3.1.0](https://github.com/battis/qui-cli/compare/colors/3.0.1...colors/3.1.0) (2025-11-07)
 
 

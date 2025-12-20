@@ -569,7 +569,7 @@ importers:
     dependencies:
       '@inquirer/prompts':
         specifier: ^7.9.0
-        version: 7.9.0(@types/node@24.10.0)
+        version: 7.9.0(@types/node@25.0.1)
       '@qui-cli/qui-cli':
         specifier: workspace:*
         version: link:../../packages/qui-cli
@@ -723,24 +723,33 @@ importers:
         specifier: ^17.2.3
         version: 17.2.3
     devDependencies:
+      '@qui-cli/colors':
+        specifier: workspace:*
+        version: link:../colors
       '@qui-cli/env':
         specifier: workspace:*
         version: link:../env
+      '@qui-cli/log':
+        specifier: workspace:*
+        version: link:../log
       '@qui-cli/plugin':
         specifier: workspace:*
         version: link:../plugin
       '@qui-cli/root':
         specifier: workspace:*
         version: link:../root
+      '@qui-cli/shell':
+        specifier: workspace:*
+        version: link:../shell
       '@tsconfig/node20':
-        specifier: ^20.1.6
-        version: 20.1.6
+        specifier: ^20.1.8
+        version: 20.1.8
       '@types/node':
-        specifier: ^24.10.0
-        version: 24.10.0
+        specifier: ^24.10.3
+        version: 24.10.3
       commit-and-tag-version:
-        specifier: ^12.6.0
-        version: 12.6.0
+        specifier: ^12.6.1
+        version: 12.6.1
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -1508,8 +1517,8 @@ packages:
     resolution: {integrity: sha512-yL/sLrpmtDaFEiUj1osRP4TI2MDz1AddJL+jZ7KSqvBuliN4xqYY54IfdN8qD8Toa6g1iloph1fxQNkjOxrrpQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@eslint/eslintrc@3.3.1':
-    resolution: {integrity: sha512-gtF186CXhIl1p4pJNGZw8Yc6RlshoePRvE0X91oPGb3vZ8pM3qOS9W9NGPat9LziaBV7XrJWGylNQXkGcnM3IQ==}
+  '@eslint/eslintrc@3.3.3':
+    resolution: {integrity: sha512-Kr+LPIUVKz2qkx1HAMH8q1q6azbqBAsXJUxBl/ODDuVPX45Z9DfwB8tPjTi6nNZ8BuM3nbJxC5zCAg5elnBUTQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   '@eslint/js@9.32.0':
@@ -2020,6 +2029,9 @@ packages:
   '@tsconfig/node20@20.1.6':
     resolution: {integrity: sha512-sz+Hqx9zwZDpZIV871WSbUzSqNIsXzghZydypnfgzPKLltVJfkINfUeTct31n/tTSa9ZE1ZOfKdRre1uHHquYQ==}
 
+  '@tsconfig/node20@20.1.8':
+    resolution: {integrity: sha512-Em+IdPfByIzWRRpqWL4Z7ArLHZGxmc36BxE3jCz9nBFSm+5aLaPMZyjwu4yetvyKXeogWcxik4L1jB5JTWfw7A==}
+
   '@tufjs/canonical-json@2.0.0':
     resolution: {integrity: sha512-yVtV8zsdo8qFHe+/3kw81dSLyF7D576A5cCFCi4X7B39tWT7SekaEFUnvnWJHz+9qO7qJTah1JbrDjWKqFtdWA==}
     engines: {node: ^16.14.0 || >=18.0.0}
@@ -2063,6 +2075,12 @@ packages:
 
   '@types/node@24.10.0':
     resolution: {integrity: sha512-qzQZRBqkFsYyaSWXuEHc2WR9c0a0CXwiE5FWUvn7ZM+vdy1uZLfCunD38UzhuB7YN/J11ndbDBcTmOdxJo9Q7A==}
+
+  '@types/node@24.10.3':
+    resolution: {integrity: sha512-gqkrWUsS8hcm0r44yn7/xZeV1ERva/nLgrLxFRUGb7aoNMIJfZJ3AC261zDQuOAKC7MiXai1WCpYc48jAHoShQ==}
+
+  '@types/node@25.0.1':
+    resolution: {integrity: sha512-czWPzKIAXucn9PtsttxmumiQ9N0ok9FrBwgRWrwmVLlp86BrMExzvXRLFYRJ+Ex3g6yqj+KuaxfX1JTgV2lpfg==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -2519,6 +2537,11 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
+  commit-and-tag-version@12.6.1:
+    resolution: {integrity: sha512-QNwgDDrg44oFAiLwXChOGabeGlkuaEvD7lUbLYleWLmOVYqFidek0G6xUE1NbRtitkOrDx8fuFh8w17+nUCOYg==}
+    engines: {node: '>=18'}
+    hasBin: true
+
   common-ancestor-path@1.0.1:
     resolution: {integrity: sha512-L3sHRo1pXXEqX8VU28kfgUY+YGsk09hPqZiZmLacNib6XNTCM8ubYeT7ryXQw8asB1sKgcU5lkB7ONug08aB8w==}
 
@@ -2895,8 +2918,8 @@ packages:
   error-ex@1.3.4:
     resolution: {integrity: sha512-sqQamAnR14VgCr1A618A3sGrygcpK+HEbenA/HiEAkkUwcZIIB/tgWqHFxWgOyDh4nB4JCRimh79dR5Ywc9MDQ==}
 
-  es-abstract@1.24.0:
-    resolution: {integrity: sha512-WSzPgsdLtTcQwm4CROfS5ju2Wa1QQcVeT37jFjYzdFz1r9ahadC8B8/a4qxJxM+09F18iumCdRmlr96ZYkQvEg==}
+  es-abstract@1.24.1:
+    resolution: {integrity: sha512-zHXBLhP+QehSSbsS9Pt23Gg964240DPd6QCf8WpkqEXxQ7fhdZzYsocOr5u7apWonsS5EjZDmTF+/slGMyasvw==}
     engines: {node: '>= 0.4'}
 
   es-define-property@1.0.1:
@@ -3034,6 +3057,10 @@ packages:
 
   fast-uri@3.1.0:
     resolution: {integrity: sha512-iPeeDKJSWf4IEOasVVrknXpaBV0IApz/gp7S2bb7Z4Lljbl2MGJRqInZiUrQwV16cpzw/D3S5j5Julj/gT52AA==}
+
+  fast-xml-parser@5.3.3:
+    resolution: {integrity: sha512-2O3dkPAAC6JavuMm8+4+pgTk+5hoAs+CjZ+sWcQLkX9+/tHRuTkQh/Oaifr8qDmZ8iEHb771Ea6G8CdwkrgvYA==}
+    hasBin: true
 
   fastq@1.19.1:
     resolution: {integrity: sha512-GwLTyxkCXjXbxqIhTsMI2Nui8huMPtnxg7krajPJAjnEG/iiOS7i+zCtWGZR9G0NBKbXKh6X9m9UIsYX/N6vvQ==}
@@ -3810,6 +3837,10 @@ packages:
     resolution: {integrity: sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA==}
     hasBin: true
 
+  js-yaml@4.1.1:
+    resolution: {integrity: sha512-qQKT4zQxXl8lLwBtHMWwaTcGfFOZviOJet3Oy/xmGk2gZH677CJM9EvtfdSkgWcATZhj/55JZ0rmy3myCT5lsA==}
+    hasBin: true
+
   jsdom@25.0.1:
     resolution: {integrity: sha512-8i7LzZj7BF8uplX+ZyOlIz86V6TAsSs+np6m1kpW9u0JWi4z/1t+FzcK1aek+ybTnAC4KhBL4uXCNT0wcUIeCw==}
     engines: {node: '>=18'}
@@ -3867,8 +3898,8 @@ packages:
     resolution: {integrity: sha512-POQXvpdL69+CluYsillJ7SUhKvytYjW9vG/GKpnf+xP8UWgYEM/RaMzHHofbALDiKbbP1W8UEYmgGl39WkPZsg==}
     engines: {'0': node >= 0.2.0}
 
-  jsox@1.2.123:
-    resolution: {integrity: sha512-LYordXJ/0Q4G8pUE1Pvh4fkfGvZY7lRe4WIJKl0wr0rtFDVw9lcdNW95GH0DceJ6E9xh41zJNW0vreEz7xOxCw==}
+  jsox@1.2.124:
+    resolution: {integrity: sha512-KwptI8xUfOt7qJ+P+2utrJIEHTgDjXpBsDhPSM4GDq++4by+LX9nUFee97QfRloGcMh5iA9Ha/4UCVZl7zWzuA==}
     hasBin: true
 
   just-diff-apply@5.5.0:
@@ -4551,8 +4582,8 @@ packages:
     resolution: {integrity: sha512-/bjOqmgETBYB5BoEeGVea8dmvHb2m9GLy1E9W43yeyfP6QQCZGFNa+XRceJEuDB6zqr+gKpIAmlLebMpykw/MQ==}
     engines: {node: '>=10'}
 
-  p-map@7.0.3:
-    resolution: {integrity: sha512-VkndIv2fIB99swvQoA65bm+fsmt6UNdGeIB0oxBs+WhAhdh08QA04JXpI7rbB9r08/nkbysKoya9rtDERYOYMA==}
+  p-map@7.0.4:
+    resolution: {integrity: sha512-tkAQEw8ysMzmkhgw8k+1U/iPhWNhykKnSk4Rd5zLoPJCuJaGRPo6YposrZgaxHKzDHdDWWZvE/Sk7hsL2X/CpQ==}
     engines: {node: '>=18'}
 
   p-pipe@3.1.0:
@@ -5137,8 +5168,8 @@ packages:
   sprintf-js@1.0.3:
     resolution: {integrity: sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==}
 
-  sql-formatter@15.6.10:
-    resolution: {integrity: sha512-0bJOPQrRO/JkjQhiThVayq0hOKnI1tHI+2OTkmT7TGtc6kqS+V7kveeMzRW+RNQGxofmTmet9ILvztyuxv0cJQ==}
+  sql-formatter@15.6.11:
+    resolution: {integrity: sha512-T2aqOqwpGNqDvKNLJqsIVPhEgDCEp795GeXZg7AqbDTHmaEDBBAy/rwBd8lxnlYEjFm/DI+AsD7dnmJNhlUSWw==}
     hasBin: true
 
   ssri@10.0.6:
@@ -5228,6 +5259,9 @@ packages:
   strip-json-comments@3.1.1:
     resolution: {integrity: sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==}
     engines: {node: '>=8'}
+
+  strnum@2.1.2:
+    resolution: {integrity: sha512-l63NF9y/cLROq/yqKXSLtcMeeyOfnSQlfMSlzFt/K73oIaD8DGaQWd7Z34X9GPiKqP5rbSh84Hl4bOlLcjiSrQ==}
 
   success-symbol@0.1.0:
     resolution: {integrity: sha512-7S6uOTxPklNGxOSbDIg4KlVLBQw1UiGVyfCUYgYxrZUKRblUkmGj7r8xlfQoFudvqLv6Ap5gd76/IIFfI9JG2A==}
@@ -5659,6 +5693,11 @@ packages:
     engines: {node: '>= 14.6'}
     hasBin: true
 
+  yaml@2.8.2:
+    resolution: {integrity: sha512-mplynKqc1C2hTVYxd0PU2xQAc22TI1vShAYGksCCfxbn/dFwnHTNi1bvYsBTkhdUNtGIf5xNOg938rrSSYvS9A==}
+    engines: {node: '>= 14.6'}
+    hasBin: true
+
   yargs-parser@20.2.9:
     resolution: {integrity: sha512-y11nGElTIV+CT3Zv9t7VKl+Q3hTQoT9a1Qzezhhl6Rp21gJ/IVTW7Z3y9EWXhuUBC2Shnf+DX0antecpAwSP8w==}
     engines: {node: '>=10'}
@@ -6083,7 +6122,7 @@ snapshots:
     dependencies:
       '@types/json-schema': 7.0.15
 
-  '@eslint/eslintrc@3.3.1':
+  '@eslint/eslintrc@3.3.3':
     dependencies:
       ajv: 6.12.6
       debug: 4.4.3
@@ -6091,7 +6130,7 @@ snapshots:
       globals: 14.0.0
       ignore: 5.3.2
       import-fresh: 3.3.1
-      js-yaml: 4.1.0
+      js-yaml: 4.1.1
       minimatch: 3.1.2
       strip-json-comments: 3.1.1
     transitivePeerDependencies:
@@ -6152,12 +6191,29 @@ snapshots:
     optionalDependencies:
       '@types/node': 24.10.0
 
+  '@inquirer/checkbox@4.3.0(@types/node@25.0.1)':
+    dependencies:
+      '@inquirer/ansi': 1.0.1
+      '@inquirer/core': 10.3.0(@types/node@25.0.1)
+      '@inquirer/figures': 1.0.14
+      '@inquirer/type': 3.0.9(@types/node@25.0.1)
+      yoctocolors-cjs: 2.1.3
+    optionalDependencies:
+      '@types/node': 25.0.1
+
   '@inquirer/confirm@5.1.19(@types/node@24.10.0)':
     dependencies:
       '@inquirer/core': 10.3.0(@types/node@24.10.0)
       '@inquirer/type': 3.0.9(@types/node@24.10.0)
     optionalDependencies:
       '@types/node': 24.10.0
+
+  '@inquirer/confirm@5.1.19(@types/node@25.0.1)':
+    dependencies:
+      '@inquirer/core': 10.3.0(@types/node@25.0.1)
+      '@inquirer/type': 3.0.9(@types/node@25.0.1)
+    optionalDependencies:
+      '@types/node': 25.0.1
 
   '@inquirer/core@10.3.0(@types/node@24.10.0)':
     dependencies:
@@ -6172,6 +6228,19 @@ snapshots:
     optionalDependencies:
       '@types/node': 24.10.0
 
+  '@inquirer/core@10.3.0(@types/node@25.0.1)':
+    dependencies:
+      '@inquirer/ansi': 1.0.1
+      '@inquirer/figures': 1.0.14
+      '@inquirer/type': 3.0.9(@types/node@25.0.1)
+      cli-width: 4.1.0
+      mute-stream: 2.0.0
+      signal-exit: 4.1.0
+      wrap-ansi: 6.2.0
+      yoctocolors-cjs: 2.1.3
+    optionalDependencies:
+      '@types/node': 25.0.1
+
   '@inquirer/editor@4.2.21(@types/node@24.10.0)':
     dependencies:
       '@inquirer/core': 10.3.0(@types/node@24.10.0)
@@ -6179,6 +6248,14 @@ snapshots:
       '@inquirer/type': 3.0.9(@types/node@24.10.0)
     optionalDependencies:
       '@types/node': 24.10.0
+
+  '@inquirer/editor@4.2.21(@types/node@25.0.1)':
+    dependencies:
+      '@inquirer/core': 10.3.0(@types/node@25.0.1)
+      '@inquirer/external-editor': 1.0.2(@types/node@25.0.1)
+      '@inquirer/type': 3.0.9(@types/node@25.0.1)
+    optionalDependencies:
+      '@types/node': 25.0.1
 
   '@inquirer/expand@4.0.21(@types/node@24.10.0)':
     dependencies:
@@ -6188,12 +6265,27 @@ snapshots:
     optionalDependencies:
       '@types/node': 24.10.0
 
+  '@inquirer/expand@4.0.21(@types/node@25.0.1)':
+    dependencies:
+      '@inquirer/core': 10.3.0(@types/node@25.0.1)
+      '@inquirer/type': 3.0.9(@types/node@25.0.1)
+      yoctocolors-cjs: 2.1.3
+    optionalDependencies:
+      '@types/node': 25.0.1
+
   '@inquirer/external-editor@1.0.2(@types/node@24.10.0)':
     dependencies:
       chardet: 2.1.1
       iconv-lite: 0.7.0
     optionalDependencies:
       '@types/node': 24.10.0
+
+  '@inquirer/external-editor@1.0.2(@types/node@25.0.1)':
+    dependencies:
+      chardet: 2.1.1
+      iconv-lite: 0.7.0
+    optionalDependencies:
+      '@types/node': 25.0.1
 
   '@inquirer/figures@1.0.14': {}
 
@@ -6204,12 +6296,26 @@ snapshots:
     optionalDependencies:
       '@types/node': 24.10.0
 
+  '@inquirer/input@4.2.5(@types/node@25.0.1)':
+    dependencies:
+      '@inquirer/core': 10.3.0(@types/node@25.0.1)
+      '@inquirer/type': 3.0.9(@types/node@25.0.1)
+    optionalDependencies:
+      '@types/node': 25.0.1
+
   '@inquirer/number@3.0.21(@types/node@24.10.0)':
     dependencies:
       '@inquirer/core': 10.3.0(@types/node@24.10.0)
       '@inquirer/type': 3.0.9(@types/node@24.10.0)
     optionalDependencies:
       '@types/node': 24.10.0
+
+  '@inquirer/number@3.0.21(@types/node@25.0.1)':
+    dependencies:
+      '@inquirer/core': 10.3.0(@types/node@25.0.1)
+      '@inquirer/type': 3.0.9(@types/node@25.0.1)
+    optionalDependencies:
+      '@types/node': 25.0.1
 
   '@inquirer/password@4.0.21(@types/node@24.10.0)':
     dependencies:
@@ -6218,6 +6324,14 @@ snapshots:
       '@inquirer/type': 3.0.9(@types/node@24.10.0)
     optionalDependencies:
       '@types/node': 24.10.0
+
+  '@inquirer/password@4.0.21(@types/node@25.0.1)':
+    dependencies:
+      '@inquirer/ansi': 1.0.1
+      '@inquirer/core': 10.3.0(@types/node@25.0.1)
+      '@inquirer/type': 3.0.9(@types/node@25.0.1)
+    optionalDependencies:
+      '@types/node': 25.0.1
 
   '@inquirer/prompts@7.9.0(@types/node@24.10.0)':
     dependencies:
@@ -6234,6 +6348,21 @@ snapshots:
     optionalDependencies:
       '@types/node': 24.10.0
 
+  '@inquirer/prompts@7.9.0(@types/node@25.0.1)':
+    dependencies:
+      '@inquirer/checkbox': 4.3.0(@types/node@25.0.1)
+      '@inquirer/confirm': 5.1.19(@types/node@25.0.1)
+      '@inquirer/editor': 4.2.21(@types/node@25.0.1)
+      '@inquirer/expand': 4.0.21(@types/node@25.0.1)
+      '@inquirer/input': 4.2.5(@types/node@25.0.1)
+      '@inquirer/number': 3.0.21(@types/node@25.0.1)
+      '@inquirer/password': 4.0.21(@types/node@25.0.1)
+      '@inquirer/rawlist': 4.1.9(@types/node@25.0.1)
+      '@inquirer/search': 3.2.0(@types/node@25.0.1)
+      '@inquirer/select': 4.4.0(@types/node@25.0.1)
+    optionalDependencies:
+      '@types/node': 25.0.1
+
   '@inquirer/rawlist@4.1.9(@types/node@24.10.0)':
     dependencies:
       '@inquirer/core': 10.3.0(@types/node@24.10.0)
@@ -6241,6 +6370,14 @@ snapshots:
       yoctocolors-cjs: 2.1.3
     optionalDependencies:
       '@types/node': 24.10.0
+
+  '@inquirer/rawlist@4.1.9(@types/node@25.0.1)':
+    dependencies:
+      '@inquirer/core': 10.3.0(@types/node@25.0.1)
+      '@inquirer/type': 3.0.9(@types/node@25.0.1)
+      yoctocolors-cjs: 2.1.3
+    optionalDependencies:
+      '@types/node': 25.0.1
 
   '@inquirer/search@3.2.0(@types/node@24.10.0)':
     dependencies:
@@ -6250,6 +6387,15 @@ snapshots:
       yoctocolors-cjs: 2.1.3
     optionalDependencies:
       '@types/node': 24.10.0
+
+  '@inquirer/search@3.2.0(@types/node@25.0.1)':
+    dependencies:
+      '@inquirer/core': 10.3.0(@types/node@25.0.1)
+      '@inquirer/figures': 1.0.14
+      '@inquirer/type': 3.0.9(@types/node@25.0.1)
+      yoctocolors-cjs: 2.1.3
+    optionalDependencies:
+      '@types/node': 25.0.1
 
   '@inquirer/select@4.4.0(@types/node@24.10.0)':
     dependencies:
@@ -6261,9 +6407,23 @@ snapshots:
     optionalDependencies:
       '@types/node': 24.10.0
 
+  '@inquirer/select@4.4.0(@types/node@25.0.1)':
+    dependencies:
+      '@inquirer/ansi': 1.0.1
+      '@inquirer/core': 10.3.0(@types/node@25.0.1)
+      '@inquirer/figures': 1.0.14
+      '@inquirer/type': 3.0.9(@types/node@25.0.1)
+      yoctocolors-cjs: 2.1.3
+    optionalDependencies:
+      '@types/node': 25.0.1
+
   '@inquirer/type@3.0.9(@types/node@24.10.0)':
     optionalDependencies:
       '@types/node': 24.10.0
+
+  '@inquirer/type@3.0.9(@types/node@25.0.1)':
+    optionalDependencies:
+      '@types/node': 25.0.1
 
   '@isaacs/balanced-match@4.0.1': {}
 
@@ -6749,6 +6909,8 @@ snapshots:
 
   '@tsconfig/node20@20.1.6': {}
 
+  '@tsconfig/node20@20.1.8': {}
+
   '@tufjs/canonical-json@2.0.0': {}
 
   '@tufjs/models@2.0.1':
@@ -6762,7 +6924,7 @@ snapshots:
 
   '@types/cli-progress@3.11.6':
     dependencies:
-      '@types/node': 24.10.0
+      '@types/node': 25.0.1
 
   '@types/conventional-commits-parser@5.0.2':
     dependencies:
@@ -6789,6 +6951,14 @@ snapshots:
   '@types/ms@2.1.0': {}
 
   '@types/node@24.10.0':
+    dependencies:
+      undici-types: 7.16.0
+
+  '@types/node@24.10.3':
+    dependencies:
+      undici-types: 7.16.0
+
+  '@types/node@25.0.1':
     dependencies:
       undici-types: 7.16.0
 
@@ -7005,7 +7175,7 @@ snapshots:
       array-buffer-byte-length: 1.0.2
       call-bind: 1.0.8
       define-properties: 1.2.1
-      es-abstract: 1.24.0
+      es-abstract: 1.24.1
       es-errors: 1.3.0
       get-intrinsic: 1.3.0
       is-array-buffer: 3.0.5
@@ -7272,6 +7442,24 @@ snapshots:
       - canvas
       - supports-color
       - utf-8-validate
+
+  commit-and-tag-version@12.6.1:
+    dependencies:
+      chalk: 2.4.2
+      conventional-changelog: 4.0.0
+      conventional-changelog-config-spec: 2.1.0
+      conventional-changelog-conventionalcommits: 6.1.0
+      conventional-recommended-bump: 7.0.1
+      detect-indent: 6.1.0
+      detect-newline: 3.1.0
+      dotgitignore: 2.1.0
+      fast-xml-parser: 5.3.3
+      figures: 3.2.0
+      find-up: 5.0.0
+      git-semver-tags: 5.0.1
+      semver: 7.7.3
+      yaml: 2.8.2
+      yargs: 17.7.2
 
   common-ancestor-path@1.0.1: {}
 
@@ -7553,7 +7741,7 @@ snapshots:
       is-glob: 4.0.3
       is-path-cwd: 3.0.0
       is-path-inside: 4.0.0
-      p-map: 7.0.3
+      p-map: 7.0.4
       presentable-error: 0.0.1
       slash: 5.1.0
 
@@ -7665,7 +7853,7 @@ snapshots:
     dependencies:
       is-arrayish: 0.2.1
 
-  es-abstract@1.24.0:
+  es-abstract@1.24.1:
     dependencies:
       array-buffer-byte-length: 1.0.2
       arraybuffer.prototype.slice: 1.0.4
@@ -7804,7 +7992,7 @@ snapshots:
       '@eslint/config-array': 0.21.1
       '@eslint/config-helpers': 0.3.1
       '@eslint/core': 0.15.2
-      '@eslint/eslintrc': 3.3.1
+      '@eslint/eslintrc': 3.3.3
       '@eslint/js': 9.32.0
       '@eslint/plugin-kit': 0.3.5
       '@humanfs/node': 0.16.7
@@ -7910,6 +8098,10 @@ snapshots:
   fast-levenshtein@2.0.6: {}
 
   fast-uri@3.1.0: {}
+
+  fast-xml-parser@5.3.3:
+    dependencies:
+      strnum: 2.1.2
 
   fastq@1.19.1:
     dependencies:
@@ -8701,6 +8893,10 @@ snapshots:
     dependencies:
       argparse: 2.0.1
 
+  js-yaml@4.1.1:
+    dependencies:
+      argparse: 2.0.1
+
   jsdom@25.0.1:
     dependencies:
       cssstyle: 4.6.0
@@ -8761,7 +8957,7 @@ snapshots:
 
   jsonparse@1.3.1: {}
 
-  jsox@1.2.123: {}
+  jsox@1.2.124: {}
 
   just-diff-apply@5.5.0: {}
 
@@ -9832,7 +10028,7 @@ snapshots:
     dependencies:
       aggregate-error: 3.1.0
 
-  p-map@7.0.3: {}
+  p-map@7.0.4: {}
 
   p-pipe@3.1.0: {}
 
@@ -10006,10 +10202,10 @@ snapshots:
 
   prettier-plugin-sql@0.19.2(prettier@3.5.3):
     dependencies:
-      jsox: 1.2.123
+      jsox: 1.2.124
       node-sql-parser: 5.3.13
       prettier: 3.5.3
-      sql-formatter: 15.6.10
+      sql-formatter: 15.6.11
       tslib: 2.8.1
 
   prettier@3.5.3: {}
@@ -10127,7 +10323,7 @@ snapshots:
     dependencies:
       call-bind: 1.0.8
       define-properties: 1.2.1
-      es-abstract: 1.24.0
+      es-abstract: 1.24.1
       es-errors: 1.3.0
       es-object-atoms: 1.1.1
       get-intrinsic: 1.3.0
@@ -10404,7 +10600,7 @@ snapshots:
 
   sprintf-js@1.0.3: {}
 
-  sql-formatter@15.6.10:
+  sql-formatter@15.6.11:
     dependencies:
       argparse: 2.0.1
       nearley: 2.20.1
@@ -10444,7 +10640,7 @@ snapshots:
     dependencies:
       call-bind: 1.0.8
       define-properties: 1.2.1
-      es-abstract: 1.24.0
+      es-abstract: 1.24.1
       es-object-atoms: 1.1.1
 
   string.prototype.trim@1.2.10:
@@ -10453,7 +10649,7 @@ snapshots:
       call-bound: 1.0.4
       define-data-property: 1.1.4
       define-properties: 1.2.1
-      es-abstract: 1.24.0
+      es-abstract: 1.24.1
       es-object-atoms: 1.1.1
       has-property-descriptors: 1.0.2
 
@@ -10506,6 +10702,8 @@ snapshots:
       min-indent: 1.0.1
 
   strip-json-comments@3.1.1: {}
+
+  strnum@2.1.2: {}
 
   success-symbol@0.1.0: {}
 
@@ -10962,6 +11160,8 @@ snapshots:
   yallist@4.0.0: {}
 
   yaml@2.8.1: {}
+
+  yaml@2.8.2: {}
 
   yargs-parser@20.2.9: {}
 

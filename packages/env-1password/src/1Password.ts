@@ -1,11 +1,24 @@
 import { Client, createClient, Item } from '@1password/sdk';
 import { importLocal } from '@battis/import-package-json';
+import { Colors } from '@qui-cli/colors';
 import { Env } from '@qui-cli/env';
+import { Log } from '@qui-cli/log';
 import * as Plugin from '@qui-cli/plugin';
+import { Shell } from '@qui-cli/shell';
 import path from 'node:path';
 
 export type Configuration = Plugin.Configuration &
   Env.Configuration & {
+    /** 1Password service account token */
+    opToken?: string;
+    /**
+     * Name or ID of the 1Password API Credential item storing the 1Password
+     * service account token
+     */
+    opItem?: string;
+    /** 1Password account to use (if signed into multiple) */
+    opAccount?: string;
+    /** @deprecated Use {@link opToken} */
     serviceAccountToken?: string;
   };
 
@@ -13,23 +26,44 @@ export const name = 'env-1password';
 
 let client: Client | undefined = undefined;
 
-export async function configure(config: Configuration = {}) {
-  const { serviceAccountToken, load = true, ...rest } = config;
-  await Env.configure({ ...rest, load: false });
-  const auth = serviceAccountToken;
-  if (auth) {
+const config: Configuration = {};
+
+export async function configure(proposal: Configuration = {}) {
+  for (const key in proposal) {
+    if (proposal[key] !== undefined) {
+      config[key] = proposal[key];
+    }
+  }
+  config.opToken = config.opToken || config.serviceAccountToken;
+  await Env.configure({ ...config, load: false });
+  if (config.opItem && !config.opToken) {
+    const silent = Shell.isSilent();
+    const showCommands = Shell.commandsShown();
+    Shell.configure({ silent: true, showCommands: false });
+    const { stdout, stderr } = Shell.exec(
+      `op item get ${config.opAccount ? `--account "${config.opAccount}" ` : ''}--reveal "${config.opItem}"`
+    );
+    if (stdout.length) {
+      config.opToken = stdout;
+    } else {
+      Log.fatal(stderr);
+      process.exit(1);
+    }
+    Shell.configure({ silent, showCommands });
+  }
+  if (config.opToken) {
     const pkg = await importLocal(
       path.join(import.meta.dirname, '../package.json')
     );
     client = await createClient({
-      auth,
+      auth: config.opToken,
       integrationName: pkg.name!.replace(/^(\/|@)/, '').replace(/[/@]+/g, '-'),
       integrationVersion: pkg.version!
     });
-    if (load) {
+    if (config.load) {
       await parse();
     }
-  } else if (load) {
+  } else if (config.load) {
     await Env.parse();
   }
 }
@@ -39,13 +73,44 @@ export function options(): Plugin.Options {
     man: [
       {
         level: 1,
-        text: '1Password integration'
-      }
+        text: '1Password environment integration'
+      },
+      {
+        text: 'Store 1Password secret references in your environment, rather than the actual secrets.'
+      },
+      {
+        text: `If 1Password secret references are stored in the environment, a 1Password service account token is required to access the secret values, which will be loaded into ${Colors.value(
+          'process.env'
+        )}. The service account token can be passed directly as the ${Colors.optionArg(
+          '--opToken'
+        )} argument (e.g. ${Colors.command(
+          `${Colors.keyword('example')} --opToken "(${Colors.keyword(
+            'op'
+          )} item get SERVICE_ACCOUNT_TOKEN)"`
+        )}) or, if the 1Password CLI tool is also installed, by simply passing the name or ID of the API Credential in your 1Password vault that holds the service account token (e.g. ${Colors.command(`${Colors.keyword('example')} --opItem SERVICE_ACCOUNT_TOKEN`)}). If you are signed into multiple 1Password account, use the ${Colors.optionArg('--opAccount')} argument to specify the account containing the token.`
+      },
+      { text: Colors.url('https://developer.1password.com/docs/cli') }
     ],
     opt: {
+      opAccount: {
+        description: `1Password account to use (if signed into multiple)`,
+        hint: 'example.1password.com',
+        default: config.opAccount
+      },
+      opItem: {
+        description: `Name or ID of the 1Password API Credential item storing the 1Password service account token`,
+        default: config.opItem
+      },
+      opToken: {
+        description: `1Password service account token`,
+        secret: true,
+        default: config.opToken || config.serviceAccountToken
+      },
       serviceAccountToken: {
-        description: `1Password service account token (required if any secret references are present in the environment)`,
-        secret: true
+        description: `1Password service account token`,
+        hint: 'Deprecated',
+        secret: true,
+        default: config.serviceAccountToken
       }
     }
   };

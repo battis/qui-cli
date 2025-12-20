@@ -61,7 +61,7 @@ Path to desired `.env` file relative to `root`. Defaults to `'.env'`;
 
 ## Initialization
 
-`Env` requires no initialization
+`Env` loads the specified `.env` file into `process.env`.
 
 ## API
 

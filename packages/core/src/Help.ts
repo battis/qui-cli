@@ -2,6 +2,7 @@ import * as Plugin from '@qui-cli/plugin';
 import * as Core from './Core.js';
 
 export type Configuration = Plugin.Configuration & {
+  /** Get usage information */
   help?: boolean;
 };
 

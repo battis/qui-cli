@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.0.1](https://github.com/battis/qui-cli/compare/core/5.0.0...core/5.0.1) (2025-12-19)
+
+
+### Bug Fixes
+
+* update documentation to reflect current core plugin model ([dbb3f26](https://github.com/battis/qui-cli/commit/dbb3f269d3dc3996c1d7050eb3a1acfdd08ab640))
+
 ## [5.0.0](https://github.com/battis/qui-cli/compare/core/4.1.0...core/5.0.0) (2025-11-07)
 
 ### ⚠ BREAKING CHANGES
