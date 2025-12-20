@@ -35,7 +35,7 @@
     "@qui-cli/structured": "workspace:*"
   },
   "devDependencies": {
-    "@tsconfig/node20": "^20.1.6",
+    "@tsconfig/node20": "^20.1.8",
     "del-cli": "^6.0.0",
     "npm-run-all": "^4.1.5",
     "typescript": "^5.9.3"
