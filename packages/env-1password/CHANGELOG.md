@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.1.0](https://github.com/battis/qui-cli/compare/env-1password/1.0.5...env-1password/1.1.0) (2025-12-19)
+
+
+### Features
+
+* opAccount and opToken args for env-1password (if 1Password CLI present) ([c107a88](https://github.com/battis/qui-cli/commit/c107a884d661e324e46c1bfd2d561934f5694de6))
+
 ## [1.0.5](https://github.com/battis/qui-cli/compare/env-1password/1.0.4...env-1password/1.0.5) (2025-11-12)
 
 

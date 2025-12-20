@@ -44,19 +44,29 @@ See [examples](https://github.com/battis/qui-cli/tree/main/examples#readme) for 
 
 Three core plugins are registered automatically to provide consistent functionality.
 
-### `jackspeak`
+### `JackSpeak`
 
-Manages any custom [jackspeak](https://www.npmjs.com/package/jackspeak#user-content-jackoptions-jackoptions----jack) options. As with any other plugin, it can be configured via `Core.configure()`:
+Manages any custom [jackspeak](https://www.npmjs.com/package/jackspeak#user-content-jackoptions-jackoptions----jack) options. As with any other plugin, it can be configured via `configure()`:
 
 ```ts
-await Core.configure({
-  jackspeak: {
-    envPrefix: 'MY_APP'
+import { Core, JackSpeak } from '@qui-cli/core';
+
+await JackSpeak.configure({
+  envPrefix: 'MY_APP'
+});
+
+await Core.init({
+  foo: {
+    description: 'bar'
   }
 });
+
+await Core.run();
+
+console.log(process.env.MY_APP_FOO);
 ```
 
-### `positionals`
+### `Positionals`
 
 Provides per-plugin positonal argument management and documentation. Individual plugins can require named positional arguments, which are collected and documented by `usage()` and accessible throgh the `Positionals` plugin.
 
@@ -97,7 +107,7 @@ Positionals.setMinArg(6);
 Positionals.setMaxArg(4);
 ```
 
-### `help`
+### `Help`
 
 Provides consistent `--help` (`-h`) flag for all commands that displays usage. No confiuration.
 

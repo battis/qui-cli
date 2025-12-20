@@ -3,15 +3,20 @@ import * as Plugin from '@qui-cli/plugin';
 import wrapAnsi from 'wrap-ansi';
 
 type PositionalConfig = {
+  /** Description of the purpose of the positional argument */
   description?: string;
+  /** Hint about the value of the positional argument */
   hint?: string;
+  /** Must return true for the argument to be accepted */
   validate?: (v?: string) => boolean | string;
 };
 
 type PositionalConfigSet = Record<string, PositionalConfig>;
 
 export type Configuration = Plugin.Configuration & {
+  /** Minimum number of accepted positional arguments */
   min?: number;
+  /** Maximum number of accepted positional arguments */
   max?: number;
 };
 

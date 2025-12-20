@@ -34,7 +34,7 @@ console.log(
 
 `Colors` requires no initialization
 
-## API
+## API: `console.log` styles
 
 ### `value(text)`
 
@@ -46,15 +46,21 @@ A quoted value (e.g. `"hello world"`). Quotation marks should be included in the
 
 ### `regexpValue(text)`
 
-A regular expression value (e/g `/.*/`). Expression delimiters (`/`) should be included in the `text` argument.
+A regular expression value (e/g `/.+/`). Expression delimiters (`/`) should be included in the `text` argument.
 
 ### `url(text)`
 
 A URL value (e.g. `https://example.com` or `./path/to/file`).
 
+### `path(text)`
+
+A file or URL path (e.g. `../../path/to/file`).
+
 ### `error(text)`
 
 An error message (e.g. `Bad things happened!`).
+
+## API: Node styles
 
 ### `command(text)`
 
@@ -67,3 +73,23 @@ A keyword (e.g. a shell command), as in:
 ```ts
 console.log(Colors.command(`${Colors.keyword('echo')} "hello world"`));
 ```
+
+## API: man page styles
+
+### `optionArg(text)`
+
+The name of an option argument (e.g. `--my-fancy-option`), as in:
+
+```ts
+console.log(
+  `${Colors.optionArg('--my-fancy-option')} ${Colors.quotedValue('"pinkies out"')}`
+);
+```
+
+### `flagArg(text)`
+
+The name of a flag argument (e.g. `--no-errors-please`).
+
+### `positionalArg(text)`
+
+The name of a positional argument (e.g. `arg0`).
