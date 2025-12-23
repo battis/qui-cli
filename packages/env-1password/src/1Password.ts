@@ -90,7 +90,7 @@ export function options(): Plugin.Options {
         )}. The service account token can be passed directly as the ${Colors.optionArg(
           '--opToken'
         )} argument (e.g. ${Colors.command(
-          `${Colors.keyword('example')} --opToken "(${Colors.keyword(
+          `${Colors.keyword('example')} --opToken "$(${Colors.keyword(
             'op'
           )} item get myToken)"`
         )}) or, if the 1Password CLI tool is also installed, by simply passing the name or ID of the API Credential in your 1Password vault that holds the service account token (e.g. ${Colors.command(
