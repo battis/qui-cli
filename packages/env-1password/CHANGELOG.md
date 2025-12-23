@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2.0](https://github.com/battis/qui-cli/compare/env-1password/1.1.0...env-1password/1.2.0) (2025-12-23)
+
+
+### Features
+
+* load 1Password credentials from environment ([d5de5ae](https://github.com/battis/qui-cli/commit/d5de5aeeddc75364cde33621efc60bf3fbb36ad8))
+
+
+### Bug Fixes
+
+* successfully use `op item get` to look up service account token ([07cdaff](https://github.com/battis/qui-cli/commit/07cdaffda9a4ab39b95ad1f482596a46481f754e))
+
 ## [1.1.0](https://github.com/battis/qui-cli/compare/env-1password/1.0.5...env-1password/1.1.0) (2025-12-19)
 
 
