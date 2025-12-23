@@ -9,14 +9,20 @@ import path from 'node:path';
 
 export type Configuration = Plugin.Configuration &
   Env.Configuration & {
-    /** 1Password service account token */
+    /**
+     * 1Password service account token; will use the environment variable
+     * OP_TOKEN if present
+     */
     opToken?: string;
     /**
      * Name or ID of the 1Password API Credential item storing the 1Password
-     * service account token
+     * service account token; will use environment variable OP_ITEM if present
      */
     opItem?: string;
-    /** 1Password account to use (if signed into multiple) */
+    /**
+     * 1Password account to use (if signed into multiple); will use environment
+     * variable OP_ACCOUNT if present
+     */
     opAccount?: string;
     /** @deprecated Use {@link opToken} */
     serviceAccountToken?: string;
@@ -86,23 +92,29 @@ export function options(): Plugin.Options {
         )} argument (e.g. ${Colors.command(
           `${Colors.keyword('example')} --opToken "(${Colors.keyword(
             'op'
-          )} item get SERVICE_ACCOUNT_TOKEN)"`
-        )}) or, if the 1Password CLI tool is also installed, by simply passing the name or ID of the API Credential in your 1Password vault that holds the service account token (e.g. ${Colors.command(`${Colors.keyword('example')} --opItem SERVICE_ACCOUNT_TOKEN`)}). If you are signed into multiple 1Password account, use the ${Colors.optionArg('--opAccount')} argument to specify the account containing the token.`
+          )} item get myToken)"`
+        )}) or, if the 1Password CLI tool is also installed, by simply passing the name or ID of the API Credential in your 1Password vault that holds the service account token (e.g. ${Colors.command(
+          `${Colors.keyword('example')} --opItem myToken`
+        )}). If you are signed into multiple 1Password account, use the ${Colors.optionArg(
+          '--opAccount'
+        )} argument to specify the account containing the token.`
       },
       { text: Colors.url('https://developer.1password.com/docs/cli') }
     ],
     opt: {
       opAccount: {
-        description: `1Password account to use (if signed into multiple)`,
+        description: `1Password account to use (if signed into multiple); will use environment variable ${Colors.varName('OP_ACCOUNT')} if present`,
         hint: 'example.1password.com',
         default: config.opAccount
       },
       opItem: {
-        description: `Name or ID of the 1Password API Credential item storing the 1Password service account token`,
+        description: `Name or ID of the 1Password API Credential item storing the 1Password service account token; will use environmen variable ${Colors.varName('OP_ITEM')} if present`,
+        hint: '1Password unique identifier',
         default: config.opItem
       },
       opToken: {
-        description: `1Password service account token`,
+        description: `1Password service account token; will use environment variable ${Colors.varName('OP_TOKEN')} if present`,
+        hint: 'token value',
         secret: true,
         default: config.opToken || config.serviceAccountToken
       },
@@ -119,7 +131,12 @@ export function options(): Plugin.Options {
 export async function init({
   values
 }: Plugin.ExpectedArguments<typeof options>) {
-  await configure(values);
+  const {
+    opAccount = process.env.OP_ACCOUNT,
+    opItem = process.env.OP_ITEM,
+    opToken = process.env.OP_TOKEN
+  } = values;
+  await configure({ opAccount, opItem, opToken, ...values });
   parse();
 }
 
