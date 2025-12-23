@@ -107,8 +107,8 @@ export function options(): Plugin.Options {
         default: config.opToken || config.serviceAccountToken
       },
       serviceAccountToken: {
-        description: `1Password service account token`,
-        hint: 'Deprecated',
+        description: `1Password service account token (deprecated, use ${Colors.optionArg('--opToken')})`,
+        hint: 'token value',
         secret: true,
         default: config.serviceAccountToken
       }
