@@ -41,10 +41,10 @@ export async function configure(proposal: Configuration = {}) {
     const showCommands = Shell.commandsShown();
     Shell.configure({ silent: true, showCommands: false });
     const { stdout, stderr } = Shell.exec(
-      `op item get ${config.opAccount ? `--account "${config.opAccount}" ` : ''}--reveal "${config.opItem}"`
+      `op item get ${config.opAccount ? `--account "${config.opAccount}" ` : ''}--reveal --fields credential "${config.opItem}"`
     );
     if (stdout.length) {
-      config.opToken = stdout;
+      config.opToken = stdout.trim();
     } else {
       Log.fatal(stderr);
       process.exit(1);
