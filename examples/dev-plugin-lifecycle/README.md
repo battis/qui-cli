@@ -5,7 +5,7 @@ Demonstrate order in which plugin hooks are called (and the state of environment
 ## Notes
 
 - Demonstrates the when the environment variables are loaded from .env files in the plugin lifecycle
-- Too load the .env files early, `await Env.parse()` (or `await OP.parse()` if using the [1Password implementation](../dev-1password-env#readme))
+- Too load the .env files early, `await Env.parse()` (or `await OP.parse()` if using the [1Password implementation](../dev-env-1password#readme))
 
 ## Expected Output
 

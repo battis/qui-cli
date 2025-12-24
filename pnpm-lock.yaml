@@ -23,12 +23,12 @@ importers:
       '@commitlint/config-pnpm-scopes':
         specifier: ^19.9.1
         version: 19.9.1
-      '@examples/dev-1password-env':
-        specifier: workspace:*
-        version: link:examples/dev-1password-env
       '@examples/dev-command':
         specifier: workspace:*
         version: link:examples/dev-command
+      '@examples/dev-env-1password':
+        specifier: workspace:*
+        version: link:examples/dev-env-1password
       '@examples/dev-plugin-lifecycle':
         specifier: workspace:*
         version: link:examples/dev-plugin-lifecycle
@@ -75,7 +75,7 @@ importers:
         specifier: 3.5.3
         version: 3.5.3
 
-  examples/dev-1password-env:
+  examples/dev-command:
     dependencies:
       '@qui-cli/colors':
         specifier: workspace:*
@@ -83,9 +83,6 @@ importers:
       '@qui-cli/core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@qui-cli/env-1password':
-        specifier: workspace:*
-        version: link:../../packages/env-1password
       '@qui-cli/log':
         specifier: workspace:*
         version: link:../../packages/log
@@ -103,7 +100,7 @@ importers:
         specifier: ^5.9.3
         version: 5.9.3
 
-  examples/dev-command:
+  examples/dev-env-1password:
     dependencies:
       '@qui-cli/colors':
         specifier: workspace:*
@@ -111,6 +108,9 @@ importers:
       '@qui-cli/core':
         specifier: workspace:*
         version: link:../../packages/core
+      '@qui-cli/env-1password':
+        specifier: workspace:*
+        version: link:../../packages/env-1password
       '@qui-cli/log':
         specifier: workspace:*
         version: link:../../packages/log
