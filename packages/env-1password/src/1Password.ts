@@ -184,9 +184,14 @@ export async function exists({
 }
 
 function secretFrom(secretReference: string) {
-  const [, vault, item, , section, field] =
-    secretReference.match(/^op:\/\/([^/]+)\/([^/]+)\/(([^/]+)\/)?([^/]+)$/) ||
-    [];
+  // eslint-disable-next-line prefer-const
+  let [vault, item, section, field] = secretReference
+    .replace(/^op:\/\//, '')
+    .split('/');
+  if (field === undefined) {
+    field = section;
+    section = '';
+  }
   return { vault, item, section, field };
 }
 
@@ -221,7 +226,8 @@ export async function set({ key, value, file, ...rest }: Env.SetOptions) {
             const section = item.sections.find((s) => s.id === field.sectionId);
             if (secret.field === field.title || secret.field === field.id) {
               if (
-                (!secret.section && field.sectionId === 'add more') ||
+                (!secret.section &&
+                  (field.sectionId === '' || field.sectionId === 'add more')) ||
                 secret.section === section?.title ||
                 secret.section === section?.id
               ) {
