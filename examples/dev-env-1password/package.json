@@ -1,11 +1,11 @@
 {
-  "name": "@examples/dev-1password-env",
+  "name": "@examples/dev-env-1password",
   "version": "0.0.0",
-  "homepage": "https://github.com/battis/qui-cli/tree/main/examples/dev-1password-env#readme",
+  "homepage": "https://github.com/battis/qui-cli/tree/main/examples/dev-env-1password#readme",
   "repository": {
     "type": "git",
     "url": "https://github.com/battis/qui-cli.git",
-    "directory": "examples/dev-1password-env"
+    "directory": "examples/dev-env-1password"
   },
   "author": {
     "name": "Seth Battis",
@@ -24,7 +24,7 @@
     "build:compile": "tsc",
     "example": "run-s example:*",
     "example:build": "run-s build",
-    "example:env": "dev-1password-env --serviceAccountToken=\"$(op item get OP_SERVICE_ACCOUNT_TOKEN --field credential --reveal)\""
+    "example:env": "dev-env-1password --opItem myToken"
   },
   "dependencies": {
     "@qui-cli/colors": "workspace:*",

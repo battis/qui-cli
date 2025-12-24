@@ -24,7 +24,7 @@
     "build:compile": "tsc",
     "example": "run-s example:*",
     "example:build": "run-s build",
-    "example:env": "dev-1password-env --serviceAccountToken=\"$(op item get OP_SERVICE_ACCOUNT_TOKEN --field credential --reveal)\""
+    "example:env": "dev-env-1password --opItem myToken"
   },
   "dependencies": {
     "@qui-cli/core": "workspace:*",

@@ -38,7 +38,7 @@ This package integrates with [@1password/sdk](https://www.npmjs.com/package/@1pa
 3. Update environment variables to be [secret references](https://developer.1password.com/docs/cli/secret-references)
 4. Run!
 
-See [dev-1password-env](https://github.com/battis/qui-cli/tree/main/examples/dev-1password-env#readme) for an example using the 1Password implementation of this package.
+See [dev-env-1password](https://github.com/battis/qui-cli/tree/main/examples/dev-env-1password#readme) for an example using the 1Password implementation of this package.
 
 ## Configuration
 
