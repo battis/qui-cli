@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2.2](https://github.com/battis/qui-cli/compare/env-1password/1.2.1...env-1password/1.2.2) (2025-12-24)
+
+
+### Bug Fixes
+
+* handle 1Password secret reference not in sections ([bd57bb6](https://github.com/battis/qui-cli/commit/bd57bb67f5027135425dfdd61fef5b3c1c2301c7))
+
 ## [1.2.1](https://github.com/battis/qui-cli/compare/env-1password/1.2.0...env-1password/1.2.1) (2025-12-23)
 
 
