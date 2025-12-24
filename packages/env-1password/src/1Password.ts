@@ -182,9 +182,9 @@ export async function exists({
 }
 
 function secretFrom(secretReference: string) {
-  const [vault, item, section, field] = secretReference
-    .replace('op://', '')
-    .split('/');
+  const [, vault, item, , section, field] =
+    secretReference.match(/^op:\/\/([^/]+)\/([^/]+)\/(([^/]+)\/)?([^/]+)$/) ||
+    [];
   return { vault, item, section, field };
 }
 
@@ -216,16 +216,15 @@ export async function set({ key, value, file, ...rest }: Env.SetOptions) {
         const updated: Item = {
           ...item,
           fields: item.fields.map((field) => {
-            if (
-              field.title === secret.field &&
-              ((/^Section_.+/.test(secret.section) &&
-                field.sectionId == secret.section.replace(/^Section_/, '')) ||
-                field.sectionId ==
-                  item.sections
-                    .filter((section) => section.title === secret.section)
-                    .shift()?.id)
-            ) {
-              return { ...field, value };
+            const section = item.sections.find((s) => s.id === field.sectionId);
+            if (secret.field === field.title || secret.field === field.id) {
+              if (
+                (!secret.section && field.sectionId === 'add more') ||
+                secret.section === section?.title ||
+                secret.section === section?.id
+              ) {
+                return { ...field, value };
+              }
             }
             return field;
           })
