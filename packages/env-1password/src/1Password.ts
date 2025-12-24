@@ -155,6 +155,7 @@ function secretReferences(parsed: Env.ParsedResult) {
   );
 }
 
+// FIXME parse is not loading 1Password secrets into process.env
 export async function parse(file?: string) {
   const parsed = await Env.parse(file);
   if (client) {
