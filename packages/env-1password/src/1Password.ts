@@ -108,7 +108,7 @@ export function options(): Plugin.Options {
         default: config.opAccount
       },
       opItem: {
-        description: `Name or ID of the 1Password API Credential item storing the 1Password service account token; will use environmen variable ${Colors.varName('OP_ITEM')} if present`,
+        description: `Name or ID of the 1Password API Credential item storing the 1Password service account token; will use environment variable ${Colors.varName('OP_ITEM')} if present`,
         hint: '1Password unique identifier',
         default: config.opItem
       },
