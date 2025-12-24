@@ -156,6 +156,7 @@ function secretReferences(parsed: Env.ParsedResult) {
 }
 
 // FIXME parse is not loading 1Password secrets into process.env
+// Issue URL: https://github.com/battis/qui-cli/issues/81
 export async function parse(file?: string) {
   const parsed = await Env.parse(file);
   if (client) {
