@@ -23,7 +23,7 @@
     "@battis/eslint-config": "^2.0.8",
     "@battis/prettier-config": "^1.7.2",
     "@commitlint/cli": "^19.8.1",
-    "@commitlint/config-conventional": "^19.8.1",
+    "@commitlint/config-conventional": "^20.2.0",
     "@commitlint/config-pnpm-scopes": "^19.9.1",
     "@examples/dev-command": "workspace:*",
     "@examples/dev-env-1password": "workspace:*",
