@@ -19,7 +19,18 @@ export const regexpValue = Chalk.red;
 /** A URL value (e.g. `https://example.com` or `./path/to/file`). */
 export const url = Chalk.blue;
 
-/** A file or URL path (e.g. `../../path/to/file`). */
+/**
+ * A file or URL path (e.g. `../../path/to/file`).
+ *
+ * Highlight the filename by passing a second argument:
+ *
+ * ```ts
+ * Colors.path('path/to/filename', Colors.value);
+ * ```
+ *
+ * > <code style="color:skyblue">path/to/<span
+ * > style="color:yellow">filename</span></code>
+ */
 export function path(value: string, highlight = (v: string) => v) {
   return url(
     `${nodePath.dirname(value)}${value.indexOf('/') >= 0 ? '/' : ''}${highlight(nodePath.basename(value))}`
@@ -30,7 +41,17 @@ export function path(value: string, highlight = (v: string) => v) {
 export const error = Chalk.red.bold;
 
 // node-style
-/** A shell command (e.g. `echo "hello world"`). */
+/**
+ * A shell command (e.g. `echo "hello world"`).
+ *
+ * Highlight the command name by passing a second argument:
+ *
+ * ```ts
+ * Colors.command('echo hello world', Colors.keyword);
+ * ```
+ *
+ * > <code style="color:magenta"><b>echo</b> hello world</code>
+ */
 export function command(value: string, highlight = (v: string) => v) {
   const tokens = value.split(' ');
   return Chalk.magenta(
