@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.2.0](https://github.com/battis/qui-cli/compare/colors/3.1.1...colors/3.2.0) (2025-12-25)
+
+
+### Features
+
+* add highlighting options for paths and commands ([e64a88e](https://github.com/battis/qui-cli/commit/e64a88e8a2c38fe485fa2527fe5c3953dce4b950))
+
 ## [3.1.1](https://github.com/battis/qui-cli/compare/colors/3.1.0...colors/3.1.1) (2025-12-19)
 
 
