@@ -85,16 +85,16 @@ export function options(): Plugin.Options {
         text: 'Store 1Password secret references in your environment, rather than the actual secrets.'
       },
       {
-        text: `If 1Password secret references are stored in the environment, a 1Password service account token is required to access the secret values, which will be loaded into ${Colors.value(
+        text: `If 1Password secret references are stored in the environment, a 1Password service account token is required to access the secret values, which will be loaded into ${Colors.varName(
           'process.env'
         )}. The service account token can be passed directly as the ${Colors.optionArg(
           '--opToken'
         )} argument (e.g. ${Colors.command(
-          `${Colors.keyword('example')} --opToken "$(${Colors.keyword(
-            'op'
-          )} item get myToken)"`
+          `example --opToken "$(${Colors.keyword('op')} item get myToken)"`,
+          Colors.keyword
         )}) or, if the 1Password CLI tool is also installed, by simply passing the name or ID of the API Credential in your 1Password vault that holds the service account token (e.g. ${Colors.command(
-          `${Colors.keyword('example')} --opItem myToken`
+          `example --opItem myToken`,
+          Colors.keyword
         )}). If you are signed into multiple 1Password account, use the ${Colors.optionArg(
           '--opAccount'
         )} argument to specify the account containing the token.`

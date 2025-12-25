@@ -23,7 +23,7 @@ Positionals.require(args);
 export function run() {
   for (const arg of Object.keys(args)) {
     Log.info(
-      `${name}: ${Colors.value(arg)} = ${Colors.quotedValue(Positionals.get(arg))}`
+      `${name}: ${Colors.optionArg(arg)} = ${Colors.quotedValue(Positionals.get(arg))}`
     );
   }
 }
