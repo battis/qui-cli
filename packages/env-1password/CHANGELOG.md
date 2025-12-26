@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2.4](https://github.com/battis/qui-cli/compare/env-1password/1.2.3...env-1password/1.2.4) (2025-12-26)
+
+
+### Bug Fixes
+
+* no longer logging service account token ([4303652](https://github.com/battis/qui-cli/commit/4303652a0ddbd6bf323dd548f07fd99bc95b2cc4))
+* update color-coding to current standards ([2fccf74](https://github.com/battis/qui-cli/commit/2fccf7433f729020022b7df85578e05576b47958))
+
 ## [1.2.3](https://github.com/battis/qui-cli/compare/env-1password/1.2.2...env-1password/1.2.3) (2025-12-24)
 
 
