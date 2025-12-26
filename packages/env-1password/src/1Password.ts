@@ -45,7 +45,8 @@ export async function configure(proposal: Configuration = {}) {
   if (config.opItem && !config.opToken) {
     const silent = Shell.isSilent();
     const showCommands = Shell.commandsShown();
-    Shell.configure({ silent: true, showCommands: false });
+    const logging = Shell.isLogging();
+    Shell.configure({ silent: true, showCommands: false, logging: true });
     const { stdout, stderr } = Shell.exec(
       `op item get ${config.opAccount ? `--account "${config.opAccount}" ` : ''}--reveal --fields credential "${config.opItem}"`
     );
@@ -55,7 +56,7 @@ export async function configure(proposal: Configuration = {}) {
       Log.fatal(stderr);
       process.exit(1);
     }
-    Shell.configure({ silent, showCommands });
+    Shell.configure({ silent, showCommands, logging });
   }
   if (config.opToken) {
     const pkg = await importLocal(
