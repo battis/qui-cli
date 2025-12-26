@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.1.0](https://github.com/battis/qui-cli/compare/shell/3.0.3...shell/3.1.0) (2025-12-26)
+
+
+### Features
+
+* disable/enable logging of commands ([d8b6f14](https://github.com/battis/qui-cli/commit/d8b6f14a7ba2452735940a26364426226dca05a5))
+
 ## [3.0.3](https://github.com/battis/qui-cli/compare/shell/3.0.2...shell/3.0.3) (2025-11-08)
 
 
