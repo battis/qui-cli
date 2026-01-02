@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.0.3](https://github.com/battis/qui-cli/compare/structured/2.0.2...structured/2.0.3) (2026-01-02)
+
+
+### Bug Fixes
+
+* fix inverted logic ([25c7e97](https://github.com/battis/qui-cli/commit/25c7e97fc8204a84a7577c0b9cb99c219529ba34))
+
 ## [2.0.2](https://github.com/battis/qui-cli/compare/structured/2.0.1...structured/2.0.2) (2026-01-02)
 
 
