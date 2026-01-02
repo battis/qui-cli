@@ -24,7 +24,7 @@
     "@battis/prettier-config": "^1.7.3",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
-    "@commitlint/config-pnpm-scopes": "^19.9.1",
+    "@commitlint/config-pnpm-scopes": "^20.1.0",
     "@examples/dev-command": "workspace:*",
     "@examples/dev-env-1password": "workspace:*",
     "@examples/dev-plugin-lifecycle": "workspace:*",
