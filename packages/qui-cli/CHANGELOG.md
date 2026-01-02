@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.0.3](https://github.com/battis/qui-cli/compare/qui-cli/5.0.2...qui-cli/5.0.3) (2026-01-02)
+
+### Features
+
+* **shell@3.1.0** disable/enable logging of commands ([d8b6f14](https://github.com/battis/qui-cli/commit/d8b6f14a7ba2452735940a26364426226dca05a5))
+* **colors@3.2.0** add highlighting options for paths and commands ([e64a88e](https://github.com/battis/qui-cli/commit/e64a88e8a2c38fe485fa2527fe5c3953dce4b950))
+
+### Bug Fixes
+
+* normalize peer dependencies ([cdd81b7](https://github.com/battis/qui-cli/commit/cdd81b7c4bea7c769021ff58177750c5a1369f76))
+
+
 ## [5.0.2](https://github.com/battis/qui-cli/compare/qui-cli/5.0.1...qui-cli/5.0.2) (2025-11-12)
 
 ### Bug Fixes
