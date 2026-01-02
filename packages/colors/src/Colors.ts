@@ -33,7 +33,7 @@ export const url = Chalk.blue;
  */
 export function path(value: string, highlight = (v: string) => v) {
   return url(
-    `${nodePath.dirname(value)}${value.indexOf('/') >= 0 ? '/' : ''}${highlight(nodePath.basename(value))}`
+    `${value.indexOf('/') >= 0 ? `${nodePath.dirname(value)}/` : ''}${highlight(nodePath.basename(value))}`
   );
 }
 
