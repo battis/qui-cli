@@ -40,8 +40,8 @@
     "typescript": "^5.9.3"
   },
   "peerDependencies": {
-    "@qui-cli/log": "4.x",
-    "@qui-cli/plugin": "4.x"
+    "@qui-cli/log": ">=3",
+    "@qui-cli/plugin": ">=3"
   },
   "target": "node"
 }

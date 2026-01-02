@@ -40,7 +40,7 @@
     "typescript": "^5.9.3"
   },
   "peerDependencies": {
-    "@qui-cli/root": "3.x"
+    "@qui-cli/root": ">=3"
   },
   "target": "node"
 }
