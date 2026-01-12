@@ -691,13 +691,13 @@ importers:
       '@battis/import-package-json':
         specifier: ^0.1.7
         version: 0.1.7
+      '@qui-cli/colors':
+        specifier: workspace:*
+        version: link:../colors
       dotenv:
         specifier: ^17.2.3
         version: 17.2.3
     devDependencies:
-      '@qui-cli/colors':
-        specifier: workspace:*
-        version: link:../colors
       '@qui-cli/env':
         specifier: workspace:*
         version: link:../env
