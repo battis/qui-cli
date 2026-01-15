@@ -54,9 +54,10 @@ export const error = Chalk.red.bold;
  */
 export function command(value: string, highlight = (v: string) => v) {
   const tokens = value.split(' ');
-  return Chalk.magenta(
-    `${highlight(tokens.shift() || '')} ${tokens.join(' ')}`
-  );
+  if (tokens.length > 0) {
+    tokens[0] = highlight(tokens[0]);
+  }
+  return Chalk.magenta(tokens.join(' '));
 }
 /**
  * A keyword (e.g. a shell command), as in:
