@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.2.2](https://github.com/battis/qui-cli/compare/colors/3.2.1...colors/3.2.2) (2026-01-15)
+
+
+### Bug Fixes
+
+* remove extraneous space in commands ([3473397](https://github.com/battis/qui-cli/commit/347339777cbaf8a2780e62919a26a5a3102bbb6c))
+
 ## [3.2.1](https://github.com/battis/qui-cli/compare/colors/3.2.0...colors/3.2.1) (2026-01-02)
 
 
