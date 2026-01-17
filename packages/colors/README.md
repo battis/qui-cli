@@ -52,9 +52,17 @@ A regular expression value (e/g `/.+/`). Expression delimiters (`/`) should be i
 
 A URL value (e.g. `https://example.com` or `./path/to/file`).
 
-### `path(text)`
+### `path(text, higlight = (v) => v)`
 
 A file or URL path (e.g. `../../path/to/file`).
+
+Highlight the filename by passing a second argument:
+
+```ts
+Colors.path('path/to/filename', Colors.value);
+```
+
+> <code style="color:skyblue">path/to/<span style="color:yellow">filename</span></code>
 
 ### `error(text)`
 
@@ -65,6 +73,14 @@ An error message (e.g. `Bad things happened!`).
 ### `command(text)`
 
 A shell command (e.g. `echo "hello world"`).
+
+Highlight the command name by passing a second argument:
+
+```ts
+Colors.command('echo hello world', Colors.keyword);
+```
+
+> <code style="color:magenta"><b>echo</b> hello world</code>
 
 ### `keyword(text)`
 

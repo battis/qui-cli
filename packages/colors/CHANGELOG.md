@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.2.2](https://github.com/battis/qui-cli/compare/colors/3.2.1...colors/3.2.2) (2026-01-15)
+
+
+### Bug Fixes
+
+* remove extraneous space in commands ([3473397](https://github.com/battis/qui-cli/commit/347339777cbaf8a2780e62919a26a5a3102bbb6c))
+
+## [3.2.1](https://github.com/battis/qui-cli/compare/colors/3.2.0...colors/3.2.1) (2026-01-02)
+
+
+### Bug Fixes
+
+* remove extraneous dot from path color-coded output ([6de1092](https://github.com/battis/qui-cli/commit/6de10925df87ca4a9b1721c7285c3ae763ef760d))
+
+## [3.2.0](https://github.com/battis/qui-cli/compare/colors/3.1.1...colors/3.2.0) (2025-12-25)
+
+
+### Features
+
+* add highlighting options for paths and commands ([e64a88e](https://github.com/battis/qui-cli/commit/e64a88e8a2c38fe485fa2527fe5c3953dce4b950))
+
 ## [3.1.1](https://github.com/battis/qui-cli/compare/colors/3.1.0...colors/3.1.1) (2025-12-19)
 
 

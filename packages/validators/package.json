@@ -1,6 +1,6 @@
 {
   "name": "@qui-cli/validators",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "@qui-cli Plugin: Input validators",
   "homepage": "https://github.com/battis/qui-cli/tree/main/packages/validators#readme",
   "repository": {
@@ -21,7 +21,7 @@
     "build": "run-s build:*",
     "build:clean": "run-s clean",
     "build:compile": "tsc",
-    "release": "commit-and-tag-version"
+    "version": "commit-and-tag-version"
   },
   "dependencies": {
     "@tahul/is-valid-domain": "^1.0.5",
@@ -40,7 +40,7 @@
     "typescript": "^5.9.3"
   },
   "peerDependencies": {
-    "@qui-cli/root": "3.x"
+    "@qui-cli/root": ">=3"
   },
   "target": "node"
 }

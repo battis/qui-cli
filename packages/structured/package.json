@@ -1,6 +1,6 @@
 {
   "name": "@qui-cli/structured",
-  "version": "2.0.1",
+  "version": "2.0.4",
   "description": "Build a structured @qui-cli command from directory contents",
   "homepage": "https://github.com/battis/qui-cli/tree/main/packages/structured#readme",
   "repository": {
@@ -21,7 +21,7 @@
     "build": "run-s build:*",
     "build:clean": "run-s clean",
     "build:compile": "tsc",
-    "release": "commit-and-tag-version"
+    "version": "commit-and-tag-version"
   },
   "dependencies": {
     "@qui-cli/colors": "workspace:*",
@@ -38,8 +38,8 @@
     "typescript": "^5.9.3"
   },
   "peerDependencies": {
-    "@qui-cli/core": "5.x",
-    "@qui-cli/plugin": "4.x"
+    "@qui-cli/core": ">=4",
+    "@qui-cli/plugin": ">=3"
   },
   "target": "node"
 }

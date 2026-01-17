@@ -10,7 +10,7 @@ function commandColor(usage: string) {
     usage.indexOf('-', pre.length + cmd.length) - 1
   );
   const post = usage.slice(pre.length + cmd.length + terms.length);
-  return `${pre}${Colors.command(`${Colors.keyword(cmd)}${terms}`)}${post}`;
+  return `${pre}${Colors.command(`${cmd}${terms}`, Colors.keyword)}${post}`;
 }
 
 export function usage() {

@@ -45,7 +45,8 @@ export async function configure(proposal: Configuration = {}) {
   if (config.opItem && !config.opToken) {
     const silent = Shell.isSilent();
     const showCommands = Shell.commandsShown();
-    Shell.configure({ silent: true, showCommands: false });
+    const logging = Shell.isLogging();
+    Shell.configure({ silent: true, showCommands: false, logging: true });
     const { stdout, stderr } = Shell.exec(
       `op item get ${config.opAccount ? `--account "${config.opAccount}" ` : ''}--reveal --fields credential "${config.opItem}"`
     );
@@ -55,7 +56,7 @@ export async function configure(proposal: Configuration = {}) {
       Log.fatal(stderr);
       process.exit(1);
     }
-    Shell.configure({ silent, showCommands });
+    Shell.configure({ silent, showCommands, logging });
   }
   if (config.opToken) {
     const pkg = await importLocal(
@@ -85,16 +86,16 @@ export function options(): Plugin.Options {
         text: 'Store 1Password secret references in your environment, rather than the actual secrets.'
       },
       {
-        text: `If 1Password secret references are stored in the environment, a 1Password service account token is required to access the secret values, which will be loaded into ${Colors.value(
+        text: `If 1Password secret references are stored in the environment, a 1Password service account token is required to access the secret values, which will be loaded into ${Colors.varName(
           'process.env'
         )}. The service account token can be passed directly as the ${Colors.optionArg(
           '--opToken'
         )} argument (e.g. ${Colors.command(
-          `${Colors.keyword('example')} --opToken "(${Colors.keyword(
-            'op'
-          )} item get myToken)"`
+          `example --opToken "$(${Colors.keyword('op')} item get myToken)"`,
+          Colors.keyword
         )}) or, if the 1Password CLI tool is also installed, by simply passing the name or ID of the API Credential in your 1Password vault that holds the service account token (e.g. ${Colors.command(
-          `${Colors.keyword('example')} --opItem myToken`
+          `example --opItem myToken`,
+          Colors.keyword
         )}). If you are signed into multiple 1Password account, use the ${Colors.optionArg(
           '--opAccount'
         )} argument to specify the account containing the token.`
@@ -108,7 +109,7 @@ export function options(): Plugin.Options {
         default: config.opAccount
       },
       opItem: {
-        description: `Name or ID of the 1Password API Credential item storing the 1Password service account token; will use environmen variable ${Colors.varName('OP_ITEM')} if present`,
+        description: `Name or ID of the 1Password API Credential item storing the 1Password service account token; will use environment variable ${Colors.varName('OP_ITEM')} if present`,
         hint: '1Password unique identifier',
         default: config.opItem
       },
@@ -155,6 +156,8 @@ function secretReferences(parsed: Env.ParsedResult) {
   );
 }
 
+// FIXME parse is not loading 1Password secrets into process.env
+// Issue URL: https://github.com/battis/qui-cli/issues/81
 export async function parse(file?: string) {
   const parsed = await Env.parse(file);
   if (client) {
@@ -182,9 +185,14 @@ export async function exists({
 }
 
 function secretFrom(secretReference: string) {
-  const [vault, item, section, field] = secretReference
-    .replace('op://', '')
+  // eslint-disable-next-line prefer-const
+  let [vault, item, section, field] = secretReference
+    .replace(/^op:\/\//, '')
     .split('/');
+  if (field === undefined) {
+    field = section;
+    section = '';
+  }
   return { vault, item, section, field };
 }
 
@@ -216,16 +224,16 @@ export async function set({ key, value, file, ...rest }: Env.SetOptions) {
         const updated: Item = {
           ...item,
           fields: item.fields.map((field) => {
-            if (
-              field.title === secret.field &&
-              ((/^Section_.+/.test(secret.section) &&
-                field.sectionId == secret.section.replace(/^Section_/, '')) ||
-                field.sectionId ==
-                  item.sections
-                    .filter((section) => section.title === secret.section)
-                    .shift()?.id)
-            ) {
-              return { ...field, value };
+            const section = item.sections.find((s) => s.id === field.sectionId);
+            if (secret.field === field.title || secret.field === field.id) {
+              if (
+                (!secret.section &&
+                  (field.sectionId === '' || field.sectionId === 'add more')) ||
+                secret.section === section?.title ||
+                secret.section === section?.id
+              ) {
+                return { ...field, value };
+              }
             }
             return field;
           })

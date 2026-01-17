@@ -1,6 +1,6 @@
 {
   "name": "@qui-cli/env-1password",
-  "version": "1.2.0",
+  "version": "1.2.6",
   "description": "@qui-cli Plugin: Standardized environment configuration",
   "homepage": "https://github.com/battis/qui-cli/tree/main/packages/env-1password#readme",
   "repository": {
@@ -21,15 +21,15 @@
     "build": "run-s build:*",
     "build:clean": "run-s clean",
     "build:compile": "tsc",
-    "release": "commit-and-tag-version"
+    "version": "commit-and-tag-version"
   },
   "dependencies": {
     "@1password/sdk": "^0.3.1",
     "@battis/import-package-json": "^0.1.7",
+    "@qui-cli/colors": "workspace:*",
     "dotenv": "^17.2.3"
   },
   "devDependencies": {
-    "@qui-cli/colors": "workspace:*",
     "@qui-cli/env": "workspace:*",
     "@qui-cli/log": "workspace:*",
     "@qui-cli/plugin": "workspace:*",
@@ -43,9 +43,11 @@
     "typescript": "^5.9.3"
   },
   "peerDependencies": {
-    "@qui-cli/env": "5.x",
-    "@qui-cli/plugin": "4.x",
-    "@qui-cli/root": "3.x"
+    "@qui-cli/env": ">=5",
+    "@qui-cli/log": ">=3",
+    "@qui-cli/plugin": ">=3",
+    "@qui-cli/root": ">=3",
+    "@qui-cli/shell": ">=3"
   },
   "target": "node"
 }

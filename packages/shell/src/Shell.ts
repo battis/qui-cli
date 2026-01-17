@@ -22,6 +22,11 @@ export type Configuration = Plugin.Configuration & {
    * themselves) in the console, defaults to `true`.
    */
   silent?: boolean;
+  /**
+   * Whether or not to log commands and output at level `debug`, defaults to
+   * `true`
+   */
+  logging?: boolean;
 };
 
 export const name = 'shell';
@@ -29,10 +34,12 @@ export const name = 'shell';
 let showCommands = true;
 let silent = false;
 let result: shell.ShellString | undefined = undefined;
+let logging = true;
 
 export function configure(config: Configuration = {}) {
   showCommands = Plugin.hydrate(config.showCommands, showCommands);
   silent = Plugin.hydrate(config.silent, silent);
+  logging = Plugin.hydrate(config.logging, logging);
 }
 
 export function options(): Plugin.Options {
@@ -45,6 +52,10 @@ export function options(): Plugin.Options {
       silent: {
         description: `Hide command output`,
         default: silent
+      },
+      logging: {
+        description: `Log commands and output at level ${Colors.value('debug')}`,
+        default: logging
       }
     }
   };
@@ -79,7 +90,9 @@ export function exec(command: string) {
   result = shell.exec(command, { silent });
   if (result.stdout.length) entry.stdout = result.stdout;
   if (result.stderr.length) entry.stderr = result.stderr;
-  Log.debug(entry);
+  if (logging) {
+    Log.debug(entry);
+  }
   if (spinner) {
     spinner.succeed(Colors.command(keywords(command)));
   }
@@ -102,6 +115,10 @@ export function isSilent() {
 
 export function commandsShown() {
   return showCommands;
+}
+
+export function isLogging() {
+  return logging;
 }
 
 export function getPreviousResult() {

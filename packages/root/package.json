@@ -1,6 +1,6 @@
 {
   "name": "@qui-cli/root",
-  "version": "3.0.4",
+  "version": "3.0.6",
   "description": "@qui-cli Plugin: Identify the root of the current application",
   "homepage": "https://github.com/battis/qui-cli/tree/main/packages/root#readme",
   "repository": {
@@ -21,7 +21,7 @@
     "build": "run-s build:*",
     "build:clean": "run-s clean",
     "build:compile": "tsc",
-    "release": "commit-and-tag-version"
+    "version": "commit-and-tag-version"
   },
   "dependencies": {
     "app-root-path": "^3.1.0"
@@ -37,7 +37,7 @@
     "typescript": "^5.9.3"
   },
   "peerDependencies": {
-    "@qui-cli/plugin": "4.x"
+    "@qui-cli/plugin": ">=3"
   },
   "target": "node"
 }

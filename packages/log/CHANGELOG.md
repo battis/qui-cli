@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [4.0.2](https://github.com/battis/qui-cli/compare/log/4.0.1...log/4.0.2) (2026-01-02)
+
+
+### Bug Fixes
+
+* normalize peer dependencies ([cdd81b7](https://github.com/battis/qui-cli/commit/cdd81b7c4bea7c769021ff58177750c5a1369f76))
+
 ## [4.0.1](https://github.com/battis/qui-cli/compare/log/4.0.0...log/4.0.1) (2025-11-12)
 
 

@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.0.4](https://github.com/battis/qui-cli/compare/structured/2.0.3...structured/2.0.4) (2026-01-02)
+
+
+### Bug Fixes
+
+* normalize peer dependencies ([cdd81b7](https://github.com/battis/qui-cli/commit/cdd81b7c4bea7c769021ff58177750c5a1369f76))
+
+## [2.0.3](https://github.com/battis/qui-cli/compare/structured/2.0.2...structured/2.0.3) (2026-01-02)
+
+
+### Bug Fixes
+
+* fix inverted logic ([25c7e97](https://github.com/battis/qui-cli/commit/25c7e97fc8204a84a7577c0b9cb99c219529ba34))
+
+## [2.0.2](https://github.com/battis/qui-cli/compare/structured/2.0.1...structured/2.0.2) (2026-01-02)
+
+
+### Bug Fixes
+
+* don't include TypeScript definitions as commands ([af532ca](https://github.com/battis/qui-cli/commit/af532caaf6b6d0e48d9358a06d0db9ad12df30f0))
+
 ## [2.0.1](https://github.com/battis/qui-cli/compare/structured/2.0.0...structured/2.0.1) (2025-11-07)
 
 ### Bug Fixes

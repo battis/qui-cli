@@ -15,5 +15,5 @@ const {
 await Core.run();
 
 Log.info(
-  `The value of ${Colors.value('foo')} is ${Colors.quotedValue(`"${foo}"`)}`
+  `The value of ${Colors.optionArg('foo')} is ${Colors.quotedValue(`"${foo}"`)}`
 );

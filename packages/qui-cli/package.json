@@ -1,6 +1,6 @@
 {
   "name": "@qui-cli/qui-cli",
-  "version": "5.0.2",
+  "version": "5.0.3",
   "description": "Quickly build a CLI app",
   "homepage": "https://github.com/battis/qui-cli/tree/main/packages/qui-cli#readme",
   "repository": {
@@ -21,7 +21,7 @@
     "build": "run-s build:*",
     "build:clean": "run-s clean",
     "build:compile": "tsc",
-    "release": "commit-and-tag-version"
+    "version": "commit-and-tag-version"
   },
   "dependencies": {
     "@qui-cli/colors": "workspace:*"

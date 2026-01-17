@@ -118,10 +118,7 @@ export function configure(config: Configuration = {}) {
 }
 
 export function options(): Plugin.Options {
-  const levelsList = [...Object.keys(levels.levels), OFF]
-    .map((level) => Colors.quotedValue(`"${level}"`))
-    .join(', ')
-    .replace(/, ([^,]+)$/, ', or $1');
+  const hint = [...Object.keys(levels.levels), OFF].join('|');
   return {
     man: [
       {
@@ -134,11 +131,13 @@ export function options(): Plugin.Options {
         description: `Path to log file (optional)`
       },
       stdoutLevel: {
-        description: `Log level to console stdout: ${levelsList}`,
+        description: `Log level to console stdout`,
+        hint,
         default: stdoutLevel
       },
       fileLevel: {
-        description: `Log level to log file (if ${Colors.optionArg('--logFilePath')} provided): ${levelsList}`,
+        description: `Log level to log file if ${Colors.optionArg('--logFilePath')} provided`,
+        hint,
         default: fileLevel
       }
     }

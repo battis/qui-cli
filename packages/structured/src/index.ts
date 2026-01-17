@@ -40,6 +40,8 @@ export async function build({
     .filter((f) => !/^\./.test(f))
     // this file isn't a command
     .filter((f) => f !== path.basename(fileName))
+    // TypeScript definitions are NOT commands
+    .filter((f) => !/\.\d\.ts$/.test(f))
     // source maps are not commands
     .filter((f) => !/\.map$/.test(f))
     // normalize to commandCase
