@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2.7](https://github.com/battis/qui-cli/compare/env-1password/1.2.6...env-1password/1.2.7) (2026-01-17)
+
+
+### Bug Fixes
+
+* turn OFF logging wile retrieving 1Password service account token ([4d4fcf6](https://github.com/battis/qui-cli/commit/4d4fcf68491be2333a93102923a2bd07c6f48242))
+
 ## [1.2.6](https://github.com/battis/qui-cli/compare/env-1password/1.2.5...env-1password/1.2.6) (2026-01-12)
 
 
