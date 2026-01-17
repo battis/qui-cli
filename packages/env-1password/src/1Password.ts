@@ -46,7 +46,7 @@ export async function configure(proposal: Configuration = {}) {
     const silent = Shell.isSilent();
     const showCommands = Shell.commandsShown();
     const logging = Shell.isLogging();
-    Shell.configure({ silent: true, showCommands: false, logging: true });
+    Shell.configure({ silent: true, showCommands: false, logging: false });
     const { stdout, stderr } = Shell.exec(
       `op item get ${config.opAccount ? `--account "${config.opAccount}" ` : ''}--reveal --fields credential "${config.opItem}"`
     );
