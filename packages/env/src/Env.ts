@@ -22,16 +22,18 @@ export type Configuration = Plugin.Configuration & {
 
 export const name = 'env';
 
-let root: string | undefined = undefined;
-let load: boolean = true;
-let pathToEnv = '.env';
+const config: Configuration = {
+  load: true,
+  path: '.env'
+};
 
-export async function configure(config: Configuration = {}) {
-  root = Plugin.hydrate(config.root, root);
-  load = Plugin.hydrate(config.load, load);
-  pathToEnv = Plugin.hydrate(config.path, pathToEnv);
-
-  if (load) {
+export async function configure(proposal: Configuration = {}) {
+  for (const key in proposal) {
+    if (proposal[key] !== undefined) {
+      config[key] = proposal[key];
+    }
+  }
+  if (config.load) {
     await parse();
   }
 }
@@ -42,9 +44,9 @@ export function init() {
 
 export type ParsedResult = dotenv.DotenvParseOutput;
 
-export async function parse(file = pathToEnv): Promise<ParsedResult> {
+export async function parse(file = config.path): Promise<ParsedResult> {
   const filePath = path.resolve(
-    root || Root.path(),
+    config.root || Root.path(),
     typeof file === 'string' ? file : '.env'
   );
   if (fs.existsSync(filePath)) {
@@ -62,15 +64,15 @@ export type GetOptions = {
   file?: string;
 };
 
-export async function get({ key, file = pathToEnv }: GetOptions) {
-  if (fs.existsSync(path.resolve(root || Root.path(), file))) {
+export async function get({ key, file = config.path }: GetOptions) {
+  if (fs.existsSync(path.resolve(config.root || Root.path(), file || '.env'))) {
     return (await parse(file))[key];
   }
   return undefined;
 }
 
-export async function exists({ key, file = pathToEnv }: GetOptions) {
-  if (fs.existsSync(path.resolve(root || Root.path(), file))) {
+export async function exists({ key, file = config.path }: GetOptions) {
+  if (fs.existsSync(path.resolve(config.root || Root.path(), file || '.env'))) {
     return !!(await parse(file))[key];
   }
   return false;
@@ -87,11 +89,11 @@ export type SetOptions = {
 export async function set({
   key,
   value,
-  file = pathToEnv,
+  file = config.path,
   comment,
   ifNotExists = false
 }: SetOptions) {
-  const filePath = path.resolve(root || Root.path(), file);
+  const filePath = path.resolve(config.root || Root.path(), file || '.env');
   if (ifNotExists === false || false === (await exists({ key, file }))) {
     let env = '';
     if (fs.existsSync(filePath)) {
@@ -120,10 +122,10 @@ export type RemoveOptions = {
 
 export async function remove({
   key,
-  file = pathToEnv,
+  file = config.path,
   comment
 }: RemoveOptions) {
-  const filePath = path.resolve(root || Root.path(), file);
+  const filePath = path.resolve(config.root || Root.path(), file || '.env');
   if (fs.existsSync(filePath)) {
     const env = fs.readFileSync(filePath).toString();
     const pattern = new RegExp(`${key}=.*\\n`);
