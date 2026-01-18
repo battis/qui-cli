@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@qui-cli/plugin": "workspace:*",
-    "@tsconfig/node20": "^20.1.8",
+    "@tsconfig/node24": "^24.0.4",
     "@types/cli-progress": "^3.11.6",
     "commit-and-tag-version": "^12.6.1",
     "del-cli": "^6.0.0",

@@ -37,7 +37,7 @@
     "@qui-cli/root": "workspace:*",
     "@qui-cli/shell": "workspace:*",
     "@qui-cli/validators": "workspace:*",
-    "@tsconfig/node20": "^20.1.8",
+    "@tsconfig/node24": "^24.0.4",
     "@types/is-valid-path": "^0.1.2",
     "@types/node": "^24.10.9",
     "@types/shelljs": "^0.8.17",
