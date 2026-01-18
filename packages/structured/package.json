@@ -31,7 +31,7 @@
     "@qui-cli/core": "workspace:*",
     "@qui-cli/plugin": "workspace:*",
     "@tsconfig/node20": "^20.1.8",
-    "@types/node": "^24.10.4",
+    "@types/node": "^24.10.9",
     "commit-and-tag-version": "^12.6.1",
     "del-cli": "^6.0.0",
     "npm-run-all": "^4.1.5",
