@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.0.6](https://github.com/battis/qui-cli/compare/progress/3.0.5...progress/3.0.6) (2026-01-18)
+
+
+### Bug Fixes
+
+* compile against Node.js v24 ([7b06b4f](https://github.com/battis/qui-cli/commit/7b06b4f4ac4f9688719041ab8b1d837b3a0ee214))
+
 ## [3.0.5](https://github.com/battis/qui-cli/compare/progress/3.0.4...progress/3.0.5) (2026-01-02)
 
 

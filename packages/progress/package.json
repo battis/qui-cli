@@ -1,6 +1,6 @@
 {
   "name": "@qui-cli/progress",
-  "version": "3.0.5",
+  "version": "3.0.6",
   "description": "@qui-cli Plugin: Progress bar for CLI app",
   "homepage": "https://github.com/battis/qui-cli/tree/main/packages/progress#readme",
   "repository": {
