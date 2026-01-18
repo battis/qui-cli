@@ -21,15 +21,16 @@ export async function register(plugin: Plugin.Base) {
       return;
     }
   }
+
   plugins.push({
-    ...plugin,
-    options: async () => {
-      if (plugin.options) {
-        return Opt.documentDefaults(await plugin.options());
-      } else {
-        return {};
-      }
-    }
+    name: plugin.name,
+    configure: plugin.configure ? plugin.configure.bind(plugin) : undefined,
+    options: plugin.options
+      ? async () =>
+          plugin.options ? Opt.documentDefaults(await plugin.options()) : {}
+      : undefined,
+    init: plugin.init ? plugin.init.bind(plugin) : undefined,
+    run: plugin.run ? plugin.run.bind(plugin) : undefined
   });
 }
 
