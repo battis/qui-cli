@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "@qui-cli/colors": "workspace:*",
-    "ora": "^8.2.0",
+    "ora": "^9.0.0",
     "shelljs": "^0.10.0"
   },
   "devDependencies": {
