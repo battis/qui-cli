@@ -22,7 +22,7 @@
     "build:compile": "tsc"
   },
   "dependencies": {
-    "@inquirer/prompts": "^7.10.1",
+    "@inquirer/prompts": "^8.2.0",
     "@qui-cli/qui-cli": "workspace:*"
   },
   "devDependencies": {
