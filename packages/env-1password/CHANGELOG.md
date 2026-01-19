@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2.9](https://github.com/battis/qui-cli/compare/env-1password/1.2.8...env-1password/1.2.9) (2026-01-19)
+
 ## [1.2.8](https://github.com/battis/qui-cli/compare/env-1password/1.2.7...env-1password/1.2.8) (2026-01-18)
 
 
