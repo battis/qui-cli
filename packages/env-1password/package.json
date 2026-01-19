@@ -25,15 +25,10 @@
   },
   "dependencies": {
     "@1password/sdk": "^0.3.1",
-    "@battis/import-package-json": "^0.1.7",
-    "@qui-cli/colors": "workspace:*",
-    "dotenv": "^17.2.3"
+    "@battis/import-package-json": "^0.1.7"
   },
   "devDependencies": {
     "@qui-cli/env": "workspace:*",
-    "@qui-cli/log": "workspace:*",
-    "@qui-cli/plugin": "workspace:*",
-    "@qui-cli/root": "workspace:*",
     "@qui-cli/shell": "workspace:*",
     "@tsconfig/node24": "^24.0.4",
     "@types/node": "^24.10.9",
@@ -44,9 +39,6 @@
   },
   "peerDependencies": {
     "@qui-cli/env": ">=5",
-    "@qui-cli/log": ">=3",
-    "@qui-cli/plugin": ">=3",
-    "@qui-cli/root": ">=3",
     "@qui-cli/shell": ">=3"
   },
   "target": "node"
