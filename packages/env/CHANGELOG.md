@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.1.0](https://github.com/battis/qui-cli/compare/env/5.0.4...env/5.1.0) (2026-01-19)
+
+
+### Features
+
+* support 1Password secret references if @1password/sdk (and 1Password) installed ([ed4570c](https://github.com/battis/qui-cli/commit/ed4570cd5cf19ae34fc03f6b88b01f0ebf72e72d))
+
+
+### Bug Fixes
+
+* detect missing 1Password CLI ([3c306ba](https://github.com/battis/qui-cli/commit/3c306ba7e37394948666f96b1ad728e8abc65a4e)), closes [#81](https://github.com/battis/qui-cli/issues/81)
+
 ## [5.0.4](https://github.com/battis/qui-cli/compare/env/5.0.3...env/5.0.4) (2026-01-18)
 
 
