@@ -1,8 +1,25 @@
 import * as Plugin from '@qui-cli/plugin';
+import { Base } from '@qui-cli/plugin/dist/Plugin.js';
 import { Root } from '@qui-cli/root';
 import dotenv from 'dotenv';
 import fs from 'node:fs';
 import path from 'node:path';
+import { OPConfiguration } from './1Password/Configuration.js';
+import { isSecretReference } from './1Password/isSecretReference.js';
+
+let OP:
+  | (Base & {
+      get: (ref: string) => Promise<string | undefined>;
+      set: (options: { ref: string; value: string }) => void;
+    })
+  | undefined = undefined;
+try {
+  await import('@1password/sdk');
+  OP = await import('./1Password/index.js');
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+} catch (_) {
+  // @1password/sdk not present
+}
 
 export type Configuration = Plugin.Configuration & {
   /**
@@ -18,7 +35,7 @@ export type Configuration = Plugin.Configuration & {
   load?: boolean;
   /** Path to desired `.env` file relative to `root`. Defaults to `'.env'`; */
   path?: string;
-};
+} & OPConfiguration;
 
 export const name = 'env';
 
@@ -33,22 +50,42 @@ export async function configure(proposal: Configuration = {}) {
       config[key] = proposal[key];
     }
   }
+  if (OP?.configure) {
+    OP.configure({
+      opAccount: config.opAccount,
+      opItem: config.opItem,
+      opToken: config.opToken
+    });
+  }
   if (config.load) {
     await parse();
   }
 }
 
-export function init() {
+export async function options(): Promise<Plugin.Options> {
+  if (OP?.options) {
+    return await OP.options();
+  } else {
+    return {};
+  }
+}
+
+export async function init(args: Plugin.ExpectedArguments<typeof options>) {
+  if (OP?.init) {
+    await OP.init(args);
+  }
+  await configure(args.values);
   parse();
 }
 
 export type ParsedResult = dotenv.DotenvParseOutput;
 
+function toFilePath(file = '.env') {
+  return path.resolve(config.root || Root.path(), file);
+}
+
 export async function parse(file = config.path): Promise<ParsedResult> {
-  const filePath = path.resolve(
-    config.root || Root.path(),
-    typeof file === 'string' ? file : '.env'
-  );
+  const filePath = toFilePath(file);
   if (fs.existsSync(filePath)) {
     const env = dotenv.config({ path: filePath, quiet: true });
     if (env.error) {
@@ -64,25 +101,40 @@ export type GetOptions = {
   file?: string;
 };
 
-export async function get({ key, file = config.path }: GetOptions) {
-  if (fs.existsSync(path.resolve(config.root || Root.path(), file || '.env'))) {
-    return (await parse(file))[key];
+export async function get({ key, file = config.path || '.env' }: GetOptions) {
+  if (fs.existsSync(toFilePath(file))) {
+    const env = await parse(file);
+    if (isSecretReference(env[key])) {
+      if (OP?.get) {
+        return OP?.get(env[key]);
+      } else {
+        throw new Error(
+          `Attempt to read environment variable ${key} that is a 1Password secret reference without @1password/sdk installed.`
+        );
+      }
+    }
+    return env[key];
   }
   return undefined;
 }
 
 export async function exists({ key, file = config.path }: GetOptions) {
-  if (fs.existsSync(path.resolve(config.root || Root.path(), file || '.env'))) {
+  if (fs.existsSync(toFilePath(file))) {
     return !!(await parse(file))[key];
   }
   return false;
 }
 
 export type SetOptions = {
+  /** Name of environment variable to set */
   key: string;
+  /** Value to set */
   value: string;
+  /** Path to the .env file */
   file?: string;
+  /** A comment included in the .env file above the variable */
   comment?: string;
+  /** Only set key=value if key is not already set */
   ifNotExists?: boolean;
 };
 
@@ -93,24 +145,36 @@ export async function set({
   comment,
   ifNotExists = false
 }: SetOptions) {
-  const filePath = path.resolve(config.root || Root.path(), file || '.env');
-  if (ifNotExists === false || false === (await exists({ key, file }))) {
-    let env = '';
-    if (fs.existsSync(filePath)) {
-      env = fs.readFileSync(filePath).toString();
-    }
-    const pattern = new RegExp(`^${key}=.*$`, 'm');
-    if (/[\s=]/.test(value)) {
-      value = `"${value}"`;
-    }
-    if (pattern.test(env)) {
-      env = env.replace(pattern, `${key}=${value}`);
+  const filePath = toFilePath(file);
+  const { [key]: prev } =
+    dotenv.config({ path: filePath, quiet: true }).parsed || {};
+  if (ifNotExists === false || !prev) {
+    if (prev && isSecretReference(prev)) {
+      if (OP?.set) {
+        OP.set({ ref: prev, value });
+      } else {
+        throw new Error(
+          `Attmept to update environment variable ${key} that is a 1Password secret reference without installing @1password/sdk`
+        );
+      }
     } else {
-      env = `${env.trim()}\n${
-        comment ? `\n# ${comment}\n` : ''
-      }${key}=${value}\n`;
+      let env = '';
+      if (fs.existsSync(filePath)) {
+        env = fs.readFileSync(filePath).toString();
+      }
+      const pattern = new RegExp(`^${key}=.*$`, 'm');
+      if (/[\s=]/.test(value)) {
+        value = `"${value}"`;
+      }
+      if (pattern.test(env)) {
+        env = env.replace(pattern, `${key}=${value}`);
+      } else {
+        env = `${env.trim()}\n${
+          comment ? `\n# ${comment}\n` : ''
+        }${key}=${value}\n`;
+      }
+      fs.writeFileSync(filePath, env);
     }
-    fs.writeFileSync(filePath, env);
   }
 }
 
@@ -122,10 +186,10 @@ export type RemoveOptions = {
 
 export async function remove({
   key,
-  file = config.path,
+  file = config.path || '.env',
   comment
 }: RemoveOptions) {
-  const filePath = path.resolve(config.root || Root.path(), file || '.env');
+  const filePath = path.resolve(config.root || Root.path(), file);
   if (fs.existsSync(filePath)) {
     const env = fs.readFileSync(filePath).toString();
     const pattern = new RegExp(`${key}=.*\\n`);
