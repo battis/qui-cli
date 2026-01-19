@@ -21,14 +21,20 @@ async function getClient(): Promise<Client> {
       const showCommands = Shell.commandsShown();
       const logging = Shell.isLogging();
       Shell.configure({ silent: true, showCommands: false, logging: false });
-      const { stdout, stderr } = Shell.exec(
-        `op item get ${config.opAccount ? `--account "${config.opAccount}" ` : ''}--reveal --fields credential "${config.opItem}"`
-      );
-      if (stdout.length) {
-        config.opToken = stdout.trim();
+      if (/(\d+\.)+\d/.test(Shell.exec('op -v').stdout)) {
+        const { stdout, stderr } = Shell.exec(
+          `op item get ${config.opAccount ? `--account "${config.opAccount}" ` : ''}--reveal --fields credential "${config.opItem}"`
+        );
+        if (stdout.length) {
+          config.opToken = stdout.trim();
+        } else {
+          Log.fatal(stderr);
+          process.exit(1);
+        }
       } else {
-        Log.fatal(stderr);
-        process.exit(1);
+        throw new Error(
+          `Looking up a 1Password service account token by item identifier requires the 1Password CLI (${Colors.url('https://developer.1password.com/docs/cli')}).`
+        );
       }
       Shell.configure({ silent, showCommands, logging });
     }
@@ -69,38 +75,33 @@ export function options(): Plugin.Options {
         text: '1Password environment integration'
       },
       {
-        text: 'Store 1Password secret references in your environment, rather than the actual secrets.'
-      },
-      {
-        text: `If 1Password secret references are stored in the environment, a 1Password service account token is required to access the secret values, which will be loaded into ${Colors.varName(
-          'process.env'
-        )}. The service account token can be passed directly as the ${Colors.optionArg(
-          '--opToken'
-        )} argument (e.g. ${Colors.command(
-          `example --opToken "$(${Colors.keyword('op')} item get myToken)"`,
-          Colors.keyword
-        )}) or, if the 1Password CLI tool is also installed, by simply passing the name or ID of the API Credential in your 1Password vault that holds the service account token (e.g. ${Colors.command(
-          `example --opItem myToken`,
-          Colors.keyword
-        )}). If you are signed into multiple 1Password account, use the ${Colors.optionArg(
-          '--opAccount'
-        )} argument to specify the account containing the token.`
-      },
-      { text: Colors.url('https://developer.1password.com/docs/cli') }
+        text:
+          `If 1Password secret references are stored in the environment, a ` +
+          `1Password service account token is required to access the secret ` +
+          `values.`
+      }
     ],
     opt: {
       opAccount: {
-        description: `1Password account to use (if signed into multiple); will use environment variable ${Colors.varName('OP_ACCOUNT')} if present`,
+        description:
+          `1Password account to use (if signed into multiple); will use ` +
+          `environment variable ${Colors.varName('OP_ACCOUNT')} if present`,
         hint: 'example.1password.com',
         default: config.opAccount
       },
       opItem: {
-        description: `Name or ID of the 1Password API Credential item storing the 1Password service account token; will use environment variable ${Colors.varName('OP_ITEM')} if present`,
+        description:
+          `Name or ID of the 1Password API Credential item storing the ` +
+          `1Password service account token; will use environment variable ` +
+          `${Colors.varName('OP_ITEM')} if present. Requires the 1Password ` +
+          `CLI tool (${Colors.url('https://developer.1password.com/docs/cli')})`,
         hint: '1Password unique identifier',
         default: config.opItem
       },
       opToken: {
-        description: `1Password service account token; will use environment variable ${Colors.varName('OP_TOKEN')} if present`,
+        description:
+          `1Password service account token; will use environment variable ` +
+          `${Colors.varName('OP_TOKEN')} if present`,
         hint: 'token value',
         secret: true,
         default: config.opToken
