@@ -1,7 +1,7 @@
 {
   "name": "@qui-cli/env-1password",
   "version": "1.2.8",
-  "description": "@qui-cli Plugin: Standardized environment configuration",
+  "description": "@qui-cli Plugin: Standardized environment configuration with 1Password support",
   "homepage": "https://github.com/battis/qui-cli/tree/main/packages/env-1password#readme",
   "repository": {
     "type": "git",

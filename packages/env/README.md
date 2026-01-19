@@ -31,7 +31,19 @@ Any plugin that depends on this plugin can assume that the `.env` file environem
 
 ### 1Password integration
 
-For 1Password integration supporting secret references in `.env`, use [@qui-cli/env-1password](https://npmjs.com/package/@qui-cli/env-1password) in place of this package.
+To access 1Password secret references stored in the environment, install the optional peer dependency [@1password/sdk](https://www.npmjs.com/package/@1password/sdk). For full integration, also install the [1Password CLI](https://developer.1password.com/docs/cli/) which will allow you to look up a [1Password service account](https://developer.1password.com/docs/service-accounts/security/) token by identifier.
+
+The configuration options `opToken`, `opItem`, and `opAccount` may all be passed as command-line options. For example:
+
+```sh
+example --opToken "$(op item get ServiceAccountToken)"
+```
+
+If the [1Password CLI tool](https://developer.1password.com/docs/cli) is installed, then `opItem` and `opAccount` can be used:
+
+```sh
+example --opAccount example.1password.com --opitem "My Token Identifier"
+```
 
 ## Configuration
 
@@ -55,9 +67,25 @@ Whether or not to load the `.env` file into `process.env` immediately. Defaults 
 
 Path to desired `.env` file relative to `root`. Defaults to `'.env'`;
 
+### 1Password configuration
+
+If 1Password secret references are stored in the environment, a 1Password service account token is required to access the secret values.
+
+#### `opToken`
+
+1Password service account token; will use environment variable `OP_TOKEN` if present
+
+#### `opItem`
+
+Name or ID of the 1Password API Credential item storing the 1Password service account token; will use environment variable `OP_ITEM` if present. Requires the [1Password CLI tool](https://developer.1password.com/docs/cli).
+
+#### `opAccount`
+
+1Password account to use (if signed into multiple); will use environment variable `OP_ACCOUNT` if present
+
 ## Options
 
-`Env` adds no user-configurable command line options.
+When the optional peer dependency [@1password/sdk](https://www.npmjs.com/package/@1password/sdk) is installed, `Env` exposes `opAccount`, `opItem`, and `opToken` as command-line options.
 
 ## Initialization
 
