@@ -715,14 +715,13 @@ importers:
         version: 5.9.3
 
   packages/env-1password:
-    dependencies:
+    devDependencies:
       '@1password/sdk':
         specifier: ^0.3.1
         version: 0.3.1
       '@battis/import-package-json':
         specifier: ^0.1.7
         version: 0.1.7
-    devDependencies:
       '@qui-cli/env':
         specifier: workspace:*
         version: link:../env
