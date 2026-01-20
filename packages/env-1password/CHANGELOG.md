@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2.10](https://github.com/battis/qui-cli/compare/env-1password/1.2.9...env-1password/1.2.10) (2026-01-20)
+
+
+### Bug Fixes
+
+* install @1password/sdk as peer ([c0d9b9e](https://github.com/battis/qui-cli/commit/c0d9b9e6f4ccd3d18db134925c43e0026bef9e22))
+
 ## [1.2.9](https://github.com/battis/qui-cli/compare/env-1password/1.2.8...env-1password/1.2.9) (2026-01-19)
 
 ## [1.2.8](https://github.com/battis/qui-cli/compare/env-1password/1.2.7...env-1password/1.2.8) (2026-01-18)
