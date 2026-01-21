@@ -1,25 +1,9 @@
 import * as Plugin from '@qui-cli/plugin';
-import { Base } from '@qui-cli/plugin/dist/Plugin.js';
 import { Root } from '@qui-cli/root';
 import dotenv from 'dotenv';
 import fs from 'node:fs';
 import path from 'node:path';
-import { OPConfiguration } from './1Password/Configuration.js';
-import { isSecretReference } from './1Password/isSecretReference.js';
-
-let OP:
-  | (Base & {
-      get: (ref: string) => Promise<string | undefined>;
-      set: (options: { ref: string; value: string }) => void;
-    })
-  | undefined = undefined;
-try {
-  await import('@1password/sdk');
-  OP = await import('./1Password/index.js');
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-} catch (_) {
-  // @1password/sdk not present
-}
+import { OP } from './1Password/index.js';
 
 export type Configuration = Plugin.Configuration & {
   /**
@@ -35,7 +19,7 @@ export type Configuration = Plugin.Configuration & {
   load?: boolean;
   /** Path to desired `.env` file relative to `root`. Defaults to `'.env'`; */
   path?: string;
-} & OPConfiguration;
+};
 
 export const name = 'env';
 
@@ -50,31 +34,12 @@ export async function configure(proposal: Configuration = {}) {
       config[key] = proposal[key];
     }
   }
-  if (OP?.configure) {
-    OP.configure({
-      opAccount: config.opAccount,
-      opItem: config.opItem,
-      opToken: config.opToken
-    });
-  }
   if (config.load) {
     await parse();
   }
 }
 
-export async function options(): Promise<Plugin.Options> {
-  if (OP?.options) {
-    return await OP.options();
-  } else {
-    return {};
-  }
-}
-
-export async function init(args: Plugin.ExpectedArguments<typeof options>) {
-  if (OP?.init) {
-    await OP.init(args);
-  }
-  await configure(args.values);
+export async function init() {
   parse();
 }
 
@@ -104,14 +69,9 @@ export type GetOptions = {
 export async function get({ key, file = config.path || '.env' }: GetOptions) {
   if (fs.existsSync(toFilePath(file))) {
     const env = await parse(file);
-    if (isSecretReference(env[key])) {
-      if (OP?.get && OP?.configure) {
-        OP.configure({
-          opAccount: env['OP_ACCOUNT'],
-          opItem: env['OP_ITEM'],
-          opToken: env['OP_TOKEN']
-        });
-        return OP?.get(env[key]);
+    if (OP.isSecretReference(env[key])) {
+      if (OP.get) {
+        return await OP.get({ ref: env[key], env });
       } else {
         throw new Error(
           `Attempt to read environment variable ${key} that is a 1Password secret reference without @1password/sdk installed.`
@@ -154,14 +114,9 @@ export async function set({
   const env = dotenv.config({ path: filePath, quiet: true }).parsed || {};
   const { [key]: prev } = env;
   if (ifNotExists === false || !prev) {
-    if (prev && isSecretReference(prev)) {
-      if (OP?.set && OP?.configure) {
-        OP.configure({
-          opAccount: env['OP_ACCOUNT'],
-          opItem: env['OP_ITEM'],
-          opToken: env['OP_TOKEN']
-        });
-        OP.set({ ref: prev, value });
+    if (prev && OP.isSecretReference(prev)) {
+      if (OP.set) {
+        await OP.set({ ref: prev, value, env });
       } else {
         throw new Error(
           `Attmept to update environment variable ${key} that is a 1Password secret reference without installing @1password/sdk`

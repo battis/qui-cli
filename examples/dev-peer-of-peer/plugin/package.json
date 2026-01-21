@@ -1,0 +1,36 @@
+{
+  "name": "@examples/dev-peer-of-peer.plugin",
+  "version": "0.0.0",
+  "private": true,
+  "homepage": "https://github.com/battis/qui-cli/tree/main/examples/dev-peer-of-peer/plugin#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/battis/qui-cli.git",
+    "directory": "examples/dev-peer-of-peer/plugin"
+  },
+  "author": {
+    "name": "Seth Battis",
+    "url": "https://github.com/battis"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "clean": "del ./dist",
+    "build": "run-s build:*",
+    "build:clean": "run-s clean",
+    "build:compile": "tsc"
+  },
+  "devDependencies": {
+    "@qui-cli/env": "workspace:*",
+    "@qui-cli/plugin": "workspace:*",
+    "@tsconfig/node24": "^24.0.4",
+    "del-cli": "^7.0.0",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.9.3"
+  },
+  "peerDependencies": {
+    "@qui-cli/env": ">=5.1",
+    "@qui-cli/plugin": ">=3"
+  }
+}

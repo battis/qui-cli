@@ -5,6 +5,8 @@ packages:
   - examples/dev-plugin/*
   - '!examples/dev-sequenced-commands'
   - examples/dev-sequenced-commands/*
+  - '!examples/dev-peer-of-peer'
+  - examples/dev-peer-of-peer/*
 
 onlyBuiltDependencies:
   - esbuild
