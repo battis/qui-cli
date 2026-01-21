@@ -51,8 +51,7 @@ async function getClient(): Promise<Client> {
       });
       spinner.succeed('1Password loaded');
     } else {
-      const message = 'A 1Password service account token was not provided.';
-      spinner.fail(message);
+      spinner.fail();
       throw new Error('A 1Password service account token was not provided.');
     }
   }

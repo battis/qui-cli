@@ -105,7 +105,12 @@ export async function get({ key, file = config.path || '.env' }: GetOptions) {
   if (fs.existsSync(toFilePath(file))) {
     const env = await parse(file);
     if (isSecretReference(env[key])) {
-      if (OP?.get) {
+      if (OP?.get && OP?.configure) {
+        OP.configure({
+          opAccount: env['OP_ACCOUNT'],
+          opItem: env['OP_ITEM'],
+          opToken: env['OP_TOKEN']
+        });
         return OP?.get(env[key]);
       } else {
         throw new Error(
@@ -146,11 +151,16 @@ export async function set({
   ifNotExists = false
 }: SetOptions) {
   const filePath = toFilePath(file);
-  const { [key]: prev } =
-    dotenv.config({ path: filePath, quiet: true }).parsed || {};
+  const env = dotenv.config({ path: filePath, quiet: true }).parsed || {};
+  const { [key]: prev } = env;
   if (ifNotExists === false || !prev) {
     if (prev && isSecretReference(prev)) {
-      if (OP?.set) {
+      if (OP?.set && OP?.configure) {
+        OP.configure({
+          opAccount: env['OP_ACCOUNT'],
+          opItem: env['OP_ITEM'],
+          opToken: env['OP_TOKEN']
+        });
         OP.set({ ref: prev, value });
       } else {
         throw new Error(
