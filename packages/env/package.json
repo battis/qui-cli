@@ -1,6 +1,6 @@
 {
   "name": "@qui-cli/env",
-  "version": "5.1.0",
+  "version": "5.1.1",
   "description": "@qui-cli Plugin: Standardized environment configuration",
   "homepage": "https://github.com/battis/qui-cli/tree/main/packages/env#readme",
   "repository": {

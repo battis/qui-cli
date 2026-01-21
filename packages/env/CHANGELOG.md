@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.1.1](https://github.com/battis/qui-cli/compare/env/5.1.0...env/5.1.1) (2026-01-21)
+
+
+### Bug Fixes
+
+* configure 1Password before looking up secret references ([7046af5](https://github.com/battis/qui-cli/commit/7046af55ed2720b7b74bd437f335fe49fa8bc00f))
+
 ## [5.1.0](https://github.com/battis/qui-cli/compare/env/5.0.4...env/5.1.0) (2026-01-19)
 
 
