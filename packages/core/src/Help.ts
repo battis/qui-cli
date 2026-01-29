@@ -27,9 +27,6 @@ export function options(): Plugin.Options {
 
 export function init({ values }: Plugin.ExpectedArguments<typeof options>) {
   configure(values);
-}
-
-export function run() {
   if (help) {
     console.log(Core.usage());
     process.exit(0);
