@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [6.0.0](https://github.com/battis/qui-cli/compare/core/5.0.3...core/6.0.0) (2026-01-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* allow errors to be thrown
+
+### Bug Fixes
+
+* allow errors to be thrown ([8bf98db](https://github.com/battis/qui-cli/commit/8bf98db45ebe06514cef02572d515379985c7067))
+* preempt all other plugins if --help is set ([db99833](https://github.com/battis/qui-cli/commit/db9983336135080a5fecff6adbf2e2913f55fa8d))
+
 ## [5.0.3](https://github.com/battis/qui-cli/compare/core/5.0.2...core/5.0.3) (2026-01-18)
 
 
