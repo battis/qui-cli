@@ -1,8 +1,6 @@
-import * as Colors from '@qui-cli/colors/dist/Colors.js';
 import * as Plugin from '@qui-cli/plugin';
 import * as JackSpeak from './JackSpeak.js';
 import * as Positionals from './Positionals.js';
-import { usage } from './Usage.js';
 
 export { Options } from '@qui-cli/plugin';
 export * from './Usage.js';
@@ -60,14 +58,8 @@ export async function init(
 export async function run(
   externalOptions?: Plugin.Options
 ): Promise<Plugin.AccumulatedResults | undefined> {
-  try {
-    if (!initialized) {
-      await init(externalOptions);
-    }
-    return await Plugin.Registrar.run();
-  } catch (e) {
-    const error = e as Error;
-    console.log(`${Colors.error(error.message)}\n\n${usage()}`);
-    process.exit(1);
+  if (!initialized) {
+    await init(externalOptions);
   }
+  return await Plugin.Registrar.run();
 }
