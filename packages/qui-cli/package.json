@@ -27,7 +27,7 @@
     "@qui-cli/colors": "workspace:*"
   },
   "devDependencies": {
-    "@battis/typescript-tricks": "^0.7.6",
+    "@battis/typescript-tricks": "^0.7.7",
     "@inquirer/prompts": "^8.2.0",
     "@qui-cli/core": "workspace:*",
     "@qui-cli/env": "workspace:*",

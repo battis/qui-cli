@@ -27,7 +27,7 @@
     "app-root-path": "^3.1.0"
   },
   "devDependencies": {
-    "@battis/typescript-tricks": "^0.7.6",
+    "@battis/typescript-tricks": "^0.7.7",
     "@qui-cli/plugin": "workspace:*",
     "@tsconfig/node24": "^24.0.4",
     "@types/node": "^24.10.9",
