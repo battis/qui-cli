@@ -24,7 +24,7 @@
     "@battis/eslint-config": "^2.0.9",
     "@battis/prettier-config": "^1.7.3",
     "@commitlint/config-conventional": "^20.3.1",
-    "@commitlint/config-pnpm-scopes": "^20.1.0",
+    "@commitlint/config-pnpm-scopes": "^20.4.0",
     "@examples/dev-command": "workspace:*",
     "@examples/dev-env-1password": "workspace:*",
     "@examples/dev-plugin-lifecycle": "workspace:*",
