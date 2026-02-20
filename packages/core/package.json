@@ -26,7 +26,7 @@
   "dependencies": {
     "@qui-cli/colors": "workspace:*",
     "jackspeak": "^4.1.1",
-    "wrap-ansi": "^9.0.2"
+    "wrap-ansi": "^10.0.0"
   },
   "devDependencies": {
     "@qui-cli/plugin": "workspace:*",
