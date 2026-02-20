@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "@battis/typescript-tricks": "^0.7.6",
-    "@inquirer/prompts": "^8.2.0",
+    "@inquirer/prompts": "^8.2.1",
     "@qui-cli/core": "workspace:*",
     "@qui-cli/env": "workspace:*",
     "@qui-cli/log": "workspace:*",
