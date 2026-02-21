@@ -6,14 +6,15 @@ All notable changes to this project will be documented in this file. See [commit
 
 ### Bug Fixes
 
-- **core** display positional arg documentation ([c97c454](https://github.com/battis/qui-cli/commit/c97c45477df474880b6ae3071d4e9c2f11b17a97))
-- **core** display plugin usage information in LIFO registration order ([a79c8ed](https://github.com/battis/qui-cli/commit/a79c8ed0e0f8dc0bb45a035909e82af37b7ba350))
+- **core@6.0.2** display positional arg documentation ([c97c454](https://github.com/battis/qui-cli/commit/c97c45477df474880b6ae3071d4e9c2f11b17a97))
+- **core@6.0.1** display plugin usage information in LIFO registration order ([a79c8ed](https://github.com/battis/qui-cli/commit/a79c8ed0e0f8dc0bb45a035909e82af37b7ba350))
+- **env@5.1.1** configure 1Password before looking up secret references ([7046af5](https://github.com/battis/qui-cli/commit/7046af55ed2720b7b74bd437f335fe49fa8bc00f))
 
 ## [5.1.0](https://github.com/battis/qui-cli/compare/qui-cli/5.0.4...qui-cli/5.1.0) (2026-01-19)
 
 ### Features
 
-- **env** support 1Password secret references if @1password/sdk (and 1Password) installed ([ed4570c](https://github.com/battis/qui-cli/commit/ed4570cd5cf19ae34fc03f6b88b01f0ebf72e72d))
+- **env@5.1.0** support 1Password secret references if @1password/sdk (and 1Password) installed ([ed4570c](https://github.com/battis/qui-cli/commit/ed4570cd5cf19ae34fc03f6b88b01f0ebf72e72d))
 
 ## [5.0.4](https://github.com/battis/qui-cli/compare/qui-cli/5.0.3...qui-cli/5.0.4) (2026-01-18)
 
