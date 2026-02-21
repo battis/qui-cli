@@ -27,8 +27,8 @@
     "@qui-cli/colors": "workspace:*"
   },
   "devDependencies": {
-    "@battis/typescript-tricks": "^0.7.6",
-    "@inquirer/prompts": "^8.2.0",
+    "@battis/typescript-tricks": "^0.7.7",
+    "@inquirer/prompts": "^8.2.1",
     "@qui-cli/core": "workspace:*",
     "@qui-cli/env": "workspace:*",
     "@qui-cli/log": "workspace:*",
@@ -39,7 +39,7 @@
     "@qui-cli/validators": "workspace:*",
     "@tsconfig/node24": "^24.0.4",
     "@types/is-valid-path": "^0.1.2",
-    "@types/node": "^24.10.9",
+    "@types/node": "^24.10.13",
     "commit-and-tag-version": "^12.6.1",
     "del-cli": "^7.0.0",
     "npm-run-all": "^4.1.5",

@@ -25,14 +25,14 @@
   },
   "dependencies": {
     "@qui-cli/colors": "workspace:*",
-    "ora": "^9.0.0",
+    "ora": "^9.3.0",
     "shelljs": "^0.10.0"
   },
   "devDependencies": {
     "@qui-cli/log": "workspace:*",
     "@qui-cli/plugin": "workspace:*",
     "@tsconfig/node24": "^24.0.4",
-    "@types/node": "^24.10.9",
+    "@types/node": "^24.10.13",
     "@types/shelljs": "^0.10.0",
     "commit-and-tag-version": "^12.6.1",
     "del-cli": "^7.0.0",
