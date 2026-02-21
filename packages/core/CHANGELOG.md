@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [6.0.1](https://github.com/battis/qui-cli/compare/core/6.0.0...core/6.0.1) (2026-02-21)
+
+
+### Bug Fixes
+
+* display plugin usage information in LIFO registration order ([a79c8ed](https://github.com/battis/qui-cli/commit/a79c8ed0e0f8dc0bb45a035909e82af37b7ba350))
+
 ## [6.0.0](https://github.com/battis/qui-cli/compare/core/5.0.3...core/6.0.0) (2026-01-29)
 
 
