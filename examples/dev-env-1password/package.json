@@ -27,9 +27,10 @@
     "example:env": "dev-env-1password --opItem myToken"
   },
   "dependencies": {
+    "@1password/sdk": "^0.4.0",
     "@qui-cli/colors": "workspace:*",
     "@qui-cli/core": "workspace:*",
-    "@qui-cli/env-1password": "workspace:*",
+    "@qui-cli/env": "workspace:*",
     "@qui-cli/log": "workspace:*"
   },
   "devDependencies": {
