@@ -8,13 +8,19 @@ Demonstrate using `@qui-cli/markdown` to generate a README
 - Call `Positionals.requireNoMoreThan(0)` immediately before `Core.init()` to override any required positionals from the imported command.
 - Note that the command name in the documentation is set by the name of the script that invokes `@qui-cli/markdown` (`./scripts/dev-readme` &rarr; `dev-readme`)
 
-### dev-readme options
-
 ## Usage:
 
 ```bash
-  dev-readme -Ah --z=<buzz> --bargle --commands --silent --logging --baz=<baz> --biz=<biz> --pi=<pi> --a=<a> --opAccount=<example.1password.com> --opItem=<1Password unique identifier> --opToken=<token value> --logFilePath=<logFilePath> --stdoutLevel=<all|trace|debug|info|warning|error|fatal|off> --fileLevel=<all|trace|debug|info|warning|error|fatal|off> foo bar
+  dev-readme -hA --z=<buzz> --bargle --commands --silent --logging --baz=<baz> --biz=<biz> --pi=<pi> --a=<a> --opAccount=<example.1password.com> --opItem=<1Password unique identifier> --opToken=<token value> --logFilePath=<logFilePath> --stdoutLevel=<all|trace|debug|info|warning|error|fatal|off> --fileLevel=<all|trace|debug|info|warning|error|fatal|off> foo bar
 ```
+
+## Arguments
+
+#### `-h --help`
+
+Show this usage information
+
+### dev-readme options
 
 #### `-A --argle`
 
@@ -83,11 +89,3 @@ Log level to console stdout (Default: "info")
 #### `--fileLevel=<all|trace|debug|info|warning|error|fatal|off>`
 
 Log level to log file if --logFilePath provided (Default: "all")
-
-### Usage information
-
-## Arguments
-
-#### `-h --help`
-
-Get usage information

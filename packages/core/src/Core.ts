@@ -1,4 +1,6 @@
 import * as Plugin from '@qui-cli/plugin';
+import { Base } from '@qui-cli/plugin/dist/Plugin.js';
+import * as Help from './Help.js';
 import * as JackSpeak from './JackSpeak.js';
 import * as Positionals from './Positionals.js';
 
@@ -45,6 +47,16 @@ export async function configure(config: Configuration = {}) {
   await Plugin.Registrar.configure({ positionals, jackspeak });
 }
 
+function requireUnusedOptions(
+  plugin: Base
+): plugin is Base & { options: NonNullable<Base['options']> } {
+  return (
+    !!plugin.options &&
+    plugin.name !== Positionals.name &&
+    plugin.name !== Help.name
+  );
+}
+
 export async function init(
   externalOptions?: Plugin.Options
 ): Promise<Plugin.Arguments<Plugin.Options>> {
@@ -53,27 +65,25 @@ export async function init(
       `Already initialized with user-provided command line arguments.`
     );
   }
-  if (lifoUsage) {
-    // lifo plugin usage order
-    if (externalOptions) {
-      JackSpeak.args(Plugin.documentDefaults(externalOptions));
-    }
-    for (const plugin of Plugin.Registrar.registered().toReversed()) {
-      if (plugin.options) {
-        JackSpeak.args(await plugin.options());
-      }
-    }
-  } else {
-    // fifo plugin usage order
-    for (const plugin of Plugin.Registrar.registered()) {
-      if (plugin.options) {
-        JackSpeak.args(await plugin.options());
-      }
-    }
-    if (externalOptions) {
-      JackSpeak.args(Plugin.documentDefaults(externalOptions));
-    }
+  JackSpeak.args(Help.options());
+  JackSpeak.args(Positionals.options());
+  const usage = [
+    ...(await Promise.all(
+      Plugin.Registrar.registered()
+        .filter(requireUnusedOptions)
+        .map(async (plugin) => await plugin.options())
+    ))
+  ];
+  if (externalOptions) {
+    usage.push(Plugin.documentDefaults(externalOptions));
   }
+  if (lifoUsage) {
+    usage.reverse();
+  }
+  for (const options of usage) {
+    JackSpeak.args(options);
+  }
+
   const args = JackSpeak.parse();
   await Plugin.Registrar.init(args);
   initialized = true;

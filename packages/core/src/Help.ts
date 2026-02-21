@@ -16,10 +16,9 @@ export function configure(config: Configuration = {}) {
 
 export function options(): Plugin.Options {
   return {
-    man: [{ level: 1, text: 'Usage information' }],
     flag: {
       help: {
-        description: 'Get usage information',
+        description: 'Show this usage information',
         short: 'h'
       }
     }

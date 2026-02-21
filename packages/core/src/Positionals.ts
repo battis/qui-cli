@@ -161,6 +161,23 @@ export function requireNoMoreThanUnnamedArgs(maxUnnamed: number) {
   requireNoMoreThan(namedCount() + maxUnnamed);
 }
 
+export function options(): Plugin.Options {
+  const man: Plugin.Options['man'] = [];
+  for (const arg in configSet) {
+    man.push({
+      level: 2,
+      text: `${Colors.positionalArg(arg)}${configSet[arg].hint ? `=<${configSet[arg].hint}>` : ''}`
+    });
+    if (configSet[arg].description) {
+      man.push({ text: configSet[arg].description });
+    }
+  }
+  if (man.length > 0) {
+    man.unshift({ level: 1, text: 'Positional arguments' });
+  }
+  return { man };
+}
+
 export function init(args: Plugin.ExpectedArguments<() => Plugin.Options>) {
   positionals = [...args.positionals];
 }

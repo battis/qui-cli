@@ -5,7 +5,7 @@ export const name = 'only-named';
 
 Positionals.allowOnlyNamedArgs();
 Positionals.require({
-  first: { description: 'First positional argument' },
+  first: { description: 'First positional argument', hint: 'foo' },
   second: { description: 'Second positional argument' }
 });
 
