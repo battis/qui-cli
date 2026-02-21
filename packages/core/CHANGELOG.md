@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [6.0.2](https://github.com/battis/qui-cli/compare/core/6.0.1...core/6.0.2) (2026-02-21)
+
+
+### Bug Fixes
+
+* display positional arg documentation ([c97c454](https://github.com/battis/qui-cli/commit/c97c45477df474880b6ae3071d4e9c2f11b17a97))
+
 ## [6.0.1](https://github.com/battis/qui-cli/compare/core/6.0.0...core/6.0.1) (2026-02-21)
 
 
