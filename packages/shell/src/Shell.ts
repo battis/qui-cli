@@ -44,6 +44,7 @@ export function configure(config: Configuration = {}) {
 
 export function options(): Plugin.Options {
   return {
+    man: [{ level: 1, text: 'Shell command options' }],
     flag: {
       commands: {
         description: `Include shell commands in log`,
