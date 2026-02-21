@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [commit
 
 ## [5.1.2](https://github.com/battis/qui-cli/compare/qui-cli/5.1.1...qui-cli/5.1.2) (2026-02-21)
 
+### Bug Fixes
+
+- **shell@3.1.3** include section header in usage ([122f500](https://github.com/battis/qui-cli/commit/122f500ee5e201311a26e02ccca0cd31eece24bb))
+
 ## [5.1.1](https://github.com/battis/qui-cli/compare/qui-cli/5.1.0...qui-cli/5.1.1) (2026-02-21)
 
 ### Bug Fixes
