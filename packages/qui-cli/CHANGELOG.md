@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file. See [commit
 
 ## [5.1.1](https://github.com/battis/qui-cli/compare/qui-cli/5.1.0...qui-cli/5.1.1) (2026-02-21)
 
+### Bug Fixes
+
+- **core** display positional arg documentation ([c97c454](https://github.com/battis/qui-cli/commit/c97c45477df474880b6ae3071d4e9c2f11b17a97))
+- **core** display plugin usage information in LIFO registration order ([a79c8ed](https://github.com/battis/qui-cli/commit/a79c8ed0e0f8dc0bb45a035909e82af37b7ba350))
+
 ## [5.1.0](https://github.com/battis/qui-cli/compare/qui-cli/5.0.4...qui-cli/5.1.0) (2026-01-19)
 
 ### Features
