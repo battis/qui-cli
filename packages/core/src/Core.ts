@@ -6,6 +6,16 @@ export { Options } from '@qui-cli/plugin';
 export * from './Usage.js';
 
 export type Configuration = Plugin.Registrar.Configuration & {
+  /**
+   * Usage information for plugins is diplayed in LIFO (last-in, first-out)
+   * order, putting the plug-in that requires other plug-ins at the top and the
+   * plug-ins required by other plug-ins at the bottom.
+   *
+   * To display plugins in FIFO order (as in qui-cli/core@<6.0.1), set
+   * `lifoUsage` to false
+   */
+  lifoUsage?: boolean;
+
   /** @deprecated Use {@link JackSpeak} core plugin */
   core?: JackSpeak.Configuration & {
     /** @deprecated Use {@link Positionals} core plugin */
@@ -14,8 +24,10 @@ export type Configuration = Plugin.Registrar.Configuration & {
 };
 
 let initialized = false;
+let lifoUsage = true;
 
 export async function configure(config: Configuration = {}) {
+  lifoUsage = Plugin.hydrate(config.lifoUsage, lifoUsage);
   const { core = {}, jackspeak: jackOptions, positionals = {} } = config;
   const { requirePositionals, ...deprecated } = core;
   const jackspeak = {
@@ -41,13 +53,26 @@ export async function init(
       `Already initialized with user-provided command line arguments.`
     );
   }
-  for (const plugin of Plugin.Registrar.registered()) {
-    if (plugin.options) {
-      JackSpeak.args(await plugin.options());
+  if (lifoUsage) {
+    // lifo plugin usage order
+    if (externalOptions) {
+      JackSpeak.args(Plugin.documentDefaults(externalOptions));
     }
-  }
-  if (externalOptions) {
-    JackSpeak.args(Plugin.documentDefaults(externalOptions));
+    for (const plugin of Plugin.Registrar.registered().toReversed()) {
+      if (plugin.options) {
+        JackSpeak.args(await plugin.options());
+      }
+    }
+  } else {
+    // fifo plugin usage order
+    for (const plugin of Plugin.Registrar.registered()) {
+      if (plugin.options) {
+        JackSpeak.args(await plugin.options());
+      }
+    }
+    if (externalOptions) {
+      JackSpeak.args(Plugin.documentDefaults(externalOptions));
+    }
   }
   const args = JackSpeak.parse();
   await Plugin.Registrar.init(args);
