@@ -64,6 +64,8 @@ Name or ID of the 1Password API Credential item storing the 1Password service ac
 
 1Password service account token; will use environment variable OP_TOKEN if present
 
+### Shell command options
+
 #### `--commands`
 
 Include shell commands in log (Default: true, use --no-commands to disable)
