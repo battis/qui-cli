@@ -57,14 +57,14 @@ importers:
         specifier: ^24.0.4
         version: 24.0.4
       '@types/node':
-        specifier: ^24.10.13
-        version: 24.10.13
+        specifier: ^25.3.0
+        version: 25.3.0
       lerna:
         specifier: ^9.0.4
-        version: 9.0.4(@types/node@24.10.13)
+        version: 9.0.4(@types/node@25.3.0)
       monorepo-package-paths:
         specifier: ^0.4.3
-        version: 0.4.3(@types/node@24.10.13)(prettier@3.8.0)
+        version: 0.4.3(@types/node@25.3.0)(prettier@3.8.0)
       npm-run-all:
         specifier: ^4.1.5
         version: 4.1.5
@@ -668,8 +668,8 @@ importers:
         specifier: ^24.0.4
         version: 24.0.4
       '@types/node':
-        specifier: ^24.10.13
-        version: 24.10.13
+        specifier: ^25.3.0
+        version: 25.3.0
       commit-and-tag-version:
         specifier: ^12.6.1
         version: 12.6.1
@@ -702,8 +702,8 @@ importers:
         specifier: ^24.0.4
         version: 24.0.4
       '@types/node':
-        specifier: ^24.10.13
-        version: 24.10.13
+        specifier: ^25.3.0
+        version: 25.3.0
       commit-and-tag-version:
         specifier: ^12.6.1
         version: 12.6.1
@@ -751,8 +751,8 @@ importers:
         specifier: ^24.0.4
         version: 24.0.4
       '@types/node':
-        specifier: ^24.10.13
-        version: 24.10.13
+        specifier: ^25.3.0
+        version: 25.3.0
       commit-and-tag-version:
         specifier: ^12.6.1
         version: 12.6.1
@@ -791,8 +791,8 @@ importers:
         specifier: ^24.0.4
         version: 24.0.4
       '@types/node':
-        specifier: ^24.10.13
-        version: 24.10.13
+        specifier: ^25.3.0
+        version: 25.3.0
       commit-and-tag-version:
         specifier: ^12.6.1
         version: 12.6.1
@@ -828,8 +828,8 @@ importers:
         specifier: ^24.0.4
         version: 24.0.4
       '@types/node':
-        specifier: ^24.10.13
-        version: 24.10.13
+        specifier: ^25.3.0
+        version: 25.3.0
       commit-and-tag-version:
         specifier: ^12.6.1
         version: 12.6.1
@@ -856,8 +856,8 @@ importers:
         specifier: ^24.0.4
         version: 24.0.4
       '@types/node':
-        specifier: ^24.10.13
-        version: 24.10.13
+        specifier: ^25.3.0
+        version: 25.3.0
       commit-and-tag-version:
         specifier: ^12.6.1
         version: 12.6.1
@@ -916,7 +916,7 @@ importers:
         version: 0.7.7
       '@inquirer/prompts':
         specifier: ^8.2.1
-        version: 8.2.1(@types/node@24.10.13)
+        version: 8.2.1(@types/node@25.3.0)
       '@qui-cli/core':
         specifier: workspace:*
         version: link:../core
@@ -948,8 +948,8 @@ importers:
         specifier: ^0.1.2
         version: 0.1.2
       '@types/node':
-        specifier: ^24.10.13
-        version: 24.10.13
+        specifier: ^25.3.0
+        version: 25.3.0
       commit-and-tag-version:
         specifier: ^12.6.1
         version: 12.6.1
@@ -982,8 +982,8 @@ importers:
         specifier: ^24.0.4
         version: 24.0.4
       '@types/node':
-        specifier: ^24.10.13
-        version: 24.10.13
+        specifier: ^25.3.0
+        version: 25.3.0
       commit-and-tag-version:
         specifier: ^12.6.1
         version: 12.6.1
@@ -1019,8 +1019,8 @@ importers:
         specifier: ^24.0.4
         version: 24.0.4
       '@types/node':
-        specifier: ^24.10.13
-        version: 24.10.13
+        specifier: ^25.3.0
+        version: 25.3.0
       '@types/shelljs':
         specifier: ^0.10.0
         version: 0.10.0
@@ -1056,8 +1056,8 @@ importers:
         specifier: ^24.0.4
         version: 24.0.4
       '@types/node':
-        specifier: ^24.10.13
-        version: 24.10.13
+        specifier: ^25.3.0
+        version: 25.3.0
       commit-and-tag-version:
         specifier: ^12.6.1
         version: 12.6.1
@@ -1096,8 +1096,8 @@ importers:
         specifier: ^0.1.2
         version: 0.1.2
       '@types/node':
-        specifier: ^24.10.13
-        version: 24.10.13
+        specifier: ^25.3.0
+        version: 25.3.0
       commit-and-tag-version:
         specifier: ^12.6.1
         version: 12.6.1
@@ -2121,9 +2121,6 @@ packages:
 
   '@types/ms@2.1.0':
     resolution: {integrity: sha512-GsCCIZDE/p3i96vtEqx+7dBUGXrc7zeSK3wwPHIaRThS+9OhWIXRqzs4d6k1SVU8g91DrNRWxWUGhp5KXQb2VA==}
-
-  '@types/node@24.10.13':
-    resolution: {integrity: sha512-oH72nZRfDv9lADUBSo104Aq7gPHpQZc4BTx38r9xf9pg5LfP6EzSyH2n7qFmmxRQXh7YlUXODcYsg6PuTDSxGg==}
 
   '@types/node@25.3.0':
     resolution: {integrity: sha512-4K3bqJpXpqfg2XKGK9bpDTc6xO/xoUP/RBWS7AtRMug6zZFaRekiLzjVtAoZMquxoAbzBvy5nxQ7veS5eYzf8A==}
@@ -5303,9 +5300,6 @@ packages:
     resolution: {integrity: sha512-eXL4nmJT7oCpkZsHZUOJo8hcX3GbsiDOa0Qu9F646fi8dT3XuSVopVqAcEiVzSKKH7UoDti23wNX3qGFxcW5Qg==}
     engines: {node: '>=0.10.0'}
 
-  undici-types@7.16.0:
-    resolution: {integrity: sha512-Zz+aZWSj8LE6zoxD+xrjh4VfkIG8Ya6LvYkZqtUQGJPZjYl53ypCaUwWqo7eI0x66KBGeRo+mlBEkMSeSZ38Nw==}
-
   undici-types@7.18.2:
     resolution: {integrity: sha512-AsuCzffGHJybSaRrmr5eHr81mwJU3kjw6M+uprWvCXiNeN9SOGwQ3Jn8jb8m3Z6izVgknn1R0FTCEAP2QrLY/w==}
 
@@ -5840,24 +5834,15 @@ snapshots:
 
   '@inquirer/ansi@2.0.3': {}
 
-  '@inquirer/checkbox@4.3.2(@types/node@24.10.13)':
+  '@inquirer/checkbox@4.3.2(@types/node@25.3.0)':
     dependencies:
       '@inquirer/ansi': 1.0.2
-      '@inquirer/core': 10.3.2(@types/node@24.10.13)
+      '@inquirer/core': 10.3.2(@types/node@25.3.0)
       '@inquirer/figures': 1.0.15
-      '@inquirer/type': 3.0.10(@types/node@24.10.13)
+      '@inquirer/type': 3.0.10(@types/node@25.3.0)
       yoctocolors-cjs: 2.1.3
     optionalDependencies:
-      '@types/node': 24.10.13
-
-  '@inquirer/checkbox@5.0.7(@types/node@24.10.13)':
-    dependencies:
-      '@inquirer/ansi': 2.0.3
-      '@inquirer/core': 11.1.4(@types/node@24.10.13)
-      '@inquirer/figures': 2.0.3
-      '@inquirer/type': 4.0.3(@types/node@24.10.13)
-    optionalDependencies:
-      '@types/node': 24.10.13
+      '@types/node': 25.3.0
 
   '@inquirer/checkbox@5.0.7(@types/node@25.3.0)':
     dependencies:
@@ -5868,19 +5853,12 @@ snapshots:
     optionalDependencies:
       '@types/node': 25.3.0
 
-  '@inquirer/confirm@5.1.21(@types/node@24.10.13)':
+  '@inquirer/confirm@5.1.21(@types/node@25.3.0)':
     dependencies:
-      '@inquirer/core': 10.3.2(@types/node@24.10.13)
-      '@inquirer/type': 3.0.10(@types/node@24.10.13)
+      '@inquirer/core': 10.3.2(@types/node@25.3.0)
+      '@inquirer/type': 3.0.10(@types/node@25.3.0)
     optionalDependencies:
-      '@types/node': 24.10.13
-
-  '@inquirer/confirm@6.0.7(@types/node@24.10.13)':
-    dependencies:
-      '@inquirer/core': 11.1.4(@types/node@24.10.13)
-      '@inquirer/type': 4.0.3(@types/node@24.10.13)
-    optionalDependencies:
-      '@types/node': 24.10.13
+      '@types/node': 25.3.0
 
   '@inquirer/confirm@6.0.7(@types/node@25.3.0)':
     dependencies:
@@ -5889,30 +5867,18 @@ snapshots:
     optionalDependencies:
       '@types/node': 25.3.0
 
-  '@inquirer/core@10.3.2(@types/node@24.10.13)':
+  '@inquirer/core@10.3.2(@types/node@25.3.0)':
     dependencies:
       '@inquirer/ansi': 1.0.2
       '@inquirer/figures': 1.0.15
-      '@inquirer/type': 3.0.10(@types/node@24.10.13)
+      '@inquirer/type': 3.0.10(@types/node@25.3.0)
       cli-width: 4.1.0
       mute-stream: 2.0.0
       signal-exit: 4.1.0
       wrap-ansi: 6.2.0
       yoctocolors-cjs: 2.1.3
     optionalDependencies:
-      '@types/node': 24.10.13
-
-  '@inquirer/core@11.1.4(@types/node@24.10.13)':
-    dependencies:
-      '@inquirer/ansi': 2.0.3
-      '@inquirer/figures': 2.0.3
-      '@inquirer/type': 4.0.3(@types/node@24.10.13)
-      cli-width: 4.1.0
-      fast-wrap-ansi: 0.2.0
-      mute-stream: 3.0.0
-      signal-exit: 4.1.0
-    optionalDependencies:
-      '@types/node': 24.10.13
+      '@types/node': 25.3.0
 
   '@inquirer/core@11.1.4(@types/node@25.3.0)':
     dependencies:
@@ -5926,21 +5892,13 @@ snapshots:
     optionalDependencies:
       '@types/node': 25.3.0
 
-  '@inquirer/editor@4.2.23(@types/node@24.10.13)':
+  '@inquirer/editor@4.2.23(@types/node@25.3.0)':
     dependencies:
-      '@inquirer/core': 10.3.2(@types/node@24.10.13)
-      '@inquirer/external-editor': 1.0.3(@types/node@24.10.13)
-      '@inquirer/type': 3.0.10(@types/node@24.10.13)
+      '@inquirer/core': 10.3.2(@types/node@25.3.0)
+      '@inquirer/external-editor': 1.0.3(@types/node@25.3.0)
+      '@inquirer/type': 3.0.10(@types/node@25.3.0)
     optionalDependencies:
-      '@types/node': 24.10.13
-
-  '@inquirer/editor@5.0.7(@types/node@24.10.13)':
-    dependencies:
-      '@inquirer/core': 11.1.4(@types/node@24.10.13)
-      '@inquirer/external-editor': 2.0.3(@types/node@24.10.13)
-      '@inquirer/type': 4.0.3(@types/node@24.10.13)
-    optionalDependencies:
-      '@types/node': 24.10.13
+      '@types/node': 25.3.0
 
   '@inquirer/editor@5.0.7(@types/node@25.3.0)':
     dependencies:
@@ -5950,20 +5908,13 @@ snapshots:
     optionalDependencies:
       '@types/node': 25.3.0
 
-  '@inquirer/expand@4.0.23(@types/node@24.10.13)':
+  '@inquirer/expand@4.0.23(@types/node@25.3.0)':
     dependencies:
-      '@inquirer/core': 10.3.2(@types/node@24.10.13)
-      '@inquirer/type': 3.0.10(@types/node@24.10.13)
+      '@inquirer/core': 10.3.2(@types/node@25.3.0)
+      '@inquirer/type': 3.0.10(@types/node@25.3.0)
       yoctocolors-cjs: 2.1.3
     optionalDependencies:
-      '@types/node': 24.10.13
-
-  '@inquirer/expand@5.0.7(@types/node@24.10.13)':
-    dependencies:
-      '@inquirer/core': 11.1.4(@types/node@24.10.13)
-      '@inquirer/type': 4.0.3(@types/node@24.10.13)
-    optionalDependencies:
-      '@types/node': 24.10.13
+      '@types/node': 25.3.0
 
   '@inquirer/expand@5.0.7(@types/node@25.3.0)':
     dependencies:
@@ -5972,19 +5923,12 @@ snapshots:
     optionalDependencies:
       '@types/node': 25.3.0
 
-  '@inquirer/external-editor@1.0.3(@types/node@24.10.13)':
+  '@inquirer/external-editor@1.0.3(@types/node@25.3.0)':
     dependencies:
       chardet: 2.1.1
       iconv-lite: 0.7.2
     optionalDependencies:
-      '@types/node': 24.10.13
-
-  '@inquirer/external-editor@2.0.3(@types/node@24.10.13)':
-    dependencies:
-      chardet: 2.1.1
-      iconv-lite: 0.7.2
-    optionalDependencies:
-      '@types/node': 24.10.13
+      '@types/node': 25.3.0
 
   '@inquirer/external-editor@2.0.3(@types/node@25.3.0)':
     dependencies:
@@ -5997,19 +5941,12 @@ snapshots:
 
   '@inquirer/figures@2.0.3': {}
 
-  '@inquirer/input@4.3.1(@types/node@24.10.13)':
+  '@inquirer/input@4.3.1(@types/node@25.3.0)':
     dependencies:
-      '@inquirer/core': 10.3.2(@types/node@24.10.13)
-      '@inquirer/type': 3.0.10(@types/node@24.10.13)
+      '@inquirer/core': 10.3.2(@types/node@25.3.0)
+      '@inquirer/type': 3.0.10(@types/node@25.3.0)
     optionalDependencies:
-      '@types/node': 24.10.13
-
-  '@inquirer/input@5.0.7(@types/node@24.10.13)':
-    dependencies:
-      '@inquirer/core': 11.1.4(@types/node@24.10.13)
-      '@inquirer/type': 4.0.3(@types/node@24.10.13)
-    optionalDependencies:
-      '@types/node': 24.10.13
+      '@types/node': 25.3.0
 
   '@inquirer/input@5.0.7(@types/node@25.3.0)':
     dependencies:
@@ -6018,19 +5955,12 @@ snapshots:
     optionalDependencies:
       '@types/node': 25.3.0
 
-  '@inquirer/number@3.0.23(@types/node@24.10.13)':
+  '@inquirer/number@3.0.23(@types/node@25.3.0)':
     dependencies:
-      '@inquirer/core': 10.3.2(@types/node@24.10.13)
-      '@inquirer/type': 3.0.10(@types/node@24.10.13)
+      '@inquirer/core': 10.3.2(@types/node@25.3.0)
+      '@inquirer/type': 3.0.10(@types/node@25.3.0)
     optionalDependencies:
-      '@types/node': 24.10.13
-
-  '@inquirer/number@4.0.7(@types/node@24.10.13)':
-    dependencies:
-      '@inquirer/core': 11.1.4(@types/node@24.10.13)
-      '@inquirer/type': 4.0.3(@types/node@24.10.13)
-    optionalDependencies:
-      '@types/node': 24.10.13
+      '@types/node': 25.3.0
 
   '@inquirer/number@4.0.7(@types/node@25.3.0)':
     dependencies:
@@ -6039,21 +5969,13 @@ snapshots:
     optionalDependencies:
       '@types/node': 25.3.0
 
-  '@inquirer/password@4.0.23(@types/node@24.10.13)':
+  '@inquirer/password@4.0.23(@types/node@25.3.0)':
     dependencies:
       '@inquirer/ansi': 1.0.2
-      '@inquirer/core': 10.3.2(@types/node@24.10.13)
-      '@inquirer/type': 3.0.10(@types/node@24.10.13)
+      '@inquirer/core': 10.3.2(@types/node@25.3.0)
+      '@inquirer/type': 3.0.10(@types/node@25.3.0)
     optionalDependencies:
-      '@types/node': 24.10.13
-
-  '@inquirer/password@5.0.7(@types/node@24.10.13)':
-    dependencies:
-      '@inquirer/ansi': 2.0.3
-      '@inquirer/core': 11.1.4(@types/node@24.10.13)
-      '@inquirer/type': 4.0.3(@types/node@24.10.13)
-    optionalDependencies:
-      '@types/node': 24.10.13
+      '@types/node': 25.3.0
 
   '@inquirer/password@5.0.7(@types/node@25.3.0)':
     dependencies:
@@ -6063,35 +5985,20 @@ snapshots:
     optionalDependencies:
       '@types/node': 25.3.0
 
-  '@inquirer/prompts@7.10.1(@types/node@24.10.13)':
+  '@inquirer/prompts@7.10.1(@types/node@25.3.0)':
     dependencies:
-      '@inquirer/checkbox': 4.3.2(@types/node@24.10.13)
-      '@inquirer/confirm': 5.1.21(@types/node@24.10.13)
-      '@inquirer/editor': 4.2.23(@types/node@24.10.13)
-      '@inquirer/expand': 4.0.23(@types/node@24.10.13)
-      '@inquirer/input': 4.3.1(@types/node@24.10.13)
-      '@inquirer/number': 3.0.23(@types/node@24.10.13)
-      '@inquirer/password': 4.0.23(@types/node@24.10.13)
-      '@inquirer/rawlist': 4.1.11(@types/node@24.10.13)
-      '@inquirer/search': 3.2.2(@types/node@24.10.13)
-      '@inquirer/select': 4.4.2(@types/node@24.10.13)
+      '@inquirer/checkbox': 4.3.2(@types/node@25.3.0)
+      '@inquirer/confirm': 5.1.21(@types/node@25.3.0)
+      '@inquirer/editor': 4.2.23(@types/node@25.3.0)
+      '@inquirer/expand': 4.0.23(@types/node@25.3.0)
+      '@inquirer/input': 4.3.1(@types/node@25.3.0)
+      '@inquirer/number': 3.0.23(@types/node@25.3.0)
+      '@inquirer/password': 4.0.23(@types/node@25.3.0)
+      '@inquirer/rawlist': 4.1.11(@types/node@25.3.0)
+      '@inquirer/search': 3.2.2(@types/node@25.3.0)
+      '@inquirer/select': 4.4.2(@types/node@25.3.0)
     optionalDependencies:
-      '@types/node': 24.10.13
-
-  '@inquirer/prompts@8.2.1(@types/node@24.10.13)':
-    dependencies:
-      '@inquirer/checkbox': 5.0.7(@types/node@24.10.13)
-      '@inquirer/confirm': 6.0.7(@types/node@24.10.13)
-      '@inquirer/editor': 5.0.7(@types/node@24.10.13)
-      '@inquirer/expand': 5.0.7(@types/node@24.10.13)
-      '@inquirer/input': 5.0.7(@types/node@24.10.13)
-      '@inquirer/number': 4.0.7(@types/node@24.10.13)
-      '@inquirer/password': 5.0.7(@types/node@24.10.13)
-      '@inquirer/rawlist': 5.2.3(@types/node@24.10.13)
-      '@inquirer/search': 4.1.3(@types/node@24.10.13)
-      '@inquirer/select': 5.0.7(@types/node@24.10.13)
-    optionalDependencies:
-      '@types/node': 24.10.13
+      '@types/node': 25.3.0
 
   '@inquirer/prompts@8.2.1(@types/node@25.3.0)':
     dependencies:
@@ -6108,20 +6015,13 @@ snapshots:
     optionalDependencies:
       '@types/node': 25.3.0
 
-  '@inquirer/rawlist@4.1.11(@types/node@24.10.13)':
+  '@inquirer/rawlist@4.1.11(@types/node@25.3.0)':
     dependencies:
-      '@inquirer/core': 10.3.2(@types/node@24.10.13)
-      '@inquirer/type': 3.0.10(@types/node@24.10.13)
+      '@inquirer/core': 10.3.2(@types/node@25.3.0)
+      '@inquirer/type': 3.0.10(@types/node@25.3.0)
       yoctocolors-cjs: 2.1.3
     optionalDependencies:
-      '@types/node': 24.10.13
-
-  '@inquirer/rawlist@5.2.3(@types/node@24.10.13)':
-    dependencies:
-      '@inquirer/core': 11.1.4(@types/node@24.10.13)
-      '@inquirer/type': 4.0.3(@types/node@24.10.13)
-    optionalDependencies:
-      '@types/node': 24.10.13
+      '@types/node': 25.3.0
 
   '@inquirer/rawlist@5.2.3(@types/node@25.3.0)':
     dependencies:
@@ -6130,22 +6030,14 @@ snapshots:
     optionalDependencies:
       '@types/node': 25.3.0
 
-  '@inquirer/search@3.2.2(@types/node@24.10.13)':
+  '@inquirer/search@3.2.2(@types/node@25.3.0)':
     dependencies:
-      '@inquirer/core': 10.3.2(@types/node@24.10.13)
+      '@inquirer/core': 10.3.2(@types/node@25.3.0)
       '@inquirer/figures': 1.0.15
-      '@inquirer/type': 3.0.10(@types/node@24.10.13)
+      '@inquirer/type': 3.0.10(@types/node@25.3.0)
       yoctocolors-cjs: 2.1.3
     optionalDependencies:
-      '@types/node': 24.10.13
-
-  '@inquirer/search@4.1.3(@types/node@24.10.13)':
-    dependencies:
-      '@inquirer/core': 11.1.4(@types/node@24.10.13)
-      '@inquirer/figures': 2.0.3
-      '@inquirer/type': 4.0.3(@types/node@24.10.13)
-    optionalDependencies:
-      '@types/node': 24.10.13
+      '@types/node': 25.3.0
 
   '@inquirer/search@4.1.3(@types/node@25.3.0)':
     dependencies:
@@ -6155,24 +6047,15 @@ snapshots:
     optionalDependencies:
       '@types/node': 25.3.0
 
-  '@inquirer/select@4.4.2(@types/node@24.10.13)':
+  '@inquirer/select@4.4.2(@types/node@25.3.0)':
     dependencies:
       '@inquirer/ansi': 1.0.2
-      '@inquirer/core': 10.3.2(@types/node@24.10.13)
+      '@inquirer/core': 10.3.2(@types/node@25.3.0)
       '@inquirer/figures': 1.0.15
-      '@inquirer/type': 3.0.10(@types/node@24.10.13)
+      '@inquirer/type': 3.0.10(@types/node@25.3.0)
       yoctocolors-cjs: 2.1.3
     optionalDependencies:
-      '@types/node': 24.10.13
-
-  '@inquirer/select@5.0.7(@types/node@24.10.13)':
-    dependencies:
-      '@inquirer/ansi': 2.0.3
-      '@inquirer/core': 11.1.4(@types/node@24.10.13)
-      '@inquirer/figures': 2.0.3
-      '@inquirer/type': 4.0.3(@types/node@24.10.13)
-    optionalDependencies:
-      '@types/node': 24.10.13
+      '@types/node': 25.3.0
 
   '@inquirer/select@5.0.7(@types/node@25.3.0)':
     dependencies:
@@ -6183,13 +6066,9 @@ snapshots:
     optionalDependencies:
       '@types/node': 25.3.0
 
-  '@inquirer/type@3.0.10(@types/node@24.10.13)':
+  '@inquirer/type@3.0.10(@types/node@25.3.0)':
     optionalDependencies:
-      '@types/node': 24.10.13
-
-  '@inquirer/type@4.0.3(@types/node@24.10.13)':
-    optionalDependencies:
-      '@types/node': 24.10.13
+      '@types/node': 25.3.0
 
   '@inquirer/type@4.0.3(@types/node@25.3.0)':
     optionalDependencies:
@@ -6231,7 +6110,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  '@lerna/create@9.0.4(@types/node@24.10.13)(typescript@5.9.3)':
+  '@lerna/create@9.0.4(@types/node@25.3.0)(typescript@5.9.3)':
     dependencies:
       '@npmcli/arborist': 9.1.6
       '@npmcli/package-json': 7.0.2
@@ -6258,7 +6137,7 @@ snapshots:
       has-unicode: 2.0.1
       ini: 1.3.8
       init-package-json: 8.2.2
-      inquirer: 12.9.6(@types/node@24.10.13)
+      inquirer: 12.9.6(@types/node@25.3.0)
       is-ci: 3.0.1
       is-stream: 2.0.0
       js-yaml: 4.1.1
@@ -6723,10 +6602,6 @@ snapshots:
 
   '@types/ms@2.1.0': {}
 
-  '@types/node@24.10.13':
-    dependencies:
-      undici-types: 7.16.0
-
   '@types/node@25.3.0':
     dependencies:
       undici-types: 7.18.2
@@ -6735,7 +6610,7 @@ snapshots:
 
   '@types/shelljs@0.10.0':
     dependencies:
-      '@types/node': 24.10.13
+      '@types/node': 25.3.0
       fast-glob: 3.3.3
 
   '@types/triple-beam@1.3.5': {}
@@ -8260,17 +8135,17 @@ snapshots:
       validate-npm-package-license: 3.0.4
       validate-npm-package-name: 6.0.2
 
-  inquirer@12.9.6(@types/node@24.10.13):
+  inquirer@12.9.6(@types/node@25.3.0):
     dependencies:
       '@inquirer/ansi': 1.0.2
-      '@inquirer/core': 10.3.2(@types/node@24.10.13)
-      '@inquirer/prompts': 7.10.1(@types/node@24.10.13)
-      '@inquirer/type': 3.0.10(@types/node@24.10.13)
+      '@inquirer/core': 10.3.2(@types/node@25.3.0)
+      '@inquirer/prompts': 7.10.1(@types/node@25.3.0)
+      '@inquirer/type': 3.0.10(@types/node@25.3.0)
       mute-stream: 2.0.0
       run-async: 4.0.6
       rxjs: 7.8.2
     optionalDependencies:
-      '@types/node': 24.10.13
+      '@types/node': 25.3.0
 
   internal-slot@1.1.0:
     dependencies:
@@ -8586,9 +8461,9 @@ snapshots:
     dependencies:
       set-getter: 0.1.1
 
-  lerna@9.0.4(@types/node@24.10.13):
+  lerna@9.0.4(@types/node@25.3.0):
     dependencies:
-      '@lerna/create': 9.0.4(@types/node@24.10.13)(typescript@5.9.3)
+      '@lerna/create': 9.0.4(@types/node@25.3.0)(typescript@5.9.3)
       '@npmcli/arborist': 9.1.6
       '@npmcli/package-json': 7.0.2
       '@npmcli/run-script': 10.0.3
@@ -8618,7 +8493,7 @@ snapshots:
       import-local: 3.1.0
       ini: 1.3.8
       init-package-json: 8.2.2
-      inquirer: 12.9.6(@types/node@24.10.13)
+      inquirer: 12.9.6(@types/node@25.3.0)
       is-ci: 3.0.1
       is-stream: 2.0.0
       jest-diff: 30.2.0
@@ -9278,7 +9153,7 @@ snapshots:
 
   modify-values@1.0.1: {}
 
-  monorepo-package-paths@0.4.3(@types/node@24.10.13)(prettier@3.8.0):
+  monorepo-package-paths@0.4.3(@types/node@25.3.0)(prettier@3.8.0):
     dependencies:
       '@battis/import-package-json': 0.1.7
       '@battis/qui-cli.colors': 2.1.0(@battis/qui-cli.plugin@2.4.2)
@@ -9287,7 +9162,7 @@ snapshots:
       '@battis/qui-cli.plugin': 2.4.2
       '@battis/qui-cli.root': 2.0.5(@battis/qui-cli.plugin@2.4.2)
       '@battis/qui-cli.validators': 2.0.4(@battis/qui-cli.plugin@2.4.2)(@battis/qui-cli.root@2.0.5(@battis/qui-cli.plugin@2.4.2))
-      '@inquirer/input': 4.3.1(@types/node@24.10.13)
+      '@inquirer/input': 4.3.1(@types/node@25.3.0)
       glob: 11.1.0
       ora: 8.2.0
       package-json-type: 1.1.2
@@ -10459,8 +10334,6 @@ snapshots:
       which-boxed-primitive: 1.1.1
 
   unc-path-regex@0.1.2: {}
-
-  undici-types@7.16.0: {}
 
   undici-types@7.18.2: {}
 
