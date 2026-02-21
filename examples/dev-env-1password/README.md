@@ -1,8 +1,10 @@
 # Example: Command
 
-1Password implementation of `@qui-cli/env` use
+1Password integration with `@qui-cli/env` use
 
 ## Notes
 
-- [index.ts](./src/index.ts) imports the 1Password implementation of Env (mutually exclusive from the regular implementation) as `OP`
-- [package.json](./package.json) `scripts.example:env` invokes the command and passes it a service account token stored in 1Password.
+- [index.ts](./src/index.ts) imports Env
+- [package.json](./package.json)
+  - Adds `@1password/sdk` as dependency
+  - `scripts.example:env` invokes the command and passes it a service account token stored in 1Password.
