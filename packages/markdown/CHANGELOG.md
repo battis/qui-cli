@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2.0](https://github.com/battis/qui-cli/compare/markdown/1.1.2...markdown/1.2.0) (2026-02-22)
+
+
+### Features
+
+* convert ANSI coloring to markdown ([5828d89](https://github.com/battis/qui-cli/commit/5828d894a37950d89f16003bf2b815543cfa9113))
+
 ## [1.1.2](https://github.com/battis/qui-cli/compare/markdown/1.1.1...markdown/1.1.2) (2026-01-18)
 
 
