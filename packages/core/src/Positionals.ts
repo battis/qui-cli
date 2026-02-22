@@ -3,10 +3,17 @@ import * as Plugin from '@qui-cli/plugin';
 import wrapAnsi from 'wrap-ansi';
 
 type PositionalConfig = {
-  /** Description of the purpose of the positional argument */
+  /**
+   * Optional description of the purpose of the positional argument.
+   *
+   * If not provided, the argument will not be separately listed in the
+   * Positional usage section
+   */
   description?: string;
+
   /** Hint about the value of the positional argument */
   hint?: string;
+
   /** Must return true for the argument to be accepted */
   validate?: (v?: string) => boolean | string;
 };
@@ -14,6 +21,13 @@ type PositionalConfig = {
 type PositionalConfigSet = Record<string, PositionalConfig>;
 
 export type Configuration = Plugin.Configuration & {
+  /**
+   * Preamble description paragraph(s) to Positionals usage section
+   *
+   * This may provide a clearer way of explaining positional arguments than
+   * listing them like options.
+   */
+  description?: string | string[];
   /** Minimum number of accepted positional arguments */
   min?: number;
   /** Maximum number of accepted positional arguments */
@@ -22,8 +36,7 @@ export type Configuration = Plugin.Configuration & {
 
 export const name = 'positionals';
 
-let min = 0;
-let max: number | undefined = undefined;
+const config: Configuration & { min: number } = { min: 0 };
 const configSet: PositionalConfigSet = {};
 
 let positionals: (string | undefined)[] = [];
@@ -45,14 +58,18 @@ export function requirePositionalsIsDeprecatedAndShouldNotBeUsed(
       requireAtLeast(1);
     }
   }
-  return min;
+  return config.min;
 }
 
-export function configure(config: Configuration = {}) {
-  requireAtLeast(Plugin.hydrate(config.min, min));
-  const m = Plugin.hydrate(config.max, max);
-  if (m !== undefined) {
-    requireNoMoreThan(m);
+export function configure(proposal: Configuration = {}) {
+  for (const key in proposal) {
+    if (proposal[key] !== undefined) {
+      config[key] = proposal[key];
+    }
+  }
+  requireAtLeast(config.min);
+  if (config.max !== undefined) {
+    requireNoMoreThan(config.max);
   }
 }
 
@@ -66,9 +83,9 @@ export function require(positionalConfigSet: PositionalConfigSet) {
     }
     configSet[name] = positionalConfigSet[name];
   }
-  min += names.length;
-  if (max !== undefined) {
-    max += names.length;
+  config.min += names.length;
+  if (config.max !== undefined) {
+    config.max += names.length;
   }
 }
 
@@ -81,45 +98,45 @@ function namedCount() {
 }
 
 export function minimumArgCount() {
-  return min;
+  return config.min;
 }
 
 export function requireAtLeast(minimumArgs: number) {
   if (minimumArgs < 0) {
     throw new Error(`Cannot require fewer than 0 positional args.`);
   }
-  if (max !== undefined && minimumArgs > max) {
+  if (config.max !== undefined && minimumArgs > config.max) {
     throw new Error(
-      `Cannot require min ${minimumArgs} positional args, maximum ${max} required positional args are configured.`
+      `Cannot require min ${minimumArgs} positional args, maximum ${config.max} required positional args are configured.`
     );
   }
-  min = minimumArgs;
+  config.min = minimumArgs;
 }
 
 export function maximumArgCount() {
-  return max;
+  return config.max;
 }
 
 export function requireNoMoreThan(maximumArgs: number) {
-  if (maximumArgs >= min && maximumArgs >= namedCount()) {
-    max = maximumArgs;
+  if (maximumArgs >= (config.min || 0) && maximumArgs >= namedCount()) {
+    config.max = maximumArgs;
   } else {
     throw new Error(
-      `Cannot require max ${max} positional args, minimum ${namedCount()} required positional args are configured.`
+      `Cannot require max ${config.max} positional args, minimum ${namedCount()} required positional args are configured.`
     );
   }
 }
 
 export function allowOptionalArgs() {
-  max = undefined;
+  config.max = undefined;
 }
 
 export function allowOnlyNamedArgs() {
-  requireNoMoreThan(min);
+  requireNoMoreThan(config.min);
 }
 
 export function minimumUnnamedArgCount() {
-  return Math.max(0, min - namedCount());
+  return Math.max(0, config.min - namedCount());
 }
 
 /**
@@ -129,16 +146,16 @@ export function minimumUnnamedArgCount() {
  * @param minUnnamed Number of optional args to allow
  */
 export function requireAtLeastUnnamedArgs(minUnnamed: number) {
-  if (max && min + minUnnamed > max) {
+  if (config.max && config.min + minUnnamed > config.max) {
     throw new Error(
-      `Cannot require min ${minUnnamed} unnamed positional args, maximum ${max - namedCount()} unnamed positioal args are configure.`
+      `Cannot require min ${minUnnamed} unnamed positional args, maximum ${config.max - namedCount()} unnamed positioal args are configure.`
     );
   }
-  requireAtLeast(min + minUnnamed);
+  requireAtLeast(config.min + minUnnamed);
 }
 
 export function maximumUnnamedCount() {
-  return max ? max - namedCount() : undefined;
+  return config.max ? config.max - namedCount() : undefined;
 }
 
 /**
@@ -153,9 +170,9 @@ export function requireNoMoreThanUnnamedArgs(maxUnnamed: number) {
       `Cannot require a negative number of unnamed positional args.`
     );
   }
-  if (maxUnnamed < min - namedCount()) {
+  if (maxUnnamed < config.min - namedCount()) {
     throw new Error(
-      `Cannot require max ${maxUnnamed} unnamed positional args, minimum ${min - namedCount()} unnamed positional args are configured.`
+      `Cannot require max ${maxUnnamed} unnamed positional args, minimum ${config.min - namedCount()} unnamed positional args are configured.`
     );
   }
   requireNoMoreThan(namedCount() + maxUnnamed);
@@ -163,13 +180,24 @@ export function requireNoMoreThanUnnamedArgs(maxUnnamed: number) {
 
 export function options(): Plugin.Options {
   const man: Plugin.Options['man'] = [];
+  if (config.description) {
+    if (Array.isArray(config.description)) {
+      man.push(...config.description.map((text) => ({ text })));
+    } else {
+      man.push({ text: config.description });
+    }
+  }
   for (const arg in configSet) {
-    man.push({
-      level: 2,
-      text: `${Colors.positionalArg(arg)}${configSet[arg].hint ? `=<${configSet[arg].hint}>` : ''}`
-    });
+    if (configSet[arg].description || configSet[arg].hint)
+      man.push({
+        level: 2,
+        text: Colors.positionalArg(arg)
+      });
     if (configSet[arg].description) {
       man.push({ text: configSet[arg].description });
+    }
+    if (configSet[arg].hint) {
+      man.push({ text: configSet[arg].hint });
     }
   }
   if (man.length > 0) {
@@ -206,15 +234,15 @@ function ellipsis(args: string[], start: number, end: number) {
 
 export function usageArgs() {
   let args = names();
-  args = unnamed(args, (max || min) - namedCount());
-  if (!max) {
+  args = unnamed(args, (config.max || config.min) - namedCount());
+  if (!config.max) {
     args.push('...');
   }
-  args = optional(args, min);
-  if (max) {
-    args = ellipsis(args, min, args.length);
+  args = optional(args, config.min);
+  if (config.max) {
+    args = ellipsis(args, config.min, args.length);
   }
-  args = ellipsis(args, namedCount(), min);
+  args = ellipsis(args, namedCount(), config.min);
 
   return args.map((arg) => Colors.positionalArg(arg)).join(' ');
 }
@@ -251,14 +279,14 @@ export function usage(usage: string, isMarkdown = false): string {
 
 export function run() {
   const s = positionals.length !== 1 ? 's' : '';
-  if (positionals.length < min) {
+  if (positionals.length < config.min) {
     throw new Error(
-      `Expected at least ${min} positional arguments, received ${positionals.length} positional argument${s}.`
+      `Expected at least ${config.min} positional arguments, received ${positionals.length} positional argument${s}.`
     );
   }
-  if (max !== undefined && positionals.length > max) {
+  if (config.max !== undefined && positionals.length > config.max) {
     throw new Error(
-      `Expected no more than ${max} positional arguments, received ${positionals.length} positional argument${s}.`
+      `Expected no more than ${config.max} positional arguments, received ${positionals.length} positional argument${s}.`
     );
   }
   names().forEach((name, i) => {

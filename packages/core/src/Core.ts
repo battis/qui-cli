@@ -90,8 +90,6 @@ export async function init(
       `Already initialized with user-provided command line arguments.`
     );
   }
-  JackSpeak.args(Help.options());
-  JackSpeak.args(Positionals.options());
   const usage = [
     ...(await Promise.all(
       Plugin.Registrar.registered()
@@ -105,6 +103,9 @@ export async function init(
   if (config.lifoUsage) {
     usage.reverse();
   }
+
+  JackSpeak.args(Help.options());
+  JackSpeak.args(Positionals.options());
   for (const options of usage) {
     JackSpeak.args(options);
   }

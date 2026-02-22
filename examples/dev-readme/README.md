@@ -20,6 +20,16 @@ Demonstrate using `@qui-cli/markdown` to generate a README
 
 Show this usage information
 
+### Positional arguments
+
+#### foo
+
+Enim minim laborum dolore, eiusmod.
+
+#### bar
+
+Cillum ut sit, labore.
+
 ### dev-readme options
 
 #### `-A --argle`

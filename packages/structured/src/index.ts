@@ -88,6 +88,6 @@ export async function build({
           .join(', ')}`
       );
     }
-    console.log(JackSpeak.jack().usage());
+    process.stdout.write(JackSpeak.jack().usage());
   }
 }
