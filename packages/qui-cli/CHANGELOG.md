@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file. See [commit
 
 ## [5.1.3](https://github.com/battis/qui-cli/compare/qui-cli/5.1.2...qui-cli/5.1.3) (2026-02-22)
 
+### Bug Fixes
+
+- **core@6.0.3** allow overlaying configurations in Jackspeak, as in other plugins ([29bc7ad](https://github.com/battis/qui-cli/commit/29bc7adfdbafb3d961e0768988473d3f2ecd6aaf))
+- **core@6.0.3** extirpate last non-debugging console.log invocation ([d67975d](https://github.com/battis/qui-cli/commit/d67975d80aa47b2e5ffefdb2fff35fbdec726277))
+- **core@6.0.3** initialize Positionals options to correctly display plugin-required positionals ([fde874c](https://github.com/battis/qui-cli/commit/fde874ca39d9823892d49ff3009a9c2afece84eb))
+
 ## [5.1.2](https://github.com/battis/qui-cli/compare/qui-cli/5.1.1...qui-cli/5.1.2) (2026-02-21)
 
 ### Bug Fixes
