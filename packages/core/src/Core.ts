@@ -7,6 +7,7 @@ import * as Positionals from './Positionals.js';
 export { Options } from '@qui-cli/plugin';
 export * from './Usage.js';
 
+/** Core configuration options */
 export type Configuration = Plugin.Registrar.Configuration & {
   /**
    * Usage information for plugins is diplayed in LIFO (last-in, first-out)
@@ -26,11 +27,22 @@ export type Configuration = Plugin.Registrar.Configuration & {
 };
 
 let initialized = false;
-let lifoUsage = true;
 
-export async function configure(config: Configuration = {}) {
-  lifoUsage = Plugin.hydrate(config.lifoUsage, lifoUsage);
-  const { core = {}, jackspeak: jackOptions, positionals = {} } = config;
+// TODO improve typing
+// @ts-expect-error 2322
+const config: Configuration = { lifoUsage: true };
+
+/**
+ * Configure core options
+ *
+ * May be called multiple times, overlaying partial configurations they become
+ * available/defined
+ *
+ * @see {@link Configuration}
+ */
+export async function configure(proposal: Configuration = {}) {
+  config.lifoUsage = Plugin.hydrate(proposal.lifoUsage, config.lifoUsage);
+  const { core = {}, jackspeak: jackOptions, positionals = {} } = proposal;
   const { requirePositionals, ...deprecated } = core;
   const jackspeak = {
     ...deprecated,
@@ -57,6 +69,19 @@ function requireUnusedOptions(
   );
 }
 
+/**
+ * Initialize plugins from the environment and provided command line options
+ *
+ * May only be called once
+ *
+ * @param externalOptions Optional additional options to initialze
+ * @returns Result of
+ *   {@link https://github.com/isaacs/jackspeak?tab=readme-ov-file#jackparseargs-string--processargv--positionals-string-values-optionsresults- Jackspeak.parse()}
+ *   (Additional Jackspeak configuration may be done via the {@link JackSpeak}
+ *   core plugin)
+ * @throws If invoked after {@link run} invocation or otherwise invoked for a
+ *   second time
+ */
 export async function init(
   externalOptions?: Plugin.Options
 ): Promise<Plugin.Arguments<Plugin.Options>> {
@@ -77,7 +102,7 @@ export async function init(
   if (externalOptions) {
     usage.push(Plugin.documentDefaults(externalOptions));
   }
-  if (lifoUsage) {
+  if (config.lifoUsage) {
     usage.reverse();
   }
   for (const options of usage) {
@@ -90,6 +115,13 @@ export async function init(
   return args;
 }
 
+/**
+ * Initialize plugins from provided command line options and the environment, if
+ * not already initialized and run registered plugins.
+ *
+ * @param externalOptions Optional additional options to initialze
+ * @returns Hash of accumulated results of all plugin `run()` methods
+ */
 export async function run(
   externalOptions?: Plugin.Options
 ): Promise<Plugin.AccumulatedResults | undefined> {
