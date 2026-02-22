@@ -5,11 +5,13 @@ export type Configuration = Plugin.Configuration & JackOptions;
 
 export const name = 'jackspeak';
 
+const config: Configuration = {};
 let instance: Jack | undefined = undefined;
 
+/** Jackspeak instance used to parse command line arguments */
 export function jack() {
   if (!instance) {
-    configure();
+    instance = new Jack(config);
   }
   if (!instance) {
     throw new Error(`JackSpeak configuration failed.`);
@@ -17,10 +19,29 @@ export function jack() {
   return instance;
 }
 
-export function configure(config: Configuration = {}) {
-  instance = new Jack(config);
+/**
+ * Configure Jackspeak options
+ *
+ * @see {@link JackOptions}
+ */
+export function configure(proposal: Configuration = {}) {
+  let changed = false;
+  for (const key in proposal) {
+    if (proposal[key] !== undefined) {
+      changed = config[key] !== proposal[key];
+      config[key] = proposal[key];
+    }
+  }
+  if (changed) {
+    instance = undefined;
+  }
 }
 
+/**
+ * Apply {@link Plugin.Options} to Jackspeak
+ *
+ * Generally called only by Core
+ */
 export function args(options: Plugin.Options) {
   for (const key in options) {
     if (key === 'man') {
@@ -42,18 +63,31 @@ export function args(options: Plugin.Options) {
   }
 }
 
+/**
+ * Convenience pass-through to
+ * {@link https://github.com/isaacs/jackspeak?tab=readme-ov-file#jackparseargs-string--processargv--positionals-string-values-optionsresults- Jackspeak.parse()}
+ */
 export function parse() {
   return jack().parse();
 }
 
+/** Convenience pass-through to (undocumented) Jackspeak.toJSON() */
 export function toJSON() {
   return jack().toJSON();
 }
 
+/**
+ * Convenience pass-through to
+ * {@link https://github.com/isaacs/jackspeak?tab=readme-ov-file#jackusage-string Jackspeak.usage()}
+ */
 export function usage() {
   return jack().usage();
 }
 
+/**
+ * Convenience pass-through to
+ * {@link https://github.com/isaacs/jackspeak?tab=readme-ov-file#jackusagemarkdown-string Jackspeak.usageMarkdown()}
+ */
 export function usageMarkdown() {
   return jack().usageMarkdown();
 }
