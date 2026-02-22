@@ -29,6 +29,7 @@ export type Configuration = Plugin.Registrar.Configuration & {
 let initialized = false;
 
 // TODO improve typing
+// Issue URL: https://github.com/battis/qui-cli/issues/100
 // @ts-expect-error 2322
 const config: Configuration = { lifoUsage: true };
 
