@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2.1](https://github.com/battis/qui-cli/compare/markdown/1.2.0...markdown/1.2.1) (2026-02-23)
+
+
+### Bug Fixes
+
+* bold keywords ([2726a0a](https://github.com/battis/qui-cli/commit/2726a0a5f638db9a19217a63834d42c944c3ce59))
+
 ## [1.2.0](https://github.com/battis/qui-cli/compare/markdown/1.1.2...markdown/1.2.0) (2026-02-22)
 
 
