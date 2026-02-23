@@ -55,7 +55,7 @@ const config: Configuration & {
   overwrite: false,
   style: {
     value: ['`', '`'],
-    keyword: ['*', '*']
+    keyword: ['**', '**']
   }
 };
 const placeholder = '@';
