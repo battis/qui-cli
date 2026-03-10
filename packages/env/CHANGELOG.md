@@ -4,45 +4,41 @@ All notable changes to this project will be documented in this file. See [commit
 
 ## [5.1.2](https://github.com/battis/qui-cli/compare/env/5.1.1...env/5.1.2) (2026-03-10)
 
-## [5.1.1](https://github.com/battis/qui-cli/compare/env/5.1.0...env/5.1.1) (2026-01-21)
+Update README
 
+## [5.1.1](https://github.com/battis/qui-cli/compare/env/5.1.0...env/5.1.1) (2026-01-21)
 
 ### Bug Fixes
 
-* configure 1Password before looking up secret references ([7046af5](https://github.com/battis/qui-cli/commit/7046af55ed2720b7b74bd437f335fe49fa8bc00f))
+- configure 1Password before looking up secret references ([7046af5](https://github.com/battis/qui-cli/commit/7046af55ed2720b7b74bd437f335fe49fa8bc00f))
 
 ## [5.1.0](https://github.com/battis/qui-cli/compare/env/5.0.4...env/5.1.0) (2026-01-19)
 
-
 ### Features
 
-* support 1Password secret references if @1password/sdk (and 1Password) installed ([ed4570c](https://github.com/battis/qui-cli/commit/ed4570cd5cf19ae34fc03f6b88b01f0ebf72e72d))
-
+- support 1Password secret references if @1password/sdk (and 1Password) installed ([ed4570c](https://github.com/battis/qui-cli/commit/ed4570cd5cf19ae34fc03f6b88b01f0ebf72e72d))
 
 ### Bug Fixes
 
-* detect missing 1Password CLI ([3c306ba](https://github.com/battis/qui-cli/commit/3c306ba7e37394948666f96b1ad728e8abc65a4e)), closes [#81](https://github.com/battis/qui-cli/issues/81)
+- detect missing 1Password CLI ([3c306ba](https://github.com/battis/qui-cli/commit/3c306ba7e37394948666f96b1ad728e8abc65a4e)), closes [#81](https://github.com/battis/qui-cli/issues/81)
 
 ## [5.0.4](https://github.com/battis/qui-cli/compare/env/5.0.3...env/5.0.4) (2026-01-18)
 
-
 ### Bug Fixes
 
-* compile against Node.js v24 ([7b06b4f](https://github.com/battis/qui-cli/commit/7b06b4f4ac4f9688719041ab8b1d837b3a0ee214))
+- compile against Node.js v24 ([7b06b4f](https://github.com/battis/qui-cli/commit/7b06b4f4ac4f9688719041ab8b1d837b3a0ee214))
 
 ## [5.0.3](https://github.com/battis/qui-cli/compare/env/5.0.2...env/5.0.3) (2026-01-02)
 
-
 ### Bug Fixes
 
-* normalize peer dependencies ([cdd81b7](https://github.com/battis/qui-cli/commit/cdd81b7c4bea7c769021ff58177750c5a1369f76))
+- normalize peer dependencies ([cdd81b7](https://github.com/battis/qui-cli/commit/cdd81b7c4bea7c769021ff58177750c5a1369f76))
 
 ## [5.0.2](https://github.com/battis/qui-cli/compare/env/5.0.1...env/5.0.2) (2025-12-19)
 
-
 ### Bug Fixes
 
-* increase accuracy of README ([94e2c4c](https://github.com/battis/qui-cli/commit/94e2c4c2f8d146715d19c7f36b6f8f1d0d8980f8))
+- increase accuracy of README ([94e2c4c](https://github.com/battis/qui-cli/commit/94e2c4c2f8d146715d19c7f36b6f8f1d0d8980f8))
 
 ## [5.0.1](https://github.com/battis/qui-cli/compare/env/5.0.0...env/5.0.1) (2025-11-08)
 

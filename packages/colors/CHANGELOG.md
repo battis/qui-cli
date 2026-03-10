@@ -4,73 +4,65 @@ All notable changes to this project will be documented in this file. See [commit
 
 ## [3.2.4](https://github.com/battis/qui-cli/compare/colors/3.2.3...colors/3.2.4) (2026-03-10)
 
-## [3.2.3](https://github.com/battis/qui-cli/compare/colors/3.2.2...colors/3.2.3) (2026-01-18)
+Update README
 
+## [3.2.3](https://github.com/battis/qui-cli/compare/colors/3.2.2...colors/3.2.3) (2026-01-18)
 
 ### Bug Fixes
 
-* compile against Node.js v24 ([7b06b4f](https://github.com/battis/qui-cli/commit/7b06b4f4ac4f9688719041ab8b1d837b3a0ee214))
+- compile against Node.js v24 ([7b06b4f](https://github.com/battis/qui-cli/commit/7b06b4f4ac4f9688719041ab8b1d837b3a0ee214))
 
 ## [3.2.2](https://github.com/battis/qui-cli/compare/colors/3.2.1...colors/3.2.2) (2026-01-15)
 
-
 ### Bug Fixes
 
-* remove extraneous space in commands ([3473397](https://github.com/battis/qui-cli/commit/347339777cbaf8a2780e62919a26a5a3102bbb6c))
+- remove extraneous space in commands ([3473397](https://github.com/battis/qui-cli/commit/347339777cbaf8a2780e62919a26a5a3102bbb6c))
 
 ## [3.2.1](https://github.com/battis/qui-cli/compare/colors/3.2.0...colors/3.2.1) (2026-01-02)
 
-
 ### Bug Fixes
 
-* remove extraneous dot from path color-coded output ([6de1092](https://github.com/battis/qui-cli/commit/6de10925df87ca4a9b1721c7285c3ae763ef760d))
+- remove extraneous dot from path color-coded output ([6de1092](https://github.com/battis/qui-cli/commit/6de10925df87ca4a9b1721c7285c3ae763ef760d))
 
 ## [3.2.0](https://github.com/battis/qui-cli/compare/colors/3.1.1...colors/3.2.0) (2025-12-25)
 
-
 ### Features
 
-* add highlighting options for paths and commands ([e64a88e](https://github.com/battis/qui-cli/commit/e64a88e8a2c38fe485fa2527fe5c3953dce4b950))
+- add highlighting options for paths and commands ([e64a88e](https://github.com/battis/qui-cli/commit/e64a88e8a2c38fe485fa2527fe5c3953dce4b950))
 
 ## [3.1.1](https://github.com/battis/qui-cli/compare/colors/3.1.0...colors/3.1.1) (2025-12-19)
 
-
 ### Bug Fixes
 
-* update README to include recently-added methods ([6b512f8](https://github.com/battis/qui-cli/commit/6b512f80ede6134efbfd38b3328a769300cf8400))
+- update README to include recently-added methods ([6b512f8](https://github.com/battis/qui-cli/commit/6b512f80ede6134efbfd38b3328a769300cf8400))
 
 ## [3.1.0](https://github.com/battis/qui-cli/compare/colors/3.0.1...colors/3.1.0) (2025-11-07)
 
-
 ### Features
 
-* add standard varName and path color coding ([00d4a3f](https://github.com/battis/qui-cli/commit/00d4a3f5047b0c6738d2d6f486456657a06e0957))
-
+- add standard varName and path color coding ([00d4a3f](https://github.com/battis/qui-cli/commit/00d4a3f5047b0c6738d2d6f486456657a06e0957))
 
 ### Bug Fixes
 
-* remove unnecessary @qui-cli/plugin dependency ([95bab60](https://github.com/battis/qui-cli/commit/95bab6007c9bb6b69fc53a262db434baec9d98a0))
+- remove unnecessary @qui-cli/plugin dependency ([95bab60](https://github.com/battis/qui-cli/commit/95bab6007c9bb6b69fc53a262db434baec9d98a0))
 
 ## [3.0.1](https://github.com/battis/qui-cli/compare/colors/3.0.0...colors/3.0.1) (2025-08-04)
 
-
 ### Bug Fixes
 
-* update lagging peer dependency specs ([30c0c27](https://github.com/battis/qui-cli/commit/30c0c279d4247a69a30efef8a7426442752cd9c0))
+- update lagging peer dependency specs ([30c0c27](https://github.com/battis/qui-cli/commit/30c0c279d4247a69a30efef8a7426442752cd9c0))
 
 ## [3.0.0](https://github.com/battis/qui-cli/compare/colors/2.1.0...colors/3.0.0) (2025-08-02)
 
-
 ### ⚠ BREAKING CHANGES
 
-* rename @battis/qui-cli.colors --> @qui-cli/colors
+- rename @battis/qui-cli.colors --> @qui-cli/colors
 
-* rename @battis/qui-cli.colors --> @qui-cli/colors ([3bdd4cb](https://github.com/battis/qui-cli/commit/3bdd4cb66db348d795bda89b063cf8ec1d56be80))
-
+- rename @battis/qui-cli.colors --> @qui-cli/colors ([3bdd4cb](https://github.com/battis/qui-cli/commit/3bdd4cb66db348d795bda89b063cf8ec1d56be80))
 
 ### Bug Fixes
 
-* update dependencies to renamed @qui-cli/plugin ([117ea85](https://github.com/battis/qui-cli/commit/117ea85256ec69c807c5b56293546d9c350fd43f))
+- update dependencies to renamed @qui-cli/plugin ([117ea85](https://github.com/battis/qui-cli/commit/117ea85256ec69c807c5b56293546d9c350fd43f))
 
 ## [2.1.0](https://github.com/battis/qui-cli/compare/colors/2.0.4...colors/2.1.0) (2025-06-28)
 

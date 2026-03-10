@@ -4,40 +4,37 @@ All notable changes to this project will be documented in this file. See [commit
 
 ## [3.1.1](https://github.com/battis/qui-cli/compare/root/3.1.0...root/3.1.1) (2026-03-10)
 
-## [3.1.0](https://github.com/battis/qui-cli/compare/root/3.0.6...root/3.1.0) (2026-01-18)
+Update README
 
+## [3.1.0](https://github.com/battis/qui-cli/compare/root/3.0.6...root/3.1.0) (2026-01-18)
 
 ### Features
 
-* simple Plugin.Conf.defaultHook() factory ([ee881f6](https://github.com/battis/qui-cli/commit/ee881f6bf91b39876dc05a49f434260725e52301))
-
+- simple Plugin.Conf.defaultHook() factory ([ee881f6](https://github.com/battis/qui-cli/commit/ee881f6bf91b39876dc05a49f434260725e52301))
 
 ### Bug Fixes
 
-* compile against Node.js v24 ([7b06b4f](https://github.com/battis/qui-cli/commit/7b06b4f4ac4f9688719041ab8b1d837b3a0ee214))
+- compile against Node.js v24 ([7b06b4f](https://github.com/battis/qui-cli/commit/7b06b4f4ac4f9688719041ab8b1d837b3a0ee214))
 
 ## [3.0.6](https://github.com/battis/qui-cli/compare/root/3.0.5...root/3.0.6) (2026-01-02)
 
 ## [3.0.5](https://github.com/battis/qui-cli/compare/root/3.0.4...root/3.0.5) (2026-01-02)
 
-
 ### Bug Fixes
 
-* normalize peer dependencies ([cdd81b7](https://github.com/battis/qui-cli/commit/cdd81b7c4bea7c769021ff58177750c5a1369f76))
+- normalize peer dependencies ([cdd81b7](https://github.com/battis/qui-cli/commit/cdd81b7c4bea7c769021ff58177750c5a1369f76))
 
 ## [3.0.4](https://github.com/battis/qui-cli/compare/root/3.0.3...root/3.0.4) (2025-11-08)
 
-
 ### Bug Fixes
 
-* remove all ambiguity from peer dependencies ([ced3fac](https://github.com/battis/qui-cli/commit/ced3faced1bc340457ca43e3be11afa3933b6d72))
+- remove all ambiguity from peer dependencies ([ced3fac](https://github.com/battis/qui-cli/commit/ced3faced1bc340457ca43e3be11afa3933b6d72))
 
 ## [3.0.3](https://github.com/battis/qui-cli/compare/root/3.0.2...root/3.0.3) (2025-11-08)
 
-
 ### Bug Fixes
 
-* simplify peer versions ([da8823d](https://github.com/battis/qui-cli/commit/da8823d4803cd9a0875a0c6cbb3c1efee03f11dd))
+- simplify peer versions ([da8823d](https://github.com/battis/qui-cli/commit/da8823d4803cd9a0875a0c6cbb3c1efee03f11dd))
 
 ## [3.0.2](https://github.com/battis/qui-cli/compare/root/3.0.1...root/3.0.2) (2025-11-07)
 

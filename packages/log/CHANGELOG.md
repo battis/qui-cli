@@ -4,26 +4,25 @@ All notable changes to this project will be documented in this file. See [commit
 
 ## [4.0.4](https://github.com/battis/qui-cli/compare/log/4.0.3...log/4.0.4) (2026-03-10)
 
-## [4.0.3](https://github.com/battis/qui-cli/compare/log/4.0.2...log/4.0.3) (2026-01-18)
+Update README
 
+## [4.0.3](https://github.com/battis/qui-cli/compare/log/4.0.2...log/4.0.3) (2026-01-18)
 
 ### Bug Fixes
 
-* compile against Node.js v24 ([7b06b4f](https://github.com/battis/qui-cli/commit/7b06b4f4ac4f9688719041ab8b1d837b3a0ee214))
+- compile against Node.js v24 ([7b06b4f](https://github.com/battis/qui-cli/commit/7b06b4f4ac4f9688719041ab8b1d837b3a0ee214))
 
 ## [4.0.2](https://github.com/battis/qui-cli/compare/log/4.0.1...log/4.0.2) (2026-01-02)
 
-
 ### Bug Fixes
 
-* normalize peer dependencies ([cdd81b7](https://github.com/battis/qui-cli/commit/cdd81b7c4bea7c769021ff58177750c5a1369f76))
+- normalize peer dependencies ([cdd81b7](https://github.com/battis/qui-cli/commit/cdd81b7c4bea7c769021ff58177750c5a1369f76))
 
 ## [4.0.1](https://github.com/battis/qui-cli/compare/log/4.0.0...log/4.0.1) (2025-11-12)
 
-
 ### Bug Fixes
 
-* boost standard headig back to level 1 ([cfb3065](https://github.com/battis/qui-cli/commit/cfb30657a3d719df60663d0a8e6aa6cf240740e9))
+- boost standard headig back to level 1 ([cfb3065](https://github.com/battis/qui-cli/commit/cfb30657a3d719df60663d0a8e6aa6cf240740e9))
 
 ## [4.0.0](https://github.com/battis/qui-cli/compare/log/3.1.0...log/4.0.0) (2025-11-07)
 

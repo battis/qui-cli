@@ -4,62 +4,57 @@ All notable changes to this project will be documented in this file. See [commit
 
 ## [6.0.4](https://github.com/battis/qui-cli/compare/core/6.0.3...core/6.0.4) (2026-03-10)
 
-## [6.0.3](https://github.com/battis/qui-cli/compare/core/6.0.2...core/6.0.3) (2026-02-22)
+Update README
 
+## [6.0.3](https://github.com/battis/qui-cli/compare/core/6.0.2...core/6.0.3) (2026-02-22)
 
 ### Bug Fixes
 
-* allow overlaying configurations in Jackspeak, as in other plugins ([29bc7ad](https://github.com/battis/qui-cli/commit/29bc7adfdbafb3d961e0768988473d3f2ecd6aaf))
-* extirpate last non-debugging console.log invocation ([d67975d](https://github.com/battis/qui-cli/commit/d67975d80aa47b2e5ffefdb2fff35fbdec726277))
-* initialize Positionals options to correctly display plugin-required positionals ([fde874c](https://github.com/battis/qui-cli/commit/fde874ca39d9823892d49ff3009a9c2afece84eb))
+- allow overlaying configurations in Jackspeak, as in other plugins ([29bc7ad](https://github.com/battis/qui-cli/commit/29bc7adfdbafb3d961e0768988473d3f2ecd6aaf))
+- extirpate last non-debugging console.log invocation ([d67975d](https://github.com/battis/qui-cli/commit/d67975d80aa47b2e5ffefdb2fff35fbdec726277))
+- initialize Positionals options to correctly display plugin-required positionals ([fde874c](https://github.com/battis/qui-cli/commit/fde874ca39d9823892d49ff3009a9c2afece84eb))
 
 ## [6.0.2](https://github.com/battis/qui-cli/compare/core/6.0.1...core/6.0.2) (2026-02-21)
 
-
 ### Bug Fixes
 
-* display positional arg documentation ([c97c454](https://github.com/battis/qui-cli/commit/c97c45477df474880b6ae3071d4e9c2f11b17a97))
+- display positional arg documentation ([c97c454](https://github.com/battis/qui-cli/commit/c97c45477df474880b6ae3071d4e9c2f11b17a97))
 
 ## [6.0.1](https://github.com/battis/qui-cli/compare/core/6.0.0...core/6.0.1) (2026-02-21)
 
-
 ### Bug Fixes
 
-* display plugin usage information in LIFO registration order ([a79c8ed](https://github.com/battis/qui-cli/commit/a79c8ed0e0f8dc0bb45a035909e82af37b7ba350))
+- display plugin usage information in LIFO registration order ([a79c8ed](https://github.com/battis/qui-cli/commit/a79c8ed0e0f8dc0bb45a035909e82af37b7ba350))
 
 ## [6.0.0](https://github.com/battis/qui-cli/compare/core/5.0.3...core/6.0.0) (2026-01-29)
 
-
 ### ⚠ BREAKING CHANGES
 
-* allow errors to be thrown
+- allow errors to be thrown
 
 ### Bug Fixes
 
-* allow errors to be thrown ([8bf98db](https://github.com/battis/qui-cli/commit/8bf98db45ebe06514cef02572d515379985c7067))
-* preempt all other plugins if --help is set ([db99833](https://github.com/battis/qui-cli/commit/db9983336135080a5fecff6adbf2e2913f55fa8d))
+- allow errors to be thrown ([8bf98db](https://github.com/battis/qui-cli/commit/8bf98db45ebe06514cef02572d515379985c7067))
+- preempt all other plugins if --help is set ([db99833](https://github.com/battis/qui-cli/commit/db9983336135080a5fecff6adbf2e2913f55fa8d))
 
 ## [5.0.3](https://github.com/battis/qui-cli/compare/core/5.0.2...core/5.0.3) (2026-01-18)
 
-
 ### Bug Fixes
 
-* compile against Node.js v24 ([7b06b4f](https://github.com/battis/qui-cli/commit/7b06b4f4ac4f9688719041ab8b1d837b3a0ee214))
+- compile against Node.js v24 ([7b06b4f](https://github.com/battis/qui-cli/commit/7b06b4f4ac4f9688719041ab8b1d837b3a0ee214))
 
 ## [5.0.2](https://github.com/battis/qui-cli/compare/core/5.0.1...core/5.0.2) (2026-01-02)
 
-
 ### Bug Fixes
 
-* normalize peer dependencies ([cdd81b7](https://github.com/battis/qui-cli/commit/cdd81b7c4bea7c769021ff58177750c5a1369f76))
-* update color-coding to current standards ([2fccf74](https://github.com/battis/qui-cli/commit/2fccf7433f729020022b7df85578e05576b47958))
+- normalize peer dependencies ([cdd81b7](https://github.com/battis/qui-cli/commit/cdd81b7c4bea7c769021ff58177750c5a1369f76))
+- update color-coding to current standards ([2fccf74](https://github.com/battis/qui-cli/commit/2fccf7433f729020022b7df85578e05576b47958))
 
 ## [5.0.1](https://github.com/battis/qui-cli/compare/core/5.0.0...core/5.0.1) (2025-12-19)
 
-
 ### Bug Fixes
 
-* update documentation to reflect current core plugin model ([dbb3f26](https://github.com/battis/qui-cli/commit/dbb3f269d3dc3996c1d7050eb3a1acfdd08ab640))
+- update documentation to reflect current core plugin model ([dbb3f26](https://github.com/battis/qui-cli/commit/dbb3f269d3dc3996c1d7050eb3a1acfdd08ab640))
 
 ## [5.0.0](https://github.com/battis/qui-cli/compare/core/4.1.0...core/5.0.0) (2025-11-07)
 

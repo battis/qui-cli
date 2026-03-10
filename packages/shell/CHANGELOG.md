@@ -4,72 +4,65 @@ All notable changes to this project will be documented in this file. See [commit
 
 ## [3.1.4](https://github.com/battis/qui-cli/compare/shell/3.1.3...shell/3.1.4) (2026-03-10)
 
-## [3.1.3](https://github.com/battis/qui-cli/compare/shell/3.1.2...shell/3.1.3) (2026-02-21)
+Update README
 
+## [3.1.3](https://github.com/battis/qui-cli/compare/shell/3.1.2...shell/3.1.3) (2026-02-21)
 
 ### Bug Fixes
 
-* include section header in usage ([122f500](https://github.com/battis/qui-cli/commit/122f500ee5e201311a26e02ccca0cd31eece24bb))
+- include section header in usage ([122f500](https://github.com/battis/qui-cli/commit/122f500ee5e201311a26e02ccca0cd31eece24bb))
 
 ## [3.1.2](https://github.com/battis/qui-cli/compare/shell/3.1.1...shell/3.1.2) (2026-01-18)
 
-
 ### Bug Fixes
 
-* compile against Node.js v24 ([7b06b4f](https://github.com/battis/qui-cli/commit/7b06b4f4ac4f9688719041ab8b1d837b3a0ee214))
+- compile against Node.js v24 ([7b06b4f](https://github.com/battis/qui-cli/commit/7b06b4f4ac4f9688719041ab8b1d837b3a0ee214))
 
 ## [3.1.1](https://github.com/battis/qui-cli/compare/shell/3.1.0...shell/3.1.1) (2026-01-02)
 
-
 ### Bug Fixes
 
-* normalize peer dependencies ([cdd81b7](https://github.com/battis/qui-cli/commit/cdd81b7c4bea7c769021ff58177750c5a1369f76))
+- normalize peer dependencies ([cdd81b7](https://github.com/battis/qui-cli/commit/cdd81b7c4bea7c769021ff58177750c5a1369f76))
 
 ## [3.1.0](https://github.com/battis/qui-cli/compare/shell/3.0.3...shell/3.1.0) (2025-12-26)
 
-
 ### Features
 
-* disable/enable logging of commands ([d8b6f14](https://github.com/battis/qui-cli/commit/d8b6f14a7ba2452735940a26364426226dca05a5))
+- disable/enable logging of commands ([d8b6f14](https://github.com/battis/qui-cli/commit/d8b6f14a7ba2452735940a26364426226dca05a5))
 
 ## [3.0.3](https://github.com/battis/qui-cli/compare/shell/3.0.2...shell/3.0.3) (2025-11-08)
 
-
 ### Bug Fixes
 
-* remove all ambiguity from peer dependencies ([ced3fac](https://github.com/battis/qui-cli/commit/ced3faced1bc340457ca43e3be11afa3933b6d72))
+- remove all ambiguity from peer dependencies ([ced3fac](https://github.com/battis/qui-cli/commit/ced3faced1bc340457ca43e3be11afa3933b6d72))
 
 ## [3.0.2](https://github.com/battis/qui-cli/compare/shell/3.0.1...shell/3.0.2) (2025-11-08)
 
-
 ### Bug Fixes
 
-* simplify peer versions ([da8823d](https://github.com/battis/qui-cli/commit/da8823d4803cd9a0875a0c6cbb3c1efee03f11dd))
+- simplify peer versions ([da8823d](https://github.com/battis/qui-cli/commit/da8823d4803cd9a0875a0c6cbb3c1efee03f11dd))
 
 ## [3.0.1](https://github.com/battis/qui-cli/compare/shell/3.0.0...shell/3.0.1) (2025-08-04)
 
-
 ### Bug Fixes
 
-* update lagging peer dependency specs ([30c0c27](https://github.com/battis/qui-cli/commit/30c0c279d4247a69a30efef8a7426442752cd9c0))
+- update lagging peer dependency specs ([30c0c27](https://github.com/battis/qui-cli/commit/30c0c279d4247a69a30efef8a7426442752cd9c0))
 
 ## [3.0.0](https://github.com/battis/qui-cli/compare/shell/2.1.2...shell/3.0.0) (2025-08-02)
 
-
 ### ⚠ BREAKING CHANGES
 
-* rename @battis/qui-cli.shell --> @qui-cli/shell
+- rename @battis/qui-cli.shell --> @qui-cli/shell
 
-* rename @battis/qui-cli.shell --> @qui-cli/shell ([d1c05ce](https://github.com/battis/qui-cli/commit/d1c05cedab55b7565ee08cf8b4d5823080b4a614))
-
+- rename @battis/qui-cli.shell --> @qui-cli/shell ([d1c05ce](https://github.com/battis/qui-cli/commit/d1c05cedab55b7565ee08cf8b4d5823080b4a614))
 
 ### Bug Fixes
 
-* @battis/qui-cli.core@3.x ([5a2fe14](https://github.com/battis/qui-cli/commit/5a2fe14570ee1763d30656f9a0d2cb433559b969))
-* update dependencies to renamed @qui-cli/colors ([ff80e86](https://github.com/battis/qui-cli/commit/ff80e8625ef98834afdf04e57bfedb1906834e2b))
-* update dependencies to renamed @qui-cli/core ([f834c5a](https://github.com/battis/qui-cli/commit/f834c5a475f908585f1e17865917a092516168a0))
-* update dependencies to renamed @qui-cli/log ([1c8f0fb](https://github.com/battis/qui-cli/commit/1c8f0fbd5561b4274032382c5d10d33912956e7f))
-* update dependencies to renamed @qui-cli/plugin ([117ea85](https://github.com/battis/qui-cli/commit/117ea85256ec69c807c5b56293546d9c350fd43f))
+- @battis/qui-cli.core@3.x ([5a2fe14](https://github.com/battis/qui-cli/commit/5a2fe14570ee1763d30656f9a0d2cb433559b969))
+- update dependencies to renamed @qui-cli/colors ([ff80e86](https://github.com/battis/qui-cli/commit/ff80e8625ef98834afdf04e57bfedb1906834e2b))
+- update dependencies to renamed @qui-cli/core ([f834c5a](https://github.com/battis/qui-cli/commit/f834c5a475f908585f1e17865917a092516168a0))
+- update dependencies to renamed @qui-cli/log ([1c8f0fb](https://github.com/battis/qui-cli/commit/1c8f0fbd5561b4274032382c5d10d33912956e7f))
+- update dependencies to renamed @qui-cli/plugin ([117ea85](https://github.com/battis/qui-cli/commit/117ea85256ec69c807c5b56293546d9c350fd43f))
 
 ## [2.1.2](https://github.com/battis/qui-cli/compare/shell/2.1.1...shell/2.1.2) (2025-06-23)
 

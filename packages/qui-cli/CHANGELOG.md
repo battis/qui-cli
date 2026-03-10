@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file. See [commit
 
 ## [5.1.4](https://github.com/battis/qui-cli/compare/qui-cli/5.1.3...qui-cli/5.1.4) (2026-03-10)
 
+Update README
+
 ## [5.1.3](https://github.com/battis/qui-cli/compare/qui-cli/5.1.2...qui-cli/5.1.3) (2026-02-22)
 
 ### Bug Fixes

@@ -4,40 +4,37 @@ All notable changes to this project will be documented in this file. See [commit
 
 ## [1.2.2](https://github.com/battis/qui-cli/compare/markdown/1.2.1...markdown/1.2.2) (2026-03-10)
 
-## [1.2.1](https://github.com/battis/qui-cli/compare/markdown/1.2.0...markdown/1.2.1) (2026-02-23)
+Update README
 
+## [1.2.1](https://github.com/battis/qui-cli/compare/markdown/1.2.0...markdown/1.2.1) (2026-02-23)
 
 ### Bug Fixes
 
-* bold keywords ([2726a0a](https://github.com/battis/qui-cli/commit/2726a0a5f638db9a19217a63834d42c944c3ce59))
+- bold keywords ([2726a0a](https://github.com/battis/qui-cli/commit/2726a0a5f638db9a19217a63834d42c944c3ce59))
 
 ## [1.2.0](https://github.com/battis/qui-cli/compare/markdown/1.1.2...markdown/1.2.0) (2026-02-22)
 
-
 ### Features
 
-* convert ANSI coloring to markdown ([5828d89](https://github.com/battis/qui-cli/commit/5828d894a37950d89f16003bf2b815543cfa9113))
+- convert ANSI coloring to markdown ([5828d89](https://github.com/battis/qui-cli/commit/5828d894a37950d89f16003bf2b815543cfa9113))
 
 ## [1.1.2](https://github.com/battis/qui-cli/compare/markdown/1.1.1...markdown/1.1.2) (2026-01-18)
 
-
 ### Bug Fixes
 
-* compile against Node.js v24 ([7b06b4f](https://github.com/battis/qui-cli/commit/7b06b4f4ac4f9688719041ab8b1d837b3a0ee214))
+- compile against Node.js v24 ([7b06b4f](https://github.com/battis/qui-cli/commit/7b06b4f4ac4f9688719041ab8b1d837b3a0ee214))
 
 ## [1.1.1](https://github.com/battis/qui-cli/compare/markdown/1.1.0...markdown/1.1.1) (2026-01-02)
 
-
 ### Bug Fixes
 
-* normalize peer dependencies ([cdd81b7](https://github.com/battis/qui-cli/commit/cdd81b7c4bea7c769021ff58177750c5a1369f76))
+- normalize peer dependencies ([cdd81b7](https://github.com/battis/qui-cli/commit/cdd81b7c4bea7c769021ff58177750c5a1369f76))
 
 ## [1.1.0](https://github.com/battis/qui-cli/compare/markdown/1.0.1...markdown/1.1.0) (2025-11-12)
 
-
 ### Features
 
-* adjust heading level for Markdown prettiness ([88a651e](https://github.com/battis/qui-cli/commit/88a651e91a47b1b1b4814676c436c4845910c21a))
+- adjust heading level for Markdown prettiness ([88a651e](https://github.com/battis/qui-cli/commit/88a651e91a47b1b1b4814676c436c4845910c21a))
 
 ## [1.0.1](https://github.com/battis/qui-cli/compare/markdown/1.0.0...markdown/1.0.1) (2025-11-07)
 

@@ -4,53 +4,49 @@ All notable changes to this project will be documented in this file. See [commit
 
 ## [4.1.1](https://github.com/battis/qui-cli/compare/plugin/4.1.0...plugin/4.1.1) (2026-03-10)
 
-## [4.1.0](https://github.com/battis/qui-cli/compare/plugin/4.0.0...plugin/4.1.0) (2026-01-18)
+Update README
 
+## [4.1.0](https://github.com/battis/qui-cli/compare/plugin/4.0.0...plugin/4.1.0) (2026-01-18)
 
 ### Features
 
-* deprecated Plugin.hydrate() ([4194966](https://github.com/battis/qui-cli/commit/41949660396847f2560675242aed460370a3b7b4))
-* simple Plugin.Conf.defaultHook() factory ([ee881f6](https://github.com/battis/qui-cli/commit/ee881f6bf91b39876dc05a49f434260725e52301))
-
+- deprecated Plugin.hydrate() ([4194966](https://github.com/battis/qui-cli/commit/41949660396847f2560675242aed460370a3b7b4))
+- simple Plugin.Conf.defaultHook() factory ([ee881f6](https://github.com/battis/qui-cli/commit/ee881f6bf91b39876dc05a49f434260725e52301))
 
 ### Bug Fixes
 
-* compile against Node.js v24 ([7b06b4f](https://github.com/battis/qui-cli/commit/7b06b4f4ac4f9688719041ab8b1d837b3a0ee214))
-* no longer require ESM modules only as plugins ([cbf178c](https://github.com/battis/qui-cli/commit/cbf178c8a6f3cec49aff8b6de08fd547e66fb9f7))
+- compile against Node.js v24 ([7b06b4f](https://github.com/battis/qui-cli/commit/7b06b4f4ac4f9688719041ab8b1d837b3a0ee214))
+- no longer require ESM modules only as plugins ([cbf178c](https://github.com/battis/qui-cli/commit/cbf178c8a6f3cec49aff8b6de08fd547e66fb9f7))
 
 ## [4.0.0](https://github.com/battis/qui-cli/compare/plugin/3.0.0...plugin/4.0.0) (2025-11-07)
 
-
 ### ⚠ BREAKING CHANGES
 
-* group arguments by plugin in usage
-* auto-document default arg values
+- group arguments by plugin in usage
+- auto-document default arg values
 
 ### revert
 
-* group arguments by plugin in usage ([ec3d4bf](https://github.com/battis/qui-cli/commit/ec3d4bf6ef9c59a6da3ede8603554d2dcd2581ad))
-
+- group arguments by plugin in usage ([ec3d4bf](https://github.com/battis/qui-cli/commit/ec3d4bf6ef9c59a6da3ede8603554d2dcd2581ad))
 
 ### Features
 
-* auto-document default arg values ([e01e157](https://github.com/battis/qui-cli/commit/e01e157f06a3a801628ca79366e3f0060be2322e))
+- auto-document default arg values ([e01e157](https://github.com/battis/qui-cli/commit/e01e157f06a3a801628ca79366e3f0060be2322e))
 
 ## [3.0.0](https://github.com/battis/qui-cli/compare/plugin/2.4.2...plugin/3.0.0) (2025-08-02)
 
-
 ### ⚠ BREAKING CHANGES
 
-* rename @battis/qui-cli.plugin --> @qui-cli/plugin
+- rename @battis/qui-cli.plugin --> @qui-cli/plugin
 
-* rename @battis/qui-cli.plugin --> @qui-cli/plugin ([82033e6](https://github.com/battis/qui-cli/commit/82033e6d44db2a1cccca02da547f33fc63015ba9))
-
+- rename @battis/qui-cli.plugin --> @qui-cli/plugin ([82033e6](https://github.com/battis/qui-cli/commit/82033e6d44db2a1cccca02da547f33fc63015ba9))
 
 ### Bug Fixes
 
-* update dependencies to renamed @qui-cli/colors ([ff80e86](https://github.com/battis/qui-cli/commit/ff80e8625ef98834afdf04e57bfedb1906834e2b))
-* update dependencies to renamed @qui-cli/core ([f834c5a](https://github.com/battis/qui-cli/commit/f834c5a475f908585f1e17865917a092516168a0))
-* update dependencies to renamed @qui-cli/env ([5ff9ee8](https://github.com/battis/qui-cli/commit/5ff9ee844222dc4c73fd8cbdbfeaaa16541a158b))
-* update dependencies to renamed @qui-cli/shell ([906bc22](https://github.com/battis/qui-cli/commit/906bc22776f1c96e4215d7aa509820f27a9de3ab))
+- update dependencies to renamed @qui-cli/colors ([ff80e86](https://github.com/battis/qui-cli/commit/ff80e8625ef98834afdf04e57bfedb1906834e2b))
+- update dependencies to renamed @qui-cli/core ([f834c5a](https://github.com/battis/qui-cli/commit/f834c5a475f908585f1e17865917a092516168a0))
+- update dependencies to renamed @qui-cli/env ([5ff9ee8](https://github.com/battis/qui-cli/commit/5ff9ee844222dc4c73fd8cbdbfeaaa16541a158b))
+- update dependencies to renamed @qui-cli/shell ([906bc22](https://github.com/battis/qui-cli/commit/906bc22776f1c96e4215d7aa509820f27a9de3ab))
 
 ## [2.4.2](https://github.com/battis/qui-cli/compare/plugin/2.4.1...plugin/2.4.2) (2025-06-28)
 
