@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.0.6](https://github.com/battis/qui-cli/compare/structured/2.0.5...structured/2.0.6) (2026-03-10)
+
+
+### Bug Fixes
+
+* initialize Positionals options to correctly display plugin-required positionals ([fde874c](https://github.com/battis/qui-cli/commit/fde874ca39d9823892d49ff3009a9c2afece84eb))
+
 ## [2.0.5](https://github.com/battis/qui-cli/compare/structured/2.0.4...structured/2.0.5) (2026-01-18)
 
 
