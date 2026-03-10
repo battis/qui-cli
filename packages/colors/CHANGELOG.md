@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.2.4](https://github.com/battis/qui-cli/compare/colors/3.2.3...colors/3.2.4) (2026-03-10)
+
 ## [3.2.3](https://github.com/battis/qui-cli/compare/colors/3.2.2...colors/3.2.3) (2026-01-18)
 
 
