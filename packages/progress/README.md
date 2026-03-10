@@ -8,13 +8,23 @@
 ## Install
 
 ```sh
-npm install @qui-cli/progress
+npm install @qui-cli/progress @qui-cli/core
+```
+
+If developing a reusable plugin:
+
+```sh
+npm install --save-peer  @qui-cli/progress@>=3
 ```
 
 ## Usage
 
 ```ts
+import { Core } from '@qui-cli/core';
 import { Progress } from '@qui-cli/progress';
+
+// load user-provided command-line arguments
+await Core.run();
 
 Progress.start({ max: 10 });
 for (let i = 0; i < 10; i++) {

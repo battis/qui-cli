@@ -8,14 +8,24 @@
 ## Install
 
 ```sh
-npm install @qui-cli/validators @inquirer/prompts
+npm install @qui-cli/validators @qui-cli/core @inquirer/prompts
+```
+
+If developing a reusable plugin:
+
+```sh
+npm install --save-peer  @qui-cli/validators@>=3
 ```
 
 ## Usage
 
 ```ts
+import { Core } from '@qui-cli/core';
 import { Validators } from '@qui-cli/validators';
 import { input } from '@inquirer/prompts'
+
+// load user-provided command-line arguments
+await Core.run();
 
 const word = await input({
   message: 'Enter a decently long word'

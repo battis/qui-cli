@@ -8,17 +8,27 @@
 ## Install
 
 ```sh
-npm install @qui-cli/root
+npm install @qui-cli/root @qui-cli/core
+```
+
+If developing a reusable plugin:
+
+```sh
+npm install --save-peer  @qui-cli/root@>=3
 ```
 
 ## Usage
 
 ```ts
+import { Core } from '@qui-cli/core';
 import { Root } from '@qui-cli/root';
 import path from 'node:path';
 
 // configure Root
 Root.configure({ root: path.resolve(import.meta.dirname, '../../..') });
+
+// load user-provided command line arguments
+await Core.run();
 
 // use Root
 console.log(Root.path());

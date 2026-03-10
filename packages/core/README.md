@@ -11,6 +11,12 @@ Core features of @qui-cli/qui-cli
 npm install @qui-cli/core
 ```
 
+If developing a reusable plugin:
+
+```sh
+npm install --save-peer  @qui-cli/core@>=4
+```
+
 ## Usage
 
 ```ts

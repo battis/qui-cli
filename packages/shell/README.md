@@ -11,6 +11,12 @@
 npm install @qui-cli/shell @qui-cli/core
 ```
 
+If developing a reusable plugin:
+
+```sh
+npm install --save-peer  @qui-cli/shell@>=3
+```
+
 ## Usage
 
 ```ts
@@ -19,6 +25,9 @@ import { Core } from '@qui-cli/core';
 
 // configure Shell
 Root.configure({ showCommands: true });
+
+// load user-provided command-line arguments
+await Core.run();
 
 // use Shell
 Shell.exec('echo "hello world"');

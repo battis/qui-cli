@@ -11,6 +11,12 @@
 npm install @qui-cli/log @qui-cli/core
 ```
 
+If developing a reusable plugin:
+
+```sh
+npm install --save-peer  @qui-cli/log@>=3.2
+```
+
 ## Usage
 
 ```ts
@@ -18,7 +24,7 @@ import { Log } from '@qui-cli/log';
 import { Core } from '@qui-cli/core';
 
 // process user-provided command-line arguments
-const args = Core.init();
+const args = await Core.run();
 
 // use Log
 Log.debug(args);

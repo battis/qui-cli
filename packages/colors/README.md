@@ -11,6 +11,12 @@
 npm install @qui-cli/colors
 ```
 
+If developing a reusable plugin:
+
+```sh
+npm install --save-peer  @qui-cli/colors@>=3.2
+```
+
 ## Usage
 
 ```ts

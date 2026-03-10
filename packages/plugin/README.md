@@ -8,7 +8,7 @@
 ## Install
 
 ```sh
-npm install @qui-cli/plugin
+npm install --save-peer  @qui-cli/plugin@>=3
 ```
 
 ## Usage

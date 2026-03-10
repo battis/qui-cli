@@ -8,16 +8,29 @@
 ## Install
 
 ```sh
-npm install @qui-cli/env
+npm install @qui-cli/env @qui-cli/core @1password/sdk
+```
+
+`@1password/sdk` is an [optional](#1password-integration), but recommended, peer depedency.
+
+If developing a reusable plugin:
+
+```sh
+npm install --save-peer  @qui-cli/env@>=5
 ```
 
 ## Usage
 
 ```ts
+import { Core } from '@qui-cli/core';
 import { Env } from '@qui-cli/env';
+import path from 'node:path'
 
-// configure desired environment path
-Env.configure({ path: '../../.env' });
+// (optional) configure desired environment path
+Env.configure({ path: path.resolve(import.meta.dirname, '../.env')});
+
+// process user-provided command-line arguments and load environment
+await Core.run();
 
 // update .env
 Env.set({ key: 'EXAMPLE', value: parseInt(process.env.EXAMPLE || '0') + 1 });
