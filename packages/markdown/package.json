@@ -24,13 +24,9 @@
     "version": "commit-and-tag-version"
   },
   "dependencies": {
-    "@qui-cli/colors": "workspace:*",
     "strip-ansi": "^7.1.2"
   },
   "devDependencies": {
-    "@qui-cli/core": "workspace:*",
-    "@qui-cli/plugin": "workspace:*",
-    "@qui-cli/root": "workspace:*",
     "@tsconfig/node24": "^24.0.4",
     "@types/node": "^24.10.13",
     "commit-and-tag-version": "^12.6.1",
@@ -39,6 +35,7 @@
     "typescript": "^5.9.3"
   },
   "peerDependencies": {
+    "@qui-cli/colors": ">=3.2",
     "@qui-cli/core": ">=4",
     "@qui-cli/plugin": ">=3",
     "@qui-cli/root": ">=3"

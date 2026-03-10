@@ -24,9 +24,6 @@
     "@qui-cli/core": "workspace:*"
   },
   "devDependencies": {
-    "@qui-cli/colors": "workspace:*",
-    "@qui-cli/log": "workspace:*",
-    "@qui-cli/plugin": "workspace:*",
     "@tsconfig/node24": "^24.0.4",
     "del-cli": "^7.0.0",
     "npm-run-all": "^4.1.5",
@@ -34,8 +31,8 @@
   },
   "peerDependencies": {
     "@examples/dev-sequenced-commands.module-a": "workspace:*",
-    "@qui-cli/colors": "2.x",
-    "@qui-cli/log": "^2.1",
-    "@qui-cli/plugin": "^2.4"
+    "@qui-cli/colors": "workspace:*",
+    "@qui-cli/log": "workspace:*",
+    "@qui-cli/plugin": "workspace:*"
   }
 }

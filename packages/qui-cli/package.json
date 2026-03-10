@@ -23,20 +23,9 @@
     "build:compile": "tsc",
     "version": "commit-and-tag-version"
   },
-  "dependencies": {
-    "@qui-cli/colors": "workspace:*"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@battis/typescript-tricks": "^0.7.7",
-    "@inquirer/prompts": "^8.2.1",
-    "@qui-cli/core": "workspace:*",
-    "@qui-cli/env": "workspace:*",
-    "@qui-cli/log": "workspace:*",
-    "@qui-cli/plugin": "workspace:*",
-    "@qui-cli/progress": "workspace:*",
-    "@qui-cli/root": "workspace:*",
-    "@qui-cli/shell": "workspace:*",
-    "@qui-cli/validators": "workspace:*",
     "@tsconfig/node24": "^24.0.4",
     "@types/is-valid-path": "^0.1.2",
     "@types/node": "^24.10.13",
@@ -48,6 +37,7 @@
   },
   "peerDependencies": {
     "@inquirer/prompts": "8.x",
+    "@qui-cli/colors": "workspace:*",
     "@qui-cli/core": "workspace:*",
     "@qui-cli/env": "workspace:*",
     "@qui-cli/log": "workspace:*",
