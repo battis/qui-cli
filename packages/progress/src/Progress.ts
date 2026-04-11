@@ -32,7 +32,7 @@ export function start({ value = 0, max }: Options) {
   _multibar = new cliProgress.MultiBar({
     format: `{bar} {percentage}% {eta_formatted} ${Colors.value('{caption}')}`,
     barCompleteChar: '█',
-    barIncompleteChar: '█',
+    barIncompleteChar: '░',
     autopadding: true,
     autopaddingChar: '   ',
     formatBar: (progress, options: cliProgress.Options) => {
@@ -49,6 +49,22 @@ export function start({ value = 0, max }: Options) {
   });
   _bar = multibar().create(max, value);
   bar().update({ caption: '' });
+}
+
+export function getMax() {
+  return bar().getTotal();
+}
+
+export function setMax(max: number) {
+  bar().setTotal(max);
+}
+
+export function getValue() {
+  return bar().getProgress();
+}
+
+export function setValue(value: number) {
+  bar().update(value);
 }
 
 export function increment() {
