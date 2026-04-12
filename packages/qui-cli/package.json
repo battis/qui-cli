@@ -25,7 +25,7 @@
     "release": "commit-and-tag-version"
   },
   "devDependencies": {
-    "@battis/typescript-tricks": "^0.7.9",
+    "@battis/typescript-tricks": "^0.8.2",
     "@tsconfig/node-lts": "^24.0.0",
     "@types/is-valid-path": "^0.1.2",
     "@types/node": "^24.12.2",
