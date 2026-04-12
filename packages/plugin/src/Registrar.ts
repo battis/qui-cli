@@ -15,7 +15,8 @@ export async function register(plugin: Plugin.Base) {
     if (plugins[i].name === plugin.name) {
       if (plugins[i] !== plugin) {
         throw new Error(
-          `A plugin named '${plugin.name}' has already been registered.`
+          `A plugin named '${plugin.name}' has already been registered.`,
+          { cause: { plugin, registered: plugins } }
         );
       }
       return;
