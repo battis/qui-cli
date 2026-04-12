@@ -1,5 +1,5 @@
 import { Colors } from '@qui-cli/colors';
-import { Core } from '@qui-cli/core';
+import { Usage } from '@qui-cli/core';
 import * as Plugin from '@qui-cli/plugin';
 import { Root } from '@qui-cli/root';
 import fs from 'node:fs';
@@ -122,7 +122,7 @@ export async function run() {
   fs.writeFileSync(
     config.outputPath,
     `${config.pre.length ? `${config.pre}\n` : ''}${adjustHeadingLevel(
-      stripAnsi(restyle(Core.usageMarkdown()))
+      stripAnsi(restyle(Usage.usageMarkdown()))
     )
       .replace('Usage:\n\n```', '## Usage:\n\n```bash')
       .replace(

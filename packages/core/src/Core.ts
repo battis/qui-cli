@@ -1,11 +1,8 @@
+import { Help, JackSpeak, Positionals } from '#plugins';
 import * as Plugin from '@qui-cli/plugin';
 import { Base } from '@qui-cli/plugin/dist/Plugin.js';
-import * as Help from './Help.js';
-import * as JackSpeak from './JackSpeak.js';
-import * as Positionals from './Positionals.js';
 
 export { Options } from '@qui-cli/plugin';
-export * from './Usage.js';
 
 /** Core configuration options */
 export type Configuration = Plugin.Registrar.Configuration & {

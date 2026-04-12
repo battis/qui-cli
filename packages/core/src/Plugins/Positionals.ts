@@ -277,28 +277,30 @@ export function usage(usage: string, isMarkdown = false): string {
   )}${post}`;
 }
 
-export function run() {
-  const s = positionals.length !== 1 ? 's' : '';
-  if (positionals.length < config.min) {
-    throw new Error(
-      `Expected at least ${config.min} positional arguments, received ${positionals.length} positional argument${s}.`
-    );
-  }
-  if (config.max !== undefined && positionals.length > config.max) {
-    throw new Error(
-      `Expected no more than ${config.max} positional arguments, received ${positionals.length} positional argument${s}.`
-    );
-  }
-  names().forEach((name, i) => {
-    if (configSet[name].validate) {
-      const message = configSet[name].validate(positionals[i]);
-      if (!message || typeof message === 'string') {
-        throw new Error(
-          `Positional argument '${name}' (arg${i}) is not valid${!message ? '.' : `: ${message}`}`
-        );
-      }
+export function run({ 'core.help': help }: Plugin.AccumulatedResults = {}) {
+  if (!help) {
+    const s = positionals.length !== 1 ? 's' : '';
+    if (positionals.length < config.min) {
+      throw new Error(
+        `Expected at least ${config.min} positional arguments, received ${positionals.length} positional argument${s}.`
+      );
     }
-  });
+    if (config.max !== undefined && positionals.length > config.max) {
+      throw new Error(
+        `Expected no more than ${config.max} positional arguments, received ${positionals.length} positional argument${s}.`
+      );
+    }
+    names().forEach((name, i) => {
+      if (configSet[name].validate) {
+        const message = configSet[name].validate(positionals[i]);
+        if (!message || typeof message === 'string') {
+          throw new Error(
+            `Positional argument '${name}' (arg${i}) is not valid${!message ? '.' : `: ${message}`}`
+          );
+        }
+      }
+    });
+  }
 }
 
 export function get(positionalArgName: string) {

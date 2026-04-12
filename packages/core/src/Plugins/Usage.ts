@@ -1,6 +1,8 @@
+import { JackSpeak, Positionals } from '#plugins';
 import * as Colors from '@qui-cli/colors/dist/Colors.js';
-import * as JackSpeak from './JackSpeak.js';
-import * as Positionals from './Positionals.js';
+import * as Plugin from '@qui-cli/plugin';
+
+export const name = 'core.usage';
 
 function commandColor(usage: string) {
   const pre = usage.slice(0, usage.indexOf('\n  ') + 3);
@@ -18,5 +20,12 @@ export function usage() {
 }
 
 export function usageMarkdown() {
-  return Positionals.usage(JackSpeak.usageMarkdown(), true);
+  return Positionals.usage(JackSpeak.usageMarkdown());
+}
+
+export function run({ 'core.help': help }: Plugin.AccumulatedResults = {}) {
+  if (help) {
+    process.stdout.write(usage());
+    process.exit(0);
+  }
 }
