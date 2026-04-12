@@ -910,7 +910,7 @@ importers:
   packages/qui-cli:
     dependencies:
       '@inquirer/prompts':
-        specifier: 8.x
+        specifier: '*'
         version: 8.4.1(@types/node@24.12.2)
       '@qui-cli/colors':
         specifier: workspace:*
@@ -924,6 +924,9 @@ importers:
       '@qui-cli/log':
         specifier: workspace:*
         version: link:../log
+      '@qui-cli/markdown':
+        specifier: workspace:*
+        version: link:../markdown
       '@qui-cli/plugin':
         specifier: workspace:*
         version: link:../plugin
@@ -936,9 +939,15 @@ importers:
       '@qui-cli/shell':
         specifier: workspace:*
         version: link:../shell
+      '@qui-cli/structured':
+        specifier: workspace:*
+        version: link:../structured
       '@qui-cli/validators':
         specifier: workspace:*
         version: link:../validators
+      ora:
+        specifier: '*'
+        version: 9.3.0
     devDependencies:
       '@battis/typescript-tricks':
         specifier: ^0.8.2

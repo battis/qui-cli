@@ -36,16 +36,27 @@
     "typescript": "^5.9.3"
   },
   "peerDependencies": {
-    "@inquirer/prompts": "8.x",
+    "@inquirer/prompts": "*",
     "@qui-cli/colors": "workspace:*",
     "@qui-cli/core": "workspace:*",
     "@qui-cli/env": "workspace:*",
     "@qui-cli/log": "workspace:*",
+    "@qui-cli/markdown": "workspace:*",
     "@qui-cli/plugin": "workspace:*",
     "@qui-cli/progress": "workspace:*",
     "@qui-cli/root": "workspace:*",
     "@qui-cli/shell": "workspace:*",
-    "@qui-cli/validators": "workspace:*"
+    "@qui-cli/structured": "workspace:*",
+    "@qui-cli/validators": "workspace:*",
+    "ora": "*"
+  },
+  "peerDependenciesMeta": {
+    "@inquirer/prompts": {
+      "optional": true
+    },
+    "ora": {
+      "optional": true
+    }
   },
   "engines": {
     "node": ">=12.17"
