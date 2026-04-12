@@ -29,6 +29,7 @@
     "shelljs": "^0.10.0"
   },
   "devDependencies": {
+    "@qui-cli/colors": "workspace:*",
     "@qui-cli/log": "workspace:*",
     "@qui-cli/plugin": "workspace:*",
     "@tsconfig/node-lts": "^24.0.0",

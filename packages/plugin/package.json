@@ -28,6 +28,7 @@
     "jackspeak": "^4.2.3"
   },
   "devDependencies": {
+    "@qui-cli/colors": "workspace:*",
     "@tsconfig/node-lts": "^24.0.0",
     "@types/node": "^24.12.2",
     "commit-and-tag-version": "^12.7.1",
