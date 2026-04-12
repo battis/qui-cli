@@ -28,7 +28,7 @@
     "@battis/import-package-json": "^0.1.7",
     "@qui-cli/env": "workspace:*",
     "@qui-cli/shell": "workspace:*",
-    "@tsconfig/node24": "^24.0.4",
+    "@tsconfig/node-lts": "^24",
     "@types/node": "^24.10.13",
     "commit-and-tag-version": "^12.6.1",
     "del-cli": "^7.0.0",
