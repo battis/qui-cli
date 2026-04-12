@@ -29,7 +29,7 @@
     "wrap-ansi": "^10.0.0"
   },
   "devDependencies": {
-    "@tsconfig/node24": "^24.0.4",
+    "@tsconfig/node-lts": "^24",
     "@types/node": "^24.10.13",
     "commit-and-tag-version": "^12.6.1",
     "del-cli": "^7.0.0",

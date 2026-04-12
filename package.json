@@ -35,7 +35,7 @@
     "@examples/dev-structured": "workspace:*",
     "@examples/usage-cli": "workspace:*",
     "@examples/usage-modular": "workspace:*",
-    "@tsconfig/node24": "^24.0.4",
+    "@tsconfig/node-lts": "^24",
     "@types/node": "^24.10.13",
     "lerna": "^9.0.4",
     "monorepo-package-paths": "^0.4.3",
