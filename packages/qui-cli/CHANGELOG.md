@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.2.0](https://github.com/battis/qui-cli/compare/qui-cli/5.1.4...qui-cli/5.2.0) (2026-04-12)
+
+
+### Features
+
+* include all [@qui-cli](https://github.com/qui-cli) packages ([4a38300](https://github.com/battis/qui-cli/commit/4a38300a3c5cb0c7cc89603ebbff66c3e48100c9))
+
+
+### Bug Fixes
+
+* explicitly move to Node LTS (as opposed to implicitly) ([5381e1d](https://github.com/battis/qui-cli/commit/5381e1dddf90b59563e05700a548fdaaae76bebb))
+
 ## [5.1.4](https://github.com/battis/qui-cli/compare/qui-cli/5.1.3...qui-cli/5.1.4) (2026-03-10)
 
 Update README
