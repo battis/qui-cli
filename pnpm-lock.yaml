@@ -941,8 +941,8 @@ importers:
         version: link:../validators
     devDependencies:
       '@battis/typescript-tricks':
-        specifier: ^0.7.9
-        version: 0.7.9
+        specifier: ^0.8.2
+        version: 0.8.2
       '@tsconfig/node-lts':
         specifier: ^24.0.0
         version: 24.0.0
@@ -978,8 +978,8 @@ importers:
         version: 3.1.0
     devDependencies:
       '@battis/typescript-tricks':
-        specifier: ^0.7.9
-        version: 0.7.9
+        specifier: ^0.8.2
+        version: 0.8.2
       '@tsconfig/node-lts':
         specifier: ^24.0.0
         version: 24.0.0
@@ -1216,8 +1216,8 @@ packages:
       '@battis/qui-cli.plugin': ^2.4
       '@battis/qui-cli.root': 2.x
 
-  '@battis/typescript-tricks@0.7.9':
-    resolution: {integrity: sha512-TFHqdFTxJF3aI7UTDXHVkEoux+61LEhcbs+SIeYMaruWFpOkCnbjhh7xKOWo4YVVENzKrQWQPhAB8q3/t7It7w==}
+  '@battis/typescript-tricks@0.8.2':
+    resolution: {integrity: sha512-0ATH6pX2LeIdwMm1+kTqT9ztVog+tm0RKSnFdfD7PbhalaOn7VIkMZGzInfJ48tKQQxYfF/413jZtcLCGhBPvQ==}
 
   '@colors/colors@1.6.0':
     resolution: {integrity: sha512-Ir+AOibqzrIsL6ajt3Rz3LskB7OiMVHqltZmspbW/TJuTVuyOMirVqAkjfY6JISiLHgyNqicAC8AyHHGzNd/dA==}
@@ -5584,7 +5584,7 @@ snapshots:
       email-validator: 2.0.4
       is-valid-path: 0.1.1
 
-  '@battis/typescript-tricks@0.7.9': {}
+  '@battis/typescript-tricks@0.8.2': {}
 
   '@colors/colors@1.6.0': {}
 
