@@ -29,5 +29,5 @@ export function init({ values }: Plugin.ExpectedArguments<typeof options>) {
 }
 
 export function run() {
-  return true;
+  return help;
 }
