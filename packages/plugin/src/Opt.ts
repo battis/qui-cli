@@ -1,20 +1,22 @@
 import { Colors } from '@qui-cli/colors';
 import { ConfigMetaSet, ConfigSet, ConfigType } from 'jackspeak';
 
-type DocumentationOptions = {
-  [longOption: string]: {
-    secret?: boolean;
-  };
+export type Documentation = {
+  secret?: boolean;
 };
 
-type MetaSet<T extends ConfigType> = {
-  value: ConfigMetaSet<T, false> & DocumentationOptions;
-  list: ConfigMetaSet<T, true> & DocumentationOptions;
+type OptionDocumentation<D extends Documentation = Documentation> = {
+  [longOption: string]: D;
 };
 
-type opt = MetaSet<'string'>;
-type flag = MetaSet<'boolean'>;
-type num = MetaSet<'number'>;
+type MetaSet<T extends ConfigType, D extends Documentation = Documentation> = {
+  value: ConfigMetaSet<T, false> & OptionDocumentation<D>;
+  list: ConfigMetaSet<T, true> & OptionDocumentation<D>;
+};
+
+type opt<D extends Documentation = Documentation> = MetaSet<'string', D>;
+type flag<D extends Documentation = Documentation> = MetaSet<'boolean', D>;
+type num<D extends Documentation = Documentation> = MetaSet<'number', D>;
 
 type Paragraph = {
   text: string;
@@ -22,13 +24,13 @@ type Paragraph = {
   pre?: boolean;
 };
 
-export type Options = {
-  num?: num['value'];
-  numList?: num['list'];
-  opt?: opt['value'];
-  optList?: opt['list'];
-  flag?: flag['value'];
-  flagList?: flag['list'];
+export type Options<D extends Documentation = Documentation> = {
+  num?: num<D>['value'];
+  numList?: num<D>['list'];
+  opt?: opt<D>['value'];
+  optList?: opt<D>['list'];
+  flag?: flag<D>['value'];
+  flagList?: flag<D>['list'];
   fields?: ConfigSet;
   man?: Paragraph[];
 };
