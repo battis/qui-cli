@@ -1,4 +1,4 @@
-import { Core, Positionals } from '@qui-cli/core';
+import { Core } from '@qui-cli/core';
 import { Markdown } from '@qui-cli/markdown';
 import { register } from '@qui-cli/plugin';
 import fs from 'node:fs';
@@ -15,7 +15,6 @@ Markdown.configure({
   headingLevelAdjustment: 2,
   overwrite: true
 });
-Positionals.requireNoMoreThan(0);
 
 await Core.init();
 await Markdown.run();
