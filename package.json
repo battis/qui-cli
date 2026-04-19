@@ -26,6 +26,7 @@
     "@commitlint/config-pnpm-scopes": "^20.4.3",
     "@examples/dev-command": "workspace:*",
     "@examples/dev-env-1password": "workspace:*",
+    "@examples/dev-options": "workspace:*",
     "@examples/dev-plugin-lifecycle": "workspace:*",
     "@examples/dev-plugin.consumer-cli": "workspace:*",
     "@examples/dev-plugin.consumer-modular": "workspace:*",

@@ -1,9 +1,14 @@
+import { options } from '@qui-cli/log/dist/Log.js';
 import * as Plugin from '@qui-cli/plugin';
 import { Root } from '@qui-cli/root';
 import dotenv from 'dotenv';
 import fs from 'node:fs';
 import path from 'node:path';
 import { OP } from './1Password/index.js';
+
+export type Documentation = Plugin.Opt.Documentation & { env?: string };
+export type Options<D extends Documentation = Documentation> =
+  Plugin.Options<D>;
 
 export type Configuration = Plugin.Configuration & {
   /**
@@ -39,8 +44,64 @@ export async function configure(proposal: Configuration = {}) {
   }
 }
 
-export async function init() {
-  parse();
+export async function init(args: Plugin.ExpectedArguments<typeof options>) {
+  await parse();
+
+  const plugins = Plugin.Registrar.registered();
+  for (const plugin in plugins) {
+    if (plugin === name) {
+      break;
+    }
+    if (plugins[plugin].options) {
+      const options = await plugins[plugin].options();
+      const isUndefined = (arg: unknown) => arg === undefined;
+      type OptHandler = {
+        opt: keyof typeof options;
+        test: (arg: unknown) => boolean;
+        merge: <T>(arg: T, value: string) => T;
+      };
+      for (const { opt, test, merge } of [
+        {
+          opt: 'opt',
+          test: isUndefined,
+          merge: (_: unknown, value: string) => value
+        },
+        {
+          opt: 'optList',
+          test: () => true,
+          merge: (arg: string[] = [], value: string) => [...arg, value]
+        },
+        {
+          opt: 'num',
+          test: isUndefined,
+          merge: (_: unknown, value: string) => parseInt(value)
+        },
+        {
+          opt: 'numList',
+          test: () => true,
+          merge: (arg: number[] = [], value: string) => [
+            ...arg,
+            parseInt(value)
+          ]
+        }
+      ] as OptHandler[]) {
+        if (options[opt]) {
+          for (const key in options[opt]) {
+            // @ts-expect-error 7053
+            if ('env' in options[opt][key]) {
+              if (test(args.values[key])) {
+                // @ts-expect-error 7053
+                const value = await get({ key: options[opt][key].env });
+                if (value !== undefined) {
+                  args.values[key] = merge(args.values[key], value);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 export type ParsedResult = dotenv.DotenvParseOutput;

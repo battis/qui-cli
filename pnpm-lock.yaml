@@ -26,6 +26,9 @@ importers:
       '@examples/dev-env-1password':
         specifier: workspace:*
         version: link:examples/dev-env-1password
+      '@examples/dev-options':
+        specifier: workspace:*
+        version: link:examples/dev-options
       '@examples/dev-plugin-lifecycle':
         specifier: workspace:*
         version: link:examples/dev-plugin-lifecycle
@@ -136,6 +139,40 @@ importers:
       '@qui-cli/log':
         specifier: workspace:*
         version: link:../../packages/log
+    devDependencies:
+      '@tsconfig/node-lts':
+        specifier: ^24.0.0
+        version: 24.0.0
+      del-cli:
+        specifier: ^7.0.0
+        version: 7.0.0
+      npm-run-all:
+        specifier: ^4.1.5
+        version: 4.1.5
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
+
+  examples/dev-options:
+    dependencies:
+      '@qui-cli/colors':
+        specifier: workspace:*
+        version: link:../../packages/colors
+      '@qui-cli/core':
+        specifier: workspace:*
+        version: link:../../packages/core
+      '@qui-cli/env':
+        specifier: workspace:*
+        version: link:../../packages/env
+      '@qui-cli/log':
+        specifier: workspace:*
+        version: link:../../packages/log
+      '@qui-cli/plugin':
+        specifier: workspace:*
+        version: link:../../packages/plugin
+      '@qui-cli/root':
+        specifier: workspace:*
+        version: link:../../packages/root
     devDependencies:
       '@tsconfig/node-lts':
         specifier: ^24.0.0
