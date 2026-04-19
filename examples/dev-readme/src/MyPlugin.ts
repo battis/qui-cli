@@ -4,18 +4,18 @@ import * as Plugin from '@qui-cli/plugin';
 import path from 'node:path';
 
 Env.configure({ root: path.dirname(import.meta.dirname) });
+Positionals.require({
+  foo: {
+    description: 'Enim minim laborum dolore, eiusmod.'
+  },
+  bar: {
+    description: 'Cillum ut sit, labore.'
+  }
+});
 
 export const name = 'dev-readme';
 
 export function options(): Plugin.Options {
-  Positionals.require({
-    foo: {
-      description: 'Enim minim laborum dolore, eiusmod.'
-    },
-    bar: {
-      description: 'Cillum ut sit, labore.'
-    }
-  });
   return {
     man: [
       {
