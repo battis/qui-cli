@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [6.0.0](https://github.com/battis/qui-cli/compare/qui-cli/5.2.0...qui-cli/6.0.0) (2026-04-27)
+
 ## [5.2.0](https://github.com/battis/qui-cli/compare/qui-cli/5.1.4...qui-cli/5.2.0) (2026-04-12)
 
 
