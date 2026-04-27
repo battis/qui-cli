@@ -70,12 +70,16 @@ export function restyle(text: string) {
       let start;
       while ((start = text.indexOf(ansiOpen)) >= 0) {
         const end = text.indexOf(ansiClose, start);
-        text =
-          text.slice(0, start) +
-          markdownOpen +
-          text.slice(start + ansiOpen.length, end) +
-          markdownClose +
-          text.slice(end + ansiClose.length);
+        if (end > start) {
+          text =
+            text.slice(0, start) +
+            markdownOpen +
+            text.slice(start + ansiOpen.length, end) +
+            markdownClose +
+            text.slice(end + ansiClose.length);
+        } else {
+          text = text.slice(0, start) + text.slice(start + ansiOpen.length);
+        }
       }
     }
   }
