@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.2.0](https://github.com/battis/qui-cli/compare/env/5.1.2...env/5.2.0) (2026-04-27)
+
+
+### Features
+
+* options() can return Env.Options to fetch defaults from env ([4f9a48e](https://github.com/battis/qui-cli/commit/4f9a48e4e4d26e9d3871514265ca7324adc0908d))
+
+
+### Bug Fixes
+
+* explicitly move to Node LTS (as opposed to implicitly) ([5381e1d](https://github.com/battis/qui-cli/commit/5381e1dddf90b59563e05700a548fdaaae76bebb))
+
 ## [5.1.2](https://github.com/battis/qui-cli/compare/env/5.1.1...env/5.1.2) (2026-03-10)
 
 Update README
