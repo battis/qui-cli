@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [4.1.2](https://github.com/battis/qui-cli/compare/plugin/4.1.1...plugin/4.1.2) (2026-04-27)
+
+
+### Bug Fixes
+
+* explicitly move to Node LTS (as opposed to implicitly) ([5381e1d](https://github.com/battis/qui-cli/commit/5381e1dddf90b59563e05700a548fdaaae76bebb))
+* more detail on duplicate plugin error ([900c500](https://github.com/battis/qui-cli/commit/900c500ac6ffbc9406f0114daddc169e371ff830))
+
 ## [4.1.1](https://github.com/battis/qui-cli/compare/plugin/4.1.0...plugin/4.1.1) (2026-03-10)
 
 Update README
