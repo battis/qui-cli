@@ -4,17 +4,32 @@ All notable changes to this project will be documented in this file. See [commit
 
 ## [6.0.0](https://github.com/battis/qui-cli/compare/qui-cli/5.2.0...qui-cli/6.0.0) (2026-04-27)
 
-## [5.2.0](https://github.com/battis/qui-cli/compare/qui-cli/5.1.4...qui-cli/5.2.0) (2026-04-12)
+### ⚠ BREAKING CHANGES
 
+- **core@7.0.0**, **markdown@2.0.0** Core no longer exports usage() or usageMarkdown() (they
+  are exported from the Usage plugin in the core module).
 
 ### Features
 
-* include all [@qui-cli](https://github.com/qui-cli) packages ([4a38300](https://github.com/battis/qui-cli/commit/4a38300a3c5cb0c7cc89603ebbff66c3e48100c9))
-
+- **core@7.0.0**, **markdown@2.0.0** core Usage plugin generates usage for stdout and Markdown ([ac5a39a](https://github.com/battis/qui-cli/commit/ac5a39a24eae4b4b07fb4e144617b8e8ca7e2423))
+- **env@5.2.0** options() can return Env.Options to fetch defaults from env ([4f9a48e](https://github.com/battis/qui-cli/commit/4f9a48e4e4d26e9d3871514265ca7324adc0908d))
 
 ### Bug Fixes
 
-* explicitly move to Node LTS (as opposed to implicitly) ([5381e1d](https://github.com/battis/qui-cli/commit/5381e1dddf90b59563e05700a548fdaaae76bebb))
+- **core@7.0.0**, **plugin@4.1.2**, **env@5.2.0**, **markdown@2.0.0** explicitly move to Node LTS (as opposed to implicitly) ([5381e1d](https://github.com/battis/qui-cli/commit/5381e1dddf90b59563e05700a548fdaaae76bebb))
+- **core@7.0.0**, **markdown@2.0.0** format usage consistently in markdown ([5a7151e](https://github.com/battis/qui-cli/commit/5a7151e58590df1baf6b7f8e9d7a2bf6b0332b04))
+- **core@7.0.0** markdown formatting of positional arguments corrected ([90ec6f2](https://github.com/battis/qui-cli/commit/90ec6f2a4fada54b8119ce75b4d59f99d7d8fceb))
+- **plugin@4.1.2** more detail on duplicate plugin error ([900c500](https://github.com/battis/qui-cli/commit/900c500ac6ffbc9406f0114daddc169e371ff830))
+
+## [5.2.0](https://github.com/battis/qui-cli/compare/qui-cli/5.1.4...qui-cli/5.2.0) (2026-04-12)
+
+### Features
+
+- include all [@qui-cli](https://github.com/qui-cli) packages ([4a38300](https://github.com/battis/qui-cli/commit/4a38300a3c5cb0c7cc89603ebbff66c3e48100c9))
+
+### Bug Fixes
+
+- explicitly move to Node LTS (as opposed to implicitly) ([5381e1d](https://github.com/battis/qui-cli/commit/5381e1dddf90b59563e05700a548fdaaae76bebb))
 
 ## [5.1.4](https://github.com/battis/qui-cli/compare/qui-cli/5.1.3...qui-cli/5.1.4) (2026-03-10)
 
