@@ -232,7 +232,7 @@ function ellipsis(args: string[], start: number, end: number) {
   return args;
 }
 
-export function usageArgs() {
+export function usageArgs(isMarkdown = false) {
   let args = names();
   args = unnamed(args, (config.max || config.min) - namedCount());
   if (!config.max) {
@@ -244,6 +244,9 @@ export function usageArgs() {
   }
   args = ellipsis(args, namedCount(), config.min);
 
+  if (isMarkdown) {
+    return args.join(' ');
+  }
   return args.map((arg) => Colors.positionalArg(arg)).join(' ');
 }
 
@@ -272,7 +275,7 @@ export function usage(usage: string, isMarkdown = false): string {
     `${cmd
       .split('\n')
       .map((token) => token.trim())
-      .join(' ')} ${usageArgs()}`,
+      .join(' ')} ${usageArgs(isMarkdown)}`,
     2
   )}${post}`;
 }

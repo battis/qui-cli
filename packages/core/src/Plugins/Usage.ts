@@ -20,7 +20,7 @@ export function usage() {
 }
 
 export function usageMarkdown() {
-  return Positionals.usage(JackSpeak.usageMarkdown());
+  return Positionals.usage(JackSpeak.usageMarkdown(), true);
 }
 
 export function run({ 'core.help': help }: Plugin.AccumulatedResults = {}) {
