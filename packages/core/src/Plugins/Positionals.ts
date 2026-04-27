@@ -201,7 +201,7 @@ export function options(): Plugin.Options {
     }
   }
   if (man.length > 0) {
-    man.unshift({ level: 1, text: 'Positional arguments' });
+    man.unshift({ text: '' }, { level: 1, text: 'Positional arguments' });
   }
   return { man };
 }
@@ -245,7 +245,7 @@ export function usageArgs(isMarkdown = false) {
   args = ellipsis(args, namedCount(), config.min);
 
   if (isMarkdown) {
-    return args.join(' ');
+    return args.map((arg) => `<u>${arg}</u>`).join(' ');
   }
   return args.map((arg) => Colors.positionalArg(arg)).join(' ');
 }
@@ -267,17 +267,25 @@ export function usage(usage: string, isMarkdown = false): string {
   let cmd = usage.slice(pre.length, usage.indexOf('\n\n'));
   let post = usage.slice(pre.length + cmd.length);
   if (isMarkdown) {
-    pre = usage.slice(0, usage.indexOf('```\n') + 4);
-    cmd = usage.slice(pre.length, usage.indexOf('\n```', pre.length));
-    post = usage.slice(pre.length + cmd.length);
+    pre = usage.slice(0, usage.indexOf('```\n'));
+    cmd = usage.slice(pre.length + 4, usage.indexOf('\n```', pre.length));
+    post = usage.slice(pre.length + cmd.length + 8);
+    cmd = cmd.replaceAll('<', '&lt;').replaceAll('>', '&gt;');
   }
-  return `${pre}${wrap(
-    `${cmd
-      .split('\n')
-      .map((token) => token.trim())
-      .join(' ')} ${usageArgs(isMarkdown)}`,
-    2
-  )}${post}`;
+  return `${pre}${
+    isMarkdown
+      ? `<pre lang="bash">${cmd
+          .split('\n')
+          .map((token) => token.trim())
+          .join(' ')} ${usageArgs(isMarkdown)}</pre>`
+      : wrap(
+          `${cmd
+            .split('\n')
+            .map((token) => token.trim())
+            .join(' ')} ${usageArgs(isMarkdown)}`,
+          2
+        )
+  }${post}`;
 }
 
 export function run({ 'core.help': help }: Plugin.AccumulatedResults = {}) {

@@ -102,8 +102,8 @@ export async function init(
     usage.reverse();
   }
 
-  JackSpeak.args(Help.options());
   JackSpeak.args(Positionals.options());
+  JackSpeak.args(Help.options());
   for (const options of usage) {
     JackSpeak.args(options);
   }

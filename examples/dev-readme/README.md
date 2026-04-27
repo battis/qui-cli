@@ -8,27 +8,27 @@ Demonstrate using `@qui-cli/markdown` to generate a README
 - Call `Positionals.requireNoMoreThan(0)` immediately before `Core.init()` to override any required positionals from the imported command.
 - Note that the command name in the documentation is set by the name of the script that invokes `@qui-cli/markdown` (`./scripts/dev-readme` &rarr; `dev-readme`)
 
-## Usage:
+Usage:
 
-```bash
-  dev-readme -hA --z=<buzz> --bargle --commands --silent --logging --baz=<baz> --biz=<biz> --pi=<pi> --a=<a> --opAccount=<example.1password.com> --opItem=<1Password unique identifier> --opToken=<token value> --logFilePath=<logFilePath> --stdoutLevel=<all|trace|debug|info|warning|error|fatal|off> --fileLevel=<all|trace|debug|info|warning|error|fatal|off> foo bar [...]
-```
+<pre lang="bash">dev-readme -hA --z=&lt;buzz&gt; --bargle --commands --silent --logging --baz=&lt;baz&gt; --biz=&lt;biz&gt; --pi=&lt;pi&gt; --a=&lt;a&gt; --opAccount=&lt;example.1password.com&gt; --opItem=&lt;1Password unique identifier&gt; --opToken=&lt;token value&gt; --logFilePath=&lt;logFilePath&gt; --stdoutLevel=&lt;all|trace|debug|info|warning|error|fatal|off&gt; --fileLevel=&lt;all|trace|debug|info|warning|error|fatal|off&gt; <u>foo</u> <u>bar</u> <u>[...]</u></pre>
 
-## Arguments
+
+
+### Positional arguments
+
+#### <u>`foo`</u>
+
+Enim minim laborum dolore, eiusmod.
+
+#### <u>`bar`</u>
+
+Cillum ut sit, labore.
+
+### Arguments
 
 #### `-h --help`
 
 Show this usage information
-
-### Positional arguments
-
-#### `foo`
-
-Enim minim laborum dolore, eiusmod.
-
-#### `bar`
-
-Cillum ut sit, labore.
 
 ### dev-readme options
 
