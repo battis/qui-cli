@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.0.0](https://github.com/battis/qui-cli/compare/markdown/1.2.2...markdown/2.0.0) (2026-04-27)
+
+
+### ⚠ BREAKING CHANGES
+
+* Core no longer exports usage() or usageMarkdown() (they
+are exported from the Usage plugin in the core module).
+
+### Features
+
+* core Usage plugin generates usage for stdout and Markdown ([ac5a39a](https://github.com/battis/qui-cli/commit/ac5a39a24eae4b4b07fb4e144617b8e8ca7e2423))
+
+
+### Bug Fixes
+
+* explicitly move to Node LTS (as opposed to implicitly) ([5381e1d](https://github.com/battis/qui-cli/commit/5381e1dddf90b59563e05700a548fdaaae76bebb))
+* format usage consistently in markdown ([5a7151e](https://github.com/battis/qui-cli/commit/5a7151e58590df1baf6b7f8e9d7a2bf6b0332b04))
+
 ## [1.2.2](https://github.com/battis/qui-cli/compare/markdown/1.2.1...markdown/1.2.2) (2026-03-10)
 
 Update README
