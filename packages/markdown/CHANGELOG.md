@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.0.1](https://github.com/battis/qui-cli/compare/markdown/2.0.0...markdown/2.0.1) (2026-04-27)
+
+
+### Bug Fixes
+
+* tolerate mismatched ANSI tags ([41451f4](https://github.com/battis/qui-cli/commit/41451f4e30cad713a0ab4f025fa05f9d8f3930d0))
+
 ## [2.0.0](https://github.com/battis/qui-cli/compare/markdown/1.2.2...markdown/2.0.0) (2026-04-27)
 
 
