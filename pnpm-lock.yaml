@@ -15,8 +15,8 @@ importers:
         specifier: ^1.7.3
         version: 1.7.3(@prettier/plugin-xml@3.4.2(prettier@3.8.1))(@trivago/prettier-plugin-sort-imports@5.2.2(prettier@3.8.1))(prettier-plugin-ejs@1.0.3(prettier@3.8.1))(prettier-plugin-jsdoc@1.8.0(prettier@3.8.1))(prettier-plugin-organize-imports@4.3.0(prettier@3.8.1)(typescript@5.9.3))(prettier-plugin-packagejson@2.5.22(prettier@3.8.1))(prettier@3.8.1)
       '@commitlint/config-conventional':
-        specifier: ^20.5.0
-        version: 20.5.0
+        specifier: ^20.5.3
+        version: 20.5.3
       '@commitlint/config-pnpm-scopes':
         specifier: ^20.4.3
         version: 20.4.3
@@ -1153,8 +1153,8 @@ packages:
     resolution: {integrity: sha512-qSs4ifwzKJSV39ucNjsvc6WVHs6b7S03sOh2OcHF9UHfVPqWWALUsNUVzhSBiItjRZoLHx7nIarVjqKVusUZ1Q==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/parser@7.29.2':
-    resolution: {integrity: sha512-4GgRzy/+fsBa72/RZVJmGKPmZu9Byn8o4MoLpmNe1m8ZfYnz5emHLQz3U4gLud6Zwl0RZIcgiLD7Uq7ySFuDLA==}
+  '@babel/parser@7.29.3':
+    resolution: {integrity: sha512-b3ctpQwp+PROvU/cttc4OYl4MzfJUWy6FZg+PMXfzmt/+39iHVF0sDfqay8TQM3JA2EUOyKcFZt75jWriQijsA==}
     engines: {node: '>=6.0.0'}
     hasBin: true
 
@@ -1235,8 +1235,8 @@ packages:
     resolution: {integrity: sha512-Ir+AOibqzrIsL6ajt3Rz3LskB7OiMVHqltZmspbW/TJuTVuyOMirVqAkjfY6JISiLHgyNqicAC8AyHHGzNd/dA==}
     engines: {node: '>=0.1.90'}
 
-  '@commitlint/config-conventional@20.5.0':
-    resolution: {integrity: sha512-t3Ni88rFw1XMa4nZHgOKJ8fIAT9M2j5TnKyTqJzsxea7FUetlNdYFus9dz+MhIRZmc16P0PPyEfh6X2d/qw8SA==}
+  '@commitlint/config-conventional@20.5.3':
+    resolution: {integrity: sha512-j34Qqeaa152chJgz2ysyk0BCpHenJn1lV0Rx0VXf8k3ccQcED+48EZrzMvo9jLmJUyBrrBwvu89I+2er4gW7QQ==}
     engines: {node: '>=v18'}
 
   '@commitlint/config-pnpm-scopes@20.4.3':
@@ -1465,12 +1465,16 @@ packages:
     resolution: {integrity: sha512-7bQW+gkKa2kKZPeJf6+c6gFK9ARxQfn+FKy9ScTBppyKRWH2KzsmweXUoklqeEiHiNVWaeP5csIdsNq6w7QhzA==}
     engines: {node: '>=12.20'}
 
-  '@humanfs/core@0.19.1':
-    resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
+  '@humanfs/core@0.19.2':
+    resolution: {integrity: sha512-UhXNm+CFMWcbChXywFwkmhqjs3PRCmcSa/hfBgLIb7oQ5HNb1wS0icWsGtSAUNgefHeI+eBrA8I1fxmbHsGdvA==}
     engines: {node: '>=18.18.0'}
 
-  '@humanfs/node@0.16.7':
-    resolution: {integrity: sha512-/zUx+yOsIrG4Y43Eh2peDeKCxlRt/gET6aHfaKpuq267qXdYDFViVHfMaLyygZOnl0kGWxFIgsBy8QFuTLUXEQ==}
+  '@humanfs/node@0.16.8':
+    resolution: {integrity: sha512-gE1eQNZ3R++kTzFUpdGlpmy8kDZD/MLyHqDwqjkVQI0JMdI1D51sy1H958PNXYkM2rAac7e5/CnIKZrHtPh3BQ==}
+    engines: {node: '>=18.18.0'}
+
+  '@humanfs/types@0.15.0':
+    resolution: {integrity: sha512-ZZ1w0aoQkwuUuC7Yf+7sdeaNfqQiiLcSRbfI08oAxqLtpXQr9AIVX7Ay7HLDuiLYAaFPu8oBYNq/QIi9URHJ3Q==}
     engines: {node: '>=18.18.0'}
 
   '@humanwhocodes/module-importer@1.0.1':
@@ -2257,8 +2261,8 @@ packages:
     resolution: {integrity: sha512-4I7Td01quW/RpocfNayFdFVk1qSuoh0E7JrbRJ16nH01HhKFQ88INq9Sd+nd72zqRySlr9BmDA8xlEJ6vJMrYA==}
     engines: {node: '>=8'}
 
-  ajv@6.14.0:
-    resolution: {integrity: sha512-IWrosm/yrn43eiKqkfkHis7QioDleaXQHdDVPKg0FSwwd/DuvyX79TZnFOnYpB7dcsFAMmtFztZuXPDvSePkFw==}
+  ajv@6.15.0:
+    resolution: {integrity: sha512-fgFx7Hfoq60ytK2c7DhnF8jIvzYgOMxfugjLOSMHjLIPgenqa7S7oaagATUq99mV6IYvN2tRmC0wnTYX6iPbMw==}
 
   ansi-colors@4.1.3:
     resolution: {integrity: sha512-/6w/C21Pm1A7aZitlI5Ni/2J6FFQN8i1Cvz3kHABAAbw93v/NlvKdVOqz7CCWz/3iv/JplRSEEZ83XION15ovw==}
@@ -5460,7 +5464,7 @@ snapshots:
 
   '@babel/generator@7.29.1':
     dependencies:
-      '@babel/parser': 7.29.2
+      '@babel/parser': 7.29.3
       '@babel/types': 7.29.0
       '@jridgewell/gen-mapping': 0.3.13
       '@jridgewell/trace-mapping': 0.3.31
@@ -5472,14 +5476,14 @@ snapshots:
 
   '@babel/helper-validator-identifier@7.28.5': {}
 
-  '@babel/parser@7.29.2':
+  '@babel/parser@7.29.3':
     dependencies:
       '@babel/types': 7.29.0
 
   '@babel/template@7.28.6':
     dependencies:
       '@babel/code-frame': 7.29.0
-      '@babel/parser': 7.29.2
+      '@babel/parser': 7.29.3
       '@babel/types': 7.29.0
 
   '@babel/traverse@7.29.0':
@@ -5487,7 +5491,7 @@ snapshots:
       '@babel/code-frame': 7.29.0
       '@babel/generator': 7.29.1
       '@babel/helper-globals': 7.28.0
-      '@babel/parser': 7.29.2
+      '@babel/parser': 7.29.3
       '@babel/template': 7.28.6
       '@babel/types': 7.29.0
       debug: 4.4.3
@@ -5567,7 +5571,7 @@ snapshots:
 
   '@colors/colors@1.6.0': {}
 
-  '@commitlint/config-conventional@20.5.0':
+  '@commitlint/config-conventional@20.5.3':
     dependencies:
       '@commitlint/types': 20.5.0
       conventional-changelog-conventionalcommits: 9.3.1
@@ -5705,7 +5709,7 @@ snapshots:
 
   '@eslint/eslintrc@3.3.5':
     dependencies:
-      ajv: 6.14.0
+      ajv: 6.15.0
       debug: 4.4.3
       espree: 10.4.0
       globals: 14.0.0
@@ -5744,12 +5748,17 @@ snapshots:
 
   '@gwhitney/detect-indent@7.0.1': {}
 
-  '@humanfs/core@0.19.1': {}
-
-  '@humanfs/node@0.16.7':
+  '@humanfs/core@0.19.2':
     dependencies:
-      '@humanfs/core': 0.19.1
+      '@humanfs/types': 0.15.0
+
+  '@humanfs/node@0.16.8':
+    dependencies:
+      '@humanfs/core': 0.19.2
+      '@humanfs/types': 0.15.0
       '@humanwhocodes/retry': 0.4.3
+
+  '@humanfs/types@0.15.0': {}
 
   '@humanwhocodes/module-importer@1.0.1': {}
 
@@ -6518,7 +6527,7 @@ snapshots:
   '@trivago/prettier-plugin-sort-imports@5.2.2(prettier@3.8.1)':
     dependencies:
       '@babel/generator': 7.29.1
-      '@babel/parser': 7.29.2
+      '@babel/parser': 7.29.3
       '@babel/traverse': 7.29.0
       '@babel/types': 7.29.0
       javascript-natural-sort: 0.7.1
@@ -6711,7 +6720,7 @@ snapshots:
       clean-stack: 2.2.0
       indent-string: 4.0.0
 
-  ajv@6.14.0:
+  ajv@6.15.0:
     dependencies:
       fast-deep-equal: 3.1.3
       fast-json-stable-stringify: 2.1.0
@@ -7521,11 +7530,11 @@ snapshots:
       '@eslint/eslintrc': 3.3.5
       '@eslint/js': 9.39.4
       '@eslint/plugin-kit': 0.4.1
-      '@humanfs/node': 0.16.7
+      '@humanfs/node': 0.16.8
       '@humanwhocodes/module-importer': 1.0.1
       '@humanwhocodes/retry': 0.4.3
       '@types/estree': 1.0.8
-      ajv: 6.14.0
+      ajv: 6.15.0
       chalk: 4.1.2
       cross-spawn: 7.0.6
       debug: 4.4.3
