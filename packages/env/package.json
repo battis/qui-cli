@@ -27,7 +27,7 @@
   "dependencies": {
     "@battis/import-package-json": "^0.1.7",
     "dotenv": "^17.4.2",
-    "ora": "^9.3.0"
+    "ora": "^9.4.0"
   },
   "devDependencies": {
     "@qui-cli/colors": "workspace:*",
