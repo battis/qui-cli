@@ -22,8 +22,8 @@
   "devDependencies": {
     "@battis/eslint-config": "^2.1.0",
     "@battis/prettier-config": "^1.7.3",
-    "@commitlint/config-conventional": "^20.5.0",
-    "@commitlint/config-pnpm-scopes": "^20.4.3",
+    "@commitlint/config-conventional": "^20.5.3",
+    "@commitlint/config-pnpm-scopes": "^20.5.2",
     "@examples/dev-command": "workspace:*",
     "@examples/dev-env-1password": "workspace:*",
     "@examples/dev-options": "workspace:*",
@@ -37,11 +37,11 @@
     "@examples/usage-cli": "workspace:*",
     "@examples/usage-modular": "workspace:*",
     "@tsconfig/node-lts": "^24.0.0",
-    "@types/node": "^24.12.2",
+    "@types/node": "^24.13.2",
     "lerna": "^9.0.7",
     "monorepo-package-paths": "^0.4.4",
     "npm-run-all": "^4.1.5"
   },
-  "packageManager": "pnpm@10.20.0+sha512.cf9998222162dd85864d0a8102e7892e7ba4ceadebbf5a31f9c2fce48dfce317a9c53b9f6464d1ef9042cba2e02ae02a9f7c143a2b438cd93c91840f0192b9dd",
+  "packageManager": "pnpm@11.9.0+sha512.bd682d5d03fe525ef7c9fd6780c6884d1e756ac4c9c9fe00c538782824310dcf90e3ddc4f53835f06dfaebd5085e41855e0bcbb3b60de2ac5bbab89e5036f03b",
   "target": "node"
 }

@@ -8,6 +8,10 @@ packages:
   - '!examples/dev-peer-of-peer'
   - examples/dev-peer-of-peer/*
 
+allowBuilds:
+  esbuild: true
+  nx: true
+
 onlyBuiltDependencies:
   - esbuild
   - nx
