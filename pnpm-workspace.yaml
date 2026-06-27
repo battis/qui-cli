@@ -1,3 +1,11 @@
+publicHoistPattern:
+  - '*eslint*'
+  - '*prettier*'
+
+allowBuilds:
+  esbuild: true
+  nx: true
+
 packages:
   - packages/*
   - examples/*
@@ -8,10 +16,3 @@ packages:
   - '!examples/dev-peer-of-peer'
   - examples/dev-peer-of-peer/*
 
-allowBuilds:
-  esbuild: true
-  nx: true
-
-onlyBuiltDependencies:
-  - esbuild
-  - nx
