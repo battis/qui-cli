@@ -1,18 +1,22 @@
 publicHoistPattern:
-  - '*eslint*'
-  - '*prettier*'
-
+  - "*eslint*"
+  - "*prettier*"
+  - "@commitlint/*"
+  - commit-and-tag-version
 allowBuilds:
   esbuild: true
   nx: true
-
 packages:
   - packages/*
   - examples/*
-  - '!examples/dev-plugin'
+  - "!examples/dev-plugin"
   - examples/dev-plugin/*
-  - '!examples/dev-sequenced-commands'
+  - "!examples/dev-sequenced-commands"
   - examples/dev-sequenced-commands/*
-  - '!examples/dev-peer-of-peer'
+  - "!examples/dev-peer-of-peer"
   - examples/dev-peer-of-peer/*
-
+minimumReleaseAgeExclude:
+  - "@battis/eslint@3.0.0"
+  - "@battis/pkg-setup@0.0.1"
+  - "@battis/prettier@2.0.0 || 2.0.1"
+  - "@battis/commit@0.0.1"

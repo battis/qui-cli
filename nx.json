@@ -1,34 +1,14 @@
 {
   "targetDefaults": {
-    "clean": {
-      "dependsOn": []
-    },
     "build": {
       "cache": true,
-      "dependsOn": [
-        "^build"
-      ],
-      "outputs": [
-        "{projectRoot}/dist"
-      ]
-    },
-    "build:clean": {
-      "dependsOn": []
-    },
-    "build:compile": {
-      "dependsOn": []
+      "dependsOn": ["^build"],
+      "outputs": ["{projectRoot}/dist"]
     },
     "release": {
-      "dependsOn": []
-    },
-    "release:build": {
-      "dependsOn": []
-    },
-    "release:tag": {
-      "dependsOn": []
-    },
-    "release:publish": {
-      "dependsOn": []
+      "cache": true,
+      "dependsOn": ["^release"],
+      "outputs": ["{projectRoot}/package.json", "{projectRoot}/CHANGELOG.md"]
     }
   }
 }

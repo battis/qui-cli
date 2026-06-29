@@ -12,18 +12,23 @@
   "type": "module",
   "scripts": {
     "build": "run-s build:*",
+    "build:setup": "run-s setup",
     "build:paths": "monorepo-package-paths -w --author --homepage --repository",
     "build:compile": "lerna run build",
     "release": "run-s release:*",
     "release:git": "git push --follow-tags",
     "release:login": "pnpm login",
-    "release:publish": "pnpm publish -r --access public --filter './packages/**'"
+    "release:publish": "pnpm publish -r --access public --filter './packages/**'",
+    "postinstall": "run-s setup",
+    "setup": "run-s setup:*",
+    "setup:prettier": "setup-prettier -f",
+    "setup:eslint": "setup-eslint -f",
+    "setup:commit": "setup-commit -f"
   },
   "devDependencies": {
-    "@battis/eslint-config": "^2.1.0",
-    "@battis/prettier-config": "^1.7.3",
-    "@commitlint/config-conventional": "^20.5.3",
-    "@commitlint/config-pnpm-scopes": "^20.5.2",
+    "@battis/commit": "^0.0.1",
+    "@battis/eslint": "^3.0.0",
+    "@battis/prettier": "^2.0.1",
     "@examples/dev-command": "workspace:*",
     "@examples/dev-env-1password": "workspace:*",
     "@examples/dev-options": "workspace:*",
