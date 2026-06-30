@@ -22,7 +22,7 @@
     "build:clean": "run-s clean",
     "build:compile": "tsc",
     "prepack": "run-s build",
-    "release": "commit-and-tag-version"
+    "release": "commit-and-tag-version --noBumpWhenEmptyChanges"
   },
   "dependencies": {
     "strip-ansi": "^7.2.0"
