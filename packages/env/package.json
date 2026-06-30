@@ -25,11 +25,12 @@
     "release": "commit-and-tag-version --noBumpWhenEmptyChanges"
   },
   "dependencies": {
-    "@battis/import-package-json": "^0.1.7",
+    "@battis/import-package-json": "^0.1.9",
     "dotenv": "^17.4.2",
     "ora": "^9.4.1"
   },
   "devDependencies": {
+    "@battis/workspace": "^0.0.5",
     "@qui-cli/colors": "workspace:*",
     "@qui-cli/log": "workspace:*",
     "@qui-cli/plugin": "workspace:*",

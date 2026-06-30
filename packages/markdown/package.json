@@ -28,6 +28,7 @@
     "strip-ansi": "^7.2.0"
   },
   "devDependencies": {
+    "@battis/workspace": "^0.0.5",
     "@qui-cli/colors": "workspace:*",
     "@qui-cli/core": "workspace:*",
     "@qui-cli/plugin": "workspace:*",

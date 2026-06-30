@@ -9,17 +9,17 @@ importers:
   .:
     devDependencies:
       '@battis/commit':
-        specifier: ^0.0.1
-        version: 0.0.1(@commitlint/config-conventional@21.1.0)(@commitlint/config-pnpm-scopes@21.0.2)(@qui-cli/log@4.0.4(@qui-cli/colors@3.2.4)(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))))(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4)))(@types/node@24.13.2)(commit-and-tag-version@12.7.3)
+        specifier: ^0.0.4
+        version: 0.0.4(@commitlint/config-conventional@21.1.0)(@commitlint/config-pnpm-scopes@21.0.2)(@qui-cli/log@4.0.4(@qui-cli/colors@3.2.4)(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))))(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4)))(@types/node@24.13.2)(commit-and-tag-version@12.7.3)
       '@battis/eslint':
-        specifier: ^3.0.0
-        version: 3.0.0(@eslint/js@9.39.4)(@eslint/markdown@7.5.1)(@qui-cli/colors@3.2.4)(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4)))(@types/node@24.13.2)(eslint-config-prettier@10.1.8(eslint@9.39.4))(eslint-plugin-html@8.1.4)(eslint@9.39.4)(globals@17.7.0)(typescript-eslint@8.62.0(eslint@9.39.4)(typescript@5.9.3))
+        specifier: ^3.0.1
+        version: 3.0.1(@eslint/js@9.39.4)(@eslint/markdown@7.5.1)(@qui-cli/colors@3.2.4)(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4)))(@types/node@24.13.2)(eslint-config-prettier@10.1.8(eslint@9.39.4))(eslint-plugin-html@8.1.4)(eslint@9.39.4)(globals@17.7.0)(typescript-eslint@8.62.0(eslint@9.39.4)(typescript@5.9.3))
       '@battis/monorepo':
-        specifier: ^0.0.1
-        version: 0.0.1(f39887a537f7a45c3dfae5449a1ec10a)
+        specifier: ^0.0.3
+        version: 0.0.3(@qui-cli/colors@3.2.4)(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4)))(@types/node@24.13.2)(lerna@9.0.7(@types/node@24.13.2))(monorepo-package-paths@0.4.6(@types/node@24.13.2)(prettier@3.8.4))(npm-run-all@4.1.5)
       '@battis/prettier':
-        specifier: ^2.0.1
-        version: 2.0.1(@prettier/plugin-xml@3.4.2(prettier@3.8.4))(@qui-cli/colors@3.2.4)(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4)))(@trivago/prettier-plugin-sort-imports@5.2.2(prettier@3.8.4))(@types/node@24.13.2)(prettier-plugin-ejs@1.0.3(prettier@3.8.4))(prettier-plugin-jsdoc@1.8.1(prettier@3.8.4))(prettier-plugin-organize-imports@4.3.0(prettier@3.8.4)(typescript@5.9.3))(prettier-plugin-packagejson@2.5.22(prettier@3.8.4))(prettier@3.8.4)
+        specifier: ^2.0.3
+        version: 2.0.3(@prettier/plugin-xml@3.4.2(prettier@3.8.4))(@qui-cli/colors@3.2.4)(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4)))(@trivago/prettier-plugin-sort-imports@5.2.2(prettier@3.8.4))(@types/node@24.13.2)(prettier-plugin-ejs@1.0.3(prettier@3.8.4))(prettier-plugin-jsdoc@1.8.1(prettier@3.8.4))(prettier-plugin-organize-imports@4.3.0(prettier@3.8.4)(typescript@5.9.3))(prettier-plugin-packagejson@2.5.22(prettier@3.8.4))(prettier@3.8.4)
       '@examples/dev-command':
         specifier: workspace:*
         version: link:examples/dev-command
@@ -663,6 +663,9 @@ importers:
         specifier: ^5.6.2
         version: 5.6.2
     devDependencies:
+      '@battis/workspace':
+        specifier: ^0.0.5
+        version: 0.0.5(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4)))(@types/node@24.13.2)(commit-and-tag-version@12.7.3)
       '@tsconfig/node-lts':
         specifier: ^24.0.0
         version: 24.0.0
@@ -691,6 +694,9 @@ importers:
         specifier: ^10.0.0
         version: 10.0.0
     devDependencies:
+      '@battis/workspace':
+        specifier: ^0.0.5
+        version: 0.0.5(@qui-cli/plugin@packages+plugin)(@qui-cli/root@3.1.1(@qui-cli/plugin@packages+plugin))(@types/node@24.13.2)(commit-and-tag-version@12.7.3)
       '@qui-cli/colors':
         specifier: workspace:*
         version: link:../colors
@@ -722,8 +728,8 @@ importers:
         specifier: '>=0.3'
         version: 0.4.0
       '@battis/import-package-json':
-        specifier: ^0.1.7
-        version: 0.1.7
+        specifier: ^0.1.9
+        version: 0.1.9
       dotenv:
         specifier: ^17.4.2
         version: 17.4.2
@@ -731,6 +737,9 @@ importers:
         specifier: ^9.4.1
         version: 9.4.1
     devDependencies:
+      '@battis/workspace':
+        specifier: ^0.0.5
+        version: 0.0.5(@qui-cli/plugin@packages+plugin)(@qui-cli/root@packages+root)(@types/node@24.13.2)(commit-and-tag-version@12.7.3)
       '@qui-cli/colors':
         specifier: workspace:*
         version: link:../colors
@@ -777,6 +786,9 @@ importers:
         specifier: ^3.19.0
         version: 3.19.0
     devDependencies:
+      '@battis/workspace':
+        specifier: ^0.0.5
+        version: 0.0.5(@qui-cli/plugin@packages+plugin)(@qui-cli/root@packages+root)(@types/node@24.13.2)(commit-and-tag-version@12.7.3)
       '@qui-cli/colors':
         specifier: workspace:*
         version: link:../colors
@@ -811,6 +823,9 @@ importers:
         specifier: ^7.2.0
         version: 7.2.0
     devDependencies:
+      '@battis/workspace':
+        specifier: ^0.0.5
+        version: 0.0.5(@qui-cli/plugin@packages+plugin)(@qui-cli/root@packages+root)(@types/node@24.13.2)(commit-and-tag-version@12.7.3)
       '@qui-cli/colors':
         specifier: workspace:*
         version: link:../colors
@@ -848,6 +863,9 @@ importers:
         specifier: ^4.2.3
         version: 4.2.3
     devDependencies:
+      '@battis/workspace':
+        specifier: ^0.0.5
+        version: 0.0.5(@qui-cli/plugin@4.1.2(@qui-cli/colors@packages+colors))(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@packages+colors)))(@types/node@24.13.2)(commit-and-tag-version@12.7.3)
       '@qui-cli/colors':
         specifier: workspace:*
         version: link:../colors
@@ -879,6 +897,9 @@ importers:
         specifier: ^3.12.0
         version: 3.12.0
     devDependencies:
+      '@battis/workspace':
+        specifier: ^0.0.5
+        version: 0.0.5(@qui-cli/plugin@packages+plugin)(@qui-cli/root@3.1.1(@qui-cli/plugin@packages+plugin))(@types/node@24.13.2)(commit-and-tag-version@12.7.3)
       '@qui-cli/colors':
         specifier: workspace:*
         version: link:../colors
@@ -949,6 +970,9 @@ importers:
       '@battis/typescript-tricks':
         specifier: ^0.8.2
         version: 0.8.2
+      '@battis/workspace':
+        specifier: ^0.0.5
+        version: 0.0.5(@qui-cli/plugin@packages+plugin)(@qui-cli/root@packages+root)(@types/node@24.13.2)(commit-and-tag-version@12.7.3)
       '@tsconfig/node-lts':
         specifier: ^24.0.0
         version: 24.0.0
@@ -983,6 +1007,9 @@ importers:
       '@battis/typescript-tricks':
         specifier: ^0.8.2
         version: 0.8.2
+      '@battis/workspace':
+        specifier: ^0.0.5
+        version: 0.0.5(@qui-cli/plugin@packages+plugin)(@qui-cli/root@3.1.1(@qui-cli/plugin@packages+plugin))(@types/node@24.13.2)(commit-and-tag-version@12.7.3)
       '@qui-cli/plugin':
         specifier: workspace:*
         version: link:../plugin
@@ -1014,6 +1041,9 @@ importers:
         specifier: ^0.10.0
         version: 0.10.0
     devDependencies:
+      '@battis/workspace':
+        specifier: ^0.0.5
+        version: 0.0.5(@qui-cli/plugin@packages+plugin)(@qui-cli/root@3.1.1(@qui-cli/plugin@packages+plugin))(@types/node@24.13.2)(commit-and-tag-version@12.7.3)
       '@qui-cli/colors':
         specifier: workspace:*
         version: link:../colors
@@ -1051,6 +1081,9 @@ importers:
         specifier: ^5.4.4
         version: 5.4.4
     devDependencies:
+      '@battis/workspace':
+        specifier: ^0.0.5
+        version: 0.0.5(@qui-cli/plugin@packages+plugin)(@qui-cli/root@3.1.1(@qui-cli/plugin@packages+plugin))(@types/node@24.13.2)(commit-and-tag-version@12.7.3)
       '@qui-cli/colors':
         specifier: workspace:*
         version: link:../colors
@@ -1094,6 +1127,9 @@ importers:
         specifier: ^0.1.1
         version: 0.1.1
     devDependencies:
+      '@battis/workspace':
+        specifier: ^0.0.5
+        version: 0.0.5(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))(@qui-cli/root@packages+root)(@types/node@24.13.2)(commit-and-tag-version@12.7.3)
       '@qui-cli/root':
         specifier: workspace:*
         version: link:../root
@@ -1164,16 +1200,16 @@ packages:
     resolution: {integrity: sha512-4zBIxpPzowiZpusoFkyGVwakdRJUyuH5PxQ/PrqghfdFWWasvnCdPfQXHrenDai+gyLARulZjZowCOj6fjT4pA==}
     engines: {node: '>=6.9.0'}
 
-  '@battis/commit@0.0.1':
-    resolution: {integrity: sha512-KJM24pxei6rFUsj5J64nEpozVTTfQ0oMo7DgaacLjYA0domOxQHID9ard64ziEJ+Hi5ahGZ0mNL0CGL2KZYmsA==}
+  '@battis/commit@0.0.4':
+    resolution: {integrity: sha512-Wmtpoa9G+DNFRTnEtsyXM35Wsrd4r88WKiE2E6wxBXeWa27Pb81duj8lR7R663B9PcqsmY1B2WLZMPG/HX2xtA==}
     hasBin: true
     peerDependencies:
       '@commitlint/config-conventional': ^21.1.0
       '@commitlint/config-pnpm-scopes': ^21.0.2
       commit-and-tag-version: 12.7.3
 
-  '@battis/eslint@3.0.0':
-    resolution: {integrity: sha512-n8uRp3HnHjN+7buLgCY4WgG9FosaBUUXbD33J3MBfZm4Uhkxl/xXcYir/wYV08sJSrf9gMwrvIJD/ScrxrqKnA==}
+  '@battis/eslint@3.0.1':
+    resolution: {integrity: sha512-LP0pzwZfRnmLaINCVj6TXA6+T7FE8hUZjEGj2KzTWvt62uA9WYpja++aQLG8OBa0truW17eFzEP4rFEUeE5FFw==}
     hasBin: true
     peerDependencies:
       '@eslint/js': '*'
@@ -1184,29 +1220,35 @@ packages:
       globals: '*'
       typescript-eslint: '*'
 
-  '@battis/import-package-json@0.1.7':
-    resolution: {integrity: sha512-fDefeLqvjimxCcO3EvZbJg7WpZ6CqJLqFKIIbUEDC1Y//EaiK8hT6dwiYnn/nKCngeLIUw7lAw/LhNgWXZhvQA==}
+  '@battis/import-package-json@0.1.9':
+    resolution: {integrity: sha512-Y1iYOp7nLlPJLKzR+kL4NxyueyNEr07/1mMdhsVfP5j1cEB8OSdP7zwOc6QssJYgitc1b78AjLU3VP3pc8KrXA==}
 
-  '@battis/import-package-json@0.1.8':
-    resolution: {integrity: sha512-o59SokXPTtVY/L9yrjrJ63nvuRfJdVy8E3ZxOUVg3zLvx247XbQNXpZx3+l6Nqf4T7GedB+QtXIdEhd9H3qelQ==}
-
-  '@battis/monorepo@0.0.1':
-    resolution: {integrity: sha512-UpoUv+AgLce2KgUIa5CkvVj83NX33T57LU/WPORcJkdIu4QWMS+XeekxyQYqIAVtYqKqwVMNzzjk0azo+HHEGQ==}
+  '@battis/monorepo@0.0.3':
+    resolution: {integrity: sha512-x4Rv9TwwSi/SU9eu5EEj4c3SxCya7b+9ovYve7rEeyPBredxccB5ZDscUfXbcSPce9EfyWodU1sD+Ncgze08cw==}
     hasBin: true
     peerDependencies:
-      '@battis/commit': 0.0.1
-      '@battis/eslint': 3.0.0
-      '@battis/prettier': 2.0.1
       lerna: ^9.0.7
-      monorepo-package-paths: 0.4.5
+      monorepo-package-paths: 0.4.6
       npm-run-all: 4.1.5
 
-  '@battis/pkg-setup@0.0.1':
-    resolution: {integrity: sha512-dDroN+VmBgYRuycNKwMHKfifHBd2bow8+keJboKpLo3RN6T8qblU1DAXydt0jLVcEUQDkEjr9e5DGa0z7NCISg==}
+  '@battis/pkg-setup@0.0.2':
+    resolution: {integrity: sha512-Ny+qhZ6QPra+WZfm9NwVBJPX2glzAPsl/Bqs0yYSkBl07bMDmpRZ49M/++u4B5va5h+JA3EmSaxnai8REKX3hQ==}
     hasBin: true
 
-  '@battis/prettier@2.0.1':
-    resolution: {integrity: sha512-M/mz5gwSIodjn91ZZ1UnoLxNXwf+TkfivZ2x4SILM8XxhzBURgOIIn4Xv+mjZAkQanPUZubIxxA0ZCZqrlXgvA==}
+  '@battis/pkg-setup@0.0.3':
+    resolution: {integrity: sha512-TctXj4eb9vokinaTkGofuhklukgDCA3D0KLZEm3KwNf3TY++aFGgTKlBJwZZVdJ2Jfg1jG3mO70xr1zw+XOkpg==}
+    hasBin: true
+
+  '@battis/pkg-setup@0.0.4':
+    resolution: {integrity: sha512-FJXasQZfF25fkfGv5YOTwecfc7cfPhYTLDzW/nopuPhsqDv4VTB+CDzKjId1mR17XIwhvw3bMhC9MTZ8oziuKA==}
+    hasBin: true
+
+  '@battis/pkg-setup@0.0.5':
+    resolution: {integrity: sha512-Z0fmiV3QqHBWMJ+B6ZCuoJHjDXj4C4zBW6Z8JaSuoz/eY9ZYDqV32Nlf3SsSN1eATMVDNwkJ26XUrkFUpdUD9A==}
+    hasBin: true
+
+  '@battis/prettier@2.0.3':
+    resolution: {integrity: sha512-q/bzPVigBvGMEWUWxQcFJ0QHvRkGp21OxZpv3tFDFJLf9exgotFMyza26z/Y3Ggw0A0J1J3mv/By/+oQLAl/AQ==}
     engines: {node: '>=12.17'}
     hasBin: true
     peerDependencies:
@@ -1220,6 +1262,12 @@ packages:
 
   '@battis/typescript-tricks@0.8.2':
     resolution: {integrity: sha512-0ATH6pX2LeIdwMm1+kTqT9ztVog+tm0RKSnFdfD7PbhalaOn7VIkMZGzInfJ48tKQQxYfF/413jZtcLCGhBPvQ==}
+
+  '@battis/workspace@0.0.5':
+    resolution: {integrity: sha512-8sXdp/ANyjW0fV2G78FmRS/8cu0oKfdf6q55EPhvNRmyLijb9vfxGaOjHfAXiTwRlQcAc9XDwQbImS7RexXvKg==}
+    hasBin: true
+    peerDependencies:
+      commit-and-tag-version: ^12.7.3
 
   '@colors/colors@1.6.0':
     resolution: {integrity: sha512-Ir+AOibqzrIsL6ajt3Rz3LskB7OiMVHqltZmspbW/TJuTVuyOMirVqAkjfY6JISiLHgyNqicAC8AyHHGzNd/dA==}
@@ -2398,6 +2446,10 @@ packages:
     resolution: {integrity: sha512-1pHv8LX9CpKut1Zp4EXey7Z8OfH11ONNH6Dhi2WDUt31VVZFXZzKwXcysBgqSumFCmR+0dqjMK5v5JiFHzi0+g==}
     engines: {node: 20 || >=22}
 
+  balanced-match@4.0.4:
+    resolution: {integrity: sha512-BLrgEcRTwX2o6gGxGOCNyMvGSp35YofuYzw9h1IMTRmKqttAZZVU67bdb9Pr2vUHA8+j3i2tJfjO6C6+4myGTA==}
+    engines: {node: 18 || 20 || >=22}
+
   base64-js@1.5.1:
     resolution: {integrity: sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==}
 
@@ -2422,6 +2474,10 @@ packages:
 
   brace-expansion@5.0.6:
     resolution: {integrity: sha512-kLpxurY4Z4r9sgMsyG0Z9uzsBlgiU/EFKhj/h91/8yHu0edo7XuixOIH3VcJ8kkxs6/jPzoI6U9Vj3WqbMQ94g==}
+    engines: {node: 18 || 20 || >=22}
+
+  brace-expansion@5.0.7:
+    resolution: {integrity: sha512-7oFy703dxfY3/NLxC1fh2SUCQ0H9rmAY+5EpDVfXjUTTs+HEwR2nYaqLv+GWcTsumwxPfiz6CzCNkwXwBUwqCA==}
     engines: {node: 18 || 20 || >=22}
 
   braces@3.0.3:
@@ -4252,8 +4308,8 @@ packages:
     resolution: {integrity: sha512-xV2bxeN6F7oYjZWTe/YPAy6MN2M+sL4u/Rlm2AHCIVGfo2p1yGmBHQ6vHehl4bRTZBdHu3TSkWdYgkwpYzAGSw==}
     engines: {node: '>=0.10.0'}
 
-  monorepo-package-paths@0.4.5:
-    resolution: {integrity: sha512-94jcr8L9/Aw+jAKmFpxIHWiFg1fZxYJUfW79cu4ga0LwX9IGm3XPBlrHwO3/9jqb6N9SY1OW3qr6lTFFb0w0xQ==}
+  monorepo-package-paths@0.4.6:
+    resolution: {integrity: sha512-MERkecdWSyHeJzOt1FjZ6IezGovtbj5dzm2oFhdaaidzdskj5mfnnB9DOISXWpzb8ZtvILZAiP/k/HeQUQtENg==}
     hasBin: true
     peerDependencies:
       prettier: ^3.0
@@ -5538,24 +5594,25 @@ snapshots:
       '@babel/helper-string-parser': 7.29.7
       '@babel/helper-validator-identifier': 7.29.7
 
-  '@battis/commit@0.0.1(@commitlint/config-conventional@21.1.0)(@commitlint/config-pnpm-scopes@21.0.2)(@qui-cli/log@4.0.4(@qui-cli/colors@3.2.4)(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))))(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4)))(@types/node@24.13.2)(commit-and-tag-version@12.7.3)':
+  '@battis/commit@0.0.4(@commitlint/config-conventional@21.1.0)(@commitlint/config-pnpm-scopes@21.0.2)(@qui-cli/log@4.0.4(@qui-cli/colors@3.2.4)(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))))(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4)))(@types/node@24.13.2)(commit-and-tag-version@12.7.3)':
     dependencies:
-      '@battis/pkg-setup': 0.0.1(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4)))(@types/node@24.13.2)
+      '@battis/pkg-setup': 0.0.4(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4)))(@types/node@24.13.2)
       '@commitlint/config-conventional': 21.1.0
       '@commitlint/config-pnpm-scopes': 21.0.2
       '@qui-cli/colors': 3.2.4
       '@qui-cli/core': 7.0.0(@qui-cli/colors@3.2.4)(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))
       '@qui-cli/shell': 3.1.4(@qui-cli/colors@3.2.4)(@qui-cli/log@4.0.4(@qui-cli/colors@3.2.4)(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))))(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))
       commit-and-tag-version: 12.7.3
+      ora: 9.4.1
     transitivePeerDependencies:
       - '@qui-cli/log'
       - '@qui-cli/plugin'
       - '@qui-cli/root'
       - '@types/node'
 
-  '@battis/eslint@3.0.0(@eslint/js@9.39.4)(@eslint/markdown@7.5.1)(@qui-cli/colors@3.2.4)(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4)))(@types/node@24.13.2)(eslint-config-prettier@10.1.8(eslint@9.39.4))(eslint-plugin-html@8.1.4)(eslint@9.39.4)(globals@17.7.0)(typescript-eslint@8.62.0(eslint@9.39.4)(typescript@5.9.3))':
+  '@battis/eslint@3.0.1(@eslint/js@9.39.4)(@eslint/markdown@7.5.1)(@qui-cli/colors@3.2.4)(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4)))(@types/node@24.13.2)(eslint-config-prettier@10.1.8(eslint@9.39.4))(eslint-plugin-html@8.1.4)(eslint@9.39.4)(globals@17.7.0)(typescript-eslint@8.62.0(eslint@9.39.4)(typescript@5.9.3))':
     dependencies:
-      '@battis/pkg-setup': 0.0.1(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4)))(@types/node@24.13.2)
+      '@battis/pkg-setup': 0.0.2(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4)))(@types/node@24.13.2)
       '@eslint/js': 9.39.4
       '@eslint/markdown': 7.5.1
       '@qui-cli/core': 7.0.0(@qui-cli/colors@3.2.4)(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))
@@ -5570,25 +5627,17 @@ snapshots:
       - '@qui-cli/root'
       - '@types/node'
 
-  '@battis/import-package-json@0.1.7':
+  '@battis/import-package-json@0.1.9':
     dependencies:
       node-fetch: 3.3.2
       semver: 7.8.5
 
-  '@battis/import-package-json@0.1.8':
+  '@battis/monorepo@0.0.3(@qui-cli/colors@3.2.4)(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4)))(@types/node@24.13.2)(lerna@9.0.7(@types/node@24.13.2))(monorepo-package-paths@0.4.6(@types/node@24.13.2)(prettier@3.8.4))(npm-run-all@4.1.5)':
     dependencies:
-      node-fetch: 3.3.2
-      semver: 7.8.5
-
-  '@battis/monorepo@0.0.1(f39887a537f7a45c3dfae5449a1ec10a)':
-    dependencies:
-      '@battis/commit': 0.0.1(@commitlint/config-conventional@21.1.0)(@commitlint/config-pnpm-scopes@21.0.2)(@qui-cli/log@4.0.4(@qui-cli/colors@3.2.4)(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))))(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4)))(@types/node@24.13.2)(commit-and-tag-version@12.7.3)
-      '@battis/eslint': 3.0.0(@eslint/js@9.39.4)(@eslint/markdown@7.5.1)(@qui-cli/colors@3.2.4)(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4)))(@types/node@24.13.2)(eslint-config-prettier@10.1.8(eslint@9.39.4))(eslint-plugin-html@8.1.4)(eslint@9.39.4)(globals@17.7.0)(typescript-eslint@8.62.0(eslint@9.39.4)(typescript@5.9.3))
-      '@battis/pkg-setup': 0.0.1(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4)))(@types/node@24.13.2)
-      '@battis/prettier': 2.0.1(@prettier/plugin-xml@3.4.2(prettier@3.8.4))(@qui-cli/colors@3.2.4)(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4)))(@trivago/prettier-plugin-sort-imports@5.2.2(prettier@3.8.4))(@types/node@24.13.2)(prettier-plugin-ejs@1.0.3(prettier@3.8.4))(prettier-plugin-jsdoc@1.8.1(prettier@3.8.4))(prettier-plugin-organize-imports@4.3.0(prettier@3.8.4)(typescript@5.9.3))(prettier-plugin-packagejson@2.5.22(prettier@3.8.4))(prettier@3.8.4)
+      '@battis/pkg-setup': 0.0.5(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4)))(@types/node@24.13.2)
       '@qui-cli/core': 7.0.0(@qui-cli/colors@3.2.4)(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))
       lerna: 9.0.7(@types/node@24.13.2)
-      monorepo-package-paths: 0.4.5(@types/node@24.13.2)(prettier@3.8.4)
+      monorepo-package-paths: 0.4.6(@types/node@24.13.2)(prettier@3.8.4)
       npm-run-all: 4.1.5
     transitivePeerDependencies:
       - '@qui-cli/colors'
@@ -5596,7 +5645,7 @@ snapshots:
       - '@qui-cli/root'
       - '@types/node'
 
-  '@battis/pkg-setup@0.0.1(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4)))(@types/node@24.13.2)':
+  '@battis/pkg-setup@0.0.2(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4)))(@types/node@24.13.2)':
     dependencies:
       '@inquirer/confirm': 6.1.1(@types/node@24.13.2)
       '@qui-cli/colors': 3.2.4
@@ -5607,9 +5656,80 @@ snapshots:
       - '@qui-cli/root'
       - '@types/node'
 
-  '@battis/prettier@2.0.1(@prettier/plugin-xml@3.4.2(prettier@3.8.4))(@qui-cli/colors@3.2.4)(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4)))(@trivago/prettier-plugin-sort-imports@5.2.2(prettier@3.8.4))(@types/node@24.13.2)(prettier-plugin-ejs@1.0.3(prettier@3.8.4))(prettier-plugin-jsdoc@1.8.1(prettier@3.8.4))(prettier-plugin-organize-imports@4.3.0(prettier@3.8.4)(typescript@5.9.3))(prettier-plugin-packagejson@2.5.22(prettier@3.8.4))(prettier@3.8.4)':
+  '@battis/pkg-setup@0.0.3(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4)))(@types/node@24.13.2)':
     dependencies:
-      '@battis/pkg-setup': 0.0.1(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4)))(@types/node@24.13.2)
+      '@inquirer/confirm': 6.1.1(@types/node@24.13.2)
+      '@qui-cli/colors': 3.2.4
+      '@qui-cli/log': 4.0.4(@qui-cli/colors@3.2.4)(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4)))
+      '@qui-cli/plugin': 4.1.2(@qui-cli/colors@3.2.4)
+      yaml: 2.9.0
+    transitivePeerDependencies:
+      - '@qui-cli/root'
+      - '@types/node'
+
+  '@battis/pkg-setup@0.0.4(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4)))(@types/node@24.13.2)':
+    dependencies:
+      '@inquirer/confirm': 6.1.1(@types/node@24.13.2)
+      '@qui-cli/colors': 3.2.4
+      '@qui-cli/log': 4.0.4(@qui-cli/colors@3.2.4)(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4)))
+      '@qui-cli/plugin': 4.1.2(@qui-cli/colors@3.2.4)
+      ora: 9.4.1
+      yaml: 2.9.0
+    transitivePeerDependencies:
+      - '@qui-cli/root'
+      - '@types/node'
+
+  '@battis/pkg-setup@0.0.5(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4)))(@types/node@24.13.2)':
+    dependencies:
+      '@inquirer/confirm': 6.1.1(@types/node@24.13.2)
+      '@qui-cli/colors': 3.2.4
+      '@qui-cli/log': 4.0.4(@qui-cli/colors@3.2.4)(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4)))
+      '@qui-cli/plugin': 4.1.2(@qui-cli/colors@3.2.4)
+      ora: 9.4.1
+      yaml: 2.9.0
+    transitivePeerDependencies:
+      - '@qui-cli/root'
+      - '@types/node'
+
+  '@battis/pkg-setup@0.0.5(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@packages+colors)))(@types/node@24.13.2)':
+    dependencies:
+      '@inquirer/confirm': 6.1.1(@types/node@24.13.2)
+      '@qui-cli/colors': 3.2.4
+      '@qui-cli/log': 4.0.4(@qui-cli/colors@3.2.4)(@qui-cli/plugin@4.1.2(@qui-cli/colors@packages+colors))(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@packages+colors)))
+      '@qui-cli/plugin': 4.1.2(@qui-cli/colors@3.2.4)
+      ora: 9.4.1
+      yaml: 2.9.0
+    transitivePeerDependencies:
+      - '@qui-cli/root'
+      - '@types/node'
+
+  '@battis/pkg-setup@0.0.5(@qui-cli/root@3.1.1(@qui-cli/plugin@packages+plugin))(@types/node@24.13.2)':
+    dependencies:
+      '@inquirer/confirm': 6.1.1(@types/node@24.13.2)
+      '@qui-cli/colors': 3.2.4
+      '@qui-cli/log': 4.0.4(@qui-cli/colors@3.2.4)(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))(@qui-cli/root@3.1.1(@qui-cli/plugin@packages+plugin))
+      '@qui-cli/plugin': 4.1.2(@qui-cli/colors@3.2.4)
+      ora: 9.4.1
+      yaml: 2.9.0
+    transitivePeerDependencies:
+      - '@qui-cli/root'
+      - '@types/node'
+
+  '@battis/pkg-setup@0.0.5(@qui-cli/root@packages+root)(@types/node@24.13.2)':
+    dependencies:
+      '@inquirer/confirm': 6.1.1(@types/node@24.13.2)
+      '@qui-cli/colors': 3.2.4
+      '@qui-cli/log': 4.0.4(@qui-cli/colors@3.2.4)(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))(@qui-cli/root@packages+root)
+      '@qui-cli/plugin': 4.1.2(@qui-cli/colors@3.2.4)
+      ora: 9.4.1
+      yaml: 2.9.0
+    transitivePeerDependencies:
+      - '@qui-cli/root'
+      - '@types/node'
+
+  '@battis/prettier@2.0.3(@prettier/plugin-xml@3.4.2(prettier@3.8.4))(@qui-cli/colors@3.2.4)(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4)))(@trivago/prettier-plugin-sort-imports@5.2.2(prettier@3.8.4))(@types/node@24.13.2)(prettier-plugin-ejs@1.0.3(prettier@3.8.4))(prettier-plugin-jsdoc@1.8.1(prettier@3.8.4))(prettier-plugin-organize-imports@4.3.0(prettier@3.8.4)(typescript@5.9.3))(prettier-plugin-packagejson@2.5.22(prettier@3.8.4))(prettier@3.8.4)':
+    dependencies:
+      '@battis/pkg-setup': 0.0.3(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4)))(@types/node@24.13.2)
       '@prettier/plugin-xml': 3.4.2(prettier@3.8.4)
       '@qui-cli/core': 7.0.0(@qui-cli/colors@3.2.4)(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))
       '@trivago/prettier-plugin-sort-imports': 5.2.2(prettier@3.8.4)
@@ -5625,6 +5745,71 @@ snapshots:
       - '@types/node'
 
   '@battis/typescript-tricks@0.8.2': {}
+
+  '@battis/workspace@0.0.5(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4)))(@types/node@24.13.2)(commit-and-tag-version@12.7.3)':
+    dependencies:
+      '@battis/pkg-setup': 0.0.5(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4)))(@types/node@24.13.2)
+      '@qui-cli/colors': 3.2.4
+      '@qui-cli/core': 7.0.0(@qui-cli/colors@3.2.4)(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))
+      '@qui-cli/log': 4.0.4(@qui-cli/colors@3.2.4)(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4)))
+      commit-and-tag-version: 12.7.3
+      ora: 9.4.1
+    transitivePeerDependencies:
+      - '@qui-cli/plugin'
+      - '@qui-cli/root'
+      - '@types/node'
+
+  '@battis/workspace@0.0.5(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))(@qui-cli/root@packages+root)(@types/node@24.13.2)(commit-and-tag-version@12.7.3)':
+    dependencies:
+      '@battis/pkg-setup': 0.0.5(@qui-cli/root@packages+root)(@types/node@24.13.2)
+      '@qui-cli/colors': 3.2.4
+      '@qui-cli/core': 7.0.0(@qui-cli/colors@3.2.4)(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))
+      '@qui-cli/log': 4.0.4(@qui-cli/colors@3.2.4)(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))(@qui-cli/root@packages+root)
+      commit-and-tag-version: 12.7.3
+      ora: 9.4.1
+    transitivePeerDependencies:
+      - '@qui-cli/plugin'
+      - '@qui-cli/root'
+      - '@types/node'
+
+  '@battis/workspace@0.0.5(@qui-cli/plugin@4.1.2(@qui-cli/colors@packages+colors))(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@packages+colors)))(@types/node@24.13.2)(commit-and-tag-version@12.7.3)':
+    dependencies:
+      '@battis/pkg-setup': 0.0.5(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@packages+colors)))(@types/node@24.13.2)
+      '@qui-cli/colors': 3.2.4
+      '@qui-cli/core': 7.0.0(@qui-cli/colors@3.2.4)(@qui-cli/plugin@4.1.2(@qui-cli/colors@packages+colors))
+      '@qui-cli/log': 4.0.4(@qui-cli/colors@3.2.4)(@qui-cli/plugin@4.1.2(@qui-cli/colors@packages+colors))(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@packages+colors)))
+      commit-and-tag-version: 12.7.3
+      ora: 9.4.1
+    transitivePeerDependencies:
+      - '@qui-cli/plugin'
+      - '@qui-cli/root'
+      - '@types/node'
+
+  '@battis/workspace@0.0.5(@qui-cli/plugin@packages+plugin)(@qui-cli/root@3.1.1(@qui-cli/plugin@packages+plugin))(@types/node@24.13.2)(commit-and-tag-version@12.7.3)':
+    dependencies:
+      '@battis/pkg-setup': 0.0.5(@qui-cli/root@3.1.1(@qui-cli/plugin@packages+plugin))(@types/node@24.13.2)
+      '@qui-cli/colors': 3.2.4
+      '@qui-cli/core': 7.0.0(@qui-cli/colors@3.2.4)(@qui-cli/plugin@packages+plugin)
+      '@qui-cli/log': 4.0.4(@qui-cli/colors@3.2.4)(@qui-cli/plugin@packages+plugin)(@qui-cli/root@3.1.1(@qui-cli/plugin@packages+plugin))
+      commit-and-tag-version: 12.7.3
+      ora: 9.4.1
+    transitivePeerDependencies:
+      - '@qui-cli/plugin'
+      - '@qui-cli/root'
+      - '@types/node'
+
+  '@battis/workspace@0.0.5(@qui-cli/plugin@packages+plugin)(@qui-cli/root@packages+root)(@types/node@24.13.2)(commit-and-tag-version@12.7.3)':
+    dependencies:
+      '@battis/pkg-setup': 0.0.5(@qui-cli/root@packages+root)(@types/node@24.13.2)
+      '@qui-cli/colors': 3.2.4
+      '@qui-cli/core': 7.0.0(@qui-cli/colors@3.2.4)(@qui-cli/plugin@packages+plugin)
+      '@qui-cli/log': 4.0.4(@qui-cli/colors@3.2.4)(@qui-cli/plugin@packages+plugin)(@qui-cli/root@packages+root)
+      commit-and-tag-version: 12.7.3
+      ora: 9.4.1
+    transitivePeerDependencies:
+      - '@qui-cli/plugin'
+      - '@qui-cli/root'
+      - '@types/node'
 
   '@colors/colors@1.6.0': {}
 
@@ -6544,6 +6729,20 @@ snapshots:
       jackspeak: 4.2.3
       wrap-ansi: 10.0.0
 
+  '@qui-cli/core@7.0.0(@qui-cli/colors@3.2.4)(@qui-cli/plugin@4.1.2(@qui-cli/colors@packages+colors))':
+    dependencies:
+      '@qui-cli/colors': 3.2.4
+      '@qui-cli/plugin': 4.1.2(@qui-cli/colors@packages+colors)
+      jackspeak: 4.2.3
+      wrap-ansi: 10.0.0
+
+  '@qui-cli/core@7.0.0(@qui-cli/colors@3.2.4)(@qui-cli/plugin@packages+plugin)':
+    dependencies:
+      '@qui-cli/colors': 3.2.4
+      '@qui-cli/plugin': link:packages/plugin
+      jackspeak: 4.2.3
+      wrap-ansi: 10.0.0
+
   '@qui-cli/log@4.0.4(@qui-cli/colors@3.2.4)(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4)))':
     dependencies:
       '@qui-cli/colors': 3.2.4
@@ -6553,14 +6752,74 @@ snapshots:
       strip-ansi: 7.2.0
       winston: 3.19.0
 
+  '@qui-cli/log@4.0.4(@qui-cli/colors@3.2.4)(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))(@qui-cli/root@3.1.1(@qui-cli/plugin@packages+plugin))':
+    dependencies:
+      '@qui-cli/colors': 3.2.4
+      '@qui-cli/plugin': 4.1.2(@qui-cli/colors@3.2.4)
+      '@qui-cli/root': 3.1.1(@qui-cli/plugin@packages+plugin)
+      ora: 9.4.1
+      strip-ansi: 7.2.0
+      winston: 3.19.0
+
+  '@qui-cli/log@4.0.4(@qui-cli/colors@3.2.4)(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))(@qui-cli/root@packages+root)':
+    dependencies:
+      '@qui-cli/colors': 3.2.4
+      '@qui-cli/plugin': 4.1.2(@qui-cli/colors@3.2.4)
+      '@qui-cli/root': link:packages/root
+      ora: 9.4.1
+      strip-ansi: 7.2.0
+      winston: 3.19.0
+
+  '@qui-cli/log@4.0.4(@qui-cli/colors@3.2.4)(@qui-cli/plugin@4.1.2(@qui-cli/colors@packages+colors))(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@packages+colors)))':
+    dependencies:
+      '@qui-cli/colors': 3.2.4
+      '@qui-cli/plugin': 4.1.2(@qui-cli/colors@packages+colors)
+      '@qui-cli/root': 3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@packages+colors))
+      ora: 9.4.1
+      strip-ansi: 7.2.0
+      winston: 3.19.0
+
+  '@qui-cli/log@4.0.4(@qui-cli/colors@3.2.4)(@qui-cli/plugin@packages+plugin)(@qui-cli/root@3.1.1(@qui-cli/plugin@packages+plugin))':
+    dependencies:
+      '@qui-cli/colors': 3.2.4
+      '@qui-cli/plugin': link:packages/plugin
+      '@qui-cli/root': 3.1.1(@qui-cli/plugin@packages+plugin)
+      ora: 9.4.1
+      strip-ansi: 7.2.0
+      winston: 3.19.0
+
+  '@qui-cli/log@4.0.4(@qui-cli/colors@3.2.4)(@qui-cli/plugin@packages+plugin)(@qui-cli/root@packages+root)':
+    dependencies:
+      '@qui-cli/colors': 3.2.4
+      '@qui-cli/plugin': link:packages/plugin
+      '@qui-cli/root': link:packages/root
+      ora: 9.4.1
+      strip-ansi: 7.2.0
+      winston: 3.19.0
+
   '@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4)':
     dependencies:
       '@qui-cli/colors': 3.2.4
       jackspeak: 4.2.3
 
+  '@qui-cli/plugin@4.1.2(@qui-cli/colors@packages+colors)':
+    dependencies:
+      '@qui-cli/colors': link:packages/colors
+      jackspeak: 4.2.3
+
   '@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))':
     dependencies:
       '@qui-cli/plugin': 4.1.2(@qui-cli/colors@3.2.4)
+      app-root-path: 3.1.0
+
+  '@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@packages+colors))':
+    dependencies:
+      '@qui-cli/plugin': 4.1.2(@qui-cli/colors@packages+colors)
+      app-root-path: 3.1.0
+
+  '@qui-cli/root@3.1.1(@qui-cli/plugin@packages+plugin)':
+    dependencies:
+      '@qui-cli/plugin': link:packages/plugin
       app-root-path: 3.1.0
 
   '@qui-cli/shell@3.1.4(@qui-cli/colors@3.2.4)(@qui-cli/log@4.0.4(@qui-cli/colors@3.2.4)(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))))(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))':
@@ -6905,6 +7164,8 @@ snapshots:
 
   balanced-match@4.0.3: {}
 
+  balanced-match@4.0.4: {}
+
   base64-js@1.5.1: {}
 
   before-after-hook@2.2.3: {}
@@ -6934,7 +7195,11 @@ snapshots:
 
   brace-expansion@5.0.6:
     dependencies:
-      balanced-match: 4.0.3
+      balanced-match: 4.0.4
+
+  brace-expansion@5.0.7:
+    dependencies:
+      balanced-match: 4.0.4
 
   braces@3.0.3:
     dependencies:
@@ -7279,7 +7544,7 @@ snapshots:
     dependencies:
       env-paths: 2.2.1
       import-fresh: 3.3.1
-      js-yaml: 4.1.1
+      js-yaml: 4.3.0
       parse-json: 5.2.0
     optionalDependencies:
       typescript: 5.9.3
@@ -7689,7 +7954,7 @@ snapshots:
   execa@5.0.0:
     dependencies:
       cross-spawn: 7.0.6
-      get-stream: 6.0.0
+      get-stream: 6.0.1
       human-signals: 2.1.0
       is-stream: 2.0.1
       merge-stream: 2.0.0
@@ -7927,7 +8192,7 @@ snapshots:
       call-bind-apply-helpers: 1.0.2
       es-define-property: 1.0.1
       es-errors: 1.3.0
-      es-object-atoms: 1.1.1
+      es-object-atoms: 1.1.2
       function-bind: 1.1.2
       get-proto: 1.0.1
       gopd: 1.2.0
@@ -7945,7 +8210,7 @@ snapshots:
   get-proto@1.0.1:
     dependencies:
       dunder-proto: 1.0.1
-      es-object-atoms: 1.1.1
+      es-object-atoms: 1.1.2
 
   get-stream@6.0.0: {}
 
@@ -9107,7 +9372,7 @@ snapshots:
 
   minimatch@10.2.5:
     dependencies:
-      brace-expansion: 5.0.6
+      brace-expansion: 5.0.7
 
   minimatch@3.1.4:
     dependencies:
@@ -9177,9 +9442,9 @@ snapshots:
 
   modify-values@1.0.1: {}
 
-  monorepo-package-paths@0.4.5(@types/node@24.13.2)(prettier@3.8.4):
+  monorepo-package-paths@0.4.6(@types/node@24.13.2)(prettier@3.8.4):
     dependencies:
-      '@battis/import-package-json': 0.1.8
+      '@battis/import-package-json': 0.1.9
       '@inquirer/input': 5.1.2(@types/node@24.13.2)
       '@qui-cli/colors': 3.2.4
       '@qui-cli/core': 7.0.0(@qui-cli/colors@3.2.4)(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))
@@ -9227,7 +9492,7 @@ snapshots:
       proc-log: 6.1.0
       semver: 7.8.5
       tar: 7.5.11
-      tinyglobby: 0.2.12
+      tinyglobby: 0.2.17
       undici: 6.27.0
       which: 6.0.1
 
@@ -9310,7 +9575,7 @@ snapshots:
     dependencies:
       '@npmcli/redact': 3.2.2
       jsonparse: 1.3.1
-      make-fetch-happen: 15.0.2
+      make-fetch-happen: 15.0.6
       minipass: 7.1.3
       minipass-fetch: 4.0.1
       minizlib: 3.1.0
@@ -10321,7 +10586,7 @@ snapshots:
     dependencies:
       '@tufjs/models': 4.1.0
       debug: 4.4.3
-      make-fetch-happen: 15.0.2
+      make-fetch-happen: 15.0.6
     transitivePeerDependencies:
       - supports-color
 

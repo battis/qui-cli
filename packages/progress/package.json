@@ -28,6 +28,7 @@
     "cli-progress": "^3.12.0"
   },
   "devDependencies": {
+    "@battis/workspace": "^0.0.5",
     "@qui-cli/colors": "workspace:*",
     "@qui-cli/plugin": "workspace:*",
     "@tsconfig/node-lts": "^24.0.0",

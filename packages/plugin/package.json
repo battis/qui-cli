@@ -28,6 +28,7 @@
     "jackspeak": "^4.2.3"
   },
   "devDependencies": {
+    "@battis/workspace": "^0.0.5",
     "@qui-cli/colors": "workspace:*",
     "@tsconfig/node-lts": "^24.0.0",
     "@types/node": "^24.13.2",

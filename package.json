@@ -27,10 +27,10 @@
     "setup:commit": "setup-commit -f"
   },
   "devDependencies": {
-    "@battis/commit": "^0.0.1",
-    "@battis/eslint": "^3.0.0",
-    "@battis/monorepo": "^0.0.1",
-    "@battis/prettier": "^2.0.1",
+    "@battis/commit": "^0.0.4",
+    "@battis/eslint": "^3.0.1",
+    "@battis/monorepo": "^0.0.3",
+    "@battis/prettier": "^2.0.3",
     "@examples/dev-command": "workspace:*",
     "@examples/dev-env-1password": "workspace:*",
     "@examples/dev-options": "workspace:*",
