@@ -28,9 +28,9 @@
   },
   "devDependencies": {
     "@battis/commit": "^0.0.4",
-    "@battis/eslint": "^3.0.1",
+    "@battis/eslint": "^3.0.2",
     "@battis/monorepo": "^0.0.3",
-    "@battis/prettier": "^2.0.3",
+    "@battis/prettier": "^2.0.4",
     "@examples/dev-command": "workspace:*",
     "@examples/dev-env-1password": "workspace:*",
     "@examples/dev-options": "workspace:*",
