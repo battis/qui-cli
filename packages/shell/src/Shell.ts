@@ -71,7 +71,7 @@ export function init({
 
 function keywords(command: string) {
   return command.replace(
-    /((^\s*|\|\|?|&&)\s*)(\w+)/gm,
+    /((^\s*|\|\|?|&&)\s*)((\w|-)+)/gm,
     `$1${Colors.keyword('$3')}`
   );
 }
