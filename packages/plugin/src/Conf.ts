@@ -12,7 +12,7 @@ export async function propose<C extends Base = Base>(
 ) {
   for (const key in proposal) {
     if (proposal[key] !== undefined) {
-      if (!validator[key] || (await validator[key](proposal[key]))) {
+      if (!(key in validator) || (await validator[key](proposal[key]))) {
         config[key] = proposal[key];
       }
     }
