@@ -117,7 +117,7 @@ export function configure(config: Configuration = {}) {
   }
 }
 
-export function options(): Plugin.Options {
+export function options() {
   const hint = [...Object.keys(levels.levels), OFF].join('|');
   return {
     man: [

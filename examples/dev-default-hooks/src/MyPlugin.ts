@@ -14,7 +14,7 @@ const config: Configuration = {
 
 export const configure = Plugin.Conf.defaultHook(config);
 
-export function options(): Plugin.Options {
+export function options() {
   return {
     opt: {
       foo: { description: 'foo' }

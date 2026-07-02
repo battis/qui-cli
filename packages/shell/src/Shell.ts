@@ -42,7 +42,7 @@ export function configure(config: Configuration = {}) {
   logging = Plugin.hydrate(config.logging, logging);
 }
 
-export function options(): Plugin.Options {
+export function options() {
   return {
     man: [{ level: 1, text: 'Shell command options' }],
     flag: {
@@ -63,8 +63,8 @@ export function options(): Plugin.Options {
 }
 
 export function init({
-  values = {}
-}: Plugin.Arguments<ReturnType<typeof options>>): void {
+  values
+}: Plugin.ExpectedArguments<typeof options>): void {
   showCommands = Plugin.hydrate(values.commands, showCommands);
   silent = Plugin.hydrate(values.silent, silent);
 }

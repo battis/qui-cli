@@ -216,7 +216,7 @@ export function configure(config?: Configuration) {
 Typing for `options()` hook. Maps 1:1 to the [jackspeak options API](https://www.npmjs.com/package/jackspeak#user-content-option-definitions), discussed in detail in[Options](#Options).
 
 ```ts
-export function options(): Plugin.Options {
+export function options() {
   // ...
 }
 ```

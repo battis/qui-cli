@@ -178,7 +178,7 @@ export function requireNoMoreThanUnnamedArgs(maxUnnamed: number) {
   requireNoMoreThan(namedCount() + maxUnnamed);
 }
 
-export function options(): Plugin.Options {
+export function options() {
   const man: Plugin.Options['man'] = [];
   if (config.description) {
     if (Array.isArray(config.description)) {

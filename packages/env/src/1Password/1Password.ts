@@ -96,7 +96,7 @@ export class OP implements Base.Plugin {
     });
   }
 
-  public options(): Plugin.Options {
+  public options() {
     return {
       man: [
         {

@@ -13,7 +13,7 @@ export function configure(config: Configuration = {}) {
   help = Plugin.hydrate(config.help, help);
 }
 
-export function options(): Plugin.Options {
+export function options() {
   return {
     flag: {
       help: {

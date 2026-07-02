@@ -1,25 +1,20 @@
-import { ConfigSetFromMetaSet, OptionsResults } from 'jackspeak';
 import * as Opt from './Opt.js';
 
-type FlattenConfigMetaSets<O extends Opt.Options> =
-  // FIXME all options are getting typed `string | undefined`
-  // Issue URL: https://github.com/battis/qui-cli/issues/39
-  ConfigSetFromMetaSet<'number', false, Exclude<O['num'], undefined>> &
-    ConfigSetFromMetaSet<'number', true, Exclude<O['numList'], undefined>> &
-    ConfigSetFromMetaSet<'string', false, Exclude<O['opt'], undefined>> &
-    ConfigSetFromMetaSet<'string', false, Exclude<O['opt'], undefined>> &
-    ConfigSetFromMetaSet<'string', true, Exclude<O['optList'], undefined>> &
-    ConfigSetFromMetaSet<'boolean', false, Exclude<O['flag'], undefined>> &
-    ConfigSetFromMetaSet<'boolean', true, Exclude<O['flagList'], undefined>> &
-    Exclude<O['fields'], undefined>;
-
 export type Arguments<O extends Opt.Options> = {
-  positionals: (string | undefined)[];
-  values: OptionsResults<FlattenConfigMetaSets<O>>;
+  values: Exclude<
+    | { [K in keyof O['num']]?: number }
+    | { [K in keyof O['numList']]?: number[] }
+    | { [K in keyof O['opt']]?: string }
+    | { [K in keyof O['optList']]?: string[] }
+    | { [K in keyof O['flag']]: boolean | undefined }
+    | { [K in keyof O['flagList']]?: boolean[] },
+    Record<string, never>
+  >;
+  positionals: string[];
 };
 
 export type ExpectedArguments<H extends Opt.Hook> = Arguments<
-  Awaited<ReturnType<H>>
+  Awaited<ReturnType<H> extends never ? ReturnType<H> : Awaited<ReturnType<H>>>
 >;
 
 export type Hook<O extends Opt.Options = Opt.Options> = (

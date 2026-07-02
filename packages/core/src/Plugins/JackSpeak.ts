@@ -47,9 +47,14 @@ export function args(options: Plugin.Options) {
     if (key === 'man') {
       for (const paragraph of options[key]!) {
         if (paragraph.level) {
-          jack().heading(paragraph.text, paragraph.level, {
-            pre: paragraph.pre
-          });
+          // TODO force paragraph.level to type
+          jack().heading(
+            paragraph.text,
+            paragraph.level as 1 | 2 | 3 | 4 | 5 | 6 | undefined,
+            {
+              pre: paragraph.pre
+            }
+          );
         } else {
           jack().description(paragraph.text, { pre: paragraph.pre });
         }

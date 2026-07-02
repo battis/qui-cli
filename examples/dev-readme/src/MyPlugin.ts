@@ -15,7 +15,7 @@ Positionals.require({
 
 export const name = 'dev-readme';
 
-export function options(): Plugin.Options {
+export function options() {
   return {
     man: [
       {

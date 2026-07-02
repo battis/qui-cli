@@ -1,4 +1,4 @@
-import { Env } from '@qui-cli/env';
+import '@qui-cli/env';
 import { Log } from '@qui-cli/log';
 import * as Plugin from '@qui-cli/plugin';
 
@@ -18,7 +18,7 @@ export function configure(proposal: Configuration = {}) {
   }
 }
 
-export async function options(): Promise<Env.Options> {
+export async function options() {
   return {
     man: [{ level: 1, text: 'MyPlugin Options' }],
     opt: {

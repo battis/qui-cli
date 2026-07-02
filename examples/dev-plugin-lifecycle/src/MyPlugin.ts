@@ -31,7 +31,7 @@ export function configure(proposal: Configuration = {}, calledBy = 'hook') {
   Plugin.Conf.propose(config, proposal);
 }
 
-export function options(): Plugin.Options {
+export function options() {
   logState('options() hook');
   return {
     man: [
