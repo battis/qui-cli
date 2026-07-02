@@ -6,9 +6,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { OP } from './1Password/index.js';
 
-export type Documentation = Plugin.Opt.Documentation & { env?: string };
-export type Options<D extends Documentation = Documentation> =
-  Plugin.Options<D>;
+export type Metadata = { env?: string };
+export type Options<M extends Metadata = Metadata> = Plugin.Options<M>;
 
 export type Configuration = Plugin.Configuration & {
   /**
