@@ -2,6 +2,7 @@
 **/.env
 **/.env.*
 !**/.env.example
+**/build/
 **/dist/
 **/node_modules/
 **/var/*

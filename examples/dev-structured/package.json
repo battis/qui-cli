@@ -1,6 +1,7 @@
 {
   "name": "@examples/dev-structured",
   "version": "0.0.0",
+  "description": "A folder hierarchy of commands bundled into a single callable command",
   "homepage": "https://github.com/battis/qui-cli/tree/main/examples/dev-structured#readme",
   "repository": {
     "type": "git",

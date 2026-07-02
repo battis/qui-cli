@@ -1,6 +1,8 @@
 {
   "name": "@examples/dev-env-1password",
   "version": "0.0.0",
+  "private": true,
+  "description": "Integrate 1Password secret references in the enviroment with @qui-cli/env",
   "homepage": "https://github.com/battis/qui-cli/tree/main/examples/dev-env-1password#readme",
   "repository": {
     "type": "git",

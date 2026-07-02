@@ -1,6 +1,7 @@
 {
   "name": "@examples/usage-cli",
   "private": true,
+  "description": "Using the bundled [@qui-cli/qui-cli](../packages/qui-cli/) package",
   "homepage": "https://github.com/battis/qui-cli/tree/main/examples/usage-cli#readme",
   "repository": {
     "type": "git",

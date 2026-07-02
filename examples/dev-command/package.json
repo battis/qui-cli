@@ -1,6 +1,8 @@
 {
   "name": "@examples/dev-command",
   "version": "0.0.0",
+  "private": true,
+  "description": "A distributable command-line app",
   "homepage": "https://github.com/battis/qui-cli/tree/main/examples/dev-command#readme",
   "repository": {
     "type": "git",

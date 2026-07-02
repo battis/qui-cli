@@ -1,6 +1,7 @@
 {
   "name": "@examples/usage-modular",
   "private": true,
+  "description": "More parsimonious use of individual plugin modules independently",
   "homepage": "https://github.com/battis/qui-cli/tree/main/examples/usage-modular#readme",
   "repository": {
     "type": "git",

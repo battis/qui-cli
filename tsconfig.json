@@ -2,7 +2,7 @@
   "extends": "@tsconfig/node-lts/tsconfig.json",
   "compilerOptions": {
     "rootDir": "./src",
-    "outDir": "./dist",
+    "outDir": "./build",
     "types": ["node"]
   },
   "include": ["./src"]
