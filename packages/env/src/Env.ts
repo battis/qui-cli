@@ -53,51 +53,99 @@ export async function init(args: Plugin.ExpectedArguments<typeof options>) {
     if (plugin === name) {
       break;
     }
+
+    const hasEnv = (obj: object): obj is { env: string } =>
+      'env' in obj && typeof obj.env === 'string';
+
+    const isArray = <T>(key: string, obj: object): obj is { [key]: T[] } =>
+      key in obj;
+
+    const toBool = (value: string = 'n/a') => {
+      switch (value.toLowerCase()) {
+        case '0':
+        case 'false':
+        case 'no':
+          return false;
+        case '1':
+        case 'true':
+        case 'yes':
+          return true;
+        default:
+          return undefined;
+      }
+    };
+
     if (plugins[plugin].options) {
       const options = await plugins[plugin].options();
-      const isUndefined = (arg: unknown) => arg === undefined;
-      type OptHandler = {
-        opt: keyof typeof options;
-        test: (arg: unknown) => boolean;
-        merge: <T>(arg: T, value: string) => T;
-      };
-      for (const { opt, test, merge } of [
-        {
-          opt: 'opt',
-          test: isUndefined,
-          merge: (_: unknown, value: string) => value
-        },
-        {
-          opt: 'optList',
-          test: () => true,
-          merge: (arg: string[] = [], value: string) => [...arg, value]
-        },
-        {
-          opt: 'num',
-          test: isUndefined,
-          merge: (_: unknown, value: string) => parseInt(value)
-        },
-        {
-          opt: 'numList',
-          test: () => true,
-          merge: (arg: number[] = [], value: string) => [
-            ...arg,
-            parseInt(value)
-          ]
-        }
-      ] as OptHandler[]) {
-        if (options[opt]) {
-          for (const key in options[opt]) {
-            // @ts-expect-error 7053
-            if ('env' in options[opt][key]) {
-              if (test(args.values[key])) {
-                // @ts-expect-error 7053
-                const value = await get({ key: options[opt][key].env });
-                if (value !== undefined) {
-                  args.values[key] = merge(args.values[key], value);
-                }
-              }
+      for (const opt in options.opt) {
+        if (hasEnv(options.opt[opt])) {
+          if (!(opt in args.values)) {
+            const value = await get({ key: options.opt[opt].env });
+            if (value !== undefined) {
+              args.values = { ...args.values, [opt]: value };
             }
+          }
+        }
+      }
+      for (const opt in options.optList) {
+        if (hasEnv(options.optList[opt])) {
+          const value = await get({ key: options.optList[opt].env });
+          if (value !== undefined) {
+            args.values = {
+              ...args.values,
+              [opt]: [
+                ...(isArray(opt, args.values) ? args.values[opt] : []),
+                value
+              ]
+            };
+          }
+        }
+      }
+      for (const num in options.num) {
+        if (hasEnv(options.num[num])) {
+          if (!(num in args.values)) {
+            const value = await get({ key: options.num[num].env });
+            if (value !== undefined) {
+              args.values = { ...args.values, [num]: parseInt(value) };
+            }
+          }
+        }
+      }
+      for (const num in options.numList) {
+        if (hasEnv(options.numList[num])) {
+          const value = await get({ key: options.numList[num].env });
+          if (value !== undefined) {
+            args.values = {
+              ...args.values,
+              [num]: [
+                ...(isArray(num, args.values) ? args.values[num] : []),
+                value
+              ]
+            };
+          }
+        }
+      }
+      for (const flag in options.flag) {
+        if (hasEnv(options.flag[flag])) {
+          if (!(flag in args.values)) {
+            const value = toBool(await get({ key: options.flag[flag].env }));
+            if (value !== undefined) {
+              args.values = { ...args.values, [flag]: value };
+            }
+          }
+        }
+      }
+      for (const flag in options.flagList) {
+        if (hasEnv(options.flagList[flag])) {
+          const value = toBool(await get({ key: options.flagList[flag].env }));
+          if (value !== undefined) {
+            args.values = {
+              ...args.values,
+              [flag]: [
+                ...(isArray(flag, args.values) ? args.values[flag] : []),
+                value
+              ]
+            };
           }
         }
       }
