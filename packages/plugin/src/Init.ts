@@ -1,4 +1,5 @@
 import * as Opt from './Opt.js';
+import { EmptyObject } from '@battis/typescript-tricks';
 
 export type Arguments<O extends Opt.Options> = {
   values: Exclude<
@@ -8,7 +9,7 @@ export type Arguments<O extends Opt.Options> = {
     | { [K in keyof O['optList']]?: string[] }
     | { [K in keyof O['flag']]: boolean | undefined }
     | { [K in keyof O['flagList']]?: boolean[] },
-    Record<string, never>
+    EmptyObject
   >;
   positionals: string[];
 };

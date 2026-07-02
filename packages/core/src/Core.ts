@@ -1,8 +1,7 @@
 import { Help, JackSpeak, Positionals } from '#plugins';
 import * as Plugin from '@qui-cli/plugin';
 import { Base } from '@qui-cli/plugin/dist/Plugin.js';
-import { ArrayElement } from '@battis/typescript-tricks';
-
+import { ArrayElement, EmptyObject } from '@battis/typescript-tricks';
 export { Options } from '@qui-cli/plugin';
 
 /** Core configuration options */
@@ -122,7 +121,7 @@ export async function init(
     | {
         [K in keyof ArrayElement<typeof usage>['flagList']]?: boolean[];
       },
-    Record<string, never>
+    EmptyObject
   >;
   await Plugin.Registrar.init(args);
   initialized = true;
