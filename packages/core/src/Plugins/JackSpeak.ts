@@ -48,6 +48,7 @@ export function args(options: Plugin.Options) {
       for (const paragraph of options[key]!) {
         if (paragraph.level) {
           // TODO force paragraph.level to type
+          // Issue URL: https://github.com/battis/qui-cli/issues/123
           jack().heading(
             paragraph.text,
             paragraph.level as 1 | 2 | 3 | 4 | 5 | 6 | undefined,
