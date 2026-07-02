@@ -1,5 +1,0 @@
-{
-  "path": ".",
-  "tag-prefix": "validators/",
-  "releaseCommitMessageFormat": "chore: release @qui-cli/validators@{{currentTag}}"
-}

@@ -1,5 +1,0 @@
-{
-  "path": ".",
-  "tag-prefix": "shell/",
-  "releaseCommitMessageFormat": "chore: release @qui-cli/shell@{{currentTag}}"
-}

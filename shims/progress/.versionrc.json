@@ -1,5 +1,0 @@
-{
-  "path": ".",
-  "tag-prefix": "progress/",
-  "releaseCommitMessageFormat": "chore: release @qui-cli/progress@{{currentTag}}"
-}

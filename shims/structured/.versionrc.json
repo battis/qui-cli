@@ -1,5 +1,0 @@
-{
-  "path": ".",
-  "tag-prefix": "structured/",
-  "releaseCommitMessageFormat": "chore: release @qui-cli/structured@{{currentTag}}"
-}

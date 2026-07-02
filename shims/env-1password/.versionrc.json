@@ -1,5 +1,0 @@
-{
-  "path": ".",
-  "tag-prefix": "env-1password/",
-  "releaseCommitMessageFormat": "chore: release @qui-cli/env-1password@{{currentTag}}"
-}
