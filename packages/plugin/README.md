@@ -122,13 +122,13 @@ type Options = {
   // an option that expects a single number
   num?: ConfigSet<number>;
 
-  // an option that expects a `delim`-separated list of numbers
+  // an option that expects a `delim`-separated list of numbers (can be set more than once)
   numList?: ConfigSet<number[]>;
 
   // an option that expects a string value (optionally quoted)
   opt?: ConfigSet<string>;
 
-  // an option that expects a `delim`-separated list of strings
+  // an option that expects a `delim`-separated list of strings (can be set more than once)
   optList?: ConfigSet<string[]>;
 
   // a flag that is set (true) or unset (false), --example can be explicitly unset as --no-example
@@ -166,6 +166,8 @@ export function options() {
   };
 }
 ```
+
+Note that, while it is convenient to set the return type of the `options()` hook to `Plugin.Options` while _writing_ the function, doing so negates the ability of TypeScript to infer the expected type of the arguments received in the `init()` hook. _Do not specify a return type for the `options()` hook: type inference requires that it's return type be the literal it returns._
 
 ### Initialization
 
@@ -213,7 +215,7 @@ export function configure(config?: Configuration) {
 
 ### `Plugin.Options`
 
-Typing for `options()` hook. Maps 1:1 to the [jackspeak options API](https://www.npmjs.com/package/jackspeak#user-content-option-definitions), discussed in detail in[Options](#Options).
+Typing for `options()` hook. Maps 1:1 to the [jackspeak options API](https://www.npmjs.com/package/jackspeak#user-content-option-definitions), discussed in detail inv[Options](#Options).
 
 ```ts
 export function options() {
