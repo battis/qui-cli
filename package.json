@@ -12,7 +12,6 @@
   "type": "module",
   "scripts": {
     "build": "run-s build:*",
-    "#build:setup": "run-s setup",
     "build:paths": "monorepo-package-paths -w --author --homepage --repository",
     "build:scripts": "tsc",
     "build:toc": "./scripts/toc -r -O ./examples",
@@ -21,19 +20,14 @@
     "release:changelog": "lerna run --concurrency 1 release",
     "release:git": "git push --follow-tags",
     "release:login": "pnpm login",
-    "release:publish": "pnpm publish -r --access public",
-    "#postinstall": "run-s setup",
-    "setup": "run-s setup:*",
-    "setup:prettier": "setup-prettier -f",
-    "setup:eslint": "setup-eslint -f",
-    "setup:commit": "setup-commit -f"
+    "release:publish": "pnpm publish -r --access public"
   },
   "devDependencies": {
-    "@battis/commit": "^0.0.4",
+    "@battis/commit": "^0.0.7",
     "@battis/descriptive-types": "^0.3.1",
-    "@battis/eslint": "^3.0.2",
+    "@battis/eslint": "^3.0.3",
     "@battis/monorepo": "^0.0.5",
-    "@battis/prettier": "^2.0.6",
+    "@battis/prettier": "^2.0.8",
     "@qui-cli/colors": "workspace:*",
     "@qui-cli/core": "workspace:*",
     "@qui-cli/log": "workspace:*",

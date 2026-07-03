@@ -30,7 +30,7 @@
     "winston": "^3.19.0"
   },
   "devDependencies": {
-    "@battis/workspace": "^0.0.5",
+    "@battis/workspace": "^0.0.9",
     "@qui-cli/colors": "workspace:*",
     "@qui-cli/plugin": "workspace:*",
     "@qui-cli/root": "workspace:*",

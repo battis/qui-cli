@@ -30,7 +30,7 @@
     "ora": "^9.4.1"
   },
   "devDependencies": {
-    "@battis/workspace": "^0.0.5",
+    "@battis/workspace": "^0.0.9",
     "@qui-cli/colors": "workspace:*",
     "@qui-cli/log": "workspace:*",
     "@qui-cli/plugin": "workspace:*",

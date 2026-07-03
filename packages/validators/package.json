@@ -31,7 +31,7 @@
     "is-valid-path": "^0.1.1"
   },
   "devDependencies": {
-    "@battis/workspace": "^0.0.5",
+    "@battis/workspace": "^0.0.9",
     "@qui-cli/root": "workspace:*",
     "@tsconfig/node-lts": "^24.0.0",
     "@types/is-valid-path": "^0.1.2",

@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@battis/typescript-tricks": "^0.8.5",
-    "@battis/workspace": "^0.0.5",
+    "@battis/workspace": "^0.0.9",
     "@qui-cli/plugin": "workspace:*",
     "@tsconfig/node-lts": "^24.0.0",
     "@types/node": "^24.13.2",
