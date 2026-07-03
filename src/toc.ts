@@ -147,7 +147,8 @@ function scan(scanPath: PathString, depth = 0) {
             description: pkg.description,
             readme,
             subentries:
-              config.recursive && (!config.depth || depth < config.depth)
+              config.recursive &&
+              (config.depth === undefined || depth < config.depth)
                 ? scan(entryPath, depth + 1)
                 : undefined
           });
