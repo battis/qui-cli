@@ -5,7 +5,9 @@ import { ArrayElement, EmptyObject } from '@battis/typescript-tricks';
 export { Options } from '@qui-cli/plugin';
 
 /** Core configuration options */
-export type Configuration = Plugin.Registrar.Configuration & {
+export type Configuration = {
+  [name: string]: Plugin.Conf.Base | boolean | undefined;
+
   /**
    * Usage information for plugins is diplayed in LIFO (last-in, first-out)
    * order, putting the plug-in that requires other plug-ins at the top and the
@@ -16,6 +18,9 @@ export type Configuration = Plugin.Registrar.Configuration & {
    */
   lifoUsage?: boolean;
 
+  jackspeak?: JackSpeak.Configuration;
+  positionals?: Positionals.Configuration;
+
   /** @deprecated Use {@link JackSpeak} core plugin */
   core?: JackSpeak.Configuration & {
     /** @deprecated Use {@link Positionals} core plugin */
@@ -25,9 +30,6 @@ export type Configuration = Plugin.Registrar.Configuration & {
 
 let initialized = false;
 
-// TODO improve typing
-// Issue URL: https://github.com/battis/qui-cli/issues/100
-// @ts-expect-error 2322
 const config: Configuration = { lifoUsage: true };
 
 /**
