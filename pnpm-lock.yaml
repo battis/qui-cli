@@ -620,8 +620,8 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       tsx:
-        specifier: ^4.22.5
-        version: 4.22.5
+        specifier: ^4.23.0
+        version: 4.23.0
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
@@ -645,8 +645,8 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       tsx:
-        specifier: ^4.22.5
-        version: 4.22.5
+        specifier: ^4.23.0
+        version: 4.23.0
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
@@ -721,52 +721,29 @@ importers:
 
   packages/create-command:
     dependencies:
-      '@inquirer/input':
-        specifier: ^5.1.2
-        version: 5.1.2(@types/node@24.13.2)
-      '@qui-cli/colors':
-        specifier: workspace:*
-        version: link:../colors
       '@qui-cli/core':
         specifier: workspace:*
         version: link:../core
-      '@qui-cli/log':
+      '@qui-cli/init':
         specifier: workspace:*
-        version: link:../log
-      '@qui-cli/plugin':
-        specifier: workspace:*
-        version: link:../plugin
-      change-case:
-        specifier: ^5.4.4
-        version: 5.4.4
-      ora:
-        specifier: ^9.4.1
-        version: 9.4.1
+        version: link:../init
     devDependencies:
-      '@battis/descriptive-types':
-        specifier: ^0.3.1
-        version: 0.3.1
       '@battis/workspace':
         specifier: ^0.0.9
         version: 0.0.9(@qui-cli/plugin@packages+plugin)(@qui-cli/root@3.1.1(@qui-cli/plugin@packages+plugin))(@types/node@24.13.2)(commit-and-tag-version@12.7.3)
-      '@tsconfig/node-lts':
-        specifier: ^24.0.0
-        version: 24.0.0
-      '@types/node':
-        specifier: ^24.13.2
-        version: 24.13.2
-      del-cli:
-        specifier: ^7.0.0
-        version: 7.0.0
-      npm-run-all:
-        specifier: ^4.1.5
-        version: 4.1.5
-      package-json-type:
-        specifier: ^1.1.2
-        version: 1.1.2
-      typescript:
-        specifier: ^5.9.3
-        version: 5.9.3
+
+  packages/create-plugin:
+    dependencies:
+      '@qui-cli/core':
+        specifier: workspace:*
+        version: link:../core
+      '@qui-cli/init':
+        specifier: workspace:*
+        version: link:../init
+    devDependencies:
+      '@battis/workspace':
+        specifier: ^0.0.9
+        version: 0.0.9(@qui-cli/plugin@packages+plugin)(@qui-cli/root@3.1.1(@qui-cli/plugin@packages+plugin))(@types/node@24.13.2)(commit-and-tag-version@12.7.3)
 
   packages/env:
     dependencies:
@@ -810,6 +787,52 @@ importers:
       commit-and-tag-version:
         specifier: ^12.7.3
         version: 12.7.3
+      del-cli:
+        specifier: ^7.0.0
+        version: 7.0.0
+      npm-run-all:
+        specifier: ^4.1.5
+        version: 4.1.5
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
+
+  packages/init:
+    dependencies:
+      '@battis/descriptive-types':
+        specifier: ^0.3.1
+        version: 0.3.1
+      '@inquirer/input':
+        specifier: ^5.1.2
+        version: 5.1.2(@types/node@24.13.2)
+      '@qui-cli/colors':
+        specifier: workspace:*
+        version: link:../colors
+      '@qui-cli/log':
+        specifier: workspace:*
+        version: link:../log
+      '@qui-cli/plugin':
+        specifier: workspace:*
+        version: link:../plugin
+      change-case:
+        specifier: ^5.4.4
+        version: 5.4.4
+      ora:
+        specifier: ^9.4.1
+        version: 9.4.1
+      package-json-type:
+        specifier: ^1.1.2
+        version: 1.1.2
+    devDependencies:
+      '@battis/workspace':
+        specifier: ^0.0.9
+        version: 0.0.9(@qui-cli/plugin@packages+plugin)(@qui-cli/root@3.1.1(@qui-cli/plugin@packages+plugin))(@types/node@24.13.2)(commit-and-tag-version@12.7.3)
+      '@tsconfig/node-lts':
+        specifier: ^24.0.0
+        version: 24.0.0
+      '@types/node':
+        specifier: ^24.13.2
+        version: 24.13.2
       del-cli:
         specifier: ^7.0.0
         version: 7.0.0
@@ -1041,8 +1064,8 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       tsx:
-        specifier: ^4.22.5
-        version: 4.22.5
+        specifier: ^4.23.0
+        version: 4.23.0
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
@@ -3518,8 +3541,8 @@ packages:
     resolution: {integrity: sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw==}
     engines: {node: '>=0.10.0'}
 
-  iconv-lite@0.7.2:
-    resolution: {integrity: sha512-im9DjEDQ55s9fL4EYzOAv0yMqmMBSZp6G0VvFyTMPKWxiSBHUj9NW/qqLmXUwXrrM7AvqSlTCfvqRb0cM8yYqw==}
+  iconv-lite@0.7.3:
+    resolution: {integrity: sha512-IKXpvIzjnC9XTAUbVBcMfGS0EPaIXtW6v+zr+RRp+hqULEpo0owZax6wyRwPOJbWbzjYspQwusTsfVr0ifh4uQ==}
     engines: {node: '>=0.10.0'}
 
   ieee754@1.2.1:
@@ -5247,8 +5270,8 @@ packages:
   tslib@2.8.1:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
 
-  tsx@4.22.5:
-    resolution: {integrity: sha512-F7JnSfPl5ASt6LqwWyUQ3T8BwN3q0eQEbFMYa2iRWaVQmmudo0d7fRmwM4O002gsvW1bs0yBYioutsAjqLJMvQ==}
+  tsx@4.23.0:
+    resolution: {integrity: sha512-eUdUIaCr963q2h5u3+QwvYp0+eqPvn+egeqZUm0hwERCqqx1E3kK5ehbGCvqSE5MQAULr67ww0cA3jKc3YkM1w==}
     engines: {node: '>=18.0.0'}
     hasBin: true
 
@@ -6006,21 +6029,21 @@ snapshots:
   '@inquirer/external-editor@1.0.3(@types/node@24.13.2)':
     dependencies:
       chardet: 2.2.0
-      iconv-lite: 0.7.2
+      iconv-lite: 0.7.3
     optionalDependencies:
       '@types/node': 24.13.2
 
   '@inquirer/external-editor@3.0.3(@types/node@24.13.2)':
     dependencies:
       chardet: 2.2.0
-      iconv-lite: 0.7.2
+      iconv-lite: 0.7.3
     optionalDependencies:
       '@types/node': 24.13.2
 
   '@inquirer/external-editor@3.0.3(@types/node@26.1.0)':
     dependencies:
       chardet: 2.2.0
-      iconv-lite: 0.7.2
+      iconv-lite: 0.7.3
     optionalDependencies:
       '@types/node': 26.1.0
 
@@ -8234,7 +8257,7 @@ snapshots:
       safer-buffer: 2.1.2
     optional: true
 
-  iconv-lite@0.7.2:
+  iconv-lite@0.7.3:
     dependencies:
       safer-buffer: 2.1.2
 
@@ -9248,7 +9271,7 @@ snapshots:
       minipass-sized: 2.0.0
       minizlib: 3.1.0
     optionalDependencies:
-      iconv-lite: 0.7.2
+      iconv-lite: 0.7.3
 
   minipass-flush@1.0.7:
     dependencies:
@@ -10414,7 +10437,7 @@ snapshots:
 
   tslib@2.8.1: {}
 
-  tsx@4.22.5:
+  tsx@4.23.0:
     dependencies:
       esbuild: 0.28.1
     optionalDependencies:
