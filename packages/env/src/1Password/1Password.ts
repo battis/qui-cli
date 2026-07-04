@@ -10,20 +10,16 @@ import * as Base from './Base.js';
 import * as Secrets from './Secrets.js';
 
 export type Configuration = Plugin.Configuration & {
-  /**
-   * 1Password service account token; will use the environment variable OP_TOKEN
-   * if present
-   */
+  /** 1Password service account token */
   opToken?: string;
+
   /**
    * Name or ID of the 1Password API Credential item storing the 1Password
-   * service account token; will use environment variable OP_ITEM if present
+   * service account token
    */
   opItem?: string;
-  /**
-   * 1Password account to use (if signed into multiple); will use environment
-   * variable OP_ACCOUNT if present
-   */
+
+  /** 1Password account to use (if signed into multiple) */
   opAccount?: string;
 };
 
@@ -112,25 +108,23 @@ export class OP implements Base.Plugin {
       ],
       opt: {
         opAccount: {
-          description:
-            `1Password account to use (if signed into multiple); will use ` +
-            `environment variable ${Colors.varName('OP_ACCOUNT')} if present`,
+          description: `1Password account to use (if signed into multiple)`,
+          env: 'OP_ACCOUNT',
           hint: 'example.1password.com',
           default: this.config.opAccount
         },
         opItem: {
           description:
             `Name or ID of the 1Password API Credential item storing the ` +
-            `1Password service account token; will use environment variable ` +
-            `${Colors.varName('OP_ITEM')} if present. Requires the 1Password ` +
+            `1Password service account token. Requires the 1Password ` +
             `CLI tool (${Colors.url('https://developer.1password.com/docs/cli')})`,
+          env: 'OP_ITEM',
           hint: '1Password unique identifier',
           default: this.config.opItem
         },
         opToken: {
-          description:
-            `1Password service account token; will use environment variable ` +
-            `${Colors.varName('OP_TOKEN')} if present`,
+          description: `1Password service account token`,
+          env: 'OP_TOKEN',
           hint: 'token value',
           secret: true,
           default: this.config.opToken

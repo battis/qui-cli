@@ -64,15 +64,15 @@ If 1Password secret references are stored in the environment, a 1Password servic
 
 #### `--opAccount=<example.1password.com>`
 
-1Password account to use (if signed into multiple); will use environment variable `OP_ACCOUNT` if present
+1Password account to use (if signed into multiple); falls back to environment variable `OP_ACCOUNT`, if present
 
 #### `--opItem=<1Password unique identifier>`
 
-Name or ID of the 1Password API Credential item storing the 1Password service account token; will use environment variable `OP_ITEM` if present. Requires the 1Password CLI tool (`https://developer.1password.com/docs/cli`)
+Name or ID of the 1Password API Credential item storing the 1Password service account token. Requires the 1Password CLI tool (`https://developer.1password.com/docs/cli`); falls back to environment variable `OP_ITEM`, if present
 
 #### `--opToken=<token value>`
 
-1Password service account token; will use environment variable `OP_TOKEN` if present
+1Password service account token; falls back to environment variable `OP_TOKEN`, if present
 
 ### Shell command options
 

@@ -5,6 +5,7 @@ import dotenv from 'dotenv';
 import fs from 'node:fs';
 import path from 'node:path';
 import { OP } from './1Password/index.js';
+import { Colors } from '@qui-cli/colors';
 
 export type Metadata = { env?: string };
 export type Options<M extends Metadata = Metadata> = Plugin.Options<M>;
@@ -44,6 +45,24 @@ export async function configure(proposal: Configuration = {}) {
     await parse();
   }
 }
+
+export const documentation: Plugin.Doc.Hook = (name, config) => {
+  if ('env' in config) {
+    const doc = `alls back to environment variable ${Colors.varName(config.env)}, if present`;
+    if (config.description) {
+      if (config.description.endsWith('.')) {
+        config.description =
+          `${config.description} F${doc}` as typeof config.description;
+      } else {
+        config.description =
+          `${config.description}; f${doc}` as typeof config.description;
+      }
+    } else {
+      config.description = `F${doc}` as typeof config.description;
+    }
+  }
+  return config;
+};
 
 export async function init(args: Plugin.ExpectedArguments<typeof options>) {
   await parse();
