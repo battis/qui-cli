@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [commit
 
 ## [1.0.3](https://github.com/battis/qui-cli/compare/create-command/1.0.2...create-command/1.0.3) (2026-07-04)
 
+### Bug Fixes
+
+- **@qui-cli/init** correctly rename bin ([97d3752](https://github.com/battis/qui-cli/commit/97d3752698ea556ce71c348d714e0becef90f6a3))
+
 ## [1.0.2](https://github.com/battis/qui-cli/compare/create-command/1.0.1...create-command/1.0.2) (2026-07-04)
 
 ### Bug Fixes
