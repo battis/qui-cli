@@ -1,21 +1,19 @@
 {
-  "name": "@examples/dev-command",
+  "name": "@examples/distributable-command",
   "version": "0.0.0",
   "private": true,
-  "description": "A distributable command-line app",
-  "homepage": "https://github.com/battis/qui-cli/tree/main/examples/dev-command#readme",
+  "description": "A distributale command using @qui-cli components",
+  "homepage": "https://github.com/battis/qui-cli/tree/main/examples/01%20Distributable%20Command#readme",
   "repository": {
     "type": "git",
     "url": "https://github.com/battis/qui-cli.git",
-    "directory": "examples/dev-command"
+    "directory": "examples/01 Distributable Command"
   },
   "author": {
     "name": "Seth Battis",
     "url": "https://github.com/battis"
   },
   "type": "module",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "directories": {
     "bin": "./bin"
   },
@@ -26,14 +24,13 @@
     "build:compile": "tsc"
   },
   "dependencies": {
-    "@qui-cli/colors": "workspace:*",
-    "@qui-cli/core": "workspace:*",
-    "@qui-cli/log": "workspace:*"
+    "@qui-cli/core": "workspace:*"
   },
   "devDependencies": {
-    "@tsconfig/node-lts": "^24.0.0",
-    "del-cli": "^7.0.0",
+    "@tsconfig/node-lts": "^24",
+    "@types/node": "^24.13.2",
+    "del-cli": "^7",
     "npm-run-all": "^4.1.5",
-    "typescript": "^5.9.3"
+    "typescript": "^5"
   }
 }

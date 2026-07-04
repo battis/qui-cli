@@ -54,54 +54,26 @@ importers:
         specifier: ^5.9.3
         version: 5.9.3
 
-  examples/dev-command:
+  examples/01 Distributable Command:
     dependencies:
-      '@qui-cli/colors':
-        specifier: workspace:*
-        version: link:../../packages/colors
       '@qui-cli/core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@qui-cli/log':
-        specifier: workspace:*
-        version: link:../../packages/log
     devDependencies:
       '@tsconfig/node-lts':
-        specifier: ^24.0.0
+        specifier: ^24
         version: 24.0.0
+      '@types/node':
+        specifier: ^24.13.2
+        version: 24.13.2
       del-cli:
-        specifier: ^7.0.0
+        specifier: ^7
         version: 7.0.0
       npm-run-all:
         specifier: ^4.1.5
         version: 4.1.5
       typescript:
-        specifier: ^5.9.3
-        version: 5.9.3
-
-  examples/dev-default-hooks:
-    dependencies:
-      '@qui-cli/core':
-        specifier: workspace:*
-        version: link:../../packages/core
-      '@qui-cli/log':
-        specifier: workspace:*
-        version: link:../../packages/log
-      '@qui-cli/plugin':
-        specifier: workspace:*
-        version: link:../../packages/plugin
-    devDependencies:
-      '@tsconfig/node-lts':
-        specifier: ^24.0.0
-        version: 24.0.0
-      del-cli:
-        specifier: ^7.0.0
-        version: 7.0.0
-      npm-run-all:
-        specifier: ^4.1.5
-        version: 4.1.5
-      typescript:
-        specifier: ^5.9.3
+        specifier: ^5
         version: 5.9.3
 
   examples/dev-env-1password:
