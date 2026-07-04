@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.0.2](https://github.com/battis/qui-cli/compare/create-command/1.0.1...create-command/1.0.2) (2026-07-04)
+
 ## [1.0.1](https://github.com/battis/qui-cli/compare/create-command/1.0.0...create-command/1.0.1) (2026-07-04)
 
 - externalized behaviors to @qui-cli/init for reuse
