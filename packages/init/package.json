@@ -41,6 +41,7 @@
   },
   "peerDependencies": {
     "@qui-cli/colors": "workspace:*",
+    "@qui-cli/core": "workspace:*",
     "@qui-cli/log": "workspace:*",
     "@qui-cli/plugin": "workspace:*"
   }

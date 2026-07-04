@@ -808,6 +808,9 @@ importers:
       '@qui-cli/colors':
         specifier: workspace:*
         version: link:../colors
+      '@qui-cli/core':
+        specifier: workspace:*
+        version: link:../core
       '@qui-cli/log':
         specifier: workspace:*
         version: link:../log
