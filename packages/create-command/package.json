@@ -14,30 +14,13 @@
   "type": "module",
   "bin": "./bin/create-command",
   "scripts": {
-    "clean": "del ./dist",
-    "build": "run-s build:*",
-    "build:clean": "run-s clean",
-    "build:compile": "tsc",
-    "prepack": "run-s build",
     "release": "commit-and-tag-version --noBumpWhenEmptyChanges"
   },
   "dependencies": {
-    "@inquirer/input": "^5.1.2",
-    "@qui-cli/colors": "workspace:*",
     "@qui-cli/core": "workspace:*",
-    "@qui-cli/log": "workspace:*",
-    "@qui-cli/plugin": "workspace:*",
-    "change-case": "^5.4.4",
-    "ora": "^9.4.1"
+    "@qui-cli/init": "workspace:*"
   },
   "devDependencies": {
-    "@battis/descriptive-types": "^0.3.1",
-    "@battis/workspace": "^0.0.9",
-    "@tsconfig/node-lts": "^24.0.0",
-    "@types/node": "^24.13.2",
-    "del-cli": "^7.0.0",
-    "npm-run-all": "^4.1.5",
-    "package-json-type": "^1.1.2",
-    "typescript": "^5.9.3"
+    "@battis/workspace": "^0.0.9"
   }
 }

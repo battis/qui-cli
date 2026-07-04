@@ -1,0 +1,5 @@
+{
+  "path": ".",
+  "tag-prefix": "init/",
+  "releaseCommitMessageFormat": "chore(init): release @qui-cli/init@{{currentTag}}"
+}

@@ -3,16 +3,17 @@ import * as Plugin from '@qui-cli/plugin';
 import path from 'node:path';
 import fs from 'node:fs';
 import ora from 'ora';
-import { IPackageJson } from 'package-json-type';
+import type { IPackageJson } from 'package-json-type';
 import { Positionals } from '@qui-cli/core';
 import input from '@inquirer/input';
 import type { PathString } from '@battis/descriptive-types';
-import { pascalCase, kebabCase, constantCase } from 'change-case';
+import { pascalCase, kebabCase } from 'change-case';
 import { Log } from '@qui-cli/log';
 
 export type Configuration = Plugin.Configuration & {
   name?: string;
   scope?: string;
+  template?: PathString;
 };
 
 Positionals.require({
@@ -22,7 +23,7 @@ Positionals.require({
 });
 Positionals.allowOnlyNamedArgs();
 
-export const name = 'create-command';
+export const name = 'npm-init';
 const config: Configuration = {};
 
 export function configure(proposal: Configuration = {}) {
@@ -68,11 +69,13 @@ async function copyTemplate() {
   if (!config.name) {
     throw Error();
   }
+  if (!config.template) {
+    throw Error();
+  }
   const destDirPath = path.resolve(process.cwd(), config.name);
-  const srcDirPath = path.resolve(import.meta.dirname, '../template');
   fs.mkdirSync(destDirPath);
-  for (const filename of fs.readdirSync(srcDirPath)) {
-    const srcFilePath = path.join(srcDirPath, filename);
+  for (const filename of fs.readdirSync(config.template)) {
+    const srcFilePath = path.join(config.template, filename);
     const destFilePath = path.join(destDirPath, filename);
     const spinner = ora(filename).start();
     try {
@@ -123,16 +126,19 @@ function applyName(text: string) {
   }
   const name = config.name;
   return text
-    .replaceAll('$command', kebabCase(name))
-    .replaceAll('$COMMAND', constantCase(name))
-    .replaceAll('$Command', pascalCase(name));
+    .replaceAll('$name', kebabCase(name))
+    .replaceAll('$Name', pascalCase(name))
+    .replaceAll(
+      '$NAME',
+      `${config.scope ? `@${config.scope}/` : ''}${kebabCase(config.name)}`
+    );
 }
 
 async function preparePackage(pkg: IPackageJson) {
   if (!config.name) {
     throw Error();
   }
-  const name = `${config.scope ? `@${kebabCase(config.scope)}/` : ''}${kebabCase(config.name)}`;
+  const name = applyName('$NAME');
   const description = await input({ message: 'Command description?' });
   const license = await input({ message: 'License?', default: 'GPL-3.0' });
   return {
@@ -144,7 +150,7 @@ async function preparePackage(pkg: IPackageJson) {
 }
 
 async function prepareSrc(srcPath: PathString) {
-  const moduleName = '$Command.ts';
+  const moduleName = '$Name.ts';
   const indexPath = path.join(srcPath, 'index.ts');
   fs.writeFileSync(
     path.join(srcPath, applyName(moduleName)),

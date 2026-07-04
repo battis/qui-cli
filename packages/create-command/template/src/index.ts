@@ -1,6 +1,6 @@
 import { Core } from '@qui-cli/core';
 import { register } from '@qui-cli/plugin';
-import * as $Command from './$Command.js';
+import * as $Name from './$Name.js';
 
-await register($Command);
+await register($Name);
 await Core.run();

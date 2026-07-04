@@ -1,3 +1,8 @@
 #!/usr/bin/env node
 
-import '../dist/index.js';
+import { Init } from '@qui-cli/init';
+import { Core } from '@qui-cli/core';
+import path from 'node:path';
+
+Init.configure({ template: path.resolve(import.meta.dirname, '../template') });
+await Core.run();

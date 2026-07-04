@@ -1,0 +1,47 @@
+{
+  "name": "@qui-cli/init",
+  "version": "0.0.0",
+  "description": "A plugin to use with `npm-init`",
+  "homepage": "https://github.com/battis/qui-cli/tree/main/packages/init#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/battis/qui-cli.git",
+    "directory": "packages/init"
+  },
+  "license": "GPL-3.0",
+  "author": {
+    "name": "Seth Battis",
+    "url": "https://github.com/battis"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "clean": "del ./dist",
+    "build": "run-s build:*",
+    "build:clean": "run-s clean",
+    "build:compile": "tsc",
+    "prepack": "run-s build",
+    "release": "commit-and-tag-version --noBumpWhenEmptyChanges"
+  },
+  "dependencies": {
+    "@battis/descriptive-types": "^0.3.1",
+    "@inquirer/input": "^5.1.2",
+    "change-case": "^5.4.4",
+    "ora": "^9.4.1",
+    "package-json-type": "^1.1.2"
+  },
+  "devDependencies": {
+    "@battis/workspace": "^0.0.9",
+    "@tsconfig/node-lts": "^24.0.0",
+    "@types/node": "^24.13.2",
+    "del-cli": "^7.0.0",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.9.3"
+  },
+  "peerDependencies": {
+    "@qui-cli/colors": "workspace:*",
+    "@qui-cli/log": "workspace:*",
+    "@qui-cli/plugin": "workspace:*"
+  }
+}
