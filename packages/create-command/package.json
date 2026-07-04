@@ -1,6 +1,6 @@
 {
   "name": "@qui-cli/create-command",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "homepage": "https://github.com/battis/qui-cli/tree/main/packages/create-command#readme",
   "repository": {
     "type": "git",
