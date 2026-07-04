@@ -3,6 +3,7 @@ import * as Init from './Init.js';
 import * as Opt from './Opt.js';
 import * as Plugin from './Plugin.js';
 import * as Run from './Run.js';
+import { ConfigType } from 'jackspeak';
 
 const plugins: Plugin.Base[] = [];
 
@@ -25,13 +26,12 @@ export async function register(plugin: Plugin.Base) {
 
   plugins.push({
     name: plugin.name,
-    configure: plugin.configure ? plugin.configure.bind(plugin) : undefined,
-    options: plugin.options
-      ? async () =>
-          plugin.options ? Opt.documentDefaults(await plugin.options()) : {}
-      : undefined,
-    init: plugin.init ? plugin.init.bind(plugin) : undefined,
-    run: plugin.run ? plugin.run.bind(plugin) : undefined
+    configure: plugin.configure?.bind(plugin),
+    options: async () =>
+      plugin.options ? await documentation(await plugin.options()) : {},
+    documentation: plugin.documentation?.bind(plugin),
+    init: plugin.init?.bind(plugin),
+    run: plugin.run?.bind(plugin)
   });
 }
 
@@ -51,6 +51,37 @@ export async function configure(config: Configuration = {}) {
       await plugin.configure(config[plugin.name] || {});
     }
   }
+}
+
+export async function documentation<O extends Opt.Options = Opt.Options>(
+  options: O
+): Promise<O> {
+  for (const plugin of plugins) {
+    if (plugin.documentation) {
+      for (const { optType, configType, multiple } of [
+        { optType: 'opt', configType: 'string', multiple: false },
+        { optType: 'optList', configType: 'string', multiple: true },
+        { optType: 'num', configType: 'number', multiple: false },
+        { optType: 'numList', configType: 'number', multiple: true },
+        { optType: 'flag', configType: 'boolean', multiple: false },
+        { optType: 'flagList', configType: 'boolean', multiple: true }
+      ] as {
+        optType: Exclude<keyof Opt.Options, 'man' | 'fields'>;
+        configType: ConfigType;
+        multiple: boolean;
+      }[]) {
+        for (const longOption in options[optType]) {
+          options[optType][longOption] = await plugin.documentation(
+            longOption,
+            options[optType][longOption],
+            configType,
+            multiple
+          );
+        }
+      }
+    }
+  }
+  return options;
 }
 
 export async function init(args: Init.Arguments<Opt.Options>) {

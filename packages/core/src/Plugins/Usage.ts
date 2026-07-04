@@ -15,6 +15,48 @@ function commandColor(usage: string) {
   return `${pre}${Colors.command(`${cmd}${terms}`, Colors.keyword)}${post}`;
 }
 
+function stringify(value: string | number | boolean | RegExp) {
+  switch (typeof value) {
+    case 'string':
+      return Colors.quotedValue(`"${value}"`);
+    case 'object':
+      return Colors.regexpValue(value);
+    default:
+      return Colors.value(value);
+  }
+}
+
+export const documentation: Plugin.Doc.Hook = (
+  name,
+  config,
+  configType,
+  multiple
+) => {
+  let docs = '';
+  if (config.default !== undefined && !config.secret) {
+    if (!docs.length) {
+      docs = 'Default';
+    }
+    docs = `${docs}: ${
+      Array.isArray(config.default)
+        ? config.default.map((v) => stringify(v)).join(', ')
+        : stringify(config.default)
+    }`;
+  }
+  if (configType === 'boolean' && !multiple && config.default) {
+    docs = `${docs}${docs.length ? ', u' : 'U'}se ${Colors.flagArg(`--no-${name}`)} to disable`;
+  }
+  if (docs.length) {
+    if (config.description?.length) {
+      config.description =
+        `${config.description} (${docs})` as typeof config.description;
+    } else {
+      config.description = docs as typeof config.description;
+    }
+  }
+  return config;
+};
+
 export function usage() {
   return Positionals.usage(commandColor(JackSpeak.usage()));
 }

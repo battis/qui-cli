@@ -98,7 +98,7 @@ export async function init(
     ))
   ];
   if (externalOptions) {
-    usage.push(Plugin.documentDefaults(externalOptions));
+    usage.push(await Plugin.Registrar.documentation(externalOptions));
   }
   if (config.lifoUsage) {
     usage.reverse();
