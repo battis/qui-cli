@@ -85,7 +85,13 @@ export async function run() {
         spinner.stop();
         fs.writeFileSync(
           destFilePath,
-          JSON.stringify(await preparePackage(JSON.parse(srcFilePath)), null, 2)
+          JSON.stringify(
+            await preparePackage(
+              JSON.parse(fs.readFileSync(srcFilePath, 'utf8'))
+            ),
+            null,
+            2
+          )
         );
         spinner.succeed(filename);
         break;
