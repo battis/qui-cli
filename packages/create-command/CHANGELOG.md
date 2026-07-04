@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.7](https://github.com/battis/qui-cli/compare/create-command/0.0.6...create-command/0.0.7) (2026-07-04)
+
+
+### Bug Fixes
+
+* sort out spinner overlap ([3405948](https://github.com/battis/qui-cli/commit/3405948af5f610b1e40159330527c608422088b1))
+
 ## [0.0.6](https://github.com/battis/qui-cli/compare/create-command/0.0.5...create-command/0.0.6) (2026-07-04)
 
 
