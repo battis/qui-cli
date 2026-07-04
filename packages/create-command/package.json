@@ -12,7 +12,7 @@
     "url": "https://github.com/battis"
   },
   "type": "module",
-  "bin": "./create-command",
+  "bin": "./bin/create-command",
   "scripts": {
     "clean": "del ./dist",
     "build": "run-s build:*",
