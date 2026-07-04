@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.6](https://github.com/battis/qui-cli/compare/create-command/0.0.5...create-command/0.0.6) (2026-07-04)
+
+
+### Bug Fixes
+
+* parse file contents rather than path ([e4d7611](https://github.com/battis/qui-cli/commit/e4d76113afe8dc287b72be9cdcf7ceb3dacbbe56))
+
 ## [0.0.5](https://github.com/battis/qui-cli/compare/create-command/0.0.4...create-command/0.0.5) (2026-07-04)
 
 
