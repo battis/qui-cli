@@ -12,7 +12,7 @@
     "build:compile": "tsc"
   },
   "dependencies": {
-    "@qui-cli/core": "workspace:*"
+    "@qui-cli/core": "^7.0.0"
   },
   "devDependencies": {
     "@tsconfig/node-lts": "^24.0.0",

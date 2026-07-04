@@ -6,9 +6,9 @@ import ora from 'ora';
 import { IPackageJson } from 'package-json-type';
 import { Positionals } from '@qui-cli/core';
 import input from '@inquirer/input';
-import { Log } from '@qui-cli/log';
 import type { PathString } from '@battis/descriptive-types';
 import { pascalCase, kebabCase, constantCase } from 'change-case';
+import { Log } from '@qui-cli/log';
 
 export type Configuration = Plugin.Configuration & {
   name?: string;
@@ -55,11 +55,20 @@ export function init({ values }: Plugin.ExpectedArguments<typeof options>) {
 }
 
 export async function run() {
+  const projectDirPath = await copyTemplate();
+  Log.info(
+    `${Colors.value(
+      `${config.scope ? `@${config.scope}/` : ''}${config.name}`
+    )} project created in ${Colors.path(projectDirPath)}.\n\n` +
+      `Run your preferred package manager install to install dependencies.`
+  );
+}
+
+async function copyTemplate() {
   if (!config.name) {
-    Log.error(`${Colors.positionalArg('name')} must be defined`);
-    process.exit(1);
+    throw Error();
   }
-  const destDirPath = path.resolve(process.cwd(), kebabCase(config.name));
+  const destDirPath = path.resolve(process.cwd(), config.name);
   const srcDirPath = path.resolve(import.meta.dirname, '../template');
   fs.mkdirSync(destDirPath);
   for (const filename of fs.readdirSync(srcDirPath)) {
@@ -105,6 +114,7 @@ export async function run() {
         }
     }
   }
+  return destDirPath;
 }
 
 function applyName(text: string) {
