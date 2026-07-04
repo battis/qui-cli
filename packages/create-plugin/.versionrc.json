@@ -1,5 +1,5 @@
 {
   "path": ".",
-  "tag-prefix": "create-command/",
-  "releaseCommitMessageFormat": "chore(create-command): release @qui-cli/create-command@{{currentTag}}"
+  "tag-prefix": "create-plugin/",
+  "releaseCommitMessageFormat": "chore(create-plugin): release @qui-cli/create-plugin@{{currentTag}}"
 }
