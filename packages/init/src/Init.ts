@@ -14,6 +14,7 @@ export type Configuration = Plugin.Configuration & {
   name?: string;
   scope?: string;
   template?: PathString;
+  createDirectory?: boolean;
 };
 
 Positionals.require({
@@ -24,7 +25,9 @@ Positionals.require({
 Positionals.allowOnlyNamedArgs();
 
 export const name = 'npm-init';
-const config: Configuration = {};
+const config: Configuration = {
+  createDirectory: true
+};
 
 export function configure(proposal: Configuration = {}) {
   for (const key in proposal) {
@@ -46,6 +49,12 @@ export function options() {
       scope: {
         description: 'Scope of package to be created',
         hint: Colors.quotedValue(`"example"`)
+      }
+    },
+    flag: {
+      createDirectory: {
+        description: 'Create enclosing directory for project',
+        default: config.createDirectory
       }
     }
   };
@@ -72,8 +81,11 @@ async function copyTemplate() {
   if (!config.template) {
     throw Error();
   }
-  const destDirPath = path.resolve(process.cwd(), config.name);
-  fs.mkdirSync(destDirPath);
+  let destDirPath = process.cwd();
+  if (config.createDirectory) {
+    destDirPath = path.resolve(destDirPath, config.name);
+    fs.mkdirSync(destDirPath);
+  }
   for (const filename of fs.readdirSync(config.template)) {
     const srcFilePath = path.join(config.template, filename);
     const destFilePath = path.join(destDirPath, filename);
