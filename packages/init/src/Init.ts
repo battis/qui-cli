@@ -88,8 +88,8 @@ async function copyTemplate() {
     switch (filename) {
       case 'bin':
         fs.renameSync(
-          path.join(destFilePath, '$command'),
-          path.join(destFilePath, config.name)
+          path.join(destFilePath, '$name'),
+          path.join(destFilePath, applyName('$name'))
         );
         spinner.succeed(`bin/${config.name}`);
         break;
