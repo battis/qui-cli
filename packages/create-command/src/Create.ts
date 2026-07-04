@@ -59,14 +59,15 @@ export async function run() {
     Log.error(`${Colors.positionalArg('name')} must be defined`);
     process.exit(1);
   }
-  const destDir = process.cwd();
-  const srcDir = path.resolve(import.meta.dirname, '../template');
-  for (const filename of fs.readdirSync(srcDir)) {
-    const srcPath = path.join(srcDir, filename);
-    const destPath = path.join(destDir, filename);
+  const destDirPath = path.resolve(process.cwd(), kebabCase(config.name));
+  const srcDirPath = path.resolve(import.meta.dirname, '../template');
+  fs.mkdirSync(destDirPath);
+  for (const filename of fs.readdirSync(srcDirPath)) {
+    const srcFilePath = path.join(srcDirPath, filename);
+    const destFilePath = path.join(destDirPath, filename);
     const spinner = ora(filename).start();
     try {
-      fs.cpSync(srcPath, destPath, {
+      fs.cpSync(srcFilePath, destFilePath, {
         recursive: true
       });
     } catch (error) {
@@ -75,21 +76,21 @@ export async function run() {
     switch (filename) {
       case 'bin':
         fs.renameSync(
-          path.join(destPath, '$command'),
-          path.join(destPath, config.name)
+          path.join(destFilePath, '$command'),
+          path.join(destFilePath, config.name)
         );
         spinner.succeed(`bin/${config.name}`);
         break;
       case 'package.json':
         spinner.stop();
         fs.writeFileSync(
-          destPath,
-          JSON.stringify(await preparePackage(JSON.parse(destPath)), null, 2)
+          destFilePath,
+          JSON.stringify(await preparePackage(JSON.parse(srcFilePath)), null, 2)
         );
         spinner.succeed(filename);
         break;
       case 'src':
-        await prepareSrc(destPath);
+        await prepareSrc(destFilePath);
         break;
       default:
         if (spinner.isSpinning) {
