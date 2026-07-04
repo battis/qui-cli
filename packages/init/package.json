@@ -1,6 +1,6 @@
 {
   "name": "@qui-cli/init",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A plugin to use with `npm-init`",
   "homepage": "https://github.com/battis/qui-cli/tree/main/packages/init#readme",
   "repository": {
