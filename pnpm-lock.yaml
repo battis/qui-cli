@@ -719,6 +719,19 @@ importers:
         specifier: ^5.9.3
         version: 5.9.3
 
+  packages/create-command:
+    dependencies:
+      '@battis/pkg-setup':
+        specifier: ^0.0.9
+        version: 0.0.9(@qui-cli/root@3.1.1(@qui-cli/plugin@packages+plugin))(@types/node@24.13.2)
+      '@qui-cli/core':
+        specifier: workspace:*
+        version: link:../core
+    devDependencies:
+      '@battis/workspace':
+        specifier: ^0.0.9
+        version: 0.0.9(@qui-cli/plugin@packages+plugin)(@qui-cli/root@3.1.1(@qui-cli/plugin@packages+plugin))(@types/node@24.13.2)(commit-and-tag-version@12.7.3)
+
   packages/env:
     dependencies:
       '@1password/sdk':
@@ -6419,6 +6432,15 @@ snapshots:
       jackspeak: 4.2.3
       wrap-ansi: 10.0.0
 
+  '@qui-cli/log@4.0.4(@qui-cli/colors@3.2.4)(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4)))':
+    dependencies:
+      '@qui-cli/colors': 3.2.4
+      '@qui-cli/plugin': 4.1.2(@qui-cli/colors@3.2.4)
+      '@qui-cli/root': 3.1.1(@qui-cli/plugin@packages+plugin)
+      ora: 9.4.1
+      strip-ansi: 7.2.0
+      winston: 3.19.0
+
   '@qui-cli/log@4.0.4(@qui-cli/colors@3.2.4)(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))(@qui-cli/root@3.1.1(@qui-cli/plugin@packages+plugin))':
     dependencies:
       '@qui-cli/colors': 3.2.4
@@ -6460,11 +6482,6 @@ snapshots:
       '@qui-cli/colors': 3.2.4
       jackspeak: 4.2.3
 
-  '@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))':
-    dependencies:
-      '@qui-cli/plugin': 4.1.2(@qui-cli/colors@3.2.4)
-      app-root-path: 3.1.0
-
   '@qui-cli/root@3.1.1(@qui-cli/plugin@packages+plugin)':
     dependencies:
       '@qui-cli/plugin': link:packages/plugin
@@ -6486,7 +6503,7 @@ snapshots:
       ora: 9.4.1
       shelljs: 0.10.0
 
-  '@qui-cli/validators@3.0.5(@qui-cli/root@3.1.1(@qui-cli/plugin@packages+plugin))':
+  '@qui-cli/validators@3.0.5(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4)))':
     dependencies:
       '@qui-cli/root': 3.1.1(@qui-cli/plugin@packages+plugin)
       '@tahul/is-valid-domain': 1.0.5
@@ -9114,10 +9131,10 @@ snapshots:
       '@inquirer/input': 5.1.2(@types/node@24.13.2)
       '@qui-cli/colors': 3.2.4
       '@qui-cli/core': 7.0.0(@qui-cli/colors@3.2.4)(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))
-      '@qui-cli/log': 4.0.4(@qui-cli/colors@3.2.4)(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))(@qui-cli/root@3.1.1(@qui-cli/plugin@packages+plugin))
+      '@qui-cli/log': 4.0.4(@qui-cli/colors@3.2.4)(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4)))
       '@qui-cli/plugin': 4.1.2(@qui-cli/colors@3.2.4)
-      '@qui-cli/root': 3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4))
-      '@qui-cli/validators': 3.0.5(@qui-cli/root@3.1.1(@qui-cli/plugin@packages+plugin))
+      '@qui-cli/root': 3.1.1(@qui-cli/plugin@packages+plugin)
+      '@qui-cli/validators': 3.0.5(@qui-cli/root@3.1.1(@qui-cli/plugin@4.1.2(@qui-cli/colors@3.2.4)))
       glob: 13.0.6
       ora: 9.4.1
       package-json-type: 1.1.2

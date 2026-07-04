@@ -1,0 +1,26 @@
+{
+  "name": "@qui-cli/create-command",
+  "version": "0.0.0",
+  "homepage": "https://github.com/battis/qui-cli/tree/main/packages/create-command#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/battis/qui-cli.git",
+    "directory": "packages/create-command"
+  },
+  "author": {
+    "name": "Seth Battis",
+    "url": "https://github.com/battis"
+  },
+  "type": "module",
+  "bin": "./bin/init",
+  "scripts": {
+    "release": "commit-and-tag-version --noBumpWhenEmptyChanges"
+  },
+  "dependencies": {
+    "@battis/pkg-setup": "^0.0.9",
+    "@qui-cli/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@battis/workspace": "^0.0.9"
+  }
+}
