@@ -3,5 +3,5 @@
 import { Setup } from '@battis/pkg-setup';
 import { Core } from '@qui-cli/core';
 
-Setup.configure({ package: '@qui-cli/create-command' });
+Setup.configure({ packageName: '@qui-cli/create-command' });
 await Core.run();
