@@ -929,6 +929,52 @@ importers:
         specifier: ^5.9.3
         version: 5.9.3
 
+  packages/pkg-setup:
+    dependencies:
+      '@inquirer/confirm':
+        specifier: ^6.1.1
+        version: 6.1.1(@types/node@24.13.2)
+      '@qui-cli/colors':
+        specifier: workspace:*
+        version: link:../colors
+      '@qui-cli/log':
+        specifier: workspace:*
+        version: link:../log
+      '@qui-cli/plugin':
+        specifier: workspace:*
+        version: link:../plugin
+      app-root-path:
+        specifier: ^3.1.0
+        version: 3.1.0
+      ora:
+        specifier: ^9.4.1
+        version: 9.4.1
+      yaml:
+        specifier: ^2.9.0
+        version: 2.9.0
+    devDependencies:
+      '@battis/descriptive-types':
+        specifier: ^0.3.1
+        version: 0.3.1
+      '@types/node':
+        specifier: ^24.13.2
+        version: 24.13.2
+      commit-and-tag-version:
+        specifier: ^12.7.3
+        version: 12.7.3
+      del-cli:
+        specifier: ^7.0.0
+        version: 7.0.0
+      npm-run-all:
+        specifier: ^4.1.5
+        version: 4.1.5
+      package-json-type:
+        specifier: ^1.1.2
+        version: 1.1.2
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
+
   packages/plugin:
     dependencies:
       jackspeak:
@@ -6754,7 +6800,7 @@ snapshots:
 
   '@types/cli-progress@3.11.6':
     dependencies:
-      '@types/node': 26.1.0
+      '@types/node': 24.13.2
 
   '@types/debug@4.1.13':
     dependencies:
@@ -6789,6 +6835,7 @@ snapshots:
   '@types/node@26.1.0':
     dependencies:
       undici-types: 8.3.0
+    optional: true
 
   '@types/normalize-package-data@2.4.4': {}
 
@@ -10528,7 +10575,8 @@ snapshots:
 
   undici-types@7.18.2: {}
 
-  undici-types@8.3.0: {}
+  undici-types@8.3.0:
+    optional: true
 
   undici@6.27.0: {}
 
