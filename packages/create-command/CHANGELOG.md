@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [commit
 
 ## [1.0.2](https://github.com/battis/qui-cli/compare/create-command/1.0.1...create-command/1.0.2) (2026-07-04)
 
+### Bug Fixes
+
+- **@qui-cli/init** install missing peer ([b7bb25a](https://github.com/battis/qui-cli/commit/b7bb25a7d75f6165bc0cb48e859a045543c8c0d9))
+
 ## [1.0.1](https://github.com/battis/qui-cli/compare/create-command/1.0.0...create-command/1.0.1) (2026-07-04)
 
 - externalized behaviors to @qui-cli/init for reuse
