@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [commit
 
 ## [1.0.4](https://github.com/battis/qui-cli/compare/create-command/1.0.3...create-command/1.0.4) (2026-07-04)
 
+### Bug Fixes
+
+- **@qui-cli/init** rename module ([ffd0e47](https://github.com/battis/qui-cli/commit/ffd0e4782627c6305b5ef6203064f6581ae76209))
+
 ## [1.0.3](https://github.com/battis/qui-cli/compare/create-command/1.0.2...create-command/1.0.3) (2026-07-04)
 
 ### Bug Fixes
