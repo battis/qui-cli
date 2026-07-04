@@ -97,6 +97,7 @@ export async function run() {
         break;
       case 'src':
         await prepareSrc(destFilePath);
+        spinner.succeed();
         break;
       default:
         if (spinner.isSpinning) {
@@ -121,7 +122,7 @@ async function preparePackage(pkg: IPackageJson) {
   if (!config.name) {
     throw Error();
   }
-  const name = `${config.scope ? `@${kebabCase(config.scope)}/` : ''}/${kebabCase(config.name)}`;
+  const name = `${config.scope ? `@${kebabCase(config.scope)}/` : ''}${kebabCase(config.name)}`;
   const description = await input({ message: 'Command description?' });
   const license = await input({ message: 'License?', default: 'GPL-3.0' });
   return {
