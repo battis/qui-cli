@@ -150,11 +150,9 @@ async function preparePackage(pkg: IPackageJson) {
 }
 
 async function prepareSrc(srcPath: PathString) {
-  const moduleName = '$Name.ts';
+  const modulePath = path.join(srcPath, applyName('$Name.ts'));
   const indexPath = path.join(srcPath, 'index.ts');
-  fs.writeFileSync(
-    path.join(srcPath, applyName(moduleName)),
-    applyName(fs.readFileSync(path.join(srcPath, moduleName), 'utf8'))
-  );
+  fs.renameSync(path.join(srcPath, '$Name.ts'), modulePath);
+  fs.writeFileSync(modulePath, applyName(fs.readFileSync(modulePath, 'utf8')));
   fs.writeFileSync(indexPath, applyName(fs.readFileSync(indexPath, 'utf8')));
 }
