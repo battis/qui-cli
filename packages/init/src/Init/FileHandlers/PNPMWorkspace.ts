@@ -9,6 +9,7 @@ import appRootPath from 'app-root-path';
 import * as Placeholders from '../../Placeholders.js';
 import * as Plugin from '@qui-cli/plugin';
 import prettier from 'prettier';
+import { Log } from '@qui-cli/log';
 
 export const handle: FileHandler['handle'] = async ({
   srcPath,
@@ -17,11 +18,11 @@ export const handle: FileHandler['handle'] = async ({
 }) => {
   destPath = path.join(appRootPath.toString(), path.basename(destPath));
   let changed = false;
+  const proposal = yaml.parse(
+    Placeholders.replaceAll(fs.readFileSync(srcPath, 'utf8'))
+  );
   if (fs.existsSync(destPath)) {
-    const workspace = yaml.parse(
-      Placeholders.replaceAll(fs.readFileSync(destPath, 'utf8'))
-    );
-    const proposal = yaml.parse(fs.readFileSync(srcPath, 'utf8'));
+    const workspace = yaml.parse(fs.readFileSync(destPath, 'utf8'));
     for (const key in proposal) {
       const update = merge(proposal[key], workspace[key]);
       await Confirm.withDiff({
@@ -43,9 +44,13 @@ export const handle: FileHandler['handle'] = async ({
           filepath: destPath
         })
       );
+      Log.info(`${Colors.path(destPath, Colors.keyword)} updated`);
+    } else {
+      Log.info(`${Colors.path(destPath, Colors.keyword)} up-to-date`);
     }
   } else {
-    fs.copyFileSync(srcPath, destPath);
+    fs.writeFileSync(destPath, yaml.stringify(proposal));
+    Log.info(`${Colors.path(destPath, Colors.keyword)} created`);
     return `Changes have been made to ${Colors.path(path.join(process.cwd(), 'pnpm-workspace.yaml'), Colors.keyword)}, please verify lockfile status`;
   }
 };
