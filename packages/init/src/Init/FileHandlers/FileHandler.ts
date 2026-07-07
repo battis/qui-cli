@@ -7,6 +7,8 @@ type Options = {
 };
 /** Optionally returns a warning to be displayed at the end of the set up process */
 
-export type FileHandler = (
-  options: Options
-) => (undefined | string) | Promise<undefined | string>;
+export type FileHandler = {
+  handle: (
+    options: Options
+  ) => (undefined | string) | Promise<undefined | string>;
+};

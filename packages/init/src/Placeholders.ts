@@ -7,7 +7,7 @@ export type Configuration = Plugin.Configuration & {
   placeholders?: Record<string, string[]>;
 };
 
-export const name = 'placeholders';
+export const name = 'init.placeholders';
 const config: Configuration = {
   delimiter: ','
 };

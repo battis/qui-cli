@@ -29,7 +29,7 @@ export async function mergeDirectory({
       filename.replace(/^dot\./, '.')
     );
     if (normalizedFilename in fileHandlers) {
-      const warning = await fileHandlers[normalizedFilename]({
+      const warning = await fileHandlers[normalizedFilename].handle({
         srcPath: path.join(srcPath, filename),
         destPath: path.join(destPath, normalizedFilename),
         force

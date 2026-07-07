@@ -7,8 +7,10 @@ import { FileHandler } from './FileHandler.js';
 import path from 'node:path';
 import appRootPath from 'app-root-path';
 import * as Placeholders from '../../Placeholders.js';
+import * as Plugin from '@qui-cli/plugin';
+import prettier from 'prettier';
 
-export const PNPMWorkspace: FileHandler = async ({
+export const handle: FileHandler['handle'] = async ({
   srcPath,
   destPath,
   force = false
@@ -34,10 +36,18 @@ export const PNPMWorkspace: FileHandler = async ({
       });
     }
     if (changed) {
-      fs.writeFileSync(destPath, yaml.stringify(workspace));
+      fs.writeFileSync(
+        destPath,
+        await prettier.format(yaml.stringify(workspace), {
+          ...(await prettier.resolveConfig(import.meta.dirname)),
+          filepath: destPath
+        })
+      );
     }
   } else {
     fs.copyFileSync(srcPath, destPath);
     return `Changes have been made to ${Colors.path(path.join(process.cwd(), 'pnpm-workspace.yaml'), Colors.keyword)}, please verify lockfile status`;
   }
 };
+
+await Plugin.register({ name: 'init.pnpm-workspace' });
