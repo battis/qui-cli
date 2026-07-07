@@ -6,6 +6,7 @@ import * as Placeholders from '../../Placeholders.js';
 import { withDiff } from './withDiff.js';
 import { copyFile } from './copyFile.js';
 import { FileHandlers } from '../index.js';
+import { Log } from '@qui-cli/log';
 
 type Options = {
   srcPath: PathString;
@@ -71,6 +72,9 @@ export async function mergeDirectory({
               }
               if (!fs.existsSync(destFilePath)) {
                 fs.mkdirSync(destFilePath, { recursive: true });
+                Log.info(
+                  `Directory ${Colors.path(destFilePath, Colors.keyword)} created`
+                );
               }
               await mergeDirectory({
                 srcPath: srcFilePath,

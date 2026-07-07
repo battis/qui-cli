@@ -1,4 +1,3 @@
-import ora from 'ora';
 import * as JSON from '../JSON/index.js';
 import confirm from '@inquirer/confirm';
 import { Log } from '@qui-cli/log';
@@ -19,16 +18,14 @@ export async function withDiff({
   action,
   force = false
 }: Options) {
-  const spinner = ora(identifier).start();
   if (src !== undefined) {
     if (dest !== undefined) {
       if (JSON.isEqual(src, dest)) {
-        spinner.succeed(`${identifier} up-to-date`);
+        Log.info(`${identifier} up-to-date`);
         return;
       }
       let update = force;
       if (!update) {
-        spinner.stop();
         update = await confirm({
           message: `In ${identifier}, replace:\n\n${
             typeof dest === 'string'
@@ -50,17 +47,17 @@ export async function withDiff({
       if (update) {
         await action();
         if (force) {
-          spinner.succeed(`${identifier} updated`);
+          Log.info(`${identifier} updated`);
         }
         return;
       }
     } else {
       await action();
-      spinner.succeed(`${identifier} created`);
+      Log.info(`${identifier} created`);
       return;
     }
   } else {
-    spinner.fail(Colors.error(`${identifier} source missing`));
+    Log.error(Colors.error(`${identifier} source missing`));
     return;
   }
 }
