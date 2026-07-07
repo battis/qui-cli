@@ -12,13 +12,15 @@ type Options = {
 };
 
 export async function copyFile({ srcPath, destPath, force = false }: Options) {
-  const src = await prettier.format(
-    Placeholders.replaceAll(fs.readFileSync(srcPath, 'utf8')),
-    {
+  let src = Placeholders.replaceAll(fs.readFileSync(srcPath, 'utf8'));
+  try {
+    src = await prettier.format(src, {
       ...(await prettier.resolveConfig(import.meta.dirname)),
       filepath: destPath
-    }
-  );
+    });
+  } catch (_) {
+    // do nothing
+  }
   await withDiff({
     src,
     dest: fs.existsSync(destPath)
