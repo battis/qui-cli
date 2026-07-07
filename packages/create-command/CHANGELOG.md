@@ -4,19 +4,21 @@ All notable changes to this project will be documented in this file. See [commit
 
 ## [1.2.0](https://github.com/battis/qui-cli/compare/create-command/1.1.0...create-command/1.2.0) (2026-07-07)
 
+### Features
+
+- Bump to @qui-cli/init@2.x
 
 ### Bug Fixes
 
-* include README template ([5283377](https://github.com/battis/qui-cli/commit/5283377f5e986110dd15bd82bea127b85c4a2906))
-* include unformatted description ([3c0badb](https://github.com/battis/qui-cli/commit/3c0badb668d3b855723d9c9458922d9f8f85fe84))
-* remove erroneous private property ([69f312e](https://github.com/battis/qui-cli/commit/69f312e5950740eb17106f4029873c664f3f9ec0))
+- include README template ([5283377](https://github.com/battis/qui-cli/commit/5283377f5e986110dd15bd82bea127b85c4a2906))
+- include unformatted description ([3c0badb](https://github.com/battis/qui-cli/commit/3c0badb668d3b855723d9c9458922d9f8f85fe84))
+- remove erroneous private property ([69f312e](https://github.com/battis/qui-cli/commit/69f312e5950740eb17106f4029873c664f3f9ec0))
 
 ## [1.1.0](https://github.com/battis/qui-cli/compare/create-command/1.0.4...create-command/1.1.0) (2026-07-07)
 
-
 ### Features
 
-* include dot files and description ([35f3998](https://github.com/battis/qui-cli/commit/35f3998434357b299123d5ca84465db60b1ed205))
+- include dot files and description ([35f3998](https://github.com/battis/qui-cli/commit/35f3998434357b299123d5ca84465db60b1ed205))
 
 ## [1.0.4](https://github.com/battis/qui-cli/compare/create-command/1.0.3...create-command/1.0.4) (2026-07-04)
 
