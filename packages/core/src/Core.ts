@@ -1,7 +1,7 @@
 import { Help, JackSpeak, Positionals } from '#plugins';
 import * as Plugin from '@qui-cli/plugin';
 import { Base } from '@qui-cli/plugin/dist/Plugin.js';
-import { ArrayElement, EmptyObject } from '@battis/typescript-tricks';
+import { ArrayElement } from '@battis/typescript-tricks';
 export { Options } from '@qui-cli/plugin';
 
 /** Core configuration options */
@@ -110,20 +110,8 @@ export async function init(
     JackSpeak.args(options);
   }
 
-  const args = JackSpeak.parse() as Exclude<
-    | { [K in keyof ArrayElement<typeof usage>['num']]?: number }
-    | {
-        [K in keyof ArrayElement<typeof usage>['numList']]?: number[];
-      }
-    | { [K in keyof ArrayElement<typeof usage>['opt']]?: string }
-    | {
-        [K in keyof ArrayElement<typeof usage>['optList']]?: string[];
-      }
-    | { [K in keyof ArrayElement<typeof usage>['flag']]?: boolean }
-    | {
-        [K in keyof ArrayElement<typeof usage>['flagList']]?: boolean[];
-      },
-    EmptyObject
+  const args = JackSpeak.parse() as Plugin.Arguments<
+    ArrayElement<typeof usage>
   >;
   await Plugin.Registrar.init(args);
   initialized = true;
