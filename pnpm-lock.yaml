@@ -802,12 +802,15 @@ importers:
       '@battis/descriptive-types':
         specifier: ^0.3.1
         version: 0.3.1
+      '@inquirer/confirm':
+        specifier: ^6.1.1
+        version: 6.1.1(@types/node@24.13.2)
       '@inquirer/input':
         specifier: ^5.1.2
         version: 5.1.2(@types/node@24.13.2)
       '@qui-cli/colors':
         specifier: workspace:*
-        version: link:../colors
+        version: 3.2.4
       '@qui-cli/core':
         specifier: workspace:*
         version: link:../core
@@ -817,6 +820,9 @@ importers:
       '@qui-cli/plugin':
         specifier: workspace:*
         version: link:../plugin
+      app-root-path:
+        specifier: ^3.1.0
+        version: 3.1.0
       change-case:
         specifier: ^5.4.4
         version: 5.4.4
@@ -826,6 +832,9 @@ importers:
       package-json-type:
         specifier: ^1.1.2
         version: 1.1.2
+      yaml:
+        specifier: ^2.9.0
+        version: 2.9.0
     devDependencies:
       '@battis/workspace':
         specifier: ^0.0.9
