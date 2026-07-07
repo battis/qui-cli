@@ -1,34 +1,37 @@
 import { Colors } from '@qui-cli/colors';
 import fs from 'node:fs';
 import * as yaml from 'yaml';
-import { mergeJSONValues } from '../mergeJSONValues.js';
-import * as confirm from '../confirm/index.js';
-import { FileHandler } from '../Configuration.js';
+import { merge } from '../JSON/index.js';
+import * as Confirm from '../Confirm/index.js';
+import { FileHandler } from './FileHandler.js';
 import path from 'node:path';
 import appRootPath from 'app-root-path';
+import * as Placeholders from '../../Placeholders.js';
 
 export const PNPMWorkspace: FileHandler = async ({
   srcPath,
   destPath,
-  config
+  force = false
 }) => {
   destPath = path.join(appRootPath.toString(), path.basename(destPath));
   let changed = false;
   if (fs.existsSync(destPath)) {
-    const workspace = yaml.parse(fs.readFileSync(destPath, 'utf8'));
+    const workspace = yaml.parse(
+      Placeholders.replaceAll(fs.readFileSync(destPath, 'utf8'))
+    );
     const proposal = yaml.parse(fs.readFileSync(srcPath, 'utf8'));
     for (const key in proposal) {
-      const update = mergeJSONValues(proposal[key], workspace[key]);
-      await confirm.withDiff(
-        update,
-        workspace[key],
-        Colors.value(`pnpm-workspace.yaml#${key}`),
-        () => {
+      const update = merge(proposal[key], workspace[key]);
+      await Confirm.withDiff({
+        src: update,
+        dest: workspace[key],
+        identifier: Colors.value(`pnpm-workspace.yaml#${key}`),
+        action: () => {
           workspace[key] = update;
           changed = true;
         },
-        config
-      );
+        force
+      });
     }
     if (changed) {
       fs.writeFileSync(destPath, yaml.stringify(workspace));

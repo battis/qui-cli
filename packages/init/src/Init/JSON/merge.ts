@@ -1,6 +1,6 @@
 import { JSONValue } from '@battis/descriptive-types';
 
-export function mergeJSONValues(src: JSONValue, dest: JSONValue) {
+export function merge(src: JSONValue, dest: JSONValue) {
   if (typeof dest === 'object' && typeof src === 'object') {
     if (Array.isArray(dest) && Array.isArray(src)) {
       return [...new Set([...dest, ...src])];

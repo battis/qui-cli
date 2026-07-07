@@ -1,25 +1,32 @@
 import ora from 'ora';
-import { isEqual } from '../isEqual.js';
+import * as JSON from '../JSON/index.js';
 import confirm from '@inquirer/confirm';
 import { Log } from '@qui-cli/log';
-import { Configuration } from '../Configuration.js';
 import { Colors } from '@qui-cli/colors';
 
-export async function withDiff(
-  src: unknown,
-  dest: unknown,
-  identifier: string,
-  action: () => void | Promise<void>,
-  config: Configuration
-) {
+type Options = {
+  src: unknown;
+  dest: unknown;
+  identifier: string;
+  action: () => void | Promise<void>;
+  force?: boolean;
+};
+
+export async function withDiff({
+  src,
+  dest,
+  identifier,
+  action,
+  force = false
+}: Options) {
   const spinner = ora(identifier).start();
   if (src !== undefined) {
     if (dest !== undefined) {
-      if (isEqual(src, dest)) {
+      if (JSON.isEqual(src, dest)) {
         spinner.succeed(`${identifier} up-to-date`);
         return;
       }
-      let update = config.force;
+      let update = force;
       if (!update) {
         spinner.stop();
         update = await confirm({
@@ -42,7 +49,7 @@ export async function withDiff(
       }
       if (update) {
         await action();
-        if (config.force) {
+        if (force) {
           spinner.succeed(`${identifier} updated`);
         }
         return;
@@ -53,9 +60,7 @@ export async function withDiff(
       return;
     }
   } else {
-    spinner.fail(
-      Colors.error(`${identifier} source missing in ${config.packageName}`)
-    );
+    spinner.fail(Colors.error(`${identifier} source missing`));
     return;
   }
 }
