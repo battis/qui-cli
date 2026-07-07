@@ -29,6 +29,9 @@ importers:
       '@qui-cli/core':
         specifier: workspace:*
         version: link:packages/core
+      '@qui-cli/init':
+        specifier: workspace:*
+        version: link:packages/init
       '@qui-cli/log':
         specifier: workspace:*
         version: link:packages/log
@@ -57,8 +60,8 @@ importers:
   examples/01 Distributable Command:
     dependencies:
       '@qui-cli/core':
-        specifier: workspace:*
-        version: link:../../packages/core
+        specifier: ^7.0.0
+        version: 7.0.0(@qui-cli/colors@packages+colors)(@qui-cli/plugin@packages+plugin)
     devDependencies:
       '@tsconfig/node-lts':
         specifier: ^24.0.0
@@ -832,6 +835,18 @@ importers:
       package-json-type:
         specifier: ^1.1.2
         version: 1.1.2
+      prettier:
+        specifier: ^3.9.4
+        version: 3.9.4
+      prettier-plugin-jsdoc:
+        specifier: ^1.8.1
+        version: 1.8.1(prettier@3.9.4)
+      prettier-plugin-organize-imports:
+        specifier: ^4.3.0
+        version: 4.3.0(prettier@3.9.4)(typescript@5.9.3)
+      prettier-plugin-packagejson:
+        specifier: ^3.0.2
+        version: 3.0.2(prettier@3.9.4)
       yaml:
         specifier: ^2.9.0
         version: 2.9.0

@@ -6,6 +6,7 @@ import { PathString } from '@battis/descriptive-types';
 import { Colors } from '@qui-cli/colors';
 import { Log } from '@qui-cli/log';
 import { IPackageJson } from 'package-json-type';
+import * as Confirm from '@qui-cli/init/dist/Init/Confirm/index.js';
 
 type Configuration = Plugin.Configuration & {
   scanPath?: PathString;
@@ -81,7 +82,7 @@ function init({ values }: Plugin.ExpectedArguments<typeof options>) {
   configure({ scanPath: Positionals.get('scanPath'), ...values });
 }
 
-function run() {
+async function run() {
   if (!config.scanPath) {
     Log.error(`${Colors.positionalArg('scanPath')} must be defined`);
     process.exit(1);
@@ -93,6 +94,7 @@ function run() {
   } else {
     config.outputPath = path.resolve(process.cwd(), config.outputPath);
   }
+  const outputPath = config.outputPath;
 
   const entries = scan(config.scanPath);
   if (entries) {
@@ -105,20 +107,15 @@ function run() {
           .replace('{{TOC}}', toc);
       }
     }
-    if (fs.existsSync(config.outputPath)) {
-      if (!config.overwrite) {
-        Log.error(
-          `Cannot overwrite existing ${Colors.path(config.outputPath)} (set ${Colors.flagArg('--overwrite')})`
-        );
-        Log.info(toc);
-        process.exit(2);
-      }
-      Log.warning(
-        `Overwriting existing ${Colors.path(path.basename(config.outputPath))}`
-      );
-    }
-    fs.writeFileSync(config.outputPath, toc);
-    Log.info(`TOC written to ${Colors.path(config.outputPath)}`);
+    await Confirm.withDiff({
+      src: toc,
+      dest: fs.existsSync(config.outputPath)
+        ? fs.readFileSync(outputPath, 'utf8')
+        : undefined,
+      identifier: Colors.path(outputPath, Colors.keyword),
+      action: () => fs.writeFileSync(outputPath, toc),
+      force: config.overwrite
+    });
   } else {
     Log.error(
       `No indexable packages and README files found in ${Colors.path(config.scanPath)}`

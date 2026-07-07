@@ -31,6 +31,7 @@
     "@battis/prettier": "^2.0.8",
     "@qui-cli/colors": "workspace:*",
     "@qui-cli/core": "workspace:*",
+    "@qui-cli/init": "workspace:*",
     "@qui-cli/log": "workspace:*",
     "@qui-cli/plugin": "workspace:*",
     "@tsconfig/node-lts": "^24.0.0",
