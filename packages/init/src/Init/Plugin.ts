@@ -6,6 +6,7 @@ import path from 'node:path';
 import * as Confirm from './Confirm/index.js';
 import fs from 'node:fs';
 import { Log } from '@qui-cli/log';
+import { Colors } from '@qui-cli/colors';
 
 export type Configuration = Plugin.Configuration & {
   dirPath?: PathString;
@@ -86,7 +87,7 @@ export function options() {
         hint: '/^\\.env(\\.*)?$/i',
         default: config.ignore
           ?.filter((i) => typeof i !== 'string')
-          .map((r) => `${r}`)
+          .map((r) => Colors.regexpValue(`${r}`))
       }
     },
     flag: {

@@ -1,8 +1,7 @@
 {
   "name": "@examples/distributable-command",
   "version": "0.0.0",
-  "private": true,
-  "description": "A distributale command using @qui-cli components",
+  "description": "",
   "homepage": "https://github.com/battis/qui-cli/tree/main/examples/01%20Distributable%20Command#readme",
   "repository": {
     "type": "git",
@@ -24,7 +23,7 @@
     "build:compile": "tsc"
   },
   "dependencies": {
-    "@qui-cli/core": "workspace:*"
+    "@qui-cli/core": "^7.0.0"
   },
   "devDependencies": {
     "@tsconfig/node-lts": "^24.0.0",
