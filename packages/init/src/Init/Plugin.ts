@@ -2,7 +2,6 @@ import { Positionals } from '@qui-cli/core';
 import { PathString } from '@battis/descriptive-types';
 import * as Plugin from '@qui-cli/plugin';
 import * as FileHandlers from './FileHandlers/index.js';
-import { kebabCase } from 'change-case';
 import path from 'node:path';
 import * as Confirm from './Confirm/index.js';
 import fs from 'node:fs';
@@ -13,12 +12,6 @@ export type Configuration = Plugin.Configuration & {
 
   /** Directory of `packageName` to search for configuration templates */
   template?: PathString;
-
-  /**
-   * Whether or not to create an enclosing directory for the project being
-   * initialized (or just initialize in the current working directory)
-   */
-  enclosingDirectory?: boolean;
 
   /**
    * Define custom file handling behavior (`package.json` and
@@ -80,24 +73,23 @@ export function configure(proposal: Configuration = {}) {
   }
 }
 
-export function init({ values }: Plugin.ExpectedArguments<typeof options>) {
-  const dirPath = Positionals.get('dirPath');
-  configure({ dirPath, ...values });
-  if (!('name' in values)) {
-    FileHandlers.NPMPackage.configure({
-      name: kebabCase(dirPath || path.dirname(process.cwd()))
-    });
-  }
-}
-
 export function options() {
   return {
     man: [{ level: 1, text: 'Init Options' }],
-    flag: {
-      enclosingDirectory: {
-        description: 'Create enclosing directory for project',
-        default: config.enclosingDirectory
+    optList: {
+      ignore: {
+        description: 'Exact file names to ignore in template',
+        default: config.ignore?.filter((i) => typeof i === 'string')
       },
+      ignoreRegexp: {
+        description: 'Regular expressions to ignore in templates',
+        hint: '/^\\.env(\\.*)?$/i',
+        default: config.ignore
+          ?.filter((i) => typeof i !== 'string')
+          .map((r) => `${r}`)
+      }
+    },
+    flag: {
       force: {
         description: `Force initialization, overwriting files without confirmation`,
         short: 'f',
@@ -106,17 +98,35 @@ export function options() {
     }
   };
 }
+
+export function init({ values }: Plugin.ExpectedArguments<typeof options>) {
+  const dirPath = Positionals.get('dirPath');
+  const { ignore = [], ignoreRegexp = [], ...rest } = values;
+  configure({
+    dirPath,
+    ignore: [
+      ...ignore,
+      ...ignoreRegexp.map((ignore) => {
+        const [, regexp = '.*', flags] =
+          ignore.match(/^\/(.*)\/([a-z]*)$/) || [];
+        return new RegExp(regexp, flags);
+      })
+    ],
+    ...rest
+  });
+  FileHandlers.NPMPackage.configure({
+    packagePath: path.join(dirPath || process.cwd(), 'package.json')
+  });
+}
+
 export async function run() {
   if (!config.template) {
     throw new Error(`A template source must be provided`);
   }
 
   let destPath = process.cwd();
-  if (config.enclosingDirectory) {
-    if (!config.dirPath) {
-      throw new Error(`A directory name must be provided`);
-    }
-    destPath = path.join(destPath, config.dirPath);
+  if (config.dirPath) {
+    destPath = path.resolve(destPath, config.dirPath);
     fs.mkdirSync(destPath, { recursive: true });
   }
   const warnings = await Confirm.mergeDirectory({
