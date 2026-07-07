@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.1.1](https://github.com/battis/qui-cli/compare/init/1.1.0...init/1.1.1) (2026-07-07)
+
+
+### Bug Fixes
+
+* follow pattern of expanding placeholders unless empty object passed explicitly ([3e09859](https://github.com/battis/qui-cli/commit/3e09859431170ff85148a4ca40aa643bef183a1a))
+
 ## [1.1.0](https://github.com/battis/qui-cli/compare/init/1.0.3...init/1.1.0) (2026-07-07)
 
 
