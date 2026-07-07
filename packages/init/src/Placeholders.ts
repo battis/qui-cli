@@ -15,7 +15,22 @@ const config: Configuration = {
 export function configure(proposal: Configuration = {}) {
   for (const key in proposal) {
     if (proposal[key] !== undefined) {
-      config[key] = proposal[key];
+      switch (key) {
+        case 'placeholders':
+          if (
+            proposal.placeholders &&
+            Object.keys(proposal.placeholders).length !== 0
+          ) {
+            config.placeholders = {
+              ...config.placeholders,
+              ...proposal.placeholders
+            };
+            break;
+          }
+        // eslint-disable-next-line no-fallthrough
+        default:
+          config[key] = proposal[key];
+      }
     }
   }
 }
