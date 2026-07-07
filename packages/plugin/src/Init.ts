@@ -3,12 +3,13 @@ import { EmptyObject } from '@battis/typescript-tricks';
 
 export type Arguments<O extends Opt.Options> = {
   values: Exclude<
-    | { [K in keyof O['num']]?: number }
-    | { [K in keyof O['numList']]?: number[] }
-    | { [K in keyof O['opt']]?: string }
-    | { [K in keyof O['optList']]?: string[] }
-    | { [K in keyof O['flag']]: boolean | undefined }
-    | { [K in keyof O['flagList']]?: boolean[] },
+    { [K in keyof O['num']]?: number } & {
+      [K in keyof O['numList']]?: number[];
+    } & { [K in keyof O['opt']]?: string } & {
+      [K in keyof O['optList']]?: string[];
+    } & { [K in keyof O['flag']]: boolean | undefined } & {
+      [K in keyof O['flagList']]?: boolean[];
+    },
     EmptyObject
   >;
   positionals: string[];
