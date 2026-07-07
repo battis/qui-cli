@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.0.0](https://github.com/battis/qui-cli/compare/init/1.1.1...init/2.0.0) (2026-07-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove redundant enclosingFolder flag
+* FileHandlers are now full-fledged plugins
+
+### Features
+
+* FileHandlers are now full-fledged plugins ([6f36f2a](https://github.com/battis/qui-cli/commit/6f36f2a42222a9ff301950d871e0bbce81679e07))
+
+
+### Bug Fixes
+
+* catch prettier failures on unprettiable files ([d26bf64](https://github.com/battis/qui-cli/commit/d26bf64d700f7d20c5459761790d1ef107265d13))
+* improve logging, remove flaky spinner ([c5975d0](https://github.com/battis/qui-cli/commit/c5975d09d792d7689874df4eb34709ba823c2856))
+* infer package name, remove flaky spinner ([086e2e7](https://github.com/battis/qui-cli/commit/086e2e7378d70229e17b91b6c721515097144bc7))
+* pnpm workspace includes placeholder replacements ([dea8d33](https://github.com/battis/qui-cli/commit/dea8d33632d71db22d3121da9b0a92b28d6f06ab))
+* remove redundant enclosingFolder flag ([7226950](https://github.com/battis/qui-cli/commit/72269503a86b6fb14fabe44966ecf0d5b1c70447))
+
 ## [1.1.1](https://github.com/battis/qui-cli/compare/init/1.1.0...init/1.1.1) (2026-07-07)
 
 
