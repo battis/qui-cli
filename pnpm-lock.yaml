@@ -59,9 +59,43 @@ importers:
 
   examples/01 Distributable Command:
     dependencies:
+      '@qui-cli/colors':
+        specifier: workspace:*
+        version: link:../../packages/colors
       '@qui-cli/core':
+        specifier: workspace:*
+        version: link:../../packages/core
+      '@qui-cli/log':
+        specifier: workspace:*
+        version: link:../../packages/log
+      '@qui-cli/plugin':
+        specifier: workspace:*
+        version: link:../../packages/plugin
+    devDependencies:
+      '@tsconfig/node-lts':
+        specifier: ^24.0.0
+        version: 24.0.0
+      '@types/node':
+        specifier: ^24.13.2
+        version: 24.13.2
+      del-cli:
         specifier: ^7.0.0
-        version: 7.0.0(@qui-cli/colors@packages+colors)(@qui-cli/plugin@packages+plugin)
+        version: 7.0.0
+      npm-run-all:
+        specifier: ^4.1.5
+        version: 4.1.5
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
+
+  examples/02 Reusable Plugin:
+    dependencies:
+      '@qui-cli/core':
+        specifier: workspace:*
+        version: link:../../packages/core
+      '@qui-cli/plugin':
+        specifier: workspace:*
+        version: link:../../packages/plugin
     devDependencies:
       '@tsconfig/node-lts':
         specifier: ^24.0.0
