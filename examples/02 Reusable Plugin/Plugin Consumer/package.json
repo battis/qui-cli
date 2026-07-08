@@ -1,0 +1,37 @@
+{
+  "name": "@examples/plugin-consumer",
+  "version": "0.0.0",
+  "private": true,
+  "description": "A Node module that provides a distributable command that uses the plugin",
+  "homepage": "https://github.com/battis/qui-cli/tree/main/examples/02%20Reusable%20Plugin/Plugin%20Consumer#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/battis/qui-cli.git",
+    "directory": "examples/02 Reusable Plugin/Plugin Consumer"
+  },
+  "author": {
+    "name": "Seth Battis",
+    "url": "https://github.com/battis"
+  },
+  "type": "module",
+  "directories": {
+    "bin": "./bin"
+  },
+  "scripts": {
+    "clean": "del ./dist",
+    "build": "run-s build:*",
+    "build:clean": "run-s clean",
+    "build:compile": "tsc"
+  },
+  "dependencies": {
+    "@qui-cli/core": "workspace:*",
+    "@qui-cli/plugin": "workspace:*"
+  },
+  "devDependencies": {
+    "@tsconfig/node-lts": "^24.0.0",
+    "@types/node": "^24.13.2",
+    "del-cli": "^7.0.0",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.9.3"
+  }
+}
