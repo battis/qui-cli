@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.3.0-0](https://github.com/battis/qui-cli/compare/env/5.2.0...env/5.3.0-0) (2026-07-08)
+
+
+### Features
+
+* document usage of options with `env` field defined ([1331ada](https://github.com/battis/qui-cli/commit/1331adae9e77890af9a8557fc67cb2bcc9c5dd2b))
+* load env variables for options with env property defined ([bc2d12f](https://github.com/battis/qui-cli/commit/bc2d12fd3cbba11ae12f78bab77a1d4e22aa890a))
+
+
+### Bug Fixes
+
+* args passed to init() hook are now typed correctly ([10a397e](https://github.com/battis/qui-cli/commit/10a397e0b23c4c99a2d72ff9b0f7b9834470fad6)), closes [#36](https://github.com/battis/qui-cli/issues/36)
+
 ## [5.2.0](https://github.com/battis/qui-cli/compare/env/5.1.2...env/5.2.0) (2026-04-27)
 
 
