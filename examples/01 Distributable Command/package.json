@@ -1,7 +1,7 @@
 {
   "name": "@examples/distributable-command",
   "version": "0.0.0",
-  "description": "An example of a @qui-cli command that can be distributed as an Node package",
+  "description": "An example of a @qui-cli command that can be distributed as a Node package",
   "homepage": "https://github.com/battis/qui-cli/tree/main/examples/01%20Distributable%20Command#readme",
   "repository": {
     "type": "git",

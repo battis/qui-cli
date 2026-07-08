@@ -1,6 +1,7 @@
 # examples
 
 <dl>
+<dt><a href="01 Distributable Command/README.md">@examples/distributable-command</a></dt><dd>An example of a @qui-cli command that can be distributed as a Node package</dd>
 <dt><a href="dev-env-1password/README.md">@examples/dev-env-1password</a></dt><dd>Integrate 1Password secret references in the enviroment with @qui-cli/env</dd>
 <dt><a href="dev-plugin/README.md">@examples/dev-plugin</a></dt><dd>Define (and use) a plugin package</dd>
 <dt><a href="dev-plugin-lifecycle/README.md">@examples/dev-plugin-lifecycle</a></dt><dd>Demonstrate order in which plugin hooks are called (and the state of environment variables at each hook invocation)</dd>
