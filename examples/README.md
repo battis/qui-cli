@@ -1,13 +1,49 @@
-# examples
+## examples
 
-<dl>
-<dt><a href="01 Distributable Command/README.md">@examples/distributable-command</a></dt><dd>An example of a @qui-cli command that can be distributed as a Node package</dd>
-<dt><a href="dev-env-1password/README.md">@examples/dev-env-1password</a></dt><dd>Integrate 1Password secret references in the enviroment with @qui-cli/env</dd>
-<dt><a href="dev-plugin/README.md">@examples/dev-plugin</a></dt><dd>Define (and use) a plugin package</dd>
-<dt><a href="dev-plugin-lifecycle/README.md">@examples/dev-plugin-lifecycle</a></dt><dd>Demonstrate order in which plugin hooks are called (and the state of environment variables at each hook invocation)</dd>
-<dt><a href="dev-positionals/README.md">@examples/dev-positionals</a></dt><dd>Require named or unnamed positional arguments</dd>
-<dt><a href="dev-sequenced-commands/README.md">@examples/dev-sequenced-commands</a></dt><dd>A hierarchy of interdependent plugins</dd>
-<dt><a href="dev-structured/README.md">@examples/dev-structured</a></dt><dd>A folder hierarchy of commands bundled into a single callable command</dd>
-<dt><a href="usage-cli/README.md">@examples/usage-cli</a></dt><dd>Using the bundled [@qui-cli/qui-cli](../packages/qui-cli/) package</dd>
-<dt><a href="usage-modular/README.md">@examples/usage-modular</a></dt><dd>More parsimonious use of individual plugin modules independently</dd>
-</dl>
+### [@examples/distributable-command](./01%20Distributable%20Command/README.md)
+
+An example of a @qui-cli command that can be distributed as a Node package
+
+### [Reusable Plugin](./02%20Reusable%20Plugin/README.md)
+
+A pair of Node modules that demonstrate @qui-cli plugin functionality
+
+>#### [@examples/plugin-consumer](./02%20Reusable%20Plugin/Plugin%20Consumer/README.md)
+>
+>A Node module that provides a distributable command that uses the plugin
+>
+>#### [@examples/plugin-provider](./02%20Reusable%20Plugin/Plugin%20Provider/README.md)
+>
+>A Node module that provides a re-usable @qui-cli plugin
+>
+### [@examples/dev-env-1password](./dev-env-1password/README.md)
+
+Integrate 1Password secret references in the enviroment with @qui-cli/env
+
+### [@examples/dev-plugin](./dev-plugin/README.md)
+
+Define (and use) a plugin package
+
+### [@examples/dev-plugin-lifecycle](./dev-plugin-lifecycle/README.md)
+
+Demonstrate order in which plugin hooks are called (and the state of environment variables at each hook invocation)
+
+### [@examples/dev-positionals](./dev-positionals/README.md)
+
+Require named or unnamed positional arguments
+
+### [@examples/dev-sequenced-commands](./dev-sequenced-commands/README.md)
+
+A hierarchy of interdependent plugins
+
+### [@examples/dev-structured](./dev-structured/README.md)
+
+A folder hierarchy of commands bundled into a single callable command
+
+### [@examples/usage-cli](./usage-cli/README.md)
+
+Using the bundled [@qui-cli/qui-cli](../packages/qui-cli/) package
+
+### [@examples/usage-modular](./usage-modular/README.md)
+
+More parsimonious use of individual plugin modules independently

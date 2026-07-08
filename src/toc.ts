@@ -7,6 +7,7 @@ import { Colors } from '@qui-cli/colors';
 import { Log } from '@qui-cli/log';
 import { IPackageJson } from 'package-json-type';
 import * as Confirm from '@qui-cli/init/dist/Init/Confirm/index.js';
+import prettier from 'prettier';
 
 type Configuration = Plugin.Configuration & {
   scanPath?: PathString;
@@ -14,6 +15,7 @@ type Configuration = Plugin.Configuration & {
   overwrite?: boolean;
   recursive?: boolean;
   depth?: number;
+  heading?: number;
   templatePath?: PathString;
 };
 
@@ -31,7 +33,8 @@ Positionals.allowOnlyNamedArgs();
 
 const config: Configuration = {
   overwrite: false,
-  recursive: false
+  recursive: false,
+  heading: 3
 };
 
 function configure(proposal: Configuration = {}) {
@@ -73,6 +76,10 @@ function options() {
         description: `If making at ${Colors.flagArg('--recursive')} scan, the maximum depth to scan`,
         short: 'd',
         default: config.depth
+      },
+      heading: {
+        desription: `Base (largest) heading level in the TOC`,
+        default: config.heading
       }
     }
   };
@@ -80,6 +87,11 @@ function options() {
 
 function init({ values }: Plugin.ExpectedArguments<typeof options>) {
   configure({ scanPath: Positionals.get('scanPath'), ...values });
+}
+
+function heading(level: number) {
+  level = Math.min(Math.max(1, level), 6);
+  return new Array(level).fill('#').join('');
 }
 
 async function run() {
@@ -98,13 +110,17 @@ async function run() {
 
   const entries = scan(config.scanPath);
   if (entries) {
-    let toc = `# ${path.basename(config.scanPath)}\n\n${render(entries).join('\n')}`;
+    let toc = `${heading(config.heading ? config.heading - 1 : 2)} ${path.basename(config.scanPath)}\n\n${render(entries).join('\n')}`;
     if (config.templatePath) {
       config.templatePath = path.resolve(process.cwd(), config.templatePath);
       if (fs.existsSync(config.templatePath)) {
-        toc = fs
-          .readFileSync(config.templatePath, 'utf8')
-          .replace('{{TOC}}', toc);
+        toc = await prettier.format(
+          fs.readFileSync(config.templatePath, 'utf8').replace('{{TOC}}', toc),
+          {
+            ...(await prettier.resolveConfig(config.outputPath)),
+            filepath: config.outputPath
+          }
+        );
       }
     }
     await Confirm.withDiff({
@@ -160,17 +176,27 @@ function scan(scanPath: PathString, depth = 0) {
 }
 
 function render(entries: Entry[], depth = 0) {
-  const lines: string[] = ['<dl>'];
+  const lines: string[] = [];
   for (const entry of entries) {
     lines.push(
-      `<dt><a href="${path.relative(config.scanPath || config.scanPath || process.cwd(), entry.readme)}">${entry.name}</a></dt><dd>${entry.description}</dd>`
+      ...`${heading((config.heading ? config.heading : 3) + depth)} [${entry.name}](./${encodeURI(
+        path.relative(
+          config.scanPath || config.scanPath || process.cwd(),
+          entry.readme
+        )
+      )})\n\n${entry.description}
+`
+        .split('\n')
+        .map(
+          (line) =>
+            `${new Array(depth).fill('>').join('')}${depth > 1 ? ' ' : ''}${line}`
+        )
     );
     if (entry.subentries) {
       lines.push(...render(entry.subentries, depth + 1));
     }
   }
   if (entries.length) {
-    lines.push('</dl>');
     return lines;
   }
   return [];
