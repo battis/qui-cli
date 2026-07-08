@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.0.6-0](https://github.com/battis/qui-cli/compare/validators/3.0.5...validators/3.0.6-0) (2026-07-08)
+
+
+### Bug Fixes
+
+* explicitly move to Node LTS (as opposed to implicitly) ([5381e1d](https://github.com/battis/qui-cli/commit/5381e1dddf90b59563e05700a548fdaaae76bebb))
+
 ## [3.0.5](https://github.com/battis/qui-cli/compare/validators/3.0.4...validators/3.0.5) (2026-03-10)
 
 Update README
