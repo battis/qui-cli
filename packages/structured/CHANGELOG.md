@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.0.7-0](https://github.com/battis/qui-cli/compare/structured/2.0.6...structured/2.0.7-0) (2026-07-08)
+
+
+### Bug Fixes
+
+* explicitly move to Node LTS (as opposed to implicitly) ([5381e1d](https://github.com/battis/qui-cli/commit/5381e1dddf90b59563e05700a548fdaaae76bebb))
+
 ## [2.0.6](https://github.com/battis/qui-cli/compare/structured/2.0.5...structured/2.0.6) (2026-03-10)
 
 ### Bug Fixes
