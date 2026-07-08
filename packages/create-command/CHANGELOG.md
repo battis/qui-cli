@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2.1-0](https://github.com/battis/qui-cli/compare/create-command/1.2.0...create-command/1.2.1-0) (2026-07-08)
+
+
+### Bug Fixes
+
+* add @qui-cli/plugin as part of the base install ([e86b8fb](https://github.com/battis/qui-cli/commit/e86b8fb9da7a701472f6d26b4cb1df69f568bfa0))
+* typo in bin ([3412c73](https://github.com/battis/qui-cli/commit/3412c73b68985d30e69c391a0da936de82ffb655))
+
 ## [1.2.0](https://github.com/battis/qui-cli/compare/create-command/1.1.0...create-command/1.2.0) (2026-07-07)
 
 ### Features
