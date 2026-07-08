@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [4.0.5-0](https://github.com/battis/qui-cli/compare/log/4.0.4...log/4.0.5-0) (2026-07-08)
+
+
+### Bug Fixes
+
+* args passed to init() hook are now typed correctly ([10a397e](https://github.com/battis/qui-cli/commit/10a397e0b23c4c99a2d72ff9b0f7b9834470fad6)), closes [#36](https://github.com/battis/qui-cli/issues/36)
+* explicitly move to Node LTS (as opposed to implicitly) ([5381e1d](https://github.com/battis/qui-cli/commit/5381e1dddf90b59563e05700a548fdaaae76bebb))
+
 ## [4.0.4](https://github.com/battis/qui-cli/compare/log/4.0.3...log/4.0.4) (2026-03-10)
 
 Update README
