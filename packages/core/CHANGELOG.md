@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [7.1.0-0](https://github.com/battis/qui-cli/compare/core/7.0.0...core/7.1.0-0) (2026-07-08)
+
+
+### Features
+
+* add documentation hook to plugins ([cfbee3c](https://github.com/battis/qui-cli/commit/cfbee3c95ddd6be0faffe7f3524e35d33914b906))
+
+
+### Bug Fixes
+
+* args passed to init() hook are now typed correctly ([10a397e](https://github.com/battis/qui-cli/commit/10a397e0b23c4c99a2d72ff9b0f7b9834470fad6)), closes [#36](https://github.com/battis/qui-cli/issues/36)
+* improve typing of core configuration ([f337f07](https://github.com/battis/qui-cli/commit/f337f07afdecf812b22722241ac2081ce40a735e)), closes [#100](https://github.com/battis/qui-cli/issues/100)
+
 ## [7.0.0](https://github.com/battis/qui-cli/compare/core/6.0.4...core/7.0.0) (2026-04-27)
 
 
