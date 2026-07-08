@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [4.2.0-0](https://github.com/battis/qui-cli/compare/plugin/4.1.2...plugin/4.2.0-0) (2026-07-08)
+
+
+### Features
+
+* add documentation hook to plugins ([cfbee3c](https://github.com/battis/qui-cli/commit/cfbee3c95ddd6be0faffe7f3524e35d33914b906))
+
+
+### Bug Fixes
+
+* args passed to init() hook are now typed correctly ([10a397e](https://github.com/battis/qui-cli/commit/10a397e0b23c4c99a2d72ff9b0f7b9834470fad6)), closes [#36](https://github.com/battis/qui-cli/issues/36)
+* expected args are union of config types ([6f6f862](https://github.com/battis/qui-cli/commit/6f6f862b09b300e9468d70f14bcf39467b67cf8e))
+
 ## [4.1.2](https://github.com/battis/qui-cli/compare/plugin/4.1.1...plugin/4.1.2) (2026-04-27)
 
 
