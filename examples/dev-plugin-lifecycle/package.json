@@ -1,6 +1,7 @@
 {
   "name": "@examples/dev-plugin-lifecycle",
   "version": "0.0.0",
+  "private": true,
   "description": "Demonstrate order in which plugin hooks are called (and the state of environment variables at each hook invocation)",
   "homepage": "https://github.com/battis/qui-cli/tree/main/examples/dev-plugin-lifecycle#readme",
   "repository": {

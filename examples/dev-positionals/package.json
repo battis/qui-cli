@@ -1,6 +1,7 @@
 {
   "name": "@examples/dev-positionals",
   "version": "0.0.0",
+  "private": true,
   "description": "Require named or unnamed positional arguments",
   "homepage": "https://github.com/battis/qui-cli/tree/main/examples/dev-positionals#readme",
   "repository": {

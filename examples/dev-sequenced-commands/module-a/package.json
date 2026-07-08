@@ -1,6 +1,7 @@
 {
   "name": "@examples/dev-sequenced-commands.module-a",
   "version": "0.0.0",
+  "private": true,
   "homepage": "https://github.com/battis/qui-cli/tree/main/examples/dev-sequenced-commands/module-a#readme",
   "repository": {
     "type": "git",

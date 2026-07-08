@@ -1,6 +1,7 @@
 {
   "name": "@examples/dev-plugin.provider",
   "version": "0.0.0",
+  "private": true,
   "homepage": "https://github.com/battis/qui-cli/tree/main/examples/dev-plugin/plugin-provider#readme",
   "repository": {
     "type": "git",

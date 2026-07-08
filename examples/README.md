@@ -1,4 +1,4 @@
-## examples
+## Examples
 
 ### [@examples/distributable-command](./01%20Distributable%20Command/README.md)
 
@@ -8,14 +8,14 @@ An example of a @qui-cli command that can be distributed as a Node package
 
 A pair of Node modules that demonstrate @qui-cli plugin functionality
 
->#### [@examples/plugin-consumer](./02%20Reusable%20Plugin/Plugin%20Consumer/README.md)
+> #### [@examples/plugin-consumer](./02%20Reusable%20Plugin/Plugin%20Consumer/README.md)
 >
->A Node module that provides a distributable command that uses the plugin
+> A Node module that provides a distributable command that uses the plugin
 >
->#### [@examples/plugin-provider](./02%20Reusable%20Plugin/Plugin%20Provider/README.md)
+> #### [@examples/plugin-provider](./02%20Reusable%20Plugin/Plugin%20Provider/README.md)
 >
->A Node module that provides a re-usable @qui-cli plugin
->
+> A Node module that provides a re-usable @qui-cli plugin
+
 ### [@examples/dev-env-1password](./dev-env-1password/README.md)
 
 Integrate 1Password secret references in the enviroment with @qui-cli/env
