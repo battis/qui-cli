@@ -8,6 +8,7 @@ import { Log } from '@qui-cli/log';
 import { IPackageJson } from 'package-json-type';
 import * as Confirm from '@qui-cli/init/dist/Init/Confirm/index.js';
 import prettier from 'prettier';
+import { capitalCase } from 'change-case';
 
 type Configuration = Plugin.Configuration & {
   scanPath?: PathString;
@@ -47,7 +48,17 @@ function configure(proposal: Configuration = {}) {
 
 function options() {
   return {
-    man: [{ level: 1, text: 'TOC Options' }],
+    man: [
+      { level: 1, text: 'TOC Options' },
+      {
+        text:
+          `Generates a table of contents for a given directory by scanning all ` +
+          `of the subdirectories for packages with README files. To be ` +
+          `included in the TOC, the package must have both a ` +
+          `${Colors.value('name')} and ${Colors.value('description')} and ` +
+          `links are directly to the README file.`
+      }
+    ],
     opt: {
       outputPath: {
         description: `Path to TOC output file (defaults to ${Colors.path(`${Colors.positionalArg('scanPath')}/README.md`)})`,
@@ -89,11 +100,6 @@ function init({ values }: Plugin.ExpectedArguments<typeof options>) {
   configure({ scanPath: Positionals.get('scanPath'), ...values });
 }
 
-function heading(level: number) {
-  level = Math.min(Math.max(1, level), 6);
-  return new Array(level).fill('#').join('');
-}
-
 async function run() {
   if (!config.scanPath) {
     Log.error(`${Colors.positionalArg('scanPath')} must be defined`);
@@ -110,19 +116,19 @@ async function run() {
 
   const entries = scan(config.scanPath);
   if (entries) {
-    let toc = `${heading(config.heading ? config.heading - 1 : 2)} ${path.basename(config.scanPath)}\n\n${render(entries).join('\n')}`;
+    let toc = `${heading(config.heading ? config.heading - 1 : 2)} ${capitalCase(path.basename(config.scanPath))}\n\n${render(entries).join('\n')}`;
     if (config.templatePath) {
       config.templatePath = path.resolve(process.cwd(), config.templatePath);
       if (fs.existsSync(config.templatePath)) {
-        toc = await prettier.format(
-          fs.readFileSync(config.templatePath, 'utf8').replace('{{TOC}}', toc),
-          {
-            ...(await prettier.resolveConfig(config.outputPath)),
-            filepath: config.outputPath
-          }
-        );
+        toc = fs
+          .readFileSync(config.templatePath, 'utf8')
+          .replace('{{TOC}}', toc);
       }
     }
+    toc = await prettier.format(toc, {
+      ...(await prettier.resolveConfig(config.outputPath)),
+      filepath: config.outputPath
+    });
     await Confirm.withDiff({
       src: toc,
       dest: fs.existsSync(config.outputPath)
@@ -144,6 +150,11 @@ function scan(scanPath: PathString, depth = 0) {
   const toc: Entry[] = [];
   for (const filename of fs.readdirSync(scanPath)) {
     const entryPath = path.join(scanPath, filename);
+    const readme = path.join(entryPath, 'README.md');
+    const skip = (message: string) =>
+      Log.warning(
+        `Skipping ${Colors.path(entryPath, Colors.keyword)} (${message})`
+      );
     if (
       !['.', '..', 'node_modules'].includes(filename) &&
       fs.statSync(entryPath).isDirectory()
@@ -153,19 +164,30 @@ function scan(scanPath: PathString, depth = 0) {
         const pkg: IPackageJson = JSON.parse(
           fs.readFileSync(packagePath, 'utf8')
         );
-        const readme = path.join(entryPath, 'README.md');
-        if (pkg.name && pkg.description && fs.existsSync(readme)) {
-          toc.push({
-            name: pkg.name,
-            description: pkg.description,
-            readme,
-            subentries:
-              config.recursive &&
-              (config.depth === undefined || depth < config.depth)
-                ? scan(entryPath, depth + 1)
-                : undefined
-          });
+        if (pkg.name) {
+          if (pkg.description) {
+            if (fs.existsSync(readme)) {
+              toc.push({
+                name: pkg.name,
+                description: pkg.description,
+                readme,
+                subentries:
+                  config.recursive &&
+                  (config.depth === undefined || depth < config.depth)
+                    ? scan(entryPath, depth + 1)
+                    : undefined
+              });
+            } else {
+              skip('no README file');
+            }
+          } else {
+            skip(`no ${Colors.value('description')} property in package`);
+          }
+        } else {
+          skip(`no ${Colors.value('name')} in package`);
         }
+      } else if (fs.existsSync(readme)) {
+        skip('no package');
       }
     }
   }
@@ -179,7 +201,9 @@ function render(entries: Entry[], depth = 0) {
   const lines: string[] = [];
   for (const entry of entries) {
     lines.push(
-      ...`${heading((config.heading ? config.heading : 3) + depth)} [${entry.name}](./${encodeURI(
+      ...`${heading(
+        (config.heading ? config.heading : 3) + depth
+      )} [${entry.name}](./${encodeURI(
         path.relative(
           config.scanPath || config.scanPath || process.cwd(),
           entry.readme
@@ -187,10 +211,7 @@ function render(entries: Entry[], depth = 0) {
       )})\n\n${entry.description}
 `
         .split('\n')
-        .map(
-          (line) =>
-            `${new Array(depth).fill('>').join('')}${depth > 1 ? ' ' : ''}${line}`
-        )
+        .map((line) => `${quote(depth)}${line}`)
     );
     if (entry.subentries) {
       lines.push(...render(entry.subentries, depth + 1));
@@ -200,6 +221,18 @@ function render(entries: Entry[], depth = 0) {
     return lines;
   }
   return [];
+}
+
+function heading(level: number) {
+  return repeat('#', Math.min(6, Math.max(1, level)));
+}
+
+function quote(level: number) {
+  return `${repeat('>', level)}${level > 0 ? ' ' : ''}`;
+}
+
+function repeat(text: string, count: number) {
+  return new Array(count).fill(text).join('');
 }
 
 await Plugin.register({ name: 'toc', configure, options, init, run });

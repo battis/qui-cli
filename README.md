@@ -6,7 +6,7 @@ A collection of packages for rapidly developing command line applications
 
 Alternatively, individual packages can be selected and used in a more parsimonious, light-weight, modular manner:
 
-## packages
+## Packages
 
 ### [@qui-cli/colors](./colors/README.md)
 

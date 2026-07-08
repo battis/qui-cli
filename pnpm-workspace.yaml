@@ -12,6 +12,8 @@ allowBuilds:
 packages:
   - packages/*
   - examples/*
+  - '!examples/02 Reusable Plugin'
+  - 'examples/02 Reusable Plugin/*'
   - '!examples/dev-plugin'
   - examples/dev-plugin/*
   - '!examples/dev-sequenced-commands'
