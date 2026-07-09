@@ -22,3 +22,4 @@ packages:
   - examples/dev-peer-of-peer/*
 minimumReleaseAgeExclude:
   - '@battis/*'
+  - '@qui-cli/*'
