@@ -25,7 +25,7 @@
     "release": "commit-and-tag-version --noBumpWhenEmptyChanges"
   },
   "dependencies": {
-    "@battis/import-package-json": "^0.1.9",
+    "@battis/import-package-json": "^0.1.10",
     "dotenv": "^17.4.2",
     "ora": "^9.4.1"
   },
