@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.1.1](https://github.com/battis/qui-cli/compare/progress/3.1.0...progress/3.1.1) (2026-08-01)
+
+### Bug Fixes
+
+* explicitly move to Node LTS (as opposed to implicitly) ([5381e1d](https://github.com/battis/qui-cli/commit/5381e1dddf90b59563e05700a548fdaaae76bebb))
 ## [3.1.1-0](https://github.com/battis/qui-cli/compare/progress/3.1.0...progress/3.1.1-0) (2026-07-08)
 
 
