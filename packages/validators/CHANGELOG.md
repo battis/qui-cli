@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.0.6](https://github.com/battis/qui-cli/compare/validators/3.0.5...validators/3.0.6) (2026-08-01)
+
+### Bug Fixes
+
+* deprecate in favor of zod ([815bda3](https://github.com/battis/qui-cli/commit/815bda374462482bf85c609c043d5bf40785e20a))
+* explicitly move to Node LTS (as opposed to implicitly) ([5381e1d](https://github.com/battis/qui-cli/commit/5381e1dddf90b59563e05700a548fdaaae76bebb))
 ## [3.0.6-0](https://github.com/battis/qui-cli/compare/validators/3.0.5...validators/3.0.6-0) (2026-07-08)
 
 
