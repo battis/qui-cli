@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [6.0.1](https://github.com/battis/qui-cli/compare/qui-cli/6.0.0...qui-cli/6.0.1) (2026-08-01)
+
+### Bug Fixes
+
+* deprecate @qui-cli/validators ([167392e](https://github.com/battis/qui-cli/commit/167392eca9ebb2ff5623278850059a6207e61c0f))
 ## [6.0.0](https://github.com/battis/qui-cli/compare/qui-cli/5.2.0...qui-cli/6.0.0) (2026-04-27)
 
 ### ⚠ BREAKING CHANGES
