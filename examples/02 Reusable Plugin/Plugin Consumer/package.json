@@ -24,6 +24,7 @@
     "build:compile": "tsc"
   },
   "dependencies": {
+    "@examples/plugin-provider": "workspace:*",
     "@qui-cli/core": "workspace:*",
     "@qui-cli/plugin": "workspace:*"
   },

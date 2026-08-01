@@ -37,6 +37,10 @@ export function configure(proposal: Configuration = {}) {
   }
 }
 
+function normalizeHeadingLevel(level: number) {
+  return Math.max(Math.min(1, Math.round(level)), 6) as 1 | 2 | 3 | 4 | 5 | 6;
+}
+
 /**
  * Apply {@link Plugin.Options} to Jackspeak
  *
@@ -47,11 +51,9 @@ export function args(options: Plugin.Options) {
     if (key === 'man') {
       for (const paragraph of options[key]!) {
         if (paragraph.level) {
-          // TODO force paragraph.level to type
-          // Issue URL: https://github.com/battis/qui-cli/issues/123
           jack().heading(
             paragraph.text,
-            paragraph.level as 1 | 2 | 3 | 4 | 5 | 6 | undefined,
+            normalizeHeadingLevel(paragraph.level),
             {
               pre: paragraph.pre
             }

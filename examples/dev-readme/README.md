@@ -14,90 +14,90 @@ Usage:
 
 
 
-### Positional arguments
+######## Positional arguments
 
-#### <u>`foo`</u>
+######## <u>`foo`</u>
 
 Enim minim laborum dolore, eiusmod.
 
-#### <u>`bar`</u>
+######## <u>`bar`</u>
 
 Cillum ut sit, labore.
 
-### Arguments
+####### Arguments
 
 #### `-h --help`
 
 Show this usage information
 
-### dev-readme options
+######## dev-readme options
 
-#### `-A --argle`
+######### `-A --argle`
 
 Sint ipsum aliquip veniam tempor occaecat.
 
-#### `--bargle`
+######### `--bargle`
 
 Tempor minim anim exercitation aliquip. (Default: `true`, use `--no-bargle` to disable)
 
-#### `--baz=<baz>`
+######### `--baz=<baz>`
 
 Reprehenderit consequat, veniam velit.
 
-#### `-z<buzz> --buzz=<buzz>`
+######### `-z<buzz> --buzz=<buzz>`
 
 Aliquip sunt tempor nisi labore ad culpa. (Default: `"Sit"`)
 
-#### `--biz=<biz>`
+######### `--biz=<biz>`
 
-#### `--pi=<n>`
+######### `--pi=<n>`
 
 Esse eiusmod exercitation nulla nostrud do velit id. (Default: `3.2`)
 
-#### `--a=<a>`
+######### `--a=<a>`
 
 Default: `"foo"`, `"bar"`, `"baz"` Can be set multiple times
 
-### 1Password environment integration
+######## 1Password environment integration
 
 If 1Password secret references are stored in the environment, a 1Password service account token is required to access the secret values.
 
-#### `--opAccount=<example.1password.com>`
+######### `--opAccount=<example.1password.com>`
 
 1Password account to use (if signed into multiple); falls back to environment variable `OP_ACCOUNT`, if present
 
-#### `--opItem=<1Password unique identifier>`
+######### `--opItem=<1Password unique identifier>`
 
 Name or ID of the 1Password API Credential item storing the 1Password service account token. Requires the 1Password CLI tool (`https://developer.1password.com/docs/cli`); falls back to environment variable `OP_ITEM`, if present
 
-#### `--opToken=<token value>`
+######### `--opToken=<token value>`
 
 1Password service account token; falls back to environment variable `OP_TOKEN`, if present
 
-### Shell command options
+######## Shell command options
 
-#### `--commands`
+######### `--commands`
 
 Include shell commands in log (Default: `true`, use `--no-commands` to disable)
 
-#### `--silent`
+######### `--silent`
 
 Hide command output (Default: `false`)
 
-#### `--logging`
+######### `--logging`
 
 Log commands and output at level `debug` (Default: `true`, use `--no-logging` to disable)
 
-### Logging options
+######## Logging options
 
-#### `--logFilePath=<logFilePath>`
+######### `--logFilePath=<logFilePath>`
 
 Path to log file (optional)
 
-#### `--stdoutLevel=<all|trace|debug|info|warning|error|fatal|off>`
+######### `--stdoutLevel=<all|trace|debug|info|warning|error|fatal|off>`
 
 Log level to console stdout (Default: `"info"`)
 
-#### `--fileLevel=<all|trace|debug|info|warning|error|fatal|off>`
+######### `--fileLevel=<all|trace|debug|info|warning|error|fatal|off>`
 
 Log level to log file if `--logFilePath` provided (Default: `"all"`)

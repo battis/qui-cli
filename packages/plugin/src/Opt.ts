@@ -31,13 +31,14 @@ export type QCConfigMetaSet<
 export type Paragraph = {
   /** Text to show */
   text: string;
-  /** Heading level */
-  level?: number; //1 | 2 | 3 | 4 | 5 | 6;
+  /** Heading level (will be normalized to `1 | 2 | 3 | 4 | 5 | 6`) */
+  level?: number;
   /** Preformatted */
   pre?: boolean;
 };
 
 export type Options<AdditionalMetadata extends Metadata = QCMetadata> = {
+  man?: Paragraph[];
   num?: QCConfigMetaSet<'number', false, AdditionalMetadata>;
   numList?: QCConfigMetaSet<'number', true, AdditionalMetadata>;
   opt?: QCConfigMetaSet<'string', false, AdditionalMetadata>;
@@ -45,7 +46,6 @@ export type Options<AdditionalMetadata extends Metadata = QCMetadata> = {
   flag?: QCConfigMetaSet<'boolean', false, AdditionalMetadata>;
   flagList?: QCConfigMetaSet<'boolean', true, AdditionalMetadata>;
   fields?: ConfigSet;
-  man?: Paragraph[];
 };
 
 export type Hook = () => Options | Promise<Options>;

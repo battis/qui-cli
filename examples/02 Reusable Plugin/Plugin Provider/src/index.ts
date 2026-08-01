@@ -1,5 +1,5 @@
-import { register } from "@qui-cli/plugin";
-import * as PluginProvider from "./PluginProvider.js";
+import { register } from '@qui-cli/plugin';
+import * as MyPlugin from './MyPlugin.js';
 
-await register(PluginProvider);
-export { PluginProvider };
+await register(MyPlugin);
+export { MyPlugin };

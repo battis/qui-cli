@@ -21,6 +21,6 @@
     "@qui-cli/init": "workspace:*"
   },
   "devDependencies": {
-    "@battis/workspace": "^0.0.9"
+    "commit-and-tag-version": "catalog:prod"
   }
 }
