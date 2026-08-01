@@ -5,6 +5,100 @@
 [![npm version](https://badge.fury.io/js/@qui-cli%2Fvalidators.svg)](https://npmjs.com/package/@qui-cli/validators)
 [![Module type: ESM](https://img.shields.io/badge/module%20type-esm-brightgreen)](https://nodejs.org/api/esm.html)
 
+## Deprecated in favor of [zod](https://www.npmjs.com/package/zod)
+
+Validators were originally designed to slot into [@inquirer/prompts](https://www.npmjs.com/package/@inquirer/prompts) transparently, with meaningful error messages.
+
+```ts
+import { Validators } from '@qui-cli/validators';
+import { input } from '@inquirer/prompts';
+
+const result = await input({
+  message: 'Enter a value',
+  validator: Validators.nonEmpty
+});
+```
+
+zod handles this nicely, without needing to support an extra package:
+
+```ts
+import z from 'zod';
+import {input} from '@inquirer/prompts';
+
+const result = await input({
+  message: 'Enter a value',
+  validator (value?: string) => {
+    const { success, error: { issues } } = z.string().nonempty().safeParse(value);
+    return success ||
+      issues.map(i => i.message).join(', ');
+  }
+});
+```
+
+or, less verbosely…
+
+```ts
+import z from 'zod';
+import { input } from '@inquirer/prompts';
+
+const result = await input({
+  message: 'Enter a value',
+  validator: (value?: string) =>
+    z.string().nonempty().safeParse(value).success || 'error message'
+});
+```
+
+<table>
+<thead>
+<tr><th>@qui-cli/validators</th><th>zod</th></tr>
+<thead>
+<tbody>
+<tr><td>
+
+`Validators.notEmpty()`</td><td>`z.string().nonempty()`</td></tr>
+<tr><td>
+
+`Validators.minLength(m)`</td><td>`z.string().min(m)`</td></tr>
+<tr><td>
+
+`Validators.maxLength(m)`</td><td>`z.string().max(m)`</td></tr>
+<tr><td>
+
+`Validators.lengthBetween(m,n)`</td><td>`z.string().min(m).max(n)`</td></tr>
+<tr><td>
+
+`Validators.match(r)`</td><td>`z.string().regex(r)`</td></tr>
+<tr><td>
+
+`Validators.cron()`</td><td>
+
+```ts
+import cron from 'cron-validate';
+
+z.stringFormat('cron', (val?: string) => !!val && cron(val).isValid())`
+```
+
+</td></tr>
+<tr><td>
+
+`Validators.isPath()`</td><td>
+
+```ts
+import path from 'node:path';
+
+z.stringFormat(
+  'posix-path',
+  (val?: string) => !!val && val == path.posix.normalize(val)
+);
+```
+
+</td></tr>
+<tr><td>
+
+`Validators.isHostname()`</td><td>`z.string().hostname()`</td></tr>
+</tbody>
+</table>
+
 ## Install
 
 ```sh
