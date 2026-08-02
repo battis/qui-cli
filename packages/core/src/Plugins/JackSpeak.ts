@@ -1,5 +1,5 @@
 import * as Plugin from '@qui-cli/plugin';
-import { Jack, JackOptions } from 'jackspeak';
+import { Jack, JackOptions } from 'jackspeak/min';
 
 export type Configuration = Plugin.Configuration & JackOptions;
 
