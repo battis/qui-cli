@@ -5,7 +5,7 @@ import path from 'path';
 import * as Placeholders from '../../Placeholders.js';
 import { withDiff } from './withDiff.js';
 import { copyFile } from './copyFile.js';
-import { FileHandlers } from '../index.js';
+import * as FileHandlers from '../FileHandlers/index.js';
 import { Log } from '@qui-cli/log';
 
 type Options = {
