@@ -25,7 +25,7 @@
     "release": "commit-and-tag-version --noBumpWhenEmptyChanges"
   },
   "devDependencies": {
-    "@battis/typescript-tricks": "^0.8.5",
+    "@battis/typescript-tricks": "^0.8.6",
     "@tsconfig/node-lts": "catalog:prod",
     "@types/is-valid-path": "^0.1.2",
     "@types/node": "catalog:prod",

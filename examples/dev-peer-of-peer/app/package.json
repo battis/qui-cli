@@ -23,7 +23,7 @@
     "build:compile": "tsc"
   },
   "dependencies": {
-    "@1password/sdk": "^0.4.0",
+    "@1password/sdk": "^0.4.1",
     "@examples/dev-peer-of-peer.plugin": "workspace:*",
     "@qui-cli/core": "workspace:*",
     "@qui-cli/root": "workspace:*"
